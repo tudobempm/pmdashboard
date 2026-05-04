@@ -1,5 +1,111 @@
 [
   {
+    "id": "eod-2026-05-04",
+    "type": "eod",
+    "date": "Monday, May 4 — End of Day",
+    "isoDate": "2026-05-04",
+    "greeting": "Monday came through, Jean. You returned from OOO, navigated the Venn Enforcement Pilot kickoff, prepped for the EPMO Portfolio Review, and — finally — that Rippling vacation document is DONE. It carried for two weeks and you closed it today. That’s not small. Five still-open items land in tomorrow’s lap, including Lucia’s access fix and the Nikki follow-up. But tonight, the scoreboard is good.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0504-done-1",
+            "label": "Rippling vacation document — SENT ✓ (2-week carry, finally closed)",
+            "detail": "After carrying urgently since last week, the document confirming new vacation dates was submitted to Rippling today. Exception granted after Thursday’s call with Jeannie Rodriguez — follow-through complete."
+          },
+          {
+            "id": "eod-0504-done-2",
+            "label": "Asana portfolio reports reviewed before EPMO Portfolio Review",
+            "detail": "Five Asana weekly reports reviewed before the 1 PM EPMO Portfolio Review: PMO Projects Portfolio, AOS Project Requests, CoE (29/33 needing update), Phase 2 (24/25 needing update), Supplements Renovation 2.0. Came prepared."
+          },
+          {
+            "id": "eod-0504-done-3",
+            "label": "Asana portfolio email digest processed",
+            "detail": "The Friday Asana report emails were acknowledged and reviewed. Marked done alongside the portfolio review prep."
+          },
+          {
+            "id": "eod-0504-done-4",
+            "label": "Rippling support survey — resolved",
+            "detail": "Low-priority automated survey from Rippling about the recent support experience. Handled."
+          },
+          {
+            "id": "eod-0504-done-5",
+            "label": "Service Cloud launch milestone acknowledged",
+            "detail": "Sara Watson’s shoutout to the Service Cloud team (Javier Vargas, Sinery Tremillo) was noted. The May 2 launch was celebrated and Jean engaged with the team’s win."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0504-open-1",
+            "label": "Fix Lucia Caamano’s edit access — Incident Matrix",
+            "detail": "Lucia messaged early this morning: she can’t edit the incident matrix to add R&Rs. Site permissions need to be updated so she can move forward. Resolve first thing tomorrow.",
+            "flag": "attn"
+          },
+          {
+            "id": "eod-0504-open-2",
+            "label": "Hablar con Nikki de HR — survey de Incident Response",
+            "detail": "Reminder from Saturday: loop Nikki from HR in before moving forward with the Incident Response survey distribution. Consumed into today’s digest but not completed.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0504-open-3",
+            "label": "Confirm Litify Training status — rescheduled to next week?",
+            "detail": "Today’s 3 PM Litify Reports & Dashboards training (organized by Jhara) was tentative with a note suggesting it moved due to a scheduling conflict. Confirm with Jhara and get the rescheduled date.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0504-open-4",
+            "label": "Agregar día off en Rippling — completar semana de vacaciones",
+            "detail": "Reminder Jean added at 1:56 PM today: agregar el día off restante para completar la semana de vacaciones en Rippling. Now that the vacation document was sent, this is the next step.",
+            "flag": "reminder"
+          },
+          {
+            "id": "eod-0504-open-5",
+            "label": "David — Miro board conversion to Excel",
+            "detail": "David requested help converting a Miro board to Excel. Carrying again from last week. Follow up to confirm if still needed or already handled offline.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Tuesday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0504-tmrw-1",
+            "time": "9:00 – 9:30 AM",
+            "label": "1:1 Conor B. & Jean G.",
+            "detail": "Discuss Conor’s department needs and project management support."
+          },
+          {
+            "id": "eod-0504-tmrw-2",
+            "time": "9:30 – 10:00 AM",
+            "label": "1:1 Jhara & Jean",
+            "detail": "Portfolio review, roadblocks, next steps. Good moment to close the Litify training reschedule question."
+          },
+          {
+            "id": "eod-0504-tmrw-3",
+            "time": "10:00 – 11:00 AM",
+            "label": "RFE Process Handoff Session (tentative)",
+            "detail": "Organized by Jhara Ochoa. Covers RFE processes (termination, withdrawal, unresponsive), task sets, record functionality, and Power BI dashboards. Confirm attendance."
+          },
+          {
+            "id": "eod-0504-tmrw-4",
+            "time": "2:00 – 2:30 PM",
+            "label": "1:1 Yuri & Jean",
+            "detail": "Regular 1:1 with Yuri Mendonca."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-05-04",
     "type": "daily",
     "date": "Monday, May 4",
