@@ -705,46 +705,45 @@ function CoEDashboardTab({ onBack }) {
         </div>
 
         <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">Awaiting sprint</p>
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">In Progress</p>
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.awaitingNextSprint}</span>
-              {delta?.summaryDelta?.awaitingNextSprint != null && delta.summaryDelta.awaitingNextSprint !== 0 && (
-                <span className={`ml-2 text-xs font-bold ${delta.summaryDelta.awaitingNextSprint > 0 ? "text-amber-500" : "text-emerald-500"}`}>{delta.summaryDelta.awaitingNextSprint>0?"+":""}{delta.summaryDelta.awaitingNextSprint}</span>
+              <span className="text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.inProgress || 0}</span>
+              {delta?.summaryDelta?.inProgress != null && delta.summaryDelta.inProgress !== 0 && (
+                <span className={`ml-2 text-xs font-bold ${delta.summaryDelta.inProgress > 0 ? "text-emerald-500" : "text-red-500"}`}>{delta.summaryDelta.inProgress>0?"+":""}{delta.summaryDelta.inProgress}</span>
               )}
             </div>
-            <MiniRing value={summary.awaitingNextSprint} total={summary.totalActive} color="#f97316" size={52} stroke={5}/>
+            <MiniRing value={summary.inProgress || 0} total={summary.totalActive || 1} color="#10b981" size={52} stroke={5}/>
           </div>
-          <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-2">{summary.totalActive > 0 ? Math.round(summary.awaitingNextSprint/summary.totalActive*100) : 0}% of active</p>
+          <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-2">Sprint or Halo ticket</p>
         </div>
 
         <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">Avg days in pipeline</p>
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">Ready for Sprint</p>
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.avgDaysInPipeline}</span>
-              <span className="ml-1 text-sm text-zinc-400 dark:text-zinc-500">days</span>
-              {delta?.summaryDelta?.avgDaysInPipeline != null && delta.summaryDelta.avgDaysInPipeline !== 0 && (
-                <span className={`ml-2 text-xs font-bold ${delta.summaryDelta.avgDaysInPipeline > 0 ? "text-red-500" : "text-emerald-500"}`}>{delta.summaryDelta.avgDaysInPipeline>0?"+":""}{delta.summaryDelta.avgDaysInPipeline}</span>
+              <span className="text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.readyForSprint || 0}</span>
+              {delta?.summaryDelta?.readyForSprint != null && delta.summaryDelta.readyForSprint !== 0 && (
+                <span className={`ml-2 text-xs font-bold ${delta.summaryDelta.readyForSprint > 0 ? "text-amber-500" : "text-emerald-500"}`}>{delta.summaryDelta.readyForSprint>0?"+":""}{delta.summaryDelta.readyForSprint}</span>
               )}
             </div>
-            <MiniRing value={Math.min(summary.avgDaysInPipeline, 30)} total={30} color={summary.avgDaysInPipeline > 14 ? "#ef4444" : summary.avgDaysInPipeline > 7 ? "#f59e0b" : "#10b981"} size={52} stroke={5}/>
+            <MiniRing value={summary.readyForSprint || 0} total={summary.totalActive || 1} color="#f97316" size={52} stroke={5}/>
           </div>
-          <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-2">{summary.avgDaysInPipeline <= 7 ? "Healthy pace" : summary.avgDaysInPipeline <= 14 ? "Worth monitoring" : "Needs attention"}</p>
+          <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-2">IT Prioritization complete</p>
         </div>
 
         <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">Flagged</p>
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">Pending</p>
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.needsAttention}</span>
-              {delta?.summaryDelta?.needsAttention != null && delta.summaryDelta.needsAttention !== 0 && (
-                <span className={`ml-2 text-xs font-bold ${delta.summaryDelta.needsAttention > 0 ? "text-red-500" : "text-emerald-500"}`}>{delta.summaryDelta.needsAttention>0?"+":""}{delta.summaryDelta.needsAttention}</span>
+              <span className="text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.pending || 0}</span>
+              {delta?.summaryDelta?.pending != null && delta.summaryDelta.pending !== 0 && (
+                <span className={`ml-2 text-xs font-bold ${delta.summaryDelta.pending > 0 ? "text-red-500" : "text-emerald-500"}`}>{delta.summaryDelta.pending>0?"+":""}{delta.summaryDelta.pending}</span>
               )}
             </div>
-            <MiniRing value={summary.needsAttention} total={totalProjects} color={summary.needsAttention > summary.totalActive * 0.5 ? "#ef4444" : "#f59e0b"} size={52} stroke={5}/>
+            <MiniRing value={summary.pending || 0} total={summary.totalActive || 1} color={summary.pending > summary.totalActive * 0.4 ? "#ef4444" : "#f59e0b"} size={52} stroke={5}/>
           </div>
-          <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-2">{totalProjects > 0 ? Math.round(summary.needsAttention/totalProjects*100) : 0}% of portfolio</p>
+          <p className="text-[10px] text-zinc-400 dark:text-zinc-500 mt-2">Triage + New Request</p>
         </div>
       </div>
 
