@@ -1,5 +1,69 @@
 [
   {
+    "id": "eod-2026-05-05",
+    "type": "eod",
+    "date": "Tuesday, May 5 — End of Day",
+    "isoDate": "2026-05-05",
+    "greeting": "Tuesday synthesized well, Jean. You went three-for-three on the 1:1s, Lucia finally has her edit access back (that one’s been a friction point since early morning Monday), and the Rippling day off is done — which means the vacation setup is completely closed. That carried for weeks and you wrapped it in one day back. Two items roll to tomorrow. No catastrophizing — just two things on the board. Eugenia is back Wednesday, so the team is whole again.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0505-done-1",
+            "label": "Fixed Lucia Caamano’s edit access — Incident Matrix ✓",
+            "detail": "Lucia couldn’t edit the incident matrix to add R&Rs. The site permission issue was resolved today — she can now move forward with adding responsibilities. Carried from Monday morning."
+          },
+          {
+            "id": "eod-0505-done-2",
+            "label": "Agregar día off en Rippling — vacation week complete ✓",
+            "detail": "The remaining day off was added in Rippling, completing the full vacation week setup. The document was sent Monday, and the Rippling entry is now squared away. This thread is officially closed."
+          },
+          {
+            "id": "eod-0505-done-3",
+            "label": "1:1s complete — Conor (9am), Jhara (9:30am), Yuri (2pm)",
+            "detail": "Three back-to-back 1:1s on the calendar today. The RFE Process Handoff session (10am, organized by Jhara) was also on the books — covering RFE processes, task sets, and Power BI dashboards."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0505-open-1",
+            "label": "Hablar con Nikki de HR — survey de Incident Response",
+            "detail": "Loop Nikki from HR in before moving forward with the Incident Response survey distribution. Carrying since Saturday’s reminder. First opportunity tomorrow.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0505-open-2",
+            "label": "David — Miro board conversion to Excel",
+            "detail": "David requested help converting a Miro board to Excel. Still open and carrying again. Follow up to confirm if still needed or already handled offline.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Wednesday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0505-tmrw-1",
+            "label": "Eugenia Barragán — Returns from OOO",
+            "detail": "Eugenia has been out May 4–5. She’s back Wednesday, May 6. Team is whole again."
+          },
+          {
+            "id": "eod-0505-tmrw-2",
+            "label": "Note: Live calendar data unavailable",
+            "detail": "Microsoft 365 authentication was not available for this automated run. Wednesday’s full schedule will appear in tomorrow morning’s digest. Check your calendar directly for any early commitments."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-05-05",
     "type": "daily",
     "date": "Tuesday, May 5",
