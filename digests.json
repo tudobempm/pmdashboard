@@ -1,5 +1,104 @@
 [
   {
+    "id": "daily-2026-05-05",
+    "type": "daily",
+    "date": "Tuesday, May 5",
+    "isoDate": "2026-05-05",
+    "greeting": "Buenos días, Jean. Tuesday's got a full rhythm to it — three 1:1s this morning (Conor at 9, Jhara at 9:30, Yuri at 2), and the RFE Process Handoff at 10 if it held on the calendar (double-check with Jhara). First things first: Lucia still can't edit the Incident Matrix, Nikki from HR is still waiting on that Incident Response survey loop, and that Rippling day off hasn't been added yet. Eugenia is OOO through today — she'll be back tomorrow. Note: Microsoft 365 authentication wasn't available for this automated run, so live email and Teams data aren't included. Schedule is based on yesterday's Tuesday Preview.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "co-tue-0505-eod-0504-open-1",
+            "label": "Fix Lucia Caamano's edit access — Incident Matrix",
+            "detail": "Lucia messaged Monday: she can't edit the incident matrix to add R&Rs. Site permissions need to be updated so she can move forward. Flagged 📌 — resolve first thing.",
+            "flag": "attn"
+          },
+          {
+            "id": "co-tue-0505-eod-0504-open-2",
+            "label": "Hablar con Nikki de HR — survey de Incident Response",
+            "detail": "Loop Nikki from HR in before moving forward with the Incident Response survey distribution. Flagged 📌 — still open.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-tue-0505-eod-0504-open-4",
+            "label": "Agregar día off en Rippling — completar semana de vacaciones",
+            "detail": "Vacation document was sent Monday. Next step: add the remaining day off in Rippling to complete the full vacation week. Flagged ❗.",
+            "flag": "attn"
+          },
+          {
+            "id": "co-tue-0505-eod-0504-open-5",
+            "label": "David — Miro board conversion to Excel",
+            "detail": "David requested help converting a Miro board to Excel. Carrying again from last week. Follow up to confirm if still needed or already handled offline.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0505-rem-1",
+            "label": "Agregar día off en Rippling — completar semana de vacaciones",
+            "detail": "Reminder added Monday afternoon: agregar el día off restante para completar la semana de vacaciones en Rippling.",
+            "flag": "reminder"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0505-cal-1",
+            "time": "All Day",
+            "label": "Eugenia Barragán — OOO (last day)",
+            "detail": "Eugenia is OOO May 4–5. She returns Wednesday, May 6."
+          },
+          {
+            "id": "tue-0505-cal-2",
+            "time": "9:00 – 9:30 AM",
+            "label": "1:1 Conor B. & Jean G.",
+            "detail": "Regular 1:1 with Conor Blandford. Good time to surface department needs and any project management support required."
+          },
+          {
+            "id": "tue-0505-cal-3",
+            "time": "9:30 – 10:00 AM",
+            "label": "1:1 Jhara & Jean",
+            "detail": "Portfolio review, roadblocks, next steps. Good moment to confirm the Litify training reschedule and sync on RFE Handoff session status."
+          },
+          {
+            "id": "tue-0505-cal-4",
+            "time": "10:00 – 11:00 AM",
+            "label": "RFE Process Handoff Session (tentative)",
+            "detail": "Organized by Jhara Ochoa. Covers RFE processes (termination, withdrawal, unresponsive), task sets, record functionality, and Power BI dashboards.",
+            "note": "Tentative — confirm with Jhara at 9:30"
+          },
+          {
+            "id": "tue-0505-cal-5",
+            "time": "2:00 – 2:30 PM",
+            "label": "1:1 Yuri & Jean",
+            "detail": "Regular 1:1 with Yuri Mendonca. Good moment to check in on TRACE project handoff and any open items."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0505-ooo-1",
+            "label": "Eugenia Barragán — OOO (final day)",
+            "detail": "Out May 4–5. Returns Wednesday, May 6."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-05-04",
     "type": "eod",
     "date": "Monday, May 4 — End of Day",
