@@ -1,5 +1,85 @@
 [
   {
+    "id": "daily-2026-05-06",
+    "type": "daily",
+    "date": "Wednesday, May 6",
+    "isoDate": "2026-05-06",
+    "greeting": "Buenos días, Jean. Miércoles — y Eugenia está de vuelta. El equipo está completo otra vez. Tienes dos reminders que llegaron esta mañana antes del briefing: crear la imagen del CoE y revisar el template de incident de Larry antes de la weekly meeting de mañana. Nikki de HR y el Miro board de David siguen en la lista desde ayer. Microsoft 365 no estuvo disponible para este run automatizado, así que el calendario en vivo y los correos no están incluidos — revisa Outlook directamente para tus compromisos de hoy.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "co-wed-0506-eod-0505-open-1",
+            "label": "Hablar con Nikki de HR — survey de Incident Response",
+            "detail": "Loop Nikki from HR in before moving forward with the Incident Response survey distribution. Carrying since Saturday's reminder — get this one closed today.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-wed-0506-eod-0505-open-2",
+            "label": "David — Miro board conversion to Excel",
+            "detail": "David requested help converting a Miro board to Excel. Carrying again from last week. Follow up to confirm if still needed or already handled offline.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0506-rem-1",
+            "label": "Crear imagen sobre lo que es CoE",
+            "detail": "Crear imagen sobre lo que es CoE — qué es, propósito, etc. Reminder added this morning at 7:47 AM.",
+            "flag": "reminder"
+          },
+          {
+            "id": "wed-0506-rem-2",
+            "label": "Revisar template de incident de Larry — para weekly meeting de mañana",
+            "detail": "Revisar template de incident creado por Larry para revisión con el equipo mañana en la weekly meeting. Added this morning at 9:36 AM.",
+            "flag": "reminder"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0506-cal-1",
+            "time": "All Day",
+            "label": "Eugenia Barragán — Returns from OOO",
+            "detail": "Eugenia was out May 4–5. She's back today, Wednesday May 6. The team is whole again."
+          },
+          {
+            "id": "wed-0506-cal-2",
+            "label": "Live calendar data unavailable",
+            "detail": "Microsoft 365 authentication was not available for this automated run. Check Outlook directly for today's full schedule and any new meetings added since yesterday.",
+            "note": "M365 auth required"
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0506-tmrw-1",
+            "label": "Weekly team meeting — Incident template review with Larry",
+            "detail": "Jean added a reminder to review Larry's incident template before tomorrow's weekly meeting. Come prepared with feedback or questions."
+          },
+          {
+            "id": "wed-0506-tmrw-2",
+            "label": "Live calendar data unavailable",
+            "detail": "Thursday's full schedule will appear in tomorrow morning's digest. Check Outlook directly for any early commitments.",
+            "note": "M365 auth required"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-05-05",
     "type": "eod",
     "date": "Tuesday, May 5 — End of Day",
