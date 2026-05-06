@@ -1,5 +1,66 @@
 [
   {
+    "id": "eod-2026-05-06",
+    "type": "eod",
+    "date": "Wednesday, May 6 — End of Day",
+    "isoDate": "2026-05-06",
+    "greeting": "Wednesday closed out clean, Jean. You knocked out the CoE image — one more concrete artifact that shows what the center actually does and why it exists. That one had been sitting in the reminder queue since this morning. Three items carry to Thursday, but the priority is clear: Larry's incident template before the weekly meeting. Come with notes. The team was whole again today with Eugenia back.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0506-done-1",
+            "label": "Crear imagen sobre lo que es CoE ✓",
+            "detail": "Checked off today — the CoE image explaining what the Center of Excellence is and its purpose was created. Reminder was added this morning at 7:47 AM and resolved during the day."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0506-open-1",
+            "label": "Revisar template de incident de Larry — weekly meeting mañana",
+            "detail": "Larry's incident template needs review before tomorrow's Thursday weekly meeting. Come prepared with feedback or questions. Reminder was added this morning at 9:36 AM.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0506-open-2",
+            "label": "Hablar con Nikki de HR — survey de Incident Response",
+            "detail": "Loop Nikki from HR in before moving forward with the Incident Response survey distribution. Carrying from Monday's reminder — prioritize resolving this week.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0506-open-3",
+            "label": "David — Miro board conversion to Excel",
+            "detail": "David requested help converting a Miro board to Excel. Still open. Follow up to confirm if still needed or already handled offline.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0506-tmrw-1",
+            "label": "Weekly meeting — Larry's incident template review",
+            "detail": "Come to Thursday's weekly meeting prepared to review the incident template Larry created. Jean added this reminder this morning — don't show up cold on this one."
+          },
+          {
+            "id": "eod-0506-tmrw-2",
+            "label": "Live calendar data unavailable",
+            "detail": "Microsoft 365 authentication was not available for this automated run. Thursday's full schedule will appear in tomorrow morning's digest. Check Outlook directly for any early commitments.",
+            "note": "M365 auth required"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-05-06",
     "type": "daily",
     "date": "Wednesday, May 6",
