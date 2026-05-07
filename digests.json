@@ -1,5 +1,79 @@
 [
   {
+    "id": "daily-2026-05-07",
+    "type": "daily",
+    "date": "Thursday, May 7",
+    "isoDate": "2026-05-07",
+    "greeting": "Buenos días, Jean. Jueves — y el día llega con resonance clara: la weekly meeting es hoy, y Larry's incident template lleva esperando tu revisión desde ayer en la mañana. Ese es el foco principal. Nikki de HR y el Miro board de David siguen en la lista — tres cosas que necesitan tu energía. Microsoft 365 no estuvo disponible para este run automatizado, así que el calendario en vivo y los correos no están incluidos — revisa Outlook directamente para el horario completo.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "co-thu-0507-eod-0506-open-1",
+            "label": "Revisar template de incident de Larry — weekly meeting HOY",
+            "detail": "Larry's incident template needs review before today's weekly meeting. Come prepared with feedback or questions. This was flagged urgent since yesterday morning's reminder.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-thu-0507-eod-0506-open-2",
+            "label": "Hablar con Nikki de HR — survey de Incident Response",
+            "detail": "Loop Nikki from HR in before moving forward with the Incident Response survey distribution. Carrying since last week's reminder — get this one off the board today.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-thu-0507-eod-0506-open-3",
+            "label": "David — Miro board conversion to Excel",
+            "detail": "David requested help converting a Miro board to Excel. Carrying again — follow up to confirm if still needed or already handled offline.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0507-cal-1",
+            "label": "Weekly Team Meeting — Incident template review with Larry",
+            "detail": "Today's weekly meeting includes review of Larry's incident template. Jean added a reminder yesterday morning to come prepared — review before the meeting starts.",
+            "note": "From context — confirm time in Outlook"
+          },
+          {
+            "id": "thu-0507-cal-2",
+            "label": "Live calendar data unavailable",
+            "detail": "Microsoft 365 authentication was not available for this automated run. Check Outlook directly for today's full schedule, meeting times, and any items added since yesterday.",
+            "note": "M365 auth required"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0507-a1",
+            "label": "Live data unavailable — check email and Teams directly",
+            "detail": "Microsoft 365 authentication was not available for this automated run. New emails, action items, and Teams messages from the last 24 hours were not pulled. Review Outlook and Teams directly for anything that came in overnight.",
+            "note": "M365 auth required"
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0507-tmrw-1",
+            "label": "Friday, May 8 — End of week",
+            "detail": "Live Friday calendar data will appear in tomorrow morning's digest. Check Outlook for any end-of-week commitments or deadlines."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-05-06",
     "type": "eod",
     "date": "Wednesday, May 6 — End of Day",
