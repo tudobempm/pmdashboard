@@ -1,5 +1,129 @@
 [
   {
+    "id": "weekly-2026-05-09",
+    "type": "weekly",
+    "date": "Week of May 4 – May 9",
+    "isoDate": "2026-05-09",
+    "greeting": "You cleared the board this week, Jean. Every single carry from last week — gone. The Rippling vacation saga that haunted you for two weeks? Done Monday. Lucia's edit access? Fixed Tuesday. Larry's incident template? Reviewed Thursday. David's Miro board? Closed Thursday. Nikki from HR? Looped in. Even the CoE image you'd been meaning to create got knocked out Wednesday. That's not momentum — that's a clean sweep. Two fresh reminders landed Thursday night, so Monday has a clear runway with just those on the board. Enjoy the weekend. You earned it.",
+    "sections": [
+      {
+        "title": "Week in Review",
+        "info": true,
+        "items": [
+          {
+            "id": "wk-0509-review-1",
+            "label": "Rippling vacation document — finally sent (2-week carry resolved)",
+            "detail": "Monday's top priority: the Rippling vacation document confirming new dates was submitted after carrying urgently since late April. The PTO exception from Jeannie Rodriguez is fully closed."
+          },
+          {
+            "id": "wk-0509-review-2",
+            "label": "EPMO Portfolio Review completed Monday",
+            "detail": "Five Asana weekly reports reviewed before the 1 PM session. PMO Projects, AOS Project Requests, CoE (29 of 33 needing updates), Phase 2, and Supplements were all prepped and discussed."
+          },
+          {
+            "id": "wk-0509-review-3",
+            "label": "Lucia Caamano's edit access fixed — Incident Matrix unblocked",
+            "detail": "Lucia couldn't edit the incident matrix to add R&Rs due to site permissions. Resolved Tuesday — she can now move forward with responsibilities and roles."
+          },
+          {
+            "id": "wk-0509-review-4",
+            "label": "Three 1:1s completed Tuesday — Conor, Jhara, Yuri",
+            "detail": "Full round of 1:1s on Tuesday: Conor at 9 AM, Jhara at 9:30 AM, and Yuri at 2 PM. RFE Process Handoff Session also held with Jhara covering termination, withdrawal, and unresponsive processes."
+          },
+          {
+            "id": "wk-0509-review-5",
+            "label": "CoE image created — explaining what the Center of Excellence is",
+            "detail": "Wednesday deliverable: a visual explaining the CoE's purpose and scope. Concrete artifact that makes the center tangible for stakeholders."
+          },
+          {
+            "id": "wk-0509-review-6",
+            "label": "Larry's incident template reviewed for weekly meeting",
+            "detail": "Reviewed Thursday in preparation for the weekly team meeting. Jean came prepared with feedback after flagging the reminder Wednesday morning."
+          },
+          {
+            "id": "wk-0509-review-7",
+            "label": "All carried items from previous weeks — cleared by Thursday",
+            "detail": "David's Miro board conversion, Nikki HR conversation about the Incident Response survey, and Lucia's access issue — every carry resolved. The board is clean heading into the weekend."
+          }
+        ]
+      },
+      {
+        "title": "Wins",
+        "info": true,
+        "items": [
+          {
+            "id": "wk-0509-win-1",
+            "label": "Clean sweep — zero carries into next week from prior weeks",
+            "detail": "Every item that had been accumulating and carrying forward was resolved this week. That kind of closure is rare and it matters."
+          },
+          {
+            "id": "wk-0509-win-2",
+            "label": "Rippling saga closed — two-week carry finally done",
+            "detail": "The vacation document that had been flagged urgent repeatedly since late April was submitted Monday. No more friction with HR/Rippling on this."
+          },
+          {
+            "id": "wk-0509-win-3",
+            "label": "Incident Response workstream advancing on multiple fronts",
+            "detail": "Larry's template reviewed, Nikki from HR looped in on the survey, and Lucia's matrix access unblocked. Three separate threads in the same initiative, all moved forward this week."
+          },
+          {
+            "id": "wk-0509-win-4",
+            "label": "CoE continues to take shape — now with a visual identity",
+            "detail": "The CoE image adds a concrete, shareable artifact to the initiative. Combined with last week's operational momentum (7 items advanced), the center is becoming real."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "wk-0509-decision-1",
+            "label": "Nikki from HR engaged on Incident Response survey distribution",
+            "detail": "Decision to loop HR in before distributing the survey firm-wide. This had been carrying as a reminder since early May and was resolved Thursday."
+          },
+          {
+            "id": "wk-0509-decision-2",
+            "label": "RFE Process Handoff — session completed with Jhara",
+            "detail": "Tuesday's handoff session covered RFE processes including termination, withdrawal, and unresponsive flows. Task sets, record functionality, and Power BI dashboards were part of the scope."
+          },
+          {
+            "id": "wk-0509-decision-3",
+            "label": "Incident template from Larry reviewed and discussed at weekly",
+            "detail": "Larry's template was reviewed and brought to the Thursday weekly meeting for team discussion. Feedback incorporated."
+          }
+        ]
+      },
+      {
+        "title": "Heading into Monday",
+        "info": false,
+        "items": [
+          {
+            "id": "wk-0509-open-1",
+            "label": "Revisar proyecto en Asana de phase 2",
+            "detail": "Reminder added Thursday evening. Review the Phase 2 project in Asana — check status, updates needed, and any blockers before the new week."
+          },
+          {
+            "id": "wk-0509-open-2",
+            "label": "Seguimiento a Danny — reunión sobre incident response",
+            "detail": "Reminder added Thursday night. Danny wants to schedule a meeting about incident response. Follow up to confirm timing and agenda for next week."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wk-0509-mon-1",
+            "label": "Monday, May 11 — Fresh week, light board",
+            "detail": "Only two items carrying into Monday — the Asana Phase 2 review and Danny's incident response meeting follow-up. Check Outlook for the full Monday schedule."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-05-09",
     "type": "eod",
     "date": "Saturday, May 9 — End of Day",
