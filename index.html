@@ -688,62 +688,57 @@ function CoEDashboardTab({ onBack }) {
         </div>
       )}
 
-      {/* Pipeline Stages — stage-by-stage KPI cards with day-over-day delta */}
+      {/* Pipeline Flow — compact stage strip following natural order */}
       {(() => {
-        const TRACKED_STAGES = [
-          { key: "New Request", label: "New Request", color: "#818cf8", icon: "+" },
-          { key: "Triage", label: "Triage", color: "#f59e0b", icon: "T" },
-          { key: "IT Prioritization", label: "IT Prioritization", color: "#06b6d4", icon: "P" },
-          { key: "On Hold", label: "On Hold", color: "#6b7280", icon: "H" },
-          { key: "Awaiting Next Sprint", label: "Awaiting Sprint", color: "#f97316", icon: "S" },
-          { key: "UAT/Testing", label: "UAT / Testing", color: "#14b8a6", icon: "U" },
-          { key: "Deployed", label: "Deployed", color: "#22c55e", icon: "D" },
+        const PIPELINE = [
+          { key: "New Request",          label: "New Request",     color: "#818cf8" },
+          { key: "Triage",               label: "Triage",          color: "#f59e0b" },
+          { key: "IT Prioritization",    label: "IT Priority",     color: "#06b6d4" },
+          { key: "In Progress",          label: "In Progress",     color: "#10b981" },
+          { key: "On Hold",              label: "On Hold",         color: "#6b7280" },
+          { key: "Awaiting Next Sprint", label: "Awaiting Sprint", color: "#f97316" },
+          { key: "UAT/Testing",          label: "UAT / Testing",   color: "#14b8a6" },
+          { key: "Deployed",             label: "Deployed",        color: "#22c55e" },
         ];
         const prevByStage = delta?.previousByStage || {};
+        const hasDelta = delta?.previousByStage != null;
         return (
-          <div>
-            {/* Active summary bar */}
-            <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4 mb-3">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1">Active Pipeline</p>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.totalActive}</span>
-                    <span className="text-sm text-zinc-400 dark:text-zinc-500">of {totalProjects} total</span>
-                    {delta?.summaryDelta?.totalActive != null && delta.summaryDelta.totalActive !== 0 && (
-                      <span className={`text-xs font-bold ${delta.summaryDelta.totalActive > 0 ? "text-emerald-500" : "text-red-500"}`}>{delta.summaryDelta.totalActive>0?"+":""}{delta.summaryDelta.totalActive} vs yesterday</span>
-                    )}
-                    {delta?.summaryDelta?.totalActive === 0 && (
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500">no change</span>
-                    )}
-                  </div>
-                </div>
-                <MiniRing value={summary.totalActive} total={totalProjects} color="#3b82f6" size={52} stroke={5}/>
+          <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-3">
+            {/* Header row — active count + delta */}
+            <div className="flex items-center justify-between mb-2.5 px-1">
+              <div className="flex items-baseline gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Pipeline</span>
+                <span className="text-sm font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.totalActive}</span>
+                <span className="text-[10px] text-zinc-400 dark:text-zinc-500">/ {totalProjects}</span>
+                {delta?.summaryDelta?.totalActive != null && delta.summaryDelta.totalActive !== 0 && (
+                  <span className={`text-[10px] font-bold ${delta.summaryDelta.totalActive > 0 ? "text-emerald-500" : "text-red-400"}`}>{delta.summaryDelta.totalActive>0?"+":""}{delta.summaryDelta.totalActive}</span>
+                )}
               </div>
+              {hasDelta && delta?.previousDate && (
+                <span className="text-[9px] text-zinc-400 dark:text-zinc-600">vs {new Date(delta.previousDate).toLocaleDateString("en-US",{month:"short",day:"numeric"})}</span>
+              )}
             </div>
 
-            {/* Stage cards grid */}
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
-              {TRACKED_STAGES.map(s => {
+            {/* Compact stage cells — single row on desktop, wraps on mobile */}
+            <div className="grid grid-cols-4 sm:grid-cols-8 gap-1.5">
+              {PIPELINE.map((s, idx) => {
                 const cur = (summary.byStage || {})[s.key] || 0;
                 const prev = prevByStage[s.key] || 0;
                 const diff = cur - prev;
-                const hasDelta = delta?.previousByStage != null;
+                const isEmpty = cur === 0;
                 return (
-                  <div key={s.key} className="rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-3 relative overflow-hidden">
-                    {/* Color accent bar */}
-                    <div className="absolute top-0 left-0 right-0 h-0.5" style={{background: s.color}}/>
-                    <p className="text-[9px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1.5 truncate" title={s.key}>{s.label}</p>
-                    <div className="flex items-end justify-between">
-                      <span className="text-2xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{cur}</span>
+                  <div key={s.key} className={`relative rounded-lg px-2 py-1.5 text-center transition-all ${isEmpty ? "bg-zinc-50 dark:bg-zinc-800/40" : "bg-white dark:bg-zinc-800/80"} border ${isEmpty ? "border-zinc-100 dark:border-zinc-800/60" : "border-zinc-200/80 dark:border-zinc-700"}`}>
+                    {/* Top accent — 2px colored bar */}
+                    <div className="absolute top-0 left-1.5 right-1.5 h-[2px] rounded-b" style={{background: s.color, opacity: isEmpty ? 0.3 : 1}}/>
+                    <p className="text-[8px] font-bold uppercase tracking-wider mt-0.5 truncate" style={{color: isEmpty ? undefined : s.color}} title={s.key}>
+                      <span className={isEmpty ? "text-zinc-300 dark:text-zinc-600" : ""}>{s.label}</span>
+                    </p>
+                    <div className="flex items-center justify-center gap-1 mt-0.5">
+                      <span className={`text-lg font-extrabold tabular-nums leading-none ${isEmpty ? "text-zinc-300 dark:text-zinc-600" : "text-zinc-900 dark:text-zinc-100"}`}>{cur}</span>
                       {hasDelta && diff !== 0 && (
-                        <span className={`text-[10px] font-bold mb-1 ${diff > 0 ? "text-emerald-500" : "text-red-400"}`}>{diff > 0 ? "+" : ""}{diff}</span>
-                      )}
-                      {hasDelta && diff === 0 && cur > 0 && (
-                        <span className="text-[10px] text-zinc-300 dark:text-zinc-600 mb-1">—</span>
+                        <span className={`text-[9px] font-bold ${diff > 0 ? "text-emerald-500" : "text-red-400"}`}>{diff > 0 ? "+" : ""}{diff}</span>
                       )}
                     </div>
-                    {hasDelta && <p className="text-[8px] text-zinc-400 dark:text-zinc-600 mt-1">was {prev}</p>}
                   </div>
                 );
               })}
