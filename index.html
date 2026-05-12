@@ -2651,7 +2651,7 @@ function App() {
         setLoading(false);
         setSyncing(false);
       })
-      .catch(e => { setError(e.message); setLoading(false); setSyncing(false); });
+      .catch(e => { setDigests([]); setLoading(false); setSyncing(false); });
   }, []);
 
   // Load digests + state on mount
@@ -2883,19 +2883,7 @@ function App() {
     );
   }
 
-  if (error) {
-    return (
-      <div className="min-h-screen bg-[#fafafa] dark:bg-[#0a0a0b] flex items-center justify-center p-6">
-        <div className="text-center max-w-sm bg-white dark:bg-zinc-800 p-8 rounded-[2rem] shadow-xl border border-zinc-200 dark:border-zinc-700">
-          <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-500/20 text-red-500 flex items-center justify-center mx-auto mb-4">
-             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <p className="text-lg text-zinc-900 dark:text-zinc-100 font-bold mb-2">Couldn&apos;t load briefings</p>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Make sure <code className="bg-zinc-100 dark:bg-zinc-900 px-1.5 py-0.5 rounded-md font-mono text-xs">digests.json</code> is in the same folder as this page.</p>
-        </div>
-      </div>
-    );
-  }
+  /* digests.json error is non-fatal — app still renders, CoE and other tabs work */
 
   if (authLoading) return (
     <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-950">
