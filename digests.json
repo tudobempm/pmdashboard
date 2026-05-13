@@ -1,5 +1,193 @@
 [
   {
+    "id": "daily-2026-05-13",
+    "type": "daily",
+    "date": "Wednesday, May 13",
+    "isoDate": "2026-05-13",
+    "greeting": "Good morning, Jean. Wednesday has a solid shape — TRACE touchpoint to open, two back-to-back 1:1s with David and Carolina, a project list review with Josue at 11:30, and then your Blocked Space to actually breathe. The afternoon closes with BD Portfolio + CoE and the CoE Touchpoint, which feels fitting given that Mar spent last night polishing the CoE announcement email and PDF brief. A few things need your eyes before the day runs away: Sara is asking whether Halo Ticket #0028838 (Litify + Claude AI Workflow IT Security Review) belongs to your team — IT has follow-up questions about scope, licensing, and token cost. Amy Loesch also needs access to the Incident Response survey doc for her final review, and Laura's TRACE doc review was due today. Four carries from yesterday are still open — the Blocked Space was made for exactly this.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "co-wed-0513-tue-0512-rem-1",
+            "label": "Revisar proyecto en Asana de Phase 2",
+            "detail": "Carry desde el 8 de mayo. Marcado con ❗ — revisar el estado del proyecto Phase 2 en Asana antes de los meetings de hoy.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-wed-0513-tue-0512-a5",
+            "label": "Project list review — Jo Grijalva's meeting is TODAY at 11:30 AM",
+            "detail": "Jo Grijalva envió invite ayer. El meeting está en el calendario hoy a las 11:30 AM (tentative) — confirmar asistencia si aún no lo has hecho.",
+            "flag": "today"
+          },
+          {
+            "id": "co-wed-0513-tue-0512-a6",
+            "label": "Tarea vencida en Rippling — revisar cuál es",
+            "detail": "Rippling alertó ayer que hay 1 tarea vencida para The Lisinski Law Firm. Revisar y completar durante el Blocked Space.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-wed-0513-co-tue-0512-eod-0511-open-4",
+            "label": "Enviar los agreements al grupo de Tudo Bem de la pasada reunión",
+            "detail": "Carry desde el 11 de mayo. Los acuerdos de la última reunión de Tudo Bem siguen pendientes de enviar al grupo.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0513-cal-1",
+            "label": "9:30–9:45 AM — TRACE Touchpoint",
+            "detail": "Quick 15-min touchpoint sobre TRACE con Yuri Mendonca. Jean organizó. TRACE next steps: Laura tenía feedback due HOY — buena agenda para este touchpoint.",
+            "note": "Teams · Jean organizadora"
+          },
+          {
+            "id": "wed-0513-cal-2",
+            "label": "10:30–11:00 AM — 1:1 David & Jean",
+            "detail": "1:1 recurrente con David Molano. David deployó 'Approval Copy' picklist a producción ayer y tiene varios Asana status updates. Hay contexto fresco para la conversación.",
+            "note": "Teams · Blue category · Jean organizadora"
+          },
+          {
+            "id": "wed-0513-cal-3",
+            "label": "11:00–11:30 AM — 1:1 Carolina and Jean",
+            "detail": "Bi-weekly 1:1 con Carolina Lopez. Agenda: revisar proyectos del departamento y cómo apoyarlos.",
+            "note": "Teams · Orange category · Jean organizadora"
+          },
+          {
+            "id": "wed-0513-cal-4",
+            "label": "11:30–11:45 AM — Project List Review (tentative)",
+            "detail": "Reunión con Jo Grijalva para revisar el project list. Jo organizó. Carry-over de ayer — confirmar asistencia.",
+            "note": "Tentative · Jo Grijalva organizadora"
+          },
+          {
+            "id": "wed-0513-cal-5",
+            "label": "12:00–1:30 PM — Blocked Space",
+            "detail": "Tiempo protegido de Jean. Oportunidad para: cerrar carries (Tudo Bem, Rippling), responder email de Sara sobre IT ticket, y decidir sobre access request de Amy.",
+            "note": "Red — tiempo protegido · Jean organizadora"
+          },
+          {
+            "id": "wed-0513-cal-6",
+            "label": "1:30–2:00 PM — Jean/Sara 1:1 (tentative)",
+            "detail": "Nueva serie de 1:1 con Sara Watson. Sara creó esta nueva serie para reemplazar la anterior.",
+            "note": "Tentative · Sara organizadora"
+          },
+          {
+            "id": "wed-0513-cal-7",
+            "label": "2:00–3:00 PM — Focus Time: Weekly Meeting Prep",
+            "detail": "Bloque de focus de Jean para preparar la reunión semanal del equipo.",
+            "note": "Green category · Jean organizadora"
+          },
+          {
+            "id": "wed-0513-cal-8",
+            "label": "3:00–3:30 PM — BD Portfolio Management + CoE",
+            "detail": "Reunión organizada por Jean con jlogan, jamcdowell, Margarcia, y sawatson. Agenda: BD Bulletin + proyectos CoE. Momento ideal para alinear el CoE announcement que Mar preparó ayer.",
+            "note": "Teams · Jean organizadora"
+          },
+          {
+            "id": "wed-0513-cal-9",
+            "label": "4:00–4:30 PM — CoE Touchpoint",
+            "detail": "Touchpoint CoE con Mar Garcia, Frank von Hassell, y David Molano. Procesos, roadblocks, mejoras.",
+            "note": "Teams · Jean organizadora"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0513-a1",
+            "label": "Responder a Sara — IT Security ticket #0028838 (Litify + Claude AI Workflow)",
+            "detail": "Sara forwarded el ticket a ti, Eugenia, Janet, y Jorge preguntando: '¿es de tu equipo? ¿tal vez del CoE?' IT Help Desk tiene preguntas de seguimiento: ¿quién lidera? ¿Claude es para intake? ¿cuántas licencias? ¿qué tareas? ¿cuál es el costo estimado en tokens? Jean necesita confirmar a Sara si esto es CoE y coordinar respuesta con IT.",
+            "flag": "urgent"
+          },
+          {
+            "id": "wed-0513-a2",
+            "label": "Amy Loesch — SharePoint access request para Incident Response Survey doc",
+            "detail": "Amy Loesch solicitó acceso al documento '20260202_Incident Response Team_Employee Priority Survey_v1 - Copy' en SharePoint. Lucía ya le compartió el doc a Amy para revisión final — esta request probablemente es parte de ese proceso. Accept o Decline.",
+            "flag": "today"
+          },
+          {
+            "id": "wed-0513-a3",
+            "label": "Incident Response Survey — Larry flagged missing department question",
+            "detail": "Larry Marioth aprobó el survey pero señaló que falta una pregunta sobre departamento (Tessa la había solicitado). Lucía dice que marketing está ok. Amy tiene el doc para final review. Antes de distribución, confirmar si la pregunta de departamento debe agregarse.",
+            "flag": "today"
+          },
+          {
+            "id": "wed-0513-a4",
+            "label": "TRACE — verificar feedback de Laura con Yuri (deadline hoy)",
+            "detail": "Yuri fijó el 05/13 como deadline para que Laura revise el doc del TRACE project. En el 1:1 con David o en el touchpoint TRACE, confirmar si Laura entregó feedback. Si no, escalar con Yuri.",
+            "flag": "today"
+          },
+          {
+            "id": "wed-0513-a5",
+            "label": "Revisar Asana status updates de David — Sprint #10 y #11",
+            "detail": "David posteó varios status updates ayer: Sprint #10 complete (Approval Copy deployed), dos tickets UAT-ready con tester assignment stalled (Halo #0028476 y #0028392), Sprint #11 scaffold populated (kickoff 5/18), y un proyecto postponed to Sprint #11 (RFE/Appeal/Refile task sets — UAT surfaced workflow logic issues). Solo awareness, pero buena agenda para el 1:1 de las 10:30.",
+            "flag": "none"
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0513-e1",
+            "label": "Sara Watson — FW: Halo Ticket #0028838 · Litify + Claude AI Workflow IT Security Review",
+            "detail": "Sara pregunta si el ticket es de tu equipo o del CoE. IT Help Desk quiere saber: quién lidera, si Claude es para intake, cuántas licencias, qué tareas específicas, y tiene concerns sobre el costo en tokens ('unmeasurably expensive'). Respuesta a Sara (y posiblemente a IT) pendiente.",
+            "note": "To: Eugenia, Janet, Jean, Jorge"
+          },
+          {
+            "id": "wed-0513-e2",
+            "label": "SharePoint — Amy Loesch quiere acceso al Incident Response Survey doc",
+            "detail": "Notificación de SharePoint para aceptar o rechazar el acceso de Amy Loesch al documento del survey. Dado que Lucía ya la asignó para final review, probablemente corresponde aceptar.",
+            "note": "Accept or Decline requerido"
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0513-t1",
+            "label": "Sara Watson — Nuevo formato del EPMO Portfolio Update ya está live",
+            "detail": "Sara publicó en el canal del equipo: el weekly portfolio update tiene nuevo formato. Cambio principal: text boxes en vez de tablas (más espacio, más fácil de leer). Límite de 2 líneas por update — sin excepciones. Nuevo working copy ya disponible en SharePoint (EPMO Weekly Update - Working Copy.pptx). El equipo reaccionó muy bien (❤️❤️❤️👌👍).",
+            "flag": "none"
+          },
+          {
+            "id": "wed-0513-t2",
+            "label": "Mar Garcia — CoE announcement email + PDF brief finalizados",
+            "detail": "Mar y Jean trabajaron ayer en el CoE announcement. El email cubre el 'qué' y el 'por qué importa'; el PDF (CoE Brief) explica el 'cómo funciona'. Mar compartió el PDF en el chat y refinó el email. El material está listo — ideal para alinear en la BD Portfolio meeting de las 3 PM antes de enviar a Sara.",
+            "flag": "none"
+          },
+          {
+            "id": "wed-0513-t3",
+            "label": "Yuri Almeida — TRACE next steps con deadlines claros",
+            "detail": "Yuri publicó los next steps del TRACE project: 1) Laura revisa el doc y trae feedback — deadline HOY (05/13). 2) Yuri aplica modificaciones y comparte con Ernestina para feasibility check — 05/14. 3) Después del feedback de Ernestina, se define cómo proceder (TBD). Yuri también confirmó que Laura pidió un momento más para revisar — esperada entrega hoy.",
+            "flag": "none"
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0513-tmrw-1",
+            "label": "Jueves, Mayo 14 — TRACE modifications deadline (Yuri)",
+            "detail": "Si Laura entrega feedback hoy, Yuri tiene el 05/14 para aplicar modificaciones y compartir con Ernestina. Sprint #11 kickoff está agendado para el 05/18 — cualquier bloqueo en Halo tickets UAT-ready (#0028476 y #0028392) necesita moverse esta semana."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-05-12",
     "type": "daily",
     "date": "Tuesday, May 12",
@@ -4605,1625 +4793,6 @@
             "label": "Service Cloud launch — 9 days out (May 2)",
             "detail": "Salesforce Service Cloud launches Saturday, May 2, 2026. Refresher training was announced today. Make sure your team is in the loop and ready.",
             "note": "Awareness"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "eod-2026-04-22",
-    "type": "eod",
-    "date": "Wednesday, April 22 - End of Day",
-    "isoDate": "2026-04-22",
-    "greeting": "Wednesday delivered, Jean — and honestly? You cleared more than you carried in. The Denial/RFE dropdown finally landed after weeks of follow-up, you took ownership of the Jill communication directly, and you kept all four of today's action items green. The EPMO meeting cancellation gave you a rare bit of breathing room, which you clearly used well. The 1:1 with Camilo, the CoE Touchpoint, and the Liderazgo sync all happened. One item carries forward, a few things from today's email traffic deserve a quick look tomorrow. Rest well — Thursday has the Firmwide.",
-    "sections": [
-      {
-        "title": "Completed Today",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-0422-done-1",
-            "label": "MAJOR: Denial/RFE Dropdown — confirmed resolved after weeks on the carried list",
-            "detail": "This item has been on the carried list since last Friday, flagged as 'very urgent' by Shelley. Today it was checked off. Josh Coen replied to the Denial/RFE Dropdown Project thread confirming the RFE categorization dropdown can be done via a standalone IT ticket (in a day), and that the larger work can become a separate project. Resolved."
-          },
-          {
-            "id": "eod-0422-done-2",
-            "label": "Jean took over Jill ticket communication — Jhara off the hook",
-            "detail": "Jean messaged Jhara directly: 'FYI - yo le voy a escribir a Jill para resolver lo del ticket, no estuvo bien pedirte que lo hicieras tu. Error mío.' Jean is contacting Jill directly to resolve the RFE ticket thread and determine next steps."
-          },
-          {
-            "id": "eod-0422-done-3",
-            "label": "Supabase security vulnerabilities — dashboard project alert reviewed",
-            "detail": "Reviewed and actioned the Supabase security alert for the pmdashboard project."
-          },
-          {
-            "id": "eod-0422-done-4",
-            "label": "Acknowledged Detention Prevention Wave 2 milestone",
-            "detail": "Jhara's team closed Wave 2 outreach at ~61 responses against a 50-response target. Milestone acknowledged and analysis phase confirmed as next step."
-          },
-          {
-            "id": "eod-0422-done-5",
-            "label": "Emmanuel Leon access request — handled",
-            "detail": "Emmanuel Leon requested access to 'SOP CSC-CASE COPY - Copy - English' on SharePoint. Request reviewed and processed."
-          },
-          {
-            "id": "eod-0422-done-6",
-            "label": "Reviewed Andrea Rodriguez's Court 3.0 Staff Augmentation update",
-            "detail": "Andrea sent updates on Court's Hearings object in support of the Staff Augmentation project. Reviewed and noted for awareness."
-          },
-          {
-            "id": "eod-0422-done-7",
-            "label": "Followed up with Incident Response stakeholders on survey",
-            "detail": "Actioned the reminder. T. Lawrence responded with recommended changes and attachments — also flagged that an AI survey was sent to all TMs on 4/20."
-          },
-          {
-            "id": "eod-0422-done-8",
-            "label": "Defined next steps on RFE project and Jill communication",
-            "detail": "Path forward resolved: Jean handles Jill thread directly, Josh confirmed dropdown as standalone ticket, larger scope becomes a separate project."
-          },
-          {
-            "id": "eod-0422-done-9",
-            "label": "Add Frank von Hassel as collaborator automation — scoped",
-            "detail": "Frank should be auto-added as collaborator when a CoE intake is converted to an Asana project. Scoped today."
-          },
-          {
-            "id": "eod-0422-done-10",
-            "label": "CoE TEST and CoE Escalated Test — cleaned up from Asana",
-            "detail": "Both test projects deleted from Asana today as part of CoE workspace cleanup."
-          },
-          {
-            "id": "eod-0422-done-11",
-            "label": "Liderazgo Team Meeting — Teams channels best practices discussed",
-            "detail": "Jean contributed: 'For big projects the team has used Channels as a repository, for communication we use group chats.' Jorge thanked everyone for the feedback."
-          },
-          {
-            "id": "eod-0422-done-12",
-            "label": "1:1 Camilo & Jean — completed",
-            "detail": "Regular check-in completed. Session covered team dynamics, the Jill ticket handoff, and some reflective frameworks (Johari Window, 16personalities)."
-          },
-          {
-            "id": "eod-0422-done-13",
-            "label": "CoE Touchpoint — next steps aligned with David and Maria",
-            "detail": "Jean held the CoE Touchpoint with David Molano and Maria Garcia. CoE portal reviewed. CoE operational rhythm formalized."
-          },
-          {
-            "id": "eod-0422-done-14",
-            "label": "Scoping Call: Fix Task Sets for Appeal and Refile Process — attended",
-            "detail": "Attended the scoping session with Maria Garcia, Lina Perez, Lina Cruz, Carolina Lopez, Jo Pritchard, Mauricio Sanchez, and Jhara Castillo. Covered creating fix task sets for the appeal and refile process."
-          }
-        ]
-      },
-      {
-        "title": "Cancelled Today",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-0422-cancel-1",
-            "label": "EPMO Team Meeting — cancelled by Sara Watson",
-            "detail": "Sara cancelled the biweekly EPMO Team Meeting: 'Free time! See you in 2 weeks!' Next occurrence in two weeks. Liderazgo Team Meeting ran at the same time slot."
-          }
-        ]
-      },
-      {
-        "title": "Still Open",
-        "info": false,
-        "items": [
-          {
-            "id": "eod-0422-open-1",
-            "label": "BCP/Incident Response survey — Request for Review",
-            "detail": "Jean sent a formal review to the BCP/Incident Response team for the Incident Management Survey before firm-wide distribution. T. Lawrence replied today with recommended changes and attachments — and flagged an AI survey sent to TMs on 4/20. Review T. Lawrence's recommendations and determine if adjustments are needed before distribution. Check who hasn't yet confirmed their review.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-0422-open-2",
-            "label": "Expedite Request project — follow up on UAT status and ON HOLD email",
-            "detail": "Jean messaged David and Yuri: asking David to confirm when UAT is done, and asking Yuri to send an email requesting the project stay ON HOLD until further notice. Follow up to confirm both were actioned.",
-            "flag": null
-          },
-          {
-            "id": "eod-0422-open-3",
-            "label": "Staff Augmentation gap analysis — link not accessible (personal OneDrive)",
-            "detail": "Duvan Camargo shared the Staff Aug gap analysis from discovery sessions, asking the team to comment before it feeds into the PRD. Yuri replied that the link is on Duvan's personal OneDrive and isn't accessible. Follow up with Duvan to re-share from a shared location.",
-            "flag": null
-          },
-          {
-            "id": "eod-0422-open-4",
-            "label": "Incident Management Survey — T. Lawrence recommendations need review",
-            "detail": "T. Lawrence sent recommended changes with attachments and flagged the overlap with the 4/20 AI survey. Review the attachments and incorporate feedback before finalizing for firm-wide distribution.",
-            "flag": null
-          },
-          {
-            "id": "eod-0422-open-5",
-            "label": "Dashboard data extraction — Plan B needed (Javier Vargas flagged)",
-            "detail": "Javier Vargas flagged in Teams that 9 Htz API is too slow to respond, and Dolpao already asked about it. Javier messaged Jean directly: 'we might need to think on plan b on extracting the info from the dashboard.' Needs direction or follow-up.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Key Decisions",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-0422-kd-1",
-            "label": "Denial/RFE dropdown: standalone IT ticket now; larger scope = separate project",
-            "detail": "Josh Coen confirmed the RFE categorization dropdown can be done via a standalone IT ticket in a day. He's aligned with the larger scope becoming its own project. Closes the descoping question from Shelley and Jill."
-          },
-          {
-            "id": "eod-0422-kd-2",
-            "label": "Jean owns Jill communication — Jhara is off the hook",
-            "detail": "Jean made the call: she'll write to Jill directly to resolve the RFE ticket thread. She told Jhara this was her error to have delegated it, and took it back."
-          },
-          {
-            "id": "eod-0422-kd-3",
-            "label": "Expedite Request project stays ON HOLD pending UAT completion",
-            "detail": "Jean messaged David and Yuri: UAT must be complete before any next steps, and Yuri was asked to send a formal ON HOLD notification email."
-          },
-          {
-            "id": "eod-0422-kd-4",
-            "label": "CoE automation: Frank von Hassel auto-added as collaborator on converted intake tickets",
-            "detail": "Scoped today: when a CoE intake form is converted to an Asana project, Frank von Hassel should automatically be added as a collaborator."
-          }
-        ]
-      },
-      {
-        "title": "Tomorrow Preview",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-0422-tmrw-1",
-            "label": "April Firmwide Meeting — Thursday, April 23 at 2:00 PM",
-            "detail": "Monthly all-hands Firmwide Meeting. Invite received today. Come prepared with CoE transition context — last week's announcement may generate questions from the broader firm."
-          },
-          {
-            "id": "eod-0422-tmrw-2",
-            "label": "1:1 David & Jean — rescheduled to Thursday",
-            "detail": "David Molano's 1:1 was moved from Wednesday to Thursday. Good chance to debrief the CoE Touchpoint and follow up on the Expedite Request ON HOLD status."
-          },
-          {
-            "id": "eod-0422-tmrw-3",
-            "label": "David Molano time-off (April 23) — Rippling approval pending",
-            "detail": "David submitted a leave request for April 23. If not already approved, process in Rippling before the day starts."
-          },
-          {
-            "id": "eod-0422-tmrw-4",
-            "label": "Sara Watson — last full day in Dublin Office (through Friday April 24)",
-            "detail": "Sara is in the Dublin office through Friday. Thursday is her last full day there. Keep async cadence for anything non-urgent."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "daily-2026-04-22",
-    "type": "daily",
-    "date": "Wednesday, April 22",
-    "isoDate": "2026-04-22",
-    "greeting": "Good morning, Jean. Wednesday is loaded but cleaner than yesterday — Sara's still in Dublin, the EPMO meeting is cancelled (free time!), and the CoE portal went live overnight. Detention Prevention hit a major milestone: Wave 2 fielding closed at 61 responses, beating the 50-target. Three reminders from last night are queued, and there's a Supabase security alert for your dashboard project that needs attention. Let's get into it.",
-    "sections": [
-      {
-        "title": "Carried Over",
-        "info": false,
-        "items": [
-          {
-            "id": "co-wed-0422-eod-0421-open-1",
-            "label": "Denial/RFE Dropdown Update — confirm Josh submitted the IT ticket",
-            "detail": "Still unresolved since last Friday. Shelley flagged this as very urgent. The issue was descoped from the CoE project — Josh needs to submit a standalone IT ticket. Third time on the carried list. Your reminder below about RFE next steps connects here.",
-            "flag": "carried"
-          },
-          {
-            "id": "co-wed-0422-eod-0421-open-8",
-            "label": "BCP/Incident Response survey — Request for Review",
-            "detail": "The BCP/Incident Response team sent a formal review request for their Incident Management Survey before firm-wide distribution. Your review is needed. Connects to your reminder below about following up with IR stakeholders.",
-            "flag": "carried"
-          }
-        ]
-      },
-      {
-        "title": "Reminders",
-        "info": false,
-        "items": [
-          {
-            "id": "rem-1776806298473",
-            "label": "Add automation: Frank von Hassel as collaborator on converted CoE tickets",
-            "detail": "You added this last night during the CoE meeting. When a CoE intake form is converted to an Asana project, Frank von Hassel should automatically be added as a collaborator. Scope this with David or Mar — good topic for today's CoE Touchpoint."
-          },
-          {
-            "id": "rem-1776811281383",
-            "label": "Dar seguimiento a stakeholders de Incident Response — survey",
-            "detail": "Added at 6:41 PM last night. Follow up with Incident Response stakeholders on the survey. Connects directly to the carried-over BCP/IR review item above."
-          },
-          {
-            "id": "rem-1776821594872",
-            "label": "Definir next steps — proyecto RFE y comunicación de Jill con Josh",
-            "detail": "Added at 9:33 PM. Define the path forward on the RFE task sets project and Jill's communication with Josh. Jean noted this morning she'll contact Jill directly — factor that in when scoping next steps."
-          }
-        ]
-      },
-      {
-        "title": "Today's Schedule",
-        "info": true,
-        "items": [
-          {
-            "id": "wed-s1",
-            "time": "All day",
-            "label": "Sara Watson — Dublin Office",
-            "detail": "Sara is in the Dublin, OH office all week through Friday, April 24. Will be attending meetings virtually.",
-            "note": "OOO from remote — in Dublin office"
-          },
-          {
-            "id": "wed-s2",
-            "time": "11:30 AM",
-            "label": "Scoping Call: Fix Task Sets for Appeal and Refile Process",
-            "detail": "Organized by Maria Garcia. Attendees include Lina Perez, Lina Cruz, Carolina Lopez, Jo Pritchard, Mauricio Sanchez, and Jhara Castillo. Scoping session for creating fix task sets for the appeal and refile process.",
-            "note": "Tentative — confirm attendance"
-          },
-          {
-            "id": "wed-s3",
-            "time": "12:00 PM",
-            "label": "Blocked Space",
-            "detail": "Your protected focus window. Use this to tackle the Supabase security alert, the RFE follow-up, and any email replies that need responses.",
-            "note": "Red category — protected time"
-          },
-          {
-            "id": "wed-s4",
-            "time": "1:00 PM",
-            "label": "CoE Touchpoint",
-            "detail": "You organized this sync with David Molano and Maria Garcia on CoE next steps. First formal CoE operational touchpoint since yesterday's EPMO → CoE transition announcement. CoE portal is also live — David shared credentials last night.",
-            "note": "Teams meeting"
-          },
-          {
-            "id": "wed-s5",
-            "time": "2:00 PM",
-            "label": "Liderazgo Team Meeting",
-            "detail": "Monthly leadership sync organized by Sara Watson. Attendees: Sara, Jamie McDowell, Eunice Barragan, Jorge Grijalva, and Jean. Note: EPMO Team Meeting at the same time is cancelled — Sara freed everyone up.",
-            "note": "Tentative — confirm attendance"
-          },
-          {
-            "id": "wed-s6",
-            "time": "3:30 PM",
-            "label": "1:1 Camilo & Jean",
-            "detail": "Regular check-in with Camilo Vejarano. He already saw your email this morning ('ya vi el correo'). Jean noted she'll contact Jill directly about the ticket — worth aligning on what Camilo needs to know before then.",
-            "note": "Teams meeting"
-          },
-          {
-            "id": "wed-s7",
-            "time": "4:00 PM",
-            "label": "Focus time: weekly meeting preparation",
-            "detail": "Self-organized prep block. Green category. Use to prepare for any upcoming Friday or end-of-week syncs.",
-            "note": "Self-organized — prep time"
-          }
-        ]
-      },
-      {
-        "title": "Action Items",
-        "info": false,
-        "items": [
-          {
-            "id": "wed-a1",
-            "label": "Supabase security vulnerabilities — review alert for dashboard project",
-            "detail": "Supabase sent an automated security alert this morning (11:27 AM). This is likely the pmdashboard backend project. Log into the Supabase dashboard and review any flagged vulnerabilities before they escalate.",
-            "flag": "urgent"
-          },
-          {
-            "id": "wed-a2",
-            "label": "Acknowledge Detention Prevention milestone — Wave 2 fielding closed",
-            "detail": "Jhara sent a team update last night: Wave 2 outreach wrapped with ~61 survey responses (target was 50). The project moves to analysis. Jhara also cancelled the weekly standing meeting. Acknowledge the team's work and confirm the analysis phase timeline.",
-            "flag": null
-          },
-          {
-            "id": "wed-a3",
-            "label": "Emmanuel Leon — approve or decline access request for SOP document",
-            "detail": "Emmanuel Leon requested access to 'SOP CSC-CASE COPY - Copy - English' on SharePoint, writing 'Quisiera tener acceso, por favor.' Review the SharePoint notification and accept or decline.",
-            "flag": null
-          },
-          {
-            "id": "wed-a4",
-            "label": "Review Andrea's Court 3.0 Staff Augmentation update (attachments)",
-            "detail": "Andrea Rodriguez sent updates to Court's Hearings object in support of the Staff Augmentation project (external attorney support). Email includes attachments. Sent to Susi and JP — Jean should be in the loop on this one.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Emails Awaiting Reply",
-        "info": false,
-        "items": [
-          {
-            "id": "wed-e1",
-            "label": "Andrea Rodriguez — Addendum Examples / Intake & Contract Teams' Support",
-            "detail": "Andrea sent workshop findings from the Intake Support and Contract teams to Conor Breslin (with attachments). Jean is likely CC'd for awareness. Review the attachment and follow up if Conor or Andrea need your input.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Teams Highlights",
-        "info": false,
-        "items": [
-          {
-            "id": "wed-t1",
-            "label": "CoE Portal is live — David shared credentials last night",
-            "detail": "David Molano shared the CoE project status portal in the meeting chat: https://coe-portal-pink.vercel.app/ (username: coe / password: coeprojectstatus). Review before today's 1:00 PM CoE Touchpoint — it may be the centerpiece of the discussion.",
-            "flag": null
-          },
-          {
-            "id": "wed-t2",
-            "label": "Training Manager role posted internally — Hassan shared in Leaders channel",
-            "detail": "Hassan Jassir posted the Training Manager opening to the Rippling internal job board (high importance). Share with your team if relevant: https://app.rippling.com/ats/internal-job-board/69e68f95635ea941cf8c4fc3",
-            "flag": null
-          },
-          {
-            "id": "wed-t3",
-            "label": "Jean taking over Jill ticket communication — Camilo off the hook",
-            "detail": "This morning Jean told Camilo: 'FYI - yo le voy a escribir a Jill para resolver lo del ticket, no estuvo bien pedirte que lo hicieras tu. Error mío.' Jean is contacting Jill directly and will determine next steps on the RFE ticket thread.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Out of Office",
-        "info": true,
-        "items": [
-          {
-            "id": "wed-ooo1",
-            "label": "Sara Watson — Dublin Office through Friday, April 24",
-            "detail": "Sara is in the Dublin, OH office April 20–24. Attending all virtual meetings from the office.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Tomorrow Preview",
-        "info": true,
-        "items": [
-          {
-            "id": "wed-tmrw-1",
-            "label": "1:1 David & Jean — moved to Thursday",
-            "detail": "David Molano's 1:1 was rescheduled from Wednesday to Thursday by mutual agreement. David confirmed. Check your Thursday calendar for the exact time."
-          },
-          {
-            "id": "wed-tmrw-2",
-            "label": "Security Training — April 27 (Monday)",
-            "detail": "Camilo confirmed a Security Training on April 27. If there's a team invite to circulate, do it this week."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "eod-2026-04-21",
-    "type": "eod",
-    "date": "Tuesday, April 21 - End of Day",
-    "isoDate": "2026-04-21",
-    "greeting": "Tuesday delivered, Jean. You held the line on a packed day — back-to-back 1:1s, a pivotal EPMO announcement, and a PROD deployment you quietly but firmly stopped before it could do damage. Two meetings got cancelled (Detention Prevention and EPMO Team), giving you a rare sliver of breathing room at the end of the day. The CoE intake pipeline got its first real test today — and it worked. That's not nothing. Wrap up, take a breath, and let's get ready for a full Wednesday.",
-    "sections": [
-      {
-        "title": "Completed Today",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-0421-done-1",
-            "label": "EPMO → CoE Transition Announcement sent to Leaders",
-            "detail": "Jean sent a formal message to the Leaders channel clarifying the evolution: EPMO is shifting from a department to a portfolio management function, and the CoE is officially standing up to handle specific process improvements. Preemptively addressed questions about Mar's role (CoE-only), CoE vs. EPMO boundaries, and project re-routing to Jorge. This was a major internal communication that sets the tone going forward."
-          },
-          {
-            "id": "eod-0421-done-2",
-            "label": "Stopped premature PROD deployment — UAT hold confirmed",
-            "detail": "Mauricio Concha had the impression that 'Ready to PROD' stories could deploy today. Jean replied directly and clearly: UAT is not complete, no stories go to production until it is. Mauricio confirmed understanding. A quiet but high-stakes intervention that protected the release process."
-          },
-          {
-            "id": "eod-0421-done-3",
-            "label": "CoE Touchpoint meeting scheduled — David and Maria confirmed",
-            "detail": "Jean created and sent a CoE Touchpoint invite. David Molano and Maria Garcia both accepted. This formalizes the CoE operational rhythm going forward."
-          },
-          {
-            "id": "eod-0421-done-4",
-            "label": "1:1 David & Jean rescheduled to Thursday",
-            "detail": "Jean reached out to David about tomorrow's 1:1 (which was 101% full) and they agreed to move it to Thursday afternoon. David confirmed. Invite sent and accepted."
-          },
-          {
-            "id": "eod-0421-done-5",
-            "label": "New CoE intake: Update RFE, Appeal & Refile Task Sets — converted to project",
-            "detail": "Carolina López submitted a new CoE request: 'Update RFE, Appeal, and Refile Task Sets for DocuSign & Wet Signature Alignment.' The intake was confirmed, converted to an Asana project, and Carolina received her confirmation email. Frank Von Hassell has requested access — that approval action is pending."
-          },
-          {
-            "id": "eod-0421-done-6",
-            "label": "Assigned owner of Service Expansion AI Agent in Asana",
-            "detail": "Asana notified Jean that she was made the owner of the 'Service Expansion AI Agent' project. This project is now officially in her portfolio."
-          },
-          {
-            "id": "eod-0421-done-7",
-            "label": "CoE Internal SOP 1st Draft received from Maria Garcia",
-            "detail": "Maria forwarded the first draft of the CoE Internal SOP via email. Received and noted — needs review and feedback. This is a meaningful CoE deliverable hitting the inbox."
-          }
-        ]
-      },
-      {
-        "title": "Cancelled Today",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-0421-cancel-1",
-            "label": "Detention Prevention Weekly Meeting — cancelled by Jhara",
-            "detail": "Jhara sent two high-importance cancellation emails for today's 4:00 PM Detention Prevention Weekly Meeting. The weekly cadence will need to be re-established. No context provided for the cancellation."
-          },
-          {
-            "id": "eod-0421-cancel-2",
-            "label": "EPMO Team Meeting — cancelled by Sara",
-            "detail": "Sara Watson cancelled the EPMO Team Meeting with the message: 'Free time! See you in 2 weeks!' This is a bi-weekly meeting — next occurrence expected in two weeks."
-          }
-        ]
-      },
-      {
-        "title": "Still Open",
-        "info": false,
-        "items": [
-          {
-            "id": "eod-0421-open-1",
-            "label": "Denial/RFE Dropdown Update — confirm Josh submitted the IT ticket",
-            "detail": "Still no confirmation that Josh submitted the standalone IT ticket. This has been carried since Friday and flagged by Shelley as very urgent. Needs resolution.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-0421-open-2",
-            "label": "Follow up con Jeannette y Lucia — survey process clarity",
-            "detail": "BCP TM survey process still unresolved. Lucia replied with feedback — loop in Jeannette and align on content, status, and distribution timeline.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-0421-open-3",
-            "label": "Jhara's timecard correction — 4/14, 61-hour day",
-            "detail": "No confirmation that this was fixed in Rippling. Was supposed to be addressed in today's 1:1. Verify with Jhara or fix directly in Rippling.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-0421-open-4",
-            "label": "Approve David Molano's time-off request — Apr 23 in Rippling",
-            "detail": "David submitted his leave request for April 23. His appointment moved to Thursday, but the Rippling approval for Apr 23 still needs to be processed.",
-            "flag": "urgent"
-          },
-          {
-            "id": "eod-0421-open-5",
-            "label": "Review Sara Watson's Sprint Escalations & UAT Timing invite",
-            "detail": "Sara sent a meeting invite for this topic — hasn't been reviewed or confirmed yet. Given today's UAT/PROD clarification, this meeting is now more relevant than ever.",
-            "flag": "due"
-          },
-          {
-            "id": "eod-0421-open-6",
-            "label": "Review EPMO Survey Results before Friday's call",
-            "detail": "Eunice Barragan sent the April 2026 EPMO Survey Results. Needs review before Friday's discussion.",
-            "flag": "due"
-          },
-          {
-            "id": "eod-0421-open-7",
-            "label": "Frank Von Hassell — approve access to CoE intake project",
-            "detail": "Frank requested access to the 'Update RFE, Appeal, and Refile Task Sets' Asana project. His access request is pending approval in Asana.",
-            "flag": "due"
-          },
-          {
-            "id": "eod-0421-open-8",
-            "label": "BCP/Incident Response survey — Request for Review",
-            "detail": "The BCP/Incident Response team sent a request for review on the Incident Management Survey. They're planning to distribute it across the firm. Review needed before distribution.",
-            "flag": "due"
-          },
-          {
-            "id": "eod-0421-open-9",
-            "label": "CoE Internal SOP 1st Draft — review and feedback",
-            "detail": "Maria Garcia forwarded the first draft of the CoE Internal SOP. Needs Jean's review and feedback before it can be finalized.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Key Decisions",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-0421-kd-1",
-            "label": "EPMO evolving to portfolio management function — CoE takes process ownership",
-            "detail": "Jean formally communicated this shift to the Leaders channel. EPMO will no longer function as a department handling all project types. Instead, it becomes a portfolio oversight layer, while the CoE absorbs specific process improvement work. Mar Garcia is CoE-only. Reports project and Supplements Phase 2 re-routed to Jorge."
-          },
-          {
-            "id": "eod-0421-kd-2",
-            "label": "No PROD deployments until UAT is completed",
-            "detail": "Jean explicitly confirmed to Mauricio Concha that stories marked 'Ready to PROD' must NOT be deployed until UAT is complete. This is a firm, documented hold on the current sprint's deployment window."
-          },
-          {
-            "id": "eod-0421-kd-3",
-            "label": "Mar Garcia: CoE-only focus, not taking project assignments",
-            "detail": "Communicated to team leads today. Mar is fully allocated to CoE work. Any project requests that would have gone to Mar need to be re-routed or handled separately."
-          },
-          {
-            "id": "eod-0421-kd-4",
-            "label": "Reports project & Supplements Phase 2 re-routed to Jorge Grijalva",
-            "detail": "Both initiatives were redirected to Jorge, as they exceed the CoE's scope. Supplements Phase 2 Object is the other re-routing confirmed today."
-          }
-        ]
-      },
-      {
-        "title": "Tomorrow Preview",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-0421-tmrw-1",
-            "label": "Wednesday is 101% full — Jean said so herself",
-            "detail": "Jean mentioned in Teams that tomorrow is completely packed. Review the calendar tonight and identify anything that can be deprioritized or shifted. David's 1:1 is already moved to Thursday."
-          },
-          {
-            "id": "eod-0421-tmrw-2",
-            "label": "April Firmwide Meeting — Wednesday afternoon",
-            "detail": "Monthly firmwide meeting. High visibility. Come prepared with CoE transition context in case questions come up — today's announcement may generate some follow-up."
-          },
-          {
-            "id": "eod-0421-tmrw-3",
-            "label": "UAT completion needed before PROD deployment",
-            "detail": "With today's hold confirmed, Wednesday is a natural window to push UAT testing forward. Coordinate with the team to ensure testing proceeds so the deployment window doesn't stall further."
-          },
-          {
-            "id": "eod-0421-tmrw-4",
-            "label": "Security Training — April 27",
-            "detail": "Camilo Vejarano confirmed a Security Training scheduled for April 27. Circulate the invite or confirm attendance for your team."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "daily-2026-04-21",
-    "type": "daily",
-    "date": "Tuesday, April 21",
-    "isoDate": "2026-04-21",
-    "greeting": "Jhara's back, Jean — and Tuesday is hitting the ground running. You've got 5 reminders queued, 3 carryovers still open, and a full stack of 1:1s from 10 AM to 4:30 PM. The biggest early move: fix Jhara's timecard before her 10:30 sync, then brief her on Shelley's email, the RFE ticket, and what Jill sent. The static from last week is all still resolvable today — let's clear it.",
-    "sections": [
-      {
-        "title": "Carried Over",
-        "info": false,
-        "items": [
-          {
-            "id": "co-tue-0421-eod-open-1",
-            "label": "Denial/RFE Dropdown Update — confirm Josh submitted the IT ticket",
-            "detail": "This has been open since Friday. Shelley flagged it as very urgent. It was descoped from the CoE project — Josh needs to submit a standalone IT ticket. Has not been confirmed yet.",
-            "flag": "carried"
-          },
-          {
-            "id": "co-tue-0421-eod-open-3",
-            "label": "Follow up con Jeannette y Lucia — survey process clarity",
-            "detail": "BCP TM survey process still unresolved. Lucia sent a reply last night (new reminder added) — review that email and reach out to Jeannette to align on content, status, and distribution timeline.",
-            "flag": "carried"
-          },
-          {
-            "id": "co-tue-0421-eod-open-6",
-            "label": "Jhara's timecard correction — 4/14, 61-hour day",
-            "detail": "Maureen Brown flagged this yesterday. Jhara appears to not have clocked out correctly on 4/14, showing a 61-hour shift. She's back today — fix in Rippling before or right after her 10:30 AM 1:1.",
-            "flag": "carried"
-          }
-        ]
-      },
-      {
-        "title": "Reminders",
-        "info": false,
-        "items": [
-          {
-            "id": "rem-1776694596483",
-            "label": "Follow up with Chelsea — Incident Response bucket 5/6 ownership",
-            "detail": "You added this Monday afternoon. Chelsea sent a message about Incident Response and you need to follow up: who will be the owner of bucket 5 and/or 6? Confirm if Legal takes ownership."
-          },
-          {
-            "id": "rem-1776694768494",
-            "label": "Comentarle a Jhara — correo de Shelley, ticket RFE, y mensaje de Jill",
-            "detail": "You added this Monday. Bring Jhara up to speed in today's 1:1 on three things: Shelley's email, the Denial/RFE ticket status, and what Jill communicated. She's been OOO — she'll need context on all three."
-          },
-          {
-            "id": "rem-1776696863764",
-            "label": "Preguntarle a Jhara del timecard del 14 al 17 de abril (61 horas)",
-            "detail": "Confirmed: Maureen Brown flagged that Jhara didn't clock out correctly on 4/14. Discuss with Jhara today and fix the Rippling timecard as soon as possible."
-          },
-          {
-            "id": "rem-1776720034354",
-            "label": "Agregar contenido adicional al ticket de Javier Hurtado en el proyecto de CoE",
-            "detail": "You added this Monday night. There's a ticket in the CoE project for Javier Hurtado that needs additional context or content. Add it before or after the 1:00 PM CoE intake form meeting."
-          },
-          {
-            "id": "rem-1776732468621",
-            "label": "Revisar correo de Lucia Caamano — survey (BCP TM)",
-            "detail": "You added this at 12:47 AM. Lucia replied to the BCP TM survey thread. Review her response — she noted that only Kris, Danny, and she had seen it previously and recommends running it by the project team again."
-          }
-        ]
-      },
-      {
-        "title": "Today's Schedule",
-        "info": true,
-        "items": [
-          {
-            "id": "tue-s1",
-            "time": "10:00 AM",
-            "label": "1:1 Conor B. & Jean G.",
-            "detail": "Discuss Conor's department needs and establish key PM principles to improve project outcomes. First structured 1:1 — come with a clear framework and questions to understand his team's pain points.",
-            "note": "Teams meeting"
-          },
-          {
-            "id": "tue-s2",
-            "time": "10:30 AM",
-            "label": "1:1 Jhara & Jean — FIRST SYNC BACK FROM OOO",
-            "detail": "Portfolio review, roadblocks, next steps. Big agenda: brief her on Shelley's message, RFE ticket, Jill's note, the CoE routing decisions from Monday, and the Detention Prevention project updates. Also address the 4/14 timecard issue.",
-            "note": "Fix timecard before this meeting if possible"
-          },
-          {
-            "id": "tue-s3",
-            "time": "11:30 AM",
-            "label": "PreQual Support (tentative)",
-            "detail": "Meeting with Jorge Grijalva and Jaime Vargas. Follow-up on the Phase 2 project handoff from Monday — PreQual support scope and next steps.",
-            "note": "Tentative — confirm attendance"
-          },
-          {
-            "id": "tue-s4",
-            "time": "12:00 PM",
-            "label": "Blocked Space",
-            "detail": "Protected focus time. Use this to send Chelsea's Incident Response message, add content to Javier Hurtado's CoE ticket, and clear any remaining email replies.",
-            "note": "High-value use: Chelsea message + Javier ticket"
-          },
-          {
-            "id": "tue-s5",
-            "time": "1:00 PM",
-            "label": "CoE: Improvements Intake Form (tentative)",
-            "detail": "Working session with Mar Garcia, David Molano, Sara Watson, and Danny Miller. Continue refining the CoE intake form process based on Monday's testing. Mar is leading this one.",
-            "note": "Tentative — confirm attendance"
-          },
-          {
-            "id": "tue-s6",
-            "time": "1:30 PM",
-            "label": "1:1 Maria & Jean",
-            "detail": "Portfolio review, roadblocks, next steps. Good timing to discuss the CoE Home page she shared Monday and the intake routing confirmations.",
-            "note": "Teams meeting"
-          },
-          {
-            "id": "tue-s7",
-            "time": "3:00 PM",
-            "label": "1:1 Yuri & Jean",
-            "detail": "Regular check-in with Yuri Mendonca. Follow up on UER project status and executive deck updates.",
-            "note": "Teams meeting"
-          },
-          {
-            "id": "tue-s8",
-            "time": "4:00 PM",
-            "label": "Detention Prevention Weekly Meeting (tentative)",
-            "detail": "Weekly working session led by Jhara — full cross-functional group. Good first post-OOO session for her to reassume leadership of this project.",
-            "note": "Large group — Jhara, legal, ops, Santiago's team"
-          },
-          {
-            "id": "tue-s9",
-            "time": "4:30 PM",
-            "label": "Staff Aug. Touchpoint with Andrea Rodriguez (tentative)",
-            "detail": "Andrea reached out yesterday wanting to discuss Staff Aug 2.0 scope — she feels it should go beyond KPIs. She also has context on how Court's learnings impact Staff Aug evolution. Good conversation to have today.",
-            "note": "Andrea has specific POV on expanded scope"
-          }
-        ]
-      },
-      {
-        "title": "Action Items",
-        "info": false,
-        "items": [
-          {
-            "id": "tue-a1",
-            "label": "Approve David Molano's time-off request — Apr 23 in Rippling",
-            "detail": "David submitted a leave request for April 23, 2026. This requires your approval in Rippling. He also sent an OOO notification email. He separately messaged that his appointment was rescheduled to Thursday at 9 AM — you already told him to process it through Rippling.",
-            "flag": "urgent"
-          },
-          {
-            "id": "tue-a2",
-            "label": "Review Sara Watson's 'Sprint Escalations & UAT Timing' invite",
-            "detail": "Sara sent a Teams meeting invite for this topic — it came in unread. She also messaged the team that she needs a meeting this week to discuss UAT timing and escalations. Review and confirm your availability.",
-            "flag": "due"
-          },
-          {
-            "id": "tue-a3",
-            "label": "Review EPMO Survey Results before Friday's call",
-            "detail": "Eunice Barragan sent the EPMO Survey Results for April 2026 with attachments — sent to Sara and team leads. She planned to discuss on Friday's call. Read this before then so you can contribute.",
-            "flag": "due"
-          }
-        ]
-      },
-      {
-        "title": "Emails Awaiting Reply",
-        "info": false,
-        "items": [
-          {
-            "id": "tue-e1",
-            "label": "Lucia Caamano — BCP TM survey reply",
-            "detail": "Lucia replied late last night. She said only Kris, Danny, and she had seen the survey previously and recommends running it by the full project team to make sure it will capture what they need. Decide how to proceed — forward to the wider group or loop in Jeannette first.",
-            "flag": "due"
-          },
-          {
-            "id": "tue-e2",
-            "label": "Jorge Grijalva — IT-approved project notification",
-            "detail": "Jorge sent a Teams message (you also have the email notification unread): IT just approved the 'Unresponsive Program' project. A new project will soon enter IT evaluation. Check the pipeline and see how this impacts your current backlog.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Teams Highlights",
-        "info": false,
-        "items": [
-          {
-            "id": "tue-t1",
-            "label": "Jorge Grijalva — IT approved Unresponsive Program project",
-            "detail": "Jorge posted to the team: IT just approved the Unresponsive Program project (it was under IT evaluation). A new project will soon enter IT evaluation to replace it in the queue. Keep an eye on the pipeline for incoming scope.",
-            "flag": null
-          },
-          {
-            "id": "tue-t2",
-            "label": "Sara Watson — UAT timing & escalations meeting incoming this week",
-            "detail": "Sara messaged the team from the road that she's catching up on comms and needs to schedule a meeting this week about UAT timing and escalations. She already sent a Teams meeting invite. Watch for confirmation.",
-            "flag": null
-          },
-          {
-            "id": "tue-t3",
-            "label": "Andrea Rodriguez — Staff Aug 2.0 scope discussion on today's call",
-            "detail": "Andrea messaged you yesterday wanting to discuss Staff Aug 2.0. Her view: the scope should go beyond KPIs. She sees Staff Aug evolving in 'Court-like' iterations (2.0, 3.0) as the process reveals new learnings. Good conversation to have during today's 4:30 touchpoint.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Out of Office",
-        "info": true,
-        "items": [
-          {
-            "id": "tue-ooo1",
-            "label": "Sara Watson — Dublin Office all week",
-            "detail": "Sara is working from the Dublin office April 20–23. Different timezone — allow for response delays on synchronous requests. She's traveling today but was available via Teams chat on the road.",
-            "note": "Apr 20–23 Dublin"
-          },
-          {
-            "id": "tue-ooo2",
-            "label": "Jhara Ochoa — BACK TODAY",
-            "detail": "Jhara's OOO block (April 14–21) ends today. She should be active and available for her 10:30 AM 1:1. Welcome her back with a strong briefing — she's got a lot to catch up on.",
-            "note": "Back in action — 1:1 at 10:30 AM"
-          }
-        ]
-      },
-      {
-        "title": "Tomorrow Preview",
-        "info": true,
-        "items": [
-          {
-            "id": "tue-tmrw-1",
-            "label": "Watch for Sprint Escalations & UAT Timing meeting",
-            "detail": "Sara is scheduling this for this week. It may land on Wednesday. Make sure your afternoon has room for it."
-          },
-          {
-            "id": "tue-tmrw-2",
-            "label": "Firmwide Meeting — check for 1:1 conflicts",
-            "detail": "The Firmwide Meeting is on Wednesday. You still have a 1:1 with Camilo and Maria that may conflict — that reschedule has been pending since last week. Get ahead of it today."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "eod-2026-04-20",
-    "type": "eod",
-    "date": "Monday, April 20 - End of Day",
-    "isoDate": "2026-04-20",
-    "greeting": "Wrapping up a solid Monday, Jean. You crushed a packed calendar — 1:1 with Shelley, EPMO Portfolio Review, Sprint #9 demo, AND a Phase 2 project review with Jorge. The Litify CoE launch energy is real — Sara called it \"the most exciting email in her inbox last week.\" Jhara's back tomorrow, and Sara's settling into Dublin. Nice momentum to carry into Tuesday.",
-    "sections": [
-      {
-        "title": "Completed Today",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-done-1",
-            "label": "Phase 2 Project Review with Jorge Grijalva",
-            "detail": "Discussed dashboard requests handoff. Sent follow-up email to Jorge with the project details — positioned as a tool for Ops Leaders to have meaningful metrics, not urgent but valuable."
-          },
-          {
-            "id": "eod-done-2",
-            "label": "Replied to Sara re: Venn Conditional Access",
-            "detail": "Confirmed the scoping call happened 04/16 with Jason, Danny, Caleb, and Jon. Notes, transcript, and recording already shared with Janet. Thread closed."
-          },
-          {
-            "id": "eod-done-3",
-            "label": "Litify CoE intake form testing",
-            "detail": "Ran multiple test submissions through the EPMO intake form and CoE routing. Tested with Mar Garcia and David Molano. Cleaned up test projects (CoE TEST, CoE TEST 3, PM TEST 4). Mar shared the CoE Home page and confirmed assignment routing: RFE/Appeal/Denial/Refile → Carolina Lopez, RNWL/SUPP → Jessica Richburg."
-          },
-          {
-            "id": "eod-done-4",
-            "label": "Congratulated David Molano on Star Award",
-            "detail": "Recognized David's contributions — well deserved. \"Mas que merecido.\""
-          },
-          {
-            "id": "eod-done-5",
-            "label": "David Molano — appointment rescheduled",
-            "detail": "David confirmed his appointment moved to Thursday at 9am. You approved and directed him to process through Rippling."
-          }
-        ]
-      },
-      {
-        "title": "Still Open",
-        "info": false,
-        "items": [
-          {
-            "id": "eod-open-1",
-            "label": "Denial/RFE Dropdown Update — ticket to Josh",
-            "detail": "Carried from this morning. Needs confirmation that Josh submitted the standalone IT ticket. Bring into tomorrow's conversations if not resolved.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-open-2",
-            "label": "Cambiar 1:1 de Camilo y Maria — Firmwide Meeting conflict",
-            "detail": "Still pending. The 1:1 conflicts with Wednesday's Firmwide Meeting. Reschedule before Wednesday.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-open-3",
-            "label": "Follow up con Jeannette y Lucia — survey process",
-            "detail": "BCP survey process clarity still needed. Reach out to both tomorrow.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-open-4",
-            "label": "Enviar mensaje a Chelsea — Incident Response buckets",
-            "detail": "Still pending since Friday. Confirm if Legal owns bucket 5.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-open-5",
-            "label": "Maria Gonzalez — SharePoint access request",
-            "detail": "Maria requested access to 'SOP Contact CL Re Green Card Approval Notice.' Unread — accept or decline tomorrow.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-open-6",
-            "label": "Jhara Ochoa timecard correction (4/14)",
-            "detail": "Maureen Brown flagged a 61-hour day. Jhara returns tomorrow — fix the clock-out time in Rippling first thing.",
-            "flag": "carried"
-          },
-          {
-            "id": "eod-open-7",
-            "label": "Sprint Escalations & UAT Timing meeting",
-            "detail": "Sara is scheduling this for later in the week. Watch for the invite.",
-            "flag": "carried"
-          }
-        ]
-      },
-      {
-        "title": "Key Decisions",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-kd-1",
-            "label": "CoE assignment routing confirmed",
-            "detail": "Mar Garcia confirmed: RFE, Appeal, Denial, Refile cases route to Carolina Lopez. RNWL and SUPP route to Jessica Richburg. This is now the operational standard for the CoE intake pipeline."
-          },
-          {
-            "id": "eod-kd-2",
-            "label": "Dashboard requests handed off to Jorge",
-            "detail": "Phase 2 dashboard project formally transferred to Jorge Grijalva. Positioned as a non-urgent tool for Ops Leaders to access meaningful metrics. You offered to assist further."
-          },
-          {
-            "id": "eod-kd-3",
-            "label": "Litify CoE backlog review kicked off",
-            "detail": "David Molano and Mar Garcia have started the backlog review and prioritization. Sara Watson described the CoE launch as the most exciting thing in her inbox last week. Momentum is strong."
-          }
-        ]
-      },
-      {
-        "title": "Tomorrow Preview",
-        "info": true,
-        "items": [
-          {
-            "id": "eod-tmrw-1",
-            "time": "10:00 AM",
-            "label": "1:1 Conor Brennan & Jean",
-            "detail": "Discuss department needs and establish key PM principles. Conor's first structured 1:1 — come prepared with a framework."
-          },
-          {
-            "id": "eod-tmrw-2",
-            "time": "10:30 AM",
-            "label": "1:1 Jhara & Jean",
-            "detail": "Jhara's back from OOO! Portfolio review, roadblocks, next steps. Also: fix her 4/14 timecard before or right after this call."
-          },
-          {
-            "id": "eod-tmrw-3",
-            "time": "11:30 AM",
-            "label": "PreQual Support (Jorge Grijalva)",
-            "detail": "Follow-up from today's Phase 2 handoff. Jorge, Jean, and Jaime Vargas."
-          },
-          {
-            "id": "eod-tmrw-4",
-            "time": "12:00 PM",
-            "label": "Blocked Space",
-            "detail": "Protected focus time. Use this to knock out the carried items — Chelsea message, Camilo/Maria reschedule, Jeannette/Lucia follow-up."
-          },
-          {
-            "id": "eod-tmrw-5",
-            "time": "1:00 PM",
-            "label": "CoE: Improvements Intake Form",
-            "detail": "Working session with Mar Garcia, David Molano, Sara Watson, and Danny Miller. Continue refining the intake form based on today's testing."
-          },
-          {
-            "id": "eod-tmrw-6",
-            "time": "1:30 PM",
-            "label": "1:1 Maria & Jean",
-            "detail": "Portfolio review, roadblocks, next steps. Discuss the CoE Home page she shared today."
-          },
-          {
-            "id": "eod-tmrw-7",
-            "time": "3:00 PM",
-            "label": "1:1 Yuri & Jean",
-            "detail": "Regular check-in with Yuri Mendonca."
-          },
-          {
-            "id": "eod-tmrw-8",
-            "time": "4:00 PM",
-            "label": "Detention Prevention Weekly Meeting",
-            "detail": "Jhara's project — weekly working session. Large cross-functional group including Shelley, operations, and legal."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "daily-2026-04-20",
-    "type": "daily",
-    "date": "Monday, April 20",
-    "isoDate": "2026-04-20",
-    "greeting": "Happy Monday, Jean. Sara's traveling to Dublin today (working from the plane, available on Teams chat), and Jhara's OOO wraps up today. You've got 3 reminders queued up from last week plus one carry-over that didn't get closed out. Afternoon is packed — EPMO Portfolio Review and Sprint #9 demo back to back.",
-    "sections": [
-      {
-        "title": "Carried Over",
-        "info": false,
-        "items": [
-          {
-            "id": "co-0420-carry1",
-            "label": "Denial/RFE Dropdown Update — ticket to Josh",
-            "detail": "This is the one that won't quit. Shelley flagged it as very urgent last Thursday, it was descoped from the CoE project Friday — and it's still open. Confirm with Josh that the standalone IT ticket has been submitted. Bring this up in your 1:1 with Shelley today at 11 AM.",
-            "flag": "carried"
-          }
-        ]
-      },
-      {
-        "title": "Reminders",
-        "info": false,
-        "items": [
-          {
-            "id": "rem-1776479076367",
-            "label": "Cambiar 1:1 de Camilo y Maria por conflict con Firmwide Meeting",
-            "detail": "You added this Friday — the 1:1 with Camilo and Maria conflicts with the Firmwide Meeting (Wednesday). Reschedule before Wednesday."
-          },
-          {
-            "id": "rem-1776484466822",
-            "label": "Follow up con Jeannette y Lucia sobre el survey process",
-            "detail": "You flagged this Friday — need to understand the BCP survey process better. Lucia handed off to Jeannette last week. Reach out to both to get clarity on status, content, and distribution timeline."
-          },
-          {
-            "id": "rem-1776525072328",
-            "label": "Enviar mensaje a Chelsea — Incident Response buckets",
-            "detail": "Send Chelsea the message with the Incident Response buckets and confirm if Legal will own bucket 5. This has been pending since Friday afternoon."
-          }
-        ]
-      },
-      {
-        "title": "Today's Schedule",
-        "info": true,
-        "items": [
-          {
-            "id": "mon-s1",
-            "time": "8:00 AM",
-            "label": "Approve Timecards & Prepare for the Week",
-            "detail": "Weekly admin block — clear pending Rippling approvals and review your Asana board. 3 tasks are due soon per this morning's Asana notification (including inviting Finance & Accounting SME).",
-            "note": "Also clear 2 overdue Rippling tasks from last week"
-          },
-          {
-            "id": "mon-s2",
-            "time": "11:00 AM",
-            "label": "1:1 Shelley & Jean",
-            "detail": "Key topics: Denial/RFE dropdown ticket status (the carry-over that won't close), department needs, and any fallout from the Hassan escalation last Friday.",
-            "note": "Come prepared with an update on Josh's ticket"
-          },
-          {
-            "id": "mon-s3",
-            "time": "12:00 PM",
-            "label": "Blocked Space",
-            "detail": "Protected focus time. Use this to prep for the afternoon reviews and knock out your 3 reminders."
-          },
-          {
-            "id": "mon-s4",
-            "time": "2:00 PM",
-            "label": "EPMO Portfolio Review",
-            "detail": "Review with Sara (in Dublin, traveling today), Danny Miller, Jorge Grijalva, Eunice Barragan, and Janet McDowell. Sara said she'll be sifting through emails from the plane — expect delayed responses.",
-            "note": "Sara may have limited connectivity"
-          },
-          {
-            "id": "mon-s5",
-            "time": "3:30 PM",
-            "label": "IT Litify Sprint #9 Review with Stakeholders",
-            "detail": "Review status of user stories in Sprint #9 and items ready for deployment. Large stakeholder group. Good opportunity to confirm Josh has the Denial/RFE dropdown ticket queued up."
-          }
-        ]
-      },
-      {
-        "title": "Action Items",
-        "info": false,
-        "items": [
-          {
-            "id": "mon-a1",
-            "label": "Review 3 Asana tasks due soon",
-            "detail": "This morning's Asana notification flagged 3 tasks due soon, including 'Invite Finance & Accounting SME.' Check and complete or reschedule during your 8 AM admin block.",
-            "flag": "due"
-          },
-          {
-            "id": "mon-a2",
-            "label": "Review weekend Asana portfolio reports",
-            "detail": "5 portfolio reports landed over the weekend: PMO Projects, AOS Project Requests, Phase 2 (1 at risk, 24 need updates), CoE (21 need updates), and Supplements Renovation 2.0. The Phase 2 and CoE portfolios have major update gaps — flag with the team.",
-            "flag": "due"
-          },
-          {
-            "id": "mon-a3",
-            "label": "Renew OneDrive shared access (11 days remaining)",
-            "detail": "SharePoint notified you Saturday that 2 people will lose access to your shared OneDrive files in 11 days. Review and renew if still needed."
-          },
-          {
-            "id": "mon-a4",
-            "label": "Loop Jhara back in when she returns",
-            "detail": "Jhara's OOO ends today. Brief her on last week's key decisions: Denial/RFE dropdown descoped to Josh, UER project paused, Detention Prevention Wave 2 launched, exec slide update moved to Fridays. Your 1:1 is tomorrow at 10:30 AM."
-          }
-        ]
-      },
-      {
-        "title": "Teams Highlights",
-        "info": false,
-        "items": [
-          {
-            "id": "mon-t1",
-            "label": "Sara Watson — traveling Monday, working from plane",
-            "detail": "Sara messaged the team early this morning: she's traveling all day to Dublin, will work from the plane and be available via Teams chat. She's catching up on email and messages. She'll be in the Dublin office Tue–Thu."
-          }
-        ]
-      },
-      {
-        "title": "Out of Office",
-        "info": true,
-        "items": [
-          {
-            "id": "mon-ooo1",
-            "label": "Jhara Ochoa — last day of OOO",
-            "detail": "Jhara's OOO block ends today (was out Apr 14–20). She should be back tomorrow — your 1:1 is at 10:30 AM Tuesday."
-          },
-          {
-            "id": "mon-ooo2",
-            "label": "Sara Watson — Dublin Office all week",
-            "detail": "Sara is working from the Dublin office Apr 20–23. Traveling today, more available Tue–Thu. Different timezone may affect meeting responsiveness.",
-            "note": "Apr 20–23"
-          }
-        ]
-      },
-      {
-        "title": "Tomorrow Preview",
-        "info": true,
-        "items": [
-          {
-            "id": "mon-tp1",
-            "time": "10:00 AM",
-            "label": "1:1 Conor B. & Jean G.",
-            "detail": "Department needs and PM principles alignment."
-          },
-          {
-            "id": "mon-tp2",
-            "time": "10:30 AM",
-            "label": "1:1 Jhara & Jean",
-            "detail": "First sync since her OOO — portfolio review, roadblocks, next steps. Bring her up to speed."
-          },
-          {
-            "id": "mon-tp3",
-            "time": "1:00 PM",
-            "label": "CoE: Improvements Intake Form",
-            "detail": "With Mar Garcia, Danny, and Sara. Review intake form process for CoE improvements."
-          },
-          {
-            "id": "mon-tp4",
-            "time": "3:00 PM",
-            "label": "1:1 Yuri & Jean",
-            "detail": "Follow up on UER status color decision and executive deck updates."
-          },
-          {
-            "id": "mon-tp5",
-            "time": "4:00 PM",
-            "label": "Detention Prevention Weekly Meeting",
-            "detail": "Weekly working session — Wave 2 outreach update from Santiago's team."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "eod-2026-04-17",
-    "type": "eod",
-    "date": "Friday, April 17 - End of Day",
-    "isoDate": "2026-04-17",
-    "greeting": "Solid Friday to close out the week. You moved the needle on Detention Prevention, handled the Denial/RFE dropdown escalation with Shelley, posted meeting notes for the team, and got through a full meeting block. The COE escalation POC question and UER project status color are carrying into next week.",
-    "sections": [
-      {
-        "title": "Completed Today",
-        "info": true,
-        "items": [
-          {
-            "id": "done-1",
-            "label": "Phase 2 Weekly IT Projects Sync",
-            "detail": "Led the weekly sync with the full IT projects team — Yuri, Jhara (OOO), Ana, Vikala, Camilo, Mar, Daniel, Santiago, and Archana."
-          },
-          {
-            "id": "done-2",
-            "label": "1:1 with Santiago Arango",
-            "detail": "Completed the weekly 1:1. Santiago also shared the Detention Prevention weekly update — survey and statement approved, second wave of outreach initiated."
-          },
-          {
-            "id": "done-3",
-            "label": "EPMO EOW Check In",
-            "detail": "End-of-week check-in with Sara's team (Sara OOO this week). Covered status across EPMO with Janet, Eunice, and Jorge."
-          },
-          {
-            "id": "done-4",
-            "label": "Executive Project Status Slide Update",
-            "detail": "Reviewed and updated the weekly executive project status deck with Yuri and Jhara's inputs. This is now on the new Friday cadence."
-          },
-          {
-            "id": "done-5",
-            "label": "Posted meeting notes & incident bucket sign-offs",
-            "detail": "Shared meeting notes from yesterday's session introducing new team members. Also working with Lucia Caamano and Jeannette Scheffler on the internal crisis/incident sentiment survey."
-          },
-          {
-            "id": "done-6",
-            "label": "Firmwide Critical Dates taxonomy meeting follow-up",
-            "detail": "Javier Vargas shared the PPT and recording from the Critical Dates taxonomy meeting (deadlines, notices, reminders)."
-          }
-        ]
-      },
-      {
-        "title": "Carried Over",
-        "items": [
-          {
-            "id": "carry-1",
-            "label": "Denial/RFE Dropdown Update — ticket to Josh",
-            "detail": "Shelley flagged this as very urgent (per Jill). Need to ask Josh to update the dropdown via a ticket and descope it from the project. Don't let this slip into Monday without action.",
-            "flag": "urgent"
-          },
-          {
-            "id": "carry-2",
-            "label": "COE Escalation POC clarification",
-            "detail": "Janet McDowell asked if you're the POC for COE escalations. The VPT Follow Up Confirmation Status Update is urgent per Herbert in BD. Need to confirm ownership and prioritization approach for COE efforts.",
-            "flag": "urgent"
-          },
-          {
-            "id": "carry-3",
-            "label": "UER Project status color decision",
-            "detail": "Yuri asked what color to assign the UER project since it's paused — keep green with 'On Hold' label? Needs your call.",
-            "flag": "due"
-          },
-          {
-            "id": "carry-4",
-            "label": "Danny Miller — EPMO SharePoint site issue",
-            "detail": "Danny's Claude co-work flagged something during file cleanup related to the EPMO SharePoint site. Follow up to see what was found.",
-            "flag": null
-          },
-          {
-            "id": "carry-5",
-            "label": "Rippling overdue tasks (2)",
-            "detail": "Rippling reminded you of 2 overdue tasks for LLF. Check and clear these when you get a chance.",
-            "flag": null
-          },
-          {
-            "id": "carry-6",
-            "label": "Asana overdue task (1)",
-            "detail": "One task from the past week is overdue in Asana. Review and update or close out.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Key Decisions Made",
-        "info": true,
-        "items": [
-          {
-            "id": "dec-1",
-            "label": "Detention Prevention second wave greenlit",
-            "detail": "Survey and statement completed and approved — Santiago's team is now initiating the second wave of outreach."
-          },
-          {
-            "id": "dec-2",
-            "label": "Review Transition of Data Requests — cancelled",
-            "detail": "Mar Garcia cancelled this meeting (marked high importance). The data requests transition review is off the calendar for now."
-          },
-          {
-            "id": "dec-3",
-            "label": "Executive status updates moving to Fridays",
-            "detail": "The Executive Project Status Slide Update is now on a Friday cadence going forward."
-          }
-        ]
-      },
-      {
-        "title": "Monday's Schedule",
-        "info": true,
-        "items": [
-          {
-            "id": "tom-1",
-            "time": "8:00 AM",
-            "label": "Approve Timecards & Prepare for the Week",
-            "detail": "Weekly prep block — review timecards and plan your Monday priorities",
-            "note": "Sara will be in the Dublin office all week starting Monday"
-          },
-          {
-            "id": "tom-2",
-            "time": "11:00 AM",
-            "label": "1:1 Shelley & Jean",
-            "detail": "Follow up on the Denial/RFE dropdown urgency and understand Shelley's department needs",
-            "note": "Jhara still OOO through Wednesday"
-          },
-          {
-            "id": "tom-3",
-            "time": "12:00 PM",
-            "label": "Blocked Space",
-            "detail": "Protected focus time"
-          },
-          {
-            "id": "tom-4",
-            "time": "2:00 PM",
-            "label": "EPMO Portfolio Review",
-            "detail": "Review with Sara (back from OOO but in Dublin), Danny, Jorge, Eunice, and Janet"
-          },
-          {
-            "id": "tom-5",
-            "time": "3:30 PM",
-            "label": "IT Litify Sprint #9 Review with Stakeholders",
-            "detail": "Review status of user stories in Sprint #9 and items ready for deployment. Large stakeholder group."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "weekly-2026-04-17",
-    "type": "weekly",
-    "date": "Week of April 13 – 17",
-    "isoDate": "2026-04-17",
-    "greeting": "Week in review. This was a week of strategic pivots and operational momentum — the USCIS Expedite Request project was paused by leadership, Detention Prevention kicked off its Wave 2 client outreach, and the CoE backlog prioritization continued to drive how the team allocates effort. Several key scoping calls and cross-functional syncs kept the project machine moving, even with Jhara out all week.",
-    "sections": [
-      {
-        "title": "Wins",
-        "info": true,
-        "items": [
-          {
-            "id": "win-1",
-            "label": "Detention Prevention Wave 2 launched",
-            "detail": "Santiago and team finalized the new survey and client statement, then kicked off Wave 2 of client outreach. Nearly completed the forecasted client contacts by end of week. Strong execution while Jhara was OOO."
-          },
-          {
-            "id": "win-2",
-            "label": "Firmwide Critical Dates taxonomy presented",
-            "detail": "Javier Vargas led the meeting on the new taxonomy for deadlines, notices, and reminders. PPT and recording shared firmwide — this standardization has been a long time coming."
-          },
-          {
-            "id": "win-3",
-            "label": "Salesforce Roadmap 2026 v2 shared",
-            "detail": "Joshua Johanni shared the updated LLF Salesforce Roadmap 2026 v2 with the team. This gives the PMO clearer visibility into the IT/Litify trajectory for the year."
-          },
-          {
-            "id": "win-4",
-            "label": "Executive project status deck process improved",
-            "detail": "Yuri and Jean coordinated on the weekly executive slide update, including marking stalled projects honestly (red). Conor and Mike contributed staff augmentation updates. Transparency over optics."
-          }
-        ]
-      },
-      {
-        "title": "Key Decisions",
-        "info": true,
-        "items": [
-          {
-            "id": "dec-1",
-            "label": "USCIS Expedite Request project temporarily paused",
-            "detail": "Leadership decided to pause the UER project to align with broader strategic priorities. Yuri communicated the pause on Monday. Project marked as stalled/red on the executive deck — not hidden, not sugarcoated."
-          },
-          {
-            "id": "dec-2",
-            "label": "Denial/RFE Reason dropdown descoped from CoE project",
-            "detail": "Per Jill's direction via Shelley, the Denial/RFE Reason dropdown update will be handled as a standalone IT ticket through Josh rather than staying bundled in the larger CoE project. Shelley flagged this as very urgent."
-          },
-          {
-            "id": "dec-3",
-            "label": "Detention Prevention survey keeps service name as open question",
-            "detail": "Team decided to keep the service name as an open question in the client survey, with a closing question asking clients to suggest a name. Collaborative approach to branding."
-          }
-        ]
-      },
-      {
-        "title": "Blockers & Risks",
-        "info": true,
-        "items": [
-          {
-            "id": "blk-1",
-            "label": "Denial/RFE dropdown update still pending",
-            "detail": "Shelley marked this as very urgent on Friday. Josh needs to submit the IT ticket to update the dropdown. Jean owns the follow-up to ensure this gets actioned Monday — it's been lingering in the CoE backlog and needs to move independently now."
-          },
-          {
-            "id": "blk-2",
-            "label": "BCP firmwide survey process unclear",
-            "detail": "Jean reached out to Lucia Caamano to restart the BCP TM survey. Lucia couldn't confirm if Kris had created it yet and looped in Jeannette. Ownership and next steps need to be nailed down."
-          },
-          {
-            "id": "blk-3",
-            "label": "Hassan Jassir escalation — intense CL situation",
-            "detail": "Urgent client escalation flagged Friday involving Alejandro, Katheryn, and Zulay. Needs attention and resolution tracking into next week."
-          }
-        ]
-      },
-      {
-        "title": "Carrying Into Next Week",
-        "items": [
-          {
-            "id": "carry-1",
-            "label": "Follow up on Denial/RFE dropdown ticket with Josh",
-            "detail": "Shelley flagged this as very urgent Friday. Couldn't close this week because it was just descoped from the CoE project. Monday priority — confirm Josh has submitted the ticket.",
-            "flag": "urgent"
-          },
-          {
-            "id": "carry-2",
-            "label": "BCP survey coordination with Jeannette",
-            "detail": "Lucia handed off to Jeannette on Wednesday. Need to confirm survey status, finalize content, and set a distribution timeline. Jean owns.",
-            "flag": "due"
-          },
-          {
-            "id": "carry-3",
-            "label": "Resolve Hassan Jassir client escalation",
-            "detail": "Flagged late Friday — no resolution yet. Involves multiple team members. Track to closure early next week.",
-            "flag": "urgent"
-          },
-          {
-            "id": "carry-4",
-            "label": "Review Salesforce Roadmap 2026 v2 with team",
-            "detail": "Josh shared the doc on Wednesday. Needs review and alignment discussion, possibly in Phase 2 IT sync on Thursday.",
-            "flag": null
-          },
-          {
-            "id": "carry-5",
-            "label": "Scoping: Fix Task Sets for Appeal and Refile Process",
-            "detail": "Maria scheduled the scoping call. Meeting continues next Tuesday with the broader team. Needs clear scope definition before it enters the pipeline.",
-            "flag": null
-          }
-        ]
-      },
-      {
-        "title": "Next Week Preview",
-        "info": true,
-        "items": [
-          {
-            "id": "nxt-1",
-            "label": "Monday: Approve timecards + 1:1 with Shelley",
-            "detail": "Timecards due Sunday/Monday. The 1:1 with Shelley will likely focus on the Denial/RFE dropdown urgency and department needs. Come prepared with the IT ticket status.",
-            "note": "Prep over weekend"
-          },
-          {
-            "id": "nxt-2",
-            "label": "Monday: EPMO Portfolio Review + Litify Sprint #9 Review",
-            "detail": "Two back-to-back reviews. Portfolio review with Sara's leadership team, then Sprint #9 stakeholder review for IT/Litify projects. Review executive deck beforehand."
-          },
-          {
-            "id": "nxt-3",
-            "label": "Wednesday: April Firmwide Meeting + BCP/Incident Response Weekly",
-            "detail": "Monthly firmwide meeting at 2pm EST. Also the BCP weekly touchpoint — perfect time to push the survey forward with the team.",
-            "note": "High visibility day"
-          },
-          {
-            "id": "nxt-4",
-            "label": "Thursday: Phase 2 IT Sync + Executive Slide Update (new Friday slot)",
-            "detail": "Executive project status slides now update on Fridays instead of the previous cadence. Thursday's Phase 2 sync feeds directly into Friday's deck. Coordinate with Yuri and Jhara.",
-            "note": "Process change"
-          }
-        ]
-      },
-      {
-        "title": "Out of Office Next Week",
-        "info": true,
-        "items": [
-          {
-            "id": "ooo-1",
-            "label": "Sara Watson — Dublin Office",
-            "detail": "Sara will be working from the Dublin office Mon Apr 20 through Thu Apr 23. She's still available but on a different timezone. May affect EPMO meeting responsiveness.",
-            "note": "Apr 20–23"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "daily-2026-04-17",
-    "type": "daily",
-    "date": "Friday, April 17",
-    "isoDate": "2026-04-17",
-    "greeting": "Happy Friday, Jean. A few fires before you sign off — Shelley’s thread is the most time-sensitive. Here’s your full picture.",
-    "sections": [
-      {
-        "title": "Today’s Schedule",
-        "info": true,
-        "items": [
-          {
-            "id": "m1",
-            "time": "10:00 AM",
-            "label": "Phase 2 Weekly IT Projects Sync",
-            "detail": "You’re leading. Standup format — sprint progress, blockers, deliverables. Good moment to mention the Denial/RFE descope."
-          },
-          {
-            "id": "m2",
-            "time": "11:00 AM",
-            "label": "1:1 with Santiago",
-            "detail": "Weekly check-in. Discuss project prioritization for next week and resource needs."
-          },
-          {
-            "id": "m3",
-            "time": "12:30 PM",
-            "label": "Focus time",
-            "detail": "Protected block. Use it to prep the Executive Status slides."
-          },
-          {
-            "id": "m4",
-            "time": "2:00 PM",
-            "label": "EPMO EOW Check In",
-            "detail": "Sara has been OOO all week — this may go async. Check if it’s still happening.",
-            "note": "may be async"
-          },
-          {
-            "id": "m5",
-            "time": "3:00 PM",
-            "label": "Executive Project Status Update",
-            "detail": "With Yuri & Jhara. Main deliverable of the afternoon. Jhara is OOO until Apr 21 — confirm attendance with Yuri.",
-            "note": "key meeting"
-          }
-        ]
-      },
-      {
-        "title": "Action Items",
-        "items": [
-          {
-            "id": "a1",
-            "label": "Reply to Shelley Henry — Denial/RFE dropdown",
-            "detail": "Jill confirmed this can be descoped entirely. Ask Josh to submit a Litify ticket to update the dropdown. Shelley has flagged this twice this week and is waiting on your reply to close the thread.",
-            "flag": "urgent"
-          },
-          {
-            "id": "a2",
-            "label": "Prep Executive Project Status slides",
-            "detail": "For your 3 PM with Yuri & Jhara. Jhara is OOO so confirm if she’s dialing in. Focus on Phase 2 milestones and this week’s sprint blockers.",
-            "flag": "due"
-          },
-          {
-            "id": "a3",
-            "label": "Review Hassan’s client escalation",
-            "detail": "Call logs for 847-505-9912 are ready — Zulay and Naz pulled the RingCentral reports. Hassan is waiting for your guidance on next steps with the client.",
-            "flag": "urgent"
-          },
-          {
-            "id": "a4",
-            "label": "Resolve folder naming with Danny Miller",
-            "detail": "\"Project Charters - DO NOT USE\" is actively being used by the team. Either rename it or move contents and archive. Quick 5-minute decision."
-          },
-          {
-            "id": "a5",
-            "label": "Complete 1 overdue Asana task",
-            "detail": "Check your My Tasks view — likely the documentation task from last sprint."
-          },
-          {
-            "id": "a6",
-            "label": "Complete 2 overdue Rippling tasks",
-            "detail": "Probably time-off approvals or onboarding checklist items. Quick wins before EOD."
-          }
-        ]
-      },
-      {
-        "title": "Emails Awaiting Reply",
-        "items": [
-          {
-            "id": "e1",
-            "label": "Shelley Henry — Denial/RFE Project Status",
-            "detail": "Jill says descope the dropdown from the project, have Josh handle it standalone. Reply to Shelley confirming so she can update the tracker. Open since Wednesday.",
-            "flag": "urgent"
-          },
-          {
-            "id": "e2",
-            "label": "Jaime Vargas — Critical Dates Taxonomy",
-            "detail": "Follow-up from this week’s meeting. PPT attached, recording in the invite. No hard deadline but review before Monday’s portfolio meeting."
-          },
-          {
-            "id": "e3",
-            "label": "Alex Pavlov (Asana) — Closing the loop",
-            "detail": "External email. Likely a product update or support thread closure. Quick glance to confirm no action needed."
-          }
-        ]
-      },
-      {
-        "title": "Teams Highlights",
-        "items": [
-          {
-            "id": "t1",
-            "label": "Hassan Jassir — client escalation",
-            "detail": "Asked Alejandro, Katheryn, Zulay, and Nazareth to pull call logs. Zulay & Naz delivered. Waiting on your review and guidance. The client has been described as intense.",
-            "flag": "urgent"
-          },
-          {
-            "id": "t2",
-            "label": "David Molano — Litify CoE email template",
-            "detail": "Shared first draft of the request confirmation template. No action needed now, but review before it goes live."
-          },
-          {
-            "id": "t3",
-            "label": "Danny Miller — folder naming confusion",
-            "detail": "Flagged the \"DO NOT USE\" folder issue in Teams. A quick rename resolves it."
-          }
-        ]
-      },
-      {
-        "title": "Out of Office",
-        "info": true,
-        "items": [
-          {
-            "id": "o1",
-            "label": "Sara Watson",
-            "detail": "OOO all week. Back Monday but working from the Dublin office Mon–Thu. Morning meetings are your best window for real-time overlap. Today’s 2 PM check-in may go async.",
-            "note": "Dublin Mon–Thu"
-          },
-          {
-            "id": "o2",
-            "label": "Jhara Ochoa",
-            "detail": "OOO until Apr 21. On the 3 PM invite today — unclear if she’s joining. She’ll need a quick catch-up when she’s back.",
-            "note": "returns Monday"
-          }
-        ]
-      },
-      {
-        "title": "Monday Preview",
-        "info": true,
-        "items": [
-          {
-            "id": "p1",
-            "time": "8:00 AM",
-            "label": "Timecards & week prep",
-            "detail": "Standard Monday admin. Clear pending approvals and triage Asana/Rippling."
-          },
-          {
-            "id": "p2",
-            "time": "11:00 AM",
-            "label": "1:1 Shelley & Jean",
-            "detail": "Bring the Denial/RFE resolution. If you replied today, this should be a quick confirmation.",
-            "note": "bring update"
-          },
-          {
-            "id": "p3",
-            "time": "12:00 PM",
-            "label": "Focus time",
-            "detail": "Protected block before the heavy afternoon."
-          },
-          {
-            "id": "p4",
-            "time": "2:00 PM",
-            "label": "EPMO Portfolio Review",
-            "detail": "Full portfolio review. Sara in Dublin, Jhara back from OOO. Come prepared with project updates."
-          },
-          {
-            "id": "p5",
-            "time": "3:30 PM",
-            "label": "Litify Sprint #9 Review",
-            "detail": "Stakeholder demo. Make sure the dev team has their demo environment ready. Review the sprint board beforehand.",
-            "note": "stakeholder-facing"
-          },
-          {
-            "id": "p6",
-            "label": "Sara in Dublin (Mon–Thu)",
-            "detail": "Plan for the 5-hour timezone gap."
-          },
-          {
-            "id": "p7",
-            "label": "Jhara returns from OOO",
-            "detail": "Consider sending a quick summary of what she missed."
           }
         ]
       }
