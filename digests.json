@@ -1,5 +1,210 @@
 [
   {
+    "id": "eod-2026-05-14",
+    "type": "eod",
+    "date": "Thursday, May 14 - End of Day",
+    "isoDate": "2026-05-14",
+    "greeting": "A full Thursday, Jean — and you moved through it steadily. Six carries going into the day, and you knocked out five of them. The Incident Response meeting finally had Danny in the room, the Tudo Bem agreements went out before the weekly, and the BD Portfolio + CoE meeting is now a real, recurring thing. TRACE got its project plan from Yuri — that's a milestone. One big item is still sitting: HR Mid-Year. That one's not optional, and it's been waiting long enough. Friday has a packed afternoon, but the morning is yours. Use it.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0514-done-1",
+            "label": "IT Security ticket #0028838 — response coordinated",
+            "detail": "Carried from Wednesday. Coordination completed on the Litify + Claude AI Workflow review ticket from IT Help Desk."
+          },
+          {
+            "id": "eod-0514-done-2",
+            "label": "TRACE — Laura's feedback confirmed with Yuri",
+            "detail": "TRACE touchpoint held (9:30 AM). Carried item resolved: Laura's feedback delivery status confirmed with Yuri."
+          },
+          {
+            "id": "eod-0514-done-3",
+            "label": "Incident Response Survey — department question resolved",
+            "detail": "The rescheduled Incident Response Project meeting (2:30 PM) happened with Danny Miller in the room. The department question and matrix structure were addressed."
+          },
+          {
+            "id": "eod-0514-done-4",
+            "label": "Rippling overdue task — resolved",
+            "detail": "The overdue task flagged by Rippling was handled. Three-day carry cleared."
+          },
+          {
+            "id": "eod-0514-done-5",
+            "label": "Tudo Bem agreements sent",
+            "detail": "Agreements from the last Tudo Bem meeting were sent out before the 4:00 PM weekly meeting. Long-standing carry off the board."
+          },
+          {
+            "id": "eod-0514-done-6",
+            "label": "Phase 2 Asana project review completed",
+            "detail": "Asana Phase 2 project review carried since May 8 — finally done."
+          },
+          {
+            "id": "eod-0514-done-7",
+            "label": "TRACE Project Plan received from Yuri",
+            "detail": "Yuri sent the TRACE project plan (with attachment) along with a visual process logic representation. The project has reached a planning milestone and is ready for the next phase."
+          },
+          {
+            "id": "eod-0514-done-8",
+            "label": "BD Portfolio + CoE meeting held — CoE email draft reviewed",
+            "detail": "First occurrence of the new recurring meeting. Sara Watson replied to the CoE Introduction Email draft thread — she's reviewing it and plans to send today or Monday. Sara confirmed Jean is on track to meet and present at the upcoming Meets & Greets."
+          },
+          {
+            "id": "eod-0514-done-9",
+            "label": "Incident Response Workshop — structured and calendared",
+            "detail": "Jean cancelled the recurring Weekly Meeting: BCP/Incident Response to open a time slot for a dedicated 1-hour Incident Response Workshop. Larry Marioth sent the agenda: top 5 incidents review, IRG template + roles, survey communication."
+          },
+          {
+            "id": "eod-0514-done-10",
+            "label": "Detention Prevention Project — weekly meetings scheduled",
+            "detail": "Weekly working sessions for the Detention Prevention Project have been set up to provide dedicated collaboration space throughout the full project lifecycle."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0514-cancel-1",
+            "label": "Venn Enforcement Pilot — Daily Standup (series cancelled)",
+            "detail": "Organizer: Nica Cavalcanti. Cancelled for today and Friday. The series appears to be on hold."
+          },
+          {
+            "id": "eod-0514-cancel-2",
+            "label": "Weekly Meeting: BCP/Incident Response — cancelled by Jean",
+            "detail": "Jean cancelled this recurring slot intentionally to open time for the new 1-hour Incident Response Workshop format."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0514-open-1",
+            "label": "HR Mid-Year Touchpoint Preparation — Action Required",
+            "detail": "High-importance email from HR. A new step has been introduced for the performance and development process before mid-year touchpoints. Leaders need to take action — deadline is likely imminent. This has been sitting since yesterday. Resolve Friday morning.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0514-open-2",
+            "label": "Enviar correo a Sara sobre nuevos requisitos para proyectos",
+            "detail": "Reminder from this morning: send Sara the email outlining what projects must include before being filed in the EPMO. Still outstanding.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0514-open-3",
+            "label": "Janet McDowell — sprint stages slide follow-up",
+            "detail": "Janet confirmed she'd deliver the sprint stages slide today. If it hasn't arrived, follow up first thing Friday.",
+            "flag": "none"
+          },
+          {
+            "id": "eod-0514-open-4",
+            "label": "Asana automation rule broken — fix needed",
+            "detail": "The 'Task completion status changed → Move to section' rule is broken and needs to be repaired in Asana to restore auto-move behavior.",
+            "flag": "none"
+          },
+          {
+            "id": "eod-0514-open-5",
+            "label": "SharePoint access request — Gian Vindigni for 'I-693 FAQ for Client Facing Teams'",
+            "detail": "A SharePoint access request arrived today from Gian Vindigni requesting access to the 'I-693 FAQ for Client Facing Teams' document. Needs an Accept or Decline response.",
+            "flag": "none"
+          },
+          {
+            "id": "eod-0514-open-6",
+            "label": "Cyber Security Training — overdue",
+            "detail": "A reminder arrived from IronScales: Jean was assigned required security training following a recent cyber security simulation. The training is overdue. Complete before end of week.",
+            "flag": "urgent"
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0514-dec-1",
+            "label": "Incident Response format shift: workshop model replaces weekly meeting",
+            "detail": "Jean made the call to cancel the recurring weekly BCP/IR meeting and replace it with a focused workshop format. The first workshop agenda (Larry's) covers top 5 incidents, IRG template, roles, and survey comms."
+          },
+          {
+            "id": "eod-0514-dec-2",
+            "label": "CoE Introduction Email — deferred to today or Monday per Sara Watson",
+            "detail": "Sara Watson confirmed she will review the CoE Introduction Email draft and plans to send it today (Friday) or Monday. A Friday send was noted as potentially less effective — Monday may be the better choice."
+          },
+          {
+            "id": "eod-0514-dec-3",
+            "label": "Colombia Holiday — Santiago flagged it",
+            "detail": "Santiago Arango sent an email about an upcoming Colombia holiday. Worth noting for any scheduling or coverage needs involving the Colombian team members."
+          }
+        ]
+      },
+      {
+        "title": "Friday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0514-tmrw-1",
+            "label": "🚫 Jhara is OOO all week (May 15–19)",
+            "detail": "Jhara Ochoa is out of office Friday through the following week. Plan accordingly for anything in her lane."
+          },
+          {
+            "id": "eod-0514-tmrw-2",
+            "label": "9:30–9:45 AM — TRACE Touchpoint (Yuri)",
+            "detail": "Daily check-in. With the project plan now submitted, the conversation may shift to next steps on modifications and feedback integration."
+          },
+          {
+            "id": "eod-0514-tmrw-3",
+            "label": "10:00–11:00 AM — Phase 2 Weekly IT Projects Sync",
+            "detail": "Full team sync: Yuri, Jhara (OOO), Andrea, Vika, Camilo, Mar, David, Santiago, Apuri. With Jhara out, coverage may need to be addressed."
+          },
+          {
+            "id": "eod-0514-tmrw-4",
+            "label": "11:00 AM–12:00 PM — CoE Sync Jean (tentative)",
+            "detail": "Organized by Mar Garcia with David Molano. Portfolio review and CoE alignment."
+          },
+          {
+            "id": "eod-0514-tmrw-5",
+            "label": "12:00–1:00 PM — Blocked Space",
+            "detail": "Use for HR Mid-Year action (urgent carry), Sara email about project requirements, SharePoint request, and cyber security training."
+          },
+          {
+            "id": "eod-0514-tmrw-6",
+            "label": "1:00–2:00 PM — EPMO EOW Check In (tentative)",
+            "detail": "End-of-week check-in with Sara Watson, Eugenia Barragan, Janet McDowell, Jo Grijalva, Nadia Wilson. Come with project updates ready."
+          },
+          {
+            "id": "eod-0514-tmrw-7",
+            "label": "1:30–2:00 PM — Get to Know the Project Management Team",
+            "detail": "Jean is confirmed to present. Sara Watson confirmed she is on track. This overlaps with the EPMO EOW Check In — confirm which takes priority or if one runs shorter."
+          },
+          {
+            "id": "eod-0514-tmrw-8",
+            "label": "3:00–3:30 PM — IT Litify Sprint #11 Planning with Stakeholders (tentative)",
+            "detail": "Large stakeholder session for Sprint #11 planning. Organizer: Ivan Oliveira."
+          },
+          {
+            "id": "eod-0514-tmrw-9",
+            "label": "3:00–3:30 PM — Executive Project Status Slide Update",
+            "detail": "Weekly executive deck review and update with Yuri, Jhara (OOO), and Mar. Rescheduled to Fridays going forward. Note: Jhara is out — coverage needed."
+          },
+          {
+            "id": "eod-0514-tmrw-10",
+            "label": "3:30–4:00 PM — 1:1 Maria & Jean",
+            "detail": "Regular 1:1 with Mar Garcia. Agenda: portfolio review, roadblocks, next steps."
+          },
+          {
+            "id": "eod-0514-tmrw-11",
+            "label": "4:00–4:30 PM — Reportes for Dummies",
+            "detail": "Session scheduled by Jean with Karla Alcantara."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-05-14",
     "type": "daily",
     "date": "Thursday, May 14",
