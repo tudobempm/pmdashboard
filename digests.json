@@ -1,5 +1,198 @@
 [
   {
+    "id": "eod-2026-05-15",
+    "type": "eod",
+    "date": "Friday, May 15 — End of Day",
+    "isoDate": "2026-05-15",
+    "greeting": "What a week to close out, Jean. Today you presented at the firm-wide PM showcase, ran back-to-back meetings through the afternoon, helped Jhara navigate a last-minute document signature from abroad (she pulled through — 'firmado!'), and processed a fresh EPMO intake from Danny. You're heading into OOO having wrapped more than most would expect on a Friday. These open items will wait right here for you. Go rest — you've earned it.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0515-done-1",
+            "label": "Presented at 'Get to Know the Project Management Team' — firm-wide showcase",
+            "detail": "Jean presented at the PM team showcase this afternoon. The slide was prepared and the presentation was delivered at 1:30 PM."
+          },
+          {
+            "id": "eod-0515-done-2",
+            "label": "TRACE Touchpoint — check-in with Yuri completed",
+            "detail": "Regular 15-minute TRACE touchpoint held at 9:30 AM with Yuri Mendonca."
+          },
+          {
+            "id": "eod-0515-done-3",
+            "label": "CoE Sync with Mar Garcia and David Molano",
+            "detail": "1-hour CoE sync held at 11 AM. Mar and David participated."
+          },
+          {
+            "id": "eod-0515-done-4",
+            "label": "Executive Project Status Slide Update meeting",
+            "detail": "Weekly exec status deck update meeting held at 3 PM with Yuri Mendonca and Mar Garcia."
+          },
+          {
+            "id": "eod-0515-done-5",
+            "label": "1:1 Maria & Jean — portfolio review, roadblocks, next steps",
+            "detail": "30-minute 1:1 at 3:30 PM with Mar Garcia covering portfolio review, roadblocks, and next steps."
+          },
+          {
+            "id": "eod-0515-done-6",
+            "label": "Reportes for Dummies — session with Karla Alcantara",
+            "detail": "30-minute session held at 4 PM with Karla Alcantara."
+          },
+          {
+            "id": "eod-0515-done-7",
+            "label": "New EPMO Intake processed — Executive Metrics MVP (Danny Miller / Enterprise)",
+            "detail": "Danny Miller submitted Executive Metrics MVP under the Enterprise department. The intake flowed through Asana automation, TL notification sent, and the project was routed to the Litify CoE."
+          },
+          {
+            "id": "eod-0515-done-8",
+            "label": "Bio Appt Reschedule intake converted to Asana project",
+            "detail": "Elimar Toro's Bio Appt Reschedule request was converted to a project in PMO New Project Intakes. Mar Garcia is assigned to review it; any questions will go to Elimar directly."
+          },
+          {
+            "id": "eod-0515-done-9",
+            "label": "Jhara's AI usage document signed — fully resolved",
+            "detail": "Jean coordinated with Mia Mbao to get Jhara an extension since she was OOO. Jhara logged in remotely and signed the document today ('firmado!'). Item fully closed."
+          },
+          {
+            "id": "eod-0515-done-10",
+            "label": "Forwarded 'Information needed for recent intakes' as FYI",
+            "detail": "Jean forwarded the intake information thread as an FYI to relevant parties."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0515-cancel-1",
+            "label": "EPMO Portfolio Review — cancelled by Sara Watson",
+            "detail": "Sara Watson cancelled Danny Miller's recurring EPMO Portfolio Review series and will replace it with her own. 'Replacing Danny's meeting with my own! 🙂' Purpose remains the same: review new project requests and assign next steps. New series has not yet been created."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0515-open-1",
+            "label": "HR Mid-Year Touchpoint Preparation — Action Required",
+            "detail": "High-importance HR email requiring leaders to take action before mid-year touchpoints. Has been open since Thursday. Jean is OOO all next week — address first thing back on May 26.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0515-open-2",
+            "label": "Enviar correo a Sara sobre nuevos requisitos para proyectos",
+            "detail": "Email to Sara outlining what projects must include before being filed in the EPMO. Carried over from Wednesday. Sara is in Dublin next week — timing the send for her return may be ideal.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0515-open-3",
+            "label": "Asana automation rule broken — fix needed",
+            "detail": "The 'Task completion status changed → Move to section' rule is broken and needs repair to restore auto-move behavior in Asana.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0515-open-4",
+            "label": "SharePoint access request — Gian Vindigni",
+            "detail": "Gian Vindigni requested access to 'I-693 FAQ for Client Facing Teams'. Needs an Accept or Decline response.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0515-open-5",
+            "label": "Cyber Security Training — overdue",
+            "detail": "Required IronScales security training following a recent cyber security simulation. Was overdue before today's OOO start. Complete upon return May 26.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0515-open-6",
+            "label": "Detention Prevention Project — sync with Evan",
+            "detail": "Jhara explicitly flagged before going OOO that Jean needs to review the Detention Prevention project directly with Evan. Not completed today.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0515-open-7",
+            "label": "Incident Response Workshop — review agenda and prepare",
+            "detail": "Larry Marioth shared the workshop agenda: top 5 incidents review, IRG template and role definitions, survey communication. Review and prep needed before the workshop date.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0515-open-8",
+            "label": "Carolina's IT Excel files — follow up on status",
+            "detail": "IT is waiting on Carolina's Excel files. Only the RFE file has been completed. Mar Garcia was looped in. Follow up with Carolina and Mar on timeline for remaining files.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0515-open-9",
+            "label": "SharePoint access requests — 8 pending for Attorney-Client Privilege documents",
+            "detail": "Multiple access requests came in today for 'Attorney-Client Privilege Confidential LLF Client FAQ FINAL 202605' and 'LLF Internal TMS Script FINAL 202605' from: Carlos Marrugo, Julian Madriz, Mayte Alvarado, Roxana Pavon, Marcela Acuna, Esteban Hernandez, Kevin Ramirez, and Milagros Medina. Each requires an Accept or Decline response.",
+            "flag": "urgent"
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0515-dec-1",
+            "label": "Sara Watson takes over EPMO Portfolio Review series",
+            "detail": "Sara cancelled Danny Miller's recurring EPMO Portfolio Review (high-importance notice). Her own replacement series has not yet been created. The Monday slot is now open."
+          },
+          {
+            "id": "eod-0515-dec-2",
+            "label": "Mar Garcia reviewing Bio Appt Reschedule intake",
+            "detail": "Jean confirmed in Teams that Mar will review the Bio Appt Reschedule project submitted by Elimar Toro. Mar will follow up directly with Elimar and Elimar will contact her with any questions."
+          },
+          {
+            "id": "eod-0515-dec-3",
+            "label": "Jhara's AI doc extension granted and resolved — signed today",
+            "detail": "Jean reached out to Mia Mbao for an extension since Jhara was OOO. Mia confirmed extension. Jhara signed the document remotely today. Fully resolved — no follow-up needed."
+          },
+          {
+            "id": "eod-0515-dec-4",
+            "label": "Jean OOO confirmed — May 18–22",
+            "detail": "OOO block confirmed on calendar (May 18–23). Sara Watson, Santiago Arango, Jhara Ochoa, and the Phase 2 PMO distribution list are included on the notice."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0515-mon-1",
+            "label": "Jean is OOO all week — May 18–22",
+            "detail": "Jean is out of office. All items above will be waiting for her return on Monday May 26. Coverage needed for any urgent actions that arise during the week."
+          },
+          {
+            "id": "eod-0515-mon-2",
+            "label": "Colombia Holiday — Santiago Arango OOO Monday",
+            "detail": "Monday May 18 is a Colombia holiday. Santiago Arango will be out for the day."
+          },
+          {
+            "id": "eod-0515-mon-3",
+            "label": "Sara Watson in Dublin — May 18–21",
+            "detail": "Sara will be working from the Dublin office all next week. Time zone differences apply for any urgent coordination."
+          },
+          {
+            "id": "eod-0515-mon-4",
+            "label": "EPMO Portfolio Review series — pending Sara's new invite",
+            "detail": "Sara cancelled Danny's recurring EPMO Portfolio Review. Her own replacement series has not yet been sent. No EPMO review meeting is scheduled for Monday May 18."
+          },
+          {
+            "id": "eod-0515-mon-5",
+            "label": "Multiple pending SharePoint access requests — need response",
+            "detail": "8 access requests for Attorney-Client Privilege documents arrived today. These will need Accept or Decline responses upon Jean's return."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "weekly-2026-05-15",
     "type": "weekly",
     "date": "Week of May 11 – May 15",
