@@ -1,5 +1,239 @@
 [
   {
+    "id": "daily-2026-05-15",
+    "type": "daily",
+    "date": "Friday, May 15",
+    "isoDate": "2026-05-15",
+    "greeting": "Happy Friday, Jean! Today's a big one — you're presenting at 'Get to Know the Project Management Team' this afternoon, and Sara already confirmed you're on track. The morning is stacked, there are two schedule conflicts to resolve (1 PM and 3 PM), and you're carrying five open items plus a fresh slide to prep. Jhara is OOO all week, so the Detention Prevention conversation with Evan lands squarely on you. Lots to do, but you've got this — and the afternoon focus block will help. Go get 'em.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "co-fri-0515-eod-0514-open-1",
+            "label": "HR Mid-Year Touchpoint Preparation — Action Required",
+            "detail": "High-importance email from HR. A new step has been introduced for the performance and development process before mid-year touchpoints. Leaders need to take action — deadline likely imminent. Has been sitting since Thursday.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-fri-0515-eod-0514-open-2",
+            "label": "Enviar correo a Sara sobre nuevos requisitos para proyectos",
+            "detail": "Send Sara the email outlining what projects must include before being filed in the EPMO. Still outstanding.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-fri-0515-eod-0514-open-4",
+            "label": "Asana automation rule broken — fix needed",
+            "detail": "The 'Task completion status changed → Move to section' rule is broken and needs to be repaired in Asana to restore auto-move behavior.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-fri-0515-eod-0514-open-5",
+            "label": "SharePoint access request — Gian Vindigni for 'I-693 FAQ for Client Facing Teams'",
+            "detail": "SharePoint access request from Gian Vindigni. Needs an Accept or Decline response.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-fri-0515-eod-0514-open-6",
+            "label": "Cyber Security Training — overdue",
+            "detail": "Required security training assigned by IronScales following a recent cyber security simulation. Overdue — complete before end of day today.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0515-rem-1",
+            "label": "Preparar slide para presentación a los nuevos hires",
+            "detail": "Importante: preparar slide para la presentación a los nuevos hires. Jean is presenting at 1:30 PM today — confirm the slide is ready."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0515-cal-1",
+            "time": "9:00 AM",
+            "label": "Touchbase",
+            "detail": "With Shelley Henry and Justin Richburg. Teams meeting, 30 min."
+          },
+          {
+            "id": "fri-0515-cal-2",
+            "time": "9:30 AM",
+            "label": "TRACE Touchpoint",
+            "detail": "Jean organizer. With Yuri Mendonca. 15-minute check-in. Teams meeting."
+          },
+          {
+            "id": "fri-0515-cal-3",
+            "time": "10:00 AM",
+            "label": "Phase 2 Weekly IT Projects Sync",
+            "detail": "Jean organizer. Full team sync including Yuri, Jhara (OOO), Andrea Rodriguez, Vidhi Kala, Carolina Vejarano, Mar Garcia, David Molano, Santiago Arango, and Ananya Puri. 1 hour."
+          },
+          {
+            "id": "fri-0515-cal-4",
+            "time": "11:00 AM",
+            "label": "CoE Sync Jean",
+            "detail": "With Mar Garcia and David Molano. 1 hour. Tentative.",
+            "note": "Tentative"
+          },
+          {
+            "id": "fri-0515-cal-5",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Jean's personal blocked time. Good moment to work through carries before the afternoon gauntlet."
+          },
+          {
+            "id": "fri-0515-cal-6",
+            "time": "1:00 PM",
+            "label": "Conflict: Alignment PM vs. EPMO EOW Check In",
+            "detail": "Alignment PM with Mar Garcia runs 1:00–1:30 PM (tentative). EPMO EOW Check In with Sara Watson and others runs 1:00–2:00 PM (tentative). Both overlap — decide which to attend.",
+            "note": "Schedule conflict"
+          },
+          {
+            "id": "fri-0515-cal-7",
+            "time": "1:30 PM",
+            "label": "Get to Know the Project Management Team — Jean Presenting",
+            "detail": "Jean is presenting at this firm-wide PM team showcase. Sara Watson confirmed Jean is on track to meet and present. Teams meeting, 30 min.",
+            "note": "Jean presenting"
+          },
+          {
+            "id": "fri-0515-cal-8",
+            "time": "2:00 PM",
+            "label": "Focus: Work on Todo List",
+            "detail": "Blocked focus time. Use for carries and end-of-week wrap-up."
+          },
+          {
+            "id": "fri-0515-cal-9",
+            "time": "3:00 PM",
+            "label": "Conflict: IT Litify Sprint #11 Planning vs. Executive Project Status Slide Update",
+            "detail": "IT Litify Sprint #11 Planning with Stakeholders (tentative, large group) and Executive Project Status Slide Update (Jean organizer, with Yuri and Mar — Jhara is OOO) both run 3:00–3:30 PM.",
+            "note": "Schedule conflict"
+          },
+          {
+            "id": "fri-0515-cal-10",
+            "time": "3:30 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Jean organizer. With Mar Garcia. Agenda: portfolio review, roadblocks, next steps. 30 min."
+          },
+          {
+            "id": "fri-0515-cal-11",
+            "time": "4:00 PM",
+            "label": "Reportes for Dummies",
+            "detail": "Jean organizer. With Karla Alcantara. 30 min."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0515-a1",
+            "label": "Asana — Two new tasks assigned by Jorge",
+            "detail": "Jorge assigned two new intakes in [PMO New Project Intakes]: 'Bio Appt Reschedule' and 'Receipt Notices Corrections'. Review, assess scope, and triage."
+          },
+          {
+            "id": "fri-0515-a2",
+            "label": "Detention Prevention Project — sync with Evan",
+            "detail": "Jhara explicitly flagged in Teams that Jean needs to review the Detention Prevention project with Evan. Jhara is OOO all week — this coordination happens directly with Evan, without her."
+          },
+          {
+            "id": "fri-0515-a3",
+            "label": "Incident Response Workshop — review agenda and prepare",
+            "detail": "Larry Marioth shared the workshop agenda: discuss top 5 incidents, review IRG template and define roles, review survey communication. Prep materials and review before the session."
+          },
+          {
+            "id": "fri-0515-a4",
+            "label": "Carolina's IT Excel files — follow up on status",
+            "detail": "David Molano flagged: IT is asking for Carolina's Excel files and she has only completed the RFE one. Follow up with Carolina (and Mar who was looped in) on timeline for the remaining files."
+          },
+          {
+            "id": "fri-0515-a5",
+            "label": "Open Enrollment — review benefits elections",
+            "detail": "Rippling reminder: review your benefits elections as part of LLF's Open Enrollment/Renewal period. Action required before the deadline."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0515-e1",
+            "label": "Re: Information needed for recent intakes — Enrique Toro",
+            "detail": "Enrique replied thanking Jean and Jorge for the meeting and alignment on next steps for the quick project pre-qualification process. Confirm whether any follow-up response or action is needed from Jean.",
+            "from": "etoro@lisinskifirm.com"
+          },
+          {
+            "id": "fri-0515-e2",
+            "label": "Colombia Holiday — Santiago Arango",
+            "detail": "Santiago sent a calendar notice about an upcoming Colombia Holiday. Confirm which Colombian team members will be affected and plan any Monday/Tuesday coverage accordingly.",
+            "from": "saarango@lisinskifirm.com"
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0515-t1",
+            "label": "Jhara (via Teams): Jean must review Detention Prevention with Evan",
+            "detail": "Jhara posted in Teams before going OOO: 'JEAN TIENE QUE REVISAR CON EVAN EL PROYECTO DEL DETENTION PREVENTION.' Jhara is out all week — this is now Jean's to drive directly with Evan."
+          },
+          {
+            "id": "fri-0515-t2",
+            "label": "David Molano: Carolina's Excel files incomplete — IT waiting",
+            "detail": "David flagged that IT is asking for Carolina's Excel files and she has only finished the RFE one. Mar Garcia was looped in. Follow up on the remaining deliverables."
+          },
+          {
+            "id": "fri-0515-t3",
+            "label": "Sara Watson: RACI discussion — testing vs. UAT distinction",
+            "detail": "Sara raised in a group chat whether the 'testing' RACI line item might already be covered under UAT, and how other roles fit into the RACI structure. Active discussion — loop in if this falls in your lane."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0515-ooo-1",
+            "label": "Jhara Ochoa — OOO all week",
+            "detail": "Jhara is out May 15–19 (Mon–Fri). She was on the Executive Project Status Slide Update invite and is the organizer of Detention Prevention weekly meetings. Plan coverage and direct coordination accordingly."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0515-mon-1",
+            "label": "Colombia Holiday — team availability TBD",
+            "detail": "Santiago flagged a Colombia Holiday notice. Confirm which Colombian team members may be off Monday and adjust any project syncs or escalations as needed."
+          },
+          {
+            "id": "fri-0515-mon-2",
+            "label": "Jhara still OOO through Tuesday",
+            "detail": "Jhara returns Wednesday May 20. For Monday and Tuesday, plan any Detention Prevention or PMO coordination without her in the room."
+          },
+          {
+            "id": "fri-0515-mon-3",
+            "label": "End-of-week items to wrap before Monday",
+            "detail": "Cyber Security Training (overdue), SharePoint access request for Gian Vindigni, HR Mid-Year prep, and Sara email on project requirements — all are better resolved today than carried into next week."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-05-14",
     "type": "eod",
     "date": "Thursday, May 14 - End of Day",
