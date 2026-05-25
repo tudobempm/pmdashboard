@@ -4,7 +4,7 @@
     "type": "daily",
     "date": "Monday, May 25",
     "isoDate": "2026-05-25",
-    "greeting": "Welcome back, Jean. A full week away — you've earned it, and now it's time to ease back in. Today is Memorial Day, so the office is likely quiet and nobody expects you to sprint out of the gate. Three items are waiting from May 15 (including that Cyber Security training that was already overdue before you left 👀), and you added six reminders the last couple of days before OOO — all front and center below. Live calendar and email data didn't pull in this morning since the Microsoft 365 connector wasn't available, so check Outlook directly for today's schedule. Let's go.",
+    "greeting": "Welcome back, Jean! Hope the vacation recharged you — you definitely earned every minute. It's Memorial Day, so Shelley's taking the day and Sarah Kenny is also out until tomorrow. The calendar is fully loaded despite the holiday: timecards at 8 AM, TRACE at 9:30, Team Catch Up at 10:30, CoE sync at 11:30, and a focus block at noon. You left six reminders before going OOO — they're front and center below — plus nine items carried over from May 15 waiting patiently for you. Let's ease back in and make it count.",
     "sections": [
       {
         "title": "Carried Over",
@@ -13,19 +13,55 @@
           {
             "id": "co-mon-0525-eod-0515-open-1",
             "label": "HR Mid-Year Touchpoint Preparation — Action Required",
-            "detail": "High-importance HR email requiring leaders to take action before mid-year touchpoints. Has been open since May 15 — first priority on return.",
+            "detail": "High-importance HR email requiring leaders to take action before mid-year touchpoints. Carried from May 15 — first priority on return.",
             "flag": "urgent"
           },
           {
             "id": "co-mon-0525-eod-0515-open-2",
             "label": "Enviar correo a Sara sobre nuevos requisitos para proyectos",
-            "detail": "Email to Sara outlining what projects must include before being filed in the EPMO. Carried since May 14. Sara was in Dublin last week — confirm she's back before sending.",
+            "detail": "Email to Sara outlining what projects must include before being filed in the EPMO. Carried since May 14/15.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-mon-0525-eod-0515-open-3",
+            "label": "Asana automation rule broken — fix needed",
+            "detail": "The 'Task completion status changed → Move to section' rule is broken and needs repair to restore auto-move behavior.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-mon-0525-eod-0515-open-4",
+            "label": "SharePoint access request — Gian Vindigni",
+            "detail": "Gian Vindigni requested access to 'I-693 FAQ for Client Facing Teams'. Needs Accept or Decline response.",
             "flag": "carried"
           },
           {
             "id": "co-mon-0525-eod-0515-open-5",
             "label": "Cyber Security Training — IronScales — overdue",
-            "detail": "Required IronScales security training following a recent cyber security simulation. Was already overdue when you left on May 15. Complete today.",
+            "detail": "Required IronScales security training following a recent cyber security simulation. Was already overdue May 15. New reminder received over the weekend. Complete ASAP.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-mon-0525-eod-0515-open-6",
+            "label": "Detention Prevention Project — sync with Evan",
+            "detail": "Jhara explicitly flagged before going OOO: Jean needs to review the Detention Prevention project directly with Evan.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-mon-0525-eod-0515-open-7",
+            "label": "Incident Response Workshop — review agenda and prepare",
+            "detail": "Larry Marioth shared the workshop agenda: top 5 incidents review, IRG template and role definitions, survey communication. Review and prep needed.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-mon-0525-eod-0515-open-8",
+            "label": "Carolina's IT Excel files — follow up on status",
+            "detail": "IT is waiting on Carolina's remaining Excel files. Only the RFE file was completed. Mar Garcia is looped in. Follow up with Carolina and Mar on the remaining file timeline.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-mon-0525-eod-0515-open-9",
+            "label": "SharePoint access requests — 8 pending for Attorney-Client Privilege documents",
+            "detail": "Access requests pending from: Carlos Marrugo, Julian Madriz, Mayte Alvarado, Roxana Pavon, Marcela Acuna, Esteban Hernandez, Kevin Ramirez, and Milagros Medina. Each requires Accept or Decline.",
             "flag": "urgent"
           }
         ]
@@ -47,7 +83,7 @@
           {
             "id": "mon-0525-rem-3",
             "label": "Alinearse con el day off en Colombia por las elecciones",
-            "detail": "Added May 24 — Review the 'Fw: Colombia EOR Update' email and align on how the firm is handling the Colombian election day off for team members. Santiago and other Colombian staff may have been affected."
+            "detail": "Added May 24 — Review the 'Fw: Colombia EOR Update' email and align on how the firm is handling the Colombian election day off for team members in Colombia."
           },
           {
             "id": "mon-0525-rem-4",
@@ -61,8 +97,8 @@
           },
           {
             "id": "mon-0525-rem-6",
-            "label": "Solicitarle a Andrea el change request del día 22 — hizo clock out el 24 de mayo",
-            "detail": "Added May 24 — Request the change request from Andrea for May 22. She clocked out on May 24."
+            "label": "Solicitarle a Andrea el change request del día 22",
+            "detail": "Added May 24 — Andrea clocked out on May 24 but needs a change request for May 22. Request it from her today."
           }
         ]
       },
@@ -72,9 +108,121 @@
         "items": [
           {
             "id": "mon-0525-cal-1",
-            "label": "Calendar data unavailable this morning",
-            "detail": "The Microsoft 365 connector did not respond during this briefing run. Check Outlook directly for today's meetings.",
-            "note": "Memorial Day — many colleagues may be observing today"
+            "label": "Approve Timecards & Prepare for the Week ✏️",
+            "detail": "8:00 – 9:00 AM · Teams",
+            "note": "Weekly ritual — approve timecards + plan the week ahead"
+          },
+          {
+            "id": "mon-0525-cal-2",
+            "label": "TRACE touchpoint",
+            "detail": "9:30 – 9:45 AM · Teams · with Yuri Mendonca",
+            "note": "15-min check-in on TRACE project"
+          },
+          {
+            "id": "mon-0525-cal-3",
+            "label": "Team Catch Up",
+            "detail": "10:30 – 11:00 AM · Teams · with Jhara Ochoa + Phase 2 PMO",
+            "note": "Shelley is OOO today"
+          },
+          {
+            "id": "mon-0525-cal-4",
+            "label": "CoE Catch Up",
+            "detail": "11:30 AM – 12:00 PM · Teams · with Mar Garcia + David Molano",
+            "note": "CoE team sync"
+          },
+          {
+            "id": "mon-0525-cal-5",
+            "label": "Blocked Space",
+            "detail": "12:00 PM – 1:00 PM · Teams",
+            "note": "Focus block — protected time"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0525-a1",
+            "label": "Clarify EOD deck update with Jhara — which deck, what's needed",
+            "detail": "Jhara asked the team this morning which deck to update for the week with an EOD deadline. Jean responded that it looks like a mistake by Sara. Loop back with Jhara to confirm direction and close the loop."
+          },
+          {
+            "id": "mon-0525-a2",
+            "label": "Phase 2 Project Requests — 25/25 items need Asana status update",
+            "detail": "Asana weekly report shows all 25 Phase 2 Project Requests have no status. Review and coordinate updates with the team.",
+            "flag": "urgent"
+          },
+          {
+            "id": "mon-0525-a3",
+            "label": "CoE Asana portfolio — 4 at risk, 9 need status update",
+            "detail": "Weekly Asana report: CoE has 43 total items — 30 on track, 4 at risk, 0 off track, 9 need updates. Review at-risk items and nudge PMs on missing statuses."
+          },
+          {
+            "id": "mon-0525-a4",
+            "label": "Respond to Darleen Tucker Cuthbert's SharePoint access request",
+            "detail": "Darleen Tucker Cuthbert requested access to 'SOP CSC-VIRTUAL WK - Copy - English'. Accept or Decline response needed from Jean."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0525-e1",
+            "label": "SharePoint access request — Darleen Tucker Cuthbert — 'SOP CSC-VIRTUAL WK'",
+            "detail": "Received May 23. Darleen Tucker Cuthbert has requested access to the document 'SOP CSC-VIRTUAL WK - Copy - English'. Accept or Decline response required."
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0525-t1",
+            "label": "Jhara @everyone — which deck needs updating by EOD?",
+            "detail": "Jhara asked the group this morning which deck is the last to update for the week (EOD deadline). Jean responded: 'Good morning! that's the one. Looks like that's a mistake by Sara.' Follow up may be needed to fully close the loop.",
+            "flag": null
+          },
+          {
+            "id": "mon-0525-t2",
+            "label": "Shelley Henry — won't be on Monday's call (Memorial Day holiday)",
+            "detail": "Shelley messaged Jean on May 22: 'I won't be on the call Monday. We are off for a Holiday.' She is also on OOO auto-reply through today — urgent matters go to Carolina Lopez.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0525-ooo-1",
+            "label": "Shelley Henry — OOO today (Memorial Day)",
+            "detail": "Out until Tuesday May 26. Urgent matters → Carolina Lopez."
+          },
+          {
+            "id": "mon-0525-ooo-2",
+            "label": "Sarah Kenny — OOO until Tuesday May 26",
+            "detail": "Sr HR Manager. Auto-reply set since May 24. Returns May 26."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0525-tmr-1",
+            "label": "Shelley Henry returns",
+            "detail": "Back Tuesday May 26. The 1:1 Shelley & Jean was auto-replied — confirm if it's happening this week."
+          },
+          {
+            "id": "mon-0525-tmr-2",
+            "label": "Sarah Kenny returns",
+            "detail": "Sr HR Manager back Tuesday. Any HR follow-ups — mid-year touchpoints, compliance info requests — can resume."
           }
         ]
       }
