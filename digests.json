@@ -1,5 +1,86 @@
 [
   {
+    "id": "daily-2026-05-25",
+    "type": "daily",
+    "date": "Monday, May 25",
+    "isoDate": "2026-05-25",
+    "greeting": "Welcome back, Jean. A full week away — you've earned it, and now it's time to ease back in. Today is Memorial Day, so the office is likely quiet and nobody expects you to sprint out of the gate. Three items are waiting from May 15 (including that Cyber Security training that was already overdue before you left 👀), and you added six reminders the last couple of days before OOO — all front and center below. Live calendar and email data didn't pull in this morning since the Microsoft 365 connector wasn't available, so check Outlook directly for today's schedule. Let's go.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "co-mon-0525-eod-0515-open-1",
+            "label": "HR Mid-Year Touchpoint Preparation — Action Required",
+            "detail": "High-importance HR email requiring leaders to take action before mid-year touchpoints. Has been open since May 15 — first priority on return.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-mon-0525-eod-0515-open-2",
+            "label": "Enviar correo a Sara sobre nuevos requisitos para proyectos",
+            "detail": "Email to Sara outlining what projects must include before being filed in the EPMO. Carried since May 14. Sara was in Dublin last week — confirm she's back before sending.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-mon-0525-eod-0515-open-5",
+            "label": "Cyber Security Training — IronScales — overdue",
+            "detail": "Required IronScales security training following a recent cyber security simulation. Was already overdue when you left on May 15. Complete today.",
+            "flag": "urgent"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0525-rem-1",
+            "label": "Poner reunión biweekly con CoE + Frank",
+            "detail": "Added May 22 — Schedule the biweekly meeting with the CoE team and Frank von Hassel."
+          },
+          {
+            "id": "mon-0525-rem-2",
+            "label": "Resolver issue con Asana — proyectos duplicados al convertir — Alta Importancia",
+            "detail": "Added May 24 — High-priority Asana bug: projects are being duplicated when converted. Investigate and resolve."
+          },
+          {
+            "id": "mon-0525-rem-3",
+            "label": "Alinearse con el day off en Colombia por las elecciones",
+            "detail": "Added May 24 — Review the 'Fw: Colombia EOR Update' email and align on how the firm is handling the Colombian election day off for team members. Santiago and other Colombian staff may have been affected."
+          },
+          {
+            "id": "mon-0525-rem-4",
+            "label": "Hacer follow up de hoja de Jill",
+            "detail": "Added May 24 — Follow up on Jill's sheet."
+          },
+          {
+            "id": "mon-0525-rem-5",
+            "label": "Follow up con Mar — request de Shelly/Jessica — Finalizing Court EAD Project",
+            "detail": "Added May 24 — Follow up with Mar Garcia on the Shelly/Jessica request. Reference email: 'Finalizing Court EAD Project'."
+          },
+          {
+            "id": "mon-0525-rem-6",
+            "label": "Solicitarle a Andrea el change request del día 22 — hizo clock out el 24 de mayo",
+            "detail": "Added May 24 — Request the change request from Andrea for May 22. She clocked out on May 24."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0525-cal-1",
+            "label": "Calendar data unavailable this morning",
+            "detail": "The Microsoft 365 connector did not respond during this briefing run. Check Outlook directly for today's meetings.",
+            "note": "Memorial Day — many colleagues may be observing today"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-05-15",
     "type": "eod",
     "date": "Friday, May 15 — End of Day",
