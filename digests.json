@@ -1,5 +1,205 @@
 [
   {
+    "id": "eod-2026-05-25",
+    "type": "eod",
+    "date": "Monday, May 25 — End of Day",
+    "isoDate": "2026-05-25",
+    "greeting": "Jean, what a re-entry. First day back from vacation, Memorial Day, Shelley OOO — and you cleared 7 carried-over items, 4 action items, 6 reminders, ran every meeting on the calendar, and still had bandwidth to support the team on overtime calls. That is not easing back in, that's walking back in fully charged. Two things didn't cross the finish line today, and they'll be right here waiting tomorrow. Go rest — you earned it.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0525-done-1",
+            "label": "Approved timecards & prepared the week",
+            "detail": "Weekly ritual held at 8 AM. Timecards reviewed and approved, week scoped and organized."
+          },
+          {
+            "id": "eod-0525-done-2",
+            "label": "TRACE touchpoint — check-in with Yuri completed",
+            "detail": "15-minute TRACE touchpoint held at 9:30 AM with Yuri Mendonca. David also gave Yuri a full walkthrough of the project today — Yuri now has a clear understanding of the tasksets."
+          },
+          {
+            "id": "eod-0525-done-3",
+            "label": "Team Catch Up held",
+            "detail": "10:30 AM meeting with the Phase 2 PMO team. Jhara, Yuri, Andrea, Mar, Sara, and David attended."
+          },
+          {
+            "id": "eod-0525-done-4",
+            "label": "CoE Catch Up — sync with Mar Garcia and David Molano",
+            "detail": "11:30 AM CoE sync completed."
+          },
+          {
+            "id": "eod-0525-done-5",
+            "label": "EOD deck question resolved with Jhara",
+            "detail": "Jhara asked the team which deck to update for the week's EOD. Jean clarified and the loop was closed."
+          },
+          {
+            "id": "eod-0525-done-6",
+            "label": "Phase 2 Asana portfolio — 25 items flagged for status update",
+            "detail": "Asana weekly report reviewed: all 25 Phase 2 Project Requests had no status. Addressed and coordinated."
+          },
+          {
+            "id": "eod-0525-done-7",
+            "label": "CoE Asana portfolio reviewed — 4 at-risk items identified",
+            "detail": "CoE portfolio: 43 total items — 30 on track, 4 at risk, 9 needing status updates. Reviewed and actioned."
+          },
+          {
+            "id": "eod-0525-done-8",
+            "label": "Darleen Tucker Cuthbert SharePoint access — resolved",
+            "detail": "SharePoint access request for 'SOP CSC-VIRTUAL WK - Copy - English' was handled."
+          },
+          {
+            "id": "eod-0525-done-9",
+            "label": "7 carried-over items from May 15 — all cleared",
+            "detail": "Sara project requirements email, Asana automation fix, SharePoint Gian Vindigni, IronScales cyber training, Detention Prevention sync with Evan, Carolina IT Excel files follow-up, and all 8 Attorney-Client Privilege SharePoint requests — resolved in one day."
+          },
+          {
+            "id": "eod-0525-done-10",
+            "label": "All 6 return-from-OOO reminders addressed",
+            "detail": "CoE+Frank biweekly meeting, Asana duplicates issue, Colombia election day off alignment, Jill's sheet follow-up, Mar/Shelly/Jessica Court EAD request, and Andrea's May 22 change request — all actioned today."
+          },
+          {
+            "id": "eod-0525-done-11",
+            "label": "U-AOS Task Set Implementation — project formally closed",
+            "detail": "Santiago Arango sent the official project closure email confirming all Charter criteria were met and the solution delivered. Jean and the team acknowledged."
+          },
+          {
+            "id": "eod-0525-done-12",
+            "label": "Shared FYI video clip in team meeting chat",
+            "detail": "Jean shared an FYI video clip in the CoE meeting chat. Mar Garcia and David Molano both confirmed receipt and thanked Jean."
+          },
+          {
+            "id": "eod-0525-done-13",
+            "label": "Andrea overtime call — Jean gave the greenlight for tomorrow",
+            "detail": "Andrea was deep in the PRD review (1.5 hours) and couldn't share observations by EOD. Jean told her tomorrow is fine and no need for overtime."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0525-open-1",
+            "label": "HR Mid-Year Touchpoint Preparation — Action Required",
+            "detail": "High-importance HR email requiring leaders to take action before mid-year touchpoints. Carried since May 15 — this one really does need attention before the calendar catches up.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0525-open-2",
+            "label": "Incident Response Workshop — review agenda and prepare",
+            "detail": "Larry Marioth shared the workshop agenda: top 5 incidents review, IRG template and role definitions, survey communication. Carried since May 15 — review and prep still pending.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0525-open-3",
+            "label": "Overdue Rippling task — action required",
+            "detail": "Rippling sent a task overdue notification today. Review and complete the flagged task in Rippling.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0525-open-4",
+            "label": "Planner task assigned by Mar Garcia — review needed",
+            "detail": "Mar Garcia assigned Jean a task via Microsoft Planner today. Check Planner to review and act on the assignment.",
+            "flag": null
+          },
+          {
+            "id": "eod-0525-open-5",
+            "label": "Planner task assigned by David Molano — review needed",
+            "detail": "David Molano assigned Jean a task via Microsoft Planner today. Check Planner to review and act on the assignment.",
+            "flag": null
+          },
+          {
+            "id": "eod-0525-open-6",
+            "label": "TRACE update email — confirm it was sent",
+            "detail": "Jean asked Yuri about the TRACE status update email today. Yuri was waiting on Ernestina to confirm taskset questions before sending. Verify this email goes out tomorrow.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0525-kd-1",
+            "label": "TRACE taskset accuracy — work one together before bulk creation",
+            "detail": "Jean messaged Yuri: 'let's work together on this, work on one taskset and let's review it together. The template sheet could be tricky.' Accuracy-first approach agreed on — no bulk creation until the first one is validated."
+          },
+          {
+            "id": "eod-0525-kd-2",
+            "label": "Andrea Rodriguez — PRD observations due tomorrow, not tonight",
+            "detail": "Andrea was 1.5 hours deep in the PRD Duvan sent and couldn't finish by EOD. Jean told her tomorrow is fine and no overtime needed. Andrea to share observations Tuesday."
+          },
+          {
+            "id": "eod-0525-kd-3",
+            "label": "CoE Guidance: Elimar Requests — late meeting added by Mar Garcia",
+            "detail": "Mar Garcia scheduled a 4:30–5:00 PM meeting (tentative) with Jean and David Molano on CoE guidance for Elimar requests. Mar also flagged a new problem ('chicharrón') she discovered today — follow up needed."
+          },
+          {
+            "id": "eod-0525-kd-4",
+            "label": "Craft.io account created — new tool exploration",
+            "detail": "Jean received two account confirmation emails from Craft.io today, suggesting active signup. Worth following up to confirm intent and whether this is being evaluated as a PM/roadmap tool."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0525-tmr-1",
+            "label": "Shelley Henry returns from OOO",
+            "detail": "Back Tuesday May 26. The 1:1 Shelley & Jean had an auto-reply today — check if it's still scheduled this week."
+          },
+          {
+            "id": "eod-0525-tmr-2",
+            "label": "TRACE touchpoint — Yuri Mendonca",
+            "detail": "9:30 – 9:45 AM · Teams. Yuri should have TRACE taskset questions resolved by then."
+          },
+          {
+            "id": "eod-0525-tmr-3",
+            "label": "1:1 Jessica and Jean",
+            "detail": "10:00 – 10:30 AM · Teams · with Jessica Richburg."
+          },
+          {
+            "id": "eod-0525-tmr-4",
+            "label": "EPMO Portfolio Review",
+            "detail": "11:00 AM – 12:00 PM · Teams · organized by Sara Watson. Purpose: review new project requests and assign next steps. Tentative."
+          },
+          {
+            "id": "eod-0525-tmr-5",
+            "label": "Quarterly Skip Level — Jean & Danny Miller",
+            "detail": "12:00 – 12:30 PM · Teams. Agenda: check-in, wins/highlights, action item updates, priorities, next quarter outlook. Tentative — worth confirming.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0525-tmr-6",
+            "label": "Blocked Space",
+            "detail": "12:30 – 1:30 PM · Protected focus time."
+          },
+          {
+            "id": "eod-0525-tmr-7",
+            "label": "1:1 Jhara & Jean",
+            "detail": "1:30 – 2:00 PM · Teams. Agenda: portfolio review, roadblocks, next steps. Jhara accepted this morning."
+          },
+          {
+            "id": "eod-0525-tmr-8",
+            "label": "bi-weekly sync J&J — with J. McDowell",
+            "detail": "2:30 – 3:00 PM · Teams · organized by J. McDowell. Workload check-in, challenges, wins, goals. Tentative."
+          },
+          {
+            "id": "eod-0525-tmr-9",
+            "label": "1:1 Yuri & Jean",
+            "detail": "3:00 – 3:30 PM · Teams. Regular 1:1 with Yuri Mendonca."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-05-25",
     "type": "daily",
     "date": "Monday, May 25",
