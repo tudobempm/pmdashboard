@@ -1,5 +1,224 @@
 [
   {
+    "id": "daily-2026-05-26",
+    "type": "daily",
+    "date": "Tuesday, May 26",
+    "isoDate": "2026-05-26",
+    "greeting": "Good morning, Jean! Eight meetings today — it's a full one. The headliner is your quarterly skip level with Danny at noon, and Shelley's back from OOO so the team is whole again. Four items from yesterday didn't cross the line and are waiting for you at the top. Let's make it count.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "co-tue-0526-eod-0525-open-1",
+            "label": "HR Mid-Year Touchpoint Preparation — Action Required",
+            "detail": "High-importance HR email requiring leaders to take action before mid-year touchpoints. Has been carried since May 15 — this one really needs to happen before HR catches up.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-tue-0526-eod-0525-open-2",
+            "label": "Incident Response Workshop — review agenda and prepare",
+            "detail": "Larry Marioth shared the workshop agenda: top 5 incidents review, IRG template and role definitions, survey communication. Carried since May 15 — review and prep still pending.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-tue-0526-eod-0525-open-3",
+            "label": "Overdue Rippling task — action required",
+            "detail": "Rippling flagged an overdue task yesterday. Review and complete the flagged task in Rippling.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-tue-0526-eod-0525-open-6",
+            "label": "TRACE update email — confirm Yuri sent it",
+            "detail": "Yesterday Yuri was waiting on Ernestina to confirm taskset questions before sending the TRACE status update email. Verify with Yuri that it went out.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0526-cal-1",
+            "label": "TRACE Touchpoint",
+            "detail": "9:30 – 9:45 AM · Teams · with Yuri Mendonca",
+            "note": "Check on TRACE taskset progress and whether the update email went out."
+          },
+          {
+            "id": "tue-0526-cal-2",
+            "label": "1:1 Jessica and Jean",
+            "detail": "10:00 – 10:30 AM · Teams · with Jessica Richburg",
+            "note": null
+          },
+          {
+            "id": "tue-0526-cal-3",
+            "label": "EPMO Portfolio Review",
+            "detail": "11:00 AM – 12:00 PM · Teams · Sara Watson organizer",
+            "note": "Tentative. Review new project requests and assign next steps."
+          },
+          {
+            "id": "tue-0526-cal-4",
+            "label": "Quarterly Skip Level — Jean & Danny Miller",
+            "detail": "12:00 – 12:30 PM · Teams",
+            "note": "Tentative. Agenda: check-in, wins/highlights, action items, priorities, next quarter outlook."
+          },
+          {
+            "id": "tue-0526-cal-5",
+            "label": "Blocked Space",
+            "detail": "12:30 – 1:30 PM · Teams",
+            "note": "Protected focus time."
+          },
+          {
+            "id": "tue-0526-cal-6",
+            "label": "1:1 Jhara & Jean",
+            "detail": "1:30 – 2:00 PM · Teams",
+            "note": "Agenda: portfolio review, roadblocks, next steps."
+          },
+          {
+            "id": "tue-0526-cal-7",
+            "label": "bi-weekly sync J&J",
+            "detail": "2:30 – 3:00 PM · Teams · with J. McDowell",
+            "note": "Tentative. Workload check-in, challenges, wins, goals."
+          },
+          {
+            "id": "tue-0526-cal-8",
+            "label": "1:1 Yuri & Jean",
+            "detail": "3:00 – 3:30 PM · Teams",
+            "note": "Regular 1:1 with Yuri Mendonca."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0526-a1",
+            "label": "Review CoE Guidance: Elimar Requests — from Mar Garcia",
+            "detail": "Mar Garcia sent an email yesterday requesting CoE guidance on Elimar Requests, copying David Molano. Review and determine the appropriate CoE response.",
+            "flag": null
+          },
+          {
+            "id": "tue-0526-a2",
+            "label": "IT Litify Sprint #11 Review + Sprint #12 Planning — check agendas",
+            "detail": "Ioliveira sent back-to-back emails for Sprint #11 Review (results + deployment-ready stories) and Sprint #12 Planning (upcoming user stories). Sent to wide stakeholder group including Jean. Review if any input or prep is needed on your end.",
+            "flag": null
+          },
+          {
+            "id": "tue-0526-a3",
+            "label": "Confirm Craft.io account",
+            "detail": "Jean signed up for Craft.io — two confirmation emails arrived May 25. Open and confirm the account to activate it.",
+            "flag": null
+          },
+          {
+            "id": "tue-0526-a4",
+            "label": "Verify Jhara updated Asana — removed her name, added Thiago",
+            "detail": "Yesterday Jean instructed Jhara to remove her name from a project in Asana and assign it to Thiago instead. Verify the update was made in Asana.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0526-e1",
+            "label": "CoE Guidance: Elimar Requests — Mar Garcia",
+            "detail": "Received May 25. Mar is requesting CoE guidance on Elimar Requests. David Molano is copied. Review and respond.",
+            "flag": null
+          },
+          {
+            "id": "tue-0526-e2",
+            "label": "Craft.io account confirmation — notifications@craft.io",
+            "detail": "Received May 25. Two confirmation emails are waiting. Click to confirm the account and complete signup.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0526-t1",
+            "label": "Jhara: surprised by unexpected project assignment — Jean resolved it",
+            "detail": "Yesterday Jhara messaged alarmed: 'SOS, ESTE PROYECTO ES MIO?' Jean clarified in Asana that it belongs to Thiago (in CSC) and told Jhara to swap names. Verify the Asana update was made.",
+            "flag": null
+          },
+          {
+            "id": "tue-0526-t2",
+            "label": "Yuri in meeting chat: Phase 2 status updates expected today or Wednesday",
+            "detail": "Yuri shared in a meeting chat that Sara is expected to send Phase 2 project status updates by EOD today or Wednesday. Keep an eye out.",
+            "flag": null
+          },
+          {
+            "id": "tue-0526-t3",
+            "label": "Jhara: 'me voy / no alancé' — left before finishing something",
+            "detail": "Jhara signed off last night saying she ran out of time. She also learned she was added to yet another project with Evan — her words: 'NI PUEDO CON MI VIDA.' Worth a quick check-in today to make sure she's okay and not overloaded.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0526-tmr-1",
+            "label": "TRACE Touchpoint",
+            "detail": "9:30 – 9:45 AM · Teams · with Yuri Mendonca",
+            "note": null
+          },
+          {
+            "id": "tue-0526-tmr-2",
+            "label": "1:1 David & Jean",
+            "detail": "10:30 – 11:00 AM · Teams",
+            "note": null
+          },
+          {
+            "id": "tue-0526-tmr-3",
+            "label": "1:1 Carolina and Jean",
+            "detail": "11:00 – 11:30 AM · Teams",
+            "note": null
+          },
+          {
+            "id": "tue-0526-tmr-4",
+            "label": "Jean/Sara 1:1",
+            "detail": "11:30 AM – 12:00 PM · Teams",
+            "note": "Tentative. Sara added a new series — 'Looks like our weekly 1:1 series ended; adding a new one!'"
+          },
+          {
+            "id": "tue-0526-tmr-5",
+            "label": "Blocked Space",
+            "detail": "12:00 – 1:00 PM · Teams",
+            "note": "Protected focus time."
+          },
+          {
+            "id": "tue-0526-tmr-6",
+            "label": "Focus Time: Weekly Meeting Preparation",
+            "detail": "2:00 – 3:00 PM",
+            "note": null
+          },
+          {
+            "id": "tue-0526-tmr-7",
+            "label": "EPMO Team Meeting",
+            "detail": "3:00 – 4:00 PM · Teams",
+            "note": "Tentative — notes say 'Moving to next week due to schedule conflicts.' Worth confirming."
+          },
+          {
+            "id": "tue-0526-tmr-8",
+            "label": "CoE Biweekly Touchpoint",
+            "detail": "4:00 – 4:30 PM · Teams · with Mar Garcia, David Molano, Frank von Hassel",
+            "note": "Frank von Hassel is now included — the biweekly you wanted to set up is live."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-05-25",
     "type": "eod",
     "date": "Monday, May 25 — End of Day",
