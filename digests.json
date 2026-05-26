@@ -1,5 +1,185 @@
 [
   {
+    "id": "eod-2026-05-26",
+    "type": "eod",
+    "date": "Tuesday, May 26 - End of Day",
+    "isoDate": "2026-05-26",
+    "greeting": "What a Tuesday, Jean. Eight meetings, a skip level with Danny, and still making time for your team — that's the energy. You checked off the CoE Elimar guidance review and kept the wheels turning on some big strategic threads. A few things didn't cross the line today, but they're parked cleanly for tomorrow. Rest up — Wednesday has its own agenda.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0526-done-1",
+            "label": "CoE Guidance: Elimar Requests — reviewed and addressed",
+            "detail": "Reviewed Mar Garcia's CoE guidance request on Elimar Requests. Handled."
+          },
+          {
+            "id": "eod-0526-done-2",
+            "label": "8 meetings held — a full day of connection",
+            "detail": "1:1 with Jessica, EPMO Portfolio Review, Quarterly Skip Level with Danny, Blocked Space, 1:1 with Jhara, bi-weekly J&J with Janet, 1:1 with Yuri, and 1:1 with Camilo — all covered."
+          },
+          {
+            "id": "eod-0526-done-3",
+            "label": "Guided Santiago Arango on urgent IT development request",
+            "detail": "Santiago needed help escalating an urgent IT development need tied to the scams project. Jean clarified it's a deliverable within that existing project (not a new one), and directed sending an email to escalate to the right stakeholders with Eugenia (TL) on copy."
+          },
+          {
+            "id": "eod-0526-done-4",
+            "label": "AOS Pre-AOS Trigger escalation confirmed for upcoming sprint",
+            "detail": "Sara Watson confirmed to Craig McKinney that the Pre-AOS Trigger Automation issue causing client impact has been prioritized for the upcoming sprint. Mar Garcia already communicated this to Javier."
+          },
+          {
+            "id": "eod-0526-done-5",
+            "label": "Nationwide Co-Counsel Network — EPMO path cleared",
+            "detail": "Sara communicated to Jon Stelzner and team that EPMO is processing the request, PM assignment is in progress noting Q3 urgency, and Jean will schedule a scoping call this week. Chelsea to be included per Jessica Kim's follow-up."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0526-open-1",
+            "label": "STAR Nominations — due by 12pm EST tomorrow (Wed May 27)",
+            "detail": "Monthly STAR nominations are due before noon EST on Wednesday May 27 for announcement at the firmwide meeting on Thursday May 28. Don't miss the window.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0526-open-2",
+            "label": "HR Mid-Year Touchpoint Preparation — Action Required",
+            "detail": "High-importance HR email requiring leaders to take action before mid-year touchpoints. Has been carried since May 15 — this one really needs to happen before HR catches up.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0526-open-3",
+            "label": "Incident Response Workshop — review agenda and prepare",
+            "detail": "Larry Marioth shared the workshop agenda: top 5 incidents review, IRG template and role definitions, survey communication. Carried since May 15 — review and prep still pending.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0526-open-4",
+            "label": "Overdue Rippling task — action required",
+            "detail": "Rippling flagged an overdue task on May 25. Review and complete the flagged task in Rippling. Also: a compliance review was triggered today on a payment — worth checking both.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0526-open-5",
+            "label": "Nationwide Co-Counsel Network — schedule scoping call this week",
+            "detail": "Sara confirmed EPMO is processing the request. Jean is responsible for scheduling the scoping call this week. High priority with Q3 start target.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0526-open-6",
+            "label": "TRACE update email — confirm Yuri sent it",
+            "detail": "Yesterday Yuri was waiting on Ernestina to confirm taskset questions before sending the TRACE status update email. Verify with Yuri that it went out (you have a TRACE touchpoint tomorrow morning).",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0526-open-7",
+            "label": "Verify Jhara updated Asana — removed her name, added Thiago",
+            "detail": "Jean instructed Jhara to remove her name from a project and assign it to Thiago in CSC. Verify the Asana update was made.",
+            "flag": null
+          },
+          {
+            "id": "eod-0526-open-8",
+            "label": "Camilo Vejarano — leave request 6/16 pending approval",
+            "detail": "Rippling sent a notification: Camilo Vejarano has a leave request for June 16. Review and approve or decline in Rippling.",
+            "flag": null
+          },
+          {
+            "id": "eod-0526-open-9",
+            "label": "Confirm Craft.io account",
+            "detail": "Jean signed up for Craft.io — confirmation emails arrived May 25. Open and confirm the account to activate it.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0526-kd-1",
+            "label": "Nationwide Co-Counsel Network: EPMO owns PM assignment, Q3 target",
+            "detail": "EPMO is getting this through intake to assign a PM. Q3 start acknowledged as high priority. Jean to schedule scoping call this week. Chelsea to be added to stakeholder group per Jessica Kim."
+          },
+          {
+            "id": "eod-0526-kd-2",
+            "label": "ICE Check-in: scope eval meeting scheduled for tomorrow",
+            "detail": "Jorge Grijalva flagged a potential overlap between the new 'ICE Check-in' intake and Yuri's 'Expedite Request' project. A quick assessment meeting with Jean, Jorge, and Yuri is on the calendar for tomorrow at 10am."
+          },
+          {
+            "id": "eod-0526-kd-3",
+            "label": "Santiago's urgent IT need: part of scams project, not a new intake",
+            "detail": "Jean clarified to Santiago that his urgent IT development need is a deliverable within the existing scams project — no new project needed. He's escalating via email with Eugenia (TL) on copy."
+          },
+          {
+            "id": "eod-0526-kd-4",
+            "label": "AOS Pre-AOS Trigger: confirmed for upcoming sprint",
+            "detail": "Sara confirmed the client-impacting automation issue has been prioritized for the upcoming sprint, with existing communication to Javier already in place."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0526-tmr-1",
+            "label": "TRACE Touchpoint",
+            "detail": "9:30–9:45 AM · Teams · with Yuri Mendonca",
+            "note": "Good moment to confirm the TRACE status update email went out."
+          },
+          {
+            "id": "eod-0526-tmr-2",
+            "label": "ICE Check-in Scope Assessment",
+            "detail": "10:00–10:20 AM · Teams · with Jorge Grijalva and Yuri Mendonca (tentative)",
+            "note": "Quick call to determine if ICE Check-in is within scope of Expedite Request or an independent project."
+          },
+          {
+            "id": "eod-0526-tmr-3",
+            "label": "1:1 David & Jean",
+            "detail": "10:30–11:00 AM · Teams",
+            "note": null
+          },
+          {
+            "id": "eod-0526-tmr-4",
+            "label": "1:1 Carolina and Jean",
+            "detail": "11:00–11:30 AM · Teams",
+            "note": null
+          },
+          {
+            "id": "eod-0526-tmr-5",
+            "label": "Blocked Space",
+            "detail": "12:00–1:00 PM · Teams",
+            "note": "Protected focus time. Good window to knock out STAR nominations before the 12pm deadline!"
+          },
+          {
+            "id": "eod-0526-tmr-6",
+            "label": "Focus Time: Weekly Meeting Preparation",
+            "detail": "2:00–3:00 PM",
+            "note": null
+          },
+          {
+            "id": "eod-0526-tmr-7",
+            "label": "EPMO Team Meeting",
+            "detail": "3:00–4:00 PM · Teams (tentative)",
+            "note": "Note says 'Moving to next week due to schedule conflicts' — worth confirming."
+          },
+          {
+            "id": "eod-0526-tmr-8",
+            "label": "CoE Biweekly Touchpoint",
+            "detail": "4:00–4:30 PM · Teams · with Mar Garcia, David Molano, Frank von Hassel",
+            "note": "Frank is now included — the recurring you wanted to set up is live."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-05-26",
     "type": "daily",
     "date": "Tuesday, May 26",
