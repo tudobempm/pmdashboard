@@ -678,6 +678,60 @@ function CoEDashboardTab({ onBack }) {
   const clData = Object.entries(summary.byClassification||{}).filter(([,v])=>v>0);
   const clTotal = clData.reduce((s,[,v]) => s + v, 0);
 
+  // Donut chart effect — must be at top level for hooks rules
+  useEffect(() => {
+    if (!stageChartRef.current || !data) return;
+    if (stageChartInstance.current) stageChartInstance.current.destroy();
+
+    const labels = stageSorted.map(([l]) => l);
+    const values = stageSorted.map(([, v]) => v);
+    const colors = stageSorted.map(([l]) => STAGE_C[l] || "#6b7280");
+    const isDk = document.documentElement.classList.contains("dark");
+
+    stageChartInstance.current = new Chart(stageChartRef.current, {
+      type: "doughnut",
+      data: {
+        labels,
+        datasets: [{
+          data: values,
+          backgroundColor: colors,
+          borderColor: isDk ? "#18181b" : "#ffffff",
+          borderWidth: 2.5,
+          hoverBorderWidth: 0,
+          hoverOffset: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "62%",
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: isDk ? "#27272a" : "#fff",
+            titleColor: isDk ? "#fafafa" : "#18181b",
+            bodyColor: isDk ? "#a1a1aa" : "#52525b",
+            borderColor: isDk ? "#3f3f46" : "#e4e4e7",
+            borderWidth: 1,
+            padding: 10,
+            cornerRadius: 10,
+            titleFont: { family: "Satoshi, system-ui", weight: 700, size: 12 },
+            bodyFont: { family: "Satoshi, system-ui", weight: 500, size: 11 },
+            callbacks: {
+              label: (ctx) => {
+                const pct = stageTotal > 0 ? Math.round((ctx.raw / stageTotal) * 100) : 0;
+                return ` ${ctx.raw} projects (${pct}%)`;
+              }
+            }
+          }
+        },
+        animation: { animateRotate: true, duration: 600, easing: "easeOutQuart" }
+      }
+    });
+
+    return () => { if (stageChartInstance.current) stageChartInstance.current.destroy(); };
+  }, [data]);
+
   return (
     <div className="space-y-4 fade-in">
 
@@ -932,91 +986,29 @@ function CoEDashboardTab({ onBack }) {
       })()}
 
       {/* By Stage — Donut Chart */}
-      {(() => {
-        const chartRef = stageChartRef;
-        const chartInstance = stageChartInstance;
-        const isDark = document.documentElement.classList.contains("dark");
-
-        // Build chart on mount / data change
-        useEffect(() => {
-          if (!chartRef.current) return;
-          if (chartInstance.current) chartInstance.current.destroy();
-
-          const labels = stageSorted.map(([l]) => l);
-          const values = stageSorted.map(([, v]) => v);
-          const colors = stageSorted.map(([l]) => STAGE_C[l] || "#6b7280");
-          const isDk = document.documentElement.classList.contains("dark");
-
-          chartInstance.current = new Chart(chartRef.current, {
-            type: "doughnut",
-            data: {
-              labels,
-              datasets: [{
-                data: values,
-                backgroundColor: colors,
-                borderColor: isDk ? "#18181b" : "#ffffff",
-                borderWidth: 2.5,
-                hoverBorderWidth: 0,
-                hoverOffset: 6
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              cutout: "62%",
-              plugins: {
-                legend: { display: false },
-                tooltip: {
-                  backgroundColor: isDk ? "#27272a" : "#fff",
-                  titleColor: isDk ? "#fafafa" : "#18181b",
-                  bodyColor: isDk ? "#a1a1aa" : "#52525b",
-                  borderColor: isDk ? "#3f3f46" : "#e4e4e7",
-                  borderWidth: 1,
-                  padding: 10,
-                  cornerRadius: 10,
-                  titleFont: { family: "Satoshi, system-ui", weight: 700, size: 12 },
-                  bodyFont: { family: "Satoshi, system-ui", weight: 500, size: 11 },
-                  callbacks: {
-                    label: (ctx) => {
-                      const pct = stageTotal > 0 ? Math.round((ctx.raw / stageTotal) * 100) : 0;
-                      return ` ${ctx.raw} projects (${pct}%)`;
-                    }
-                  }
-                }
-              },
-              animation: { animateRotate: true, duration: 600, easing: "easeOutQuart" }
-            }
-          });
-
-          return () => { if (chartInstance.current) chartInstance.current.destroy(); };
-        }, [data, stageSorted]);
-
-        return (
-          <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-            <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Stage</p>
-            <div className="flex items-start gap-5">
-              {/* Donut */}
-              <div className="relative w-[160px] h-[160px] flex-shrink-0">
-                <canvas ref={stageChartRef}></canvas>
-                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                  <span className="text-2xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{stageTotal}</span>
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total</span>
-                </div>
-              </div>
-              {/* Legend */}
-              <div className="flex-1 grid grid-cols-2 gap-x-4 gap-y-1.5 pt-1">
-                {stageSorted.map(([label, value]) => (
-                  <div key={label} className="flex items-center gap-2 min-w-0">
-                    <span className="w-2 h-2 rounded-full flex-shrink-0" style={{background: STAGE_C[label] || "#6b7280"}}/>
-                    <span className="text-[11px] text-zinc-600 dark:text-zinc-400 truncate">{label}</span>
-                    <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 ml-auto flex-shrink-0">{value}</span>
-                  </div>
-                ))}
-              </div>
+      <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
+        <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Stage</p>
+        <div className="flex items-start gap-5">
+          {/* Donut */}
+          <div className="relative w-[160px] h-[160px] flex-shrink-0">
+            <canvas ref={stageChartRef}></canvas>
+            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+              <span className="text-2xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{stageTotal}</span>
+              <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total</span>
             </div>
           </div>
-        );
-      })()}
+          {/* Legend */}
+          <div className="flex-1 grid grid-cols-2 gap-x-4 gap-y-1.5 pt-1">
+            {stageSorted.map(([label, value]) => (
+              <div key={label} className="flex items-center gap-2 min-w-0">
+                <span className="w-2 h-2 rounded-full flex-shrink-0" style={{background: STAGE_C[label] || "#6b7280"}}/>
+                <span className="text-[11px] text-zinc-600 dark:text-zinc-400 truncate">{label}</span>
+                <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 ml-auto flex-shrink-0">{value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Halo Tickets — projects with Halo Submitted date */}
       {(() => {
