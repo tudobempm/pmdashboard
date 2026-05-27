@@ -618,14 +618,14 @@ function CoEDashboardTab({ onBack }) {
     if (!stageChartRef.current || !data) return;
     if (stageChartInstance.current) stageChartInstance.current.destroy();
 
-    const STAGE_COLORS = {"New Request":"#818cf8","Triage":"#f59e0b","IT Prioritization":"#06b6d4","Scoping Call Scheduled":"#3b82f6","In Progress":"#10b981","Grooming":"#8b5cf6","On Hold":"#6b7280","Awaiting Next Sprint":"#f97316","UAT/Testing":"#14b8a6","Deployed":"#22c55e","Escalated":"#ef4444","Rejected":"#ef4444","Completed":"#059669","Project Support Log":"#9ca3af"};
-    const byStage = data.summary?.byStage || {};
-    const sorted = Object.entries(byStage).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+    const CLASS_COLORS = {"CoE Project":"#3b82f6","Admin Request":"#f59e0b","Rejected":"#ef4444","Unclassified":"#a1a1aa"};
+    const byClass = data.summary?.byClassification || {};
+    const sorted = Object.entries(byClass).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
     const total = sorted.reduce((s,[,v]) => s + v, 0);
 
     const labels = sorted.map(([l]) => l);
     const values = sorted.map(([, v]) => v);
-    const colors = sorted.map(([l]) => STAGE_COLORS[l] || "#6b7280");
+    const colors = sorted.map(([l]) => CLASS_COLORS[l] || "#6b7280");
     const isDk = document.documentElement.classList.contains("dark");
 
     stageChartInstance.current = new Chart(stageChartRef.current, {
@@ -994,28 +994,32 @@ function CoEDashboardTab({ onBack }) {
         );
       })()}
 
-      {/* By Stage — Donut Chart */}
+      {/* By Classification — Donut Chart */}
       <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-        <p className="text-[13px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Stage</p>
+        <p className="text-[13px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Classification</p>
         {/* Stack on mobile, side by side on desktop */}
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
           {/* Donut */}
           <div className="relative w-[140px] h-[140px] sm:w-[160px] sm:h-[160px] flex-shrink-0">
             <canvas ref={stageChartRef}></canvas>
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-              <span className="text-2xl sm:text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{stageTotal}</span>
+              <span className="text-2xl sm:text-3xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{clTotal}</span>
               <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total</span>
             </div>
           </div>
-          {/* Legend — single column on mobile, 2 cols on desktop */}
-          <div className="w-full flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5">
-            {stageSorted.map(([label, value]) => (
-              <div key={label} className="flex items-center gap-2.5">
-                <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{background: STAGE_C[label] || "#6b7280"}}/>
-                <span className="text-[14px] text-zinc-600 dark:text-zinc-400 flex-1">{label}</span>
-                <span className="text-[14px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 flex-shrink-0">{value}</span>
-              </div>
-            ))}
+          {/* Legend — single column always, classification has few items */}
+          <div className="w-full flex-1 space-y-2">
+            {clData.map(([label, value]) => {
+              const pct = clTotal > 0 ? Math.round((value / clTotal) * 100) : 0;
+              return (
+                <div key={label} className="flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{background: CL_C[label] || "#6b7280"}}/>
+                  <span className="text-[14px] text-zinc-600 dark:text-zinc-400 flex-1">{label}</span>
+                  <span className="text-[14px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 flex-shrink-0">{value}</span>
+                  <span className="text-[12px] text-zinc-400 dark:text-zinc-500 tabular-nums w-10 text-right flex-shrink-0">{pct}%</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -1030,18 +1034,18 @@ function CoEDashboardTab({ onBack }) {
         const shownProjects = haloTab === "active" ? haloActive : haloCompleted;
         return (
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 overflow-hidden">
-            <div className="px-4 py-3 flex items-center justify-between">
+            <div className="px-4 py-3 space-y-2">
               <div className="flex items-center gap-2">
-                <p className="text-[12px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Halo Tickets</p>
-                <span className="text-[12px] font-extrabold tabular-nums px-1.5 py-0.5 rounded-md bg-violet-500/10 text-violet-500">{allHalo.length}</span>
+                <p className="text-[13px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Halo Tickets</p>
+                <span className="text-[13px] font-extrabold tabular-nums px-1.5 py-0.5 rounded-md bg-violet-500/10 text-violet-500">{allHalo.length}</span>
               </div>
-              <div className="flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 rounded-lg p-0.5">
+              <div className="flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 rounded-lg p-0.5 w-fit">
                 <button onClick={() => setHaloTab("active")}
-                  className={`px-2.5 py-1 rounded-md text-[12px] font-semibold transition-all ${haloTab === "active" ? "bg-white dark:bg-zinc-700 text-violet-600 dark:text-violet-400 shadow-sm" : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300"}`}>
+                  className={`px-3 py-1.5 rounded-md text-[13px] font-semibold transition-all ${haloTab === "active" ? "bg-white dark:bg-zinc-700 text-violet-600 dark:text-violet-400 shadow-sm" : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300"}`}>
                   Active <span className="ml-1 tabular-nums opacity-70">{haloActive.length}</span>
                 </button>
                 <button onClick={() => setHaloTab("completed")}
-                  className={`px-2.5 py-1 rounded-md text-[12px] font-semibold transition-all ${haloTab === "completed" ? "bg-white dark:bg-zinc-700 text-emerald-600 dark:text-emerald-400 shadow-sm" : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300"}`}>
+                  className={`px-3 py-1.5 rounded-md text-[13px] font-semibold transition-all ${haloTab === "completed" ? "bg-white dark:bg-zinc-700 text-emerald-600 dark:text-emerald-400 shadow-sm" : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300"}`}>
                   Completed <span className="ml-1 tabular-nums opacity-70">{haloCompleted.length}</span>
                 </button>
               </div>
