@@ -1,5 +1,224 @@
 [
   {
+    "id": "eod-2026-05-27",
+    "type": "eod",
+    "date": "Wednesday, May 27 - End of Day",
+    "isoDate": "2026-05-27",
+    "greeting": "Wednesday delivered, Jean. You knocked out the STAR nominations, cleared the HR mid-year item, ran your full slate of 1:1s, held the CoE biweekly, and completed the ICE Check-in scope assessment. And then — Andrea Rodriguez nominated you for a Star Award for embodying Team Players. That's not a small thing. You are seen, and it is well-earned. Six items still need attention, but they're parked cleanly. Thursday is a big one: Firmwide Meeting, Tudo Bem!, and an extended TRACE call with Yuri. Rest up.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0527-done-1",
+            "label": "⭐ Star Award Nomination — Jean recognized for Team Players",
+            "detail": "Andrea Rodriguez nominated Jean for a Star Award in recognition of the Team Players core value. Sara Watson was copied on the notification. A meaningful moment."
+          },
+          {
+            "id": "eod-0527-done-2",
+            "label": "STAR Nominations submitted — before the noon deadline",
+            "detail": "Monthly STAR nominations went in on time. Winners will be announced at tomorrow's May Firmwide Meeting (2 PM)."
+          },
+          {
+            "id": "eod-0527-done-3",
+            "label": "HR Mid-Year Touchpoint Preparation — handled",
+            "detail": "This item has been carried since May 15. It's off the board."
+          },
+          {
+            "id": "eod-0527-done-4",
+            "label": "ICE Protection Plan — Go/No-Go deck reviewed",
+            "detail": "Reviewed the consolidated pilot recommendation package from Jhara Ochoa (formerly Detention Prevention). Covers service operations, team build-outs, and exec-level approval path."
+          },
+          {
+            "id": "eod-0527-done-5",
+            "label": "TRACE Project Updates — read and addressed in touchpoint",
+            "detail": "Yuri's update email was read before the touchpoint. Jean also extended tomorrow's TRACE call to cover additional topics."
+          },
+          {
+            "id": "eod-0527-done-6",
+            "label": "CoE Change Request Intake Form v2.1 — reviewed with David",
+            "detail": "Reviewed during the 1:1 with David Molano."
+          },
+          {
+            "id": "eod-0527-done-7",
+            "label": "Camilo Vejarano leave request (June 16) — processed in Rippling",
+            "detail": "Leave request reviewed and actioned in Rippling."
+          },
+          {
+            "id": "eod-0527-done-8",
+            "label": "1:1s held: David Molano and Carolina López",
+            "detail": "Both 1:1s completed as scheduled."
+          },
+          {
+            "id": "eod-0527-done-9",
+            "label": "ICE Check-in scope assessment completed",
+            "detail": "Quick meeting with Jorge Grijalva and Yuri evaluated whether 'ICE Check-in' falls under Expedite Request or is a standalone project. Yuri will send next steps to Duvan."
+          },
+          {
+            "id": "eod-0527-done-10",
+            "label": "CoE Biweekly Touchpoint held",
+            "detail": "Meeting with Mar Garcia, David Molano, and Frank Von Hassell completed."
+          },
+          {
+            "id": "eod-0527-done-11",
+            "label": "New EPMO Project Intake distributed — Court Intake Event in Calendly",
+            "detail": "Jean sent intake details for the new project submitted by Matthew Wentzel (Business Development) to TLs for review."
+          },
+          {
+            "id": "eod-0527-done-12",
+            "label": "Incident Response Survey — Nikki Adkins confirmed it's in motion",
+            "detail": "Nikki Adkins (HR Director) replied: she will work on the survey and notify Jean when it's ready for launch. Progress made."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0527-cancelled-1",
+            "label": "CoE Guidance — cancelled by Mar Garcia",
+            "detail": "Mar Garcia sent a high-importance cancellation for the CoE Guidance session today."
+          },
+          {
+            "id": "eod-0527-cancelled-2",
+            "label": "EPMO Team Meeting — moved to next week",
+            "detail": "Calendar note confirmed the meeting is moving to next week due to schedule conflicts."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0527-open-1",
+            "label": "Nationwide Co-Counsel Network — schedule scoping call (Jill + Hassan only)",
+            "detail": "Jon Stelzner clarified today: schedule with just Jill Kim and Hassan Shalabi — not Jim. They delegate from there. Q3 start is high priority. This needs to happen this week.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0527-open-2",
+            "label": "Incident Response Workshop — review agenda and prepare",
+            "detail": "Larry Marioth's workshop agenda has been carried since May 15. Topics: top 5 incidents, IRG template, role definitions, survey communication. Tomorrow's BCP/Incident Response meeting (1:30 PM) is the natural moment to engage on this.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0527-open-3",
+            "label": "Rippling compliance documents — urgent submission required",
+            "detail": "Rippling payroll flagged a compliance review on a payment and is requesting: government-issued ID, supporting documents (invoice/contract), purpose of transfer, and relationship between payer and beneficiary. Submit to Rippling Support.",
+            "flag": "urgent"
+          },
+          {
+            "id": "eod-0527-open-4",
+            "label": "Accept Jean/Sara 1:1 series invite",
+            "detail": "Sara's new recurring 1:1 series is still showing as tentative on tomorrow's calendar. Accept the invite.",
+            "flag": null
+          },
+          {
+            "id": "eod-0527-open-5",
+            "label": "SharePoint access requests — 2 pending (Omar Céspedes, Juan Peguero)",
+            "detail": "Omar Céspedes requested access to 'SOP CSC-VIRTUAL WK - Copy - English.' Juan Peguero requested access to 'Reprogramacion_Cita_Biometrica_LLF_3.docx.' Both arrived today unread — accept or decline.",
+            "flag": null
+          },
+          {
+            "id": "eod-0527-open-6",
+            "label": "External Attorneys' Access — FYI forwarded by Andrea Rodriguez",
+            "detail": "Andrea Rodriguez forwarded an email about external attorneys' access and handling of case files. Unread — review to determine if action is needed.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0527-kd-1",
+            "label": "Nationwide Co-Counsel Network: stakeholder list narrowed — Jill + Hassan only",
+            "detail": "Jon Stelzner directed that the scoping call should include only Jill Kim and Hassan Shalabi. Jim is out. They'll delegate to team members as they see fit. Jean is responsible for scheduling."
+          },
+          {
+            "id": "eod-0527-kd-2",
+            "label": "ICE Check-in: Yuri taking next steps to Duvan",
+            "detail": "The quick scope assessment concluded with Yuri moving forward on next steps with Duvan to finalize whether ICE Check-in is within Expedite Request scope or a standalone project."
+          },
+          {
+            "id": "eod-0527-kd-3",
+            "label": "Incident Response Survey: Nikki Adkins owns execution",
+            "detail": "Nikki confirmed she will handle the survey build and notify Jean when it's ready for launch. Jean's role is to monitor and follow up."
+          },
+          {
+            "id": "eod-0527-kd-4",
+            "label": "Data Mapping for Case Mgmt 2027: green status posted by Javier",
+            "detail": "Javier posted a green status update in Asana. Project appears on track as of May 27."
+          }
+        ]
+      },
+      {
+        "title": "Thursday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0527-tmr-1",
+            "label": "Jean/Sara 1:1",
+            "detail": "9:00–9:30 AM · Teams (tentative — accept today!)",
+            "note": "Sara's new series. Accept the invite so it shows confirmed."
+          },
+          {
+            "id": "eod-0527-tmr-2",
+            "label": "TRACE Touchpoint",
+            "detail": "9:30–10:00 AM · Teams · with Yuri Mendonca",
+            "note": "Jean extended this call today to cover additional topics."
+          },
+          {
+            "id": "eod-0527-tmr-3",
+            "label": "1:1 Andrea and Jean",
+            "detail": "10:30–11:00 AM · Teams",
+            "note": "Andrea nominated Jean for a Star Award today — a good moment to acknowledge."
+          },
+          {
+            "id": "eod-0527-tmr-4",
+            "label": "1:1 Santiago & Jean",
+            "detail": "11:00–11:30 AM · Teams",
+            "note": null
+          },
+          {
+            "id": "eod-0527-tmr-5",
+            "label": "SOP Hub Q&A Session",
+            "detail": "11:30 AM–12:00 PM · Teams (tentative) · Leaders & Management",
+            "note": "Live Q&A following today's training recordings distribution. Organized by Laura Cruz."
+          },
+          {
+            "id": "eod-0527-tmr-6",
+            "label": "Blocked Space",
+            "detail": "12:00–1:00 PM · Teams",
+            "note": "Good window to knock out the Nationwide Co-Counsel scoping call scheduling."
+          },
+          {
+            "id": "eod-0527-tmr-7",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "1:30–2:00 PM · Teams · with Larry Marioth, Lucia Caamano, Danny Miller, and team",
+            "note": "Prime moment to engage on the Incident Response Workshop agenda prep. Come ready."
+          },
+          {
+            "id": "eod-0527-tmr-8",
+            "label": "May Firmwide Meeting",
+            "detail": "2:00–3:00 PM · Teams (tentative)",
+            "note": "STAR Award winners announced here — your name might be on the list. 🌟"
+          },
+          {
+            "id": "eod-0527-tmr-9",
+            "label": "👍 Tudo Bem! Weekly Meeting",
+            "detail": "4:00–5:00 PM · Teams · with David, Jhara, Mar Garcia, Yuri, Andrea, Camilo, Santiago",
+            "note": null
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-05-27",
     "type": "daily",
     "date": "Wednesday, May 27",
