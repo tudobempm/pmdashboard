@@ -612,6 +612,65 @@ function CoEDashboardTab({ onBack }) {
       });
   }, []);
 
+  // Donut chart — must live before early returns so hook order is stable
+  useEffect(() => {
+    if (!stageChartRef.current || !data) return;
+    if (stageChartInstance.current) stageChartInstance.current.destroy();
+
+    const STAGE_COLORS = {"New Request":"#818cf8","Triage":"#f59e0b","IT Prioritization":"#06b6d4","Scoping Call Scheduled":"#3b82f6","In Progress":"#10b981","Grooming":"#8b5cf6","On Hold":"#6b7280","Awaiting Next Sprint":"#f97316","UAT/Testing":"#14b8a6","Deployed":"#22c55e","Escalated":"#ef4444","Rejected":"#ef4444","Completed":"#059669","Project Support Log":"#9ca3af"};
+    const byStage = data.summary?.byStage || {};
+    const sorted = Object.entries(byStage).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+    const total = sorted.reduce((s,[,v]) => s + v, 0);
+
+    const labels = sorted.map(([l]) => l);
+    const values = sorted.map(([, v]) => v);
+    const colors = sorted.map(([l]) => STAGE_COLORS[l] || "#6b7280");
+    const isDk = document.documentElement.classList.contains("dark");
+
+    stageChartInstance.current = new Chart(stageChartRef.current, {
+      type: "doughnut",
+      data: {
+        labels,
+        datasets: [{
+          data: values,
+          backgroundColor: colors,
+          borderColor: isDk ? "#18181b" : "#ffffff",
+          borderWidth: 2.5,
+          hoverBorderWidth: 0,
+          hoverOffset: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "62%",
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: isDk ? "#27272a" : "#fff",
+            titleColor: isDk ? "#fafafa" : "#18181b",
+            bodyColor: isDk ? "#a1a1aa" : "#52525b",
+            borderColor: isDk ? "#3f3f46" : "#e4e4e7",
+            borderWidth: 1,
+            padding: 10,
+            cornerRadius: 10,
+            titleFont: { family: "Satoshi, system-ui", weight: 700, size: 12 },
+            bodyFont: { family: "Satoshi, system-ui", weight: 500, size: 11 },
+            callbacks: {
+              label: (ctx) => {
+                const pct = total > 0 ? Math.round((ctx.raw / total) * 100) : 0;
+                return ` ${ctx.raw} projects (${pct}%)`;
+              }
+            }
+          }
+        },
+        animation: { animateRotate: true, duration: 600, easing: "easeOutQuart" }
+      }
+    });
+
+    return () => { if (stageChartInstance.current) stageChartInstance.current.destroy(); };
+  }, [data]);
+
   if (loading) return (
     <div className="flex items-center justify-center py-32">
       <div className="w-6 h-6 border-2 border-zinc-200 dark:border-zinc-700 border-t-zinc-500 dark:border-t-zinc-400 rounded-full animate-spin"></div>
@@ -677,60 +736,6 @@ function CoEDashboardTab({ onBack }) {
   const prTotal = prData.reduce((s,d) => s + d.value, 0);
   const clData = Object.entries(summary.byClassification||{}).filter(([,v])=>v>0);
   const clTotal = clData.reduce((s,[,v]) => s + v, 0);
-
-  // Donut chart effect — must be at top level for hooks rules
-  useEffect(() => {
-    if (!stageChartRef.current || !data) return;
-    if (stageChartInstance.current) stageChartInstance.current.destroy();
-
-    const labels = stageSorted.map(([l]) => l);
-    const values = stageSorted.map(([, v]) => v);
-    const colors = stageSorted.map(([l]) => STAGE_C[l] || "#6b7280");
-    const isDk = document.documentElement.classList.contains("dark");
-
-    stageChartInstance.current = new Chart(stageChartRef.current, {
-      type: "doughnut",
-      data: {
-        labels,
-        datasets: [{
-          data: values,
-          backgroundColor: colors,
-          borderColor: isDk ? "#18181b" : "#ffffff",
-          borderWidth: 2.5,
-          hoverBorderWidth: 0,
-          hoverOffset: 6
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: "62%",
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: isDk ? "#27272a" : "#fff",
-            titleColor: isDk ? "#fafafa" : "#18181b",
-            bodyColor: isDk ? "#a1a1aa" : "#52525b",
-            borderColor: isDk ? "#3f3f46" : "#e4e4e7",
-            borderWidth: 1,
-            padding: 10,
-            cornerRadius: 10,
-            titleFont: { family: "Satoshi, system-ui", weight: 700, size: 12 },
-            bodyFont: { family: "Satoshi, system-ui", weight: 500, size: 11 },
-            callbacks: {
-              label: (ctx) => {
-                const pct = stageTotal > 0 ? Math.round((ctx.raw / stageTotal) * 100) : 0;
-                return ` ${ctx.raw} projects (${pct}%)`;
-              }
-            }
-          }
-        },
-        animation: { animateRotate: true, duration: 600, easing: "easeOutQuart" }
-      }
-    });
-
-    return () => { if (stageChartInstance.current) stageChartInstance.current.destroy(); };
-  }, [data]);
 
   return (
     <div className="space-y-4 fade-in">
