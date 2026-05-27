@@ -765,56 +765,65 @@ function CoEDashboardTab({ onBack }) {
         </div>
       )}
 
-      {/* Pipeline Flow — compact stage strip following natural order */}
+      {/* Pipeline Flow — horizontal bars */}
       {(() => {
         const PIPELINE = [
-          { key: "New Request",          label: "New Request",     color: "#818cf8" },
-          { key: "Triage",               label: "Triage",          color: "#f59e0b" },
-          { key: "IT Prioritization",    label: "IT Priority",     color: "#06b6d4" },
-          { key: "In Progress",          label: "In Progress",     color: "#10b981" },
-          { key: "On Hold",              label: "On Hold",         color: "#6b7280" },
-          { key: "Awaiting Next Sprint", label: "Awaiting Sprint", color: "#f97316" },
-          { key: "UAT/Testing",          label: "UAT / Testing",   color: "#14b8a6" },
-          { key: "Deployed",             label: "Deployed",        color: "#22c55e" },
-          { key: "Completed",            label: "Completed",       color: "#059669" },
+          { key: "New Request",          label: "New Request",          color: "#818cf8" },
+          { key: "Triage",               label: "Triage",               color: "#f59e0b" },
+          { key: "IT Prioritization",    label: "IT Prioritization",    color: "#06b6d4" },
+          { key: "In Progress",          label: "In Progress",          color: "#10b981" },
+          { key: "On Hold",              label: "On Hold",              color: "#6b7280" },
+          { key: "Awaiting Next Sprint", label: "Awaiting Next Sprint", color: "#f97316" },
+          { key: "UAT/Testing",          label: "UAT / Testing",        color: "#14b8a6" },
+          { key: "Deployed",             label: "Deployed",             color: "#22c55e" },
+          { key: "Completed",            label: "Completed",            color: "#059669" },
         ];
         const prevByStage = delta?.previousByStage || {};
         const hasDelta = delta?.previousByStage != null;
+        const maxCount = Math.max(...PIPELINE.map(s => (summary.byStage || {})[s.key] || 0), 1);
         return (
-          <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-3">
-            {/* Header row — active count + delta */}
-            <div className="flex items-center justify-between mb-2.5 px-1">
+          <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
+            {/* Header */}
+            <div className="flex items-center justify-between mb-4">
               <div className="flex items-baseline gap-2">
-                <span className="text-[12px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Pipeline</span>
-                <span className="text-base font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.totalActive}</span>
-                <span className="text-[12px] text-zinc-400 dark:text-zinc-500">/ {totalProjects}</span>
+                <span className="text-[13px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Pipeline</span>
+                <span className="text-xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.totalActive}</span>
+                <span className="text-[13px] text-zinc-400 dark:text-zinc-500">/ {totalProjects}</span>
                 {delta?.summaryDelta?.totalActive != null && delta.summaryDelta.totalActive !== 0 && (
-                  <span className={`text-[12px] font-bold ${delta.summaryDelta.totalActive > 0 ? "text-emerald-500" : "text-red-400"}`}>{delta.summaryDelta.totalActive>0?"+":""}{delta.summaryDelta.totalActive}</span>
+                  <span className={`text-[13px] font-bold ${delta.summaryDelta.totalActive > 0 ? "text-emerald-500" : "text-red-400"}`}>{delta.summaryDelta.totalActive>0?"+":""}{delta.summaryDelta.totalActive}</span>
                 )}
               </div>
               {hasDelta && delta?.previousDate && (
-                <span className="text-[15px] text-zinc-400 dark:text-zinc-600">vs {new Date(delta.previousDate).toLocaleDateString("en-US",{month:"short",day:"numeric"})}</span>
+                <span className="text-[12px] text-zinc-400 dark:text-zinc-600">vs {new Date(delta.previousDate).toLocaleDateString("en-US",{month:"short",day:"numeric"})}</span>
               )}
             </div>
 
-            {/* Compact stage cells — single row on desktop, wraps on mobile */}
-            <div className="grid grid-cols-3 sm:grid-cols-9 gap-1.5">
-              {PIPELINE.map((s, idx) => {
+            {/* Stage rows */}
+            <div className="space-y-2">
+              {PIPELINE.map((s) => {
                 const cur = (summary.byStage || {})[s.key] || 0;
                 const prev = prevByStage[s.key] || 0;
                 const diff = cur - prev;
                 const isEmpty = cur === 0;
+                const barPct = maxCount > 0 ? Math.max((cur / maxCount) * 100, 0) : 0;
                 return (
-                  <div key={s.key} className={`relative rounded-lg px-2 py-1.5 text-center transition-all ${isEmpty ? "bg-zinc-50 dark:bg-zinc-800/40" : "bg-white dark:bg-zinc-800/80"} border ${isEmpty ? "border-zinc-100 dark:border-zinc-800/60" : "border-zinc-200/80 dark:border-zinc-700"}`}>
-                    {/* Top accent — 2px colored bar */}
-                    <div className="absolute top-0 left-1.5 right-1.5 h-[2px] rounded-b" style={{background: s.color, opacity: isEmpty ? 0.3 : 1}}/>
-                    <p className="text-[12px] font-bold uppercase tracking-wider mt-0.5 truncate" style={{color: isEmpty ? undefined : s.color}} title={s.key}>
-                      <span className={isEmpty ? "text-zinc-300 dark:text-zinc-600" : ""}>{s.label}</span>
-                    </p>
-                    <div className="flex items-center justify-center gap-1 mt-0.5">
-                      <span className={`text-xl font-extrabold tabular-nums leading-none ${isEmpty ? "text-zinc-300 dark:text-zinc-600" : "text-zinc-900 dark:text-zinc-100"}`}>{cur}</span>
+                  <div key={s.key} className="flex items-center gap-3">
+                    {/* Label — fixed width */}
+                    <div className="w-[170px] flex-shrink-0 flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{background: s.color, opacity: isEmpty ? 0.35 : 1}}/>
+                      <span className={`text-[13px] font-semibold whitespace-nowrap ${isEmpty ? "text-zinc-300 dark:text-zinc-600" : "text-zinc-700 dark:text-zinc-300"}`}>{s.label}</span>
+                    </div>
+                    {/* Bar */}
+                    <div className="flex-1 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800/60 overflow-hidden relative">
+                      {cur > 0 && (
+                        <div className="h-full rounded-lg transition-all duration-500 ease-out" style={{width: `${barPct}%`, background: s.color + "30"}}/>
+                      )}
+                    </div>
+                    {/* Count + delta */}
+                    <div className="w-[60px] flex-shrink-0 flex items-center justify-end gap-1.5">
+                      <span className={`text-lg font-extrabold tabular-nums ${isEmpty ? "text-zinc-300 dark:text-zinc-600" : "text-zinc-900 dark:text-zinc-100"}`}>{cur}</span>
                       {hasDelta && diff !== 0 && (
-                        <span className={`text-[15px] font-bold ${diff > 0 ? "text-emerald-500" : "text-red-400"}`}>{diff > 0 ? "+" : ""}{diff}</span>
+                        <span className={`text-[12px] font-bold ${diff > 0 ? "text-emerald-500" : "text-red-400"}`}>{diff > 0 ? "+" : ""}{diff}</span>
                       )}
                     </div>
                   </div>
