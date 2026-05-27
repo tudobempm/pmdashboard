@@ -765,7 +765,7 @@ function CoEDashboardTab({ onBack }) {
         </div>
       )}
 
-      {/* Pipeline Flow — horizontal bars */}
+      {/* Pipeline Flow — full-width rows with inline bar */}
       {(() => {
         const PIPELINE = [
           { key: "New Request",          label: "New Request",          color: "#818cf8" },
@@ -782,9 +782,9 @@ function CoEDashboardTab({ onBack }) {
         const hasDelta = delta?.previousByStage != null;
         const maxCount = Math.max(...PIPELINE.map(s => (summary.byStage || {})[s.key] || 0), 1);
         return (
-          <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
+          <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 overflow-hidden">
             {/* Header */}
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between px-4 py-3">
               <div className="flex items-baseline gap-2">
                 <span className="text-[13px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Pipeline</span>
                 <span className="text-xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{summary.totalActive}</span>
@@ -798,33 +798,33 @@ function CoEDashboardTab({ onBack }) {
               )}
             </div>
 
-            {/* Stage rows */}
-            <div className="space-y-2">
+            {/* Stage rows — each is a full-width block with colored fill as background */}
+            <div className="border-t border-zinc-100 dark:border-zinc-800">
               {PIPELINE.map((s) => {
                 const cur = (summary.byStage || {})[s.key] || 0;
                 const prev = prevByStage[s.key] || 0;
                 const diff = cur - prev;
                 const isEmpty = cur === 0;
-                const barPct = maxCount > 0 ? Math.max((cur / maxCount) * 100, 0) : 0;
+                const barPct = maxCount > 0 ? (cur / maxCount) * 100 : 0;
                 return (
-                  <div key={s.key} className="flex items-center gap-3">
-                    {/* Label — fixed width */}
-                    <div className="w-[170px] flex-shrink-0 flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{background: s.color, opacity: isEmpty ? 0.35 : 1}}/>
-                      <span className={`text-[13px] font-semibold whitespace-nowrap ${isEmpty ? "text-zinc-300 dark:text-zinc-600" : "text-zinc-700 dark:text-zinc-300"}`}>{s.label}</span>
-                    </div>
-                    {/* Bar */}
-                    <div className="flex-1 h-7 rounded-lg bg-zinc-100 dark:bg-zinc-800/60 overflow-hidden relative">
-                      {cur > 0 && (
-                        <div className="h-full rounded-lg transition-all duration-500 ease-out" style={{width: `${barPct}%`, background: s.color + "30"}}/>
-                      )}
-                    </div>
-                    {/* Count + delta */}
-                    <div className="w-[60px] flex-shrink-0 flex items-center justify-end gap-1.5">
-                      <span className={`text-lg font-extrabold tabular-nums ${isEmpty ? "text-zinc-300 dark:text-zinc-600" : "text-zinc-900 dark:text-zinc-100"}`}>{cur}</span>
-                      {hasDelta && diff !== 0 && (
-                        <span className={`text-[12px] font-bold ${diff > 0 ? "text-emerald-500" : "text-red-400"}`}>{diff > 0 ? "+" : ""}{diff}</span>
-                      )}
+                  <div key={s.key} className="relative border-b border-zinc-50 dark:border-zinc-800/50 last:border-b-0 overflow-hidden">
+                    {/* Background fill bar */}
+                    {cur > 0 && (
+                      <div className="absolute inset-y-0 left-0 transition-all duration-500 ease-out" style={{width: `${barPct}%`, background: s.color + "12"}}/>
+                    )}
+                    {/* Content row */}
+                    <div className="relative flex items-center px-4 py-2.5">
+                      {/* Colored left accent */}
+                      <div className="w-1 h-6 rounded-full mr-3 flex-shrink-0" style={{background: s.color, opacity: isEmpty ? 0.2 : 1}}/>
+                      {/* Stage name */}
+                      <span className={`text-[14px] font-semibold flex-1 ${isEmpty ? "text-zinc-300 dark:text-zinc-600" : "text-zinc-700 dark:text-zinc-300"}`}>{s.label}</span>
+                      {/* Count + delta */}
+                      <div className="flex items-center gap-2 flex-shrink-0">
+                        {hasDelta && diff !== 0 && (
+                          <span className={`text-[12px] font-bold ${diff > 0 ? "text-emerald-500" : "text-red-400"}`}>{diff > 0 ? "+" : ""}{diff}</span>
+                        )}
+                        <span className={`text-lg font-extrabold tabular-nums min-w-[28px] text-right ${isEmpty ? "text-zinc-300 dark:text-zinc-600" : "text-zinc-900 dark:text-zinc-100"}`}>{cur}</span>
+                      </div>
                     </div>
                   </div>
                 );
