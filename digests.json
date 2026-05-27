@@ -1,5 +1,260 @@
 [
   {
+    "id": "daily-2026-05-27",
+    "type": "daily",
+    "date": "Wednesday, May 27",
+    "isoDate": "2026-05-27",
+    "greeting": "Good morning, Jean! Wednesday is here and it means business. STAR nominations close at noon today — that’s the most time-sensitive thing on your plate right now. Yuri sent a detailed TRACE update while you were out; worth reading before your 9:30 touchpoint with him. The ICE Protection Plan Go/No-Go deck also landed in your inbox and needs your eyes before Friday. Five carried items, fresh action needed on a few new fronts, and a full day of 1:1s plus your CoE biweekly. You’ve got this.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "co-wed-0527-eod-0526-open-1",
+            "label": "STAR Nominations — due by 12pm EST TODAY",
+            "detail": "Monthly STAR nominations are due before noon EST today for announcement at the firmwide meeting tomorrow (Thursday May 28). Don’t let the window close.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-wed-0527-eod-0526-open-2",
+            "label": "HR Mid-Year Touchpoint Preparation — Action Required",
+            "detail": "High-importance HR email requiring leaders to take action before mid-year touchpoints. Has been carried since May 15 — this one really needs to move.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-wed-0527-eod-0526-open-3",
+            "label": "Incident Response Workshop — review agenda and prepare",
+            "detail": "Larry Marioth shared the workshop agenda: top 5 incidents review, IRG template and role definitions, survey communication. Carried since May 15 — review and prep still pending.",
+            "flag": "urgent"
+          },
+          {
+            "id": "co-wed-0527-eod-0526-open-5",
+            "label": "Nationwide Co-Counsel Network — schedule scoping call this week",
+            "detail": "Sara confirmed EPMO is processing the request and Jean is responsible for scheduling the scoping call this week. Q3 start is high priority. Chelsea Kim also needs to be included per latest email thread.",
+            "flag": "carried"
+          },
+          {
+            "id": "co-wed-0527-eod-0526-open-8",
+            "label": "Camilo Vejarano — leave request 6/16 pending approval",
+            "detail": "Rippling notification: Camilo Vejarano has a leave request for June 16. Review and approve or decline in Rippling.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0527-cal-1",
+            "label": "TRACE Touchpoint",
+            "detail": "9:30–9:45 AM · Teams · with Yuri Mendonca",
+            "note": "Read Yuri’s email first — he sent a full TRACE update with attachments. Litify objects approach was discarded; new taskset proposal is in play."
+          },
+          {
+            "id": "wed-0527-cal-2",
+            "label": "Quick Project Assessment: Potential Overlap",
+            "detail": "10:00–10:20 AM · Teams · with Jorge Grijalva and Yuri Mendonca (tentative)",
+            "note": "Evaluating whether new ‘ICE Check-in’ intake is in scope of Expedite Request or a separate project."
+          },
+          {
+            "id": "wed-0527-cal-3",
+            "label": "1:1 David & Jean",
+            "detail": "10:30–11:00 AM · Teams · with David Molano",
+            "note": "David shared the CoE Change Request Intake Form v2.1 — good moment to review together."
+          },
+          {
+            "id": "wed-0527-cal-4",
+            "label": "1:1 Carolina and Jean",
+            "detail": "11:00–11:30 AM · Teams · with Carolina López",
+            "note": null
+          },
+          {
+            "id": "wed-0527-cal-5",
+            "label": "Blocked Space",
+            "detail": "12:00–1:00 PM · Teams",
+            "note": "Protected focus time. Prime window to knock out STAR nominations before the noon deadline if you haven’t already."
+          },
+          {
+            "id": "wed-0527-cal-6",
+            "label": "Focus Time: Weekly Meeting Preparation",
+            "detail": "2:00–3:00 PM",
+            "note": null
+          },
+          {
+            "id": "wed-0527-cal-7",
+            "label": "EPMO Team Meeting",
+            "detail": "3:00–4:00 PM · Teams (tentative)",
+            "note": "Calendar note says ‘Moving to next week due to schedule conflicts’ — confirm whether this is happening today."
+          },
+          {
+            "id": "wed-0527-cal-8",
+            "label": "CoE Biweekly Touchpoint",
+            "detail": "4:00–4:30 PM · Teams · with Mar Garcia, David Molano, Frank von Hassel",
+            "note": null
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0527-a1",
+            "label": "ICE Protection Plan — review Go/No-Go deck by Friday May 29",
+            "detail": "Jhara Ochoa sent the consolidated pilot recommendation package (formerly Detention Prevention). Covers service operations, team build-outs, and exec-level approval. Review and respond before Friday May 29.",
+            "flag": "urgent"
+          },
+          {
+            "id": "wed-0527-a2",
+            "label": "Read Yuri’s TRACE Project Updates email before the 9:30 touchpoint",
+            "detail": "Yuri sent an update with attachments on May 26. Key: Litify objects approach was discarded following leadership direction; new proposal is to create task sets instead. Review before the TRACE touchpoint this morning.",
+            "flag": "urgent"
+          },
+          {
+            "id": "wed-0527-a3",
+            "label": "Review CoE Change Request Intake Form v2.1 — shared by David",
+            "detail": "David Molano shared CoE_Change_Request_Intake_Form_v2.1.docx in a meeting chat noting it was owed to Jean. Review the document.",
+            "flag": null
+          },
+          {
+            "id": "wed-0527-a4",
+            "label": "Grant Yesid López edit access to SOP NBC Process",
+            "detail": "SharePoint access request: Yesid López (yelopez@lisinskifirm.com) asked to edit ‘SOP NBC Process - Copy - English.’ Approve or decline the access request.",
+            "flag": null
+          },
+          {
+            "id": "wed-0527-a5",
+            "label": "Accept Jean/Sara 1:1 series invite — new from Sara Watson",
+            "detail": "Sara set up a new recurring 1:1 after the previous series ended. The invite arrived yesterday and shows as tentative on Thursday’s calendar. Accept and confirm.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0527-e1",
+            "label": "ICE Protection Plan — Go/No-Go approval needed by Friday",
+            "detail": "From: Jhara Ochoa (JhOchoa@lisinskifirm.com) · Sent May 26 · High importance. Team needs exec review and approval of the pilot package before Friday May 29.",
+            "flag": "urgent"
+          },
+          {
+            "id": "wed-0527-e2",
+            "label": "TRACE Project Updates — unread with attachments",
+            "detail": "From: Yuri Mendonca (yumendonca@lisinskifirm.com) · Sent May 26. Full project status update with attachments. Read before the TRACE touchpoint.",
+            "flag": null
+          },
+          {
+            "id": "wed-0527-e3",
+            "label": "Fw: External Attorneys’ Access and Handling of Case Files — FYI from Andrea",
+            "detail": "From: Andrea Rodriguez (anrodriguez@lisinskifirm.com) · Sent May 26. Forwarded for awareness. Unread — review to see if action is needed.",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0527-t1",
+            "label": "Yuri: taskset structure question — TRACE context",
+            "detail": "In a shared Teams chat, Yuri raised a question about whether a specific sequence of data fields is possible for new tasksets, or if they always follow a fixed structure. Relevant to the TRACE taskset proposal — worth addressing in the 9:30 touchpoint.",
+            "flag": null
+          },
+          {
+            "id": "wed-0527-t2",
+            "label": "Santiago: SOP Hub training recording available",
+            "detail": "In a shared chat, Santiago noted the team can watch the SOP Hub training recording rather than rescheduling their session. The live Q&A for leaders is on tomorrow’s calendar (11:30 AM).",
+            "flag": null
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0527-ooo-1",
+            "label": "Lucia Caamano — returning today",
+            "detail": "Lucia’s auto-reply confirmed she was traveling and returning Wednesday May 27. She should be back online today.",
+            "note": null
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0527-tmr-1",
+            "label": "Jean/Sara 1:1",
+            "detail": "9:00–9:30 AM · Teams (tentative)",
+            "note": "New series from Sara — accept the invite today."
+          },
+          {
+            "id": "wed-0527-tmr-2",
+            "label": "TRACE Touchpoint",
+            "detail": "9:30–9:45 AM · Teams · with Yuri",
+            "note": null
+          },
+          {
+            "id": "wed-0527-tmr-3",
+            "label": "1:1 Andrea and Jean",
+            "detail": "10:30–11:00 AM · Teams",
+            "note": null
+          },
+          {
+            "id": "wed-0527-tmr-4",
+            "label": "1:1 Santiago & Jean",
+            "detail": "11:00–11:30 AM · Teams",
+            "note": null
+          },
+          {
+            "id": "wed-0527-tmr-5",
+            "label": "SOP Hub Q&A Session",
+            "detail": "11:30 AM–12:00 PM · Teams (tentative) · Leaders and Management",
+            "note": "Live Q&A following SOP Hub training recordings shared today."
+          },
+          {
+            "id": "wed-0527-tmr-6",
+            "label": "Blocked Space",
+            "detail": "12:00–1:00 PM · Teams",
+            "note": null
+          },
+          {
+            "id": "wed-0527-tmr-7",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "1:30–2:00 PM · Teams · with Larry Marioth, Lucia Caamano, Terry Lawrence, Danny Miller, and team",
+            "note": "Good moment to address Incident Response Workshop prep."
+          },
+          {
+            "id": "wed-0527-tmr-8",
+            "label": "May Firmwide Meeting",
+            "detail": "2:00–3:00 PM · Teams",
+            "note": "STAR Award winners announced here — make sure nominations are in by noon today!"
+          },
+          {
+            "id": "wed-0527-tmr-9",
+            "label": "1:1 Maria & Jean",
+            "detail": "2:30–3:00 PM · Teams · with Mar Garcia",
+            "note": "⚠️ Overlaps with Firmwide Meeting (2:00–3:00 PM) — worth confirming timing with Mar."
+          },
+          {
+            "id": "wed-0527-tmr-10",
+            "label": "👍 Tudo Bem! Weekly Meeting",
+            "detail": "4:00–5:00 PM · Teams · Full team",
+            "note": null
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-05-26",
     "type": "eod",
     "date": "Tuesday, May 26 - End of Day",
