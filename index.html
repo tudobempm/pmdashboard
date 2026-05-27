@@ -598,7 +598,9 @@ function CoEDashboardTab({ onBack }) {
   const [sortDir, setSortDir] = useState("asc");
   const [showAllDelta, setShowAllDelta] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
-  const [sprintOpen, setSprintOpen] = useState(false);
+  const [sprintOpen, setSprintOpen] = useState(true);
+  const stageChartRef = useRef(null);
+  const stageChartInstance = useRef(null);
   const [expandedSprints, setExpandedSprints] = useState({});
 
   useEffect(() => {
@@ -832,147 +834,7 @@ function CoEDashboardTab({ onBack }) {
         );
       })()}
 
-      {/* Breakdown Cards — consistent mini bars for all */}
-      <div className="grid grid-cols-2 gap-3">
-
-        <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-          <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Stage</p>
-          <div className="space-y-2">
-            {stageSorted.map(([label, value]) => (
-              <div key={label}>
-                <div className="flex items-center justify-between mb-0.5">
-                  <span className="text-[11px] text-zinc-600 dark:text-zinc-400 truncate mr-2">{label}</span>
-                  <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 flex-shrink-0">{value}</span>
-                </div>
-                <MiniBar value={value} max={stageMax} color={STAGE_C[label]||"#6b7280"}/>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center justify-between mt-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total</span>
-            <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100">{stageTotal}</span>
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-          <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Priority</p>
-          <div className="space-y-2">
-            {prData.map(d => (
-              <div key={d.label}>
-                <div className="flex items-center justify-between mb-0.5">
-                  <span className="text-[11px] text-zinc-600 dark:text-zinc-400">{d.label}</span>
-                  <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100">{d.value}</span>
-                </div>
-                <MiniBar value={d.value} max={prTotal} color={PR_C[d.label]||"#6b7280"}/>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center justify-between mt-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total</span>
-            <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100">{prTotal}</span>
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-          <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Department</p>
-          <div className="space-y-2">
-            {deptSorted.map(([label, value]) => (
-              <div key={label}>
-                <div className="flex items-center justify-between mb-0.5">
-                  <span className="text-[11px] text-zinc-600 dark:text-zinc-400 truncate mr-2">{label}</span>
-                  <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 flex-shrink-0">{value}</span>
-                </div>
-                <MiniBar value={value} max={deptMax} color="#3b82f6"/>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center justify-between mt-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total</span>
-            <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100">{deptTotal}</span>
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-          <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Classification</p>
-          <div className="space-y-2">
-            {clData.map(([label, value]) => (
-              <div key={label}>
-                <div className="flex items-center justify-between mb-0.5">
-                  <span className="text-[11px] text-zinc-600 dark:text-zinc-400 truncate mr-2">{label}</span>
-                  <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 flex-shrink-0">{value}</span>
-                </div>
-                <MiniBar value={value} max={clTotal} color={CL_C[label]||"#6b7280"}/>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center justify-between mt-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total</span>
-            <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100">{clTotal}</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Request Type — full width, clean bars */}
-      <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
-        <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">Request Type</p>
-        <div className="space-y-2">
-          {reviewSorted.slice(0,6).map(([label, value]) => (
-            <div key={label}>
-              <div className="flex items-center justify-between mb-0.5">
-                <span className="text-[11px] text-zinc-600 dark:text-zinc-400 truncate mr-2">{label}</span>
-                <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 flex-shrink-0">{value}</span>
-              </div>
-              <MiniBar value={value} max={reviewMax} color="#8b5cf6"/>
-            </div>
-          ))}
-        </div>
-        <div className="flex items-center justify-between mt-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total{reviewSorted.length > 6 ? ` (top 6 of ${reviewSorted.length})` : ""}</span>
-          <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100">{reviewTotal}</span>
-        </div>
-      </div>
-
-      {/* Top Projects — show 3 highest priority, expandable */}
-      <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 overflow-hidden">
-        <div className="px-4 py-3 flex items-center justify-between">
-          <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Top Priority ({sortedProjects.length} active)</p>
-        </div>
-        <div className="overflow-x-auto">
-          <table className="w-full text-xs">
-            <thead><tr className="border-t border-zinc-100 dark:border-zinc-800">
-              <SortH col="name" label="Project" />
-              <SortH col="stage" label="Stage" />
-              <SortH col="priority" label="Priority" />
-              <SortH col="department" label="Dept" />
-              <SortH col="owner" label="Owner" />
-            </tr></thead>
-            <tbody>
-              {visibleProjects.map((p,i) => (
-                <tr key={p.gid||i} className="border-t border-zinc-50 dark:border-zinc-800/50 hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
-                  <td className="px-3 py-2.5 max-w-[220px]">
-                    <a href={p.url} target="_blank" rel="noopener" className="font-medium text-zinc-800 dark:text-zinc-200 hover:text-blue-500 transition-colors truncate block" title={p.name}>{p.name}</a>
-                  </td>
-                  <td className="px-3 py-2.5 text-zinc-500 dark:text-zinc-400 whitespace-nowrap">{p.stage||"—"}</td>
-                  <td className="px-3 py-2.5 whitespace-nowrap">
-                    {p.priority ? <span className="inline-flex items-center gap-1"><span className={`w-1.5 h-1.5 rounded-full ${PDOT[p.priority]||""}`}></span><span className="text-zinc-600 dark:text-zinc-400">{p.priority}</span></span> : <span className="text-zinc-300 dark:text-zinc-600">—</span>}
-                  </td>
-                  <td className="px-3 py-2.5 text-zinc-500 dark:text-zinc-400 whitespace-nowrap">{p.department||"—"}</td>
-                  <td className="px-3 py-2.5 text-zinc-500 dark:text-zinc-400 whitespace-nowrap">{p.owner||"—"}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {sortedProjects.length > 3 && (
-          <div className="px-4 py-3 border-t border-zinc-100 dark:border-zinc-800">
-            <button onClick={() => setShowAllProjects(!showAllProjects)} className="text-[11px] font-semibold text-blue-500 hover:text-blue-600 transition-colors">
-              {showAllProjects ? "Show less" : `View all ${sortedProjects.length} projects`}
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Sprint Completion Tracker — collapsible */}
+      {/* Sprint Completion Tracker — expanded by default */}
       {(() => {
         const sprintData = data.sprintSummary;
         if (!sprintData || Object.keys(sprintData).length === 0) return null;
@@ -985,9 +847,8 @@ function CoEDashboardTab({ onBack }) {
         const totalOverflow = sprintNums.reduce((s, n) => s + sprintData[n].overflowed, 0);
         return (
           <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 overflow-hidden">
-            <button onClick={() => setSprintOpen(!sprintOpen)} className="w-full px-4 py-3 flex items-center justify-between hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
+            <div className="px-4 py-3 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <svg className={`w-3.5 h-3.5 text-zinc-400 transition-transform duration-200 ${sprintOpen ? "rotate-90" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
                 <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Sprint Completion</p>
               </div>
               <div className="flex items-center gap-3">
@@ -995,79 +856,219 @@ function CoEDashboardTab({ onBack }) {
                 {totalOverflow > 0 && <span className="text-[10px] font-bold text-amber-500">{totalOverflow} overflow</span>}
                 <span className="text-[10px] font-bold tabular-nums text-zinc-600 dark:text-zinc-300">{sprintNums.length} sprints</span>
               </div>
-            </button>
+            </div>
 
-            {sprintOpen && (
-              <div className="border-t border-zinc-100 dark:border-zinc-800">
-                {sprintNums.map(sNum => {
-                  const s = sprintData[sNum];
-                  const isCurrent = sNum === currentSprint;
-                  const isExpanded = expandedSprints[sNum];
-                  const pct = s.total > 0 ? Math.round((s.completed / s.total) * 100) : 0;
-                  const barColor = pct === 100 ? "#059669" : isCurrent ? "#3b82f6" : s.overflowed > 0 ? "#f59e0b" : "#06b6d4";
-                  return (
-                    <div key={sNum} className="border-b border-zinc-50 dark:border-zinc-800/50 last:border-b-0">
-                      <button onClick={() => toggleSprint(sNum)} className="w-full px-4 py-3 flex items-center gap-3 hover:bg-zinc-50/30 dark:hover:bg-zinc-800/10 transition-colors">
-                        <svg className={`w-2.5 h-2.5 text-zinc-300 dark:text-zinc-600 transition-transform duration-200 flex-shrink-0 ${isExpanded ? "rotate-90" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
-                        <div className="flex items-center gap-2 flex-1 min-w-0">
-                          <span className="text-xs font-extrabold text-zinc-800 dark:text-zinc-200 tabular-nums">Sprint {sNum}</span>
-                          {isCurrent && <span className="text-[8px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-500">Current</span>}
-                          {pct === 100 && <span className="text-[8px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-500">Done</span>}
-                          {s.overflowed > 0 && <span className="text-[8px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500">{s.overflowed} overflow</span>}
+            <div className="border-t border-zinc-100 dark:border-zinc-800">
+              {sprintNums.map(sNum => {
+                const s = sprintData[sNum];
+                const isCurrent = sNum === currentSprint;
+                const isExpanded = expandedSprints[sNum];
+                const pct = s.total > 0 ? Math.round((s.completed / s.total) * 100) : 0;
+                const barColor = pct === 100 ? "#059669" : isCurrent ? "#3b82f6" : s.overflowed > 0 ? "#f59e0b" : "#06b6d4";
+                return (
+                  <div key={sNum} className="border-b border-zinc-50 dark:border-zinc-800/50 last:border-b-0">
+                    <button onClick={() => toggleSprint(sNum)} className="w-full px-4 py-3 flex items-center gap-3 hover:bg-zinc-50/30 dark:hover:bg-zinc-800/10 transition-colors">
+                      <svg className={`w-2.5 h-2.5 text-zinc-300 dark:text-zinc-600 transition-transform duration-200 flex-shrink-0 ${isExpanded ? "rotate-90" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                      <div className="flex items-center gap-2 flex-1 min-w-0">
+                        <span className="text-xs font-extrabold text-zinc-800 dark:text-zinc-200 tabular-nums">Sprint {sNum}</span>
+                        {isCurrent && <span className="text-[8px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-500">Current</span>}
+                        {pct === 100 && <span className="text-[8px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-500">Done</span>}
+                        {s.overflowed > 0 && <span className="text-[8px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500">{s.overflowed} overflow</span>}
+                      </div>
+                      <div className="flex items-center gap-2.5 flex-shrink-0">
+                        <div className="w-16 h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                          <div className="h-full rounded-full transition-all duration-500" style={{width:`${pct}%`, background: barColor}}/>
                         </div>
-                        <div className="flex items-center gap-2.5 flex-shrink-0">
-                          <div className="w-16 h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
-                            <div className="h-full rounded-full transition-all duration-500" style={{width:`${pct}%`, background: barColor}}/>
-                          </div>
-                          <span className="text-[11px] font-bold tabular-nums text-zinc-600 dark:text-zinc-300 w-12 text-right">{s.completed}/{s.total}</span>
-                        </div>
-                      </button>
-                      {isExpanded && (
-                        <div className="px-4 pb-3">
-                          <div className="rounded-lg border border-zinc-100 dark:border-zinc-800 overflow-hidden">
-                            <table className="w-full text-xs">
-                              <thead>
-                                <tr className="bg-zinc-50/60 dark:bg-zinc-800/30">
-                                  <th className="px-3 py-2 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Project</th>
-                                  <th className="px-3 py-2 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Stage</th>
-                                  <th className="px-3 py-2 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Priority</th>
-                                  <th className="px-3 py-2 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Completed</th>
+                        <span className="text-[11px] font-bold tabular-nums text-zinc-600 dark:text-zinc-300 w-12 text-right">{s.completed}/{s.total}</span>
+                      </div>
+                    </button>
+                    {isExpanded && (
+                      <div className="px-4 pb-3">
+                        <div className="rounded-lg border border-zinc-100 dark:border-zinc-800 overflow-hidden">
+                          <table className="w-full text-xs">
+                            <thead>
+                              <tr className="bg-zinc-50/60 dark:bg-zinc-800/30">
+                                <th className="px-3 py-2 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Project</th>
+                                <th className="px-3 py-2 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Stage</th>
+                                <th className="px-3 py-2 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Priority</th>
+                                <th className="px-3 py-2 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Completed</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {s.projects.sort((a,b) => {
+                                if (a.stage === "Completed" && b.stage !== "Completed") return 1;
+                                if (a.stage !== "Completed" && b.stage === "Completed") return -1;
+                                return 0;
+                              }).map((p, i) => (
+                                <tr key={i} className="border-t border-zinc-50 dark:border-zinc-800/50">
+                                  <td className="px-3 py-2 max-w-[200px]">
+                                    <div className="flex items-center gap-1.5">
+                                      {p.isOverflow && <span className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" title="Overflow from previous sprint"/>}
+                                      {p.url ? (
+                                        <a href={p.url} target="_blank" rel="noopener" className="font-medium text-zinc-800 dark:text-zinc-200 hover:text-blue-500 transition-colors truncate block">{p.name}</a>
+                                      ) : (
+                                        <span className="font-medium text-zinc-800 dark:text-zinc-200 truncate">{p.name}</span>
+                                      )}
+                                    </div>
+                                  </td>
+                                  <td className="px-3 py-2 whitespace-nowrap">
+                                    <span className="text-[10px] px-1.5 py-0.5 rounded-md font-medium" style={{background: (STAGE_C_LOCAL[p.stage]||"#6b7280") + "18", color: STAGE_C_LOCAL[p.stage]||"#6b7280"}}>{p.stage || "—"}</span>
+                                  </td>
+                                  <td className="px-3 py-2 text-zinc-500 dark:text-zinc-400 whitespace-nowrap">{p.priority || "—"}</td>
+                                  <td className="px-3 py-2 text-zinc-500 dark:text-zinc-400 whitespace-nowrap">{p.completedDate ? new Date(p.completedDate).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : "—"}</td>
                                 </tr>
-                              </thead>
-                              <tbody>
-                                {s.projects.sort((a,b) => {
-                                  if (a.stage === "Completed" && b.stage !== "Completed") return 1;
-                                  if (a.stage !== "Completed" && b.stage === "Completed") return -1;
-                                  return 0;
-                                }).map((p, i) => (
-                                  <tr key={i} className="border-t border-zinc-50 dark:border-zinc-800/50">
-                                    <td className="px-3 py-2 max-w-[200px]">
-                                      <div className="flex items-center gap-1.5">
-                                        {p.isOverflow && <span className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0" title="Overflow from previous sprint"/>}
-                                        {p.url ? (
-                                          <a href={p.url} target="_blank" rel="noopener" className="font-medium text-zinc-800 dark:text-zinc-200 hover:text-blue-500 transition-colors truncate block">{p.name}</a>
-                                        ) : (
-                                          <span className="font-medium text-zinc-800 dark:text-zinc-200 truncate">{p.name}</span>
-                                        )}
-                                      </div>
-                                    </td>
-                                    <td className="px-3 py-2 whitespace-nowrap">
-                                      <span className="text-[10px] px-1.5 py-0.5 rounded-md font-medium" style={{background: (STAGE_C_LOCAL[p.stage]||"#6b7280") + "18", color: STAGE_C_LOCAL[p.stage]||"#6b7280"}}>{p.stage || "—"}</span>
-                                    </td>
-                                    <td className="px-3 py-2 text-zinc-500 dark:text-zinc-400 whitespace-nowrap">{p.priority || "—"}</td>
-                                    <td className="px-3 py-2 text-zinc-500 dark:text-zinc-400 whitespace-nowrap">{p.completedDate ? new Date(p.completedDate).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : "—"}</td>
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
+                              ))}
+                            </tbody>
+                          </table>
                         </div>
-                      )}
-                    </div>
-                  );
-                })}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* By Stage — Donut Chart */}
+      {(() => {
+        const chartRef = stageChartRef;
+        const chartInstance = stageChartInstance;
+        const isDark = document.documentElement.classList.contains("dark");
+
+        // Build chart on mount / data change
+        useEffect(() => {
+          if (!chartRef.current) return;
+          if (chartInstance.current) chartInstance.current.destroy();
+
+          const labels = stageSorted.map(([l]) => l);
+          const values = stageSorted.map(([, v]) => v);
+          const colors = stageSorted.map(([l]) => STAGE_C[l] || "#6b7280");
+          const isDk = document.documentElement.classList.contains("dark");
+
+          chartInstance.current = new Chart(chartRef.current, {
+            type: "doughnut",
+            data: {
+              labels,
+              datasets: [{
+                data: values,
+                backgroundColor: colors,
+                borderColor: isDk ? "#18181b" : "#ffffff",
+                borderWidth: 2.5,
+                hoverBorderWidth: 0,
+                hoverOffset: 6
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              cutout: "62%",
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  backgroundColor: isDk ? "#27272a" : "#fff",
+                  titleColor: isDk ? "#fafafa" : "#18181b",
+                  bodyColor: isDk ? "#a1a1aa" : "#52525b",
+                  borderColor: isDk ? "#3f3f46" : "#e4e4e7",
+                  borderWidth: 1,
+                  padding: 10,
+                  cornerRadius: 10,
+                  titleFont: { family: "Satoshi, system-ui", weight: 700, size: 12 },
+                  bodyFont: { family: "Satoshi, system-ui", weight: 500, size: 11 },
+                  callbacks: {
+                    label: (ctx) => {
+                      const pct = stageTotal > 0 ? Math.round((ctx.raw / stageTotal) * 100) : 0;
+                      return ` ${ctx.raw} projects (${pct}%)`;
+                    }
+                  }
+                }
+              },
+              animation: { animateRotate: true, duration: 600, easing: "easeOutQuart" }
+            }
+          });
+
+          return () => { if (chartInstance.current) chartInstance.current.destroy(); };
+        }, [data, stageSorted]);
+
+        return (
+          <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 p-4">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-3">By Stage</p>
+            <div className="flex items-start gap-5">
+              {/* Donut */}
+              <div className="relative w-[160px] h-[160px] flex-shrink-0">
+                <canvas ref={stageChartRef}></canvas>
+                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                  <span className="text-2xl font-extrabold tabular-nums text-zinc-900 dark:text-zinc-100">{stageTotal}</span>
+                  <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Total</span>
+                </div>
               </div>
-            )}
+              {/* Legend */}
+              <div className="flex-1 grid grid-cols-2 gap-x-4 gap-y-1.5 pt-1">
+                {stageSorted.map(([label, value]) => (
+                  <div key={label} className="flex items-center gap-2 min-w-0">
+                    <span className="w-2 h-2 rounded-full flex-shrink-0" style={{background: STAGE_C[label] || "#6b7280"}}/>
+                    <span className="text-[11px] text-zinc-600 dark:text-zinc-400 truncate">{label}</span>
+                    <span className="text-[11px] font-bold tabular-nums text-zinc-900 dark:text-zinc-100 ml-auto flex-shrink-0">{value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* Halo Tickets — projects with Halo Submitted date */}
+      {(() => {
+        const haloProjects = (projects || []).filter(p => p.haloSubmitted).sort((a, b) => (b.haloSubmitted || "").localeCompare(a.haloSubmitted || ""));
+        if (haloProjects.length === 0) return null;
+        return (
+          <div className="rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-800 overflow-hidden">
+            <div className="px-4 py-3 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Halo Tickets</p>
+                <span className="text-[10px] font-extrabold tabular-nums px-1.5 py-0.5 rounded-md bg-violet-500/10 text-violet-500">{haloProjects.length}</span>
+              </div>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="border-t border-zinc-100 dark:border-zinc-800">
+                    <th className="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Project</th>
+                    <th className="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Stage</th>
+                    <th className="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Priority</th>
+                    <th className="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Halo Submitted</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {haloProjects.map((p, i) => (
+                    <tr key={p.gid || i} className="border-t border-zinc-50 dark:border-zinc-800/50 hover:bg-zinc-50/50 dark:hover:bg-zinc-800/20 transition-colors">
+                      <td className="px-3 py-2.5 max-w-[240px]">
+                        {p.url ? (
+                          <a href={p.url} target="_blank" rel="noopener" className="font-medium text-zinc-800 dark:text-zinc-200 hover:text-blue-500 transition-colors truncate block" title={p.name}>{p.name}</a>
+                        ) : (
+                          <span className="font-medium text-zinc-800 dark:text-zinc-200 truncate block">{p.name}</span>
+                        )}
+                      </td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">
+                        <span className="text-[10px] px-1.5 py-0.5 rounded-md font-medium" style={{background: (STAGE_C[p.stage]||"#6b7280") + "18", color: STAGE_C[p.stage]||"#6b7280"}}>{p.stage || "—"}</span>
+                      </td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">
+                        {p.priority ? (
+                          <span className="inline-flex items-center gap-1">
+                            <span className={`w-1.5 h-1.5 rounded-full ${PDOT[p.priority]||""}`}></span>
+                            <span className="text-zinc-600 dark:text-zinc-400">{p.priority}</span>
+                          </span>
+                        ) : <span className="text-zinc-300 dark:text-zinc-600">—</span>}
+                      </td>
+                      <td className="px-3 py-2.5 whitespace-nowrap">
+                        <span className="text-[11px] font-medium text-violet-500 tabular-nums">{new Date(p.haloSubmitted).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})}</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         );
       })()}
