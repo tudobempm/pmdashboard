@@ -55,6 +55,27 @@
         ]
       },
       {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0529-rem-1",
+            "label": "Mandar links de Web Teams, Outlook y Halo al equipo",
+            "detail": "Recordatorio agregado el 28 de mayo. Compartir los links de acceso web con el equipo."
+          },
+          {
+            "id": "fri-0529-rem-2",
+            "label": "Follow up a TLs sobre CoE guide",
+            "detail": "Recordatorio agregado el 28 de mayo. Dar seguimiento a los Team Leads sobre la guía del CoE."
+          },
+          {
+            "id": "fri-0529-rem-3",
+            "label": "Hacer el nuevo template para proyectos del CoE",
+            "detail": "Recordatorio agregado el 29 de mayo. Crear el template para los proyectos del CoE."
+          }
+        ]
+      },
+      {
         "title": "Today's Schedule",
         "info": true,
         "items": [
