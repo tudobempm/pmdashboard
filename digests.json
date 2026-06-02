@@ -1,5 +1,290 @@
 [
   {
+    "id": "daily-2026-06-02-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, June 2",
+    "isoDate": "2026-06-02",
+    "greeting": "Tuesday, June 2, Jean. Today is anchored by Project Coordinator interviews, the Conor 1:1, TRACE, and PMs Workshop. You have 5 meetings on the calendar, 6 urgent items, and 23 unchecked items carried forward from the latest daily digest. Outlook calendar and email access worked; broad Teams recent-thread discovery hit a Microsoft 403, but a narrower Teams search surfaced the main live issue around Jhara's Venn setup on Mac.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0602-co-1",
+            "label": "External Attorneys' Access - review FYI from Andrea",
+            "detail": "Andrea forwarded an email about external attorneys' access and case file handling for Court Hearings and USCIS interviews. Yuri sent a formal request to Jessica Kim for guidance. Confirm whether any follow-up is still needed.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-2",
+            "label": "Andrea's Halo ticket #0028710 - monitor VDI resolution",
+            "detail": "IT assigned the license and VDI provisioning was the expected fix path. Check whether Andrea's Excel/Venn access has fully resolved.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-3",
+            "label": "Asana - confirm Co-Counsel comment status",
+            "detail": "The saved but unsent comment on the Nationwide Co-Counsel Network task was resolved in yesterday's EOD notes. Confirm no follow-up remains from the scoping call.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-4",
+            "label": "Follow up with TLs on CoE guide",
+            "detail": "Dar seguimiento a los Team Leads sobre su revisión del CoE Brief Guide con sus PMs/PEs. Janet confirmó su equipo; verificar los demás.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-5",
+            "label": "KPIs - confirm final approval",
+            "detail": "Mid-Year Touchpoints launched in Rippling yesterday. Confirm all KPIs are approved/finalized after the KPI Review with Sara and close this out.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0602-co-6",
+            "label": "Respond to Sara - PMO/Salesforce dependencies",
+            "detail": "Sara Watson flagged this as high priority. Shannon and Nadia need Salesforce Revenue and Sales Cloud MVP dates; identify PMO projects with Salesforce dependencies.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0602-co-7",
+            "label": "Review CoE Announcement draft status",
+            "detail": "Sara Watson requested feedback on the CoE announcement draft. Confirm whether it went out and provide any remaining input.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-8",
+            "label": "Review Jorge's Frank C intake question",
+            "detail": "Jorge flagged that Frank C's intake request may overlap with Yuri's existing initiatives. Confirm whether the path forward is settled after yesterday's touchpoint.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-9",
+            "label": "Complete Nadia's project affected-areas request",
+            "detail": "Completar la solicitud de Nadia Wilson sobre las áreas afectadas en los proyectos del EPMO.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-10",
+            "label": "Write to Chelsea and Lucia - Incident Response follow-ups",
+            "detail": "Hacer follow-up con Chelsea y Lucia sobre los pendientes del proceso de Incident Response.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-11",
+            "label": "Reply on CoE portal, Asana, and SharePoint questions",
+            "detail": "Sara tagged Jean after Janet asked whether teams should use the Vercel portal instead of Asana, where the brief is saved, and why access is blocked. Yesterday's EOD says this was handled; confirm nothing is still pending.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0602-co-12",
+            "label": "Review Isaac Gomez Ventura interview materials",
+            "detail": "Project Coordinator candidate. Interview is Wednesday, June 3 at 4:00 PM EDT with Eugenia Barragan and Jean. Review profile, resume, and cover letter before tomorrow's interview.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-13",
+            "label": "Close pilot-risk guidance follow-up",
+            "detail": "Yesterday's EOD says Jessica raised pilot risk in ELT and direction was received. Confirm direction has been shared with the team and mark closed if complete.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-14",
+            "label": "Check Hassan's CSO Leadership case-review ask",
+            "detail": "Hassan asked for help reviewing a Litify matter tied to USCIS/T Visa and Form I-192 correspondence. Yesterday's EOD says it was checked; confirm no Jean follow-up remains.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-15",
+            "label": "CoE announcement thread - confirm access questions are closed",
+            "detail": "Janet raised CoE SharePoint access, Teams link, and portal-vs-Asana questions; Sara asked Jean to confirm whether the Vercel portal pulls from Asana. Confirm final status.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0602-co-16",
+            "label": "Interview - Isaac Gomez Ventura",
+            "detail": "Unread candidate details arrived from Ana Oquendo/Rippling for Wednesday's Project Coordinator interview. Review materials before the interview and be ready to submit feedback.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-17",
+            "label": "Pilot risk guidance - share final direction",
+            "detail": "Teams noted Jessica would bring the pilot-risk question to ELT and share direction. EOD says direction landed; make sure it reached Jhara and the team.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0602-co-18",
+            "label": "CSO Leadership - Hassan case review",
+            "detail": "Hassan shared a Litify matter and requested review support. Confirm if Jean still needs to route anything or if CSO Leadership is handling it.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-19",
+            "label": "Terminar el template de proyectos para CoE",
+            "detail": "EOD says the CoE project template is completed. Confirm it is published or shared where the team expects it, then mark done.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-20",
+            "label": "Civil lawsuit group chat - confirm no follow-up",
+            "detail": "Hassan shared that legal docs are ready and Legal is working on new FAQs. Yesterday's EOD says the thread was reviewed; confirm no action remains.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-21",
+            "label": "FW: PMO Projects - Salesforce Dependencies",
+            "detail": "From Sara Watson. High priority. Shannon and Nadia need SF Revenue and Sales Cloud MVP dates; Jean must identify which PMO projects have Salesforce dependencies.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0602-co-22",
+            "label": "CoE Announcement draft - feedback requested",
+            "detail": "From Sara Watson. Draft announcement for the Case Management Center of Excellence; confirm whether feedback is complete and the announcement was sent.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0602-co-23",
+            "label": "Follow up with TLs on CoE Brief Guide review",
+            "detail": "Dar seguimiento a los TLs restantes sobre la revisión del CoE Brief Guide con sus PMs/PEs.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Live Outlook calendar access succeeded. Times shown in EDT/AST.",
+        "items": [
+          {
+            "id": "tue-0602-cal-1",
+            "time": "9:30 AM",
+            "label": "TRACE touchpoint",
+            "detail": "Recurring 15-minute touchpoint with Yuri Almeida."
+          },
+          {
+            "id": "tue-0602-cal-2",
+            "time": "10:00 AM",
+            "label": "1:1 Conor B. & Jean G.",
+            "detail": "Department-needs and EPMO support 1:1 with Conor Brennan."
+          },
+          {
+            "id": "tue-0602-cal-3",
+            "time": "1:00 PM",
+            "label": "Interview - Armando Diaz Hernandez",
+            "detail": "Project Coordinator interview with Eugenia Barragan and Jean. Review candidate profile/resume before joining."
+          },
+          {
+            "id": "tue-0602-cal-4",
+            "time": "3:30 PM",
+            "label": "PMs Workshop",
+            "detail": "30-minute PM workshop on the calendar."
+          },
+          {
+            "id": "tue-0602-cal-5",
+            "time": "4:00 PM",
+            "label": "Interview - Astrid Ortega Hernandez",
+            "detail": "Project Coordinator interview with Eugenia Barragan and Jean. Candidate profile and resume links are in the invite."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0602-action-1",
+            "label": "Review today's candidate materials",
+            "detail": "Armando Diaz Hernandez interviews at 1:00 PM and Astrid Ortega Hernandez interviews at 4:00 PM. Review candidate profile/resume links and be ready to submit feedback."
+          },
+          {
+            "id": "tue-0602-action-2",
+            "label": "Confirm Jhara's Venn setup priority path",
+            "detail": "Jhara said Venn setup on her Mac still was not working and asked Jean to help prioritize with Drew. Jean already reached out to Drew; confirm the ticket is moving and whether stakeholders were notified."
+          },
+          {
+            "id": "tue-0602-action-3",
+            "label": "Close Salesforce dependency response",
+            "detail": "Sara's PMO/Salesforce dependency request remains the highest-priority carry-over. Send or confirm the response with affected PMO projects and MVP date context.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0602-action-4",
+            "label": "Clean up completed carry-overs",
+            "detail": "Several Monday items are marked complete in the EOD narrative but not in briefing state. Confirm and check off the CoE template, pilot-risk guidance, CSO case review, and CoE portal clarification items."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0602-email-1",
+            "label": "Interview - Armando Diaz Hernandez",
+            "detail": "From Ana Oquendo/Rippling. Project Coordinator interview is today at 1:00 PM EDT with Eugenia Barragan and Jean; candidate profile, resume, and cover letter links are included."
+          },
+          {
+            "id": "tue-0602-email-2",
+            "label": "Interview - Astrid Ortega Hernandez",
+            "detail": "From Ana Oquendo/Rippling. Project Coordinator interview is today at 4:00 PM EDT with Eugenia Barragan and Jean; review profile/resume before the meeting."
+          },
+          {
+            "id": "tue-0602-email-3",
+            "label": "Interview - Isaac Gomez Ventura",
+            "detail": "Unread candidate materials are in Outlook for tomorrow's Project Coordinator interview at 4:00 PM EDT. Review before Wednesday afternoon."
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0602-team-1",
+            "label": "Jhara - Venn setup on Mac still blocked",
+            "detail": "Jhara reported this morning that setup still was not working and asked whether Drew could prioritize it. Jean reached out to Drew and discussed whether stakeholders should be notified. Confirm resolution path today."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0602-wed-1",
+            "time": "9:30 AM",
+            "label": "TRACE touchpoint",
+            "detail": "Recurring 15-minute touchpoint with Yuri Almeida."
+          },
+          {
+            "id": "tue-0602-wed-2",
+            "time": "10:30 AM",
+            "label": "1:1 David & Jean",
+            "detail": "Recurring 1:1 with David Molano."
+          },
+          {
+            "id": "tue-0602-wed-3",
+            "time": "11:30 AM",
+            "label": "Jean/Sara 1:1",
+            "detail": "1:1 with Sara Watson. Good slot for Salesforce dependencies, KPI closeout, and CoE follow-up."
+          },
+          {
+            "id": "tue-0602-wed-4",
+            "time": "4:00 PM",
+            "label": "Interview - Isaac Gomez Ventura",
+            "detail": "Project Coordinator interview with Eugenia Barragan and Jean. Review candidate materials before the meeting."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-06-01",
     "type": "eod",
     "date": "Monday, June 1 - End of Day",
