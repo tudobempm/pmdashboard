@@ -1,0 +1,93 @@
+name: Publish pending digest
+
+on:
+  push:
+    paths:
+      - 'pending-digests/*.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Publish pending digest files
+        run: |
+          python - <<'PY'
+          import json
+          import pathlib
+          import subprocess
+          import sys
+
+          root = pathlib.Path('.')
+          pending_dir = root / 'pending-digests'
+          pending_files = sorted(pending_dir.glob('*.json')) if pending_dir.exists() else []
+          if not pending_files:
+              print('No pending digest files found.')
+              sys.exit(0)
+
+          digests_path = root / 'digests.json'
+          state_path = root / 'briefing_state.json'
+
+          digests = json.loads(digests_path.read_text(encoding='utf-8'))
+          if not isinstance(digests, list):
+              raise SystemExit('digests.json must contain a JSON array')
+
+          existing_ids = {item.get('id') for item in digests if isinstance(item, dict)}
+          new_digests = []
+          state_update = None
+
+          for pending_file in pending_files:
+              payload = json.loads(pending_file.read_text(encoding='utf-8'))
+              digest = payload.get('digest', payload)
+              if not isinstance(digest, dict):
+                  raise SystemExit(f'{pending_file} does not contain a digest object')
+              digest_id = digest.get('id')
+              if not digest_id:
+                  raise SystemExit(f'{pending_file} digest is missing id')
+              if digest_id in existing_ids:
+                  print(f'Skipping duplicate digest {digest_id}')
+              else:
+                  new_digests.append(digest)
+                  existing_ids.add(digest_id)
+              if isinstance(payload, dict) and isinstance(payload.get('state'), dict):
+                  state_update = payload['state']
+
+          if new_digests:
+              digests = new_digests + digests
+              digests_path.write_text(json.dumps(digests, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              print(f'Prepended {len(new_digests)} digest(s).')
+          else:
+              print('No new digests to prepend.')
+
+          if state_update is not None:
+              required = {'completed', 'hidden', 'reactions', 'edits', 'reminders', 'reminderHistory'}
+              missing = required - set(state_update)
+              if missing:
+                  raise SystemExit(f'Pending state update is missing required keys: {sorted(missing)}')
+              state_path.write_text(json.dumps(state_update, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              print('Updated briefing_state.json from pending payload.')
+
+          for pending_file in pending_files:
+              pending_file.unlink()
+              print(f'Removed {pending_file}')
+
+          subprocess.run(['git', 'status', '--short'], check=True)
+          PY
+
+      - name: Commit published digest
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo 'Nothing to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add digests.json briefing_state.json pending-digests || true
+          git commit -m 'Publish pending daily digest'
+          git push
