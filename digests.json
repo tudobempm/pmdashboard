@@ -1,5 +1,172 @@
 [
   {
+    "id": "eod-2026-06-03",
+    "type": "eod",
+    "date": "Wednesday, June 3 - End of Day",
+    "isoDate": "2026-06-03",
+    "greeting": "Jean, today shows a heavy cleanup pass across the dashboard: the Salesforce dependency follow-ups, CoE announcement review, Incident Response loose ends, interview prep, and Jhara's Venn/OneDrive path were all marked complete. A few threads still need tomorrow-facing attention, especially KPI approval, the CoE guide follow-up, and candidate feedback. Buen cierre: a lot moved, and the remaining list is focused.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0603-done-1",
+            "label": "PMO/Salesforce dependency response checked off",
+            "detail": "Dashboard items tied to Sara Watson's PMO/Salesforce dependency request were marked complete, including the high-priority response for Shannon and Nadia's Sales Cloud and Revenue Cloud MVP-date context."
+          },
+          {
+            "id": "eod-0603-done-2",
+            "label": "CoE announcement draft review checked off",
+            "detail": "The CoE announcement draft feedback item from Sara Watson was marked complete in the dashboard state."
+          },
+          {
+            "id": "eod-0603-done-3",
+            "label": "Incident Response follow-ups checked off",
+            "detail": "The dashboard item to follow up with Chelsea and Lucia on Incident Response process loose ends was marked complete."
+          },
+          {
+            "id": "eod-0603-done-4",
+            "label": "Isaac Gomez Ventura interview prep checked off",
+            "detail": "The dashboard marked multiple Isaac interview preparation items complete, including review of the candidate materials and the 4:00 PM interview email."
+          },
+          {
+            "id": "eod-0603-done-5",
+            "label": "Jhara Venn and OneDrive/SharePoint path checked off",
+            "detail": "The dashboard marked Jhara's Venn setup priority path and related file-access follow-up items complete."
+          },
+          {
+            "id": "eod-0603-done-6",
+            "label": "Tuesday candidate follow-ups checked off",
+            "detail": "The prior Project Coordinator interview follow-up items for Armando Diaz Hernandez and Astrid Ortega Hernandez were marked complete in the dashboard state."
+          },
+          {
+            "id": "eod-0603-done-7",
+            "label": "Completed carry-over cleanup checked off",
+            "detail": "The dashboard cleanup item for stale completed carry-overs was marked complete."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0603-open-1",
+            "label": "KPIs - confirm final approval",
+            "detail": "Mid-Year Touchpoints launched in Rippling. Confirm all KPIs are approved/finalized after the KPI Review with Sara and close this out.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0603-open-2",
+            "label": "Follow up with TLs on CoE guide",
+            "detail": "Dar seguimiento a los Team Leads sobre su revision del CoE Brief Guide con sus PMs/PEs. Janet confirmed her team; verify the remaining Team Leads."
+          },
+          {
+            "id": "eod-0603-open-3",
+            "label": "Complete Nadia's project affected-areas request",
+            "detail": "Completar la solicitud de Nadia Wilson sobre las areas afectadas en los proyectos del EPMO; today's Salesforce Program Overview was the supporting context."
+          },
+          {
+            "id": "eod-0603-open-4",
+            "label": "Submit Astrid Ortega Hernandez feedback",
+            "detail": "Rippling sent a same-day request for Jean to submit feedback on Astrid Ortega Hernandez's Project Coordinator interview."
+          },
+          {
+            "id": "eod-0603-open-5",
+            "label": "Review CoE Guidance from Mar Garcia",
+            "detail": "Mar Garcia sent a same-day CoE Guidance message to Jean; one copy remains unread in Outlook."
+          },
+          {
+            "id": "eod-0603-open-6",
+            "label": "Send Letters Queue 2.0 kickoff awareness",
+            "detail": "Jhara Ochoa sent the kickoff context with Jean copied, naming EPMO ownership by Jhara Ochoa and Andrea Rodriguez and Ernestina Aguirrezabala as IT BA. Review for awareness and alignment."
+          },
+          {
+            "id": "eod-0603-open-7",
+            "label": "Review IT Request #0027951",
+            "detail": "Mar Garcia and Anu Puri discussed whether the long-waiting request is a Halo ticket to escalate. Jean is copied; confirm whether EPMO needs to help move it."
+          },
+          {
+            "id": "eod-0603-open-8",
+            "label": "Review Javier Hurtado interview materials",
+            "detail": "Outlook confirms the Project Coordinator interview for Thursday, June 4 at 11:30 AM EDT with Eugenia Barragan and Jean. Review candidate profile, LinkedIn, resume, and cover letter before the interview."
+          },
+          {
+            "id": "eod-0603-open-9",
+            "label": "Monitor Jhara's OneDrive/SharePoint and Venn issue",
+            "detail": "A same-day Teams activity email shows Jhara asking the PM Phase 2 team whether others have the same OneDrive/SharePoint issue and noting Claude suggested Venn may affect OneDrive. Confirm whether a status update or IT path is still needed."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0603-decision-1",
+            "label": "CoE Priority moved to High in Asana",
+            "detail": "A same-day Asana notification shows Maria Garcia changed CoE Priority from Medium to High."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0603-thu-1",
+            "time": "11:00 AM",
+            "label": "1:1 Santiago & Jean",
+            "detail": "Base dashboard preview lists the recurring 30-minute 1:1 with Santiago Arango."
+          },
+          {
+            "id": "eod-0603-thu-2",
+            "time": "11:30 AM",
+            "label": "Interview - Javier Hurtado",
+            "detail": "Outlook confirms the Project Coordinator interview with Eugenia Barragan and Jean; candidate profile, LinkedIn, resume, and cover letter are in Outlook."
+          },
+          {
+            "id": "eod-0603-thu-3",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Outlook confirms a protected focus window at noon."
+          },
+          {
+            "id": "eod-0603-thu-4",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Outlook confirms the weekly project touchpoint for BCP/Incident Response."
+          },
+          {
+            "id": "eod-0603-thu-5",
+            "time": "2:00 PM",
+            "label": "1:1 Camilo & Jean",
+            "detail": "Outlook confirms the recurring 30-minute 1:1 with Camilo Vejarano."
+          },
+          {
+            "id": "eod-0603-thu-6",
+            "time": "2:30 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Outlook confirms the portfolio review, roadblocks, and next-steps meeting with Mar Garcia."
+          },
+          {
+            "id": "eod-0603-thu-7",
+            "time": "3:00 PM",
+            "label": "1:1 Andrea and Jean",
+            "detail": "Outlook confirms an exception occurrence of the Andrea and Jean 1:1 at 3:00 PM."
+          },
+          {
+            "id": "eod-0603-thu-8",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Outlook confirms the main team coordination forum for progress, roadblocks, and strategic initiative momentum."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-06-03-morning",
     "type": "daily",
     "date": "Morning - Wednesday, June 3",
