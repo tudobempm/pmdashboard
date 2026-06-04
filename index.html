@@ -2140,10 +2140,62 @@ function DigestCard({ digest, completed, onToggle, onDelete, onRestore, defaultO
 /* ═══ Clean up old storage keys from previous versions ═══ */
 try { localStorage.removeItem("llf-completed"); localStorage.removeItem("llf-hidden"); } catch {}
 
-/* ═══ State Persistence (Supabase) ═══ */
+/* ═══ State Persistence (Supabase — historical only) ═══ */
 const SUPABASE_URL = "https://niqzkombzncxxihhulqq.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pcXprb21iem5jeHhpaGh1bHFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2OTI5NTgsImV4cCI6MjA4OTI2ODk1OH0.9DMbwxPi4yBkXG034sakwh6tnxt-AUcKkt_MER71qcg";
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+/* ═══ GitHub state sync — source of truth for reminders ═══ */
+const GITHUB_TOKEN = "REPLACE_WITH_GITHUB_PAT"; // PAT with contents:write on tudobempm/pmdashboard
+const GITHUB_REPO  = "tudobempm/pmdashboard";
+const GITHUB_BRANCH = "main";
+const GITHUB_STATE_PATH = "briefing_state.json";
+const GITHUB_API_BASE = "https://api.github.com";
+
+let githubWriteQueue = null;
+
+async function githubUpdateReminders(reminders) {
+  if (!GITHUB_TOKEN || GITHUB_TOKEN === "REPLACE_WITH_GITHUB_PAT") {
+    console.warn("[github] GITHUB_TOKEN not set — skipping reminders sync to briefing_state.json");
+    return;
+  }
+  try {
+    const headers = {
+      Authorization: `Bearer ${GITHUB_TOKEN}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    };
+    const fileUrl = `${GITHUB_API_BASE}/repos/${GITHUB_REPO}/contents/${GITHUB_STATE_PATH}?ref=${GITHUB_BRANCH}`;
+    const res = await fetch(fileUrl, { headers });
+    if (!res.ok) throw new Error(`GitHub GET failed: ${res.status}`);
+    const file = await res.json();
+    const current = JSON.parse(atob(file.content.replace(/\n/g, "")));
+    current.reminders = reminders;
+    const updated = JSON.stringify(current, null, 2) + "\n";
+    const putRes = await fetch(`${GITHUB_API_BASE}/repos/${GITHUB_REPO}/contents/${GITHUB_STATE_PATH}`, {
+      method: "PUT",
+      headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: "chore: sync reminders from dashboard",
+        content: btoa(unescape(encodeURIComponent(updated))),
+        sha: file.sha,
+        branch: GITHUB_BRANCH,
+      }),
+    });
+    if (!putRes.ok) {
+      const err = await putRes.json().catch(() => ({}));
+      throw new Error(`GitHub PUT failed: ${putRes.status} — ${err.message || ""}`);
+    }
+    console.log("[github] reminders synced to briefing_state.json:", reminders);
+  } catch (e) {
+    console.warn("[github] reminders sync FAILED:", e);
+  }
+}
+
+function debouncedGithubWrite(reminders) {
+  clearTimeout(githubWriteQueue);
+  githubWriteQueue = setTimeout(() => githubUpdateReminders(reminders), 1500);
+}
 
 let writeQueue = null;
 let remoteOk = true;
@@ -2168,7 +2220,7 @@ async function remoteWrite(state) {
     const { error } = await supabase.from('app_state').upsert({ id: 1, data: state });
     if (error) throw error;
     remoteOk = true;
-    console.log("[state] remote write OK:", JSON.stringify(state));
+    console.log("[state] remote write OK (historical):", JSON.stringify(state));
   } catch (e) {
     remoteOk = false;
     console.warn("[state] remote write FAILED:", e);
@@ -2943,7 +2995,7 @@ function App() {
     if (isManual) setSyncing(true);
     // On manual sync, bypass GitHub Pages CDN by fetching directly from raw.githubusercontent.com
     const url = isManual
-      ? `https://raw.githubusercontent.com/jeancgarcia/pmdashboard/main/digests.json?t=${Date.now()}`
+      ? `https://raw.githubusercontent.com/tudobempm/pmdashboard/main/digests.json?t=${Date.now()}`
       : `digests.json?${Date.now()}`;
     fetch(url, { cache: "no-store" })
       .then(r => { if (!r.ok) throw new Error("Failed to load"); return r.json(); })
@@ -3020,6 +3072,12 @@ function App() {
     if (!stateLoaded || !userActed.current) return;
     debouncedWrite({ completed, hidden, reminders, reminderHistory, edits, reactions });
   }, [completed, hidden, reminders, reminderHistory, edits, reactions, stateLoaded]);
+
+  // Sync reminders to GitHub (source of truth for the digest agent)
+  useEffect(() => {
+    if (!stateLoaded || !userActed.current) return;
+    debouncedGithubWrite(reminders);
+  }, [reminders, stateLoaded]);
 
   const toggle = useCallback((id) => {
     userActed.current = true;
