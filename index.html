@@ -2146,7 +2146,7 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 /* ═══ GitHub state sync — source of truth for reminders ═══ */
-const GITHUB_TOKEN = "REPLACE_WITH_GITHUB_PAT"; // PAT with contents:write on tudobempm/pmdashboard
+const GITHUB_TOKEN = "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"; // PAT with contents:write on tudobempm/pmdashboard
 const GITHUB_REPO  = "tudobempm/pmdashboard";
 const GITHUB_BRANCH = "main";
 const GITHUB_STATE_PATH = "briefing_state.json";
@@ -2155,7 +2155,7 @@ const GITHUB_API_BASE = "https://api.github.com";
 let githubWriteQueue = null;
 
 async function githubUpdateReminders(reminders) {
-  if (!GITHUB_TOKEN || GITHUB_TOKEN === "REPLACE_WITH_GITHUB_PAT") {
+  if (!GITHUB_TOKEN || GITHUB_TOKEN === "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") {
     console.warn("[github] GITHUB_TOKEN not set — skipping reminders sync to briefing_state.json");
     return;
   }
