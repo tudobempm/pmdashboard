@@ -2158,10 +2158,10 @@ function getGithubToken() {
 
 let githubWriteQueue = null;
 
-async function githubUpdateReminders(reminders) {
+async function githubWriteState(patch) {
   const GITHUB_TOKEN = getGithubToken();
   if (!GITHUB_TOKEN) {
-    console.warn("[github] llf-github-token not set in localStorage — skipping reminders sync");
+    console.warn("[github] llf-github-token not set in localStorage — skipping state sync");
     return;
   }
   try {
@@ -2175,13 +2175,12 @@ async function githubUpdateReminders(reminders) {
     if (!res.ok) throw new Error(`GitHub GET failed: ${res.status}`);
     const file = await res.json();
     const current = JSON.parse(atob(file.content.replace(/\n/g, "")));
-    current.reminders = reminders;
-    const updated = JSON.stringify(current, null, 2) + "\n";
+    const updated = JSON.stringify({ ...current, ...patch }, null, 2) + "\n";
     const putRes = await fetch(`${GITHUB_API_BASE}/repos/${GITHUB_REPO}/contents/${GITHUB_STATE_PATH}`, {
       method: "PUT",
       headers: { ...headers, "Content-Type": "application/json" },
       body: JSON.stringify({
-        message: "chore: sync reminders from dashboard",
+        message: "chore: sync dashboard state",
         content: btoa(unescape(encodeURIComponent(updated))),
         sha: file.sha,
         branch: GITHUB_BRANCH,
@@ -2191,15 +2190,15 @@ async function githubUpdateReminders(reminders) {
       const err = await putRes.json().catch(() => ({}));
       throw new Error(`GitHub PUT failed: ${putRes.status} — ${err.message || ""}`);
     }
-    console.log("[github] reminders synced to briefing_state.json:", reminders);
+    console.log("[github] state synced to briefing_state.json:", Object.keys(patch));
   } catch (e) {
-    console.warn("[github] reminders sync FAILED:", e);
+    console.warn("[github] state sync FAILED:", e);
   }
 }
 
-function debouncedGithubWrite(reminders) {
+function debouncedGithubWrite(patch) {
   clearTimeout(githubWriteQueue);
-  githubWriteQueue = setTimeout(() => githubUpdateReminders(reminders), 1500);
+  githubWriteQueue = setTimeout(() => githubWriteState(patch), 1500);
 }
 
 let writeQueue = null;
@@ -3036,7 +3035,12 @@ function App() {
       if (local.reactions && Object.keys(local.reactions).length) setReactions(local.reactions);
     } catch {}
 
-    remoteRead().then(state => {
+    // Read authoritative state from briefing_state.json (GitHub) — single source of truth for all state.
+    // Supabase is no longer read on load; briefing_state.json is what the digest agent reads and writes.
+    fetch(`briefing_state.json?${Date.now()}`, { cache: "no-store" })
+      .then(r => r.ok ? r.json() : null)
+      .catch(() => null)
+      .then(state => {
       // completed, hidden, edits, reactions: local user actions win if they acted first.
       // These fields reflect user checkbox / reaction interactions — their changes should not be overwritten.
       if (!userActed.current) {
@@ -3061,7 +3065,7 @@ function App() {
       setReminders(prev => {
         const merged = [...remoteReminders];
         for (const r of prev) {
-          // Keep locally-added reminders that haven't made it to Supabase yet
+          // Keep locally-added reminders that haven't synced to GitHub yet
           if (!remoteIds.has(r.id) && !historyIds.has(r.id)) merged.push(r);
         }
         return merged;
@@ -3078,11 +3082,11 @@ function App() {
     debouncedWrite({ completed, hidden, reminders, reminderHistory, edits, reactions });
   }, [completed, hidden, reminders, reminderHistory, edits, reactions, stateLoaded]);
 
-  // Sync reminders to GitHub (source of truth for the digest agent)
+  // Sync full state to GitHub briefing_state.json (source of truth for the digest agent)
   useEffect(() => {
     if (!stateLoaded || !userActed.current) return;
-    debouncedGithubWrite(reminders);
-  }, [reminders, stateLoaded]);
+    debouncedGithubWrite({ completed, hidden, reminders, reminderHistory, edits, reactions });
+  }, [completed, hidden, reminders, reminderHistory, edits, reactions, stateLoaded]);
 
   const toggle = useCallback((id) => {
     userActed.current = true;
