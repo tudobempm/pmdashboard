@@ -1,0 +1,140 @@
+{
+  "digest": {
+    "id": "eod-2026-06-05",
+    "type": "eod",
+    "date": "Friday, June 5 - End of Day",
+    "isoDate": "2026-06-05",
+    "greeting": "Jean, today closed with several operational lanes still active, so this EOD keeps the carry-forward list focused and evidence-based. The clearest same-day outcomes are the Folder Path ticket resolution notice and Mar's DACA/I-90 status recap. Monday is an OOO day for you, with a few standing planning and portfolio blocks still visible on the dashboard and Outlook.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0605-done-1",
+            "label": "Folder Path ticket resolution shared",
+            "detail": "Jean sent a same-day reply on the Ticket ID 0026345 thread saying the issue was solved, Halo ticket #26345 / Azure ticket #2116 was resolved, and Amir was able to test that the needed information can now be pulled."
+          },
+          {
+            "id": "eod-0605-done-2",
+            "label": "DACA RNWL and I-90 RNWL status recap delivered",
+            "detail": "Mar Garcia sent Jessica Richburg and Shelley Henry a same-day recap, copying Jean, that documented completed process review/mapping, I-90 RNWL E.CL deployment and SOP completion, and DACA RNWL E.CL UAT approval on June 5."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0605-open-1",
+            "label": "Review GitHub token alerts",
+            "detail": "The morning dashboard flags an unread GitHub alert that a classic personal access token named token2 was added with admin:repo_hook and repo scopes, plus related token-warning emails from Thursday. Review, revoke, or confirm legitimacy before treating this as closed.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0605-open-2",
+            "label": "Confirm KPI final approval",
+            "detail": "Still unchecked from today's carried-over dashboard items. Mid-Year Touchpoints launched in Rippling; confirm all KPIs are approved/finalized after the KPI Review with Sara.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0605-open-3",
+            "label": "Clarify Incident Response priority path",
+            "detail": "The morning dashboard carries forward the Incident Response priority-path risk and says prior Teams context had no response yet from Cristian Garcia or Chelsea related to Jill's prioritization direction. Confirm leadership clarity and the next alignment path.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0605-open-4",
+            "label": "Check Supabase security warning",
+            "detail": "Still unchecked from today's carried-over dashboard items. Review the Supabase critical table-publicly-accessible/RLS-disabled warning and decide whether the project is active and needs remediation.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0605-open-5",
+            "label": "Close CoE guide and priority follow-ups",
+            "detail": "Today's dashboard carries forward TL review of the CoE Brief Guide and alignment of CoE priorities with Jorge's Portfolio Review Summary. Janet confirmed her team; verify remaining TLs and decide the CoE priority path."
+          },
+          {
+            "id": "eod-0605-open-6",
+            "label": "Complete Nadia's affected-areas request",
+            "detail": "Still unchecked from today's carried-over dashboard items. Complete Nadia Wilson's request on affected EPMO project areas, using the Salesforce Program Overview as supporting context."
+          },
+          {
+            "id": "eod-0605-open-7",
+            "label": "Decide Co-counsel network go/no-go follow-up",
+            "detail": "The morning dashboard included the reminder: Seguimiento a stakeholders de Co-counsel network project. Go/no-go? No dashboard completion was recorded for this reminder."
+          },
+          {
+            "id": "eod-0605-open-8",
+            "label": "Submit recruiting feedback",
+            "detail": "Today's dashboard carries forward Isaac Gomez Ventura interview feedback, and Outlook showed the Javier Hurtado Project Coordinator interview at 4:00 PM with a feedback link. Submit any feedback still outstanding."
+          },
+          {
+            "id": "eod-0605-open-9",
+            "label": "Track DACA/I-90 remaining IT work after hold decision",
+            "detail": "Mar's same-day recap says both processes are now on hold per Jill's direction, but I-90 RNWL/RPL ticket #0027951 and DACA RNWL New CL ticket #0027860 still have implementation issues or pending next UAT. Monitor confirmed completion dates and outcomes."
+          },
+          {
+            "id": "eod-0605-open-10",
+            "label": "Follow up on Venn hardware recommendation for David",
+            "detail": "David forwarded a same-day IT ticket update saying the current machine appears unable to run Venn properly and BCA recommends replacement with a newer company device. Follow up on next steps if this affects the Venn rollout or support path."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0605-decision-1",
+            "label": "DACA RNWL and I-90 RNWL are on hold per Jill's direction",
+            "detail": "Mar Garcia's same-day recap states that both DACA RNWL and I-90 RNWL are now on hold per Jill's direction; underway items will continue to completion, while remaining SOPs and trainings wait until the project resumes."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0605-mon-1",
+            "time": "All day",
+            "label": "Jean - OOO",
+            "detail": "Outlook shows Jean OOO for Monday, June 8. The morning dashboard also noted David, Santiago, and Mar OOO context for Monday."
+          },
+          {
+            "id": "eod-0605-mon-2",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Outlook shows the recurring Monday preparation block."
+          },
+          {
+            "id": "eod-0605-mon-3",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "The morning dashboard lists the recurring 15-minute touchpoint with Yuri Almeida."
+          },
+          {
+            "id": "eod-0605-mon-4",
+            "time": "11:00 AM",
+            "label": "1:1 Shelley & Jean",
+            "detail": "The morning dashboard lists the 1:1 with Shelley to understand department needs and how Jean can support Shelley."
+          },
+          {
+            "id": "eod-0605-mon-5",
+            "time": "2:00 PM",
+            "label": "EPMO Portfolio Review",
+            "detail": "Outlook shows Sara's weekly portfolio review for reviewing new project requests and assigning next steps."
+          },
+          {
+            "id": "eod-0605-mon-6",
+            "time": "3:00 PM",
+            "label": "PMs Workshop",
+            "detail": "The morning dashboard lists the PMs Workshop for capability improvement, areas for improvement, and wins."
+          }
+        ]
+      }
+    ]
+  }
+}
