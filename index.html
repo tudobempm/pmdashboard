@@ -3044,10 +3044,12 @@ function App() {
       // completed, hidden, edits, reactions: local user actions win if they acted first.
       // These fields reflect user checkbox / reaction interactions — their changes should not be overwritten.
       if (!userActed.current) {
-        if (state && state.completed) setCompleted(state.completed);
-        if (state && state.hidden) setHidden(state.hidden);
-        if (state && state.edits) setEdits(state.edits);
-        if (state && state.reactions) setReactions(state.reactions);
+        // Merge remote into local: local (localStorage) wins to preserve user actions
+        // that haven't synced to GitHub yet (e.g. page reload within debounce window)
+        if (state && state.completed) setCompleted(prev => ({ ...state.completed, ...prev }));
+        if (state && state.hidden) setHidden(prev => prev.length ? prev : (state.hidden || []));
+        if (state && state.edits) setEdits(prev => ({ ...state.edits, ...prev }));
+        if (state && state.reactions) setReactions(prev => ({ ...state.reactions, ...prev }));
       } else {
         // User already acted — keep their checkbox/edit/reaction changes, don't touch completed/hidden/edits/reactions
         if (state && state.edits) setEdits(prev => Object.keys(prev).length ? prev : (state.edits || {}));
