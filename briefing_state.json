@@ -50,12 +50,14 @@
   },
   "reactions": {},
   "edits": {},
-  "reminders": [
+  "reminders": [],
+  "reminderHistory": [
     {
       "id": "rem-1748998800000",
       "text": "Seguimiento a stakeholders de Co-counsel network project. Go/no-go?",
-      "addedAt": "2026-06-04T00:00:00.000Z"
+      "addedAt": "2026-06-04T00:00:00.000Z",
+      "shownInDigestId": "daily-2026-06-05-morning",
+      "archivedAt": "2026-06-05T12:00:05.000Z"
     }
-  ],
-  "reminderHistory": []
+  ]
 }
