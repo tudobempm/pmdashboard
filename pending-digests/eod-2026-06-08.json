@@ -1,0 +1,141 @@
+{
+  "digest": {
+    "id": "eod-2026-06-08",
+    "type": "eod",
+    "date": "Monday, June 8 - End of Day",
+    "isoDate": "2026-06-08",
+    "greeting": "Jean, today stayed mostly in OOO/protection mode, with Outlook confirming your all-day OOO block and a few visible planning and portfolio items. No same-day dashboard checklist items were marked complete, so this EOD keeps the closeout narrow and carries the unresolved security, portfolio, CoE, and hiring work into tomorrow.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0608-done-1",
+            "label": "New PMO intake notification sent to Mar",
+            "detail": "Outlook shows Jean sent Mar Garcia a same-day Asana-generated NEW Project Intake notification for a PMO Intake Portfolio item at 2:52 PM AST. The message did not include submitter, project name, or department values, so those details still need review before the intake can be acted on."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0608-open-1",
+            "label": "Confirm KPI final approval",
+            "detail": "Still unchecked from the morning dashboard. Mid-Year Touchpoints launched in Rippling; confirm all KPIs are approved/finalized after the KPI Review with Sara and close the item only after approval is confirmed.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0608-open-2",
+            "label": "Clarify Incident Response priority and intake-owner path",
+            "detail": "Still unchecked and urgent from the morning dashboard. Prior context had no response yet from Cristian Garcia or Chelsea on Jill's prioritization direction; today's Teams notification visible through Outlook added Lucia Caamano's note that the Incident Response template may point to the intake manager being informed, so leadership clarity and the next alignment path still need confirmation.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0608-open-3",
+            "label": "Check Supabase security warning",
+            "detail": "Still unchecked and urgent from the morning dashboard. Review the critical table-publicly-accessible/RLS-disabled warning and decide whether the project is still active and needs remediation.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0608-open-4",
+            "label": "Confirm coverage for Portfolio Review and PM capacity follow-up",
+            "detail": "Jean was OOO all day while the EPMO Portfolio Review remained on the calendar. Outlook also shows Jorge Grijalva sent a PMs capacity review invite today to review PM availability for new department-level projects, so confirm whether coverage or async notes are needed before the next portfolio/capacity discussion."
+          },
+          {
+            "id": "eod-0608-open-5",
+            "label": "Close CoE guide and priority follow-ups",
+            "detail": "Carry-over from the morning dashboard. Follow up with remaining Team Leads on the CoE Brief Guide review, then align CoE priorities and upcoming work with Jorge Grijalva's Portfolio Review Summary; Janet's team was already confirmed, but the remaining TL confirmations are still open."
+          },
+          {
+            "id": "eod-0608-open-6",
+            "label": "Complete Nadia's affected-areas request",
+            "detail": "Carry-over from the morning dashboard and still unchecked. Complete Nadia Wilson's request on affected project areas for the EPMO, using the Salesforce Program Overview as supporting context."
+          },
+          {
+            "id": "eod-0608-open-7",
+            "label": "Submit Project Coordinator feedback and prep the debrief",
+            "detail": "Carry-over from the morning dashboard. Rippling requested feedback on Isaac Gomez Ventura, and Outlook shows Tuesday's Project Coordinators Debriefing is intended to discuss interviews and make a final decision; use that debrief to close the recruiting feedback loop."
+          },
+          {
+            "id": "eod-0608-open-8",
+            "label": "Review Staff Aug PRD input and related queue work",
+            "detail": "Carry-over from the morning dashboard. Andrea Rodriguez's Staff Aug PRD input still needs a response or integration path, and tomorrow's Send Letters Queue 2.0 kickoff provides related queue/process context with Jhara, Andrea, and Ernestina."
+          },
+          {
+            "id": "eod-0608-open-9",
+            "label": "Monitor DACA/I-90 remaining IT work and request #0027951",
+            "detail": "Carry-over from the morning dashboard. Mar Garcia's recap says DACA RNWL and I-90 RNWL are on hold per Jill's direction, but request #0027951 and remaining IT/UAT items still need monitoring until confirmed complete or formally paused."
+          },
+          {
+            "id": "eod-0608-open-10",
+            "label": "Resolve dashboard ownership and tool-support follow-ups",
+            "detail": "Carry-over items still need closure around Phase 2 dashboard ownership, Jhara's OneDrive/SharePoint and Venn question, and whether EPMO has any remaining action after the Portfolio Review clarification thread."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0608-tue-1",
+            "time": "All day",
+            "label": "Santiago OOO continues",
+            "detail": "Outlook shows Santiago Arango OOO through Tuesday, June 9, which may affect Incident Response, CoE, or PM/PE follow-ups that need his input."
+          },
+          {
+            "id": "eod-0608-tue-2",
+            "time": "10:00 AM",
+            "label": "1:1 Jessica and Jean",
+            "detail": "Regular 1:1 with Jessica Richburg. Good place to check taskset or operations follow-up if it remains open."
+          },
+          {
+            "id": "eod-0608-tue-3",
+            "time": "10:30 AM",
+            "label": "1:1 Jhara & Jean",
+            "detail": "Agenda includes portfolio review, roadblocks, and next steps. Use it for Phase 2 dashboard ownership clarification and any Venn/OneDrive status."
+          },
+          {
+            "id": "eod-0608-tue-4",
+            "time": "11:30 AM",
+            "label": "Canceled: Interview - Javier Hurtado - Project Coordinator",
+            "detail": "The morning dashboard says Outlook shows this interview as canceled, but the candidate materials may still be useful context for the recruiting debrief later Tuesday."
+          },
+          {
+            "id": "eod-0608-tue-5",
+            "time": "1:30 PM",
+            "label": "Send Letters Queue 2.0 - Project Kickoff",
+            "detail": "Outlook confirms Jhara's kickoff. Context says Conflict of Interest and Case Withdrawal feed into the Send Letters Queue; EPMO is Jhara Ochoa and Andrea Rodriguez, and the IT BA is Ernestina Aguirrezabala."
+          },
+          {
+            "id": "eod-0608-tue-6",
+            "time": "2:30 PM",
+            "label": "bi-weekly sync (J & J)",
+            "detail": "Janet scheduled this recurring sync for workload, challenges, wins, accomplishments, and goals."
+          },
+          {
+            "id": "eod-0608-tue-7",
+            "time": "3:00 PM",
+            "label": "1:1 Yuri & Jean",
+            "detail": "Regular 1:1 with Yuri. Useful for closing operational follow-ups that need PM/PE coordination."
+          },
+          {
+            "id": "eod-0608-tue-8",
+            "time": "4:00 PM",
+            "label": "PMs Workshop",
+            "detail": "Outlook confirms the workshop was rescheduled because Jean is OOO Monday. Purpose is PM capability improvement, areas for improvement, and wins."
+          },
+          {
+            "id": "eod-0608-tue-9",
+            "time": "4:30 PM",
+            "label": "Project Coordinators Debriefing",
+            "detail": "Outlook confirms Eugenia's invite says the team will discuss Project Coordinator interviews and make a final decision."
+          }
+        ]
+      }
+    ]
+  }
+}
