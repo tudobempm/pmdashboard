@@ -2198,7 +2198,8 @@ async function githubWriteState(patch) {
 
 function debouncedGithubWrite(patch) {
   clearTimeout(githubWriteQueue);
-  githubWriteQueue = setTimeout(() => githubWriteState(patch), 1500);
+  const stamped = { ...patch, lastModified: Date.now() };
+  githubWriteQueue = setTimeout(() => githubWriteState(stamped), 1500);
 }
 
 let writeQueue = null;
@@ -2232,9 +2233,10 @@ async function remoteWrite(state) {
 }
 
 function debouncedWrite(state) {
-  try { localStorage.setItem("llf-state", JSON.stringify(state)); } catch {}
+  const stamped = { ...state, lastModified: Date.now() };
+  try { localStorage.setItem("llf-state", JSON.stringify(stamped)); } catch {}
   clearTimeout(writeQueue);
-  writeQueue = setTimeout(() => remoteWrite(state), 800);
+  writeQueue = setTimeout(() => remoteWrite(stamped), 800);
 }
 
 /* ═══ Unreplied Emails — read from Supabase app_state id=3 ═══ */
@@ -3023,16 +3025,17 @@ function App() {
     loadDigests();
 
     // Load state: localStorage first (instant), then remote (authoritative)
+    let localState = {};
     try {
-      const local = JSON.parse(localStorage.getItem("llf-state") || "{}");
-      if (local.completed && Object.keys(local.completed).length) setCompleted(local.completed);
-      if (local.hidden && local.hidden.length) setHidden(local.hidden);
+      localState = JSON.parse(localStorage.getItem("llf-state") || "{}");
+      if (localState.completed && Object.keys(localState.completed).length) setCompleted(localState.completed);
+      if (localState.hidden && localState.hidden.length) setHidden(localState.hidden);
       // NOTE: reminders are intentionally NOT loaded from localStorage.
       // They are automation-controlled. Loading stale localStorage reminders causes
       // consumed reminders to reappear after the automation clears them. We wait
       // for the authoritative remote read instead.
-      if (local.edits && Object.keys(local.edits).length) setEdits(local.edits);
-      if (local.reactions && Object.keys(local.reactions).length) setReactions(local.reactions);
+      if (localState.edits && Object.keys(localState.edits).length) setEdits(localState.edits);
+      if (localState.reactions && Object.keys(localState.reactions).length) setReactions(localState.reactions);
     } catch {}
 
     // Read authoritative state from briefing_state.json (GitHub) — single source of truth for all state.
@@ -3041,14 +3044,25 @@ function App() {
       .then(r => r.ok ? r.json() : null)
       .catch(() => null)
       .then(state => {
-      // completed, hidden, edits, reactions: local user actions win if they acted first.
-      // These fields reflect user checkbox / reaction interactions — their changes should not be overwritten.
-      if (!userActed.current) {
+      // Compare timestamps: if localStorage is newer than remote, keep local user data.
+      // This prevents stale remote state from overwriting recent local changes when GitHub sync lags.
+      const localTs  = localState.lastModified || 0;
+      const remoteTs = (state && state.lastModified) || 0;
+      const remoteIsNewer = remoteTs > localTs;
+
+      // completed, hidden, edits, reactions: apply remote only if it's newer than local OR user hasn't acted.
+      if (!userActed.current && remoteIsNewer) {
         if (state && state.completed) setCompleted(state.completed);
         if (state && state.hidden) setHidden(state.hidden);
         if (state && state.edits) setEdits(state.edits);
         if (state && state.reactions) setReactions(state.reactions);
-      } else {
+      } else if (!userActed.current && !remoteIsNewer && state) {
+        // Remote is older — keep localStorage values but still apply remote for fields not in local
+        if (state.completed && !Object.keys(localState.completed || {}).length) setCompleted(state.completed);
+        if (state.hidden && !(localState.hidden || []).length) setHidden(state.hidden);
+        if (state.edits && !Object.keys(localState.edits || {}).length) setEdits(state.edits);
+        if (state.reactions && !Object.keys(localState.reactions || {}).length) setReactions(state.reactions);
+      } else if (userActed.current) {
         // User already acted — keep their checkbox/edit/reaction changes, don't touch completed/hidden/edits/reactions
         if (state && state.edits) setEdits(prev => Object.keys(prev).length ? prev : (state.edits || {}));
         if (state && state.reactions) setReactions(prev => Object.keys(prev).length ? prev : (state.reactions || {}));
