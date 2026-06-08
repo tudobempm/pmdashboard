@@ -1,0 +1,275 @@
+{
+  "digest": {
+    "id": "daily-2026-06-08-morning",
+    "type": "daily",
+    "date": "Morning - Monday, June 8",
+    "isoDate": "2026-06-08",
+    "greeting": "Monday, June 8, Jean. Outlook shows you OOO today, with 4 working-day calendar blocks still visible around prep, protected time, and EPMO Portfolio Review. There are 15 carried-over checklist items, no active reminders, and 4 urgent carry-over risks: GitHub token security, KPI final approval, Incident Response priority clarity, and the Supabase security warning. The practical priority is to protect the OOO day while making sure the unresolved security, portfolio, and hiring items have coverage; Teams broad activity could not be read because Microsoft Graph returned a permissions error, so Teams context is limited to prior dashboard state.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0608-co-1",
+            "label": "KPIs - confirm final approval",
+            "detail": "Carry-over from Friday's daily digest and still unchecked in GitHub state. Mid-Year Touchpoints launched in Rippling; confirm all KPIs are approved/finalized after the KPI Review with Sara and close this out.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0608-co-2",
+            "label": "Clarify Incident Response priority path",
+            "detail": "Carry-over from Friday. Prior Teams context showed no response yet from Cristian Garcia or Chelsea related to Jill's prioritization direction. Action type: follow up; confirm leadership clarity and the next alignment path.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0608-co-3",
+            "label": "Check Supabase security warning",
+            "detail": "Carry-over from Friday. Review the unread Supabase critical table-publicly-accessible/RLS-disabled warning and decide whether the project is still active and needs remediation.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0608-co-4",
+            "label": "Follow up with TLs on CoE guide",
+            "detail": "Carry-over from Friday and originally from earlier in the week. Dar seguimiento a los Team Leads sobre su revision del CoE Brief Guide con sus PMs/PEs. Janet confirmed her team; verify the remaining Team Leads.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-5",
+            "label": "Complete Nadia's affected-areas request",
+            "detail": "Carry-over from Friday and originally from Wednesday. Complete Nadia Wilson's request on affected project areas for the EPMO; the Salesforce Program Overview remains the supporting context.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-6",
+            "label": "Align CoE priorities with Jorge",
+            "detail": "Carry-over from Friday. Review Jorge Grijalva's Portfolio Review Summary and follow up or decide the CoE priorities and upcoming work alignment.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-7",
+            "label": "Review Rippling task queue",
+            "detail": "Carry-over from Friday. Rippling reported the Incident Response Survey due June 12 plus an overdue harassment prevention training task from December 9, 2025. Action type: review/complete.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-8",
+            "label": "Decide whether to restore expired recording",
+            "detail": "Carry-over from Friday. SharePoint said the Weekly Touchpoint Staff Augmentation Project meeting recording expired and was deleted. Restore from recycle bin only if that recording is still needed for Staff Augmentation context.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-9",
+            "label": "Submit Isaac Gomez Ventura interview feedback",
+            "detail": "Carry-over from Friday. Rippling requested Jean's feedback on Isaac Gomez Ventura for Project Coordinator and asked that it be submitted promptly to keep recruiting moving.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-10",
+            "label": "Review Staff Aug PRD reply from Andrea",
+            "detail": "Carry-over from Friday. Andrea Rodriguez sent detailed Staff Aug PRD input on rider matching, autopopulation, state/location handling, Ops status, address prediction, and court-information lookup items. Decide whether EPMO needs to respond or fold the input into the PRD path.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-11",
+            "label": "Monitor request #0027951",
+            "detail": "Carry-over from Friday. Mar Garcia followed up with Dana on request #0027951 and copied Jean and Anu Puri. Monitor or follow up if EPMO needs to help escalate after Dana responds.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-12",
+            "label": "Portfolio Review Summary & Action Items",
+            "detail": "Carry-over from Friday's email section. Jorge Grijalva's summary says statuses, priorities, ownership, and notes were updated in the portfolio tracker; ensure CoE priorities and upcoming work are aligned.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-13",
+            "label": "Jhara - OneDrive/SharePoint and Venn issue",
+            "detail": "Carry-over from Friday's Teams section. Jhara asked whether others are seeing the same OneDrive/SharePoint issue and whether Venn is involved. Close this only after the team confirms status.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0608-co-14",
+            "label": "Incident Response priority still needs clarity",
+            "detail": "Carry-over from Friday's Teams section and related to the Incident Response priority path. Keep this as a risk signal until the prioritization response and next call are confirmed.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0608-co-15",
+            "label": "EPMO Team Meeting poll themes",
+            "detail": "Carry-over from Friday's Teams section. Recent EPMO Team Meeting chat activity was mostly informational around blockers, approvals, scope creep, and turning stakeholder language into action items; no direct ask for Jean was visible.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times shown in Jean's Outlook working timezone. Jean is OOO all day, so treat the remaining blocks as coverage and awareness points rather than a normal meeting load.",
+        "items": [
+          {
+            "id": "mon-0608-cal-1",
+            "time": "All day",
+            "label": "Jean - OOO",
+            "detail": "Jean's calendar shows an all-day OOO block for Monday, June 8. Santiago is also OOO and David has an OOO all-day block visible."
+          },
+          {
+            "id": "mon-0608-cal-2",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Recurring Monday preparation block remains on the calendar. If coverage is needed, focus only on timecards and week-start triage."
+          },
+          {
+            "id": "mon-0608-cal-3",
+            "time": "8:30 AM-5:00 PM",
+            "label": "Mar Garcia OOO",
+            "detail": "Mar has an OOO block through the workday, which may affect CoE, DACA/I-90, and taskset follow-ups if those need same-day coverage."
+          },
+          {
+            "id": "mon-0608-cal-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected focus block. Since Jean is OOO, use only if something must be handled despite the OOO day."
+          },
+          {
+            "id": "mon-0608-cal-5",
+            "time": "2:00 PM",
+            "label": "EPMO Portfolio Review",
+            "detail": "Weekly review led by Sara for new project requests and next-step assignment. Because Jean is OOO, confirm whether CoE alignment or portfolio items need coverage or async notes."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0608-action-1",
+            "label": "Confirm OOO coverage for Portfolio Review",
+            "detail": "Action type: delegate/follow up. Jean is OOO all day but EPMO Portfolio Review remains on the calendar at 2:00 PM; make sure CoE priority and portfolio alignment items have coverage or async notes."
+          },
+          {
+            "id": "mon-0608-action-2",
+            "label": "Resolve Phase 2 dashboard ownership confusion",
+            "detail": "Action type: decide/follow up. Friday's Portfolio Review thread clarified that remaining work should continue, but the project itself will no longer be managed through the EPMO/BPMO portfolio. Confirm whether any remaining dashboard items need EPMO involvement or should sit fully with Data Engineering/Power BI."
+          },
+          {
+            "id": "mon-0608-action-3",
+            "label": "Plan Project Coordinator hiring decision path",
+            "detail": "Action type: prepare/decide. Outlook shows an unread Project Coordinators Debriefing invite for Tuesday to discuss interviews and make a final decision, plus a prior Rippling request for Isaac Gomez Ventura feedback. Use Tuesday's debrief to close the hiring decision loop."
+          },
+          {
+            "id": "mon-0608-action-4",
+            "label": "Review weekly portfolio reports",
+            "detail": "Action type: review. Unread Asana weekly portfolio reports for CoE, AOS Project Requests, and PMO Projects Portfolio arrived Sunday; CoE shows 49 total items with 4 at risk and 17 needing update. Use these as inputs for Tuesday or the next active working window."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0608-email-1",
+            "label": "Portfolio Review clarification thread",
+            "detail": "Shelley, Sara, Jorge, Jill, and Jean are on the Friday thread clarifying Phase 2 DE Dashboards status. Shelley said the work continues, Sara clarified the project was not an EPMO-managed portfolio project, and Shelley replied that she aligned with Jhara. Next step: confirm no EPMO action remains beyond visibility."
+          },
+          {
+            "id": "mon-0608-email-2",
+            "label": "Project Coordinators Debriefing",
+            "detail": "Unread Friday invite from Eugenia Barragan says the team will discuss Project Coordinator interviews and make a final decision. This ties to outstanding recruiting feedback carry-over."
+          },
+          {
+            "id": "mon-0608-email-3",
+            "label": "DACA RNWL and I-90 RNWL status recap",
+            "detail": "Mar Garcia's Friday recap says both processes are on hold per Jill's direction, with completed mapping/UAT context and remaining IT work still to monitor. Treat as waiting/monitoring unless Jill or IT changes direction."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0608-ooo-1",
+            "label": "Jean Garcia - OOO all day",
+            "detail": "Outlook shows Jean OOO for Monday, June 8."
+          },
+          {
+            "id": "mon-0608-ooo-2",
+            "label": "David Molano - OOO all day",
+            "detail": "Outlook shows David's OOO all-day block, and he declined Jean's OOO invite."
+          },
+          {
+            "id": "mon-0608-ooo-3",
+            "label": "Santiago Arango - OOO through Tuesday",
+            "detail": "Outlook shows Santiago OOO from Monday, June 8 through Tuesday, June 9."
+          },
+          {
+            "id": "mon-0608-ooo-4",
+            "label": "Mar Garcia - OOO during the workday",
+            "detail": "Outlook shows Mar OOO from 8:30 AM to 5:00 PM."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0608-tue-1",
+            "time": "10:00 AM",
+            "label": "1:1 Jessica and Jean",
+            "detail": "Regular 1:1 with Jessica Richburg. Good place to check any taskset or operations follow-up if it remains open."
+          },
+          {
+            "id": "mon-0608-tue-2",
+            "time": "10:30 AM",
+            "label": "1:1 Jhara & Jean",
+            "detail": "Agenda includes portfolio review, roadblocks, and next steps. Use it for the Phase 2 dashboard ownership clarification and any Venn/OneDrive status."
+          },
+          {
+            "id": "mon-0608-tue-3",
+            "time": "11:30 AM",
+            "label": "Canceled: Interview - Javier Hurtado - Project Coordinator",
+            "detail": "Outlook shows the Javier Hurtado interview as canceled, but the candidate materials remain useful context for the recruiting debrief later Tuesday."
+          },
+          {
+            "id": "mon-0608-tue-4",
+            "time": "1:30 PM",
+            "label": "Send Letters Queue 2.0 - Project Kickoff",
+            "detail": "Kickoff organized by Jhara. Context says Conflict of Interest and Case Withdrawal workstreams feed into the Send Letters Queue; EPMO is Jhara Ochoa and Andrea Rodriguez, IT BA is Ernestina Aguirrezabala."
+          },
+          {
+            "id": "mon-0608-tue-5",
+            "time": "2:30 PM",
+            "label": "bi-weekly sync (J & J)",
+            "detail": "Janet scheduled this recurring sync for workload, challenges, wins, accomplishments, and goals."
+          },
+          {
+            "id": "mon-0608-tue-6",
+            "time": "3:00 PM",
+            "label": "1:1 Yuri & Jean",
+            "detail": "Regular 1:1 with Yuri. Useful for closing operational follow-ups that need PM/PE coordination."
+          },
+          {
+            "id": "mon-0608-tue-7",
+            "time": "4:00 PM",
+            "label": "PMs Workshop",
+            "detail": "Rescheduled because Jean is OOO Monday. Purpose is PM capability improvement, areas for improvement, and wins."
+          },
+          {
+            "id": "mon-0608-tue-8",
+            "time": "4:30 PM",
+            "label": "Project Coordinators Debriefing",
+            "detail": "Eugenia's invite says the team will discuss Project Coordinator interviews and make a final decision."
+          }
+        ]
+      }
+    ]
+  }
+}
