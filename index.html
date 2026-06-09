@@ -175,6 +175,21 @@ tailwind.config = {
 <script type="text/babel" data-type="module">
 const { useState, useEffect, useCallback, useMemo, useRef } = React;
 
+/* ═══ Stable task identity ═══
+ * State (completed / edits / reactions) is keyed by a stable `taskId` that the
+ * digest agent mints once and reuses across days, so completing a carry-over
+ * sticks even though its per-day display `id` (e.g. tue-0609-co-10) changes.
+ * Reads fall back to the display `id` so legacy entries (keyed by old daily
+ * ids, pre-taskId) and any item still missing a taskId keep working.
+ */
+const keyOf = (item) => (item && item.taskId) ? item.taskId : (item ? item.id : undefined);
+const isDone = (item, completed) => !!(completed && item && (completed[item.taskId] || completed[item.id]));
+const pickState = (map, item) => {
+  if (!map || !item) return undefined;
+  if (item.taskId != null && map[item.taskId] !== undefined) return map[item.taskId];
+  return map[item.id];
+};
+
 /* ═══ SVG Icons (inline, zero dependencies) ═══ */
 const Icon = {
   Check: ({ size = 16, ...p }) => (
@@ -1340,8 +1355,8 @@ function AvatarHub({ digests, completed, reminders, theme, onThemeToggle }) {
     if (!todayDigest) return { total: 0, done: 0, pct: 0, urgent: 0 };
     const actionItems = todayDigest.sections.filter(s => !s.info).flatMap(s => s.items);
     const total = actionItems.length;
-    const done = actionItems.filter(i => completed[i.id]).length;
-    const urgent = actionItems.filter(i => i.flag === "urgent" && !completed[i.id]).length;
+    const done = actionItems.filter(i => isDone(i, completed)).length;
+    const urgent = actionItems.filter(i => i.flag === "urgent" && !isDone(i, completed)).length;
     const pct = total > 0 ? Math.round((done / total) * 100) : 0;
     return { total, done, pct, urgent };
   }, [todayDigest, completed]);
@@ -1351,7 +1366,7 @@ function AvatarHub({ digests, completed, reminders, theme, onThemeToggle }) {
     for (const d of digests) {
       const items = d.sections.filter(s => !s.info).flatMap(s => s.items);
       if (items.length === 0) continue;
-      if (items.every(i => completed[i.id])) count++;
+      if (items.every(i => isDone(i, completed))) count++;
     }
     return count;
   }, [digests, completed]);
@@ -1795,7 +1810,7 @@ function CheckItem({ item, done, onToggle, searchQuery, editOverride, onEdit, re
   const saveEdit = (e) => {
     e.stopPropagation();
     if (editLabel.trim() && onEdit) {
-      onEdit(item.id, { label: editLabel.trim(), detail: editDetail.trim() });
+      onEdit(keyOf(item), { label: editLabel.trim(), detail: editDetail.trim() });
     }
     setEditing(false);
   };
@@ -1945,8 +1960,8 @@ function CheckItem({ item, done, onToggle, searchQuery, editOverride, onEdit, re
         <ReactionPicker
           currentEmoji={reaction?.emoji}
           anchor={picker}
-          onPick={(em) => onSetReaction(item.id, em)}
-          onRemove={() => onSetReaction(item.id, null)}
+          onPick={(em) => onSetReaction(keyOf(item), em)}
+          onRemove={() => onSetReaction(keyOf(item), null)}
           onClose={closePicker}
         />
       )}
@@ -1978,7 +1993,7 @@ function InfoItem({ item, searchQuery }) {
 function Section({ section, completed, onToggle, defaultCollapsed, searchQuery, edits, onEditItem, reactions, onSetReaction }) {
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const isInfo = !!section.info;
-  const doneCount = isInfo ? 0 : section.items.filter(i => completed[i.id]).length;
+  const doneCount = isInfo ? 0 : section.items.filter(i => isDone(i, completed)).length;
   const total = section.items.length;
   const tint = TINT[section.title] || TINT.default;
   const q = (searchQuery || "").trim().toLowerCase();
@@ -2007,12 +2022,12 @@ function Section({ section, completed, onToggle, defaultCollapsed, searchQuery, 
                   <CheckItem
                     key={item.id}
                     item={item}
-                    done={!!completed[item.id]}
-                    onToggle={() => onToggle(item.id)}
+                    done={isDone(item, completed)}
+                    onToggle={() => onToggle(item)}
                     searchQuery={searchQuery}
-                    editOverride={edits ? edits[item.id] : null}
+                    editOverride={pickState(edits, item)}
                     onEdit={onEditItem || null}
-                    reaction={reactions ? reactions[item.id] : null}
+                    reaction={pickState(reactions, item)}
                     onSetReaction={onSetReaction || null}
                   />
                 ))
@@ -2030,7 +2045,7 @@ function DigestCard({ digest, completed, onToggle, onDelete, onRestore, defaultO
   const [confirmDelete, setConfirmDelete] = useState(false);
   const actionItems = digest.sections.filter(s => !s.info).flatMap(s => s.items);
   const total = actionItems.length;
-  const doneCount = actionItems.filter(i => completed[i.id]).length;
+  const doneCount = actionItems.filter(i => isDone(i, completed)).length;
   const pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
   const q = (searchQuery || "").trim().toLowerCase();
   const effectiveOpen = q ? true : open;
@@ -2810,7 +2825,7 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
       if (hiddenSet.has(d.id)) continue;
       for (const s of d.sections || []) {
         if (s.info) continue;
-        for (const it of s.items || []) itemMap.set(it.id, it);
+        for (const it of s.items || []) { itemMap.set(it.id, it); if (it.taskId) itemMap.set(it.taskId, it); }
       }
     }
     const list = [];
@@ -2828,7 +2843,7 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
   const counts = useMemo(() => {
     const c = {};
     for (const p of pinned) {
-      if (completed[p.item.id]) continue;
+      if (isDone(p.item, completed)) continue;
       c[p.emoji] = (c[p.emoji] || 0) + 1;
     }
     return c;
@@ -2836,7 +2851,7 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
 
   // Drop "done" items from the rendered list, then apply the sub-filter.
   const visible = useMemo(() => {
-    const undone = pinned.filter(p => !completed[p.item.id]);
+    const undone = pinned.filter(p => !isDone(p.item, completed));
     if (activeFilter === "all") return undone;
     return undone.filter(p => p.emoji === activeFilter);
   }, [pinned, completed, activeFilter]);
@@ -2851,7 +2866,7 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
   // Hide the entire section when nothing is pinned (counting completed items too).
   if (pinned.length === 0) return null;
 
-  const totalUndone = pinned.filter(p => !completed[p.item.id]).length;
+  const totalUndone = pinned.filter(p => !isDone(p.item, completed)).length;
 
   return (
     <div className="mb-6 rounded-[2rem] border border-zinc-200 dark:border-zinc-700 bg-white/70 dark:bg-zinc-800/40 backdrop-blur-md p-4">
@@ -2889,12 +2904,12 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
       ) : (
         <div className="space-y-1">
           {visible.map(({ item, emoji }) => {
-            const editOverride = edits ? edits[item.id] : null;
+            const editOverride = pickState(edits, item);
             const label = editOverride?.label || item.label;
             return (
               <div key={item.id} className="group flex items-center gap-3 py-2 px-3 rounded-xl hover:bg-zinc-100/60 dark:hover:bg-zinc-800/60 transition-colors">
                 <button
-                  onClick={() => onToggle(item.id)}
+                  onClick={() => onToggle(item)}
                   className="w-5 h-5 rounded-full flex-shrink-0 border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors"
                   title="Mark as done"
                   aria-label={`Mark "${label}" as done`}
@@ -2902,7 +2917,7 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
                 <span className="flex-1 min-w-0 text-sm text-zinc-800 dark:text-zinc-200 font-medium truncate">{label}</span>
                 <span className="text-base leading-none flex-shrink-0">{emoji}</span>
                 <button
-                  onClick={() => onSetReaction(item.id, null)}
+                  onClick={() => onSetReaction(keyOf(item), null)}
                   className="opacity-0 group-hover:opacity-100 transition-all flex-shrink-0 p-1 rounded-md text-zinc-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10"
                   title="Remove reaction"
                   aria-label="Remove reaction"
@@ -3102,9 +3117,24 @@ function App() {
     debouncedGithubWrite({ completed, hidden, reminders, reminderHistory, edits, reactions });
   }, [completed, hidden, reminders, reminderHistory, edits, reactions, stateLoaded]);
 
-  const toggle = useCallback((id) => {
+  const toggle = useCallback((item) => {
     userActed.current = true;
-    setCompleted(prev => ({ ...prev, [id]: !prev[id] }));
+    // Accept either an item object (new call sites) or a bare id (defensive).
+    const it = (item && typeof item === "object") ? item : { id: item };
+    const k = keyOf(it);
+    setCompleted(prev => {
+      const currentlyDone = !!(prev[it.taskId] || prev[it.id]);
+      const next = { ...prev };
+      if (currentlyDone) {
+        // Unchecking: clear both the canonical taskId key and any legacy id key
+        // so the OR-based read (isDone) doesn't stay stuck "done".
+        delete next[it.taskId];
+        delete next[it.id];
+      } else {
+        next[k] = true;
+      }
+      return next;
+    });
   }, []);
 
   const handleEditItem = useCallback((id, { label, detail }) => {
@@ -3232,7 +3262,7 @@ function App() {
     const td = digests.find(d => d.isoDate === _todayIso);
     if (!td) return { total: 0, done: 0, pct: 0 };
     const items = td.sections.filter(s => !s.info).flatMap(s => s.items);
-    const done = items.filter(i => completed[i.id]).length;
+    const done = items.filter(i => isDone(i, completed)).length;
     const total = items.length;
     return { total, done, pct: total > 0 ? Math.round((done / total) * 100) : 0 };
   }, [digests, completed, _todayIso]);
