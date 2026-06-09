@@ -21,6 +21,7 @@ jobs:
           python - <<'PY'
           import json
           import pathlib
+          import re
           import subprocess
           import sys
 
@@ -50,6 +51,28 @@ jobs:
               digest_id = digest.get('id')
               if not digest_id:
                   raise SystemExit(f'{pending_file} digest is missing id')
+              # Contract: every action item (non-info section) must carry a stable
+              # taskId so carry-over completion survives across days. The display
+              # `id` is per-day and disposable; taskId is the canonical key.
+              seen_task_ids = set()
+              for section in digest.get('sections', []):
+                  if not isinstance(section, dict) or section.get('info'):
+                      continue
+                  for item in section.get('items', []):
+                      if not isinstance(item, dict):
+                          continue
+                      task_id = item.get('taskId')
+                      if not task_id or not isinstance(task_id, str) or not task_id.strip():
+                          raise SystemExit(
+                              f"{pending_file} item {item.get('id')!r} in section "
+                              f"{section.get('title')!r} is missing a taskId"
+                          )
+                      if not re.match(r'^task-\d{8}-', task_id):
+                          print(f'WARNING: taskId {task_id!r} does not match expected '
+                                f'format task-YYYYMMDD-<slug> ({pending_file})')
+                      if task_id in seen_task_ids:
+                          print(f'WARNING: duplicate taskId {task_id!r} within {digest_id}')
+                      seen_task_ids.add(task_id)
               if digest_id in existing_ids:
                   print(f'Skipping duplicate digest {digest_id}')
               else:
