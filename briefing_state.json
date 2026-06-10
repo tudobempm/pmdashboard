@@ -27,7 +27,10 @@
     "wed-0603-co-16": true,
     "wed-0603-co-17": true,
     "wed-0603-co-18": true,
-    "wed-0603-co-19": true
+    "wed-0603-co-19": true,
+    "eod-0608-open-3": true,
+    "task-20260609-confirm-kpi-final-approval": true,
+    "task-20260609-clarify-incident-response-priority-path": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -59,5 +62,6 @@
       "shownInDigestId": "daily-2026-06-05-morning",
       "archivedAt": "2026-06-05T12:00:05.000Z"
     }
-  ]
+  ],
+  "lastModified": 1781054381347
 }
