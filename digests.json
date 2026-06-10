@@ -1,5 +1,183 @@
 [
   {
+    "id": "eod-2026-06-10",
+    "type": "eod",
+    "date": "Wednesday, June 10 - End of Day",
+    "isoDate": "2026-06-10",
+    "greeting": "Jean, today's dashboard state shows the June 10 checklist largely closed out, including DP/Staff Aug coverage, CoE owner work, Court EAD, DocuSign guidance, and the dashboard-access verification. Outlook also shows you routed two new CoE intake items to Mar and closed the Phase 2 SMS support loop by handing Legal/Marketing SME outreach to the CoE team. One fresh access request remains visible for follow-up.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0610-done-1",
+            "label": "Resolved DP Guidance and Staff Aug coverage",
+            "detail": "Dashboard state marks task-20260610-resolve-dp-trace-staff-aug-coverage complete after the morning overlap between DP Guidance and the TRACE & Staff Aug touchpoint."
+          },
+          {
+            "id": "eod-0610-done-2",
+            "label": "Reviewed the Detention Prevention pilot package",
+            "detail": "Dashboard state marks task-20260610-review-detention-prevention-pilot-package complete after the ELT green-light follow-up appeared in today's base digest."
+          },
+          {
+            "id": "eod-0610-done-3",
+            "label": "Landed CoE owners and next steps",
+            "detail": "Dashboard state marks task-20260610-land-coe-owners-next-steps complete after today's CoE touchpoint stack."
+          },
+          {
+            "id": "eod-0610-done-4",
+            "label": "Reviewed Court EAD final deliverables",
+            "detail": "Dashboard state marks task-20260610-review-court-ead-deliverables complete, covering the dashboard and report deliverables that were ready for use."
+          },
+          {
+            "id": "eod-0610-done-5",
+            "label": "Monitored DocuSign taskset guidance",
+            "detail": "Dashboard state marks task-20260610-monitor-docusign-taskset-guidance complete after the Teams-derived DocuSign process guidance in the base digest."
+          },
+          {
+            "id": "eod-0610-done-6",
+            "label": "Followed up on EPMO Liderazgo commitments",
+            "detail": "Dashboard state marks task-20260610-follow-up-epmo-liderazgo-commitments complete after the morning digest flagged the two loose Teams commitments."
+          },
+          {
+            "id": "eod-0610-done-7",
+            "label": "Verified dashboard access signals",
+            "detail": "Dashboard state marks task-20260610-verify-github-token-dashboard-access complete. Outlook also showed same-day GitHub and Vercel access/security notices tied to the dashboard work."
+          },
+          {
+            "id": "eod-0610-done-8",
+            "label": "Decided the Discovery recording restore path",
+            "detail": "Dashboard state marks task-20260610-decide-discovery-recording-restore complete after the SharePoint recording-expiration notice from this morning."
+          },
+          {
+            "id": "eod-0610-done-9",
+            "label": "Completed Nadia's affected-areas request",
+            "detail": "Dashboard state marks task-20260609-complete-nadias-affected-areas-request complete after it carried into today's checklist."
+          },
+          {
+            "id": "eod-0610-done-10",
+            "label": "Reviewed Rippling and Asana overdue tasks",
+            "detail": "Dashboard state marks task-20260609-review-rippling-and-asana-overdue-tasks complete after the carried-over overdue-task review."
+          },
+          {
+            "id": "eod-0610-done-11",
+            "label": "Closed the Project Coordinator decision loop",
+            "detail": "Dashboard state marks task-20260609-close-project-coordinator-decision-loop complete after the recruiting decision follow-up carried into today."
+          },
+          {
+            "id": "eod-0610-done-12",
+            "label": "Reviewed Staff Aug PRD and queue impacts",
+            "detail": "Dashboard state marks task-20260609-review-staff-aug-prd-and-queue-impacts complete, tied to today's TRACE & Staff Aug context."
+          },
+          {
+            "id": "eod-0610-done-13",
+            "label": "Monitored DACA/I-90 remaining IT work",
+            "detail": "Dashboard state marks task-20260609-monitor-daca-i90-remaining-it-work complete after the carried-over IT/UAT monitoring item."
+          },
+          {
+            "id": "eod-0610-done-14",
+            "label": "Resolved Phase 2 ownership and tool-support follow-ups",
+            "detail": "Dashboard state marks task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups complete. Outlook shows Jorge identified Raquel Trujillo for Legal support, and Jean replied that the CoE team will handle Marketing and Legal SME outreach from here."
+          },
+          {
+            "id": "eod-0610-done-15",
+            "label": "Decided the expired Staff Aug recording path",
+            "detail": "Dashboard state marks task-20260609-decide-expired-staff-aug-recording complete after the carried-over recording decision item."
+          },
+          {
+            "id": "eod-0610-done-16",
+            "label": "Routed two new CoE intake items to Mar",
+            "detail": "Outlook shows Jean sent Mar two same-day CM-CoE intake notices for RNWLS - Missing EAD Inquiry and SUPP - Post-submission Case Change."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0610-open-1",
+            "taskId": "task-20260610-review-i693-access-request",
+            "label": "Review Juanita's I-693 FAQ access request",
+            "detail": "Outlook shows an unread SharePoint access request from Juanita Arrieta Salguero for the I-693 FAQ for Client Facing Teams document at 4:53 PM AST. Decide whether to approve or decline access."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0610-decision-1",
+            "label": "Phase 2 SMS SME outreach moved to the CoE team",
+            "detail": "In today's Outlook thread, Jorge confirmed Raquel Trujillo can support from Legal. Jean then replied that the CoE team will handle the Marketing and Legal SME outreach from now on."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0610-thu-1",
+            "time": "10:30 AM",
+            "label": "1:1 Andrea and Jean",
+            "detail": "Regular 1:1. Useful for Staff Aug PRD, Send Letters, and Andrea-owned project threads."
+          },
+          {
+            "id": "eod-0610-thu-2",
+            "time": "11:00 AM",
+            "label": "1:1 Santiago & Jean",
+            "detail": "Outlook shows Santiago accepted this meeting today. Use it to catch up after his OOO on Staff Aug, Incident Response, and DACA/I-90 status if still relevant."
+          },
+          {
+            "id": "eod-0610-thu-3",
+            "time": "11:30 AM",
+            "label": "Jean/Sara 1:1",
+            "detail": "New weekly series with Sara. Good place for escalations, priority clarity, and unresolved ownership questions."
+          },
+          {
+            "id": "eod-0610-thu-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Ninety-minute protected block before BCP/Incident Response and the afternoon 1:1 stack."
+          },
+          {
+            "id": "eod-0610-thu-5",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Outlook shows Tessa declined, with Larry, Lucia, Dan, Sarah, Santiago, Angelica, and others on the invite. Use for Incident Response ownership follow-up if needed."
+          },
+          {
+            "id": "eod-0610-thu-6",
+            "time": "2:00 PM",
+            "label": "1:1 Camilo & Jean",
+            "detail": "Regular 1:1 with Camilo. Outlook also shows Rippling confirmed Camilo's June 26 voting leave for awareness only."
+          },
+          {
+            "id": "eod-0610-thu-7",
+            "time": "2:30 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda includes portfolio review, roadblocks, and next steps."
+          },
+          {
+            "id": "eod-0610-thu-8",
+            "time": "3:00 PM",
+            "label": "Focus time",
+            "detail": "Outlook shows a one-hour focus block after the 1:1 stack and before Tudo Bem!'s Weekly Meeting."
+          },
+          {
+            "id": "eod-0610-thu-9",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team forum for project progress, roadblocks, shared learning, and any follow-through from today's CoE or Phase 2 routing decisions."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-06-10-morning",
     "type": "daily",
     "date": "Morning - Wednesday, June 10",
