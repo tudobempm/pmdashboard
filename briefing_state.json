@@ -30,7 +30,9 @@
     "wed-0603-co-19": true,
     "eod-0608-open-3": true,
     "task-20260609-confirm-kpi-final-approval": true,
-    "task-20260609-clarify-incident-response-priority-path": true
+    "task-20260609-clarify-incident-response-priority-path": true,
+    "task-20260609-check-supabase-security-warning": true,
+    "task-20260609-close-coe-guide-follow-ups": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -63,5 +65,5 @@
       "archivedAt": "2026-06-05T12:00:05.000Z"
     }
   ],
-  "lastModified": 1781054381347
+  "lastModified": 1781054826437
 }
