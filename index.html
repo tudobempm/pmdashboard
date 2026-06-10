@@ -2161,11 +2161,22 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 /* ═══ GitHub state sync — source of truth for reminders ═══ */
-// Token is never stored in source — lives only in localStorage under "llf-github-token"
+// Preferred path: a server-side proxy (Vercel function) holds the GitHub token,
+// so NO token ever lives in the browser. Set SYNC_PROXY_URL to the deployed
+// endpoint (e.g. https://<project>.vercel.app/api/sync-state). Until then, a
+// personal token in localStorage["llf-github-token"] still works as a fallback.
 const GITHUB_REPO  = "tudobempm/pmdashboard";
 const GITHUB_BRANCH = "main";
 const GITHUB_STATE_PATH = "briefing_state.json";
 const GITHUB_API_BASE = "https://api.github.com";
+
+// Deployed write-proxy endpoint. When set, the dashboard POSTs state here and
+// never needs a token in the browser. Leave "" to use the localStorage-token
+// fallback below. Can also be overridden per-browser via localStorage "llf-sync-url".
+const SYNC_PROXY_URL = "";
+function getSyncProxyUrl() {
+  try { return localStorage.getItem("llf-sync-url") || SYNC_PROXY_URL; } catch { return SYNC_PROXY_URL; }
+}
 
 function getGithubToken() {
   try { return localStorage.getItem("llf-github-token") || ""; } catch { return ""; }
@@ -2174,9 +2185,29 @@ function getGithubToken() {
 let githubWriteQueue = null;
 
 async function githubWriteState(patch) {
+  // Preferred: write through the server-side proxy (no browser token).
+  const proxyUrl = getSyncProxyUrl();
+  if (proxyUrl) {
+    try {
+      const res = await fetch(proxyUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(patch),
+      });
+      if (!res.ok) {
+        const detail = await res.text().catch(() => "");
+        throw new Error(`proxy ${res.status} — ${detail.slice(0, 160)}`);
+      }
+      console.log("[github] state synced via proxy:", Object.keys(patch));
+    } catch (e) {
+      console.warn("[github] state sync via proxy FAILED:", e);
+    }
+    return;
+  }
+  // Fallback: direct write using a personal token in localStorage.
   const GITHUB_TOKEN = getGithubToken();
   if (!GITHUB_TOKEN) {
-    console.warn("[github] llf-github-token not set in localStorage — skipping state sync");
+    console.warn("[github] no SYNC_PROXY_URL and llf-github-token not set — skipping state sync");
     return;
   }
   try {
