@@ -35,7 +35,8 @@
     "task-20260609-close-coe-guide-follow-ups": true,
     "task-20260609-complete-nadias-affected-areas-request": true,
     "task-20260609-review-rippling-and-asana-overdue-tasks": true,
-    "task-20260609-review-staff-aug-prd-and-queue-impacts": true
+    "task-20260609-review-staff-aug-prd-and-queue-impacts": true,
+    "task-20260609-close-project-coordinator-decision-loop": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -68,5 +69,5 @@
       "archivedAt": "2026-06-05T12:00:05.000Z"
     }
   ],
-  "lastModified": 1781096026171
+  "lastModified": 1781096031856
 }
