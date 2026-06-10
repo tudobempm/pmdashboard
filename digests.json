@@ -1,5 +1,294 @@
 [
   {
+    "id": "daily-2026-06-10-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, June 10",
+    "isoDate": "2026-06-10",
+    "greeting": "Wednesday, June 10, Jean. Outlook shows 10 working-day calendar blocks plus Santiago's OOO ending today, with the first decision point being the 9:30 AM DP Guidance and 10:00 AM TRACE & Staff Aug overlap before a dense 10:30 AM-12:00 PM 1:1/CoE run. There are 7 carried-over items after applying GitHub completion state, no active reminders, and the strongest fresh priorities are Detention Prevention pilot readiness, CoE/EPMO alignment, Staff Aug/TRACE coverage, and the Court EAD deliverables. Teams recent-thread access returned a Microsoft Graph 403, so Teams context is limited to unread chat metadata plus the two readable unread chats.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0610-co-1",
+            "taskId": "task-20260609-complete-nadias-affected-areas-request",
+            "label": "Complete Nadia's affected-areas request",
+            "detail": "Carried over from Tuesday and still not completed in GitHub state. Action type: complete/review. Finish Nadia Wilson's request on affected project areas for the EPMO, using the Salesforce Program Overview as supporting context.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0610-co-2",
+            "taskId": "task-20260609-review-rippling-and-asana-overdue-tasks",
+            "label": "Review Rippling and Asana overdue tasks",
+            "detail": "Carried over and refreshed by today's unread Rippling support survey plus prior overdue-task notices. Action type: review/complete. Separate true pending tasks from notification noise and close anything stale or already complete.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0610-co-3",
+            "taskId": "task-20260609-close-project-coordinator-decision-loop",
+            "label": "Close Project Coordinator decision loop",
+            "detail": "Carried over from Tuesday's hiring-decision context. Action type: decide/follow up. Confirm whether the Project Coordinator debrief produced a final decision and whether any candidate feedback still needs to be submitted or routed.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0610-co-4",
+            "taskId": "task-20260609-review-staff-aug-prd-and-queue-impacts",
+            "label": "Review Staff Aug PRD and queue impacts",
+            "detail": "Carried over and tied to today's TRACE & Staff Aug touchpoint. Action type: review/decide. Use the 10:00 AM Staff Aug window to clarify Andrea's PRD input, queue/process implications, and any Send Letters connection that still needs an owner.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0610-co-5",
+            "taskId": "task-20260609-monitor-daca-i90-remaining-it-work",
+            "label": "Monitor DACA/I-90 remaining IT work",
+            "detail": "Carried over from Tuesday. Action type: monitor/follow up. DACA RNWL and I-90 RNWL were previously on hold, but request #0027951 and remaining IT/UAT items still need confirmation before this can be treated as closed or formally paused.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0610-co-6",
+            "taskId": "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups",
+            "label": "Resolve Phase 2 ownership and tool-support follow-ups",
+            "detail": "Carried over and still the broadest unresolved ownership loop. Action type: decide/follow up. Keep the Phase 2 dashboard owner, SMS resource path, OneDrive/SharePoint/Venn questions, and sync-coverage decision together so the next owner is clear.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0610-co-7",
+            "taskId": "task-20260609-decide-expired-staff-aug-recording",
+            "label": "Decide on expired Staff Aug recording",
+            "detail": "Carried over from Tuesday's daily digest after safe taskId inference. Action type: decide. Restore the expired Staff Aug recording only if it is still needed for PRD or touchpoint context; otherwise leave it archived and stop carrying it.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times shown in Jean's Outlook working timezone. The day is compressed from 9:30 AM through 5:00 PM, with a protected 12:00 PM block and a shorter end-of-day focus block.",
+        "items": [
+          {
+            "id": "wed-0610-cal-1",
+            "time": "All day",
+            "label": "Santiago OOO ends today",
+            "detail": "Outlook shows Santiago OOO through Wednesday, June 10. Build slack into Staff Aug, CoE, and Incident Response follow-ups that would normally need him."
+          },
+          {
+            "id": "wed-0610-cal-2",
+            "time": "9:30 AM",
+            "label": "DP Guidance",
+            "detail": "Jhara's meeting includes Jean and Santiago. Treat as the first decision/prep anchor, especially because Detention Prevention has a fresh ELT green-light email."
+          },
+          {
+            "id": "wed-0610-cal-3",
+            "time": "10:00 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Yuri accepted. This overlaps the tail of DP Guidance and is the natural place to clarify Staff Aug PRD and TRACE coverage."
+          },
+          {
+            "id": "wed-0610-cal-4",
+            "time": "10:30 AM",
+            "label": "1:1 David & Jean",
+            "detail": "Useful for CoE priorities, EPMO dashboard/state work, and any unresolved Phase 2/tool-support ownership questions."
+          },
+          {
+            "id": "wed-0610-cal-5",
+            "time": "11:00 AM",
+            "label": "1:1 Carolina and Jean",
+            "detail": "Bi-weekly project/support check-in with Carolina. Use for active department support needs rather than low-signal status."
+          },
+          {
+            "id": "wed-0610-cal-6",
+            "time": "11:30 AM",
+            "label": "CoE Touchpoint",
+            "detail": "David and Mar accepted. Good place to convert CoE guide/priority conversations into owners and next steps after several prior carry-overs."
+          },
+          {
+            "id": "wed-0610-cal-7",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected focus window before the afternoon stack. Best use: prepare EPMO Team Meeting updates, Detention Prevention package review, or Court EAD deliverable review."
+          },
+          {
+            "id": "wed-0610-cal-8",
+            "time": "2:00 PM",
+            "label": "EPMO Team Meeting",
+            "detail": "Operational team anchor. Bring only the unresolved themes that need group clarity: CoE next steps, Phase 2 ownership, and active dashboard/process blockers."
+          },
+          {
+            "id": "wed-0610-cal-9",
+            "time": "3:00 PM",
+            "label": "Cybersecurity Awareness plus weekly-meeting prep",
+            "detail": "Outlook shows May Cybersecurity Awareness at the same time as a weekly-meeting preparation focus block. Confirm whether the training needs live attendance."
+          },
+          {
+            "id": "wed-0610-cal-10",
+            "time": "4:00 PM",
+            "label": "CoE Biweekly Touchpoint",
+            "detail": "Jean's recurring CoE forum with David, Frank, and Mar. Use it to land ownership and progress direction rather than re-open broad CoE discovery."
+          },
+          {
+            "id": "wed-0610-cal-11",
+            "time": "4:30 PM",
+            "label": "Focus time",
+            "detail": "Short end-of-day cleanup block after the CoE touchpoint. Good time to update the dashboard/checklist state based on decisions made earlier."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0610-action-1",
+            "taskId": "task-20260610-resolve-dp-trace-staff-aug-coverage",
+            "label": "Resolve DP Guidance and Staff Aug coverage",
+            "detail": "Action type: decide/prepare. DP Guidance starts at 9:30 AM and TRACE & Staff Aug starts at 10:00 AM, so decide which thread needs live attention, what can be delegated, and what Staff Aug PRD question must be answered today.",
+            "urgent": true
+          },
+          {
+            "id": "wed-0610-action-2",
+            "taskId": "task-20260610-review-detention-prevention-pilot-package",
+            "label": "Review Detention Prevention pilot package",
+            "detail": "Action type: review/follow up. Jhara forwarded ELT's green light and asked stakeholders to review and approve the package while preparing area documentation; use the DP Guidance slot or focus block to confirm Jean's next action.",
+            "urgent": true
+          },
+          {
+            "id": "wed-0610-action-3",
+            "taskId": "task-20260610-land-coe-owners-next-steps",
+            "label": "Land CoE owners and next steps",
+            "detail": "Action type: decide/delegate. Today's CoE Touchpoint, EPMO Team Meeting, and CoE Biweekly Touchpoint create a three-step path to turn recurring CoE guide, priority, and tool-support threads into named owners and next moves."
+          },
+          {
+            "id": "wed-0610-action-4",
+            "taskId": "task-20260610-review-court-ead-deliverables",
+            "label": "Review Court EAD final deliverables",
+            "detail": "Action type: review/confirm. A recent email says Court EAD dashboards and reports are live and ready for use, with a large report inventory. Confirm whether Jean/EPMO needs to validate adoption, communicate usage, or close the project loop."
+          },
+          {
+            "id": "wed-0610-action-5",
+            "taskId": "task-20260610-follow-up-epmo-liderazgo-commitments",
+            "label": "Follow up on EPMO Liderazgo commitments",
+            "detail": "Action type: follow up. Teams shows Jean shared Astrid feedback and said another item should start this week; Jorge said he plans to do his piece no later than this week. Clarify what needs a checkpoint so it does not drift."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0610-email-1",
+            "taskId": "task-20260610-review-detention-prevention-pilot-package",
+            "label": "Jhara forwarded Detention Prevention ELT green light",
+            "detail": "Unread from Jhara on Tuesday afternoon. Action type: review/follow up. ELT approved moving the pilot forward, expects launch in 30-60 days, and asked stakeholders to review/approve the package and prepare area documentation."
+          },
+          {
+            "id": "wed-0610-email-2",
+            "taskId": "task-20260610-review-court-ead-deliverables",
+            "label": "Court EAD dashboards and reports are live",
+            "detail": "Recent email says final Court EAD data-tracking deliverables are live, including role-specific dashboards and task reports. Action type: review/confirm. Decide whether this needs EPMO validation or project-close communication."
+          },
+          {
+            "id": "wed-0610-email-3",
+            "taskId": "task-20260610-decide-discovery-recording-restore",
+            "label": "Discovery Projects recording expired",
+            "detail": "Unread SharePoint notice from this morning. Action type: decide. The Discovery Projects Alignment recording was deleted after expiration; restore it only if it is needed for active project context."
+          },
+          {
+            "id": "wed-0610-email-4",
+            "taskId": "task-20260610-verify-github-token-dashboard-access",
+            "label": "Verify new GitHub token was expected",
+            "detail": "Unread GitHub security email says a fine-grained personal access token named token4vercel was created. Action type: verify. If this was part of the dashboard/Vercel state-sync work, no reply is needed; if not, review account access promptly.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0610-teams-1",
+            "taskId": "task-20260610-follow-up-epmo-liderazgo-commitments",
+            "label": "EPMO Liderazgo has two loose commitments",
+            "detail": "Teams unread chat shows Jean posted Astrid feedback, Jean also said another item should start this week, and Jorge said he plans to do his piece no later than this week. Action type: follow up. Clarify the intended owner and checkpoint."
+          },
+          {
+            "id": "wed-0610-teams-2",
+            "taskId": "task-20260610-monitor-docusign-taskset-guidance",
+            "label": "Monitor DocuSign taskset guidance",
+            "detail": "Teams shows an active DocuSign process thread: Alexander clarified that DocuSign requires a sending task, not a sending taskset, and that tasksets should wait for e-signature before review. Action type: monitor. Keep out of Jean's main queue unless EPMO process ownership is requested."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0610-ooo-1",
+            "label": "Santiago Arango - OOO through today",
+            "detail": "Outlook shows Santiago OOO through Wednesday, June 10. Staff Aug, Incident Response, and CoE threads may need an alternate path until he is back."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0610-thu-1",
+            "time": "10:30 AM",
+            "label": "1:1 Andrea and Jean",
+            "detail": "Regular 1:1. Useful for Staff Aug PRD, Send Letters, and any Andrea-owned project threads."
+          },
+          {
+            "id": "wed-0610-thu-2",
+            "time": "11:00 AM",
+            "label": "1:1 Santiago & Jean",
+            "detail": "First regular Santiago 1:1 after his OOO. Good moment to catch up on Staff Aug, Incident Response, and DACA/I-90 status."
+          },
+          {
+            "id": "wed-0610-thu-3",
+            "time": "11:30 AM",
+            "label": "Jean/Sara 1:1",
+            "detail": "New weekly series with Sara. Good place for escalations, priority clarity, and unresolved ownership questions."
+          },
+          {
+            "id": "wed-0610-thu-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Ninety-minute protected block before BCP/Incident Response and the afternoon 1:1 stack."
+          },
+          {
+            "id": "wed-0610-thu-5",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Tessa declined, but Larry, Lucia, Dan, Sarah, Santiago, Angelica, and others are on the invite. Use for any revived Incident Response ownership follow-up if needed."
+          },
+          {
+            "id": "wed-0610-thu-6",
+            "time": "2:00 PM",
+            "label": "1:1 Camilo & Jean",
+            "detail": "Regular 1:1 with Camilo."
+          },
+          {
+            "id": "wed-0610-thu-7",
+            "time": "2:30 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda includes portfolio review, roadblocks, and next steps."
+          },
+          {
+            "id": "wed-0610-thu-8",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team forum for project progress, roadblocks, and shared learning."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-06-09",
     "type": "eod",
     "date": "Tuesday, June 9 - End of Day",
