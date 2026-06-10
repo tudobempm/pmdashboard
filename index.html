@@ -2173,7 +2173,7 @@ const GITHUB_API_BASE = "https://api.github.com";
 // Deployed write-proxy endpoint. When set, the dashboard POSTs state here and
 // never needs a token in the browser. Leave "" to use the localStorage-token
 // fallback below. Can also be overridden per-browser via localStorage "llf-sync-url".
-const SYNC_PROXY_URL = "";
+const SYNC_PROXY_URL = "https://pmdashboard-orcin.vercel.app/api/sync-state";
 function getSyncProxyUrl() {
   try { return localStorage.getItem("llf-sync-url") || SYNC_PROXY_URL; } catch { return SYNC_PROXY_URL; }
 }
