@@ -1,0 +1,7 @@
+{
+  "name": "pmdashboard-sync-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Server-side write-proxy that commits dashboard state to briefing_state.json on GitHub, so no GitHub token ever lives in the browser."
+}
