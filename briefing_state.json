@@ -44,7 +44,8 @@
     "task-20260610-review-detention-prevention-pilot-package": true,
     "task-20260610-land-coe-owners-next-steps": true,
     "task-20260610-review-court-ead-deliverables": true,
-    "task-20260610-monitor-docusign-taskset-guidance": true
+    "task-20260610-monitor-docusign-taskset-guidance": true,
+    "task-20260610-follow-up-epmo-liderazgo-commitments": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -77,5 +78,5 @@
       "archivedAt": "2026-06-05T12:00:05.000Z"
     }
   ],
-  "lastModified": 1781096176106
+  "lastModified": 1781096185410
 }
