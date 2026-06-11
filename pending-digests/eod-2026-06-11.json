@@ -1,0 +1,119 @@
+{
+  "digest": {
+    "id": "eod-2026-06-11",
+    "type": "eod",
+    "date": "Thursday, June 11 - End of Day",
+    "isoDate": "2026-06-11",
+    "greeting": "Jean, today's dashboard state shows the access-request cluster, Nadia's Phase 2 reply, deleted-recording decision, and EPMO offer/recognition loose ends marked complete. The main carry-forward work is now narrower: align on Sara's timeline KPI, keep the afternoon BCP/IR and portfolio follow-through crisp, and address the new HR mid-year touchpoint request before Monday's deadline.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0611-done-1",
+            "label": "Resolved the I-693 FAQ access-request cluster",
+            "detail": "Dashboard state marks task-20260610-review-i693-access-request complete after the morning digest grouped the SharePoint access requests from Juanita Arrieta Salguero, Alondra Gotay, and Carol Alarcon."
+          },
+          {
+            "id": "eod-0611-done-2",
+            "label": "Reviewed Nadia's Phase 2 Projects reply",
+            "detail": "Dashboard state marks task-20260611-review-phase-2-projects-nadia-reply complete after the morning digest flagged Nadia's reply as relevant to Friday's Phase 2 and CoE planning blocks."
+          },
+          {
+            "id": "eod-0611-done-3",
+            "label": "Decided the deleted-recording restore path",
+            "detail": "Dashboard state marks task-20260611-decide-deleted-recording-restores complete for the Staff Augmentation weekly touchpoint and Venn Training recording notices."
+          },
+          {
+            "id": "eod-0611-done-4",
+            "label": "Confirmed EPMO offer and recognition loose ends",
+            "detail": "Dashboard state marks task-20260611-confirm-epmo-offers-and-recognition complete after the morning digest captured Sara's offer follow-up and Janet's recognition-slide flag."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0611-open-1",
+            "taskId": "task-20260611-submit-mid-year-touchpoints",
+            "label": "Submit Mid-Year Touchpoints for direct reports by June 15",
+            "detail": "HR emailed Jean today requesting immediate action for Camilo Vejarano, Andrea Rodriguez, David Molano, and Mar Garcia. The email says all Mid-Year Touchpoints must be submitted in Rippling by Monday, June 15, including KPIs and competencies."
+          },
+          {
+            "id": "eod-0611-open-2",
+            "taskId": "task-20260611-align-sara-timeline-kpi",
+            "label": "Align with Sara on the timeline KPI",
+            "detail": "Carried from today's morning digest and not marked complete in dashboard state. Sara shared the final Timeline Stewardship & Schedule Accountability KPI and the EPMO_KPIs workbook; confirm whether Jean has concerns before it becomes operational guidance."
+          },
+          {
+            "id": "eod-0611-open-3",
+            "taskId": "task-20260611-prepare-bcp-ir-and-portfolio-1-1s",
+            "label": "Carry forward BCP/IR and portfolio 1:1 follow-through",
+            "detail": "Carried from today's morning digest and not marked complete in dashboard state. The BCP/Incident Response meeting flowed into the Camilo and Maria 1:1s, so capture any blockers, ownership questions, or next-step decisions that still need a named owner."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0611-decision-1",
+            "label": "Phase 2 SMS scope narrowed for this phase",
+            "detail": "In today's Phase 2 SMS Expansion email thread, Mar confirmed the current phase covers RFE, Appeal, Refile, Supplement, Renewal, and AOS, while Bonafide EAD and USCIS Interviews are out of scope."
+          },
+          {
+            "id": "eod-0611-decision-2",
+            "label": "Phase 2 SMS Sprint 14 path depends on approvals and testers by June 24",
+            "detail": "Mar's same-day email says the project can be included in Sprint 14, starting July 16, if Legal and Marketing approvals, the full task list, and named UAT testers are in by June 24."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0611-fri-1",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Short touchpoint with Yuri. Good place to close Staff Aug or TRACE deltas before the larger Phase 2 sync."
+          },
+          {
+            "id": "eod-0611-fri-2",
+            "time": "10:00 AM",
+            "label": "Phase 2 Weekly IT Projects Sync",
+            "detail": "Primary Friday anchor. Outlook shows Jhara declined while Yuri, Andrea, Mar, David, Santiago, Anu, and others are listed; bring Nadia's Phase 2 reply and any Saltclick, intake, or billing implications."
+          },
+          {
+            "id": "eod-0611-fri-3",
+            "time": "11:00 AM",
+            "label": "CoE Sync Jean",
+            "detail": "Mar-organized CoE sync with Jean and David. Useful follow-through for CoE intake, ownership, and project routing decisions."
+          },
+          {
+            "id": "eod-0611-fri-4",
+            "time": "1:00 PM",
+            "label": "EPMO EOW Check In",
+            "detail": "Sara moved this earlier and added Nadia for programmatic updates. Good forum for the Phase 2 or Nadia thread if it needs leadership visibility."
+          },
+          {
+            "id": "eod-0611-fri-5",
+            "time": "2:30 PM",
+            "label": "1:1 Santiago & Jean",
+            "detail": "Outlook shows this Friday 1:1 after the EPMO check-in and focus block; use it for any Staff Aug, Incident Response, or Friday sync follow-through that needs Santiago's input."
+          },
+          {
+            "id": "eod-0611-fri-6",
+            "time": "3:00 PM",
+            "label": "Executive Project Status Slide Update",
+            "detail": "Weekly executive-project deck update with Yuri, Jhara, and Mar. The linked deck is explicitly referenced in the invite."
+          }
+        ]
+      }
+    ]
+  }
+}
