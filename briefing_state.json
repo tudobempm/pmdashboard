@@ -47,7 +47,8 @@
     "task-20260610-monitor-docusign-taskset-guidance": true,
     "task-20260610-follow-up-epmo-liderazgo-commitments": true,
     "task-20260610-verify-github-token-dashboard-access": true,
-    "task-20260610-decide-discovery-recording-restore": true
+    "task-20260610-decide-discovery-recording-restore": true,
+    "task-20260610-review-i693-access-request": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -80,5 +81,5 @@
       "archivedAt": "2026-06-05T12:00:05.000Z"
     }
   ],
-  "lastModified": 1781096195516
+  "lastModified": 1781180465541
 }
