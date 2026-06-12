@@ -58,7 +58,8 @@
     "task-20260612-revisar-epmo-portal": true,
     "task-20260611-prepare-bcp-ir-and-portfolio-1-1s": true,
     "task-20260611-submit-mid-year-touchpoints": true,
-    "task-20260612-prepare-epmo-eow-executive-deck": true
+    "task-20260612-prepare-epmo-eow-executive-deck": true,
+    "task-20260612-check-weekly-executive-project-thread": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -109,5 +110,5 @@
       "archivedAt": "2026-06-12T12:08:00.000Z"
     }
   ],
-  "lastModified": 1781301174945
+  "lastModified": 1781301178116
 }
