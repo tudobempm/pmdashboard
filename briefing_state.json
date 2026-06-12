@@ -80,7 +80,12 @@
     "tue-0602-co-22",
     "tue-0602-co-23"
   ],
-  "reactions": {},
+  "reactions": {
+    "task-20260612-follow-up-hr-survey-results": {
+      "emoji": "📌",
+      "ts": 1781301182670
+    }
+  },
   "edits": {},
   "reminders": [
     {
@@ -110,5 +115,5 @@
       "archivedAt": "2026-06-12T12:08:00.000Z"
     }
   ],
-  "lastModified": 1781301178116
+  "lastModified": 1781301184814
 }
