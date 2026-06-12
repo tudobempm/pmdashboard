@@ -84,6 +84,11 @@
       "id": "rem-1781286691105",
       "text": "Hacer follow up con HR para resultados de la survey",
       "addedAt": "2026-06-12T17:51:31.105Z"
+    },
+    {
+      "id": "rem-1781295993671",
+      "text": "Responder al correo de Eugenia para Danny sobre problemas con Venn",
+      "addedAt": "2026-06-12T20:26:33.671Z"
     }
   ],
   "reminderHistory": [
@@ -102,5 +107,5 @@
       "archivedAt": "2026-06-12T12:08:00.000Z"
     }
   ],
-  "lastModified": 1781286694173
+  "lastModified": 1781295996512
 }
