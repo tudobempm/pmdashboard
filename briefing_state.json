@@ -55,7 +55,8 @@
     "task-20260611-align-sara-timeline-kpi": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260612-advance-phase-2-sms-approvals-uat": true,
-    "task-20260612-revisar-epmo-portal": true
+    "task-20260612-revisar-epmo-portal": true,
+    "task-20260611-prepare-bcp-ir-and-portfolio-1-1s": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -95,5 +96,5 @@
       "archivedAt": "2026-06-12T12:08:00.000Z"
     }
   ],
-  "lastModified": 1781269828897
+  "lastModified": 1781270010987
 }
