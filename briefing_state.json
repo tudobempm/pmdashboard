@@ -75,7 +75,13 @@
   ],
   "reactions": {},
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1781260370260",
+      "text": "Revisar EPMO portal",
+      "addedAt": "2026-06-12T10:32:50.263Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -85,5 +91,5 @@
       "archivedAt": "2026-06-05T12:00:05.000Z"
     }
   ],
-  "lastModified": 1781213125709
+  "lastModified": 1781260373510
 }
