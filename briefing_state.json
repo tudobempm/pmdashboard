@@ -53,7 +53,8 @@
     "task-20260611-confirm-epmo-offers-and-recognition": true,
     "task-20260611-review-phase-2-projects-nadia-reply": true,
     "task-20260611-align-sara-timeline-kpi": true,
-    "task-20260612-approve-camilo-corrected-leave": true
+    "task-20260612-approve-camilo-corrected-leave": true,
+    "task-20260612-advance-phase-2-sms-approvals-uat": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -93,5 +94,5 @@
       "archivedAt": "2026-06-12T12:08:00.000Z"
     }
   ],
-  "lastModified": 1781269744991
+  "lastModified": 1781269758517
 }
