@@ -1,0 +1,132 @@
+{
+  "digest": {
+    "id": "eod-2026-06-12",
+    "type": "eod",
+    "date": "Friday, June 12 - End of Day",
+    "isoDate": "2026-06-12",
+    "greeting": "Jean, the dashboard state shows the day moved forward on Camilo's corrected leave request, Phase 2 SMS approvals/UAT, the EPMO portal review, and the BCP/IR portfolio follow-through. The remaining carry-forward is tighter for Monday: Mid-Year Touchpoints, executive-deck cleanup, Lead Up pre-work, and the two new reminders that landed late today.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0612-done-1",
+            "label": "Approved Camilo's corrected leave request",
+            "detail": "Dashboard state marks task-20260612-approve-camilo-corrected-leave complete after the morning digest flagged the corrected June 17-25 vacation request as the active Rippling approval item."
+          },
+          {
+            "id": "eod-0612-done-2",
+            "label": "Advanced Phase 2 SMS approvals and UAT ownership",
+            "detail": "Dashboard state marks task-20260612-advance-phase-2-sms-approvals-uat complete after the morning digest captured the updated scope, Legal and Marketing approval path, June 16 Marketing due date, and provisional Jessica/Craig tester assignment."
+          },
+          {
+            "id": "eod-0612-done-3",
+            "label": "Reviewed the EPMO portal",
+            "detail": "Dashboard state marks task-20260612-revisar-epmo-portal complete after it appeared as the active one-shot reminder in the morning digest."
+          },
+          {
+            "id": "eod-0612-done-4",
+            "label": "Closed the BCP/IR and portfolio 1:1 follow-through",
+            "detail": "Dashboard state marks task-20260611-prepare-bcp-ir-and-portfolio-1-1s complete after it carried forward from Thursday into today's EPMO and executive-status prep."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0612-open-1",
+            "taskId": "task-20260611-submit-mid-year-touchpoints",
+            "label": "Submit Mid-Year Touchpoints by Monday",
+            "detail": "HR's June 11 email asks Jean to submit Mid-Year Touchpoints in Rippling for Camilo Vejarano, Andrea Rodriguez, David Molano, and Mar Garcia by Monday, June 15, including KPIs and competencies. Dashboard state does not mark this task complete.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0612-open-2",
+            "taskId": "task-20260612-prepare-epmo-eow-executive-deck",
+            "label": "Finish EPMO EOW and executive deck follow-through",
+            "detail": "The morning digest tied today's EPMO EOW Check In and Executive Project Status Slide Update to Phase 2 SMS state, Nadia/Steering Committee implications, and any BCP/IR carry-over that needed executive-facing status. This task is not marked complete in dashboard state."
+          },
+          {
+            "id": "eod-0612-open-3",
+            "taskId": "task-20260612-complete-lead-up-module-2-prework",
+            "label": "Plan Lead Up Module 2 pre-work",
+            "detail": "Rippling enrolled Jean in Lead up Module 2 Pre Work with a due date of June 25 at 8:06 AM. The morning digest treated this as a planning item for next week, and dashboard state does not mark it complete."
+          },
+          {
+            "id": "eod-0612-open-4",
+            "taskId": "task-20260612-check-weekly-executive-project-thread",
+            "label": "Check the Weekly Executive Project Updates thread",
+            "detail": "The morning digest surfaced recent activity tied to today's executive deck work and noted a technical-access troubleshooting exchange. Dashboard state does not mark this review complete."
+          },
+          {
+            "id": "eod-0612-open-5",
+            "taskId": "task-20260612-follow-up-hr-survey-results",
+            "label": "Follow up with HR on survey results",
+            "detail": "Active dashboard reminder added June 12: \"Hacer follow up con HR para resultados de la survey.\" No completion signal is present in dashboard state."
+          },
+          {
+            "id": "eod-0612-open-6",
+            "taskId": "task-20260612-reply-eugenia-danny-venn-issues",
+            "label": "Reply on the Venn issues thread for Eugenia and Danny",
+            "detail": "Active dashboard reminder added June 12 asks Jean to respond to Eugenia's email for Danny about Venn problems. Outlook also shows Nadia replied at 5:01 PM with additional Venn pain points including slowness, access problems, app compatibility, Teams issues, and failed authentication."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0612-mon-1",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Monday starts with a one-hour prep block. Use it to confirm any remaining Mid-Year Touchpoint submissions due that same day."
+          },
+          {
+            "id": "eod-0612-mon-2",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Short Yuri touchpoint. Good place to close Staff Aug or TRACE follow-ups left from Friday."
+          },
+          {
+            "id": "eod-0612-mon-3",
+            "time": "11:00 AM",
+            "label": "1:1 Shelley & Jean",
+            "detail": "Outlook says the purpose is to understand department needs and how Jean can support. Relevant if Phase 2 SMS, USCIS Interviews, or Bonafide EAD scope needs Shelley input."
+          },
+          {
+            "id": "eod-0612-mon-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected space before EPMO Portfolio Review. Best used for any remaining Rippling, Phase 2, HR survey, or Venn follow-up cleanup."
+          },
+          {
+            "id": "eod-0612-mon-5",
+            "time": "2:00 PM",
+            "label": "EPMO Portfolio Review",
+            "detail": "Sara's portfolio review focuses on new project requests, EPMO classification, missing info, ownership, and rejection communication. Bring any Phase 2 or CoE intake items that need portfolio-level routing."
+          },
+          {
+            "id": "eod-0612-mon-6",
+            "time": "3:00 PM",
+            "label": "Touchpoint w/Jean",
+            "detail": "Outlook shows a 30-minute touchpoint with Licelot Perez about process and quality-assurance requirements inside the EPMO."
+          },
+          {
+            "id": "eod-0612-mon-7",
+            "label": "HR survey-results follow-up",
+            "detail": "Active dashboard reminder from Friday: follow up with HR for the survey results."
+          },
+          {
+            "id": "eod-0612-mon-8",
+            "label": "Venn follow-up for Eugenia and Danny",
+            "detail": "Active dashboard reminder from Friday: respond to Eugenia's email for Danny about Venn issues."
+          }
+        ]
+      }
+    ]
+  }
+}
