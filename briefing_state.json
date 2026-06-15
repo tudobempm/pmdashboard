@@ -102,6 +102,11 @@
       "text": "Seguimiento a David para la creación del COE playbook",
       "addedAt": "2026-06-15T02:29:38.541Z",
       "scheduledFor": "2026-06-16"
+    },
+    {
+      "id": "rem-1781556116962",
+      "text": "solicitar a TMs los numeros de sus tickets de IT relacionados a Venn",
+      "addedAt": "2026-06-15T20:41:56.962Z"
     }
   ],
   "reminderHistory": [
@@ -134,5 +139,5 @@
       "archivedAt": "2026-06-15T12:05:00.000Z"
     }
   ],
-  "lastModified": 1781554729123
+  "lastModified": 1781556119982
 }
