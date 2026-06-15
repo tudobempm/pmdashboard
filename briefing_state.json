@@ -93,16 +93,6 @@
   "edits": {},
   "reminders": [
     {
-      "id": "rem-1781286691105",
-      "text": "Hacer follow up con HR para resultados de la survey",
-      "addedAt": "2026-06-12T17:51:31.105Z"
-    },
-    {
-      "id": "rem-1781295993671",
-      "text": "Responder al correo de Eugenia para Danny sobre problemas con Venn",
-      "addedAt": "2026-06-12T20:26:33.671Z"
-    },
-    {
       "id": "rem-1781490578541",
       "text": "Seguimiento a David para la creación del COE playbook",
       "addedAt": "2026-06-15T02:29:38.541Z",
@@ -123,7 +113,21 @@
       "addedAt": "2026-06-12T10:32:50.263Z",
       "shownInDigestId": "daily-2026-06-12-morning",
       "archivedAt": "2026-06-12T12:08:00.000Z"
+    },
+    {
+      "id": "rem-1781286691105",
+      "text": "Hacer follow up con HR para resultados de la survey",
+      "addedAt": "2026-06-12T17:51:31.105Z",
+      "shownInDigestId": "daily-2026-06-15-morning",
+      "archivedAt": "2026-06-15T12:05:00.000Z"
+    },
+    {
+      "id": "rem-1781295993671",
+      "text": "Responder al correo de Eugenia para Danny sobre problemas con Venn",
+      "addedAt": "2026-06-12T20:26:33.671Z",
+      "shownInDigestId": "daily-2026-06-15-morning",
+      "archivedAt": "2026-06-15T12:05:00.000Z"
     }
   ],
-  "lastModified": 1781490580498
+  "lastModified": 1781525100000
 }

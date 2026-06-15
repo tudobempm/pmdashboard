@@ -1,5 +1,167 @@
 [
   {
+    "id": "daily-2026-06-15-morning",
+    "type": "daily",
+    "date": "Morning - Monday, June 15",
+    "isoDate": "2026-06-15",
+    "greeting": "Monday, June 15, Jean. Outlook shows 6 working-day calendar blocks, anchored by the 9:30 AM TRACE & Staff Aug touchpoint and the 2:00 PM EPMO Portfolio Review. There is 1 carried-over item and 2 active reminders; the strongest priorities are confirming the Staff Aug at-risk path before the Yuri touchpoint, closing the HR survey-results follow-up, replying on the Venn issues thread, and using the EPMO Portfolio Review to assign intake next steps. Broad Teams recent-thread discovery still returned a Microsoft Graph 403, and targeted Teams searches did not return new Staff Aug, Venn, or HR-survey activity after Friday, so Teams context is limited this morning.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0615-co-1",
+            "taskId": "task-20260612-complete-lead-up-module-2-prework",
+            "label": "Plan Lead Up Module 2 pre-work",
+            "detail": "Carried over from Friday and still not marked complete in GitHub state. Rippling enrolled Jean in Lead Up Module 2 Pre Work due June 25 at 8:06 AM; use one of today's short open windows to decide where this fits before the week fills in.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0615-rem-1",
+            "taskId": "task-20260612-follow-up-hr-survey-results",
+            "label": "Follow up with HR on survey results",
+            "detail": "One-shot dashboard reminder added June 12: \"Hacer follow up con HR para resultados de la survey.\" This is a clean early follow-up before the schedule compresses around the EPMO Portfolio Review."
+          },
+          {
+            "id": "mon-0615-rem-2",
+            "taskId": "task-20260612-reply-eugenia-danny-venn-issues",
+            "label": "Reply on the Venn issues thread for Eugenia and Danny",
+            "detail": "One-shot dashboard reminder added June 12. The prior digest noted Nadia's additional Venn pain points around slowness, access, app compatibility, Teams issues, and failed authentication; reply or assign the next owner before the thread goes stale.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times shown in Jean's Outlook working timezone. The day has good morning focus windows, then becomes meeting-heavy from noon through 3:30 PM.",
+        "items": [
+          {
+            "id": "mon-0615-cal-1",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "One-hour prep block. Best use is timecards, quick review of the unread Asana Staff Aug portfolio signal, and selecting the few Monday follow-ups that need to move before noon."
+          },
+          {
+            "id": "mon-0615-cal-2",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Short Yuri touchpoint. Staff Aug is the key prep signal because the unread Asana portfolio report marks the project at risk and very high impact, with tracker work running until June 26 and PRD stakeholder review continuing this week."
+          },
+          {
+            "id": "mon-0615-cal-3",
+            "time": "11:00 AM",
+            "label": "1:1 Shelley & Jean",
+            "detail": "Agenda says the purpose is to understand department needs and how Jean can support. Good place to surface any project-management support, portfolio-routing friction, or quality/process needs before the afternoon review."
+          },
+          {
+            "id": "mon-0615-cal-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected 90-minute block before EPMO Portfolio Review. Best use is the HR survey-results reminder, Venn reply, and any Staff Aug notes from the Yuri touchpoint."
+          },
+          {
+            "id": "mon-0615-cal-5",
+            "time": "2:00 PM",
+            "label": "EPMO Portfolio Review",
+            "detail": "Sara's review focuses on new project requests, EPMO classification, missing info, cross-org impacts, intake ownership, PM/PE assignment, and rejection communication. Bring only the items that need portfolio-level routing."
+          },
+          {
+            "id": "mon-0615-cal-6",
+            "time": "3:00 PM",
+            "label": "Touchpoint w/Jean",
+            "detail": "Licelot touchpoint on process and quality-assurance requirements inside the EPMO. Useful follow-through from the portfolio review if QA or process guidance needs a named next step."
+          },
+          {
+            "id": "mon-0615-cal-7",
+            "time": "Focus windows",
+            "label": "9:00-9:30, 9:45-11:00, 11:30-12:00, 1:30-2:00, and after 3:30",
+            "detail": "The 9:45-11:00 window is the best uninterrupted block for Staff Aug follow-through; the 12:00 protected space is better for reminders and portfolio-review prep."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0615-action-1",
+            "taskId": "task-20260615-confirm-staff-aug-at-risk-path",
+            "label": "Confirm Staff Aug at-risk path with Yuri",
+            "detail": "Action type: decide/follow up. The unread Asana PMO portfolio report marks Staff Augmentation at risk and very high impact: Data Team tracker improvements run until June 26, geographic KPI work is in progress, cost KPIs are still under analysis, and stakeholder PRD review continues this week. Use the 9:30 AM TRACE & Staff Aug touchpoint to confirm the next decision, owner, and risk language.",
+            "urgent": true
+          },
+          {
+            "id": "mon-0615-action-2",
+            "taskId": "task-20260615-prepare-epmo-portfolio-review",
+            "label": "Prepare EPMO Portfolio Review routing decisions",
+            "detail": "Action type: prepare/decide. The 2:00 PM review is explicitly for classifying new project requests, identifying missing info, assigning intake calls, naming PM/PE ownership, and deciding rejection communication. Bring any Staff Aug, CoE, Phase 2, or process/QA items that need portfolio-level routing rather than letting them remain general discussion."
+          },
+          {
+            "id": "mon-0615-action-3",
+            "taskId": "task-20260615-prepare-support-touchpoints",
+            "label": "Use Shelley and Licelot touchpoints to clarify support needs",
+            "detail": "Action type: prepare/follow up. Shelley's 1:1 is framed around department needs and how Jean can support; Licelot's touchpoint is framed around EPMO processes and quality assurance. Capture any blocker, owner, or process decision that should feed back into the portfolio review or tomorrow's PM Workshop."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0615-email-1",
+            "taskId": "task-20260615-confirm-staff-aug-at-risk-path",
+            "label": "Unread Asana report flags Staff Aug at risk",
+            "detail": "The weekly PMO Projects Portfolio report shows Staff Augmentation owned by Yuri as at risk and very high impact. It calls out Data Team tracker work through June 26, KPI analysis, and PRD stakeholder review continuing this week; this is the strongest email signal tied to today's 9:30 AM touchpoint."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0615-tue-1",
+            "time": "10:00 AM",
+            "label": "1:1 Conor B. & Jean G.",
+            "detail": "Agenda includes department needs, support, and project-management principles."
+          },
+          {
+            "id": "mon-0615-tue-2",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected midday space before the afternoon project-management block."
+          },
+          {
+            "id": "mon-0615-tue-3",
+            "time": "2:00 PM",
+            "label": "PM Workshop Pt.2",
+            "detail": "Next topic is controlling projects through stakeholders, with Mar, Yuri, and Jhara invited."
+          },
+          {
+            "id": "mon-0615-tue-4",
+            "time": "3:00 PM",
+            "label": "1:1 Yuri & Jean, then 1:1 Jhara & Jean",
+            "detail": "Yuri at 3:00 PM and Jhara at 3:30 PM create a tight end-of-day portfolio and roadblock review block."
+          },
+          {
+            "id": "mon-0615-tue-5",
+            "label": "Scheduled reminder: COE playbook",
+            "detail": "Dashboard state has a reminder scheduled for June 16: Seguimiento a David para la creacion del COE playbook."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-06-12",
     "type": "eod",
     "date": "Friday, June 12 - End of Day",
