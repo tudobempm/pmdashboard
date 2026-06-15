@@ -94,6 +94,10 @@
     "task-20260612-complete-lead-up-module-2-prework": {
       "emoji": "⭐",
       "ts": 1781554727172
+    },
+    "task-20260615-collect-venn-ticket-numbers": {
+      "emoji": "❗",
+      "ts": 1781558448583
     }
   },
   "edits": {},
@@ -140,5 +144,5 @@
       "archivedAt": "2026-06-15T12:05:00.000Z"
     }
   ],
-  "lastModified": 1781556127439
+  "lastModified": 1781558451615
 }
