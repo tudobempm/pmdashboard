@@ -61,7 +61,8 @@
     "task-20260612-prepare-epmo-eow-executive-deck": true,
     "task-20260612-check-weekly-executive-project-thread": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
-    "task-20260612-follow-up-hr-survey-results": true
+    "task-20260612-follow-up-hr-survey-results": true,
+    "task-20260612-reply-eugenia-danny-venn-issues": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -127,5 +128,5 @@
       "archivedAt": "2026-06-15T12:05:00.000Z"
     }
   ],
-  "lastModified": 1781554712667
+  "lastModified": 1781554714860
 }
