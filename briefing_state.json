@@ -101,11 +101,6 @@
       "id": "rem-1781295993671",
       "text": "Responder al correo de Eugenia para Danny sobre problemas con Venn",
       "addedAt": "2026-06-12T20:26:33.671Z"
-    },
-    {
-      "id": "rem-1781403923622",
-      "text": "Seguimiento a David para la creación del COE playbook",
-      "addedAt": "2026-06-14T02:25:23.622Z"
     }
   ],
   "reminderHistory": [
@@ -124,5 +119,5 @@
       "archivedAt": "2026-06-12T12:08:00.000Z"
     }
   ],
-  "lastModified": 1781403926962
+  "lastModified": 1781490571414
 }
