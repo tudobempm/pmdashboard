@@ -101,19 +101,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1781490578541",
-      "text": "Seguimiento a David para la creación del COE playbook",
-      "addedAt": "2026-06-15T02:29:38.541Z",
-      "scheduledFor": "2026-06-16"
-    },
-    {
-      "id": "rem-1781556116962",
-      "text": "solicitar a TMs los numeros de sus tickets de IT relacionados a Venn",
-      "addedAt": "2026-06-15T20:41:56.962Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -142,7 +130,22 @@
       "addedAt": "2026-06-12T20:26:33.671Z",
       "shownInDigestId": "daily-2026-06-15-morning",
       "archivedAt": "2026-06-15T12:05:00.000Z"
+    },
+    {
+      "id": "rem-1781490578541",
+      "text": "Seguimiento a David para la creación del COE playbook",
+      "addedAt": "2026-06-15T02:29:38.541Z",
+      "scheduledFor": "2026-06-16",
+      "shownInDigestId": "daily-2026-06-16-morning",
+      "archivedAt": "2026-06-16T12:10:00.000Z"
+    },
+    {
+      "id": "rem-1781556116962",
+      "text": "solicitar a TMs los numeros de sus tickets de IT relacionados a Venn",
+      "addedAt": "2026-06-15T20:41:56.962Z",
+      "shownInDigestId": "daily-2026-06-16-morning",
+      "archivedAt": "2026-06-16T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781558451615
+  "lastModified": 1781611800000
 }
