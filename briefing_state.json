@@ -66,7 +66,8 @@
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260615-prepare-support-touchpoints": true,
     "task-20260612-complete-lead-up-module-2-prework": true,
-    "task-20260616-review-incident-response-survey-results": true
+    "task-20260616-review-incident-response-survey-results": true,
+    "task-20260616-review-weekly-epmo-portfolio-update": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -148,5 +149,5 @@
       "archivedAt": "2026-06-16T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781612727768
+  "lastModified": 1781612754235
 }
