@@ -69,7 +69,8 @@
     "task-20260616-review-incident-response-survey-results": true,
     "task-20260616-review-weekly-epmo-portfolio-update": true,
     "task-20260616-triage-business-development-intake": true,
-    "task-20260616-staff-aug-it-alignment": true
+    "task-20260616-staff-aug-it-alignment": true,
+    "task-20260616-overdue-rippling-training": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -151,5 +152,5 @@
       "archivedAt": "2026-06-16T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781632151466
+  "lastModified": 1781637215371
 }
