@@ -1,0 +1,145 @@
+{
+  "digest": {
+    "id": "eod-2026-06-16",
+    "type": "eod",
+    "date": "Tuesday, June 16 - End of Day",
+    "isoDate": "2026-06-16",
+    "greeting": "Jean, today closed several dashboard follow-ups across Incident Response, portfolio review, intake triage, Staff Augmentation alignment, Rippling, and the Joe/Azul dependency. The main carry-forward is narrower now: Venn ticket collection, leadership-ready Staff Aug language, report requirements, workshop follow-through, the COE playbook, and the case-change routing decision.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0616-done-1",
+            "label": "Reviewed the Incident Response survey exports",
+            "detail": "The dashboard item tied to Nikki's Rippling survey exports is now closed after the morning digest flagged the 72% response rate and raw response files for review."
+          },
+          {
+            "id": "eod-0616-done-2",
+            "label": "Reviewed Sara's weekly EPMO portfolio update",
+            "detail": "The unread portfolio-update follow-up from this morning is now closed, clearing the Venn Enforcement Wave 2 and portfolio-readout check before the afternoon conversations."
+          },
+          {
+            "id": "eod-0616-done-3",
+            "label": "Triaged the Business Development intake alert",
+            "detail": "The Asana intake alert from Janet for Business Development is now closed after being flagged this morning for routing into portfolio review, the EPMO Team Meeting, or a separate intake path."
+          },
+          {
+            "id": "eod-0616-done-4",
+            "label": "Closed the Staff Augmentation IT-alignment check",
+            "detail": "The Staff Augmentation follow-up is now closed after Nadia's thread laid out the manual tracker risk, Rippling/M365 integration scope, and need for a named IT owner."
+          },
+          {
+            "id": "eod-0616-done-5",
+            "label": "Cleared the overdue Rippling training notice",
+            "detail": "The overdue Rippling training notice is now closed after the late-morning digest identified it as an administrative item that needed to be cleared or delegated."
+          },
+          {
+            "id": "eod-0616-done-6",
+            "label": "Clarified the Joe and Azul waiting item",
+            "detail": "The Teams follow-up about what was waiting on Joe and Azul is now closed after it was captured as an open dependency in the Queixinhas group chat."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0616-open-1",
+            "taskId": "task-20260615-collect-venn-ticket-numbers",
+            "label": "Collect Venn ticket numbers for one escalation path",
+            "detail": "Jean still needs one clean list of each TM's Venn ticket number, current blocker, and whether Venn is threatening closure. This remains urgent because Mar said Venn may close her ticket even though she had been working with another support contact.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "eod-0616-open-2",
+            "taskId": "task-20260616-send-leadership-project-highlights",
+            "label": "Confirm the leadership project-wins summary",
+            "detail": "Nadia asked Yuri and Javier for short project-win statements for Sara and Danny's June 17 leadership presentation. Confirm whether the Staff Augmentation language should still read as a win or whether today's escalation thread changes it to a risk or escalation story.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "eod-0616-open-3",
+            "taskId": "task-20260616-case-change-overlap-path",
+            "label": "Decide how to route the case-change overlap",
+            "detail": "Jessica said the SUPP post-submission case-change need should stay prioritized because the existing process does not cover the urgent Phase 2 gap. The open decision is whether to consolidate the work, ask Jill to reprioritize the broader project, or keep a narrow urgent SUPP fix moving.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0616-open-4",
+            "taskId": "task-20260616-check-frank-report-requirements",
+            "label": "Close the Frank report-requirements task",
+            "detail": "The Planner follow-up to check report requirements with Frank is still open. Use the next Yuri or report-requirements touchpoint to confirm what fields or folder requirements remain unclear and who owns the next step.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0616-open-5",
+            "taskId": "task-20260616-prepare-pm-workshop-and-roadblocks",
+            "label": "Turn PM Workshop notes into named next steps",
+            "detail": "The PM Workshop focused on stakeholder control and was followed by Yuri and Jhara 1:1s. Capture the practical takeaway and convert any portfolio roadblocks into named owners and next actions.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0616-open-6",
+            "taskId": "task-20260616-coe-playbook-follow-up",
+            "label": "Follow up with David on the COE playbook",
+            "detail": "The COE playbook reminder remains open. David accepted today's 1:1 after his automatic reply said he was returning today, so the next step is to confirm the playbook owner, expected output, and timing.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0616-wed-1",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Bring the IT-owner question, integration scope, and leadership-ready Staff Augmentation risk language from today's escalation thread."
+          },
+          {
+            "id": "eod-0616-wed-2",
+            "time": "11:00 AM",
+            "label": "1:1 Santiago & Jean",
+            "detail": "Outlook shows this before the Sara 1:1, creating a short morning run for portfolio and process follow-through."
+          },
+          {
+            "id": "eod-0616-wed-3",
+            "time": "11:30 AM",
+            "label": "Jean/Sara 1:1",
+            "detail": "Good place to confirm the leadership-presentation summary and decide whether Staff Augmentation should be framed as a win, risk, or escalation."
+          },
+          {
+            "id": "eod-0616-wed-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected midday space before the EPMO Team Meeting."
+          },
+          {
+            "id": "eod-0616-wed-5",
+            "time": "2:00 PM",
+            "label": "EPMO Team Meeting",
+            "detail": "Operational update forum for project spotlights, completed initiatives, new initiatives, and EPMO guidance. Use it if the Venn escalation, case-change routing, or Staff Aug update is ready for a wider audience."
+          },
+          {
+            "id": "eod-0616-wed-6",
+            "time": "3:30 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Outlook shows this after the EPMO Team Meeting, with agenda space for portfolio review, roadblocks, and next steps."
+          },
+          {
+            "id": "eod-0616-wed-7",
+            "time": "4:00 PM",
+            "label": "Focus time: weekly meeting preparation",
+            "detail": "End-of-day prep block for Thursday and Friday meetings."
+          }
+        ]
+      }
+    ]
+  }
+}
