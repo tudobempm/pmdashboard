@@ -72,7 +72,8 @@
     "task-20260616-staff-aug-it-alignment": true,
     "task-20260616-overdue-rippling-training": true,
     "task-20260616-confirm-joe-azul-waiting-items": true,
-    "task-20260616-case-change-overlap-path": true
+    "task-20260616-case-change-overlap-path": true,
+    "task-20260616-check-frank-report-requirements": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -154,5 +155,5 @@
       "archivedAt": "2026-06-16T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781645926287
+  "lastModified": 1781645937488
 }
