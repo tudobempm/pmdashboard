@@ -114,18 +114,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1781666120964",
-      "text": "Responder mensaje de Sara - importante",
-      "addedAt": "2026-06-17T03:15:20.964Z"
-    },
-    {
-      "id": "rem-1781666142436",
-      "text": "Preparar presentación para Reunión del Viernes sobre presentar EPMO",
-      "addedAt": "2026-06-17T03:15:42.436Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -169,7 +158,21 @@
       "addedAt": "2026-06-15T20:41:56.962Z",
       "shownInDigestId": "daily-2026-06-16-morning",
       "archivedAt": "2026-06-16T12:10:00.000Z"
+    },
+    {
+      "id": "rem-1781666120964",
+      "text": "Responder mensaje de Sara - importante",
+      "addedAt": "2026-06-17T03:15:20.964Z",
+      "shownInDigestId": "daily-2026-06-17-morning",
+      "archivedAt": "2026-06-17T12:10:00.000Z"
+    },
+    {
+      "id": "rem-1781666142436",
+      "text": "Preparar presentación para Reunión del Viernes sobre presentar EPMO",
+      "addedAt": "2026-06-17T03:15:42.436Z",
+      "shownInDigestId": "daily-2026-06-17-morning",
+      "archivedAt": "2026-06-17T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781666144902
+  "lastModified": 1781698200000
 }
