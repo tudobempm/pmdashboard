@@ -78,7 +78,8 @@
     "task-20260616-send-leadership-project-highlights": true,
     "task-20260617-schedule-next-pm-workshop": true,
     "task-20260617-staff-aug-touchpoint-prep": true,
-    "task-20260617-check-litify-field-audit-path": true
+    "task-20260617-check-litify-field-audit-path": true,
+    "task-20260617-reply-craftio-beta-scope": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -178,5 +179,5 @@
       "archivedAt": "2026-06-17T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781705272382
+  "lastModified": 1781711113124
 }
