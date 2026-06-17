@@ -76,7 +76,8 @@
     "task-20260616-check-frank-report-requirements": true,
     "task-20260616-coe-playbook-follow-up": true,
     "task-20260616-send-leadership-project-highlights": true,
-    "task-20260617-schedule-next-pm-workshop": true
+    "task-20260617-schedule-next-pm-workshop": true,
+    "task-20260617-staff-aug-touchpoint-prep": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -176,5 +177,5 @@
       "archivedAt": "2026-06-17T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781698734136
+  "lastModified": 1781698770223
 }
