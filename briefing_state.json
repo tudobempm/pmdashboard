@@ -119,6 +119,11 @@
       "id": "rem-1781666120964",
       "text": "Responder mensaje de Sara - importante",
       "addedAt": "2026-06-17T03:15:20.964Z"
+    },
+    {
+      "id": "rem-1781666142436",
+      "text": "Preparar presentación para Reunión del Viernes sobre presentar EPMO",
+      "addedAt": "2026-06-17T03:15:42.436Z"
     }
   ],
   "reminderHistory": [
@@ -166,5 +171,5 @@
       "archivedAt": "2026-06-16T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781666124006
+  "lastModified": 1781666144902
 }
