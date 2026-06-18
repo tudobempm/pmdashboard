@@ -1,0 +1,118 @@
+{
+  "digest": {
+    "id": "eod-2026-06-18",
+    "type": "eod",
+    "date": "Thursday, June 18 - End of Day",
+    "isoDate": "2026-06-18",
+    "greeting": "Jean, today closed a few concrete follow-ups: the Venn ticket escalation, the TRACE UAT follow-up, the Phase 2 SMS handoff, and one PMO/CM-CoE intake routing. The remaining focus is to keep Staff Augmentation, the Send Letters timeline, and Friday's EPMO material leadership-ready.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0618-done-1",
+            "label": "Closed the Venn ticket escalation carry-over",
+            "detail": "The consolidated Venn ticket-number follow-up is now marked complete after carrying forward from the prior EOD as the main unresolved escalation path."
+          },
+          {
+            "id": "eod-0618-done-2",
+            "label": "Closed the TRACE tasksets UAT follow-up",
+            "detail": "The Yuri follow-up on TRACE tasksets ready for UAT is now marked complete after being carried into today's reminder list."
+          },
+          {
+            "id": "eod-0618-done-3",
+            "label": "Confirmed the Phase 2 SMS handoff path for IT",
+            "detail": "The Phase 2 SMS handoff item is now marked complete after today's checklist focused on approvals, task lists, and named UAT testers before Friday's IT sync."
+          },
+          {
+            "id": "eod-0618-done-4",
+            "label": "Routed the AOS-Rejection Taskset intake",
+            "detail": "Jean sent the PMO and CM-CoE intake notifications and the requester acknowledgement for Javier Hurtado's AOS-Rejection Taskset request, with Mar Garcia and David Molano copied on the requester response."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0618-open-1",
+            "taskId": "task-20260618-unblock-staff-augmentation-it-ownership",
+            "label": "Secure Staff Augmentation IT ownership and scope",
+            "detail": "Keep the next step focused on a clear IT lead, Rippling/Microsoft 365 integration alignment, and permission for Salt Click to begin solution architecture. Nadia's meeting packet framed the current manual tracker and rising court volume as a business-critical risk.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0618-open-2",
+            "taskId": "task-20260618-prepare-send-letters-queue-timeline",
+            "label": "Bring back a realistic Send Letters Queue timeline",
+            "detail": "The morning digest tied this to Anu's stalled-project thread and Jhara's commitment to return after Procurement with Baesman status, parallel workstreams, next steps, and a target go-live path.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0618-open-3",
+            "taskId": "task-20260617-prepare-friday-epmo-presentation",
+            "label": "Shape Friday's EPMO presentation storyline",
+            "detail": "Use Friday's protected prep windows and leadership touchpoints to decide the proof points and whether Staff Augmentation, CoE metrics, Detention Prevention, and executive-project status should be framed as wins, risks, or follow-ups.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0618-open-4",
+            "taskId": "task-20260618-review-billing-intake-shannon-cooper",
+            "label": "Review the new Billing intake from Shannon Cooper",
+            "detail": "A new unread intake alert arrived late today from Janet McDowell for a Billing submission by Shannon Cooper. Review the Asana-linked request and decide the right routing or next action."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0618-fri-1",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Use this as the first Friday checkpoint for today's TRACE UAT completion and any Staff Augmentation ownership follow-through."
+          },
+          {
+            "id": "eod-0618-fri-2",
+            "time": "10:00 AM",
+            "label": "Phase 2 Weekly IT Projects Sync",
+            "detail": "Bring the Phase 2 SMS handoff status, UAT tester names, and any TRACE readiness notes that need IT visibility."
+          },
+          {
+            "id": "eod-0618-fri-3",
+            "time": "11:00 AM",
+            "label": "CoE Sync Jean",
+            "detail": "A good window to align with Mar and David on CoE ownership, intake routing, documentation cleanup, and what should carry into EPMO reporting."
+          },
+          {
+            "id": "eod-0618-fri-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protect for EPMO EOW prep, executive-project slides, and any Staff Augmentation or Send Letters follow-up from today."
+          },
+          {
+            "id": "eod-0618-fri-5",
+            "time": "1:30 PM",
+            "label": "EPMO EOW Check In and PM Team session overlap",
+            "detail": "Outlook shows EPMO EOW Check In and Get to Know the Project Management Team starting at the same time. Sara moved the EPMO check-in earlier and added Nadia for programmatic updates."
+          },
+          {
+            "id": "eod-0618-fri-6",
+            "time": "3:00 PM",
+            "label": "Executive Project Status Slide Update",
+            "detail": "Weekly deck update with Yuri, Jhara, and Mar; this is the natural deadline for the Friday EPMO presentation storyline."
+          },
+          {
+            "id": "eod-0618-fri-7",
+            "time": "3:30 PM",
+            "label": "IT Litify Sprint #12 Review",
+            "detail": "Sprint review with IT Software, project managers, and stakeholders; useful if SMS, UAT, or Litify-related dependencies need visibility."
+          }
+        ]
+      }
+    ]
+  }
+}
