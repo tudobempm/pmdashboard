@@ -120,7 +120,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1781743388436",
+      "text": "Seguimiento a Yuri - TRACE tasksets listos para UAT",
+      "addedAt": "2026-06-18T00:43:08.436Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -180,5 +186,5 @@
       "archivedAt": "2026-06-17T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781711119630
+  "lastModified": 1781743391629
 }
