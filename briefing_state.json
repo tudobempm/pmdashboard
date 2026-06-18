@@ -80,7 +80,8 @@
     "task-20260617-staff-aug-touchpoint-prep": true,
     "task-20260617-check-litify-field-audit-path": true,
     "task-20260617-reply-craftio-beta-scope": true,
-    "task-20260617-detention-pilot-approval-followup": true
+    "task-20260617-detention-pilot-approval-followup": true,
+    "task-20260615-collect-venn-ticket-numbers": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -187,5 +188,5 @@
       "archivedAt": "2026-06-18T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781784600000
+  "lastModified": 1781786175096
 }
