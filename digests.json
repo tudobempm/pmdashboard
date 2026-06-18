@@ -1,5 +1,178 @@
 [
   {
+    "id": "daily-2026-06-18-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, June 18",
+    "isoDate": "2026-06-18",
+    "greeting": "Thursday, June 18, Jean. Today is anchored by the Send Letters Queue touchpoint, the BCP/Incident Response weekly, the Jean/Sara 1:1, and Nadia's Staff Augmentation next-steps meeting. Outlook shows 7 meetings plus 1 protected block, with 1 carried-over escalation, 1 active reminder, and 3 urgent items. The priorities are to keep the Venn ticket escalation consolidated, use the Staff Augmentation meeting to secure IT ownership and alignment, bring a realistic Send Letters Queue timeline back after Procurement, and preserve time for Friday's EPMO presentation. Teams broad-thread discovery returned a Microsoft Graph 403 again, so Teams context is limited to targeted searches and missed-activity signals.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0618-co-1",
+            "taskId": "task-20260615-collect-venn-ticket-numbers",
+            "label": "Collect Venn ticket numbers for one escalation path",
+            "detail": "Keep one clean list of each TM's Venn ticket number, current blocker, and whether Venn is threatening closure. This remains the one unresolved carry-over from the latest daily digest and should stay consolidated so Danny, Nico, or IT are not working from separate partial threads.",
+            "flag": "carried",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0618-rem-1",
+            "taskId": "task-20260618-follow-up-yuri-trace-tasksets-uat",
+            "label": "Follow up with Yuri on TRACE tasksets ready for UAT",
+            "detail": "Dashboard reminder: \"Seguimiento a Yuri - TRACE tasksets listos para UAT.\" Use today's TRACE and Staff Aug context to confirm whether the tasksets are actually ready for UAT, who should test, and what needs to be captured before the Friday IT sync.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times shown in Jean's Outlook working timezone. The day has a useful 12:00-1:30 PM protected block, then a compressed afternoon from BCP/Incident Response through Tudo Bem.",
+        "items": [
+          {
+            "id": "thu-0618-cal-1",
+            "time": "10:30 AM",
+            "label": "1:1 Andrea and Jean",
+            "detail": "Good first checkpoint for queue, Litify, or UAT items before the Send Letters discussion starts."
+          },
+          {
+            "id": "thu-0618-cal-2",
+            "time": "11:00 AM",
+            "label": "Send Letters Queue Touchpoint",
+            "detail": "Prep-worthy. Anu flagged stalled progress, Baesman contract dependency, and BA capacity concerns; Jhara committed to come back after Procurement with a realistic timeline and go-live path."
+          },
+          {
+            "id": "thu-0618-cal-3",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Best protected block for Staff Aug meeting prep, Venn ticket consolidation, and Friday EPMO presentation shaping before the afternoon run begins."
+          },
+          {
+            "id": "thu-0618-cal-4",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Bring any survey, follow-up, or risk items that still need a named owner after this week's portfolio cleanup."
+          },
+          {
+            "id": "thu-0618-cal-5",
+            "time": "2:30 PM",
+            "label": "Jean/Sara 1:1",
+            "detail": "Useful leadership-framing window for CoE metrics, Friday EPMO presentation direction, and whether Staff Aug should be framed as a risk or escalation."
+          },
+          {
+            "id": "thu-0618-cal-6",
+            "time": "3:00 PM",
+            "label": "Staff Augmentation - Next Steps",
+            "detail": "Highest-risk meeting of the day. Nadia's packet frames the ask around IT alignment, a named IT owner, Rippling/M365 scope, and unblocking Salt Click design for a manual process now carrying revenue and client-risk exposure.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0618-cal-7",
+            "time": "3:30 PM",
+            "label": "Marketing and Legal Project Touchpoint",
+            "detail": "Eugenia and Laura are on the invite. Use it to clarify scope and approval handoffs so this does not become another loose dependency before tomorrow's project-heavy Friday."
+          },
+          {
+            "id": "thu-0618-cal-8",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Team coordination forum for roadblocks, workshop follow-through, and anything that needs to be assigned before Friday's EPMO and executive-project updates."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0618-action-1",
+            "taskId": "task-20260618-unblock-staff-augmentation-it-ownership",
+            "label": "Secure Staff Augmentation IT ownership and scope",
+            "detail": "Use the 3:00 PM meeting to drive toward a clear IT lead, Rippling/M365 integration alignment, and permission for Salt Click to begin solution architecture. The source packet frames this as a business-critical risk: the manual tracker has about 400 active rows, court volume is increasing, and the interim PowerQuery path is only a short-term patch.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0618-action-2",
+            "taskId": "task-20260618-prepare-send-letters-queue-timeline",
+            "label": "Bring a realistic Send Letters Queue timeline back after Procurement",
+            "detail": "Anu's thread says the project has stalled around the Baesman contract and asks whether requirements and planning can continue in parallel. Jhara replied that she will return after Procurement with next steps, Baesman status, parallel workstreams, and a target go-live so IT can size the effort. Make the 11:00 AM touchpoint produce that timeline.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0618-action-3",
+            "taskId": "task-20260617-prepare-friday-epmo-presentation",
+            "label": "Shape Friday's EPMO presentation storyline",
+            "detail": "Use the protected block to decide the Friday storyline and proof points. Sara's 1:1 is the best place to confirm whether Staff Augmentation, CoE metrics, Detention Prevention, and executive project status should be positioned as wins, risks, or follow-ups.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0618-action-4",
+            "taskId": "task-20260618-confirm-phase-2-sms-handoff-to-it",
+            "label": "Confirm Phase 2 SMS handoff is ready for IT",
+            "detail": "Jessica confirmed she can be the primary tester for supplements and renewals, and Mar's thread says the package can move to IT once approvals, task lists, and named UAT testers are complete. Confirm whether Craig and the remaining process owners are locked before tomorrow's Phase 2 IT sync."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0618-fri-1",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Follow-through window for today's TRACE UAT reminder and any Staff Aug ownership decisions that need to be carried into Friday."
+          },
+          {
+            "id": "thu-0618-fri-2",
+            "time": "10:00 AM",
+            "label": "Phase 2 Weekly IT Projects Sync",
+            "detail": "Bring the Phase 2 SMS handoff status, UAT tester names, and any TRACE taskset readiness notes."
+          },
+          {
+            "id": "thu-0618-fri-3",
+            "time": "11:00 AM",
+            "label": "CoE Sync Jean",
+            "detail": "Good place to align with Mar and David on CoE project ownership, documentation cleanup, and what should be carried into EPMO reporting."
+          },
+          {
+            "id": "thu-0618-fri-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protect for EPMO EOW prep, executive-project slides, and any follow-up from today's Staff Aug and Send Letters meetings."
+          },
+          {
+            "id": "thu-0618-fri-5",
+            "time": "1:00 PM",
+            "label": "EPMO EOW Check In",
+            "detail": "Sara moved this earlier and added Nadia for programmatic updates. Watch the 1:30 PM overlap with Get to Know the Project Management Team."
+          },
+          {
+            "id": "thu-0618-fri-6",
+            "time": "3:00 PM",
+            "label": "Executive Project Status Slide Update",
+            "detail": "Weekly deck update with Yuri, Jhara, and Mar. This is the natural deadline for the presentation storyline."
+          },
+          {
+            "id": "thu-0618-fri-7",
+            "time": "3:30 PM",
+            "label": "IT Litify Sprint #12 Review",
+            "detail": "Sprint review with IT Software and stakeholders. Useful if SMS, UAT, or Litify-related project dependencies need visibility."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-06-17",
     "type": "eod",
     "date": "Wednesday, June 17 - End of Day",
