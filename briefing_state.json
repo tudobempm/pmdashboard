@@ -83,7 +83,8 @@
     "task-20260617-detention-pilot-approval-followup": true,
     "task-20260615-collect-venn-ticket-numbers": true,
     "task-20260618-confirm-phase-2-sms-handoff-to-it": true,
-    "task-20260618-follow-up-yuri-trace-tasksets-uat": true
+    "task-20260618-follow-up-yuri-trace-tasksets-uat": true,
+    "task-20260616-prepare-pm-workshop-and-roadblocks": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -198,5 +199,5 @@
       "archivedAt": "2026-06-18T12:10:00.000Z"
     }
   ],
-  "lastModified": 1781789807864
+  "lastModified": 1781816615820
 }
