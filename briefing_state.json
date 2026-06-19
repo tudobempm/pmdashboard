@@ -85,7 +85,8 @@
     "task-20260618-confirm-phase-2-sms-handoff-to-it": true,
     "task-20260618-follow-up-yuri-trace-tasksets-uat": true,
     "task-20260616-prepare-pm-workshop-and-roadblocks": true,
-    "task-20260618-review-billing-intake-shannon-cooper": true
+    "task-20260618-review-billing-intake-shannon-cooper": true,
+    "task-20260618-prepare-send-letters-queue-timeline": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -207,5 +208,5 @@
       "archivedAt": "2026-06-19T12:05:00.000Z"
     }
   ],
-  "lastModified": 1781870700000
+  "lastModified": 1781872645950
 }
