@@ -1,0 +1,143 @@
+{
+  "digest": {
+    "id": "eod-2026-06-19",
+    "type": "eod",
+    "date": "Friday, June 19 - End of Day",
+    "isoDate": "2026-06-19",
+    "greeting": "Jean, today moved several follow-up loops off the active list across Staff Augmentation, Send Letters, Mar's coverage/access items, Calendar-Based SMS Automation, Case Change, and the Toggl reminder path. The main carry-forward work is now narrower: finish the EPMO storyline, turn the KPI set into SMART goals, and watch Jessica's Tuesday Case Change deliverables.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0619-done-1",
+            "label": "Closed today's Staff Augmentation ownership follow-up",
+            "detail": "The Staff Augmentation ownership, scope, and date follow-up is now marked complete after today's TRACE/Staff Aug and EPMO focus blocks."
+          },
+          {
+            "id": "eod-0619-done-2",
+            "label": "Closed the Send Letters Queue timeline follow-up",
+            "detail": "The Send Letters timeline item is now marked complete after carrying forward as the main path to unblock BA capacity and go-live planning concerns."
+          },
+          {
+            "id": "eod-0619-done-3",
+            "label": "Handled Mar Garcia's June 19 leave request",
+            "detail": "The same-day leave request follow-up is now complete, clearing the coverage decision that was tied to CoE Sync and document-heavy work."
+          },
+          {
+            "id": "eod-0619-done-4",
+            "label": "Closed the follow-up on Mar's document-access ticket",
+            "detail": "The document-access ticket follow-up is now complete after Mar reported that she could not open documents of any type."
+          },
+          {
+            "id": "eod-0619-done-5",
+            "label": "Triaged Calendar-Based SMS Automation",
+            "detail": "The Calendar-Based SMS Automation item is now complete after being flagged as an active Litify project that needed routing through Phase 2, Sprint review, or EPMO reporting."
+          },
+          {
+            "id": "eod-0619-done-6",
+            "label": "Reviewed the Case Change scoping follow-up",
+            "detail": "Jessica's Case Change follow-up is now marked complete, and the latest email gives a clearer next step for Tuesday."
+          },
+          {
+            "id": "eod-0619-done-7",
+            "label": "Confirmed the Toggl reminder path",
+            "detail": "The Toggl nudge follow-up is now complete after Jhara asked whether it could become a recurring reminder."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0619-open-1",
+            "taskId": "task-20260617-prepare-friday-epmo-presentation",
+            "label": "Finish the EPMO presentation storyline",
+            "detail": "Keep the storyline focused on the proof points and risk framing from Staff Augmentation, Send Letters, CoE metrics, and active CM-CoE intake movement.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0619-open-2",
+            "taskId": "task-20260619-work-smart-goals-kpis",
+            "label": "Work SMART goals from the KPI set",
+            "detail": "The reminder to turn KPIs into SMART goals is still open. Janet's EPMO Leadership context tied the KPI set and SMART goals together, so this should stay close to the EPMO storyline.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0619-open-3",
+            "taskId": "task-20260619-track-case-change-tuesday-deliverables",
+            "label": "Track Jessica's Tuesday Case Change deliverables",
+            "detail": "Jessica wrote that she should be able to send the process map and IT spreadsheet by Tuesday after narrowing the scope so new-contract tasks are no longer needed. Keep this as the next Case Change checkpoint."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0619-decision-1",
+            "label": "Case Change scope was narrowed",
+            "detail": "Jessica shared that Raquel agreed to remove tasks involving new contracts, so the previous project scope should not need to expand. Jessica expects to send the process map and IT spreadsheet by Tuesday."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0619-mon-1",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Start Monday with the normal admin block before the TRACE and Staff Aug thread resumes."
+          },
+          {
+            "id": "eod-0619-mon-2",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Follow-up point for Staff Augmentation owners, MVP scope due June 23, and any TRACE readiness decisions from today."
+          },
+          {
+            "id": "eod-0619-mon-3",
+            "time": "11:00 AM",
+            "label": "1:1 Shelley & Jean",
+            "detail": "Use this needs/support conversation to clarify any department support items that should not get lost behind Staff Aug and EPMO follow-ups."
+          },
+          {
+            "id": "eod-0619-mon-4",
+            "time": "11:30 AM",
+            "label": "EPMO Portfolio Review",
+            "detail": "Outlook shows this review late Monday morning. Use it to review new project requests and assign next steps."
+          },
+          {
+            "id": "eod-0619-mon-5",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Useful for Staff Aug action-plan cleanup, SMART-goals drafting, or EPMO storyline polish before the afternoon."
+          },
+          {
+            "id": "eod-0619-mon-6",
+            "time": "2:00 PM",
+            "label": "Exciting NEW project touchpoint re/Mental Health",
+            "detail": "Outlook shows this new project touchpoint with Mar Garcia in the early afternoon."
+          },
+          {
+            "id": "eod-0619-mon-7",
+            "time": "3:00 PM",
+            "label": "Jean/Sara 1:1 + Midyear",
+            "detail": "Bring the final Friday EPMO storyline, Staff Aug risk framing, and SMART-goals/KPI notes from the base Monday preview."
+          },
+          {
+            "id": "eod-0619-mon-8",
+            "time": "4:00 PM",
+            "label": "Send Letters Queue Touchpoint",
+            "detail": "Use this as the next checkpoint if the timeline or go-live path still needs confirmation after today."
+          }
+        ]
+      }
+    ]
+  }
+}
