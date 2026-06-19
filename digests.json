@@ -1,5 +1,233 @@
 [
   {
+    "id": "daily-2026-06-19-morning",
+    "type": "daily",
+    "date": "Morning - Friday, June 19",
+    "isoDate": "2026-06-19",
+    "greeting": "Friday, June 19, Jean. Today is anchored by TRACE/Staff Aug, the Phase 2 IT sync, CoE Sync, the EPMO EOW check-in, Executive Project Status Slide Update, and the Litify Sprint #12 review. Outlook shows 7 meetings plus 1 protected block, with 3 carried-over priorities, 1 active reminder, and 4 urgent items. The day should stay focused on locking Staff Augmentation ownership and dates, bringing Send Letters back to a realistic timeline, making the EPMO storyline leadership-ready, and handling the Mar access/leave coverage risk before the afternoon reporting block. Teams broad-thread discovery again returned a Microsoft Graph 403, so Teams context is limited to readable unread chats and targeted searches.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0619-co-1",
+            "taskId": "task-20260618-unblock-staff-augmentation-it-ownership",
+            "label": "Lock Staff Augmentation ownership, scope, and dates",
+            "detail": "Nadia's action plan sharpened the open work: Duvan owns the latest PRD, process flows, handoff documentation, and outstanding follow-ups; Yuri and Nadia need MVP scope and roadmap by June 23; Josh and Deepak need BA and architect assignment by June 29; Rippling ownership is still a risk. Use today's TRACE/Staff Aug and EPMO blocks to make the next owners and dates explicit.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0619-co-2",
+            "taskId": "task-20260618-prepare-send-letters-queue-timeline",
+            "label": "Bring back the Send Letters Queue timeline",
+            "detail": "Jhara committed to return after Procurement with Baesman status, the workstreams that can continue in parallel, and a target go-live path so IT can size the effort. This remains the cleanest way to unblock Anu's concern about BA capacity and stalled requirements.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0619-co-3",
+            "taskId": "task-20260617-prepare-friday-epmo-presentation",
+            "label": "Make the EPMO presentation storyline leadership-ready",
+            "detail": "Use the 12:00 PM block, 1:30 PM EPMO check-in, and 3:00 PM Executive Project Status Slide Update to decide the proof points and risk framing. Staff Augmentation, Send Letters, CoE metrics, and active CM-CoE intake movement are the likely story anchors.",
+            "flag": "carried",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0619-rem-1",
+            "taskId": "task-20260619-work-smart-goals-kpis",
+            "label": "Work SMART goals from the KPI set",
+            "detail": "Dashboard reminder: \"Trabajar SMART goals de KPIs.\" Janet also confirmed in EPMO Leadership that KPIs and SMART goals go together, with KPIs already reviewed at a high level. Convert the KPI set into SMART goals for PM/PE follow-through while the EPMO storyline is fresh.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times shown in Jean's Outlook working timezone. The day has a protected 12:00 PM block, then a compressed afternoon with a 1:30 PM overlap between EPMO EOW Check In and Get to Know the Project Management Team.",
+        "items": [
+          {
+            "id": "fri-0619-cal-1",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "First checkpoint for TRACE readiness and Staff Augmentation ownership follow-through after Nadia's action plan."
+          },
+          {
+            "id": "fri-0619-cal-2",
+            "time": "10:00 AM",
+            "label": "Phase 2 Weekly IT Projects Sync",
+            "detail": "Bring Phase 2 SMS status, Calendar-Based SMS Automation intake context, and any UAT or Litify dependencies that need IT visibility."
+          },
+          {
+            "id": "fri-0619-cal-3",
+            "time": "11:00 AM",
+            "label": "CoE Sync Jean",
+            "detail": "Prep-worthy because Mar has both a same-day leave request and a document-access ticket. Use this to align on CoE ownership, active intakes, and what can still move today."
+          },
+          {
+            "id": "fri-0619-cal-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Best protected block for EPMO slides, SMART goals from KPIs, and Staff Augmentation action-plan cleanup before the afternoon reporting run."
+          },
+          {
+            "id": "fri-0619-cal-5",
+            "time": "1:30 PM",
+            "label": "EPMO EOW Check In and PM Team session overlap",
+            "detail": "Outlook shows EPMO EOW Check In and Get to Know the Project Management Team at the same time. The EPMO check-in was moved earlier and includes Nadia for programmatic updates, so decide which coverage matters most."
+          },
+          {
+            "id": "fri-0619-cal-6",
+            "time": "3:00 PM",
+            "label": "Executive Project Status Slide Update",
+            "detail": "Natural deadline for the EPMO storyline, Staff Augmentation action-plan framing, Send Letters timeline status, and active CM-CoE intake updates."
+          },
+          {
+            "id": "fri-0619-cal-7",
+            "time": "3:30 PM",
+            "label": "IT Litify Sprint #12 Review",
+            "detail": "Sprint review with IT Software, project managers, and stakeholders. Useful if SMS automation, UAT readiness, or Litify deployment dependencies need visibility."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0619-action-1",
+            "taskId": "task-20260619-review-mar-garcia-leave-request",
+            "label": "Approve or route Mar Garcia's leave request",
+            "detail": "Rippling sent a same-day leave request for Mar for June 19. Decide whether to approve it and adjust CoE Sync coverage accordingly, especially because Mar also reported a document-access issue last night.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0619-action-2",
+            "taskId": "task-20260619-resolve-mar-doc-access-ticket",
+            "label": "Escalate Mar's document-access ticket if it blocks CoE work",
+            "detail": "Mar reported ticket 0030415 and said she cannot open documents of any type. If the issue affects CoE Sync, the Executive Project deck, or PMO/CM-CoE intake work, get the ticket in front of IT early."
+          },
+          {
+            "id": "fri-0619-action-3",
+            "taskId": "task-20260619-triage-calendar-based-sms-automation",
+            "label": "Triage Calendar-Based SMS Automation now that it is an active project",
+            "detail": "Asana and intake emails show Calendar-Based SMS Automation for Litify was converted/shared as a project and routed through CM-CoE/PMO intake. Decide whether it belongs in today's Phase 2 IT sync, Sprint #12 review, or the EPMO project-status update."
+          },
+          {
+            "id": "fri-0619-action-4",
+            "taskId": "task-20260619-review-case-change-scoping-followup",
+            "label": "Review Jessica's Case Change scoping follow-up",
+            "detail": "Jessica sent a Scoping Follow-up: Case Change Process meeting item yesterday afternoon. Review whether this needs a next owner, a clarified scope, or a spot in the EPMO/CoE follow-up queue."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0619-email-1",
+            "taskId": "task-20260618-unblock-staff-augmentation-it-ownership",
+            "label": "Nadia's Staff Augmentation action plan needs owner/date confirmation",
+            "detail": "The unread action-plan email sets immediate and short-term dates for PRD/process flow sharing, deep dives, BA/architect assignment, MVP scope, roadmap, Rippling discovery, and Salt Click SOW revision. Reply or use today's meetings to confirm which dates are committed versus aspirational.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0619-email-2",
+            "taskId": "task-20260619-review-mar-garcia-leave-request",
+            "label": "Mar Garcia leave request is waiting in Rippling",
+            "detail": "The request is specifically for June 19. If approved, Mar should fully disconnect, so coverage for today's CoE and document-heavy work needs to be explicit."
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0619-teams-1",
+            "taskId": "task-20260619-resolve-mar-doc-access-ticket",
+            "label": "Mar reported ticket 0030415 for blocked document access",
+            "detail": "Unread 1:1 Teams messages from Mar say: \"Nuevo ticket\" and \"no puedo abrir docs de ningun tipo.\" Treat this as a practical blocker if she is expected to support CoE, EPMO deck, or intake documentation today."
+          },
+          {
+            "id": "fri-0619-teams-2",
+            "taskId": "task-20260619-confirm-toggl-reminder-path",
+            "label": "Decide whether the Toggl nudge becomes a recurring reminder",
+            "detail": "In Tudo Bem! - PM Phase 2 Team, Jhara responded to Jean's Toggl nudge with a request to make it a reminder. Decide whether this should become a formal team reminder or stay as an informal chat nudge."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0619-ooo-1",
+            "label": "Mar Garcia requested leave for today",
+            "detail": "Rippling shows a leave request for Mar Garcia for June 19. If approved, avoid relying on her for live CoE/document work today and identify backup coverage."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0619-mon-1",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Start Monday with the normal admin block before the TRACE and Staff Aug thread resumes."
+          },
+          {
+            "id": "fri-0619-mon-2",
+            "time": "9:30 AM",
+            "label": "TRACE & Staff Aug touchpoint",
+            "detail": "Follow-up point for Staff Augmentation owners, MVP scope due June 23, and any TRACE readiness decisions from today."
+          },
+          {
+            "id": "fri-0619-mon-3",
+            "time": "11:00 AM",
+            "label": "1:1 Shelley & Jean",
+            "detail": "Use this needs/support conversation to clarify any department support items that should not get lost behind Staff Aug and EPMO follow-ups."
+          },
+          {
+            "id": "fri-0619-mon-4",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Useful for Staff Aug action-plan cleanup or SMART-goals drafting before the leadership-heavy afternoon."
+          },
+          {
+            "id": "fri-0619-mon-5",
+            "time": "2:00 PM",
+            "label": "EPMO Portfolio Review",
+            "detail": "Review new project requests and assign next steps; Calendar-Based SMS Automation and CLR Visibility may need routing clarity if not closed today."
+          },
+          {
+            "id": "fri-0619-mon-6",
+            "time": "3:00 PM",
+            "label": "Jean/Sara 1:1 + Midyear",
+            "detail": "Sara extended this to an hour for midpoint discussion. Bring the final Friday EPMO storyline, Staff Aug risk framing, and SMART-goals/KPI notes."
+          },
+          {
+            "id": "fri-0619-mon-7",
+            "time": "4:00 PM",
+            "label": "Send Letters Queue Touchpoint",
+            "detail": "Monday has another Send Letters touchpoint; use it as the next checkpoint if today's timeline does not land."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-06-18",
     "type": "eod",
     "date": "Thursday, June 18 - End of Day",

@@ -133,13 +133,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1781834123555",
-      "text": "Trabajar SMART goals de KPIs",
-      "addedAt": "2026-06-19T01:55:23.555Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -204,7 +198,14 @@
       "addedAt": "2026-06-18T00:43:08.436Z",
       "shownInDigestId": "daily-2026-06-18-morning",
       "archivedAt": "2026-06-18T12:10:00.000Z"
+    },
+    {
+      "id": "rem-1781834123555",
+      "text": "Trabajar SMART goals de KPIs",
+      "addedAt": "2026-06-19T01:55:23.555Z",
+      "shownInDigestId": "daily-2026-06-19-morning",
+      "archivedAt": "2026-06-19T12:05:00.000Z"
     }
   ],
-  "lastModified": 1781834126925
+  "lastModified": 1781870700000
 }
