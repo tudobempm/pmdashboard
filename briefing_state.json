@@ -133,6 +133,10 @@
     "task-20260618-prepare-send-letters-queue-timeline": {
       "emoji": "📌",
       "ts": 1781786202372
+    },
+    "task-20260619-work-smart-goals-kpis": {
+      "emoji": "❗",
+      "ts": 1782125244266
     }
   },
   "edits": {},
@@ -210,5 +214,5 @@
       "archivedAt": "2026-06-19T12:05:00.000Z"
     }
   ],
-  "lastModified": 1782125232864
+  "lastModified": 1782125246549
 }
