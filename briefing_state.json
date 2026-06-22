@@ -95,7 +95,8 @@
     "task-20260619-review-mar-garcia-leave-request": true,
     "task-20260622-prepare-mental-health-touchpoint": true,
     "task-20260622-use-staff-aug-touchpoint-for-open-asks": true,
-    "task-20260617-prepare-friday-epmo-presentation": true
+    "task-20260617-prepare-friday-epmo-presentation": true,
+    "task-20260622-approve-pending-timecards": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -223,5 +224,5 @@
       "archivedAt": "2026-06-19T12:05:00.000Z"
     }
   ],
-  "lastModified": 1782162629533
+  "lastModified": 1782162632402
 }
