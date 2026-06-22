@@ -133,10 +133,6 @@
     "task-20260618-prepare-send-letters-queue-timeline": {
       "emoji": "📌",
       "ts": 1781786202372
-    },
-    "task-20260617-prepare-friday-epmo-presentation": {
-      "emoji": "📌",
-      "ts": 1781786208762
     }
   },
   "edits": {},
@@ -214,5 +210,5 @@
       "archivedAt": "2026-06-19T12:05:00.000Z"
     }
   ],
-  "lastModified": 1781881113572
+  "lastModified": 1782125232864
 }
