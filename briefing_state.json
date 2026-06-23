@@ -147,13 +147,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1782162620093",
-      "text": "Actualizar hoja de proyectos para Jorge (portafolio de Jill)",
-      "addedAt": "2026-06-22T21:10:20.093Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -225,7 +219,14 @@
       "addedAt": "2026-06-19T01:55:23.555Z",
       "shownInDigestId": "daily-2026-06-19-morning",
       "archivedAt": "2026-06-19T12:05:00.000Z"
+    },
+    {
+      "id": "rem-1782162620093",
+      "text": "Actualizar hoja de proyectos para Jorge (portafolio de Jill)",
+      "addedAt": "2026-06-22T21:10:20.093Z",
+      "shownInDigestId": "daily-2026-06-23-morning",
+      "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782162642226
+  "lastModified": 1782216262324
 }
