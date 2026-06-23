@@ -150,6 +150,10 @@
     "task-20260619-work-smart-goals-kpis": {
       "emoji": "❗",
       "ts": 1782125244266
+    },
+    "task-20260623-update-jorge-project-sheet": {
+      "emoji": "⭐",
+      "ts": 1782255724792
     }
   },
   "edits": {},
@@ -234,5 +238,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782247119149
+  "lastModified": 1782255727682
 }
