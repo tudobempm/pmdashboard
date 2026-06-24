@@ -107,7 +107,8 @@
     "task-20260623-prepare-intake-workflow-alignment": true,
     "task-20260623-clarify-vendors-trace-owner": true,
     "task-20260624-track-mar-mhe-angel-response": true,
-    "task-20260624-use-coe-touchpoint-for-capacity": true
+    "task-20260624-use-coe-touchpoint-for-capacity": true,
+    "task-20260624-confirm-trace-followon-placement": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -240,5 +241,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782304545235
+  "lastModified": 1782305073169
 }
