@@ -161,7 +161,14 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1782344470983",
+      "text": "Hablar con Camilo: cambio de estructura y soporte para MHe RFE",
+      "addedAt": "2026-06-24T23:41:10.983Z",
+      "scheduledFor": "2026-06-29"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -242,5 +249,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782344422225
+  "lastModified": 1782344473171
 }
