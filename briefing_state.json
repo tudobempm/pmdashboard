@@ -111,7 +111,8 @@
     "task-20260624-confirm-trace-followon-placement": true,
     "task-20260624-assign-mhe-rfe-pe": true,
     "task-20260624-prepare-jorge-transition-inputs": true,
-    "task-20260625-prepare-chicago-debrief-epmo": true
+    "task-20260625-prepare-chicago-debrief-epmo": true,
+    "task-20260625-align-court-pm-pe-transition": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -255,5 +256,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782390232218
+  "lastModified": 1782390233889
 }
