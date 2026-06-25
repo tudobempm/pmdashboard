@@ -1,5 +1,151 @@
 [
   {
+    "id": "eod-2026-06-25",
+    "type": "eod",
+    "date": "Thursday, June 25 - End of Day",
+    "isoDate": "2026-06-25",
+    "greeting": "Jean, today moved several transition and portfolio items forward, including the Chicago debrief follow-through, Court and PM/PE alignment, SLQ tracking, ICE Preparedness risk review, and Jorge's project-sheet update. The main carry-forward work is now tighter: finish the KPI SMART goals, schedule the July 1 alignment follow-ups, and keep the new COI/Send Letters Queue support loop clean for Tuesday.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0625-done-1",
+            "label": "Updated Jorge's project sheet for Jill's portfolio",
+            "detail": "The tracker update for Jill's June 30 portfolio meeting was completed today, including the project-status cleanup needed before that discussion."
+          },
+          {
+            "id": "eod-0625-done-2",
+            "label": "Used the Chicago debrief to reset priorities",
+            "detail": "The Chicago debrief follow-through was completed, giving today's transition, CoE, Court, and project-priority conversations a clearer baseline."
+          },
+          {
+            "id": "eod-0625-done-3",
+            "label": "Aligned Court and PM/PE transition implications with Eugenia",
+            "detail": "The PM/PE transition item tied to Court priorities and Eugenia's historical context was completed today."
+          },
+          {
+            "id": "eod-0625-done-4",
+            "label": "Tracked the Baesman path for Send Letters Queue",
+            "detail": "The Send Letters Queue Baesman path was completed for today, with the amendment and procurement path kept visible."
+          },
+          {
+            "id": "eod-0625-done-5",
+            "label": "Pressure-checked ICE Preparedness pilot risks",
+            "detail": "The ICE Preparedness risk review was completed today, covering launch timing, approvals, data source, capacity, and field-dependency concerns."
+          },
+          {
+            "id": "eod-0625-done-6",
+            "label": "Kept Santiago's SharePoint export issue on watch",
+            "detail": "The SharePoint export issue was tracked today and remained a light operational watch item rather than a larger blocker."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0625-open-1",
+            "taskId": "task-20260619-work-smart-goals-kpis",
+            "label": "Turn the KPI set into SMART goals",
+            "detail": "Keep this as the top carry-forward item. Jorge clarified in Teams that the midyear path is to set KPIs in Rippling and hold 1:1s so each team member understands how they will be rated by year-end.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0625-open-2",
+            "taskId": "task-20260624-follow-up-reorg-conversations",
+            "label": "Schedule July 1 alignment follow-ups",
+            "detail": "The team-alignment follow-ups still need to be scheduled around the July 1 structure change. Sara also shared a cleaned-up announcement image and noted that the prior version was fine for the earlier conversations.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0625-open-3",
+            "taskId": "task-20260625-complete-leadup-module-2a-check",
+            "label": "Complete the LeadUp Module 2A knowledge check",
+            "detail": "This remains a small closeout item from the LeadUp Module 2A request and should stay behind the larger KPI and transition work."
+          },
+          {
+            "id": "eod-0625-open-4",
+            "taskId": "task-20260625-capture-sara-epmo-liderazgo-update",
+            "label": "Capture Sara's EPMO Liderazgo update",
+            "detail": "Keep the useful parts of Sara's update together: midyear timing, CoE progress, VAWA escalation discipline, Court priority changes, and the reorg announcement context."
+          },
+          {
+            "id": "eod-0625-open-5",
+            "taskId": "task-20260625-follow-coi-slq-legal-guidance",
+            "label": "Follow the COI and Send Letters Queue support loop",
+            "detail": "Jhara said she sent a Tuesday invite and that the COI and Send Letters Queue projects will move forward after last week's feedback. Andrea also noted that the note needs Legal feedback and guidance."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0625-decision-1",
+            "label": "Extra capacity can include paid overtime",
+            "detail": "Sara confirmed in EPMO Liderazgo that extra hours would be paid, EOR versus freelance status should not block the option, and new projects should be sized against current bandwidth plus reasonable overtime."
+          },
+          {
+            "id": "eod-0625-decision-2",
+            "label": "COI and Send Letters Queue are moving into the next support step",
+            "detail": "Jhara said a Tuesday invite was sent and that, with feedback from last week's email, the team will move forward with COI and Send Letters Queue."
+          },
+          {
+            "id": "eod-0625-decision-3",
+            "label": "Upsell Conversion Tracking is not BD's top priority this week",
+            "detail": "Janet's Asana update said Matt and Anthony do not see it as the top BD priority right now, the team will revisit next week, and Revenue Cloud may solve much of the product-tracking need."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0625-fri-1",
+            "time": "All day",
+            "label": "David Molano OOO and Sara OOO",
+            "detail": "Friday still shows all-day OOO blocks for David and Sara, so use tomorrow's meetings for focused updates rather than broad dependency-heavy decisions."
+          },
+          {
+            "id": "eod-0625-fri-2",
+            "time": "10:00 AM",
+            "label": "Update Weekly Deck",
+            "detail": "Short weekly deck update with Mar. Sara also reminded the Weekly Executive Project Updates group to make Friday updates by end of day or before leaving for the weekend."
+          },
+          {
+            "id": "eod-0625-fri-3",
+            "time": "11:00 AM",
+            "label": "CoE Sync Jean is canceled",
+            "detail": "Outlook shows the CoE Sync Jean instance as canceled, so do not rely on that slot for Mar/David CoE follow-through."
+          },
+          {
+            "id": "eod-0625-fri-4",
+            "time": "11:30 AM",
+            "label": "First Touchpoint w/Jean",
+            "detail": "Transition touchpoint with Nicolas, Thiago, and Laura to discuss the new structure and expectations."
+          },
+          {
+            "id": "eod-0625-fri-5",
+            "time": "1:00 PM",
+            "label": "EPMO EOW Check In",
+            "detail": "Sara moved this one hour earlier and added Nadia so programmatic updates can be included. Outlook still shows Jean has not responded."
+          },
+          {
+            "id": "eod-0625-fri-6",
+            "time": "3:00 PM",
+            "label": "Executive Project Status Slide Update",
+            "detail": "Weekly executive-project slide update. Outlook notes the update cadence has moved to Fridays, and Mar has declined this instance."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-06-25-morning",
     "type": "daily",
     "date": "Morning - Thursday, June 25",
