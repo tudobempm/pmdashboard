@@ -168,6 +168,10 @@
     "task-20260624-follow-up-reorg-conversations": {
       "emoji": "❗",
       "ts": 1782344501021
+    },
+    "task-20260625-complete-leadup-module-2a-check": {
+      "emoji": "❗",
+      "ts": 1782421879308
     }
   },
   "edits": {},
@@ -259,5 +263,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782390279696
+  "lastModified": 1782421882274
 }
