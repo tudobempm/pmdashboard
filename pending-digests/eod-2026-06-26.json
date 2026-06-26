@@ -1,0 +1,172 @@
+{
+  "digest": {
+    "id": "eod-2026-06-26",
+    "type": "eod",
+    "date": "Friday, June 26 - End of Day",
+    "isoDate": "2026-06-26",
+    "greeting": "Jean, Friday closed with several practical transition and portfolio items moved forward: the July 1 follow-ups, Staff Aug RACI cleanup, Sprint #13 review, COI/Send Letters Queue preparation, and the Incident Response update. Monday is set up around midyear, department-support, portfolio review, and one reminder to talk with Camilo about the structure change and MHE RFE support.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0626-done-1",
+            "label": "Scheduled the July 1 alignment follow-ups",
+            "detail": "The follow-up loop for the new reporting structure was completed today, keeping the transition conversations with Thiago, Gustavo, Nico, and affected team members from drifting into Monday."
+          },
+          {
+            "id": "eod-0626-done-2",
+            "label": "Confirmed the Staff Augmentation RACI source path",
+            "detail": "The RACI-source question for Staff Augmentation was closed for today before the late-day MVP alignment discussion."
+          },
+          {
+            "id": "eod-0626-done-3",
+            "label": "Reviewed Sprint #13 for capacity and priority pressure",
+            "detail": "The Sprint #13 project load was reviewed with the ICE Preparedness, Court Litify, MHE, Deadline Management, Case Withdrawal, Forms Automation, and Unresponsive Refunds workstreams in view."
+          },
+          {
+            "id": "eod-0626-done-4",
+            "label": "Prepared the COI and Send Letters Queue support path",
+            "detail": "The Tuesday support path for COI and Send Letters Queue was completed for today, including the need to keep Legal feedback and guidance visible."
+          },
+          {
+            "id": "eod-0626-done-5",
+            "label": "Tracked Baesman amendment language for Send Letters Queue 2.0",
+            "detail": "The Baesman amendment-language thread was reviewed and kept visible as the next procurement signal for the SLQ 2.0 path."
+          },
+          {
+            "id": "eod-0626-done-6",
+            "label": "Kept EOW work practical while Sara was out",
+            "detail": "The EOW slot was treated as an update and blocker-collection space, not a place for decisions that needed Sara's approval."
+          },
+          {
+            "id": "eod-0626-done-7",
+            "label": "Recorded overtime interest as exploratory only",
+            "detail": "The overtime-capacity signal was handled carefully today: interest was noted, but it was not treated as approved project capacity."
+          },
+          {
+            "id": "eod-0626-done-8",
+            "label": "Sent the Incident Response project update to Danny",
+            "detail": "Jean sent Danny the current Incident Response timeline and status, including the completed foundation work, the remaining IRG deliverables, and the July 15 draft-completion target."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0626-open-1",
+            "taskId": "task-20260619-work-smart-goals-kpis",
+            "label": "Turn the KPI set into SMART goals",
+            "detail": "Keep this first for Monday. The midyear path still depends on turning the KPI set into concrete SMART goals before the Jean Midyear block.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0626-open-2",
+            "taskId": "task-20260625-complete-leadup-module-2a-check",
+            "label": "Complete the LeadUp Module 2A knowledge check",
+            "detail": "The training closeout is still open and remains a small but visible item behind the KPI and transition work.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0626-open-3",
+            "taskId": "task-20260626-finish-weekly-executive-updates",
+            "label": "Finish the weekly executive updates",
+            "detail": "The Friday update loop still needs to be clean enough for Monday team-lead review, especially around Court, CM-CoE, Staff Augmentation, Sprint #13, and portfolio status changes.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0626-open-4",
+            "taskId": "task-20260626-review-ic-communication-guide",
+            "label": "Decide how to use the IC communication guide",
+            "detail": "Sara forwarded Samantha Holmes' Inventory Control Communication & Engagement Guide and asked whether Samantha may join next week's meeting. Decide whether this belongs in an EPMO discussion and whether Jean should review the deck first."
+          },
+          {
+            "id": "eod-0626-open-5",
+            "taskId": "task-20260626-confirm-dnc-enhancements-tester",
+            "label": "Confirm the tester for the DNC enhancements",
+            "detail": "Mar said no further action is needed on the broader DNC request because the tickets already exist under Leo's initial request. The remaining loose end is confirming who will test the new functionality."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0626-cancel-1",
+            "time": "11:00 AM",
+            "label": "CoE Sync Jean was canceled",
+            "detail": "Outlook shows the CoE Sync Jean instance as canceled, so that slot did not carry the Mar/David CoE follow-through today."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0626-decision-1",
+            "label": "DNC enhancements will continue under the existing request path",
+            "detail": "Mar confirmed that no further action is needed on the broader DNC enhancement request because the related tickets were already created under Leo's initial request; only tester ownership remains open."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0626-mon-1",
+            "time": "All day",
+            "label": "David Molano has a COL holiday OOO block",
+            "detail": "Outlook shows David out on Monday, so avoid placing CoE or Staff Augmentation dependencies on him without confirming availability."
+          },
+          {
+            "id": "eod-0626-mon-2",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Use the regular Monday admin block to clear small open items before the meeting stack starts."
+          },
+          {
+            "id": "eod-0626-mon-3",
+            "time": "10:00 AM",
+            "label": "Quick Amazon Connect/Agentforce Voice Debrief",
+            "detail": "Nadia, Thiago, and Jean are on the calendar for a short debrief before midyear."
+          },
+          {
+            "id": "eod-0626-mon-4",
+            "time": "10:30 AM",
+            "label": "Jean Midyear",
+            "detail": "Have the SMART KPI goals and any team-transition implications ready before this meeting."
+          },
+          {
+            "id": "eod-0626-mon-5",
+            "time": "11:00 AM",
+            "label": "1:1 Shelley & Jean",
+            "detail": "Department-needs and support conversation immediately after midyear."
+          },
+          {
+            "id": "eod-0626-mon-6",
+            "time": "2:00 PM",
+            "label": "EPMO Portfolio Review",
+            "detail": "Weekly review of new project requests and next-step assignments."
+          },
+          {
+            "id": "eod-0626-mon-7",
+            "time": "3:45 PM",
+            "label": "PM Feedback",
+            "detail": "Sara, Eugenia, Stephanie Baily, and Jean are on the calendar for the short PM feedback block."
+          },
+          {
+            "id": "eod-0626-mon-8",
+            "label": "Talk with Camilo about the structure change and MHE RFE support",
+            "detail": "A dashboard reminder is scheduled for Monday: talk with Camilo about the structure change and support for MHE RFE."
+          }
+        ]
+      }
+    ]
+  }
+}
