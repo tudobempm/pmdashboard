@@ -123,7 +123,8 @@
     "task-20260626-prepare-coi-slq-tuesday-support": true,
     "task-20260626-review-slq-baesman-amendment-language": true,
     "task-20260626-use-eow-without-sara": true,
-    "task-20260626-note-overtime-interest-not-approved": true
+    "task-20260626-note-overtime-interest-not-approved": true,
+    "task-20260624-follow-up-reorg-conversations": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -271,5 +272,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782477955593
+  "lastModified": 1782481887490
 }
