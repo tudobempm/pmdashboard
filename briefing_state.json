@@ -119,7 +119,8 @@
     "task-20260625-capture-sara-epmo-liderazgo-update": true,
     "task-20260625-follow-coi-slq-legal-guidance": true,
     "task-20260626-confirm-staff-aug-raci-source": true,
-    "task-20260626-review-sprint-13-project-load": true
+    "task-20260626-review-sprint-13-project-load": true,
+    "task-20260626-prepare-coi-slq-tuesday-support": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -267,5 +268,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782477934749
+  "lastModified": 1782477936760
 }
