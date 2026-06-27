@@ -126,7 +126,8 @@
     "task-20260626-note-overtime-interest-not-approved": true,
     "task-20260624-follow-up-reorg-conversations": true,
     "task-20260626-finish-weekly-executive-updates": true,
-    "task-20260626-review-ic-communication-guide": true
+    "task-20260626-review-ic-communication-guide": true,
+    "task-20260626-confirm-dnc-enhancements-tester": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -274,5 +275,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782522670931
+  "lastModified": 1782522686516
 }
