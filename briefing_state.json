@@ -187,19 +187,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1782344470983",
-      "text": "Hablar con Camilo: cambio de estructura y soporte para MHe RFE",
-      "addedAt": "2026-06-24T23:41:10.983Z",
-      "scheduledFor": "2026-06-29"
-    },
-    {
-      "id": "rem-1782727043746",
-      "text": "Agendar 1:1 con Nicolás, Thiago y Laura",
-      "addedAt": "2026-06-29T09:57:23.746Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -278,7 +266,22 @@
       "addedAt": "2026-06-22T21:10:20.093Z",
       "shownInDigestId": "daily-2026-06-23-morning",
       "archivedAt": "2026-06-23T12:04:22.000Z"
+    },
+    {
+      "id": "rem-1782344470983",
+      "text": "Hablar con Camilo: cambio de estructura y soporte para MHe RFE",
+      "addedAt": "2026-06-24T23:41:10.983Z",
+      "scheduledFor": "2026-06-29",
+      "shownInDigestId": "daily-2026-06-29-morning",
+      "archivedAt": "2026-06-29T12:04:30.000Z"
+    },
+    {
+      "id": "rem-1782727043746",
+      "text": "Agendar 1:1 con Nicolás, Thiago y Laura",
+      "addedAt": "2026-06-29T09:57:23.746Z",
+      "shownInDigestId": "daily-2026-06-29-morning",
+      "archivedAt": "2026-06-29T12:04:30.000Z"
     }
   ],
-  "lastModified": 1782727046695
+  "lastModified": 1782734670000
 }
