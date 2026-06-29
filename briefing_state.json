@@ -188,7 +188,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1782744730172",
+      "text": "Think goals for me - Sara",
+      "addedAt": "2026-06-29T14:52:10.172Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -284,5 +290,5 @@
       "archivedAt": "2026-06-29T12:04:30.000Z"
     }
   ],
-  "lastModified": 1782737230306
+  "lastModified": 1782744733003
 }
