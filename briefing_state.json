@@ -193,6 +193,11 @@
       "text": "Hablar con Camilo: cambio de estructura y soporte para MHe RFE",
       "addedAt": "2026-06-24T23:41:10.983Z",
       "scheduledFor": "2026-06-29"
+    },
+    {
+      "id": "rem-1782727043746",
+      "text": "Agendar 1:1 con Nicolás, Thiago y Laura",
+      "addedAt": "2026-06-29T09:57:23.746Z"
     }
   ],
   "reminderHistory": [
@@ -275,5 +280,5 @@
       "archivedAt": "2026-06-23T12:04:22.000Z"
     }
   ],
-  "lastModified": 1782522686516
+  "lastModified": 1782727046695
 }
