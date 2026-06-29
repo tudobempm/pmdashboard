@@ -129,7 +129,8 @@
     "task-20260626-review-ic-communication-guide": true,
     "task-20260626-confirm-dnc-enhancements-tester": true,
     "task-20260625-complete-leadup-module-2a-check": true,
-    "task-20260629-schedule-nicolas-thiago-laura-1-1s": true
+    "task-20260629-schedule-nicolas-thiago-laura-1-1s": true,
+    "task-20260629-review-cio-transition-workbook": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -295,5 +296,5 @@
       "archivedAt": "2026-06-29T12:04:30.000Z"
     }
   ],
-  "lastModified": 1782758337889
+  "lastModified": 1782768834048
 }
