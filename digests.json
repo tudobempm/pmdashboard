@@ -1,5 +1,133 @@
 [
   {
+    "id": "eod-2026-06-30",
+    "type": "eod",
+    "date": "Tuesday, June 30 - End of Day",
+    "isoDate": "2026-06-30",
+    "greeting": "Jean, Tuesday closed with the portfolio and CoE threads still needing a few clean follow-ups, but there was useful movement around Laura's transition materials and a new CoE intake handoff. The main carry-forward is still turning the KPI work into SMART goals for Sara and keeping tomorrow's 1:1s focused.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0630-done-1",
+            "label": "Shared Laura's transition materials",
+            "detail": "Jean shared the Laura 1:1 whiteboard and the Templates SMS file with Laura today; Outlook also shows the Laura link was used."
+          },
+          {
+            "id": "eod-0630-done-2",
+            "label": "Routed a new CoE intake to Mar",
+            "detail": "Jean forwarded the new CM-CoE intake for the Pre-AOS, T-AOS Preparation, and T-AOS Submission stages to Mar for visibility."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0630-open-1",
+            "taskId": "task-20260619-work-smart-goals-kpis",
+            "label": "Turn the KPI set into SMART goals",
+            "detail": "Keep this first for Wednesday. The goals reminder and the Jean/Sara 1:1 point to the same next step: convert the KPI set into concrete SMART goals and bring a clear framing to Sara.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0630-open-2",
+            "taskId": "task-20260624-camilo-structure-mhe-rfe-support",
+            "label": "Close the structure-change and MHE RFE support loop with Camilo",
+            "detail": "This remains open going into the July 1 structure change. Use tomorrow's Camilo 1:1 to confirm whether support, ownership, or an operating decision is still needed."
+          },
+          {
+            "id": "eod-0630-open-3",
+            "taskId": "task-20260629-review-cio-transition-workbook",
+            "label": "Review the LLF_CIO_Transition workbook signal",
+            "detail": "Keep the CIO transition implications tied to the Amazon Connect, Agentforce Voice, CoE, and structure-change work so it does not sit as a separate loose thread."
+          },
+          {
+            "id": "eod-0630-open-4",
+            "taskId": "task-20260629-capture-pm-feedback-next-steps",
+            "label": "Capture PM Feedback next steps cleanly",
+            "detail": "PM Feedback still needs a clear owner and follow-up path. Bring any Sara, Eugenia, or Stephanie guidance into one usable next-step note."
+          },
+          {
+            "id": "eod-0630-open-5",
+            "taskId": "task-20260629-review-it-spreadsheets-with-mar",
+            "label": "Review the IT spreadsheets with Mar",
+            "detail": "Jessica confirmed the taskset distribution today. The remaining step is to review the Post-submission Case Change and Missing EAD taskset spreadsheets with Mar and decide whether anything needs IT routing, tester ownership, or a cleaner taskset path."
+          },
+          {
+            "id": "eod-0630-open-6",
+            "taskId": "task-20260629-triage-phase-1-intake-alert",
+            "label": "Triage the intake routing queue",
+            "detail": "The Phase 1 intake alert from Danny Miller still needs a routing decision, and Jean also sent Mar a new CM-CoE intake today. Keep the next owner and queue path clear for each intake."
+          },
+          {
+            "id": "eod-0630-open-7",
+            "taskId": "task-20260630-follow-up-incident-response-irg-implementation",
+            "label": "Respond to Danny's Incident Response implementation note",
+            "detail": "Danny's note raised an adoption point: the IRG outputs need to be understandable to the team, not just complete as documents. A short reply or next-step note would keep the July 15 draft path aligned with rollout."
+          },
+          {
+            "id": "eod-0630-open-8",
+            "taskId": "task-20260630-adjust-epmo-liderazgo-cadence",
+            "label": "Adjust to the EPMO Liderazgo cadence change",
+            "detail": "Sara's Teams preview said the Monday meeting was canceled because the separate leadership conversations and Friday EOW check-in should cover the purpose. Use 1:1s or ad hoc time for individual questions instead of expecting that Monday forum."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0630-wed-1",
+            "time": "10:30 AM",
+            "label": "1:1 David & Jean",
+            "detail": "Good slot for CoE, Staff Augmentation, or dashboard-adjacent dependencies after David's Monday OOO marker."
+          },
+          {
+            "id": "eod-0630-wed-2",
+            "time": "11:30 AM",
+            "label": "Jean/Sara 1:1",
+            "detail": "Bring the SMART KPI-goal framing and any PM Feedback or structure-change points that need Sara's input."
+          },
+          {
+            "id": "eod-0630-wed-3",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected 90-minute block after Sara; useful for converting decisions into notes and follow-ups."
+          },
+          {
+            "id": "eod-0630-wed-4",
+            "time": "1:30 PM",
+            "label": "1:1 Camilo & Jean",
+            "detail": "Use for any remaining structure-change or MHE RFE support loop if today's follow-up does not close it."
+          },
+          {
+            "id": "eod-0630-wed-5",
+            "time": "2:00 PM",
+            "label": "EPMO Team Meeting",
+            "detail": "Large team meeting for operational updates, lessons learned, celebrations, and project spotlights."
+          },
+          {
+            "id": "eod-0630-wed-6",
+            "time": "3:30 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda is portfolio review, roadblocks, and next steps."
+          },
+          {
+            "id": "eod-0630-wed-7",
+            "time": "4:00 PM",
+            "label": "Focus time: weekly meeting preparation",
+            "detail": "Use this to prepare Thursday and Friday follow-ups after the Wednesday meeting stack."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-06-30-morning",
     "type": "daily",
     "date": "Morning - Tuesday, June 30",
