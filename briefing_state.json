@@ -130,7 +130,8 @@
     "task-20260626-confirm-dnc-enhancements-tester": true,
     "task-20260625-complete-leadup-module-2a-check": true,
     "task-20260629-schedule-nicolas-thiago-laura-1-1s": true,
-    "task-20260629-prepare-portfolio-review-decisions": true
+    "task-20260629-prepare-portfolio-review-decisions": true,
+    "task-20260624-camilo-structure-mhe-rfe-support": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -297,5 +298,5 @@
       "archivedAt": "2026-06-30T12:05:00.000Z"
     }
   ],
-  "lastModified": 1782821100000
+  "lastModified": 1782856953649
 }
