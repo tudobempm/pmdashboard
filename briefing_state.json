@@ -194,13 +194,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1782744730172",
-      "text": "Think goals for me - Sara",
-      "addedAt": "2026-06-29T14:52:10.172Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -294,7 +288,14 @@
       "addedAt": "2026-06-29T09:57:23.746Z",
       "shownInDigestId": "daily-2026-06-29-morning",
       "archivedAt": "2026-06-29T12:04:30.000Z"
+    },
+    {
+      "id": "rem-1782744730172",
+      "text": "Think goals for me - Sara",
+      "addedAt": "2026-06-29T14:52:10.172Z",
+      "shownInDigestId": "daily-2026-06-30-morning",
+      "archivedAt": "2026-06-30T12:05:00.000Z"
     }
   ],
-  "lastModified": 1782768841704
+  "lastModified": 1782821100000
 }
