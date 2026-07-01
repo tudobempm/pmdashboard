@@ -133,7 +133,8 @@
     "task-20260629-prepare-portfolio-review-decisions": true,
     "task-20260624-camilo-structure-mhe-rfe-support": true,
     "task-20260629-review-cio-transition-workbook": true,
-    "task-20260623-update-jorge-project-sheet": true
+    "task-20260623-update-jorge-project-sheet": true,
+    "task-20260701-write-anu-ba-staff-augmentation": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -307,5 +308,5 @@
       "archivedAt": "2026-07-01T12:06:00.000Z"
     }
   ],
-  "lastModified": 1782907550027
+  "lastModified": 1782943686493
 }
