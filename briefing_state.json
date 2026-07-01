@@ -136,7 +136,8 @@
     "task-20260623-update-jorge-project-sheet": true,
     "task-20260701-write-anu-ba-staff-augmentation": true,
     "task-20260701-coordinate-trace-portfolio-followups": true,
-    "task-20260701-triage-mental-health-eval-expansion": true
+    "task-20260701-triage-mental-health-eval-expansion": true,
+    "task-20260701-review-product-salesforce-roadmap-materials": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -310,5 +311,5 @@
       "archivedAt": "2026-07-01T12:06:00.000Z"
     }
   ],
-  "lastModified": 1782943694151
+  "lastModified": 1782943696196
 }
