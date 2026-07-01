@@ -196,7 +196,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1782904184106",
+      "text": "Escribirle a Anu sobre el porqué de un BA en Staff Augmentation",
+      "addedAt": "2026-07-01T11:09:44.106Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -299,5 +305,5 @@
       "archivedAt": "2026-06-30T12:05:00.000Z"
     }
   ],
-  "lastModified": 1782856955979
+  "lastModified": 1782904187425
 }
