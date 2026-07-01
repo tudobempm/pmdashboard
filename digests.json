@@ -1,5 +1,220 @@
 [
   {
+    "id": "daily-2026-07-01-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, July 1",
+    "isoDate": "2026-07-01",
+    "greeting": "Wednesday, July 1, Jean. Today is anchored by the David, Camilo, Maria, and Sara 1:1s plus the EPMO Team Meeting, with 7 Outlook blocks, 6 carried-over items, 1 new reminder, and 1 clear schedule conflict at 4:00 PM. Keep the day centered on the SMART goals thread for Sara, Staff Augmentation BA rationale, portfolio/TRACE follow-through, and the new product/Salesforce materials from Nadia. Direct Teams recency was partly limited, so Teams is used only where a work-related notification was visible.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0701-co-1",
+            "taskId": "task-20260619-work-smart-goals-kpis",
+            "label": "Turn the KPI set into SMART goals",
+            "detail": "Still the highest-value open thread and now directly tied to the 4:00 PM Jean/Sara 1:1. Bring a concrete SMART-goal framing rather than a loose KPI discussion.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0701-co-2",
+            "taskId": "task-20260629-capture-pm-feedback-next-steps",
+            "label": "Capture PM Feedback next steps cleanly",
+            "detail": "Keep any Sara, Eugenia, or Stephanie guidance in one usable next-step note with an owner, so the feedback thread does not get diluted into broader portfolio work.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0701-co-3",
+            "taskId": "task-20260629-review-it-spreadsheets-with-mar",
+            "label": "Review the IT spreadsheets with Mar",
+            "detail": "The Post-submission Case Change and Missing EAD taskset spreadsheets still need a clean routing decision: IT path, tester ownership, or a clearer taskset handoff.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0701-co-4",
+            "taskId": "task-20260629-triage-phase-1-intake-alert",
+            "label": "Triage the intake routing queue",
+            "detail": "Keep the Phase 1 intake alert and the newer CoE intake handoff separated by owner and queue path so neither sits as an ambiguous routing item.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0701-co-5",
+            "taskId": "task-20260630-follow-up-incident-response-irg-implementation",
+            "label": "Respond to Danny's Incident Response implementation note",
+            "detail": "Danny's point was about adoption: the IRG outputs need to be understandable to the team, not just complete as documents. A short reply or next-step note keeps the July 15 draft path aligned with rollout.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0701-co-6",
+            "taskId": "task-20260630-adjust-epmo-liderazgo-cadence",
+            "label": "Adjust to the EPMO Liderazgo cadence change",
+            "detail": "Sara's Teams update moved the leadership conversation away from the Monday forum. Use 1:1s and the Friday EOW check-in for individual questions instead of waiting for that meeting.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0701-rem-1",
+            "taskId": "task-20260701-write-anu-ba-staff-augmentation",
+            "label": "Write Anu about why Staff Augmentation needs a BA",
+            "detail": "One-shot reminder from this morning. Use the Staff Augmentation thread as the source: Jorge framed the BA as needed to support the MVP architecture work, onboard with context, reduce BA/PM/stakeholder back-and-forth, and avoid roadblocks once Tim and Jay share the solution."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times shown in Jean's Outlook working timezone. The day has useful open space before noon, a protected midday block, then a meeting run from 1:30 PM through 4:30 PM with a 4:00 PM conflict.",
+        "items": [
+          {
+            "id": "wed-0701-cal-1",
+            "time": "10:30 AM",
+            "label": "1:1 David & Jean",
+            "detail": "Good first anchor for dashboard, CoE, Staff Augmentation, or follow-up routing before the afternoon stack starts."
+          },
+          {
+            "id": "wed-0701-cal-2",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Best protected block for the Staff Augmentation note to Anu, SMART-goal prep for Sara, and any quick Portfolio Review cleanup."
+          },
+          {
+            "id": "wed-0701-cal-3",
+            "time": "1:30 PM",
+            "label": "1:1 Camilo & Jean",
+            "detail": "Use this for any final structure-change or MHE RFE support confirmation if yesterday's completion still needs practical reinforcement."
+          },
+          {
+            "id": "wed-0701-cal-4",
+            "time": "2:00 PM",
+            "label": "EPMO Team Meeting",
+            "detail": "Large-team operational forum for updates, lessons learned, celebrations, and project spotlights. Good place to listen for new blockers after yesterday's Portfolio Review recap."
+          },
+          {
+            "id": "wed-0701-cal-5",
+            "time": "3:30 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda is portfolio review, roadblocks, and next steps. Useful for taskset, CoE, and operating-process follow-through."
+          },
+          {
+            "id": "wed-0701-cal-6",
+            "time": "4:00 PM",
+            "label": "Jean/Sara 1:1",
+            "detail": "Bring SMART goals, PM Feedback next steps, and any portfolio/TRACE decisions that need Sara's direction. This overlaps with the weekly-meeting prep focus block."
+          },
+          {
+            "id": "wed-0701-cal-7",
+            "time": "4:00 PM",
+            "label": "Focus time: weekly meeting preparation",
+            "detail": "Conflicts with Jean/Sara 1:1 from 4:00 to 4:30. Use the remaining time after Sara for Thursday prep and written follow-ups."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0701-action-1",
+            "taskId": "task-20260701-coordinate-trace-portfolio-followups",
+            "label": "Coordinate the TRACE and Portfolio Review follow-ups",
+            "detail": "Jorge's Portfolio Review recap says he will coordinate with the TRACE PM to send Jill the latest weekly update, and a Teams notification shows Yuri/Jorge asking Jean about TRACE updates for Jill. Confirm what Jean needs to provide before the Wednesday Portfolio Review cadence settles."
+          },
+          {
+            "id": "wed-0701-action-2",
+            "taskId": "task-20260701-triage-mental-health-eval-expansion",
+            "label": "Triage the Mental Health Eval Expansion intake",
+            "detail": "Jorge assigned Jean the Asana task under PMO New Project Intakes. Decide whether it needs portfolio review, owner assignment, or intake clarification before it becomes another loose queue item."
+          },
+          {
+            "id": "wed-0701-action-3",
+            "taskId": "task-20260701-review-product-salesforce-roadmap-materials",
+            "label": "Review Nadia's Product and Salesforce roadmap materials",
+            "detail": "Nadia sent Product-team vision materials and shared the LLF Salesforce Release Enforcement Tracker. The tracker is intended for monthly Product, Security, and Application Development review against sprint planning and roadmap work."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0701-email-1",
+            "taskId": "task-20260701-review-product-salesforce-roadmap-materials",
+            "label": "Nadia asked for questions on Product-team vision materials",
+            "detail": "Nadia forwarded the Product-team vision package this morning and explicitly said to let her know if there are questions. Treat this as a review-and-reply item if the materials affect EPMO or roadmap planning."
+          },
+          {
+            "id": "wed-0701-email-2",
+            "taskId": "task-20260701-write-anu-ba-staff-augmentation",
+            "label": "Mar forwarded the Staff Augmentation BA alignment thread",
+            "detail": "The thread confirms Yuri is PM, Nadia/Yuri/Duvan own capability mapping by July 1, Tim and Jay onboard July 6, and Josh alignment is targeted for July 10. Use those facts in the note to Anu."
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0701-teams-1",
+            "taskId": "task-20260701-coordinate-trace-portfolio-followups",
+            "label": "Yuri and Jorge surfaced a TRACE update question for Jill",
+            "detail": "Direct Teams thread expansion was limited, but the Outlook notification shows Yuri asking Jean about Jill's TRACE update request and Jorge offering to move something under Jean's name. Confirm the needed update path before it becomes unclear ownership."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0701-thu-1",
+            "time": "9:00 AM",
+            "label": "EPMO EOW Check In",
+            "detail": "Moved one hour earlier and expanded to include Nadia for programmatic updates."
+          },
+          {
+            "id": "wed-0701-thu-2",
+            "time": "11:00 AM",
+            "label": "Amazon Connect - Delay's Overview",
+            "detail": "Nadia's note says the team is consolidating project-delay background for Danny and Jeff to answer Jon's ask. Watch for the promised Wednesday summary."
+          },
+          {
+            "id": "wed-0701-thu-3",
+            "time": "1:30 PM",
+            "label": "1:1 Thiago and Jean",
+            "detail": "Useful structure-change and transition follow-up slot."
+          },
+          {
+            "id": "wed-0701-thu-4",
+            "time": "2:00 PM",
+            "label": "Mkt / Legal Portfolio Review",
+            "detail": "Portfolio review with Eugenia and Jean on the invite; likely relevant to broader Portfolio Review cleanup."
+          },
+          {
+            "id": "wed-0701-thu-5",
+            "time": "2:30 PM",
+            "label": "SMS Automation Optimization Weekly Project Status",
+            "detail": "Agenda includes progress, priorities, resource check, risks, blockers, escalations, and next steps."
+          },
+          {
+            "id": "wed-0701-thu-6",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team coordination forum for project progress, roadblocks, knowledge-sharing, and strategic initiative momentum."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-06-30",
     "type": "eod",
     "date": "Tuesday, June 30 - End of Day",

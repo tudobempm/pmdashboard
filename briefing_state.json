@@ -197,13 +197,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1782904184106",
-      "text": "Escribirle a Anu sobre el porqué de un BA en Staff Augmentation",
-      "addedAt": "2026-07-01T11:09:44.106Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -304,7 +298,14 @@
       "addedAt": "2026-06-29T14:52:10.172Z",
       "shownInDigestId": "daily-2026-06-30-morning",
       "archivedAt": "2026-06-30T12:05:00.000Z"
+    },
+    {
+      "id": "rem-1782904184106",
+      "text": "Escribirle a Anu sobre el porqué de un BA en Staff Augmentation",
+      "addedAt": "2026-07-01T11:09:44.106Z",
+      "shownInDigestId": "daily-2026-07-01-morning",
+      "archivedAt": "2026-07-01T12:06:00.000Z"
     }
   ],
-  "lastModified": 1782904428410
+  "lastModified": 1782907550027
 }
