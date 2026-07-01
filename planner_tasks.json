@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-01T21:44:00Z",
+  "source": {
+    "system": "Microsoft Planner",
+    "retrieval": "assigned_to_signed_in_user",
+    "connector": "Teams Planner",
+    "timezone_context": "America/Santo_Domingo",
+    "supported_sync_fields": [
+      "title",
+      "due_date_time",
+      "percent_complete",
+      "bucket_id"
+    ],
+    "unsupported_sync_fields": [
+      "assignee reassignment"
+    ],
+    "notes": [
+      "Planner remains the source of truth. This file is a dashboard snapshot generated from Planner data.",
+      "The current update action supports title, due date, percent complete, priority, start date, and bucket changes. It does not expose reassignment.",
+      "Open-in-Planner URLs are left null because the available Planner task payload did not return canonical web URLs. The UI should render the control only when a grounded URL is available or a tested URL builder is added."
+    ]
+  },
+  "summary": {
+    "task_count": 5,
+    "completed_count": 1,
+    "not_started_count": 4,
+    "in_progress_count": 0,
+    "plans_count": 3,
+    "buckets_count": 4
+  },
+  "plans": [
+    {
+      "id": "uu99kRXt_E2yy4tQ4ge5SGUAGI8Z",
+      "title": "Project Management"
+    },
+    {
+      "id": "WOTS3k2SQ0a2jkRtlguP8GUADv6h",
+      "title": "Project Management"
+    },
+    {
+      "id": "1cqd-iCqtEuJXkpUrh6DlGUADosu",
+      "title": "Project Management"
+    }
+  ],
+  "buckets": [
+    {
+      "id": "Rjb4jbe8hEmo29_wlg2tXGUANnd8",
+      "plan_id": "uu99kRXt_E2yy4tQ4ge5SGUAGI8Z",
+      "name": "Planning"
+    },
+    {
+      "id": "PI-p7tV-1EOjoDhONlBvhmUAEUij",
+      "plan_id": "uu99kRXt_E2yy4tQ4ge5SGUAGI8Z",
+      "name": "Monitoring and controlling"
+    },
+    {
+      "id": "YtzBDEL3A02ntLbxmujzd2UAF7hN",
+      "plan_id": "WOTS3k2SQ0a2jkRtlguP8GUADv6h",
+      "name": "Monitoring and controlling"
+    },
+    {
+      "id": "7ZCMBic5_0e3RRI0ead9emUADzKp",
+      "plan_id": "1cqd-iCqtEuJXkpUrh6DlGUADosu",
+      "name": "To do"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "0YNCYszpGEyxR6jJQRwV_WUALHy5",
+      "title": "Specify deliverables and acceptance criteria",
+      "plan_id": "uu99kRXt_E2yy4tQ4ge5SGUAGI8Z",
+      "plan_title": "Project Management",
+      "bucket_id": "Rjb4jbe8hEmo29_wlg2tXGUANnd8",
+      "bucket_name": "Planning",
+      "project_label": "Planning",
+      "due_date_time": "2026-01-30T10:00:00Z",
+      "start_date_time": null,
+      "percent_complete": 0,
+      "status": "not_started",
+      "priority": 5,
+      "created_date_time": "2026-01-27T12:58:32.5706782Z",
+      "assignees": [
+        {
+          "user_id": "c963bf0d-fa1c-4702-9e6e-3748c7cce8f9",
+          "display_name": null
+        }
+      ],
+      "open_in_planner_url": null
+    },
+    {
+      "id": "BVf5b8r3yk-KHNVuf4xBamUAGozX",
+      "title": "Report monthly status",
+      "plan_id": "WOTS3k2SQ0a2jkRtlguP8GUADv6h",
+      "plan_title": "Project Management",
+      "bucket_id": "YtzBDEL3A02ntLbxmujzd2UAF7hN",
+      "bucket_name": "Monitoring and controlling",
+      "project_label": "Monitoring and controlling",
+      "due_date_time": "2026-03-26T10:00:00Z",
+      "start_date_time": null,
+      "percent_complete": 0,
+      "status": "not_started",
+      "priority": 5,
+      "created_date_time": "2026-01-27T19:17:46.5068116Z",
+      "assignees": [
+        {
+          "user_id": "c963bf0d-fa1c-4702-9e6e-3748c7cce8f9",
+          "display_name": null
+        }
+      ],
+      "open_in_planner_url": null
+    },
+    {
+      "id": "jOEp_pPV6kWM-cwRkhivLGUAFLOd",
+      "title": "Report monthly status",
+      "plan_id": "uu99kRXt_E2yy4tQ4ge5SGUAGI8Z",
+      "plan_title": "Project Management",
+      "bucket_id": "PI-p7tV-1EOjoDhONlBvhmUAEUij",
+      "bucket_name": "Monitoring and controlling",
+      "project_label": "Monitoring and controlling",
+      "due_date_time": "2026-03-26T10:00:00Z",
+      "start_date_time": null,
+      "percent_complete": 0,
+      "status": "not_started",
+      "priority": 5,
+      "created_date_time": "2026-01-27T12:58:33.0953225Z",
+      "assignees": [
+        {
+          "user_id": "c963bf0d-fa1c-4702-9e6e-3748c7cce8f9",
+          "display_name": null
+        }
+      ],
+      "open_in_planner_url": null
+    },
+    {
+      "id": "tQsdVCJUkU2SWbRbLdEcZGUAIZuP",
+      "title": "Test",
+      "plan_id": "WOTS3k2SQ0a2jkRtlguP8GUADv6h",
+      "plan_title": "Project Management",
+      "bucket_id": null,
+      "bucket_name": null,
+      "project_label": "Unbucketed",
+      "due_date_time": null,
+      "start_date_time": null,
+      "percent_complete": 0,
+      "status": "not_started",
+      "priority": 5,
+      "created_date_time": "2026-02-12T20:40:09.1710945Z",
+      "assignees": [
+        {
+          "user_id": "c963bf0d-fa1c-4702-9e6e-3748c7cce8f9",
+          "display_name": null
+        }
+      ],
+      "open_in_planner_url": null
+    },
+    {
+      "id": "mcvpcKrKUEqXgDMc0h3k5WUAKVP1",
+      "title": "Jean Carlos - Cambiar el owner de los proyectos en Asana",
+      "plan_id": "1cqd-iCqtEuJXkpUrh6DlGUADosu",
+      "plan_title": "Project Management",
+      "bucket_id": "7ZCMBic5_0e3RRI0ead9emUADzKp",
+      "bucket_name": "To do",
+      "project_label": "To do",
+      "due_date_time": "2026-05-28T10:00:00Z",
+      "start_date_time": null,
+      "percent_complete": 100,
+      "status": "completed",
+      "priority": 5,
+      "created_date_time": "2026-05-25T15:57:04.8960805Z",
+      "assignees": [
+        {
+          "user_id": "c963bf0d-fa1c-4702-9e6e-3748c7cce8f9",
+          "display_name": null
+        }
+      ],
+      "open_in_planner_url": null
+    }
+  ]
+}
