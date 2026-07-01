@@ -138,7 +138,8 @@
     "task-20260701-coordinate-trace-portfolio-followups": true,
     "task-20260701-triage-mental-health-eval-expansion": true,
     "task-20260701-review-product-salesforce-roadmap-materials": true,
-    "task-20260629-capture-pm-feedback-next-steps": true
+    "task-20260629-capture-pm-feedback-next-steps": true,
+    "task-20260629-review-it-spreadsheets-with-mar": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -312,5 +313,5 @@
       "archivedAt": "2026-07-01T12:06:00.000Z"
     }
   ],
-  "lastModified": 1782943707503
+  "lastModified": 1782943709753
 }
