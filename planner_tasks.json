@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T16:07:38Z",
+  "generated_at": "2026-07-02T16:19:27Z",
   "source": {
     "system": "Microsoft Planner",
     "retrieval": "plans_owned_by_signed_in_user_assigned_by_signed_in_user_to_others",
@@ -32,7 +32,7 @@
     "buckets_count": 1
   },
   "plans": [
-    { "id": "ckgbJokdAku-McjSdAmgoWUAHPYR", "title": "11 Maria  Jean 2026-07-01" },
+    { "id": "ckgbJokdAku-McjSdAmgoWUAHPYR", "title": "Maria's Tasks" },
     { "id": "y-BQO85mK0iPQw0mUIwqQGUAGuXt", "title": "11 David  Jean 2026-06-16" },
     { "id": "cu0TvTIVFkCYVyrQmHTGVGUAE9gI", "title": "11 Yuri   Jean 2026-06-09" },
     { "id": "LW_3xBq58kqIX-k7fwjMn2UABiKn", "title": "TRACE  Staff Aug touchpoint 2026-06-17" },
@@ -46,7 +46,7 @@
       "id": "4ygpF43kikG1PYKdbjoJK2UAAAZ4",
       "title": "Entregar draft de newsletter de CoE",
       "plan_id": "ckgbJokdAku-McjSdAmgoWUAHPYR",
-      "plan_title": "11 Maria  Jean 2026-07-01",
+      "plan_title": "Maria's Tasks",
       "bucket_id": null,
       "bucket_name": null,
       "project_label": "Unbucketed",
@@ -64,7 +64,7 @@
       "id": "c6oLTC5XhUuHp448u6JeT2UAM301",
       "title": "Draft del project charter para Mental Health Expansion",
       "plan_id": "ckgbJokdAku-McjSdAmgoWUAHPYR",
-      "plan_title": "11 Maria  Jean 2026-07-01",
+      "plan_title": "Maria's Tasks",
       "bucket_id": null,
       "bucket_name": null,
       "project_label": "Unbucketed",
@@ -82,7 +82,7 @@
       "id": "1LdwnOXRXEmRoLqRUhSFqWUADFdN",
       "title": "Project plan inicial para el proyecto de Mental Health en Asana",
       "plan_id": "ckgbJokdAku-McjSdAmgoWUAHPYR",
-      "plan_title": "11 Maria  Jean 2026-07-01",
+      "plan_title": "Maria's Tasks",
       "bucket_id": null,
       "bucket_name": null,
       "project_label": "Unbucketed",
@@ -100,7 +100,7 @@
       "id": "CZabiBasmUSH9s-66amh92UABzgO",
       "title": "Crear draft del project charter del proyecto de Mental Health para solicitar sign off al main stakeholder (Shelley)",
       "plan_id": "ckgbJokdAku-McjSdAmgoWUAHPYR",
-      "plan_title": "11 Maria  Jean 2026-07-01",
+      "plan_title": "Maria's Tasks",
       "bucket_id": null,
       "bucket_name": null,
       "project_label": "Unbucketed",
