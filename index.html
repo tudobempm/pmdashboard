@@ -2965,7 +2965,7 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
 }
 
 /* ═══ Planner Tasks Module ═══ */
-function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
+function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = () => {}, refreshing = false, generatedAt = null }) {
   const list = Array.isArray(tasks) ? tasks : [];
   const [tab, setTab] = useState("active");
   const [urgencyFilter, setUrgencyFilter] = useState("all");
@@ -3087,6 +3087,16 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
     return { active, completed };
   }, [searched]);
 
+  // "Updated Xm ago" from the snapshot's generated_at timestamp.
+  const updatedLabel = useMemo(() => {
+    if (!generatedAt) return null;
+    const d = new Date(generatedAt);
+    if (isNaN(d.getTime())) return null;
+    const mins = Math.max(0, Math.round((Date.now() - d.getTime()) / 60000));
+    const rel = mins < 1 ? "just now" : mins < 60 ? `${mins}m ago` : mins < 1440 ? `${Math.round(mins / 60)}h ago` : `${Math.round(mins / 1440)}d ago`;
+    return `Updated ${rel}`;
+  }, [generatedAt]);
+
   // Urgency breakdown for the active tab's filter pills.
   const urgencyCounts = useMemo(() => {
     const c = { all: 0, overdue: 0, soon: 0, upcoming: 0 };
@@ -3152,9 +3162,23 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
   return (
     <div className="w-full">
       {/* Header */}
-      <div className="mb-5">
-        <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 tracking-tight">Tasks</h1>
-        <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5">Microsoft Planner</p>
+      <div className="mb-5 flex items-start justify-between gap-3">
+        <div>
+          <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 tracking-tight">Tasks</h1>
+          <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5">Microsoft Planner</p>
+        </div>
+        <div className="flex flex-col items-end gap-1 shrink-0">
+          <button
+            onClick={onRefresh}
+            disabled={refreshing}
+            title="Re-fetch the latest Planner snapshot"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-800/60 backdrop-blur-md text-zinc-700 dark:text-zinc-200 shadow-sm hover:border-blue-300 dark:hover:border-blue-500/50 hover:text-blue-600 dark:hover:text-blue-300 disabled:opacity-60 disabled:cursor-not-allowed transition-colors active:scale-95"
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={refreshing ? "animate-spin" : ""}><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            {refreshing ? "Refreshing…" : "Refresh"}
+          </button>
+          {updatedLabel ? <span className="text-[10.5px] font-medium text-zinc-400 dark:text-zinc-500">{updatedLabel}</span> : null}
+        </div>
       </div>
 
       {/* Tabs + search */}
@@ -3332,6 +3356,8 @@ function App() {
   const [plannerTasksLoading, setPlannerTasksLoading] = useState(true);
   const [plannerTasksError, setPlannerTasksError] = useState(null);
   const [plannerTaskSearch, setPlannerTaskSearch] = useState("");
+  const [plannerRefreshing, setPlannerRefreshing] = useState(false);
+  const [plannerGeneratedAt, setPlannerGeneratedAt] = useState(null);
   const userActed = React.useRef(false); // only write after a real user action
   const [activeModule, setActiveModule] = useState("digests");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -3415,21 +3441,31 @@ function App() {
       .catch(e => { setError(e.message); setLoading(false); setSyncing(false); });
   }, []);
 
+  // Re-fetch the Planner snapshot. On manual refresh, bypass the CDN by reading
+  // the file straight from raw.githubusercontent so a fresh backend sync shows up.
+  const loadPlannerTasks = useCallback((isManual = false) => {
+    if (isManual) setPlannerRefreshing(true); else setPlannerTasksLoading(true);
+    const url = isManual
+      ? `https://raw.githubusercontent.com/tudobempm/pmdashboard/main/planner_tasks.json?t=${Date.now()}`
+      : `planner_tasks.json?${Date.now()}`;
+    fetch(url, { cache: "no-store" })
+      .then(r => { if (!r.ok) throw new Error("Failed to load tasks"); return r.json(); })
+      .then(data => {
+        setPlannerTasks(data.tasks || []);
+        setPlannerGeneratedAt(data.generated_at || null);
+        setPlannerTasksError(null);
+      })
+      .catch(e => setPlannerTasksError(e.message))
+      .finally(() => { setPlannerTasksLoading(false); setPlannerRefreshing(false); });
+  }, []);
+
   // Load digests + state on mount
   useEffect(() => {
     // Fetch digests.json
     loadDigests();
 
     // Fetch planner_tasks.json — independent of digests; a failure here must not break Digests
-    setPlannerTasksLoading(true);
-    fetch(`planner_tasks.json?${Date.now()}`, { cache: "no-store" })
-      .then(r => { if (!r.ok) throw new Error("Failed to load tasks"); return r.json(); })
-      .then(data => {
-        setPlannerTasks(data.tasks || []);
-        setPlannerTasksError(null);
-        setPlannerTasksLoading(false);
-      })
-      .catch(e => { setPlannerTasksError(e.message); setPlannerTasksLoading(false); });
+    loadPlannerTasks();
 
     // Load state: localStorage first (instant), then remote (authoritative)
     let localState = {};
@@ -4097,6 +4133,9 @@ function App() {
               error={plannerTasksError}
               search={plannerTaskSearch}
               onSearch={setPlannerTaskSearch}
+              onRefresh={() => loadPlannerTasks(true)}
+              refreshing={plannerRefreshing}
+              generatedAt={plannerGeneratedAt}
             />
           )}
 
