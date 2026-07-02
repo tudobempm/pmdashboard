@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T17:49:30Z",
+  "generated_at": "2026-07-02T18:04:14Z",
   "source": {
     "system": "Microsoft Planner",
     "retrieval": "plans_owned_by_signed_in_user_assigned_by_signed_in_user_to_others",
@@ -17,21 +17,22 @@
     "notes": [
       "Planner remains the source of truth. This file is a dashboard snapshot generated from Planner data.",
       "The snapshot includes tasks from plans owned by Jean where Jean is the assigning user and at least one assignee is someone other than Jean.",
-      "Assignee display names were not returned by the available Planner task payload, so the dashboard displays visible assignee IDs when names are unavailable.",
+      "Assignee display names were not returned by the available Planner task payload or user lookup, so the dashboard displays visible assignee IDs when names are unavailable.",
       "Open-in-Planner URLs are built from plan and task IDs for dashboard navigation.",
       "Create and delete requests from the static dashboard are queued through api/planner-task-requests.js for server-side Planner sync."
     ]
   },
   "summary": {
-    "task_count": 10,
-    "active_count": 3,
+    "task_count": 11,
+    "active_count": 4,
     "completed_count": 7,
-    "not_started_count": 3,
+    "not_started_count": 4,
     "in_progress_count": 0,
-    "plans_count": 5,
+    "plans_count": 6,
     "buckets_count": 2
   },
   "plans": [
+    { "id": "CGRmndYKw0eMapsKM5RtgWUAFXFf", "title": "11 Thiago and Jean" },
     { "id": "ckgbJokdAku-McjSdAmgoWUAHPYR", "title": "Maria's Tasks" },
     { "id": "y-BQO85mK0iPQw0mUIwqQGUAGuXt", "title": "11 David  Jean 2026-06-16" },
     { "id": "cu0TvTIVFkCYVyrQmHTGVGUAE9gI", "title": "11 Yuri   Jean 2026-06-09" },
@@ -43,6 +44,24 @@
     { "id": "lpDJPuvxIEaZTeQ4EnCXkWUAA-PJ", "plan_id": "cu0TvTIVFkCYVyrQmHTGVGUAE9gI", "name": "To do" }
   ],
   "tasks": [
+    {
+      "id": "1GK6ygm_7Ei5emlvZDYiVWUADLdH",
+      "title": "Schedule a meeting to discuss Thiago's projects further",
+      "plan_id": "CGRmndYKw0eMapsKM5RtgWUAFXFf",
+      "plan_title": "11 Thiago and Jean",
+      "bucket_id": null,
+      "bucket_name": null,
+      "project_label": "Unbucketed",
+      "due_date_time": "2026-07-03T10:00:00Z",
+      "start_date_time": null,
+      "percent_complete": 0,
+      "status": "not_started",
+      "status_group": "Active",
+      "priority": 5,
+      "created_date_time": "2026-07-02T17:47:57.1414666Z",
+      "assignees": [{ "user_id": "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9", "display_name": null }],
+      "open_in_planner_url": "https://planner.cloud.microsoft/webui/plan/CGRmndYKw0eMapsKM5RtgWUAFXFf/task/1GK6ygm_7Ei5emlvZDYiVWUADLdH"
+    },
     {
       "id": "4ygpF43kikG1PYKdbjoJK2UAAAZ4",
       "title": "Entregar draft de newsletter de CoE",
