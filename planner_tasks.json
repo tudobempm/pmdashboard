@@ -17,12 +17,12 @@
     ]
   },
   "summary": {
-    "task_count": 11,
-    "completed_count": 7,
-    "not_started_count": 4,
+    "task_count": 10,
+    "completed_count": 5,
+    "not_started_count": 5,
     "in_progress_count": 0,
-    "plans_count": 7,
-    "buckets_count": 2
+    "plans_count": 6,
+    "buckets_count": 1
   },
   "plans": [
     { "id": "ckgbJokdAku-McjSdAmgoWUAHPYR", "title": "11 Maria Jean 2026-07-01" },
@@ -30,12 +30,10 @@
     { "id": "y-BQO85mK0iPQw0mUIwqQGUAGuXt", "title": "11 David Jean 2026-06-16" },
     { "id": "cu0TvTIVFkCYVyrQmHTGVGUAE9gI", "title": "11 Yuri Jean 2026-06-09" },
     { "id": "LW_3xBq58kqIX-k7fwjMn2UABiKn", "title": "TRACE Staff Aug touchpoint 2026-06-17" },
-    { "id": "PVic-Fw1XUKElA9m8Pqwd2UAERkD", "title": "11 Maria Jean 2026-06-23" },
-    { "id": "dA5kUYpBUkO6mV9FrdrF8WUAHi0U", "title": "(MS Planner) Test Plan 1" }
+    { "id": "PVic-Fw1XUKElA9m8Pqwd2UAERkD", "title": "11 Maria Jean 2026-06-23" }
   ],
   "buckets": [
-    { "id": "lpDJPuvxIEaZTeQ4EnCXkWUAA-PJ", "plan_id": "cu0TvTIVFkCYVyrQmHTGVGUAE9gI", "name": "To do" },
-    { "id": "fp-GJBJBv0S9pYddebVvqGUACOkL", "plan_id": "dA5kUYpBUkO6mV9FrdrF8WUAHi0U", "name": "To do" }
+    { "id": "lpDJPuvxIEaZTeQ4EnCXkWUAA-PJ", "plan_id": "cu0TvTIVFkCYVyrQmHTGVGUAE9gI", "name": "To do" }
   ],
   "tasks": [
     {
@@ -207,23 +205,6 @@
       "created_date_time": "2026-06-23T18:25:30.5040127Z",
       "assignees": [{ "user_id": "12d4ccea-1070-4077-bc9c-9620960dfe09", "display_name": null }],
       "open_in_planner_url": "https://planner.cloud.microsoft/webui/plan/PVic-Fw1XUKElA9m8Pqwd2UAERkD/task/92S2sGPbFEmuH0hNwXouzWUABMyc"
-    },
-    {
-      "id": "yR6DNpNrh0OPShIrZZBiJGUAGpdU",
-      "title": "Test1",
-      "plan_id": "dA5kUYpBUkO6mV9FrdrF8WUAHi0U",
-      "plan_title": "(MS Planner) Test Plan 1",
-      "bucket_id": "fp-GJBJBv0S9pYddebVvqGUACOkL",
-      "bucket_name": "To do",
-      "project_label": "To do",
-      "due_date_time": "2026-02-27T10:00:00Z",
-      "start_date_time": "2026-02-19T10:00:00Z",
-      "percent_complete": 0,
-      "status": "not_started",
-      "priority": 5,
-      "created_date_time": "2026-02-19T17:16:17.3471471Z",
-      "assignees": [{ "user_id": "ccc44a8a-38b0-495e-9392-8722295cd33d", "display_name": null }],
-      "open_in_planner_url": "https://planner.cloud.microsoft/webui/plan/dA5kUYpBUkO6mV9FrdrF8WUAHi0U/task/yR6DNpNrh0OPShIrZZBiJGUAGpdU"
     }
   ]
 }
