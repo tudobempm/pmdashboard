@@ -75,9 +75,10 @@ module.exports = async function handler(req, res) {
     const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : (req.body || {});
     const action = body.action;
     const payload = body.payload || {};
-    if (!["create", "delete"].includes(action)) return json(res, 400, { error: "Unsupported action" });
+    if (!["create", "delete", "complete"].includes(action)) return json(res, 400, { error: "Unsupported action" });
     if (action === "create" && !payload.title) return json(res, 400, { error: "Missing task title" });
     if (action === "delete" && !payload.task_id) return json(res, 400, { error: "Missing task_id" });
+    if (action === "complete" && !payload.task_id) return json(res, 400, { error: "Missing task_id" });
     const { file, data } = await readQueue();
     const request = {
       id: `ptr-${Date.now()}`,
