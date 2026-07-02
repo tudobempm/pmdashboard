@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T16:19:27Z",
+  "generated_at": "2026-07-02T16:33:40Z",
   "source": {
     "system": "Microsoft Planner",
     "retrieval": "plans_owned_by_signed_in_user_assigned_by_signed_in_user_to_others",
@@ -29,7 +29,7 @@
     "not_started_count": 4,
     "in_progress_count": 0,
     "plans_count": 5,
-    "buckets_count": 1
+    "buckets_count": 2
   },
   "plans": [
     { "id": "ckgbJokdAku-McjSdAmgoWUAHPYR", "title": "Maria's Tasks" },
@@ -39,6 +39,7 @@
     { "id": "PVic-Fw1XUKElA9m8Pqwd2UAERkD", "title": "11 Maria  Jean 2026-06-23" }
   ],
   "buckets": [
+    { "id": "6PFrU3jVLUKXtkfcnS9fDGUAK82W", "plan_id": "ckgbJokdAku-McjSdAmgoWUAHPYR", "name": "To-do" },
     { "id": "lpDJPuvxIEaZTeQ4EnCXkWUAA-PJ", "plan_id": "cu0TvTIVFkCYVyrQmHTGVGUAE9gI", "name": "To do" }
   ],
   "tasks": [
