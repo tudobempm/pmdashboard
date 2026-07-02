@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T15:34:16Z",
+  "generated_at": "2026-07-02T15:48:38Z",
   "source": {
     "system": "Microsoft Planner",
     "retrieval": "plans_owned_by_signed_in_user_assigned_by_signed_in_user_to_others",
@@ -24,9 +24,9 @@
   },
   "summary": {
     "task_count": 10,
-    "active_count": 5,
-    "completed_count": 5,
-    "not_started_count": 5,
+    "active_count": 4,
+    "completed_count": 6,
+    "not_started_count": 4,
     "in_progress_count": 0,
     "plans_count": 5,
     "buckets_count": 1
@@ -124,9 +124,9 @@
       "project_label": "Unbucketed",
       "due_date_time": "2026-06-24T10:00:00Z",
       "start_date_time": null,
-      "percent_complete": 0,
-      "status": "not_started",
-      "status_group": "Active",
+      "percent_complete": 100,
+      "status": "completed",
+      "status_group": "Completed",
       "priority": 5,
       "created_date_time": "2026-06-16T15:47:00.1581612Z",
       "assignees": [{ "user_id": "20c2d834-9de6-47a3-8258-0137d44e0c5d", "display_name": null }],
