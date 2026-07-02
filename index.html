@@ -2965,10 +2965,13 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
 }
 
 /* ═══ Planner Tasks Module ═══ */
-function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = () => {}, refreshing = false, generatedAt = null }) {
+function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = () => {}, refreshing = false, generatedAt = null, assigneeOverrides = {}, onRenameAssignee = () => {} }) {
   const list = Array.isArray(tasks) ? tasks : [];
   const [tab, setTab] = useState("active");
   const [urgencyFilter, setUrgencyFilter] = useState("all");
+  // Inline assignee-name editing: which group id is being edited + the draft text.
+  const [editingAssignee, setEditingAssignee] = useState(null);
+  const [assigneeDraft, setAssigneeDraft] = useState("");
 
   // Categorize by percent_complete (the reliable synced field), falling back to status
   const statusOf = (t) => {
@@ -3014,6 +3017,7 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
   const labelFor = (a) => {
     if (!a) return "Unassigned";
     const id = a.user_id || a.id;
+    if (id && assigneeOverrides && assigneeOverrides[id]) return assigneeOverrides[id];
     if (id && assigneeNames.has(id)) return assigneeNames.get(id);
     return a.display_name || "Assigned";
   };
@@ -3079,7 +3083,7 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
       ].filter(Boolean).join(" ").toLowerCase();
       return haystack.includes(q);
     });
-  }, [list, q, assigneeNames]);
+  }, [list, q, assigneeNames, assigneeOverrides]);
 
   const counts = useMemo(() => {
     let active = 0, completed = 0;
@@ -3115,29 +3119,32 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
     if (tab === "active" && urgencyFilter !== "all") {
       inTab = inTab.filter(t => filterCatOf(t) === urgencyFilter);
     }
-    const map = new Map();
+    // Group by the assignee's stable id (not the display label) so that renaming a
+    // group edits one identity rather than every person who happens to share a name.
+    const map = new Map(); // groupId -> { id, label, tasks }
     for (const t of inTab) {
       const as = (Array.isArray(t.assignees) && t.assignees.length) ? t.assignees : [null];
       for (const a of as) {
-        const label = labelFor(a);
-        if (!map.has(label)) map.set(label, []);
-        map.get(label).push(t);
+        const id = (a && (a.user_id || a.id)) || null;
+        const groupId = id || "__unassigned__";
+        if (!map.has(groupId)) map.set(groupId, { id, label: labelFor(a), tasks: [] });
+        map.get(groupId).tasks.push(t);
       }
     }
-    for (const arr of map.values()) {
-      arr.sort((a, b) => {
+    for (const g of map.values()) {
+      g.tasks.sort((a, b) => {
         if (!a.due_date_time && !b.due_date_time) return (a.title || "").localeCompare(b.title || "");
         if (!a.due_date_time) return 1;
         if (!b.due_date_time) return -1;
         return a.due_date_time.localeCompare(b.due_date_time);
       });
     }
-    return [...map.entries()].sort(([a], [b]) => {
-      if (a === "Unassigned") return 1;
-      if (b === "Unassigned") return -1;
-      return a.localeCompare(b);
+    return [...map.values()].sort((a, b) => {
+      if (a.label === "Unassigned") return 1;
+      if (b.label === "Unassigned") return -1;
+      return a.label.localeCompare(b.label);
     });
-  }, [searched, tab, urgencyFilter, assigneeNames]);
+  }, [searched, tab, urgencyFilter, assigneeNames, assigneeOverrides]);
 
   const URGENCY_FILTERS = [
     { id: "all",      label: "All",      dot: "",             active: "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900" },
@@ -3264,12 +3271,74 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
         </div>
       ) : (
         <div className="space-y-6">
-          {groups.map(([assignee, groupTasks]) => (
-            <section key={assignee}>
+          {groups.map(({ id: assigneeId, label: assignee, tasks: groupTasks }) => {
+            const canEdit = !!assigneeId;
+            const isEditing = canEdit && editingAssignee === assigneeId;
+            const startEdit = () => { setAssigneeDraft(assignee); setEditingAssignee(assigneeId); };
+            const commitEdit = () => { onRenameAssignee(assigneeId, assigneeDraft); setEditingAssignee(null); };
+            const cancelEdit = () => setEditingAssignee(null);
+            const isOverridden = canEdit && assigneeOverrides && Object.prototype.hasOwnProperty.call(assigneeOverrides, assigneeId);
+            return (
+            <section key={assigneeId || assignee}>
               {/* Assignee group header */}
-              <div className="flex items-center gap-2 mb-2.5">
-                <h2 className="text-sm font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">{assignee}</h2>
-                <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] font-bold tabular-nums bg-zinc-100 dark:bg-zinc-700/50 text-zinc-500 dark:text-zinc-400">{groupTasks.length}</span>
+              <div className="flex items-center gap-2 mb-2.5 group">
+                {isEditing ? (
+                  <>
+                    <input
+                      autoFocus
+                      value={assigneeDraft}
+                      onChange={(e) => setAssigneeDraft(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") commitEdit();
+                        else if (e.key === "Escape") cancelEdit();
+                      }}
+                      onBlur={commitEdit}
+                      placeholder="Assignee name"
+                      className="text-sm font-extrabold tracking-tight bg-transparent border-b border-blue-500 focus:outline-none text-zinc-900 dark:text-zinc-100 min-w-0 w-40"
+                    />
+                    <button
+                      onMouseDown={(e) => { e.preventDefault(); commitEdit(); }}
+                      title="Save name"
+                      aria-label="Save name"
+                      className="inline-flex items-center justify-center w-6 h-6 rounded-md text-emerald-600 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-500/10 hover:bg-emerald-100 dark:hover:bg-emerald-500/20 transition-colors"
+                    >
+                      <Icon.Check size={12} />
+                    </button>
+                    <button
+                      onMouseDown={(e) => { e.preventDefault(); cancelEdit(); }}
+                      title="Cancel"
+                      aria-label="Cancel"
+                      className="inline-flex items-center justify-center w-6 h-6 rounded-md text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-700/50 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                    >
+                      <Icon.X size={12} />
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <h2 className="text-sm font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">{assignee}</h2>
+                    <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] font-bold tabular-nums bg-zinc-100 dark:bg-zinc-700/50 text-zinc-500 dark:text-zinc-400">{groupTasks.length}</span>
+                    {canEdit && (
+                      <button
+                        onClick={startEdit}
+                        title="Rename assignee"
+                        aria-label="Rename assignee"
+                        className="inline-flex items-center justify-center w-6 h-6 rounded-md text-zinc-400 hover:text-zinc-700 dark:text-zinc-500 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700/50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+                      >
+                        <Icon.Pencil size={12} />
+                      </button>
+                    )}
+                    {isOverridden && (
+                      <button
+                        onClick={() => onRenameAssignee(assigneeId, "")}
+                        title="Reset to default name"
+                        aria-label="Reset to default name"
+                        className="text-[10px] font-semibold text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+                      >
+                        reset
+                      </button>
+                    )}
+                  </>
+                )}
                 <span className="h-px flex-1 bg-zinc-200/70 dark:bg-zinc-700/60" />
               </div>
               <div className="space-y-2.5">
@@ -3326,7 +3395,8 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
                 })}
               </div>
             </section>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
@@ -3350,6 +3420,9 @@ function App() {
   const [reminderHistory, setReminderHistory] = useState([]);
   const [edits, setEdits] = useState({});
   const [reactions, setReactions] = useState({});
+  // User-defined display names for Planner assignees, keyed by assignee id.
+  // Planner doesn't return real display names, so this lets the user rename groups.
+  const [assigneeOverrides, setAssigneeOverrides] = useState({});
   const [stateLoaded, setStateLoaded] = useState(false);
   // Planner tasks (read-only snapshot from planner_tasks.json)
   const [plannerTasks, setPlannerTasks] = useState([]);
@@ -3479,6 +3552,7 @@ function App() {
       // for the authoritative remote read instead.
       if (localState.edits && Object.keys(localState.edits).length) setEdits(localState.edits);
       if (localState.reactions && Object.keys(localState.reactions).length) setReactions(localState.reactions);
+      if (localState.assigneeOverrides && Object.keys(localState.assigneeOverrides).length) setAssigneeOverrides(localState.assigneeOverrides);
     } catch {}
 
     // Read authoritative state from briefing_state.json (GitHub) — single source of truth for all state.
@@ -3499,16 +3573,19 @@ function App() {
         if (state && state.hidden) setHidden(state.hidden);
         if (state && state.edits) setEdits(state.edits);
         if (state && state.reactions) setReactions(state.reactions);
+        if (state && state.assigneeOverrides) setAssigneeOverrides(state.assigneeOverrides);
       } else if (!userActed.current && !remoteIsNewer && state) {
         // Remote is older — keep localStorage values but still apply remote for fields not in local
         if (state.completed && !Object.keys(localState.completed || {}).length) setCompleted(state.completed);
         if (state.hidden && !(localState.hidden || []).length) setHidden(state.hidden);
         if (state.edits && !Object.keys(localState.edits || {}).length) setEdits(state.edits);
         if (state.reactions && !Object.keys(localState.reactions || {}).length) setReactions(state.reactions);
+        if (state.assigneeOverrides && !Object.keys(localState.assigneeOverrides || {}).length) setAssigneeOverrides(state.assigneeOverrides);
       } else if (userActed.current) {
         // User already acted — keep their checkbox/edit/reaction changes, don't touch completed/hidden/edits/reactions
         if (state && state.edits) setEdits(prev => Object.keys(prev).length ? prev : (state.edits || {}));
         if (state && state.reactions) setReactions(prev => Object.keys(prev).length ? prev : (state.reactions || {}));
+        if (state && state.assigneeOverrides) setAssigneeOverrides(prev => Object.keys(prev).length ? prev : (state.assigneeOverrides || {}));
       }
 
       // reminders + reminderHistory: ALWAYS apply with smart merge, regardless of userActed.
@@ -3536,14 +3613,14 @@ function App() {
   // Persist state to remote — ONLY after a real user action (not on initial load)
   useEffect(() => {
     if (!stateLoaded || !userActed.current) return;
-    debouncedWrite({ completed, hidden, reminders, reminderHistory, edits, reactions });
-  }, [completed, hidden, reminders, reminderHistory, edits, reactions, stateLoaded]);
+    debouncedWrite({ completed, hidden, reminders, reminderHistory, edits, reactions, assigneeOverrides });
+  }, [completed, hidden, reminders, reminderHistory, edits, reactions, assigneeOverrides, stateLoaded]);
 
   // Sync full state to GitHub briefing_state.json (source of truth for the digest agent)
   useEffect(() => {
     if (!stateLoaded || !userActed.current) return;
-    debouncedGithubWrite({ completed, hidden, reminders, reminderHistory, edits, reactions });
-  }, [completed, hidden, reminders, reminderHistory, edits, reactions, stateLoaded]);
+    debouncedGithubWrite({ completed, hidden, reminders, reminderHistory, edits, reactions, assigneeOverrides });
+  }, [completed, hidden, reminders, reminderHistory, edits, reactions, assigneeOverrides, stateLoaded]);
 
   const toggle = useCallback((item) => {
     userActed.current = true;
@@ -3582,6 +3659,20 @@ function App() {
       } else {
         next[id] = { emoji, ts: Date.now() };
       }
+      return next;
+    });
+  }, []);
+
+  // Rename a Planner assignee group; passing an empty/blank name clears the override
+  // so the derived name reappears. Keyed by the assignee's stable id.
+  const renameAssignee = useCallback((id, name) => {
+    if (!id) return;
+    userActed.current = true;
+    const clean = (name || "").trim();
+    setAssigneeOverrides(prev => {
+      const next = { ...prev };
+      if (clean) next[id] = clean;
+      else delete next[id];
       return next;
     });
   }, []);
@@ -4136,6 +4227,8 @@ function App() {
               onRefresh={() => loadPlannerTasks(true)}
               refreshing={plannerRefreshing}
               generatedAt={plannerGeneratedAt}
+              assigneeOverrides={assigneeOverrides}
+              onRenameAssignee={renameAssignee}
             />
           )}
 
