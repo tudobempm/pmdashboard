@@ -2968,6 +2968,7 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
 function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
   const list = Array.isArray(tasks) ? tasks : [];
   const [tab, setTab] = useState("active");
+  const [urgencyFilter, setUrgencyFilter] = useState("all");
 
   // Categorize by percent_complete (the reliable synced field), falling back to status
   const statusOf = (t) => {
@@ -3032,6 +3033,40 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
     not_started: { label: "Not started", cls: "bg-zinc-100 text-zinc-600 dark:bg-zinc-700/50 dark:text-zinc-300",             bar: "#a1a1aa" },
   };
 
+  // Due-date urgency — only meaningful for incomplete tasks.
+  const dayDiff = (iso) => {
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return null;
+    const due = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.round((due - today) / 86400000);
+  };
+  const urgencyOf = (t) => {
+    if (statusOf(t) === "completed") return "done";
+    if (!t.due_date_time) return "none";
+    const dd = dayDiff(t.due_date_time);
+    if (dd === null) return "none";
+    if (dd < 0) return "overdue";
+    if (dd <= 2) return "soon";
+    return "upcoming";
+  };
+  // No-due-date tasks aren't pressing, so they ride along with "Upcoming" for filtering.
+  const filterCatOf = (t) => { const u = urgencyOf(t); return u === "none" ? "upcoming" : u; };
+  const dueMeta = {
+    overdue:  { cls: "bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300" },
+    soon:     { cls: "bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300" },
+    upcoming: { cls: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300" },
+    done:     { cls: "bg-zinc-100 text-zinc-500 dark:bg-zinc-700/50 dark:text-zinc-400" },
+    none:     { cls: "bg-zinc-100 text-zinc-500 dark:bg-zinc-700/50 dark:text-zinc-400" },
+  };
+  const dueHint = (t) => {
+    const u = urgencyOf(t);
+    if (u === "overdue") { const n = Math.abs(dayDiff(t.due_date_time)); return `${n}d late`; }
+    if (u === "soon") { const dd = dayDiff(t.due_date_time); return dd <= 0 ? "today" : dd === 1 ? "tomorrow" : `in ${dd}d`; }
+    return null;
+  };
+
   const q = (search || "").trim().toLowerCase();
 
   // Search-filtered list drives both the tab counts and the grouping.
@@ -3052,10 +3087,24 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
     return { active, completed };
   }, [searched]);
 
-  // Tab filter, then group by assignee; tasks sorted by due date within a group.
+  // Urgency breakdown for the active tab's filter pills.
+  const urgencyCounts = useMemo(() => {
+    const c = { all: 0, overdue: 0, soon: 0, upcoming: 0 };
+    for (const t of searched) {
+      if (statusOf(t) === "completed") continue;
+      c.all++;
+      c[filterCatOf(t)]++;
+    }
+    return c;
+  }, [searched]);
+
+  // Tab filter, then urgency filter (active tab), then group by assignee.
   const groups = useMemo(() => {
-    const inTab = searched.filter(t =>
+    let inTab = searched.filter(t =>
       tab === "completed" ? statusOf(t) === "completed" : statusOf(t) !== "completed");
+    if (tab === "active" && urgencyFilter !== "all") {
+      inTab = inTab.filter(t => filterCatOf(t) === urgencyFilter);
+    }
     const map = new Map();
     for (const t of inTab) {
       const as = (Array.isArray(t.assignees) && t.assignees.length) ? t.assignees : [null];
@@ -3078,7 +3127,14 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
       if (b === "Unassigned") return -1;
       return a.localeCompare(b);
     });
-  }, [searched, tab, assigneeNames]);
+  }, [searched, tab, urgencyFilter, assigneeNames]);
+
+  const URGENCY_FILTERS = [
+    { id: "all",      label: "All",      dot: "",             active: "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900" },
+    { id: "overdue",  label: "Overdue",  dot: "bg-red-500",   active: "bg-red-600 text-white" },
+    { id: "soon",     label: "Due soon", dot: "bg-amber-500", active: "bg-amber-500 text-white" },
+    { id: "upcoming", label: "Upcoming", dot: "bg-emerald-500", active: "bg-emerald-600 text-white" },
+  ];
 
   const TabButton = ({ id, label, n }) => (
     <button
@@ -3130,6 +3186,26 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
         </div>
       </div>
 
+      {/* Urgency filter pills (active tab only) */}
+      {tab === "active" && (
+        <div className="flex flex-wrap items-center gap-2 mb-5">
+          {URGENCY_FILTERS.map(f => {
+            const on = urgencyFilter === f.id;
+            return (
+              <button
+                key={f.id}
+                onClick={() => setUrgencyFilter(f.id)}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold border transition-colors ${on ? `${f.active} border-transparent shadow-sm` : "bg-white/70 dark:bg-zinc-800/60 border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-600"}`}
+              >
+                {f.dot && !on ? <span className={`inline-block w-1.5 h-1.5 rounded-full ${f.dot}`} /> : null}
+                {f.label}
+                <span className="tabular-nums opacity-70">{urgencyCounts[f.id]}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
       {/* States */}
       {loading ? (
         <div className="space-y-2.5">
@@ -3178,6 +3254,8 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
                   const meta = statusMeta[s] || statusMeta.not_started;
                   const pct = typeof t.percent_complete === "number" ? Math.max(0, Math.min(100, t.percent_complete)) : (s === "completed" ? 100 : 0);
                   const due = fmtDate(t.due_date_time);
+                  const uMeta = dueMeta[urgencyOf(t)] || dueMeta.none;
+                  const hint = dueHint(t);
                   const url = t.open_in_planner_url;
                   return (
                     <div key={t.id || i} className="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-800/60 backdrop-blur-md px-3.5 py-3 shadow-sm hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
@@ -3189,8 +3267,8 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
                               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10.5px] font-semibold bg-zinc-100 dark:bg-zinc-700/50 text-zinc-500 dark:text-zinc-400">{t.plan_title}</span>
                             )}
                             {due && (
-                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10.5px] font-semibold bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300">
-                                <Icon.Calendar size={10} /> {due}
+                              <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10.5px] font-semibold ${uMeta.cls}`}>
+                                <Icon.Calendar size={10} /> {due}{hint ? ` · ${hint}` : ""}
                               </span>
                             )}
                           </div>
