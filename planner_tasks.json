@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T19:33:48Z",
+  "generated_at": "2026-07-02T19:48:48Z",
   "source": {
     "system": "Microsoft Planner",
     "retrieval": "plans_owned_by_signed_in_user_assigned_by_signed_in_user_to_others",
@@ -32,7 +32,7 @@
     "buckets_count": 2
   },
   "plans": [
-    { "id": "CGRmndYKw0eMapsKM5RtgWUAFXFf", "title": "11 Thiago and Jean" },
+    { "id": "CGRmndYKw0eMapsKM5RtgWUAFXFf", "title": "Thiago's tasks" },
     { "id": "ckgbJokdAku-McjSdAmgoWUAHPYR", "title": "Maria's Tasks" },
     { "id": "y-BQO85mK0iPQw0mUIwqQGUAGuXt", "title": "11 David  Jean 2026-06-16" },
     { "id": "cu0TvTIVFkCYVyrQmHTGVGUAE9gI", "title": "11 Yuri   Jean 2026-06-09" },
@@ -48,7 +48,7 @@
       "id": "1GK6ygm_7Ei5emlvZDYiVWUADLdH",
       "title": "Schedule a meeting to discuss Thiago's projects further",
       "plan_id": "CGRmndYKw0eMapsKM5RtgWUAFXFf",
-      "plan_title": "11 Thiago and Jean",
+      "plan_title": "Thiago's tasks",
       "bucket_id": null,
       "bucket_name": null,
       "project_label": "Unbucketed",
