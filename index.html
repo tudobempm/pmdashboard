@@ -2967,6 +2967,7 @@ function PinnedSection({ digests, hidden, reactions, completed, edits, onToggle,
 /* ═══ Planner Tasks Module ═══ */
 function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
   const list = Array.isArray(tasks) ? tasks : [];
+  const [tab, setTab] = useState("active");
 
   // Categorize by percent_complete (the reliable synced field), falling back to status
   const statusOf = (t) => {
@@ -2979,28 +2980,42 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
     return t.status || "not_started";
   };
 
-  const summary = useMemo(() => {
-    let completed = 0, notStarted = 0, inProgress = 0;
+  // Planner doesn't return assignee display names, but 1:1 plans follow a
+  // "11 <Name> Jean <date>" convention — derive a readable name from there.
+  const nameFromPlan = (title) => {
+    if (!title) return null;
+    const m = String(title).match(/^\s*\d+\s+(.+?)\s+Jean\b/i);
+    return m ? m[1].trim() : null;
+  };
+
+  // Stable user_id -> label map so each person groups consistently across plans.
+  const assigneeNames = useMemo(() => {
+    const votes = new Map(); // user_id -> Map(name -> count)
     for (const t of list) {
-      const s = statusOf(t);
-      if (s === "completed") completed++;
-      else if (s === "in_progress") inProgress++;
-      else notStarted++;
+      const derived = nameFromPlan(t.plan_title);
+      for (const a of (Array.isArray(t.assignees) ? t.assignees : [])) {
+        const id = a && (a.user_id || a.id);
+        if (!id) continue;
+        if (!votes.has(id)) votes.set(id, new Map());
+        const label = (a && a.display_name) || derived;
+        if (label) votes.get(id).set(label, (votes.get(id).get(label) || 0) + 1);
+      }
     }
-    return { total: list.length, completed, notStarted, inProgress };
+    const map = new Map();
+    for (const [id, counts] of votes) {
+      let best = null, bestN = -1;
+      for (const [name, n] of counts) if (n > bestN) { best = name; bestN = n; }
+      map.set(id, best || `Assignee ${String(id).slice(0, 6)}`);
+    }
+    return map;
   }, [list]);
 
-  const q = (search || "").trim().toLowerCase();
-  const filtered = useMemo(() => {
-    if (!q) return list;
-    return list.filter(t => {
-      const haystack = [
-        t.title, t.plan_title, t.project_label, t.bucket_name,
-        ...(Array.isArray(t.assignees) ? t.assignees.map(a => a && a.display_name) : []),
-      ].filter(Boolean).join(" ").toLowerCase();
-      return haystack.includes(q);
-    });
-  }, [list, q]);
+  const labelFor = (a) => {
+    if (!a) return "Unassigned";
+    const id = a.user_id || a.id;
+    if (id && assigneeNames.has(id)) return assigneeNames.get(id);
+    return a.display_name || "Assigned";
+  };
 
   const fmtDate = (iso) => {
     if (!iso) return null;
@@ -3017,60 +3032,110 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
     not_started: { label: "Not started", cls: "bg-zinc-100 text-zinc-600 dark:bg-zinc-700/50 dark:text-zinc-300",             bar: "#a1a1aa" },
   };
 
-  const StatCard = ({ label, value, accent }) => (
-    <div className="flex-1 min-w-[110px] rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-800/60 backdrop-blur-md px-4 py-3 shadow-sm">
-      <p className={`text-2xl font-extrabold tabular-nums ${accent || "text-zinc-900 dark:text-zinc-100"}`}>{value}</p>
-      <p className="text-[11px] font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mt-0.5">{label}</p>
-    </div>
+  const q = (search || "").trim().toLowerCase();
+
+  // Search-filtered list drives both the tab counts and the grouping.
+  const searched = useMemo(() => {
+    if (!q) return list;
+    return list.filter(t => {
+      const haystack = [
+        t.title, t.plan_title, t.project_label, t.bucket_name,
+        ...(Array.isArray(t.assignees) ? t.assignees.map(labelFor) : []),
+      ].filter(Boolean).join(" ").toLowerCase();
+      return haystack.includes(q);
+    });
+  }, [list, q, assigneeNames]);
+
+  const counts = useMemo(() => {
+    let active = 0, completed = 0;
+    for (const t of searched) statusOf(t) === "completed" ? completed++ : active++;
+    return { active, completed };
+  }, [searched]);
+
+  // Tab filter, then group by assignee; tasks sorted by due date within a group.
+  const groups = useMemo(() => {
+    const inTab = searched.filter(t =>
+      tab === "completed" ? statusOf(t) === "completed" : statusOf(t) !== "completed");
+    const map = new Map();
+    for (const t of inTab) {
+      const as = (Array.isArray(t.assignees) && t.assignees.length) ? t.assignees : [null];
+      for (const a of as) {
+        const label = labelFor(a);
+        if (!map.has(label)) map.set(label, []);
+        map.get(label).push(t);
+      }
+    }
+    for (const arr of map.values()) {
+      arr.sort((a, b) => {
+        if (!a.due_date_time && !b.due_date_time) return (a.title || "").localeCompare(b.title || "");
+        if (!a.due_date_time) return 1;
+        if (!b.due_date_time) return -1;
+        return a.due_date_time.localeCompare(b.due_date_time);
+      });
+    }
+    return [...map.entries()].sort(([a], [b]) => {
+      if (a === "Unassigned") return 1;
+      if (b === "Unassigned") return -1;
+      return a.localeCompare(b);
+    });
+  }, [searched, tab, assigneeNames]);
+
+  const TabButton = ({ id, label, n }) => (
+    <button
+      onClick={() => setTab(id)}
+      className={`px-3.5 py-1.5 rounded-lg text-sm font-bold transition-colors ${
+        tab === id
+          ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
+          : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+      }`}
+    >
+      {label} <span className="tabular-nums opacity-70">{n}</span>
+    </button>
   );
 
   return (
     <div className="w-full">
       {/* Header */}
-      <div className="mb-6">
+      <div className="mb-5">
         <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 tracking-tight">Tasks</h1>
         <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5">Microsoft Planner</p>
       </div>
 
-      {/* Search */}
-      <div className="relative group mb-5">
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 p-1 rounded-full group-focus-within:bg-blue-50 dark:group-focus-within:bg-blue-900/30 transition-colors">
-          <Icon.Search size={16} className="text-zinc-400 group-focus-within:text-blue-500 transition-colors" />
+      {/* Tabs + search */}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-5">
+        <div className="inline-flex items-center gap-1 p-1 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-800/60 backdrop-blur-md shadow-sm self-start">
+          <TabButton id="active" label="Active" n={counts.active} />
+          <TabButton id="completed" label="Completed" n={counts.completed} />
         </div>
-        <input
-          type="text"
-          value={search || ""}
-          onChange={e => onSearch(e.target.value)}
-          placeholder="Search tasks..."
-          className="w-full pl-12 pr-10 py-3 text-sm font-medium bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md border border-zinc-200 dark:border-zinc-700 shadow-sm rounded-2xl text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all"
-        />
-        {search ? (
-          <button
-            onClick={() => onSearch("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-700 text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors"
-            aria-label="Clear search"
-          >
-            <Icon.X size={12} />
-          </button>
-        ) : null}
+        <div className="relative group flex-1">
+          <div className="absolute left-3.5 top-1/2 -translate-y-1/2 p-1 rounded-full group-focus-within:bg-blue-50 dark:group-focus-within:bg-blue-900/30 transition-colors">
+            <Icon.Search size={15} className="text-zinc-400 group-focus-within:text-blue-500 transition-colors" />
+          </div>
+          <input
+            type="text"
+            value={search || ""}
+            onChange={e => onSearch(e.target.value)}
+            placeholder="Search tasks..."
+            className="w-full pl-11 pr-9 py-2.5 text-sm font-medium bg-white/80 dark:bg-zinc-800/80 backdrop-blur-md border border-zinc-200 dark:border-zinc-700 shadow-sm rounded-xl text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all"
+          />
+          {search ? (
+            <button
+              onClick={() => onSearch("")}
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-700 text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors"
+              aria-label="Clear search"
+            >
+              <Icon.X size={12} />
+            </button>
+          ) : null}
+        </div>
       </div>
-
-      {/* Summary */}
-      {!error && (
-        <div className="flex flex-wrap gap-3 mb-6">
-          <StatCard label="Total" value={summary.total} />
-          <StatCard label="Completed" value={summary.completed} accent="text-emerald-600 dark:text-emerald-400" />
-          <StatCard label="Not started" value={summary.notStarted} accent="text-zinc-500 dark:text-zinc-400" />
-          <StatCard label="In progress" value={summary.inProgress} accent="text-blue-600 dark:text-blue-400" />
-        </div>
-      )}
 
       {/* States */}
       {loading ? (
-        <div className="space-y-3">
+        <div className="space-y-2.5">
           {[0, 1, 2].map(i => (
-            <div key={i} className="rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white/60 dark:bg-zinc-800/40 p-4 animate-pulse">
-              <div className="h-4 w-1/2 bg-zinc-200 dark:bg-zinc-700 rounded mb-3" />
+            <div key={i} className="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white/60 dark:bg-zinc-800/40 p-3.5 animate-pulse">
+              <div className="h-3.5 w-1/2 bg-zinc-200 dark:bg-zinc-700 rounded mb-2.5" />
               <div className="h-3 w-1/3 bg-zinc-200 dark:bg-zinc-700 rounded" />
             </div>
           ))}
@@ -3085,86 +3150,81 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch }) {
             Make sure <code className="bg-zinc-100 dark:bg-zinc-900 px-1.5 py-0.5 rounded-md font-mono text-xs">planner_tasks.json</code> is available.
           </p>
         </div>
-      ) : filtered.length === 0 ? (
+      ) : groups.length === 0 ? (
         <div className="text-center py-16 px-6 rounded-[2rem] border border-dashed border-zinc-300 dark:border-zinc-700 bg-white/50 dark:bg-zinc-800/30 backdrop-blur-md">
           <div className="w-14 h-14 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
             <Icon.Search size={24} className="text-zinc-400 dark:text-zinc-500" />
           </div>
           <p className="text-base font-bold text-zinc-700 dark:text-zinc-300 mb-1">
-            {q ? "No tasks found" : "No tasks yet"}
+            {q ? "No tasks found" : `No ${tab} tasks`}
           </p>
           <p className="text-sm font-medium text-zinc-500 dark:text-zinc-500">
             {q ? "Try a different search term." : "Assigned Planner tasks will show up here."}
           </p>
         </div>
       ) : (
-        <div className="space-y-3">
-          {filtered.map((t, i) => {
-            const s = statusOf(t);
-            const meta = statusMeta[s] || statusMeta.not_started;
-            const pct = typeof t.percent_complete === "number" ? Math.max(0, Math.min(100, t.percent_complete)) : (s === "completed" ? 100 : 0);
-            const context = t.project_label || t.bucket_name || null;
-            const due = fmtDate(t.due_date_time);
-            const assignees = Array.isArray(t.assignees) ? t.assignees : [];
-            const url = t.open_in_planner_url;
-            return (
-              <div key={t.id || i} className="rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-800/60 backdrop-blur-md p-4 shadow-sm hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100 break-words">{t.title || "Untitled task"}</p>
-                    {/* Context chips */}
-                    <div className="flex flex-wrap items-center gap-1.5 mt-2">
-                      {context && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-zinc-100 dark:bg-zinc-700/50 text-zinc-600 dark:text-zinc-300">{context}</span>
-                      )}
-                      {t.plan_title && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-zinc-100/70 dark:bg-zinc-700/30 text-zinc-500 dark:text-zinc-400">{t.plan_title}</span>
-                      )}
-                      {due && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300">
-                          <Icon.Calendar size={11} /> {due}
-                        </span>
+        <div className="space-y-6">
+          {groups.map(([assignee, groupTasks]) => (
+            <section key={assignee}>
+              {/* Assignee group header */}
+              <div className="flex items-center gap-2 mb-2.5">
+                <h2 className="text-sm font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">{assignee}</h2>
+                <span className="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] font-bold tabular-nums bg-zinc-100 dark:bg-zinc-700/50 text-zinc-500 dark:text-zinc-400">{groupTasks.length}</span>
+                <span className="h-px flex-1 bg-zinc-200/70 dark:bg-zinc-700/60" />
+              </div>
+              <div className="space-y-2.5">
+                {groupTasks.map((t, i) => {
+                  const s = statusOf(t);
+                  const meta = statusMeta[s] || statusMeta.not_started;
+                  const pct = typeof t.percent_complete === "number" ? Math.max(0, Math.min(100, t.percent_complete)) : (s === "completed" ? 100 : 0);
+                  const due = fmtDate(t.due_date_time);
+                  const url = t.open_in_planner_url;
+                  return (
+                    <div key={t.id || i} className="rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-800/60 backdrop-blur-md px-3.5 py-3 shadow-sm hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+                      <div className="flex items-start justify-between gap-2.5">
+                        <div className="min-w-0 flex-1">
+                          <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100 break-words leading-snug">{t.title || "Untitled task"}</p>
+                          <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
+                            {t.plan_title && (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10.5px] font-semibold bg-zinc-100 dark:bg-zinc-700/50 text-zinc-500 dark:text-zinc-400">{t.plan_title}</span>
+                            )}
+                            {due && (
+                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10.5px] font-semibold bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-300">
+                                <Icon.Calendar size={10} /> {due}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-1.5 flex-shrink-0">
+                          <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10.5px] font-bold whitespace-nowrap ${meta.cls}`}>{meta.label}</span>
+                          {url ? (
+                            <a
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="Open in Planner"
+                              aria-label="Open in Planner"
+                              className="inline-flex items-center justify-center w-7 h-7 rounded-lg text-blue-600 dark:text-blue-300 bg-blue-50 dark:bg-blue-500/10 hover:bg-blue-100 dark:hover:bg-blue-500/20 transition-colors active:scale-95"
+                            >
+                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                          ) : null}
+                        </div>
+                      </div>
+                      {pct > 0 && (
+                        <div className="mt-2.5 flex items-center gap-2">
+                          <div className="flex-1 h-1 bg-zinc-200 dark:bg-zinc-700 rounded-full overflow-hidden">
+                            <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pct}%`, background: meta.bar }} />
+                          </div>
+                          <span className="text-[10.5px] font-bold tabular-nums text-zinc-500 dark:text-zinc-400 w-8 text-right">{pct}%</span>
+                        </div>
                       )}
                     </div>
-                  </div>
-                  <span className={`flex-shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold whitespace-nowrap ${meta.cls}`}>{meta.label}</span>
-                </div>
-
-                {/* Progress */}
-                <div className="mt-3 flex items-center gap-2">
-                  <div className="flex-1 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full overflow-hidden">
-                    <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pct}%`, background: meta.bar }} />
-                  </div>
-                  <span className="text-[11px] font-bold tabular-nums text-zinc-500 dark:text-zinc-400 w-9 text-right">{pct}%</span>
-                </div>
-
-                {/* Footer: assignees + open in planner */}
-                <div className="mt-3 flex items-center justify-between gap-3">
-                  <div className="flex flex-wrap items-center gap-1.5 min-w-0">
-                    {assignees.length > 0 ? assignees.map((a, ai) => (
-                      <span key={ai} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-300">
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                        {(a && a.display_name) || "Assigned"}
-                      </span>
-                    )) : (
-                      <span className="text-[11px] font-medium text-zinc-400 dark:text-zinc-500">Unassigned</span>
-                    )}
-                  </div>
-                  {url ? (
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-500/20 transition-colors active:scale-95"
-                    >
-                      Open in Planner
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    </a>
-                  ) : null}
-                </div>
+                  );
+                })}
               </div>
-            );
-          })}
+            </section>
+          ))}
         </div>
       )}
     </div>
