@@ -470,7 +470,7 @@ function EpmoProjectCard({ p }) {
                 {p.recentMovements.map((m, i) => (
                   <li key={i} className="text-[12px] text-zinc-600 dark:text-zinc-300 flex items-baseline gap-1.5">
                     <span className={m.change === "completed" ? "text-emerald-500" : "text-blue-400"}>{m.change === "completed" ? "✓" : "•"}</span>
-                    <span className="flex-1"><span className="font-medium">{m.actor}</span> {m.change} <span className="text-zinc-500 dark:text-zinc-400">"{m.task}"</span></span>
+                    <span className="flex-1 text-zinc-600 dark:text-zinc-300">"{m.task}" <span className="text-zinc-500 dark:text-zinc-400">{m.change}</span></span>
                     <span className="text-[11px] text-zinc-400 dark:text-zinc-500 flex-shrink-0">{epmoWhen(m.when)}</span>
                   </li>
                 ))}
@@ -661,8 +661,9 @@ function EpmoDashboardTab() {
               <li key={i} className="flex items-baseline gap-2 text-[12px]">
                 <span className={`flex-shrink-0 font-bold ${m.change === "completed" ? "text-emerald-500" : "text-blue-400"}`}>{m.change === "completed" ? "✓" : "•"}</span>
                 <span className="flex-1 min-w-0 text-zinc-600 dark:text-zinc-300">
-                  <span className="font-semibold text-zinc-800 dark:text-zinc-100">{m.actor}</span> {m.change} <span className="text-zinc-500 dark:text-zinc-400">"{m.task}"</span>
-                  <span className="text-zinc-400 dark:text-zinc-500"> in {m.project}</span>
+                  <span className="font-semibold text-zinc-800 dark:text-zinc-100">{m.project}</span>
+                  <span className="text-zinc-400 dark:text-zinc-500"> · {m.member}</span>
+                  <span className="text-zinc-500 dark:text-zinc-400"> — "{m.task}" {m.change}</span>
                 </span>
                 <span className="flex-shrink-0 text-[11px] text-zinc-400 dark:text-zinc-500 whitespace-nowrap">{epmoWhen(m.when)}</span>
               </li>
