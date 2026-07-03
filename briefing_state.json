@@ -145,7 +145,8 @@
     "task-20260630-adjust-epmo-liderazgo-cadence": true,
     "task-20260702-prepare-epmo-eow-programmatic-updates": true,
     "task-20260702-align-epmo-intake-ba-process": true,
-    "task-20260702-prepare-sms-automation-status": true
+    "task-20260702-prepare-sms-automation-status": true,
+    "task-20260702-review-dashboard-pr7-preview": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -330,6 +331,6 @@
       "archivedAt": "2026-07-01T12:06:00.000Z"
     }
   ],
-  "lastModified": 1783038737466,
+  "lastModified": 1783038740009,
   "assigneeOverrides": {}
 }
