@@ -275,7 +275,8 @@ def build():
                 "createdAt": su_created, "daysOld": su_days,
             } if su else None,
             "fallbackSummary": fallback,
-            "aiSummary": None,          # <- written by the AI stage
+            "aiSummary": None,          # <- one-line brief, written by the AI stage
+            "aiDetail": None,           # <- 2-4 plain-English bullets, written by the AI stage
             "roadblocks": roadblocks,
             "recentMovements": proj_movements,
         })
