@@ -31,28 +31,52 @@ run time).
 A project is included when it is **not completed**, **not archived**, and its
 owner is one of the members above — even if it has no status update.
 
+## How generation works (three stages)
+
+The per-project "how it's going" summary and the team overview are written by
+**AI (Claude)** — interpreted, not copied from the raw Asana status. So the
+generator is split into stages and the routine's Claude session does the middle
+one:
+
+```
+collect  ->  python3 scripts/generate_epmo_digest.py collect --out /tmp/epmo.json
+             (fetches Asana, computes signals; does NOT touch Supabase)
+ (AI)    ->  Claude reads /tmp/epmo.json and fills each project's `aiSummary`
+             and the top-level `aiOverview`, then saves the file back
+publish  ->  python3 scripts/generate_epmo_digest.py publish --in /tmp/epmo.json
+             (updates history and upserts Supabase rows 6 & 7)
+```
+
+`python3 scripts/generate_epmo_digest.py all` runs collect+publish
+deterministically with **no AI** (fallback); the dashboard then shows the
+rule-based `fallbackSummary` for each project. The routine prompt (see the
+Claude Code Remote trigger) drives collect → AI → publish.
+
 ## What the brief contains
 
-- Team-level status overview (health mix, attention count, completions, watchlist).
-- KPIs: open / needs-attention / completed this week / this month / last month.
+- **AI team overview** — a few sentences interpreting the whole team's state.
+- KPIs: open / needs-attention / at-risk.
 - Charts: open-by-health doughnut + a history line (open, needs-attention, weekly completions).
-- Workload by member, most-recent task movements (last 3 days).
-- Per-project card: daily summary, main roadblocks, recent movement, and the full status update text.
+- Recent activity feed (task movements in the last 3 days, with actor and time).
+- Projects completed this week / this month / last month.
+- **Projects grouped by member**, each an expandable card: a brief AI summary
+  when collapsed, and — when expanded — roadblocks, recent movement, and the
+  full Asana status update.
 
 ## Run it manually
 
-Needs env vars `ASANA_PAT`, `SUPABASE_URL`, `SUPABASE_KEY`:
+Needs env vars `ASANA_PAT`, `SUPABASE_URL`, `SUPABASE_KEY`. To reproduce the
+AI-enriched brief, run `collect`, fill `aiSummary`/`aiOverview` in the JSON, then
+`publish`. For a quick deterministic refresh:
 
 ```bash
-python3 scripts/generate_epmo_digest.py
+python3 scripts/generate_epmo_digest.py all
 ```
 
 ## Maintenance notes
 
-- The routine's prompt embeds a copy of this script so it runs even on a fresh
-  checkout. **If you change the logic here, update the trigger prompt too**
-  (or point the prompt at this file once it is on `main`).
-- To change the team, edit the `TEAM` map in `scripts/generate_epmo_digest.py`
-  (and the trigger prompt copy).
+- The routine prompt runs the **repo copy** of this script (with a curl fallback
+  to `main`). Keep the script on `main` in sync with what the routine expects.
+- To change the team, edit the `TEAM` map in `scripts/generate_epmo_digest.py`.
 - The Supabase anon key used by the browser already lives in `index.html`
   (shared with the CoE tab); no dashboard change is needed for data refresh.

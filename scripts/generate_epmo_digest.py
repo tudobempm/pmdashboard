@@ -1,26 +1,34 @@
 #!/usr/bin/env python3
 """
-EPMO daily digest generator.
+EPMO daily digest generator (two-stage, AI-enriched).
 
 Twin of the CoE Reviewer routine, for the "PMO Projects Portfolio". Reads the
 portfolio from Asana, keeps only OPEN projects (not completed, not archived)
 whose OWNER is one of the EPMO team members, reads each project's status update
-and tasks, and writes two rows to Supabase:
+and tasks, and writes two Supabase rows the dashboard reads live:
 
-  - app_state id = 6  -> live snapshot (what the EPMO dashboard tab renders)
-  - app_state id = 7  -> rolling history (drives the historical charts)
+  - app_state id = 6  -> live snapshot (EPMO dashboard tab)
+  - app_state id = 7  -> rolling history (historical charts)
 
-The dashboard reads these rows live in the browser, exactly like the CoE tab
-reads rows 4 (live) and 5 (history).
+Because the per-project "how it's going" summary must be written by AI (Claude)
+rather than copied from the raw status update, generation is split into stages:
 
-Credentials come from environment variables (same contract as CoE Reviewer):
-  ASANA_PAT     - Asana Personal Access Token (read access to the portfolio)
-  SUPABASE_URL  - e.g. https://niqzkombzncxxihhulqq.supabase.co
-  SUPABASE_KEY  - Supabase key with write access to app_state
+    collect  -> fetch Asana, compute signals, write a raw payload to a file
+    (Claude) -> read that file, write `aiSummary` per project + `aiOverview`
+    publish  -> read the enriched file, update history, upsert Supabase 6 & 7
 
-Outbound HTTPS honours HTTPS_PROXY / the CA bundle at /root/.ccr/ca-bundle.crt
-when present, so it runs both inside a Claude Code web session and in a plain
-routine environment with direct egress.
+The orchestrator (the Claude Code routine session, or a human running it) does
+the middle step. `all` runs collect+publish deterministically with no AI, as a
+fallback — the dashboard falls back to the rule-based summary when aiSummary is
+absent.
+
+Credentials come from environment variables:
+  ASANA_PAT / SUPABASE_URL / SUPABASE_KEY
+
+Usage:
+  python generate_epmo_digest.py collect --out /tmp/epmo.json
+  python generate_epmo_digest.py publish --in  /tmp/epmo.json
+  python generate_epmo_digest.py all                 # deterministic, no AI
 """
 
 import json
@@ -37,8 +45,8 @@ PORTFOLIO_GID = "1210500083704814"          # PMO Projects Portfolio
 LIVE_ROW_ID = 6
 HISTORY_ROW_ID = 7
 HISTORY_RETENTION_DAYS = 120
-RECENT_MOVEMENT_DAYS = 3                     # window for "recent movements"
-STALE_STATUS_DAYS = 14                       # status update older than this is stale
+RECENT_MOVEMENT_DAYS = 3
+STALE_STATUS_DAYS = 14
 RD_TZ = timezone(timedelta(hours=-4))        # America/Santo_Domingo (UTC-4 all year)
 
 TEAM = {
@@ -48,16 +56,14 @@ TEAM = {
     "1210847964982552": "Thiago Santuzzi",
     "1210175205608295": "Nicolas Cavalcanti",
 }
+# Preserve this order in the dashboard's per-person sections.
+TEAM_ORDER = list(TEAM.keys())
 
 HEALTH_LABEL = {
-    "on_track": "On track",
-    "at_risk": "At risk",
-    "off_track": "Off track",
-    "on_hold": "On hold",
-    "none": "No status",
-    None: "No status",
+    "on_track": "On track", "at_risk": "At risk", "off_track": "Off track",
+    "on_hold": "On hold", "none": "No status", None: "No status",
 }
-ATTENTION_HEALTH = {"at_risk", "off_track"}   # health values that always flag attention
+ATTENTION_HEALTH = {"at_risk", "off_track"}
 
 # ------------------------------------------------------------- http layer -----
 _CA = "/root/.ccr/ca-bundle.crt"
@@ -85,7 +91,6 @@ def asana_get(path, params=None):
 
 
 def asana_get_all(path, params):
-    """GET with automatic pagination over Asana's next_page cursor."""
     params = dict(params)
     params.setdefault("limit", 100)
     out, offset = [], None
@@ -113,8 +118,7 @@ def supabase_upsert(row_id, data):
     key = os.environ["SUPABASE_KEY"]
     body = json.dumps({"id": row_id, "data": data}).encode("utf-8")
     _http(url, {
-        "apikey": key,
-        "Authorization": f"Bearer {key}",
+        "apikey": key, "Authorization": f"Bearer {key}",
         "Content-Type": "application/json",
         "Prefer": "resolution=merge-duplicates,return=minimal",
     }, data=body, method="POST")
@@ -150,7 +154,7 @@ def first_sentences(text, limit=280):
 def build():
     now = datetime.now(RD_TZ)
     today = now.date()
-    week_start = today - timedelta(days=today.weekday())          # Monday
+    week_start = today - timedelta(days=today.weekday())
     month_start = today.replace(day=1)
     last_month_end = month_start - timedelta(days=1)
     last_month_start = last_month_end.replace(day=1)
@@ -164,35 +168,29 @@ def build():
     items = asana_get_all(f"portfolios/{PORTFOLIO_GID}/items", {"opt_fields": fields})
     projects = [p for p in items if p.get("resource_type") == "project"
                 and (p.get("owner") or {}).get("gid") in TEAM]
-
     open_projects = [p for p in projects if not p.get("completed") and not p.get("archived")]
     completed = [p for p in projects if p.get("completed") and p.get("completed_at")]
 
-    # ---- completed-window buckets (by completion date, RD tz) ----
     def comp_entry(p):
         return {
-            "name": p["name"],
-            "url": p.get("permalink_url"),
-            "member": TEAM[p["owner"]["gid"]],
-            "memberGid": p["owner"]["gid"],
+            "name": p["name"], "url": p.get("permalink_url"),
+            "member": TEAM[p["owner"]["gid"]], "memberGid": p["owner"]["gid"],
             "completedDate": str(to_rd_date(p["completed_at"])),
         }
 
-    completed_this_week, completed_this_month, completed_last_month = [], [], []
+    ctw, ctm, clm = [], [], []
     for p in sorted(completed, key=lambda x: x["completed_at"], reverse=True):
         d = to_rd_date(p["completed_at"])
         if not d:
             continue
         if d >= week_start:
-            completed_this_week.append(comp_entry(p))
+            ctw.append(comp_entry(p))
         if d >= month_start:
-            completed_this_month.append(comp_entry(p))
+            ctm.append(comp_entry(p))
         elif last_month_start <= d <= last_month_end:
-            completed_last_month.append(comp_entry(p))
+            clm.append(comp_entry(p))
 
-    # ---- per-project cards ----
-    project_cards = []
-    recent_movements = []
+    project_cards, recent_movements = [], []
     recent_cutoff = now - timedelta(days=RECENT_MOVEMENT_DAYS)
 
     for p in open_projects:
@@ -205,7 +203,6 @@ def build():
         due = p.get("due_on")
         overdue = bool(due and due < str(today))
 
-        # tasks (best-effort; skip project on task-fetch failure)
         try:
             tasks = asana_get_all("tasks", {
                 "project": gid,
@@ -217,6 +214,7 @@ def build():
 
         incomplete = [t for t in tasks if not t.get("completed")]
         overdue_tasks = [t for t in incomplete if t.get("due_on") and t["due_on"] < str(today)]
+
         moved = []
         for t in tasks:
             mdt = parse_dt(t.get("modified_at"))
@@ -227,18 +225,15 @@ def build():
 
         proj_movements = []
         for mdt, tname, verb, assignee in moved[:6]:
-            proj_movements.append(f"{tname} — {verb}")
-            recent_movements.append({
-                "project": p["name"],
-                "projectUrl": p.get("permalink_url"),
-                "member": member,
-                "task": tname,
-                "change": verb,
-                "assignee": assignee.get("name"),
+            entry = {
+                "project": p["name"], "projectUrl": p.get("permalink_url"),
+                "member": member, "task": tname, "change": verb,
+                "actor": assignee.get("name") or member,
                 "when": mdt.astimezone(RD_TZ).isoformat(),
-            })
+            }
+            proj_movements.append({"task": tname, "change": verb, "actor": entry["actor"], "when": entry["when"]})
+            recent_movements.append(entry)
 
-        # roadblocks (rule-based, derived from real signals)
         roadblocks = []
         if health in ATTENTION_HEALTH:
             roadblocks.append(f"Owner flagged health as {HEALTH_LABEL[health]}")
@@ -259,124 +254,75 @@ def build():
             len(roadblocks) == 1 and roadblocks[0].startswith("Project is on hold")
         )
 
-        # daily summary (deterministic narrative from real signals + status text)
-        bits = [f"{HEALTH_LABEL[health]}."]
-        bits.append(f"{len(incomplete)} open task(s)")
+        # Deterministic fallback summary (used only if aiSummary is not written).
+        bits = [f"{HEALTH_LABEL[health]}.", f"{len(incomplete)} open task(s)"]
         done_recent = sum(1 for _, _, v, _ in moved if v == "completed")
         if done_recent:
             bits.append(f"{done_recent} completed in the last {RECENT_MOVEMENT_DAYS} days")
         if overdue_tasks:
             bits.append(f"{len(overdue_tasks)} overdue")
-        summary_line = bits[0] + " " + ", ".join(bits[1:]) + "."
-        snippet = first_sentences(su.get("text"))
-        if snippet:
-            summary_line += f' Status update: "{snippet}"'
-        elif not su:
-            summary_line += " No status update on record."
+        fallback = bits[0] + " " + ", ".join(bits[1:]) + "."
 
         project_cards.append({
-            "gid": gid,
-            "name": p["name"],
-            "url": p.get("permalink_url"),
-            "member": member,
-            "memberGid": p["owner"]["gid"],
-            "health": health,
-            "healthLabel": HEALTH_LABEL[health],
-            "dueOn": due,
-            "overdue": overdue,
-            "openTasks": len(incomplete),
-            "tasksTruncated": len(tasks) >= 100,
-            "needsAttention": needs_attention,
-            "hasStatusUpdate": bool(su),
+            "gid": gid, "name": p["name"], "url": p.get("permalink_url"),
+            "member": member, "memberGid": p["owner"]["gid"],
+            "health": health, "healthLabel": HEALTH_LABEL[health],
+            "dueOn": due, "overdue": overdue,
+            "openTasks": len(incomplete), "tasksTruncated": len(tasks) >= 100,
+            "needsAttention": needs_attention, "hasStatusUpdate": bool(su),
             "statusUpdate": {
-                "title": su.get("title"),
-                "text": su.get("text"),
-                "createdAt": su_created,
-                "daysOld": su_days,
+                "title": su.get("title"), "text": su.get("text"),
+                "createdAt": su_created, "daysOld": su_days,
             } if su else None,
-            "dailySummary": summary_line,
+            "fallbackSummary": fallback,
+            "aiSummary": None,          # <- written by the AI stage
             "roadblocks": roadblocks,
             "recentMovements": proj_movements,
         })
 
     recent_movements.sort(key=lambda m: m["when"], reverse=True)
 
-    # ---- aggregates ----
     by_health = defaultdict(int)
     for c in project_cards:
         by_health[c["health"]] += 1
     needs_attention_total = sum(1 for c in project_cards if c["needsAttention"])
 
     by_member = {}
-    for gid, name in TEAM.items():
+    for gid in TEAM_ORDER:
         mine = [c for c in project_cards if c["memberGid"] == gid]
         by_member[gid] = {
-            "name": name,
-            "open": len(mine),
+            "name": TEAM[gid], "open": len(mine),
             "attention": sum(1 for c in mine if c["needsAttention"]),
-            "completedThisWeek": sum(1 for c in completed_this_week if c["memberGid"] == gid),
-            "completedThisMonth": sum(1 for c in completed_this_month if c["memberGid"] == gid),
+            "completedThisWeek": sum(1 for c in ctw if c["memberGid"] == gid),
+            "completedThisMonth": sum(1 for c in ctm if c["memberGid"] == gid),
         }
 
-    # ---- written team-level summary ----
-    attn_projects = sorted(
-        [c for c in project_cards if c["needsAttention"]],
-        key=lambda c: (c["health"] not in ATTENTION_HEALTH, c["name"]),
-    )
-    lines = [
-        f"- {len(open_projects)} open projects across the EPMO team "
-        f"({by_health.get('on_track', 0)} on track, {by_health.get('at_risk', 0)} at risk, "
-        f"{by_health.get('off_track', 0)} off track, {by_health.get('on_hold', 0)} on hold, "
-        f"{by_health.get('none', 0)} without a status update).",
-        f"- {needs_attention_total} project(s) need attention today; "
-        f"{len(recent_movements)} task movements in the last {RECENT_MOVEMENT_DAYS} days.",
-        f"- Completed: {len(completed_this_week)} this week, {len(completed_this_month)} this month, "
-        f"{len(completed_last_month)} last month.",
-    ]
-    if attn_projects:
-        top = ", ".join(f"{c['name']} ({c['healthLabel']})" for c in attn_projects[:4])
-        lines.append(f"- Watchlist: {top}.")
-    busiest = max(by_member.values(), key=lambda m: m["open"], default=None)
-    if busiest and busiest["open"]:
-        lines.append(f"- Heaviest load: {busiest['name']} with {busiest['open']} open projects.")
-    written_summary = "\n".join(lines)
-
     summary = {
-        "totalOpen": len(open_projects),
-        "byHealth": dict(by_health),
+        "totalOpen": len(open_projects), "byHealth": dict(by_health),
         "needsAttention": needs_attention_total,
         "recentMovementCount": len(recent_movements),
-        "completedThisWeek": len(completed_this_week),
-        "completedThisMonth": len(completed_this_month),
-        "completedLastMonth": len(completed_last_month),
-        "byMember": by_member,
+        "completedThisWeek": len(ctw), "completedThisMonth": len(ctm),
+        "completedLastMonth": len(clm), "byMember": by_member,
     }
 
     live = {
-        "updatedAt": now.isoformat(),
-        "generatedFor": str(today),
+        "updatedAt": now.isoformat(), "generatedFor": str(today),
         "portfolioGid": PORTFOLIO_GID,
-        "team": [{"gid": g, "name": n} for g, n in TEAM.items()],
+        "team": [{"gid": g, "name": TEAM[g]} for g in TEAM_ORDER],
         "summary": summary,
-        "writtenSummary": written_summary,
+        "aiOverview": None,             # <- written by the AI stage
         "recentMovements": recent_movements[:40],
-        "completed": {
-            "thisWeek": completed_this_week,
-            "thisMonth": completed_this_month,
-            "lastMonth": completed_last_month,
-        },
-        "projects": sorted(project_cards, key=lambda c: (not c["needsAttention"], c["member"], c["name"])),
+        "completed": {"thisWeek": ctw, "thisMonth": ctm, "lastMonth": clm},
+        "projects": sorted(project_cards, key=lambda c: (TEAM_ORDER.index(c["memberGid"]), not c["needsAttention"], c["name"])),
     }
-    return live, summary, str(today), now
+    return live
 
 
 def update_history(summary, date_str, now):
     history = supabase_get_data(HISTORY_ROW_ID) or {"snapshots": [], "retentionDays": HISTORY_RETENTION_DAYS}
     snapshot = {
-        "date": date_str,
-        "updatedAt": now.isoformat(),
-        "totalOpen": summary["totalOpen"],
-        "byHealth": summary["byHealth"],
+        "date": date_str, "updatedAt": now.isoformat(),
+        "totalOpen": summary["totalOpen"], "byHealth": summary["byHealth"],
         "needsAttention": summary["needsAttention"],
         "completedThisWeek": summary["completedThisWeek"],
         "completedThisMonth": summary["completedThisMonth"],
@@ -393,29 +339,74 @@ def update_history(summary, date_str, now):
     return history
 
 
-def main():
+# ------------------------------------------------------------- stages ---------
+def _require_env():
     for var in ("ASANA_PAT", "SUPABASE_URL", "SUPABASE_KEY"):
         if not os.environ.get(var):
             print(f"FATAL: missing environment variable {var}", file=sys.stderr)
-            return 2
+            sys.exit(2)
 
-    print("Building EPMO digest from Asana …")
-    live, summary, date_str, now = build()
-    print(f"  open projects: {summary['totalOpen']} | needs attention: {summary['needsAttention']} | "
-          f"movements: {summary['recentMovementCount']} | "
-          f"completed w/m/lm: {summary['completedThisWeek']}/{summary['completedThisMonth']}/{summary['completedLastMonth']}")
 
+def stage_collect(out_path):
+    _require_env()
+    print("Collecting EPMO data from Asana …")
+    live = build()
+    s = live["summary"]
+    print(f"  open: {s['totalOpen']} | attention: {s['needsAttention']} | "
+          f"movements: {s['recentMovementCount']} | "
+          f"completed w/m/lm: {s['completedThisWeek']}/{s['completedThisMonth']}/{s['completedLastMonth']}")
+    with open(out_path, "w", encoding="utf-8") as fh:
+        json.dump(live, fh, ensure_ascii=False, indent=2)
+    print(f"  wrote raw payload -> {out_path}")
+    print("  NEXT: fill each project's aiSummary and the top-level aiOverview, then run `publish`.")
+
+
+def stage_publish(in_path):
+    _require_env()
+    with open(in_path, "r", encoding="utf-8") as fh:
+        live = json.load(fh)
+    missing = [p["name"] for p in live.get("projects", []) if not p.get("aiSummary")]
+    if missing:
+        print(f"  note: {len(missing)} project(s) have no aiSummary; dashboard will use the fallback for those.")
+    now = datetime.now(RD_TZ)
+    live["updatedAt"] = now.isoformat()
     supabase_upsert(LIVE_ROW_ID, live)
     print(f"  wrote live snapshot -> app_state id={LIVE_ROW_ID}")
-
-    history = update_history(summary, date_str, now)
+    history = update_history(live["summary"], live["generatedFor"], now)
     supabase_upsert(HISTORY_ROW_ID, history)
     print(f"  wrote history ({len(history['snapshots'])} days) -> app_state id={HISTORY_ROW_ID}")
+    print(f"Done. EPMO digest for {live['generatedFor']} published.")
 
-    print(f"Done. EPMO digest for {date_str} published.")
-    print("Dashboard: https://tudobempm.github.io/pmdashboard/ -> EPMO tab")
+
+def stage_all():
+    """Deterministic end-to-end (no AI). Dashboard uses fallback summaries."""
+    _require_env()
+    print("Building EPMO digest (deterministic, no AI) …")
+    live = build()
+    now = datetime.now(RD_TZ)
+    supabase_upsert(LIVE_ROW_ID, live)
+    history = update_history(live["summary"], live["generatedFor"], now)
+    supabase_upsert(HISTORY_ROW_ID, history)
+    print(f"Done. EPMO digest for {live['generatedFor']} published (rows 6 & 7).")
+
+
+def main(argv):
+    stage = argv[1] if len(argv) > 1 else "all"
+
+    def opt(flag, default=None):
+        return argv[argv.index(flag) + 1] if flag in argv else default
+
+    if stage == "collect":
+        stage_collect(opt("--out", "/tmp/epmo_digest.json"))
+    elif stage == "publish":
+        stage_publish(opt("--in", "/tmp/epmo_digest.json"))
+    elif stage == "all":
+        stage_all()
+    else:
+        print(f"Unknown stage {stage!r}. Use: collect | publish | all", file=sys.stderr)
+        return 2
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv))
