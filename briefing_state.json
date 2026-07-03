@@ -206,7 +206,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1783038676121",
+      "text": "Schedule meetings with portfolio owners",
+      "addedAt": "2026-07-03T00:31:16.121Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -316,5 +322,6 @@
       "archivedAt": "2026-07-01T12:06:00.000Z"
     }
   ],
-  "lastModified": 1782943716075
+  "lastModified": 1783038678353,
+  "assigneeOverrides": {}
 }
