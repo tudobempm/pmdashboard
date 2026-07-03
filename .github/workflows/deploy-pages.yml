@@ -1,23 +1,33 @@
 name: Deploy dashboard to GitHub Pages
 
-# Replaces the auto-generated "pages build and deployment" workflow so we can
-# control concurrency. The Planner sync automation pushes to `main` in quick
-# bursts (a queue-sync commit followed ~60-90s later by a snapshot commit).
-# With the default branch-based Pages deploy, the second push starts a new
-# deployment while the first is still in flight, so GitHub rejects it with
-# "Deployment failed, try again later" and emails a failure notice.
+# Replaces the auto-generated "pages build and deployment" workflow.
 #
-# The `concurrency` block below serializes deployments: a new run waits for the
-# in-flight one instead of colliding, and any intermediate queued run is
-# superseded by the newest. That removes the collision and the error emails.
+# The Planner sync automation pushes to `main` in quick bursts (a queue-sync
+# commit followed ~60-90s later by a snapshot commit), ~every 15 minutes. When
+# the site deployed on every push, the second deployment of a burst was created
+# while the first was still finalizing on the GitHub Pages backend, so Pages
+# rejected it with "Deployment failed, try again later" and emailed a failure
+# notice. A workflow-level concurrency group cannot prevent this because the
+# collision happens on the Pages backend after the deploy step has returned.
 #
-# NOTE: this workflow only takes effect once the repository's Pages source is
+# Fix: deploy on a fixed schedule instead of on every push. The site rebuilds
+# every 2 hours during business hours (8am-6pm, Mon-Fri, America/Santo_Domingo,
+# which is UTC-4 year-round), so deployments never overlap and the error emails
+# stop. Data commits from the Planner sync keep flowing every ~15 min; the live
+# site simply refreshes at the scheduled times (and on demand via "Run
+# workflow"). Trade-off: the published site can lag the repo by up to ~2h during
+# the day and is frozen outside business hours until the next scheduled run.
+#
+# GitHub Actions cron is always UTC, so the local 08:00-18:00 window is
+# expressed as 12:00-22:00 UTC below.
+#
+# NOTE: this workflow only takes effect while the repository's Pages source is
 # set to "GitHub Actions" (Settings -> Pages -> Build and deployment -> Source).
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    # Every 2h, 08:00-18:00 America/Santo_Domingo (UTC-4) = 12,14,16,18,20,22 UTC, Mon-Fri.
+    - cron: '0 12,14,16,18,20,22 * * 1-5'
   workflow_dispatch:
 
 permissions:
