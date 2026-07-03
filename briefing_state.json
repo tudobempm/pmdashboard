@@ -211,6 +211,11 @@
       "id": "rem-1783038676121",
       "text": "Schedule meetings with portfolio owners",
       "addedAt": "2026-07-03T00:31:16.121Z"
+    },
+    {
+      "id": "rem-1783038715461",
+      "text": "Follow up w/ Tiago on Amazon Connect delay response",
+      "addedAt": "2026-07-03T00:31:55.461Z"
     }
   ],
   "reminderHistory": [
@@ -322,6 +327,6 @@
       "archivedAt": "2026-07-01T12:06:00.000Z"
     }
   ],
-  "lastModified": 1783038678353,
+  "lastModified": 1783038717444,
   "assigneeOverrides": {}
 }
