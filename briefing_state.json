@@ -144,7 +144,8 @@
     "task-20260630-follow-up-incident-response-irg-implementation": true,
     "task-20260630-adjust-epmo-liderazgo-cadence": true,
     "task-20260702-prepare-epmo-eow-programmatic-updates": true,
-    "task-20260702-align-epmo-intake-ba-process": true
+    "task-20260702-align-epmo-intake-ba-process": true,
+    "task-20260702-prepare-sms-automation-status": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -329,6 +330,6 @@
       "archivedAt": "2026-07-01T12:06:00.000Z"
     }
   ],
-  "lastModified": 1783038732615,
+  "lastModified": 1783038737466,
   "assigneeOverrides": {}
 }
