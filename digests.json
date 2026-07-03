@@ -1,5 +1,110 @@
 [
   {
+    "id": "eod-2026-07-03",
+    "type": "eod",
+    "date": "Friday, July 3 - End of Day",
+    "isoDate": "2026-07-03",
+    "greeting": "Jean, Friday stayed focused on keeping the EPMO work tidy before the long weekend. The clearest completed movement in mail was the formal closure of the LPR VAWA AOS Matter Plan update, while the dashboard still leaves Amazon Connect, portfolio scheduling, SMS Automation, and dashboard publish confidence as the main carry-forward areas.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0703-done-1",
+            "label": "Closed the LPR VAWA AOS Matter Plan update",
+            "detail": "David sent the project-closure note confirming the V-AOS Submission stage was delivered, validated, and handed over for future support through new requests or tickets."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0703-open-1",
+            "taskId": "task-20260702-review-amazon-connect-delay-summary",
+            "label": "Close the Amazon Connect delay response",
+            "detail": "Keep the follow-up with Tiago tied to the open Amazon Connect delay-response work, and confirm whether Danny and Jeff have the decision-ready summary they need before this carries further into next week.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0703-open-2",
+            "taskId": "task-20260703-check-dashboard-pages-deploy-failures",
+            "label": "Check the dashboard deployment failures",
+            "detail": "GitHub/Vercel notifications continued today, including one successful preview and another deployment blocked by the Vercel free deployment limit. Confirm whether today's pending-digest publisher completes and whether the public dashboard is current.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0703-open-3",
+            "taskId": "task-20260703-schedule-portfolio-owner-meetings",
+            "label": "Schedule the portfolio-owner meetings",
+            "detail": "Keep the portfolio-owner scheduling reminder visible for Monday so the conversations do not get buried by the EOW and intake cadence."
+          },
+          {
+            "id": "eod-0703-open-4",
+            "taskId": "task-20260703-schedule-sms-marketing-phone-call",
+            "label": "Set up the SMS marketing-number call",
+            "detail": "Deepak's note says the team does not need to wait for Josh's return on July 9. Laura should schedule an early-next-week call with Anu and Tim for historical context."
+          },
+          {
+            "id": "eod-0703-open-5",
+            "taskId": "task-20260703-update-executive-project-status-deck",
+            "label": "Confirm the executive project deck update path",
+            "detail": "The Executive Project Status Slide Update was changed today, including a cancellation sent to Yuri and a refreshed invite to Laura, Nicolas, and Thiago. Confirm the deck still has a clean owner path for Amazon Connect, SMS Automation, and intake/process updates."
+          },
+          {
+            "id": "eod-0703-open-6",
+            "taskId": "task-20260703-review-tomas-sop-edit-access",
+            "label": "Review Tomas Aparicio's SOP edit-access request",
+            "detail": "The SharePoint request for Tomas to edit the SOP copy remains a permission decision. Approve only if he should be able to make changes, share, and download that document."
+          },
+          {
+            "id": "eod-0703-open-7",
+            "taskId": "task-20260703-review-laura-planner-prompt-access",
+            "label": "Review Laura Urena's planner prompt access request",
+            "detail": "SharePoint sent a same-day access request from Laura for planner prompt.docx. Confirm whether she should receive access before approving it."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0703-cancel-1",
+            "label": "Executive Project Status Slide Update was cancelled for Yuri",
+            "detail": "Jean sent a cancellation notice for Yuri, alongside a refreshed Executive Project Status Slide Update invite to Laura, Nicolas, and Thiago."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0703-mon-1",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Start Monday by clearing timecards and setting the week before the meeting day picks up."
+          },
+          {
+            "id": "eod-0703-mon-2",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected Monday focus window for any portfolio-owner scheduling, Amazon Connect follow-up, or executive-deck cleanup that does not close today."
+          },
+          {
+            "id": "eod-0703-mon-3",
+            "time": "2:00 PM",
+            "label": "Canceled: EPMO Portfolio Review",
+            "detail": "Sara's note says the TLs are now meeting separately and intake questions should move to the Friday EOW check-in, 1:1s, or ad hoc meetings."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-03-morning",
     "type": "daily",
     "date": "Morning - Friday, July 3",
