@@ -2984,12 +2984,18 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
     return t.status || "not_started";
   };
 
-  // Planner doesn't return assignee display names, but 1:1 plans follow a
-  // "11 <Name> Jean <date>" convention — derive a readable name from there.
+  // Planner doesn't return assignee display names, so derive a readable name from
+  // the plan title. Two naming conventions are in use:
+  //   • 1:1 plans:      "11 <Name> Jean <date>"   (e.g. "11 Maria  Jean 2026-06-23")
+  //   • personal plans: "<Name>'s Tasks"          (e.g. "Thiago's tasks")
   const nameFromPlan = (title) => {
     if (!title) return null;
-    const m = String(title).match(/^\s*\d+\s+(.+?)\s+Jean\b/i);
-    return m ? m[1].trim() : null;
+    const s = String(title);
+    let m = s.match(/^\s*\d+\s+(.+?)\s+Jean\b/i);
+    if (m) return m[1].trim();
+    m = s.match(/^\s*(.+?)['’]s\s+tasks?\b/i);   // straight or curly apostrophe
+    if (m) return m[1].trim();
+    return null;
   };
 
   // Stable user_id -> label map so each person groups consistently across plans.
@@ -3101,6 +3107,28 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
     return `Updated ${rel}`;
   }, [generatedAt]);
 
+  // Next scheduled data refresh. The site redeploys the Planner snapshot every 2h,
+  // 8am-6pm (America/Santo_Domingo, UTC-4 year-round), Mon-Fri. With the manual
+  // Refresh button gone, this tells users when fresh data will land so they don't
+  // assume the view is live. Computed inline each render so it stays current.
+  const nextUpdateLabel = (() => {
+    const SLOTS = [8, 10, 12, 14, 16, 18];        // RD local hours
+    const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const rd = new Date(Date.now() - 4 * 3600 * 1000); // shift to RD wall clock, read via UTC getters
+    const day = rd.getUTCDay(), hour = rd.getUTCHours();
+    const fmt = (h) => `${((h + 11) % 12) + 1}:00 ${h >= 12 ? "PM" : "AM"}`;
+    for (let add = 0; add < 8; add++) {
+      const d = (day + add) % 7;
+      if (d === 0 || d === 6) continue;            // skip weekends
+      for (const s of SLOTS) {
+        if (add === 0 && s <= hour) continue;      // slot already passed today
+        const when = add === 0 ? "" : add === 1 ? "tomorrow " : `${WD[d]} `;
+        return `Next update ${when}${fmt(s)}`;
+      }
+    }
+    return null;
+  })();
+
   // Urgency breakdown for the active tab's filter pills.
   const urgencyCounts = useMemo(() => {
     const c = { all: 0, overdue: 0, soon: 0, upcoming: 0 };
@@ -3174,17 +3202,14 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
           <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 tracking-tight">Tasks</h1>
           <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5">Microsoft Planner</p>
         </div>
-        <div className="flex flex-col items-end gap-1 shrink-0">
-          <button
-            onClick={onRefresh}
-            disabled={refreshing}
-            title="Re-fetch the latest Planner snapshot"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-800/60 backdrop-blur-md text-zinc-700 dark:text-zinc-200 shadow-sm hover:border-blue-300 dark:hover:border-blue-500/50 hover:text-blue-600 dark:hover:text-blue-300 disabled:opacity-60 disabled:cursor-not-allowed transition-colors active:scale-95"
-          >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={refreshing ? "animate-spin" : ""}><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-            {refreshing ? "Refreshing…" : "Refresh"}
-          </button>
-          {updatedLabel ? <span className="text-[10.5px] font-medium text-zinc-400 dark:text-zinc-500">{updatedLabel}</span> : null}
+        <div className="flex flex-col items-end gap-0.5 shrink-0 text-right">
+          {updatedLabel ? (
+            <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-zinc-500 dark:text-zinc-400">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              {updatedLabel}
+            </span>
+          ) : null}
+          {nextUpdateLabel ? <span className="text-[10.5px] font-medium text-zinc-400 dark:text-zinc-500">{nextUpdateLabel}</span> : null}
         </div>
       </div>
 
