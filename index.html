@@ -399,6 +399,310 @@ function CoECalendarButton({ dates, selectedDate, onSelect }) {
   );
 }
 
+/* ═══ EPMO Portfolio Dashboard — team daily brief (Supabase id=6 live, id=7 history) ═══ */
+const EPMO_HEALTH = {
+  on_track:  { label: "On track",  color: "#22c55e" },
+  at_risk:   { label: "At risk",   color: "#f59e0b" },
+  off_track: { label: "Off track", color: "#ef4444" },
+  on_hold:   { label: "On hold",   color: "#3b82f6" },
+  none:      { label: "No status", color: "#a1a1aa" },
+};
+
+function EpmoStat({ label, value, accent }) {
+  return (
+    <div className="bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3">
+      <div className={`text-2xl font-bold ${accent || "text-zinc-900 dark:text-zinc-50"}`}>{value}</div>
+      <div className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mt-0.5">{label}</div>
+    </div>
+  );
+}
+
+function EpmoProjectCard({ p }) {
+  const [open, setOpen] = useState(false);
+  const h = EPMO_HEALTH[p.health] || EPMO_HEALTH.none;
+  const su = p.statusUpdate;
+  return (
+    <div className="bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 overflow-hidden">
+      <div className="px-4 py-3">
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-bold px-2 py-0.5 rounded-full" style={{ color: h.color, background: h.color + "22" }}>
+                <span className="w-1.5 h-1.5 rounded-full" style={{ background: h.color }}></span>{h.label}
+              </span>
+              {p.needsAttention && <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-red-100 text-red-600 dark:bg-red-500/15 dark:text-red-400">Needs attention</span>}
+              {p.overdue && <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-500/15 dark:text-amber-400">Overdue</span>}
+            </div>
+            <a href={p.url} target="_blank" rel="noreferrer" className="block mt-1.5 text-sm font-bold text-zinc-900 dark:text-zinc-50 hover:text-blue-600 dark:hover:text-blue-400 truncate">{p.name}</a>
+            <div className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">{p.member} · {p.openTasks} open task{p.openTasks === 1 ? "" : "s"}{p.dueOn ? ` · due ${p.dueOn}` : ""}</div>
+          </div>
+        </div>
+
+        <p className="text-[13px] text-zinc-600 dark:text-zinc-300 mt-2.5 leading-relaxed">{p.dailySummary}</p>
+
+        {p.roadblocks && p.roadblocks.length > 0 && (
+          <div className="mt-2.5">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-red-500 dark:text-red-400 mb-1">Roadblocks</div>
+            <ul className="space-y-0.5">
+              {p.roadblocks.map((r, i) => (
+                <li key={i} className="text-[12px] text-zinc-600 dark:text-zinc-300 flex gap-1.5"><span className="text-red-400 mt-0.5">▸</span><span>{r}</span></li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {p.recentMovements && p.recentMovements.length > 0 && (
+          <div className="mt-2.5">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1">Recent movement</div>
+            <ul className="space-y-0.5">
+              {p.recentMovements.map((m, i) => (
+                <li key={i} className="text-[12px] text-zinc-500 dark:text-zinc-400 flex gap-1.5"><span className="text-zinc-300 dark:text-zinc-600 mt-0.5">·</span><span>{m}</span></li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <button onClick={() => setOpen(o => !o)} className="mt-3 text-[12px] font-bold text-blue-600 dark:text-blue-400 hover:underline">
+          {open ? "Hide status update" : su ? `Read status update${su.daysOld != null ? ` (${su.daysOld}d ago)` : ""}` : "No status update"}
+        </button>
+        {open && (
+          <div className="mt-2 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-700/50 px-3 py-2.5">
+            {su ? (
+              <>
+                {su.title && <div className="text-[12px] font-bold text-zinc-700 dark:text-zinc-200 mb-1">{su.title}</div>}
+                <div className="text-[12px] text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap leading-relaxed">{su.text || "(empty)"}</div>
+                {su.createdAt && <div className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-2">Posted {su.createdAt.slice(0, 10)}</div>}
+              </>
+            ) : (
+              <div className="text-[12px] text-zinc-400 dark:text-zinc-500">This project has no status update in Asana yet.</div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function EpmoCompletedList({ title, items }) {
+  if (!items) return null;
+  return (
+    <div className="bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3">
+      <div className="flex items-center justify-between">
+        <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">{title}</div>
+        <div className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{items.length}</div>
+      </div>
+      {items.length > 0 ? (
+        <ul className="mt-2 space-y-1">
+          {items.map((c, i) => (
+            <li key={i} className="text-[12px] flex items-baseline justify-between gap-2">
+              <a href={c.url} target="_blank" rel="noreferrer" className="text-zinc-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 truncate">{c.name}</a>
+              <span className="text-zinc-400 dark:text-zinc-500 flex-shrink-0">{c.member.split(" ")[0]} · {c.completedDate.slice(5)}</span>
+            </li>
+          ))}
+        </ul>
+      ) : <div className="text-[12px] text-zinc-400 dark:text-zinc-500 mt-2">None yet.</div>}
+    </div>
+  );
+}
+
+function EpmoDashboardTab() {
+  const [live, setLive] = useState(null);
+  const [history, setHistory] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [memberFilter, setMemberFilter] = useState("all");
+  const [showAll, setShowAll] = useState(false);
+  const healthRef = useRef(null); const healthChart = useRef(null);
+  const histRef = useRef(null); const histChart = useRef(null);
+
+  useEffect(() => {
+    Promise.all([
+      supabase.from("app_state").select("data").eq("id", 6).single(),
+      supabase.from("app_state").select("data").eq("id", 7).single()
+    ]).then(([liveRes, histRes]) => {
+      if (liveRes.error || !liveRes.data?.data) { setError("No EPMO data yet — the daily routine has not published a digest."); setLoading(false); return; }
+      setLive(liveRes.data.data);
+      if (histRes.data?.data?.snapshots) setHistory(histRes.data.data.snapshots);
+      setLoading(false);
+    });
+  }, []);
+
+  // Health doughnut — before early returns to keep hook order stable
+  useEffect(() => {
+    if (!healthRef.current || !live) return;
+    if (healthChart.current) healthChart.current.destroy();
+    const bh = live.summary?.byHealth || {};
+    const order = ["on_track", "at_risk", "off_track", "on_hold", "none"];
+    const keys = order.filter(k => bh[k]);
+    const isDk = document.documentElement.classList.contains("dark");
+    healthChart.current = new Chart(healthRef.current, {
+      type: "doughnut",
+      data: {
+        labels: keys.map(k => EPMO_HEALTH[k].label),
+        datasets: [{ data: keys.map(k => bh[k]), backgroundColor: keys.map(k => EPMO_HEALTH[k].color), borderWidth: 2, borderColor: isDk ? "#27272a" : "#fff" }]
+      },
+      options: { responsive: true, maintainAspectRatio: false, cutout: "62%",
+        plugins: { legend: { position: "bottom", labels: { color: isDk ? "#a1a1aa" : "#52525b", font: { size: 11 }, boxWidth: 10, padding: 10 } } } }
+    });
+    return () => { if (healthChart.current) healthChart.current.destroy(); };
+  }, [live]);
+
+  // History line — open vs needs-attention over time
+  useEffect(() => {
+    if (!histRef.current || history.length === 0) return;
+    if (histChart.current) histChart.current.destroy();
+    const snaps = [...history].sort((a, b) => (a.date < b.date ? -1 : 1));
+    const isDk = document.documentElement.classList.contains("dark");
+    const grid = isDk ? "#27272a" : "#f4f4f5";
+    const tick = isDk ? "#a1a1aa" : "#71717a";
+    histChart.current = new Chart(histRef.current, {
+      type: "line",
+      data: {
+        labels: snaps.map(s => s.date.slice(5)),
+        datasets: [
+          { label: "Open", data: snaps.map(s => s.totalOpen), borderColor: "#3b82f6", backgroundColor: "#3b82f622", fill: true, tension: 0.3, pointRadius: 2 },
+          { label: "Needs attention", data: snaps.map(s => s.needsAttention), borderColor: "#f59e0b", backgroundColor: "transparent", tension: 0.3, pointRadius: 2 },
+          { label: "Completed (wk)", data: snaps.map(s => s.completedThisWeek || 0), borderColor: "#22c55e", backgroundColor: "transparent", tension: 0.3, pointRadius: 2 }
+        ]
+      },
+      options: { responsive: true, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+        plugins: { legend: { position: "bottom", labels: { color: tick, font: { size: 11 }, boxWidth: 10, padding: 10 } } },
+        scales: { x: { grid: { color: grid }, ticks: { color: tick, font: { size: 10 } } }, y: { beginAtZero: true, grid: { color: grid }, ticks: { color: tick, font: { size: 10 }, precision: 0 } } } }
+    });
+    return () => { if (histChart.current) histChart.current.destroy(); };
+  }, [history]);
+
+  if (loading) return <div className="flex items-center justify-center py-24"><div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div></div>;
+  if (error) return (
+    <div className="w-full">
+      <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">EPMO</h1>
+      <div className="mt-6 bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-5 py-8 text-center text-sm text-zinc-500 dark:text-zinc-400">{error}</div>
+    </div>
+  );
+
+  const s = live.summary || {};
+  const bm = s.byMember || {};
+  const team = live.team || [];
+  const maxOpen = Math.max(1, ...Object.values(bm).map(m => m.open));
+  const projects = memberFilter === "all" ? live.projects : live.projects.filter(p => p.memberGid === memberFilter);
+  const shown = showAll ? projects : projects.slice(0, 8);
+  const bullets = (live.writtenSummary || "").split("\n").map(l => l.replace(/^-\s*/, "").trim()).filter(Boolean);
+
+  return (
+    <div className="w-full">
+      {/* Header */}
+      <div className="flex items-start justify-between gap-3 flex-wrap">
+        <div>
+          <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">EPMO</h1>
+          <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-1">Daily brief · PMO Projects Portfolio · Jhara, Maria, Laura, Thiago &amp; Nicolas</p>
+        </div>
+        <div className="text-right">
+          <div className="text-xs font-bold text-zinc-500 dark:text-zinc-400">Brief for {live.generatedFor}</div>
+          {live.updatedAt && <div className="text-[11px] text-zinc-400 dark:text-zinc-500">Updated {live.updatedAt.slice(0, 16).replace("T", " ")}</div>}
+        </div>
+      </div>
+
+      {/* Written summary */}
+      {bullets.length > 0 && (
+        <div className="mt-5 bg-gradient-to-br from-blue-50 to-white dark:from-blue-500/10 dark:to-zinc-800 rounded-2xl border border-blue-100 dark:border-blue-500/20 px-5 py-4">
+          <div className="text-[11px] font-bold uppercase tracking-wider text-blue-500 dark:text-blue-400 mb-2">Team status overview</div>
+          <ul className="space-y-1.5">
+            {bullets.map((b, i) => (
+              <li key={i} className="text-[13px] text-zinc-700 dark:text-zinc-200 flex gap-2 leading-relaxed"><span className="text-blue-400 mt-0.5">▸</span><span>{b}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* KPI row */}
+      <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <EpmoStat label="Open projects" value={s.totalOpen ?? 0} />
+        <EpmoStat label="Needs attention" value={s.needsAttention ?? 0} accent="text-red-500 dark:text-red-400" />
+        <EpmoStat label="Done this week" value={s.completedThisWeek ?? 0} accent="text-emerald-600 dark:text-emerald-400" />
+        <EpmoStat label="Done this month" value={s.completedThisMonth ?? 0} accent="text-emerald-600 dark:text-emerald-400" />
+        <EpmoStat label="Done last month" value={s.completedLastMonth ?? 0} accent="text-zinc-500 dark:text-zinc-400" />
+      </div>
+
+      {/* Charts */}
+      <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div className="bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3">
+          <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2">Open projects by health</div>
+          <div style={{ height: "220px" }}><canvas ref={healthRef}></canvas></div>
+        </div>
+        <div className="bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3">
+          <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2">History</div>
+          {history.length > 1
+            ? <div style={{ height: "220px" }}><canvas ref={histRef}></canvas></div>
+            : <div className="h-[220px] flex items-center justify-center text-center text-[12px] text-zinc-400 dark:text-zinc-500 px-4">History builds up as the daily routine runs — charts appear from the second day onward.</div>}
+        </div>
+      </div>
+
+      {/* By member */}
+      <div className="mt-4 bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3.5">
+        <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2.5">Workload by team member</div>
+        <div className="space-y-2">
+          {team.map(t => {
+            const m = bm[t.gid] || { open: 0, attention: 0, completedThisMonth: 0 };
+            return (
+              <div key={t.gid} className="flex items-center gap-3">
+                <div className="w-28 flex-shrink-0 text-[12px] font-semibold text-zinc-600 dark:text-zinc-300 truncate">{t.name}</div>
+                <div className="flex-1 h-5 rounded-full bg-zinc-100 dark:bg-zinc-700/40 overflow-hidden">
+                  <div className="h-full rounded-full bg-blue-500/80 flex items-center justify-end pr-2" style={{ width: `${Math.max(8, (m.open / maxOpen) * 100)}%` }}>
+                    <span className="text-[10px] font-bold text-white">{m.open}</span>
+                  </div>
+                </div>
+                <div className="w-24 flex-shrink-0 text-right text-[11px] text-zinc-400 dark:text-zinc-500">{m.attention} attn · {m.completedThisMonth} done</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Recent movements */}
+      {live.recentMovements && live.recentMovements.length > 0 && (
+        <div className="mt-4 bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3.5">
+          <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2.5">Most recent movement (last 3 days)</div>
+          <ul className="space-y-1.5">
+            {live.recentMovements.slice(0, 12).map((m, i) => (
+              <li key={i} className="text-[12px] flex items-baseline gap-2">
+                <span className={`flex-shrink-0 font-bold ${m.change === "completed" ? "text-emerald-500" : "text-blue-400"}`}>{m.change === "completed" ? "✓" : "•"}</span>
+                <span className="text-zinc-600 dark:text-zinc-300">{m.task}</span>
+                <span className="text-zinc-400 dark:text-zinc-500 truncate">— {m.project}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Completed windows */}
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <EpmoCompletedList title="Completed this week" items={live.completed?.thisWeek} />
+        <EpmoCompletedList title="Completed this month" items={live.completed?.thisMonth} />
+        <EpmoCompletedList title="Completed last month" items={live.completed?.lastMonth} />
+      </div>
+
+      {/* Project cards */}
+      <div className="mt-6">
+        <div className="flex items-center justify-between gap-3 flex-wrap mb-3">
+          <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-50">Open projects <span className="text-zinc-400 dark:text-zinc-500 font-semibold">({projects.length})</span></h2>
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <button onClick={() => setMemberFilter("all")} className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${memberFilter === "all" ? "bg-blue-600 text-white" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"}`}>All</button>
+            {team.map(t => (
+              <button key={t.gid} onClick={() => { setMemberFilter(t.gid); setShowAll(true); }} className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${memberFilter === t.gid ? "bg-blue-600 text-white" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"}`}>{t.name.split(" ")[0]}</button>
+            ))}
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {shown.map(p => <EpmoProjectCard key={p.gid} p={p} />)}
+        </div>
+        {!showAll && projects.length > shown.length && (
+          <button onClick={() => setShowAll(true)} className="mt-3 w-full text-[12px] font-bold text-blue-600 dark:text-blue-400 py-2 rounded-xl border border-blue-200 dark:border-blue-500/30 hover:bg-blue-50 dark:hover:bg-blue-500/10">Show all {projects.length} projects</button>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function CoEDashboardTab({ onBack }) {
   const [data, setData] = useState(null);
   const [liveData, setLiveData] = useState(null);
@@ -3539,6 +3843,9 @@ function App() {
     { id: "coe", label: "CoE", icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
     ), desc: "Portfolio overview" },
+    { id: "epmo", label: "EPMO", icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6" rx="0.5"/><rect x="12" y="8" width="3" height="10" rx="0.5"/><rect x="17" y="5" width="3" height="13" rx="0.5"/></svg>
+    ), desc: "Team daily brief" },
     { id: "tasks", label: "Tasks", icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
     ), desc: "Planner tasks" },
@@ -3897,6 +4204,11 @@ function App() {
             <CoEDashboardTab onBack={() => { setActiveModule("digests"); setTypeFilter("all"); }} />
           )}
 
+          {/* ═══ EPMO MODULE ═══ */}
+          {activeModule === "epmo" && (
+            <EpmoDashboardTab />
+          )}
+
           {/* ═══ TASKS MODULE ═══ */}
           {activeModule === "tasks" && (
             <PlannerTasksTab
@@ -3922,7 +4234,7 @@ function App() {
               <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Madison &middot; LLF Automation</span>
             </div>
             <div className="flex items-center gap-2 bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 rounded-full">
-              <span className="text-xs font-bold text-zinc-500 dark:text-zinc-400">{activeModule === "digests" ? `${digests.length - hidden.length} active briefings` : activeModule === "coe" ? "CoE Portfolio" : activeModule === "tasks" ? "Planner tasks" : "Time review"}</span>
+              <span className="text-xs font-bold text-zinc-500 dark:text-zinc-400">{activeModule === "digests" ? `${digests.length - hidden.length} active briefings` : activeModule === "coe" ? "CoE Portfolio" : activeModule === "epmo" ? "EPMO Team Brief" : activeModule === "tasks" ? "Planner tasks" : "Time review"}</span>
             </div>
           </div>
 
