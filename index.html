@@ -243,341 +243,6 @@ const TINT = {
   "default": "#9ca3af",
 };
 
-/* ═══ Toggl Data ═══ */
-const TOGGL_KEY = "c4cdd69cef8e9ef2dd36a7c17286e609";
-const TOGGL_WS = 20705602;
-const TOGGL_PROJECTS = [
-  /* ── Non-Utilized (billable:false) ── */
-  { id:216469959, name:"Downtime", client:"Non-Utilized", billable:false, subs:["Internet Outage","Idle / Lack of work","Power Outage"], tasks:{"Internet Outage":240573816,"Idle / Lack of work":240573817,"Power Outage":240573818} },
-  { id:216469960, name:"Issues", client:"Non-Utilized", billable:false, subs:["LLF Technical"], tasks:{"LLF Technical":240573819} },
-  { id:216469961, name:"Meetings", client:"Non-Utilized", billable:false, subs:["Non-Ops Meetings / Firmwide","One-on-One"], tasks:{"Non-Ops Meetings / Firmwide":240573820,"One-on-One":240573821} },
-  { id:216469962, name:"Offline", client:"Non-Utilized", billable:false, subs:["Break","Holiday","Lunch","Time Off"], tasks:{"Break":240573822,"Holiday":240573823,"Lunch":240573824,"Time Off":240573825} },
-  { id:216469963, name:"Other", client:"Non-Utilized", billable:false, subs:["Other"], tasks:{"Other":240573826} },
-  { id:216469964, name:"Other work", client:"Non-Utilized", billable:false, subs:["Strategic intiatives"], tasks:{"Strategic intiatives":240573827} },
-  { id:216469965, name:"Tasks", client:"Non-Utilized", billable:false, subs:["Performance Management & QA"], tasks:{"Performance Management & QA":240573828} },
-  { id:216469966, name:"Time Management", client:"Non-Utilized", billable:false, subs:["Attendance management and Rippling timecard"], tasks:{"Attendance management and Rippling timecard":240573829} },
-  { id:216469967, name:"Training", client:"Non-Utilized", billable:false, subs:["Compliance / Non-Ops / Onboarding"], tasks:{"Compliance / Non-Ops / Onboarding":240573830} },
-  /* ── Utilized-Mat-Work (billable:false) ── */
-  { id:216469968, name:"Other", client:"Utilized-Mat-Work", billable:false, subs:["Other"], tasks:{"Other":240573831} },
-  /* ── Utilized-Non-Mat-Work / PMO & QA (billable:true) ── */
-  { id:216469956, name:"Meetings", client:"Utilized-Non-Mat-Work", billable:true, subs:["Recurring Meetings & Huddles","Operations & Project Meetings"], tasks:{"Recurring Meetings & Huddles":240573814,"Operations & Project Meetings":240573813} },
-  { id:216469969, name:"Other", client:"Utilized-Non-Mat-Work", billable:false, subs:["Other"], tasks:{"Other":240573832} },
-  { id:216469974, name:"Training", client:"Utilized-Non-Mat-Work", billable:true, subs:["Operational Training (Receiving)","Operational Training (Providing)","Coaching, Shadowing & Mentorship"], tasks:{"Operational Training (Receiving)":240573841,"Operational Training (Providing)":240573842,"Coaching, Shadowing & Mentorship":240573840} },
-  { id:216469992, name:"Consulting", client:"Utilized-Non-Mat-Work", billable:true, subs:["Consulting"], tasks:{"Consulting":241221766} },
-  { id:216469993, name:"EPMO Process & Tools", client:"Utilized-Non-Mat-Work", billable:true, subs:["EPMO Process & Tools"], tasks:{"EPMO Process & Tools":241221768} },
-  { id:216469994, name:"Portfolio Management", client:"Utilized-Non-Mat-Work", billable:true, subs:["Portfolio Management"], tasks:{"Portfolio Management":241221770} },
-  { id:216469996, name:"Project Management", client:"Utilized-Non-Mat-Work", billable:true, subs:["Project Tasks"], tasks:{"Project Tasks":240573906} },
-  { id:216469997, name:"Resource Planning", client:"Utilized-Non-Mat-Work", billable:true, subs:["Resource Planning"], tasks:{"Resource Planning":241221773} },
-  { id:216469998, name:"TM Support", client:"Utilized-Non-Mat-Work", billable:true, subs:["TM Support tasks"], tasks:{"TM Support tasks":240573907} },
-  { id:217263333, name:"System Admin", client:"Utilized-Non-Mat-Work", billable:true, subs:["System Admin"], tasks:{"System Admin":241150015} },
-  { id:217287848, name:"Process Engineering", client:"Utilized-Non-Mat-Work", billable:true, subs:["SOPs/Process Development"], tasks:{"SOPs/Process Development":241160780} },
-  { id:216469995, name:"Process Engineering PMO", client:"Utilized-Non-Mat-Work", billable:true, subs:["Dashboards & Reporting","Data Analysis","Process Mapping"], tasks:{"Dashboards & Reporting":240573902,"Data Analysis":240573903,"Process Mapping":240573904} },
-  { id:219085805, name:"Run the business", client:"Utilized-Non-Mat-Work", billable:true, subs:["Email/Calendar Admin"], tasks:{"Email/Calendar Admin":241466357} },
-];
-
-/* ═══ Toggl Review Component (redesigned) ═══ */
-function TogglReviewTab({ onBack }) {
-  const [entries, setEntries] = useState([]);
-  const [reviewDate, setReviewDate] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [expandedId, setExpandedId] = useState(null);
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(null);
-
-  // Load from Supabase (id=2)
-  useEffect(() => {
-    (async () => {
-      try {
-        const { data: item, error: err } = await supabase.from('app_state').select('data').eq('id', 2).single();
-        if (err || !item?.data?.entries || item.data.entries.length === 0 || item.data.submitted) { setLoading(false); return; }
-        setEntries(item.data.entries);
-        setReviewDate(item.data.date || "");
-      } catch { }
-      setLoading(false);
-    })();
-  }, []);
-
-  const toAST = (utc) => new Date(utc).toLocaleTimeString("en-US", { hour:"numeric", minute:"2-digit", timeZone:"America/Santo_Domingo" });
-  const durMin = (start, end) => Math.round((new Date(end) - new Date(start)) / 60000);
-  const totalMin = entries.reduce((sum, e) => sum + durMin(e.start, e.end), 0);
-  const totalH = (totalMin / 60).toFixed(1);
-  const pctOf8 = Math.min(100, Math.round((totalMin / 480) * 100));
-
-  const utilizedMin = entries.filter(e => {
-    const proj = TOGGL_PROJECTS.find(p => p.id === e.project_id);
-    return proj && (proj.client.startsWith("Utilized"));
-  }).reduce((sum, e) => sum + durMin(e.start, e.end), 0);
-  const utilPct = totalMin > 0 ? Math.round((utilizedMin / totalMin) * 100) : 0;
-
-  const updateEntry = (id, field, value) => {
-    setEntries(prev => prev.map(e => {
-      if (e.id !== id) return e;
-      const updated = { ...e, [field]: value };
-      if (field === "project_id") {
-        const proj = TOGGL_PROJECTS.find(p => p.id === value);
-        if (proj) {
-          updated.project_name = proj.name;
-          updated.client_name = proj.client;
-          updated.subcategory = proj.subs[0] || "";
-        }
-      }
-      return updated;
-    }));
-  };
-
-  const removeEntry = (id) => setEntries(prev => prev.filter(e => e.id !== id));
-
-  // Only proposed entries get submitted — existing Toggl entries are read-only
-  const proposedEntries = useMemo(() => entries.filter(e => e.source !== "toggl"), [entries]);
-  const existingEntries = useMemo(() => entries.filter(e => e.source === "toggl"), [entries]);
-
-  const submitToToggl = async () => {
-    setSubmitting(true);
-    const proxyUrl = SUPABASE_URL + "/functions/v1/toggl-proxy";
-    let ok = 0, fail = 0;
-    for (const e of proposedEntries) {
-      // Resolve task_id + billable from project + subcategory
-      const proj = TOGGL_PROJECTS.find(p => p.id === e.project_id);
-      const taskId = e.task_id || proj?.tasks?.[e.subcategory] || (proj?.tasks ? Object.values(proj.tasks)[0] : null);
-      const togglBody = {
-        description: e.description,
-        start: e.start,
-        stop: e.end,
-        duration: durMin(e.start, e.end) * 60,
-        project_id: e.project_id,
-        task_id: taskId,
-        billable: proj?.billable ?? false,
-        workspace_id: TOGGL_WS,
-        tag_ids: e.tag_ids || [],
-        created_with: "madison-dashboard"
-      };
-      const method = e.existing_entry_id ? "PUT" : "POST";
-      const togglUrl = e.existing_entry_id
-        ? "https://api.track.toggl.com/api/v9/workspaces/" + TOGGL_WS + "/time_entries/" + e.existing_entry_id
-        : "https://api.track.toggl.com/api/v9/workspaces/" + TOGGL_WS + "/time_entries";
-      try {
-        const r = await fetch(proxyUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ method, url: togglUrl, body: togglBody, toggl_api_key: TOGGL_KEY })
-        });
-        if (r.ok) ok++; else fail++;
-      } catch { fail++; }
-    }
-    setSubmitting(false);
-    if (fail === 0) {
-      setSubmitted(true);
-      // Clear review data — mark as submitted so refresh doesn't reload them
-      const { error: clearErr } = await supabase.from('app_state').update({ data: { submitted: true, date: reviewDate, entries: [] } }).eq('id', 2);
-      if (clearErr) console.error("Failed to clear Supabase:", clearErr);
-    } else {
-      setError(ok + " submitted, " + fail + " failed.");
-    }
-  };
-
-  const sourceIcon = (s) => s === "toggl" ? "✅" : s === "calendar" ? "📅" : s === "pattern" ? "🔄" : "✋";
-  const sourceLabel = (s) => s === "toggl" ? "Already in Toggl" : s === "calendar" ? "From calendar" : s === "pattern" ? "Proposed" : "Manual";
-
-  // Sort entries by start time
-  const sorted = useMemo(() => [...entries].sort((a, b) => new Date(a.start) - new Date(b.start)), [entries]);
-
-  if (loading) {
-    return (
-      <div className="fade-in">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="h-8 w-48 bg-zinc-200 dark:bg-zinc-800 rounded-lg animate-pulse" />
-        </div>
-        {[1,2,3,4].map(i => (
-          <div key={i} className="h-16 bg-zinc-100 dark:bg-zinc-800/50 rounded-2xl mb-3 animate-pulse" />
-        ))}
-      </div>
-    );
-  }
-
-  if (submitted) {
-    return (
-      <div className="fade-in text-center py-20 px-6 rounded-[2rem] bg-emerald-50/50 dark:bg-emerald-900/10 border border-emerald-200/50 dark:border-emerald-800/30">
-        <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-          <Icon.Check size={24} className="text-emerald-500" />
-        </div>
-        <p className="text-base font-bold text-emerald-700 dark:text-emerald-300 mb-1">All {entries.length} entries submitted to Toggl</p>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">You're all set for {reviewDate}.</p>
-        <button onClick={onBack} className="mt-6 px-5 py-2.5 text-sm font-bold rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-white transition-all">
-          Back to briefings
-        </button>
-      </div>
-    );
-  }
-
-  if (entries.length === 0) {
-    return (
-      <div className="fade-in text-center py-20 px-6 rounded-[2rem] border border-dashed border-zinc-300 dark:border-zinc-700 bg-white/50 dark:bg-zinc-800/30">
-        <div className="w-14 h-14 bg-violet-100 dark:bg-violet-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-violet-500"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <p className="text-base font-bold text-zinc-700 dark:text-zinc-300 mb-1">No Toggl entries to review</p>
-        <p className="text-sm font-medium text-zinc-500 dark:text-zinc-500">The next batch generates at 4:30 PM from your calendar.</p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="fade-in">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-        <div>
-          <div className="flex items-center gap-2.5 mb-1">
-            <div className="p-1.5 rounded-full bg-violet-100 dark:bg-violet-900/30">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-violet-500"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h2 className="text-sm font-semibold text-zinc-700 dark:text-zinc-200">Time Entries for Review</h2>
-          </div>
-          <p className="text-xs font-medium text-zinc-400 dark:text-zinc-500 ml-9">{reviewDate ? new Date(reviewDate + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" }) : "Today"}</p>
-        </div>
-        <div className="flex items-center gap-3">
-          {/* Utilization chip */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-800">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Util</span>
-            <span className={`text-xs font-extrabold tabular-nums ${utilPct >= 70 ? "text-emerald-500" : utilPct >= 50 ? "text-amber-500" : "text-zinc-400"}`}>{utilPct}%</span>
-          </div>
-          {/* Total hours chip */}
-          <div className={`px-3 py-1.5 rounded-full text-xs font-extrabold tabular-nums border ${
-            pctOf8 >= 100 ? "bg-emerald-50 dark:bg-emerald-900/10 text-emerald-600 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800/30"
-            : pctOf8 >= 80 ? "bg-amber-50 dark:bg-amber-900/10 text-amber-600 dark:text-amber-400 border-amber-200 dark:border-amber-800/30"
-            : "bg-zinc-50 dark:bg-zinc-800/50 text-zinc-500 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700"
-          }`}>
-            {totalH}h / 8h
-          </div>
-        </div>
-      </div>
-
-      {/* Progress bar */}
-      <div className="mb-8 bg-zinc-50 dark:bg-zinc-900/50 p-3 rounded-2xl border border-zinc-100 dark:border-zinc-800">
-        <div className="flex items-center gap-4">
-          <div className="flex-1 h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden">
-            <div className="h-full rounded-full transition-all duration-700 ease-out"
-              style={{ width: pctOf8 + "%", background: pctOf8 >= 100 ? "#10b981" : pctOf8 >= 80 ? "#f59e0b" : "#3b82f6" }} />
-          </div>
-          <span className={`text-xs font-bold tabular-nums w-10 text-right ${pctOf8 >= 100 ? "text-emerald-500" : "text-zinc-400"}`}>{pctOf8}%</span>
-        </div>
-      </div>
-
-      {/* Entries list */}
-      <div className="space-y-2">
-        {sorted.map((e) => {
-          const isExpanded = expandedId === e.id;
-          const proj = TOGGL_PROJECTS.find(p => p.id === e.project_id);
-          const mins = durMin(e.start, e.end);
-          const isUtilized = proj && proj.client.startsWith("Utilized");
-          const isExisting = e.source === "toggl";
-
-          return (
-            <div key={e.id} className={`rounded-2xl border overflow-hidden transition-all duration-200 ${
-              isExisting
-                ? "border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30 opacity-60"
-                : isExpanded
-                  ? "border-violet-200 dark:border-violet-800/40 bg-white dark:bg-zinc-900 shadow-sm"
-                  : "border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-zinc-200 dark:hover:border-zinc-700"
-            }`}>
-              {/* Collapsed row */}
-              <div className={`flex items-center gap-3 py-3.5 px-4 group ${isExisting ? "cursor-default" : "cursor-pointer"}`} onClick={() => !isExisting && setExpandedId(isExpanded ? null : e.id)}>
-                <span className="text-xs" title={sourceLabel(e.source)}>{sourceIcon(e.source)}</span>
-                <span className="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums w-32 flex-shrink-0 font-medium">{toAST(e.start)} – {toAST(e.end)}</span>
-                <span className="text-sm text-zinc-800 dark:text-zinc-200 font-medium flex-1 truncate">{e.description}</span>
-                <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full flex-shrink-0 hidden sm:inline-block ${
-                  isUtilized ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500"
-                }`}>{mins}m</span>
-                {!isExisting && (
-                <button onClick={(ev) => { ev.stopPropagation(); removeEntry(e.id); }} className="text-zinc-300 dark:text-zinc-600 hover:text-red-400 dark:hover:text-red-400 transition-colors p-1.5 rounded-lg hover:bg-red-50 dark:hover:bg-red-500/10 opacity-0 group-hover:opacity-100">
-                  <Icon.X size={12} />
-                </button>
-                )}
-              </div>
-
-              {/* Expanded edit panel */}
-              {isExpanded && (
-                <div className="px-4 pb-4 pt-1 border-t border-zinc-100 dark:border-zinc-800 fade-in space-y-3">
-                  {/* Description */}
-                  <div>
-                    <label className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 block mb-1.5">Description</label>
-                    <input type="text" value={e.description} onChange={(ev) => updateEntry(e.id, "description", ev.target.value)}
-                      className="w-full text-sm px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-500/10 text-zinc-900 dark:text-zinc-100 font-medium transition-all" />
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {/* Category */}
-                    <div>
-                      <label className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 block mb-1.5">Category</label>
-                      <select value={e.project_id || ""} onChange={(ev) => updateEntry(e.id, "project_id", parseInt(ev.target.value))}
-                        className="w-full text-sm px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-500/10 text-zinc-900 dark:text-zinc-100 font-medium appearance-none transition-all">
-                        {TOGGL_PROJECTS.map(p => (
-                          <option key={p.id} value={p.id}>{p.client} › {p.name}</option>
-                        ))}
-                      </select>
-                    </div>
-                    {/* Subcategory */}
-                    <div>
-                      <label className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 block mb-1.5">Subcategory</label>
-                      <select value={e.subcategory || ""} onChange={(ev) => updateEntry(e.id, "subcategory", ev.target.value)}
-                        className="w-full text-sm px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-500/10 text-zinc-900 dark:text-zinc-100 font-medium appearance-none transition-all">
-                        {(proj ? proj.subs : []).map(s => (
-                          <option key={s} value={s}>{s}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-                  {/* Time */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 block mb-1.5">Start (AST)</label>
-                      <input type="time" value={new Date(e.start).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"America/Santo_Domingo"})}
-                        onChange={(ev) => {
-                          const [h,m] = ev.target.value.split(":").map(Number);
-                          const d = new Date(e.start); d.setUTCHours(h+4, m, 0, 0);
-                          updateEntry(e.id, "start", d.toISOString());
-                        }}
-                        className="w-full text-sm px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-500/10 text-zinc-900 dark:text-zinc-100 font-medium transition-all" />
-                    </div>
-                    <div>
-                      <label className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 block mb-1.5">End (AST)</label>
-                      <input type="time" value={new Date(e.end).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"America/Santo_Domingo"})}
-                        onChange={(ev) => {
-                          const [h,m] = ev.target.value.split(":").map(Number);
-                          const d = new Date(e.end); d.setUTCHours(h+4, m, 0, 0);
-                          updateEntry(e.id, "end", d.toISOString());
-                        }}
-                        className="w-full text-sm px-3.5 py-2.5 bg-zinc-50 dark:bg-zinc-800 rounded-xl border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-500/10 text-zinc-900 dark:text-zinc-100 font-medium transition-all" />
-                    </div>
-                  </div>
-                  {/* Source tag */}
-                  <div className="flex items-center gap-2 pt-1">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Source:</span>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-violet-50 dark:bg-violet-900/20 text-violet-500">{sourceLabel(e.source)}</span>
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Error */}
-      {error && (
-        <div className="mt-4 py-3 px-4 rounded-xl bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800/30 text-sm text-red-600 dark:text-red-400 font-medium">{error}</div>
-      )}
-
-      {/* Actions */}
-      <div className="flex items-center justify-between mt-8 pt-6 border-t border-zinc-100 dark:border-zinc-800">
-        <span className="text-xs font-medium text-zinc-400 dark:text-zinc-500">{existingEntries.length} in Toggl · {proposedEntries.length} proposed · {totalH}h total</span>
-        <button onClick={submitToToggl} disabled={submitting || proposedEntries.length === 0}
-          className="px-6 py-3 text-sm font-bold rounded-xl transition-all shadow-sm active:scale-95 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-white disabled:bg-zinc-100 disabled:text-zinc-400 dark:disabled:bg-zinc-800 dark:disabled:text-zinc-600">
-          {submitting ? "Submitting..." : proposedEntries.length > 0 ? "Submit " + proposedEntries.length + " new entries to Toggl" : "Nothing to submit"}
-        </button>
-      </div>
-    </div>
-  );
-}
-
 /* ═══ CoE Portfolio Dashboard — Minimalist Card Design ═══ */
 
 /* Mini ring chart component — pure SVG, no Chart.js */
@@ -3733,7 +3398,6 @@ function App() {
   // Filter & search
   const isArchiveView = typeFilter === "archived";
   const isRemindersView = typeFilter === "reminders";
-  const isTogglView = typeFilter === "toggl";
 
   const filtered = useMemo(() => {
     if (isArchiveView) {
@@ -3784,7 +3448,7 @@ function App() {
   const activeDigests = digests.filter(d => !hidden.includes(d.id));
   const types = useMemo(() => {
     const t = new Set(digests.filter(d => !hidden.includes(d.id)).map(d => d.type));
-    const tabs = ["all", ...Array.from(t), "toggl"];
+    const tabs = ["all", ...Array.from(t)];
     if (hidden.length > 0) tabs.push("archived");
     return tabs;
   }, [digests, hidden]);
@@ -3872,9 +3536,6 @@ function App() {
     { id: "digests", label: "Digests", icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
     ), desc: "Daily, EOD & Weekly" },
-    { id: "toggl", label: "Toggl", icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    ), desc: "Time tracking" },
     { id: "coe", label: "CoE", icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
     ), desc: "Portfolio overview" },
@@ -3902,7 +3563,7 @@ function App() {
             return (
               <button
                 key={item.id}
-                onClick={() => { setActiveModule(item.id); if (item.id === "toggl") setTypeFilter("toggl"); else if (typeFilter === "toggl") setTypeFilter("all"); }}
+                onClick={() => setActiveModule(item.id)}
                 className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-left transition-all ${
                   active
                     ? "bg-zinc-100 dark:bg-zinc-800/80 text-zinc-900 dark:text-zinc-100"
@@ -3987,7 +3648,7 @@ function App() {
                   return (
                     <button
                       key={item.id}
-                      onClick={() => { setActiveModule(item.id); if (item.id === "toggl") setTypeFilter("toggl"); else if (typeFilter === "toggl") setTypeFilter("all"); setMobileMenuOpen(false); }}
+                      onClick={() => { setActiveModule(item.id); setMobileMenuOpen(false); }}
                       className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-left transition-all ${
                         active
                           ? "bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
@@ -4135,9 +3796,9 @@ function App() {
                   </div>
                 )}
 
-                {/* Type filter — digest types only (no toggl) */}
+                {/* Type filter — digest types only */}
                 <div className="flex gap-2 flex-wrap">
-                  {types.filter(t => t !== "toggl").map(t => {
+                  {types.map(t => {
                     const count = t === "all" ? activeDigests.length
                       : t === "archived" ? hidden.length
                       : activeDigests.filter(d => d.type === t).length;
@@ -4229,11 +3890,6 @@ function App() {
                 )
               )}
             </>
-          )}
-
-          {/* ═══ TOGGL MODULE ═══ */}
-          {activeModule === "toggl" && (
-            <TogglReviewTab onBack={() => { setActiveModule("digests"); setTypeFilter("all"); }} />
           )}
 
           {/* ═══ COE MODULE ═══ */}
