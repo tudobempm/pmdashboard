@@ -2,21 +2,24 @@ name: Deploy dashboard to GitHub Pages
 
 # Replaces the auto-generated "pages build and deployment" workflow.
 #
-# The Planner sync automation pushes to `main` in quick bursts (a queue-sync
-# commit followed ~60-90s later by a snapshot commit), ~every 15 minutes. When
-# the site deployed on every push, the second deployment of a burst was created
-# while the first was still finalizing on the GitHub Pages backend, so Pages
-# rejected it with "Deployment failed, try again later" and emailed a failure
-# notice. A workflow-level concurrency group cannot prevent this because the
-# collision happens on the Pages backend after the deploy step has returned.
+# History: the Planner / Supabase sync automation pushes to `main` in quick
+# bursts (~every 15 min), only touching data files (briefing_state.json,
+# digests.json, pending-digests/**). When the site deployed on EVERY push, two
+# data deployments in a burst overlapped on the GitHub Pages backend, which
+# rejected the second with "Deployment failed, try again later" and emailed a
+# failure notice. To stop that, deploys were moved to a fixed schedule — but
+# then code changes (index.html) didn't go live until the next scheduled run.
 #
-# Fix: deploy on a fixed schedule instead of on every push. The site rebuilds
-# every 2 hours during business hours (8am-6pm, Mon-Fri, America/Santo_Domingo,
-# which is UTC-4 year-round), so deployments never overlap and the error emails
-# stop. Data commits from the Planner sync keep flowing every ~15 min; the live
-# site simply refreshes at the scheduled times (and on demand via "Run
-# workflow"). Trade-off: the published site can lag the repo by up to ~2h during
-# the day and is frozen outside business hours until the next scheduled run.
+# Current setup — deploy on push again, but only for real code/content changes:
+#   * push to main, EXCLUDING the churny data files below (paths-ignore). A
+#     pure data-sync commit touches only those files, so it no longer triggers
+#     a deploy — no bursts, no collision. An index.html (HTML/CSS/JS) change
+#     deploys immediately, which is what we want.
+#   * the every-2h schedule stays as a safety net so data-file changes still
+#     reach the published site during business hours.
+#   * workflow_dispatch for on-demand runs.
+#   * the retry steps below absorb the occasional transient Pages backend error
+#     if a push- and schedule-triggered run happen to overlap.
 #
 # GitHub Actions cron is always UTC, so the local 08:00-18:00 window is
 # expressed as 12:00-22:00 UTC below.
@@ -25,6 +28,14 @@ name: Deploy dashboard to GitHub Pages
 # set to "GitHub Actions" (Settings -> Pages -> Build and deployment -> Source).
 
 on:
+  push:
+    branches: [main]
+    # Deploy on code/content changes; skip commits that only touch data files
+    # the sync automation rewrites every ~15 min (those would cause deploy bursts).
+    paths-ignore:
+      - 'briefing_state.json'
+      - 'digests.json'
+      - 'pending-digests/**'
   schedule:
     # Every 2h, 08:00-18:00 America/Santo_Domingo (UTC-4) = 12,14,16,18,20,22 UTC, Mon-Fri.
     - cron: '0 12,14,16,18,20,22 * * 1-5'
