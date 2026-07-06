@@ -453,66 +453,66 @@ function EpmoProjectCard({ p }) {
   const statusText = su && su.text ? cleanAsanaText(su.text) : "";
   return (
     <div className={`rounded-2xl border transition-colors ${open ? "border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800" : "border-zinc-200/60 dark:border-zinc-700/60 bg-white dark:bg-zinc-800/60 hover:border-zinc-300 dark:hover:border-zinc-600"}`}>
-      <button onClick={() => setOpen(o => !o)} className="w-full text-left px-4 py-3 flex items-start gap-3">
-        <span className="mt-1 w-2 h-2 rounded-full flex-shrink-0" style={{ background: h.color }} title={h.label}></span>
+      <button onClick={() => setOpen(o => !o)} className="w-full text-left px-4 sm:px-5 py-3.5 flex items-start gap-3">
+        <span className="mt-1.5 w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: h.color }} title={h.label}></span>
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-bold text-zinc-900 dark:text-zinc-50 truncate">{p.name}</span>
-            {p.needsAttention && <span className="w-1.5 h-1.5 rounded-full bg-red-500 flex-shrink-0" title="Needs attention"></span>}
+            <span className="text-[15px] sm:text-base font-bold text-zinc-900 dark:text-zinc-50 truncate">{p.name}</span>
+            {p.needsAttention && <span className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0" title="Needs attention"></span>}
           </div>
-          <p className={`text-[13px] text-zinc-500 dark:text-zinc-400 mt-0.5 leading-snug ${open ? "" : "line-clamp-2"}`}>{brief}</p>
-          <div className="flex items-center gap-2 mt-1.5 text-[11px] text-zinc-400 dark:text-zinc-500">
-            <span className="font-semibold" style={{ color: h.color }}>{h.label}</span>
-            <span>·</span><span>{p.openTasks} open</span>
-            {p.dueOn && <><span>·</span><span className={p.overdue ? "text-amber-600 dark:text-amber-400 font-semibold" : ""}>due {p.dueOn}</span></>}
+          <p className={`text-sm sm:text-[15px] text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed ${open ? "" : "line-clamp-2"}`}>{brief}</p>
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mt-2 text-[12px] text-zinc-400 dark:text-zinc-500">
+            <span className="font-semibold whitespace-nowrap" style={{ color: h.color }}>{h.label}</span>
+            <span className="text-zinc-300 dark:text-zinc-600">·</span><span className="whitespace-nowrap">{p.openTasks} open</span>
+            {p.dueOn && <><span className="text-zinc-300 dark:text-zinc-600">·</span><span className={`whitespace-nowrap ${p.overdue ? "text-amber-600 dark:text-amber-400 font-semibold" : ""}`}>due {p.dueOn}</span></>}
           </div>
         </div>
-        <svg className={`w-4 h-4 flex-shrink-0 mt-1 text-zinc-300 dark:text-zinc-600 transition-transform ${open ? "rotate-180" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg className={`w-4 h-4 flex-shrink-0 mt-1.5 text-zinc-300 dark:text-zinc-600 transition-transform ${open ? "rotate-180" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
 
       {open && (
-        <div className="px-4 pb-4 pt-1 space-y-3 border-t border-zinc-100 dark:border-zinc-700/50 mt-1">
+        <div className="px-4 sm:px-5 pb-5 pt-1 space-y-4 border-t border-zinc-100 dark:border-zinc-700/50 mt-1">
           {p.roadblocks && p.roadblocks.length > 0 && (
             <div>
-              <div className="text-[11px] font-bold uppercase tracking-wider text-red-500 dark:text-red-400 mb-1 mt-2">Roadblocks</div>
-              <ul className="space-y-0.5">
-                {p.roadblocks.map((r, i) => (<li key={i} className="text-[12px] text-zinc-600 dark:text-zinc-300 flex gap-1.5"><span className="text-red-400 mt-0.5">▸</span><span>{r}</span></li>))}
+              <div className="text-[11px] font-bold uppercase tracking-wider text-red-500 dark:text-red-400 mb-1.5 mt-2">Roadblocks</div>
+              <ul className="space-y-1.5">
+                {p.roadblocks.map((r, i) => (<li key={i} className="text-[13px] sm:text-sm text-zinc-600 dark:text-zinc-300 flex gap-2 leading-relaxed"><span className="text-red-400 mt-0.5 flex-shrink-0">▸</span><span>{r}</span></li>))}
               </ul>
             </div>
           )}
           {p.recentMovements && p.recentMovements.length > 0 && (
             <div>
-              <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1">Recent movement</div>
-              <ul className="space-y-1">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1.5">Recent movement</div>
+              <ul className="space-y-1.5">
                 {p.recentMovements.map((m, i) => (
-                  <li key={i} className="text-[12px] text-zinc-600 dark:text-zinc-300 flex items-baseline gap-1.5">
+                  <li key={i} className="text-[13px] text-zinc-600 dark:text-zinc-300 flex items-baseline gap-2">
                     <span className={m.change === "completed" ? "text-emerald-500" : "text-blue-400"}>{m.change === "completed" ? "✓" : "•"}</span>
                     <span className="flex-1 text-zinc-600 dark:text-zinc-300">"{m.task}" <span className="text-zinc-500 dark:text-zinc-400">{m.change}</span></span>
-                    <span className="text-[11px] text-zinc-400 dark:text-zinc-500 flex-shrink-0">{epmoWhen(m.when)}</span>
+                    <span className="text-[12px] text-zinc-400 dark:text-zinc-500 flex-shrink-0">{epmoWhen(m.when)}</span>
                   </li>
                 ))}
               </ul>
             </div>
           )}
           <div>
-            <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1 flex items-center gap-1.5">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1.5 flex items-center gap-1.5">
               Where it stands
               {hasAiDetail
-                ? <span className="text-[9px] font-bold uppercase tracking-wider text-blue-400/70 dark:text-blue-300/60 bg-blue-100 dark:bg-blue-500/15 px-1.5 py-0.5 rounded-full">AI</span>
-                : <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-400/80 dark:text-zinc-500/70 bg-zinc-100 dark:bg-zinc-700/40 px-1.5 py-0.5 rounded-full">From Asana</span>}
+                ? <span className="text-[10px] font-bold uppercase tracking-wider text-blue-400/70 dark:text-blue-300/60 bg-blue-100 dark:bg-blue-500/15 px-1.5 py-0.5 rounded-full">AI</span>
+                : <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400/80 dark:text-zinc-500/70 bg-zinc-100 dark:bg-zinc-700/40 px-1.5 py-0.5 rounded-full">From Asana</span>}
               {su && su.daysOld != null && <span className="normal-case font-medium text-zinc-300 dark:text-zinc-600">· from update {su.daysOld}d ago</span>}
             </div>
             {hasAiDetail ? (
-              <ul className="space-y-1">
-                {p.aiDetail.map((b, i) => (<li key={i} className="text-[12px] text-zinc-600 dark:text-zinc-300 flex gap-1.5 leading-snug"><span className="text-blue-400 mt-0.5 flex-shrink-0">▸</span><span>{b}</span></li>))}
+              <ul className="space-y-2">
+                {p.aiDetail.map((b, i) => (<li key={i} className="text-[13px] sm:text-sm text-zinc-600 dark:text-zinc-300 flex gap-2 leading-relaxed"><span className="text-blue-400 mt-0.5 flex-shrink-0">▸</span><span>{b}</span></li>))}
               </ul>
             ) : statusText ? (
-              <div className="rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-700/50 px-3 py-2.5">
-                <div className="text-[12px] text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap leading-relaxed">{statusText}</div>
+              <div className="rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-700/50 px-3.5 py-3">
+                <div className="text-[13px] sm:text-sm text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap leading-relaxed">{statusText}</div>
               </div>
-            ) : <div className="text-[12px] text-zinc-400 dark:text-zinc-500 italic">No status update in Asana yet.</div>}
+            ) : <div className="text-[13px] text-zinc-400 dark:text-zinc-500 italic">No status update in Asana yet.</div>}
           </div>
-          <a href={p.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[12px] font-bold text-blue-600 dark:text-blue-400 hover:underline">Open in Asana
+          <a href={p.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[13px] font-bold text-blue-600 dark:text-blue-400 hover:underline">Open in Asana
             <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
           </a>
         </div>
@@ -524,23 +524,23 @@ function EpmoProjectCard({ p }) {
 function EpmoMemberSection({ name, stats, projects }) {
   return (
     <div className="mt-5">
-      <div className="flex items-center justify-between gap-3 mb-2 px-1">
+      <div className="flex items-center justify-between gap-3 mb-2.5 px-1">
         <div className="flex items-center gap-2.5 min-w-0">
-          <div className="w-7 h-7 rounded-full bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center flex-shrink-0">
-            <span className="text-[11px] font-bold text-zinc-600 dark:text-zinc-200">{name.split(" ").map(w => w[0]).join("").slice(0, 2)}</span>
+          <div className="w-8 h-8 rounded-full bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center flex-shrink-0">
+            <span className="text-xs font-bold text-zinc-600 dark:text-zinc-200">{name.split(" ").map(w => w[0]).join("").slice(0, 2)}</span>
           </div>
-          <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-50 truncate">{name}</h3>
+          <h3 className="text-[15px] sm:text-base font-bold text-zinc-900 dark:text-zinc-50 truncate">{name}</h3>
           <div className="flex items-center gap-1 flex-shrink-0">
-            {projects.map((p, i) => (<span key={i} className="w-1.5 h-1.5 rounded-full" style={{ background: (EPMO_HEALTH[p.health] || EPMO_HEALTH.none).color }}></span>))}
+            {projects.map((p, i) => (<span key={i} className="w-2 h-2 rounded-full" style={{ background: (EPMO_HEALTH[p.health] || EPMO_HEALTH.none).color }}></span>))}
           </div>
         </div>
-        <div className="text-[11px] text-zinc-400 dark:text-zinc-500 flex-shrink-0 whitespace-nowrap">
+        <div className="text-[12px] text-zinc-400 dark:text-zinc-500 flex-shrink-0 whitespace-nowrap">
           <span className="font-bold text-zinc-600 dark:text-zinc-300">{stats.open}</span> open
           {stats.attention > 0 && <> · <span className="text-red-500 dark:text-red-400 font-semibold">{stats.attention} attn</span></>}
           {stats.completedThisMonth > 0 && <> · {stats.completedThisMonth} done</>}
         </div>
       </div>
-      <div className="space-y-2">
+      <div className="space-y-2.5">
         {projects.map(p => <EpmoProjectCard key={p.gid} p={p} />)}
       </div>
     </div>
@@ -556,15 +556,15 @@ function EpmoCompletedList({ title, items }) {
         <div className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{items.length}</div>
       </div>
       {items.length > 0 ? (
-        <ul className="mt-2 space-y-1">
+        <ul className="mt-2 space-y-1.5">
           {items.map((c, i) => (
-            <li key={i} className="text-[12px] flex items-baseline justify-between gap-2">
+            <li key={i} className="text-[13px] flex items-baseline justify-between gap-2">
               <a href={c.url} target="_blank" rel="noreferrer" className="text-zinc-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 truncate">{c.name}</a>
               <span className="text-zinc-400 dark:text-zinc-500 flex-shrink-0">{c.member.split(" ")[0]} · {c.completedDate.slice(5)}</span>
             </li>
           ))}
         </ul>
-      ) : <div className="text-[12px] text-zinc-400 dark:text-zinc-500 mt-2">None yet.</div>}
+      ) : <div className="text-[13px] text-zinc-400 dark:text-zinc-500 mt-2">None yet.</div>}
     </div>
   );
 }
@@ -654,9 +654,9 @@ function EpmoDashboardTab() {
         <div className="mt-5 bg-gradient-to-br from-blue-50 to-white dark:from-blue-500/10 dark:to-zinc-800 rounded-2xl border border-blue-100 dark:border-blue-500/20 px-5 py-4">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-[11px] font-bold uppercase tracking-wider text-blue-500 dark:text-blue-400">Team status overview</span>
-            <span className="text-[9px] font-bold uppercase tracking-wider text-blue-400/70 dark:text-blue-300/60 bg-blue-100 dark:bg-blue-500/15 px-1.5 py-0.5 rounded-full">AI</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-blue-400/70 dark:text-blue-300/60 bg-blue-100 dark:bg-blue-500/15 px-1.5 py-0.5 rounded-full">AI</span>
           </div>
-          <p className="text-[13px] text-zinc-700 dark:text-zinc-200 leading-relaxed">{overview}</p>
+          <p className="text-sm sm:text-[15px] text-zinc-700 dark:text-zinc-200 leading-relaxed">{overview}</p>
         </div>
       )}
 
@@ -682,16 +682,16 @@ function EpmoDashboardTab() {
       {live.recentMovements && live.recentMovements.length > 0 && (
         <div className="mt-4 bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3.5">
           <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2.5">Latest activity <span className="normal-case font-medium text-zinc-300 dark:text-zinc-600">· last 3 days</span></div>
-          <ul className="space-y-2">
+          <ul className="space-y-2.5">
             {live.recentMovements.slice(0, 12).map((m, i) => (
-              <li key={i} className="flex items-baseline gap-2 text-[12px]">
+              <li key={i} className="flex items-baseline gap-2 text-[13px] leading-relaxed">
                 <span className={`flex-shrink-0 font-bold ${m.change === "completed" ? "text-emerald-500" : "text-blue-400"}`}>{m.change === "completed" ? "✓" : "•"}</span>
                 <span className="flex-1 min-w-0 text-zinc-600 dark:text-zinc-300">
                   <span className="font-semibold text-zinc-800 dark:text-zinc-100">{m.project}</span>
                   <span className="text-zinc-400 dark:text-zinc-500"> · {m.member}</span>
                   <span className="text-zinc-500 dark:text-zinc-400"> — "{m.task}" {m.change}</span>
                 </span>
-                <span className="flex-shrink-0 text-[11px] text-zinc-400 dark:text-zinc-500 whitespace-nowrap">{epmoWhen(m.when)}</span>
+                <span className="flex-shrink-0 text-[12px] text-zinc-400 dark:text-zinc-500 whitespace-nowrap">{epmoWhen(m.when)}</span>
               </li>
             ))}
           </ul>
@@ -706,10 +706,10 @@ function EpmoDashboardTab() {
 
       <div className="mt-6">
         <div className="flex items-center justify-between gap-3 flex-wrap mb-1">
-          <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-50">Projects by member</h2>
+          <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">Projects by member</h2>
           <div className="flex items-center gap-1.5 flex-wrap">
-            <button onClick={() => setMemberFilter("all")} className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${memberFilter === "all" ? "bg-blue-600 text-white" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"}`}>All</button>
-            {team.map(t => (<button key={t.gid} onClick={() => setMemberFilter(t.gid)} className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${memberFilter === t.gid ? "bg-blue-600 text-white" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"}`}>{t.name.split(" ")[0]}</button>))}
+            <button onClick={() => setMemberFilter("all")} className={`text-xs font-bold px-3 py-1.5 rounded-full ${memberFilter === "all" ? "bg-blue-600 text-white" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"}`}>All</button>
+            {team.map(t => (<button key={t.gid} onClick={() => setMemberFilter(t.gid)} className={`text-xs font-bold px-3 py-1.5 rounded-full ${memberFilter === t.gid ? "bg-blue-600 text-white" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"}`}>{t.name.split(" ")[0]}</button>))}
           </div>
         </div>
         {shownTeam.map(t => {
