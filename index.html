@@ -3554,7 +3554,7 @@ function App() {
     fetch(`briefing_state.json?${Date.now()}`, { cache: "no-store" })
       .then(r => r.ok ? r.json() : null)
       .catch(() => null)
-      .then(state => {
+      .then(async state => {
       // Compare timestamps: if localStorage is newer than remote, keep local user data.
       // This prevents stale remote state from overwriting recent local changes when GitHub sync lags.
       const localTs  = localState.lastModified || 0;
@@ -3599,6 +3599,33 @@ function App() {
         return merged;
       });
       setReminderHistory(remoteHistory);
+
+      // Reconcile with Supabase (app_state id=1). The app still WRITES every user
+      // action to Supabase, but only READS briefing_state.json on load. When the
+      // GitHub write of briefing_state.json fails (e.g. no sync proxy/token
+      // configured) the user's latest reminders live ONLY in Supabase, and
+      // reading briefing_state.json alone silently drops them. So: if Supabase
+      // state is strictly newer than briefing_state.json AND the user hasn't
+      // acted locally this session, treat Supabase's reminders as the current
+      // active set — minus any already consumed by a briefing (present in
+      // reminderHistory), which Supabase never learns about because the digest
+      // agent writes consumption to briefing_state.json only. The strictly-newer
+      // guard means the healthy case (GitHub write succeeded) and the post-digest
+      // case (agent bumped briefing_state.lastModified) both keep briefing_state,
+      // so consumed reminders are never resurrected.
+      try {
+        if (!userActed.current) {
+          const sb = await remoteRead();
+          const sbTs = (sb && sb.lastModified) || 0;
+          if (sb && Array.isArray(sb.reminders) && sbTs > remoteTs) {
+            const reconciled = sb.reminders.filter(r => r && r.id && !historyIds.has(r.id));
+            setReminders(reconciled);
+            console.log("[state] reminders reconciled from Supabase (newer than briefing_state.json):", reconciled.length);
+          }
+        }
+      } catch (e) {
+        console.warn("[state] Supabase reminder reconciliation skipped:", e);
+      }
 
       setStateLoaded(true);
     });
