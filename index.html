@@ -408,6 +408,21 @@ const EPMO_HEALTH = {
   none:      { label: "No status", color: "#a1a1aa" },
 };
 
+// Asana status updates embed @mentions as bare profile/permalink URLs
+// (e.g. https://app.asana.com/1/.../profile/123). Those render as names inside
+// Asana but come through the API as raw links, so strip them from any status
+// text we show as a fallback instead of dumping the URLs on screen.
+function cleanAsanaText(text) {
+  if (!text) return "";
+  return text
+    .replace(/https?:\/\/app\.asana\.com\/\S+/gi, "")
+    .split("\n")
+    .map(line => line.replace(/[^\S\n]+$/, "").replace(/[ \t]{2,}/g, " "))
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 function epmoWhen(iso) {
   if (!iso) return "";
   const d = new Date(iso);
@@ -434,6 +449,8 @@ function EpmoProjectCard({ p }) {
   const h = EPMO_HEALTH[p.health] || EPMO_HEALTH.none;
   const su = p.statusUpdate;
   const brief = p.aiSummary || p.fallbackSummary;
+  const hasAiDetail = p.aiDetail && p.aiDetail.length > 0;
+  const statusText = su && su.text ? cleanAsanaText(su.text) : "";
   return (
     <div className={`rounded-2xl border transition-colors ${open ? "border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800" : "border-zinc-200/60 dark:border-zinc-700/60 bg-white dark:bg-zinc-800/60 hover:border-zinc-300 dark:hover:border-zinc-600"}`}>
       <button onClick={() => setOpen(o => !o)} className="w-full text-left px-4 py-3 flex items-start gap-3">
@@ -480,16 +497,18 @@ function EpmoProjectCard({ p }) {
           <div>
             <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1 flex items-center gap-1.5">
               Where it stands
-              <span className="text-[9px] font-bold uppercase tracking-wider text-blue-400/70 dark:text-blue-300/60 bg-blue-100 dark:bg-blue-500/15 px-1.5 py-0.5 rounded-full">AI</span>
+              {hasAiDetail
+                ? <span className="text-[9px] font-bold uppercase tracking-wider text-blue-400/70 dark:text-blue-300/60 bg-blue-100 dark:bg-blue-500/15 px-1.5 py-0.5 rounded-full">AI</span>
+                : <span className="text-[9px] font-bold uppercase tracking-wider text-zinc-400/80 dark:text-zinc-500/70 bg-zinc-100 dark:bg-zinc-700/40 px-1.5 py-0.5 rounded-full">From Asana</span>}
               {su && su.daysOld != null && <span className="normal-case font-medium text-zinc-300 dark:text-zinc-600">· from update {su.daysOld}d ago</span>}
             </div>
-            {p.aiDetail && p.aiDetail.length > 0 ? (
+            {hasAiDetail ? (
               <ul className="space-y-1">
                 {p.aiDetail.map((b, i) => (<li key={i} className="text-[12px] text-zinc-600 dark:text-zinc-300 flex gap-1.5 leading-snug"><span className="text-blue-400 mt-0.5 flex-shrink-0">▸</span><span>{b}</span></li>))}
               </ul>
-            ) : su && su.text ? (
+            ) : statusText ? (
               <div className="rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-700/50 px-3 py-2.5">
-                <div className="text-[12px] text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap leading-relaxed">{su.text}</div>
+                <div className="text-[12px] text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap leading-relaxed">{statusText}</div>
               </div>
             ) : <div className="text-[12px] text-zinc-400 dark:text-zinc-500 italic">No status update in Asana yet.</div>}
           </div>
