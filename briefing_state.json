@@ -126,6 +126,7 @@
     "task-20260626-note-overtime-interest-not-approved": true,
     "task-20260701-triage-mental-health-eval-expansion": true,
     "task-20260702-review-amazon-connect-delay-summary": true,
+    "task-20260706-agendar-reunion-marketing-portfolio": true,
     "task-20260610-follow-up-epmo-liderazgo-commitments": true,
     "task-20260610-verify-github-token-dashboard-access": true,
     "task-20260618-review-billing-intake-shannon-cooper": true,
@@ -352,7 +353,7 @@
       "archivedAt": "2026-07-06T13:23:00.000Z"
     }
   ],
-  "lastModified": 1783344180000,
+  "lastModified": 1783344805460,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
