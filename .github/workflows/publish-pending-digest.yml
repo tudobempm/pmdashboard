@@ -114,3 +114,38 @@ jobs:
           git add digests.json briefing_state.json pending-digests || true
           git commit -m 'Publish pending daily digest'
           git push
+
+      # Keep Supabase (app_state id=1) in lockstep with briefing_state.json.
+      # The dashboard writes user actions to Supabase; if Supabase were left
+      # holding pre-publish state, its newer lastModified would resurrect
+      # reminders this digest just consumed. The key is Supabase's PUBLIC anon
+      # key (already shipped in index.html), so it adds no exposure here.
+      - name: Sync published state to Supabase
+        if: success()
+        env:
+          SUPABASE_URL: https://niqzkombzncxxihhulqq.supabase.co
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pcXprb21iem5jeHhpaGh1bHFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2OTI5NTgsImV4cCI6MjA4OTI2ODk1OH0.9DMbwxPi4yBkXG034sakwh6tnxt-AUcKkt_MER71qcg
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, urllib.request
+
+          state = json.loads(pathlib.Path('briefing_state.json').read_text(encoding='utf-8'))
+          key = os.environ['SUPABASE_ANON_KEY']
+          req = urllib.request.Request(
+              os.environ['SUPABASE_URL'] + '/rest/v1/app_state?id=eq.1',
+              data=json.dumps({'data': state}).encode(),
+              method='PATCH',
+              headers={
+                  'apikey': key,
+                  'Authorization': f'Bearer {key}',
+                  'Content-Type': 'application/json',
+                  'Prefer': 'return=minimal',
+              },
+          )
+          try:
+              urllib.request.urlopen(req, timeout=30)
+              print('Supabase updated to match published briefing_state.json.')
+          except Exception as e:
+              # Non-fatal: the scheduled sync workflow converges the stores.
+              print(f'Supabase write-back failed (sync workflow will converge): {e}')
+          PY

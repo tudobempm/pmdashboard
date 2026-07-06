@@ -1,0 +1,157 @@
+name: Sync dashboard state from Supabase
+
+# Why this exists: the dashboard writes every user action to TWO stores —
+# Supabase (app_state id=1, always succeeds) and briefing_state.json on GitHub
+# (via the Vercel sync proxy, which can fail silently when unconfigured or
+# rate-limited). When the GitHub write fails, the user's latest reminders and
+# completions live only in Supabase, and the digest agent — which reads
+# briefing_state.json and has NO Supabase access from its container — generates
+# briefings from stale state (this is exactly what broke the July 6 digest).
+#
+# This workflow closes that gap from inside GitHub Actions, which has both
+# internet access and repo write access. It pulls the Supabase state and, if it
+# is strictly newer than briefing_state.json, reconciles it in and commits. The
+# digest agent keeps reading briefing_state.json as it always has.
+#
+# Merge rules (mirror the dashboard's own reconciliation logic in index.html):
+# - reminderHistory: union by id — consumption is recorded on the GitHub side
+#   first, and must never be lost even if Supabase lags.
+# - reminders: taken from Supabase, EXCLUDING any id already in the history
+#   union, so reminders consumed by a published digest are never resurrected.
+# - everything else (completed, hidden, edits, reactions, assigneeOverrides):
+#   newest-wins from Supabase.
+# After committing, the reconciled state is written back to Supabase so both
+# stores converge.
+#
+# The API key below is Supabase's PUBLIC anon key — it is already shipped to
+# every browser in index.html, so keeping it in this file adds no exposure.
+
+on:
+  schedule:
+    # Every 30 min, 06:00-18:30 America/Santo_Domingo (UTC-4), Mon-Fri.
+    # The early start matters: the digest agent generates the morning briefing
+    # around 08:00 local (12:00 UTC), and it must read post-weekend state.
+    - cron: '*/30 10-22 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-supabase-state
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Reconcile briefing_state.json from Supabase
+        id: reconcile
+        env:
+          SUPABASE_URL: https://niqzkombzncxxihhulqq.supabase.co
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pcXprb21iem5jeHhpaGh1bHFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2OTI5NTgsImV4cCI6MjA4OTI2ODk1OH0.9DMbwxPi4yBkXG034sakwh6tnxt-AUcKkt_MER71qcg
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, sys, urllib.request
+
+          url = os.environ['SUPABASE_URL'] + '/rest/v1/app_state?id=eq.1&select=data'
+          key = os.environ['SUPABASE_ANON_KEY']
+          req = urllib.request.Request(url, headers={'apikey': key, 'Authorization': f'Bearer {key}'})
+          try:
+              rows = json.load(urllib.request.urlopen(req, timeout=30))
+          except Exception as e:
+              # Supabase being unreachable must not fail the run; briefing_state
+              # simply stays as-is until the next scheduled attempt.
+              print(f'Supabase read failed, skipping sync: {e}')
+              sys.exit(0)
+          if not rows or not isinstance(rows[0].get('data'), dict):
+              print('No Supabase state row found; nothing to sync.')
+              sys.exit(0)
+          supa = rows[0]['data']
+
+          state_path = pathlib.Path('briefing_state.json')
+          local = json.loads(state_path.read_text(encoding='utf-8'))
+
+          supa_ts = supa.get('lastModified') or 0
+          local_ts = local.get('lastModified') or 0
+          if supa_ts <= local_ts:
+              print(f'briefing_state.json is current (local {local_ts} >= supabase {supa_ts}).')
+              sys.exit(0)
+
+          history = {r['id']: r for r in local.get('reminderHistory', []) if isinstance(r, dict) and r.get('id')}
+          for r in supa.get('reminderHistory', []):
+              if isinstance(r, dict) and r.get('id'):
+                  history.setdefault(r['id'], r)
+          history_list = sorted(history.values(), key=lambda r: r.get('archivedAt') or r.get('addedAt') or '')
+
+          merged = dict(local)
+          for k in ('completed', 'hidden', 'reactions', 'edits', 'assigneeOverrides'):
+              if k in supa:
+                  merged[k] = supa[k]
+          merged['reminderHistory'] = history_list
+          merged['reminders'] = [
+              r for r in supa.get('reminders', [])
+              if isinstance(r, dict) and r.get('id') and r['id'] not in history
+          ]
+          merged['lastModified'] = supa_ts
+
+          if merged == local:
+              print('Supabase is newer but reconciled state is identical; nothing to commit.')
+              sys.exit(0)
+
+          state_path.write_text(json.dumps(merged, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f'Reconciled: {len(merged["reminders"])} active reminder(s), '
+                f'{len(merged["completed"])} completion(s), lastModified {supa_ts}.')
+          PY
+
+      - name: Commit reconciled state
+        run: |
+          if git diff --quiet briefing_state.json; then
+            echo 'Nothing to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add briefing_state.json
+          git commit -m 'Sync dashboard state from Supabase'
+          # The Planner automation pushes to main every ~15 min; rebase-retry
+          # so a concurrent push does not fail this run.
+          for i in 1 2 3 4; do
+            git push && exit 0
+            git pull --rebase
+            sleep $((i * 3))
+          done
+          git push
+
+      - name: Write reconciled state back to Supabase
+        if: success()
+        env:
+          SUPABASE_URL: https://niqzkombzncxxihhulqq.supabase.co
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pcXprb21iem5jeHhpaGh1bHFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2OTI5NTgsImV4cCI6MjA4OTI2ODk1OH0.9DMbwxPi4yBkXG034sakwh6tnxt-AUcKkt_MER71qcg
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, urllib.request
+
+          state = json.loads(pathlib.Path('briefing_state.json').read_text(encoding='utf-8'))
+          key = os.environ['SUPABASE_ANON_KEY']
+          req = urllib.request.Request(
+              os.environ['SUPABASE_URL'] + '/rest/v1/app_state?id=eq.1',
+              data=json.dumps({'data': state}).encode(),
+              method='PATCH',
+              headers={
+                  'apikey': key,
+                  'Authorization': f'Bearer {key}',
+                  'Content-Type': 'application/json',
+                  'Prefer': 'return=minimal',
+              },
+          )
+          try:
+              urllib.request.urlopen(req, timeout=30)
+              print('Supabase updated to match briefing_state.json.')
+          except Exception as e:
+              # Non-fatal: the next scheduled run converges the stores again.
+              print(f'Supabase write-back failed (will retry next run): {e}')
+          PY
