@@ -107,6 +107,7 @@
     "task-20260618-confirm-phase-2-sms-handoff-to-it": true,
     "task-20260618-follow-up-yuri-trace-tasksets-uat": true,
     "task-20260623-prepare-intake-workflow-alignment": true,
+    "task-20260703-schedule-portfolio-owner-meetings": true,
     "task-20260703-schedule-sms-marketing-phone-call": true,
     "task-20260609-decide-expired-staff-aug-recording": true,
     "task-20260609-monitor-daca-i90-remaining-it-work": true,
@@ -133,6 +134,7 @@
     "task-20260618-review-billing-intake-shannon-cooper": true,
     "task-20260619-triage-calendar-based-sms-automation": true,
     "task-20260701-coordinate-trace-portfolio-followups": true,
+    "task-20260703-update-executive-project-status-deck": true,
     "task-20260612-check-weekly-executive-project-thread": true,
     "task-20260623-review-aos-rejection-downstream-tasks": true,
     "task-20260626-review-slq-baesman-amendment-language": true,
@@ -174,6 +176,10 @@
     "tue-0602-co-23"
   ],
   "reactions": {
+    "task-20260706-index-pm-team-loop": {
+      "ts": 1783372088844,
+      "emoji": "📌"
+    },
     "task-20260619-work-smart-goals-kpis": {
       "ts": 1782125244266,
       "emoji": "❗"
@@ -205,6 +211,14 @@
     "task-20260612-complete-lead-up-module-2-prework": {
       "ts": 1781554727172,
       "emoji": "⭐"
+    },
+    "task-20260703-schedule-portfolio-owner-meetings": {
+      "ts": 1783372070667,
+      "emoji": "📌"
+    },
+    "task-20260706-incident-response-incident-guides": {
+      "ts": 1783372091013,
+      "emoji": "📌"
     },
     "task-20260616-prepare-pm-workshop-and-roadblocks": {
       "ts": 1781645955961,
@@ -354,7 +368,7 @@
       "archivedAt": "2026-07-06T13:23:00.000Z"
     }
   ],
-  "lastModified": 1783352494161,
+  "lastModified": 1783372091017,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
