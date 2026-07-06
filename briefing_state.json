@@ -214,28 +214,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1783113409687",
-      "text": "escribirle a Chelsea de legal para validar ownership del portafolio de legal",
-      "addedAt": "2026-07-03T21:16:49.687Z"
-    },
-    {
-      "id": "rem-1783113433300",
-      "text": "escribirle a los stakeholders de Incident Response para que terminen los incident guides",
-      "addedAt": "2026-07-03T21:17:13.300Z"
-    },
-    {
-      "id": "rem-1783113608770",
-      "text": "seguir trabajando en index de pm team en loop",
-      "addedAt": "2026-07-03T21:20:08.770Z"
-    },
-    {
-      "id": "rem-1783113622099",
-      "text": "agendar reunion con paige, lucia y amy de Marketing - portfolio",
-      "addedAt": "2026-07-03T21:20:22.099Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -343,9 +322,37 @@
       "addedAt": "2026-07-01T11:09:44.106Z",
       "archivedAt": "2026-07-01T12:06:00.000Z",
       "shownInDigestId": "daily-2026-07-01-morning"
+    },
+    {
+      "id": "rem-1783113409687",
+      "text": "escribirle a Chelsea de legal para validar ownership del portafolio de legal",
+      "addedAt": "2026-07-03T21:16:49.687Z",
+      "shownInDigestId": "daily-2026-07-06-morning",
+      "archivedAt": "2026-07-06T13:23:00.000Z"
+    },
+    {
+      "id": "rem-1783113433300",
+      "text": "escribirle a los stakeholders de Incident Response para que terminen los incident guides",
+      "addedAt": "2026-07-03T21:17:13.300Z",
+      "shownInDigestId": "daily-2026-07-06-morning",
+      "archivedAt": "2026-07-06T13:23:00.000Z"
+    },
+    {
+      "id": "rem-1783113608770",
+      "text": "seguir trabajando en index de pm team en loop",
+      "addedAt": "2026-07-03T21:20:08.770Z",
+      "shownInDigestId": "daily-2026-07-06-morning",
+      "archivedAt": "2026-07-06T13:23:00.000Z"
+    },
+    {
+      "id": "rem-1783113622099",
+      "text": "agendar reunion con paige, lucia y amy de Marketing - portfolio",
+      "addedAt": "2026-07-03T21:20:22.099Z",
+      "shownInDigestId": "daily-2026-07-06-morning",
+      "archivedAt": "2026-07-06T13:23:00.000Z"
     }
   ],
-  "lastModified": 1783113622106,
+  "lastModified": 1783344180000,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
