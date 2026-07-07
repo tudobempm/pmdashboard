@@ -605,7 +605,7 @@ function StaleBriefBanner({ isoDate, onRefresh, refreshing, className = "" }) {
   );
 }
 
-function EpmoDashboardTab() {
+function EpmoDashboardTab({ refreshSignal }) {
   const [live, setLive] = useState(null);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -646,6 +646,9 @@ function EpmoDashboardTab() {
     window.addEventListener("focus", onVisible);
     return () => { document.removeEventListener("visibilitychange", onVisible); window.removeEventListener("focus", onVisible); };
   }, [loadData]);
+
+  // Header Sync button pressed — refetch even if the page never lost focus.
+  useEffect(() => { if (refreshSignal) loadData(true); }, [refreshSignal, loadData]);
 
   useEffect(() => {
     if (!healthRef.current || !live) return;
@@ -783,7 +786,7 @@ function EpmoDashboardTab() {
   );
 }
 
-function CoEDashboardTab({ onBack }) {
+function CoEDashboardTab({ onBack, refreshSignal }) {
   const [data, setData] = useState(null);
   const [liveData, setLiveData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -840,6 +843,9 @@ function CoEDashboardTab({ onBack }) {
     window.addEventListener("focus", onVisible);
     return () => { document.removeEventListener("visibilitychange", onVisible); window.removeEventListener("focus", onVisible); };
   }, [loadData]);
+
+  // Header Sync button pressed — refetch even if the page never lost focus.
+  useEffect(() => { if (refreshSignal) loadData(true); }, [refreshSignal, loadData]);
 
   const handleDateSelect = (dateStr) => {
     if (!dateStr || dateStr === "live") {
@@ -3545,6 +3551,10 @@ function App() {
   const [digests, setDigests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [syncing, setSyncing] = useState(false);
+  // Bumped by the header Sync button so the CoE/EPMO tabs (which own their
+  // Supabase fetches) refetch too — Sync used to refresh only the briefings,
+  // spinning reassuringly while those tabs kept yesterday's data.
+  const [syncTick, setSyncTick] = useState(0);
   const [error, setError] = useState(null);
   const [completed, setCompleted] = useState({});
   const [search, setSearch] = useState("");
@@ -4147,7 +4157,7 @@ function App() {
           </div>
           {/* Mobile sync button */}
           <button
-            onClick={() => loadDigests(true)}
+            onClick={() => { loadDigests(true); setSyncTick(t => t + 1); }}
             disabled={syncing}
             title="Sync latest briefing"
             className="p-2 rounded-xl text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors disabled:opacity-40"
@@ -4171,7 +4181,7 @@ function App() {
               <span className="text-zinc-300 dark:text-zinc-600">&middot;</span>
               <p className="text-sm font-semibold text-zinc-400 dark:text-zinc-500 tabular-nums">{timeStr}</p>
               <button
-                onClick={() => loadDigests(true)}
+                onClick={() => { loadDigests(true); setSyncTick(t => t + 1); }}
                 disabled={syncing}
                 title="Sync latest briefing"
                 className="ml-1 flex items-center gap-1.5 px-2 py-1 rounded-full text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
@@ -4358,12 +4368,12 @@ function App() {
 
           {/* ═══ COE MODULE ═══ */}
           {activeModule === "coe" && (
-            <CoEDashboardTab onBack={() => { setActiveModule("digests"); setTypeFilter("all"); }} />
+            <CoEDashboardTab onBack={() => { setActiveModule("digests"); setTypeFilter("all"); }} refreshSignal={syncTick} />
           )}
 
           {/* ═══ EPMO MODULE ═══ */}
           {activeModule === "epmo" && (
-            <EpmoDashboardTab />
+            <EpmoDashboardTab refreshSignal={syncTick} />
           )}
 
           {/* ═══ TASKS MODULE ═══ */}
