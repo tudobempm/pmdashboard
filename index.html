@@ -3111,6 +3111,12 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
     return `Updated ${rel}`;
   }, [generatedAt]);
 
+  // A snapshot older than a day means the Planner sync automation is not
+  // running — open/closed states can no longer be trusted. Surface that loudly
+  // instead of letting stale checkboxes pass for live data.
+  const staleHours = generatedAt ? (Date.now() - new Date(generatedAt).getTime()) / 3600000 : null;
+  const isStale = staleHours !== null && !isNaN(staleHours) && staleHours >= 24;
+
   // Next scheduled data refresh. The site redeploys the Planner snapshot every 2h,
   // 8am-6pm (America/Santo_Domingo, UTC-4 year-round), Mon-Fri. With the manual
   // Refresh button gone, this tells users when fresh data will land so they don't
@@ -3209,13 +3215,23 @@ function PlannerTasksTab({ tasks, loading, error, search, onSearch, onRefresh = 
         <div className="flex flex-col items-end gap-0.5 shrink-0 text-right">
           {updatedLabel ? (
             <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-zinc-500 dark:text-zinc-400">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span className={`inline-block w-1.5 h-1.5 rounded-full ${isStale ? "bg-amber-500" : "bg-emerald-500"}`} />
               {updatedLabel}
             </span>
           ) : null}
-          {nextUpdateLabel ? <span className="text-[10.5px] font-medium text-zinc-400 dark:text-zinc-500">{nextUpdateLabel}</span> : null}
+          {/* Don't promise a "next update" while the sync is clearly not running. */}
+          {!isStale && nextUpdateLabel ? <span className="text-[10.5px] font-medium text-zinc-400 dark:text-zinc-500">{nextUpdateLabel}</span> : null}
         </div>
       </div>
+
+      {isStale ? (
+        <div className="mb-5 flex items-start gap-2.5 rounded-xl border border-amber-300 dark:border-amber-500/40 bg-amber-50 dark:bg-amber-900/20 px-4 py-3">
+          <span className="mt-1 inline-block w-2 h-2 rounded-full bg-amber-500 shrink-0" />
+          <p className="text-[13px] font-medium text-amber-800 dark:text-amber-200">
+            This snapshot is {Math.round(staleHours / 24)} day{Math.round(staleHours / 24) === 1 ? "" : "s"} old (from {new Date(generatedAt).toLocaleDateString(undefined, { month: "short", day: "numeric" })}) — the Planner sync hasn't run since then. Task states may not match Planner: recently completed tasks can still show as open, and new tasks are missing.
+          </p>
+        </div>
+      ) : null}
 
       {/* Tabs + search */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-5">
