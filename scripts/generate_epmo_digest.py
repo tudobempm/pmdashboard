@@ -14,7 +14,7 @@ Because the per-project "how it's going" summary must be written by AI (Claude)
 rather than copied from the raw status update, generation is split into stages:
 
     collect  -> fetch Asana, compute signals, write a raw payload to a file
-    (Claude) -> read that file, write `aiSummary` per project + `aiOverview`
+    (Claude) -> read that file, write `aiSummary` + `aiDetail` per project + `aiOverview`
     publish  -> read the enriched file, update history, upsert Supabase 6 & 7
 
 The orchestrator (the Claude Code routine session, or a human running it) does
@@ -359,7 +359,7 @@ def stage_collect(out_path):
     with open(out_path, "w", encoding="utf-8") as fh:
         json.dump(live, fh, ensure_ascii=False, indent=2)
     print(f"  wrote raw payload -> {out_path}")
-    print("  NEXT: fill each project's aiSummary and the top-level aiOverview, then run `publish`.")
+    print("  NEXT: fill each project's aiSummary and aiDetail plus the top-level aiOverview, then run `publish`.")
 
 
 def stage_publish(in_path):
@@ -369,6 +369,9 @@ def stage_publish(in_path):
     missing = [p["name"] for p in live.get("projects", []) if not p.get("aiSummary")]
     if missing:
         print(f"  note: {len(missing)} project(s) have no aiSummary; dashboard will use the fallback for those.")
+    missing_detail = [p["name"] for p in live.get("projects", []) if not p.get("aiDetail")]
+    if missing_detail:
+        print(f"  note: {len(missing_detail)} project(s) have no aiDetail; dashboard will show the raw Asana status ('From Asana') for those.")
     now = datetime.now(RD_TZ)
     live["updatedAt"] = now.isoformat()
     supabase_upsert(LIVE_ROW_ID, live)
