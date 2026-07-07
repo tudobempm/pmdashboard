@@ -154,7 +154,8 @@
     "task-20260622-clarify-incident-response-bucket-six-owner": true,
     "task-20260701-review-product-salesforce-roadmap-materials": true,
     "task-20260630-follow-up-incident-response-irg-implementation": true,
-    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true
+    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true,
+    "task-20260706-prepare-coe-newsletter-development": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -368,7 +369,7 @@
       "archivedAt": "2026-07-06T13:23:00.000Z"
     }
   ],
-  "lastModified": 1783372091017,
+  "lastModified": 1783422185553,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
