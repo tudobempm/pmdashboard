@@ -234,9 +234,24 @@
   "edits": {},
   "reminders": [
     {
-      "id": "rem-1783422216245",
-      "text": "Escribirle a Jessie y Nicolas sobre los proyectos de BD",
-      "addedAt": "2026-07-07T11:03:36.245Z"
+      "id": "rem-1783458328492",
+      "text": "enviar al grupo de PMs las notas de la reunion de ayer",
+      "addedAt": "2026-07-07T21:05:28.492Z"
+    },
+    {
+      "id": "rem-1783458903069",
+      "text": "comenzar testeos de LA AI para change management",
+      "addedAt": "2026-07-07T21:15:03.069Z"
+    },
+    {
+      "id": "rem-1783458958449",
+      "text": "enviar a Eugenia lista de proyectos de los PEs y tambien el SOP template que acordamos como equipo para el nivel de detalle estandard",
+      "addedAt": "2026-07-07T21:15:58.449Z"
+    },
+    {
+      "id": "rem-1783458977061",
+      "text": "Preguntar a Janet proceso para conseguir BA a un proyecto ya. asignado a un PM",
+      "addedAt": "2026-07-07T21:16:17.061Z"
     }
   ],
   "reminderHistory": [
@@ -376,7 +391,7 @@
       "archivedAt": "2026-07-06T13:23:00.000Z"
     }
   ],
-  "lastModified": 1783430891358,
+  "lastModified": 1783458977069,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
