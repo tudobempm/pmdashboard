@@ -569,26 +569,83 @@ function EpmoCompletedList({ title, items }) {
   );
 }
 
+// The brief generators sometimes write timezone-naive UTC timestamps
+// ("2026-07-07T12:09:05.497499"); new Date() reads those as LOCAL time and
+// shifts the displayed hour by the UTC offset. Treat a missing offset as UTC.
+function parseBriefTs(s) {
+  if (!s) return null;
+  const d = new Date(/[zZ]$|[+-]\d{2}:?\d{2}$/.test(s) ? s : s + "Z");
+  return isNaN(d) ? null : d;
+}
+
+function localIsoDate(d) {
+  const pad = n => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
+// A brief dated `isoDate` is stale when it's from a previous day and today is
+// a weekday — the routines run Mon–Fri, so Friday's brief showing on the
+// weekend is expected, not stale.
+function briefIsStale(isoDate) {
+  if (!isoDate) return false;
+  const now = new Date();
+  return isoDate < localIsoDate(now) && now.getDay() >= 1 && now.getDay() <= 5;
+}
+
+function StaleBriefBanner({ isoDate, onRefresh, refreshing, className = "" }) {
+  const label = new Date(isoDate + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
+  return (
+    <div className={`rounded-2xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 px-4 py-2.5 flex items-center gap-2.5 ${className}`}>
+      <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M4.93 19h14.14c1.54 0 2.5-1.67 1.73-3L13.73 5c-.77-1.33-2.69-1.33-3.46 0L3.2 16c-.77 1.33.19 3 1.73 3z"/></svg>
+      <span className="text-[13px] font-semibold text-amber-700 dark:text-amber-400">Showing the brief from {label} — today's hasn't loaded here yet.</span>
+      <button onClick={onRefresh} disabled={refreshing} className="ml-auto px-3 py-1 rounded-lg text-[12px] font-bold bg-amber-500 text-white hover:bg-amber-600 transition-colors shadow-sm disabled:opacity-60 flex-shrink-0">
+        {refreshing ? "Checking…" : "Refresh"}
+      </button>
+    </div>
+  );
+}
+
 function EpmoDashboardTab() {
   const [live, setLive] = useState(null);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [refreshing, setRefreshing] = useState(false);
   const [memberFilter, setMemberFilter] = useState("all");
   const healthRef = useRef(null); const healthChart = useRef(null);
   const histRef = useRef(null); const histChart = useRef(null);
+  const lastFetch = useRef(0);
 
-  useEffect(() => {
+  const loadData = useCallback((isRefresh) => {
+    if (isRefresh) setRefreshing(true);
+    lastFetch.current = Date.now();
     Promise.all([
       supabase.from("app_state").select("data").eq("id", 6).single(),
       supabase.from("app_state").select("data").eq("id", 7).single()
     ]).then(([liveRes, histRes]) => {
-      if (liveRes.error || !liveRes.data?.data) { setError("No EPMO data yet — the daily routine has not published a digest."); setLoading(false); return; }
+      setRefreshing(false);
+      setLoading(false);
+      if (liveRes.error || !liveRes.data?.data) { if (!isRefresh) setError("No EPMO data yet — the daily routine has not published a digest."); return; }
+      setError(null);
       setLive(liveRes.data.data);
       if (histRes.data?.data?.snapshots) setHistory(histRes.data.data.snapshots);
-      setLoading(false);
     });
   }, []);
+
+  // Fetch on mount, then refetch whenever the page becomes visible again — a
+  // tab left open since before the morning run otherwise keeps showing
+  // yesterday's brief until the user does a full reload.
+  useEffect(() => {
+    loadData();
+    const onVisible = () => {
+      if (document.visibilityState !== "visible") return;
+      if (Date.now() - lastFetch.current < 30000) return;
+      loadData(true);
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    window.addEventListener("focus", onVisible);
+    return () => { document.removeEventListener("visibilitychange", onVisible); window.removeEventListener("focus", onVisible); };
+  }, [loadData]);
 
   useEffect(() => {
     if (!healthRef.current || !live) return;
@@ -649,6 +706,10 @@ function EpmoDashboardTab() {
           {live.updatedAt && <div className="text-[11px] text-zinc-400 dark:text-zinc-500">Updated {live.updatedAt.slice(0, 16).replace("T", " ")}</div>}
         </div>
       </div>
+
+      {briefIsStale(live.generatedFor) && (
+        <StaleBriefBanner isoDate={live.generatedFor} onRefresh={() => loadData(true)} refreshing={refreshing} className="mt-4" />
+      )}
 
       {overview && (
         <div className="mt-5 bg-gradient-to-br from-blue-50 to-white dark:from-blue-500/10 dark:to-zinc-800 rounded-2xl border border-blue-100 dark:border-blue-500/20 px-5 py-4">
@@ -739,31 +800,55 @@ function CoEDashboardTab({ onBack }) {
   const [historyDates, setHistoryDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
   const [historyLoading, setHistoryLoading] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
   const historyCache = useRef({});
+  const lastFetch = useRef(0);
+  const selectedDateRef = useRef(null);
 
-  useEffect(() => {
+  const loadData = useCallback((isRefresh) => {
+    if (isRefresh) setRefreshing(true);
+    lastFetch.current = Date.now();
     Promise.all([
       supabase.from("app_state").select("data").eq("id", 4).single(),
       supabase.from("app_state").select("data").eq("id", 5).single()
     ]).then(([liveRes, histRes]) => {
-      if (liveRes.error || !liveRes.data?.data) { setError("No CoE data yet — run the automation first"); setLoading(false); return; }
-      setData(liveRes.data.data);
+      setRefreshing(false);
+      setLoading(false);
+      if (liveRes.error || !liveRes.data?.data) { if (!isRefresh) setError("No CoE data yet — run the automation first"); return; }
+      setError(null);
       setLiveData(liveRes.data.data);
+      if (!selectedDateRef.current) setData(liveRes.data.data);
       if (histRes.data?.data?.snapshots) {
         const dates = histRes.data.data.snapshots.map(s => s.date).sort().reverse();
         setHistoryDates(dates);
         histRes.data.data.snapshots.forEach(s => { historyCache.current[s.date] = s; });
       }
-      setLoading(false);
     });
   }, []);
 
+  // Fetch on mount, then refetch whenever the page becomes visible again — a
+  // tab left open since before the 8:05 AM run otherwise keeps showing
+  // yesterday's data until the user does a full reload.
+  useEffect(() => {
+    loadData();
+    const onVisible = () => {
+      if (document.visibilityState !== "visible") return;
+      if (Date.now() - lastFetch.current < 30000) return;
+      loadData(true);
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    window.addEventListener("focus", onVisible);
+    return () => { document.removeEventListener("visibilitychange", onVisible); window.removeEventListener("focus", onVisible); };
+  }, [loadData]);
+
   const handleDateSelect = (dateStr) => {
     if (!dateStr || dateStr === "live") {
+      selectedDateRef.current = null;
       setSelectedDate(null);
       setData(liveData);
       return;
     }
+    selectedDateRef.current = dateStr;
     setSelectedDate(dateStr);
     if (historyCache.current[dateStr]) {
       setData(historyCache.current[dateStr]);
@@ -842,7 +927,7 @@ function CoEDashboardTab({ onBack }) {
   );
 
   const { summary, projects } = data;
-  const updatedAt = data.updatedAt ? new Date(data.updatedAt) : null;
+  const updatedAt = parseBriefTs(data.updatedAt);
   const delta = data.delta;
   const totalProjects = projects?.length || 0;
 
@@ -909,6 +994,11 @@ function CoEDashboardTab({ onBack }) {
             Back to Live
           </button>
         </div>
+      )}
+
+      {/* Stale banner when the live data is still from a previous weekday */}
+      {!selectedDate && updatedAt && briefIsStale(localIsoDate(updatedAt)) && (
+        <StaleBriefBanner isoDate={localIsoDate(updatedAt)} onRefresh={() => loadData(true)} refreshing={refreshing} />
       )}
 
       {/* Written Summary — bullet points */}
