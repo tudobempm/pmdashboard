@@ -1,5 +1,211 @@
 [
   {
+    "id": "daily-2026-07-07-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, July 7",
+    "isoDate": "2026-07-07",
+    "greeting": "Tuesday, July 7, Jean. Today has 9 visible calendar blocks, anchored by the Jhara 1:1, the Levelpath go-live readiness consultation, the EPMO TL/J&J overlap, and a tight late-afternoon portfolio stack. There are 4 meaningful carried-over items and 1 active reminder. Keep the day centered on closing open BD/portfolio follow-ups with Jessie and Nicolas, turning Monday's portfolio conversations into owners, preparing a practical Levelpath adoption-assessment answer, and using the PM/EPMO blocks to lock the BA workflow and weekly-deck path. Teams is rate-limited this morning, so Teams context is intentionally light and the brief leans on Outlook, GitHub state, Planner, and email.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0707-co-1",
+            "taskId": "task-20260706-incident-response-incident-guides",
+            "label": "Push Incident Response incident guides to completion",
+            "detail": "This remains open from Monday's reminder set. Follow up with the stakeholders and get the incident guides to a clear owner, deadline, or finished state.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0707-co-2",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Keep building the PM team index in Loop",
+            "detail": "Use the protected midday block or the PM Team Touchpoint to make the Loop index useful for the team rather than leaving it as background work.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0707-co-3",
+            "taskId": "task-20260706-prepare-bd-portfolio-review",
+            "label": "Convert BD Portfolio Review follow-ups into owners",
+            "detail": "Monday's BD review was meant to cover active status, blockers, and new intake. Carry forward only the decisions or blockers that still need an owner after that discussion.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0707-co-4",
+            "taskId": "task-20260706-align-maria-portfolio-roadblocks",
+            "label": "Close the Maria 1:1 roadblock follow-ups",
+            "detail": "The Monday 1:1 agenda was portfolio review, roadblocks, and next steps. Confirm what actually needs follow-up before today's Jhara and Nicolas 1:1s create another round of portfolio asks.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0707-rem-1",
+            "taskId": "task-20260707-jessie-nicolas-bd-projects",
+            "label": "Escribirle a Jessie y Nicolas sobre los proyectos de BD",
+            "detail": "Use today's portfolio-heavy schedule to clarify the BD project follow-ups with Jessie and Nicolas before the late-afternoon 1:1 with Nicolas."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times are shown in Jean's Outlook working timezone. The day is light until 10:30 AM, then becomes a compressed 1:30-5:00 PM stack with one confirmed overlap at 2:30 PM.",
+        "items": [
+          {
+            "id": "tue-0707-cal-1",
+            "time": "10:30 AM",
+            "label": "1:1 Jhara & Jean",
+            "detail": "Portfolio review, roadblocks, and next steps are the listed agenda. Use this as the first live owner-setting conversation of the day."
+          },
+          {
+            "id": "tue-0707-cal-2",
+            "time": "11:30 AM",
+            "label": "Canceled: Litify development for Court",
+            "detail": "Jorge's cancellation says Litify 4.0 will cover and execute the system improvements after alignment with operations leadership. Treat this as resolved unless Jean needs to communicate the direction elsewhere."
+          },
+          {
+            "id": "tue-0707-cal-3",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Best protected window for the Jessie/Nicolas BD note, Levelpath prep, and any cleanup from the Jhara 1:1."
+          },
+          {
+            "id": "tue-0707-cal-4",
+            "time": "1:30 PM",
+            "label": "Go live readiness Levelpath consultation",
+            "detail": "Laura asked whether there is an adoption assessment before software go-live. Bring a practical answer or a clear path to one."
+          },
+          {
+            "id": "tue-0707-cal-5",
+            "time": "2:00 PM",
+            "label": "EPMO TL Weekly Catch Up",
+            "detail": "Weekly touch base with Janet, Eugenia, Jorge, and Jean. Janet's new BA request process notes make this more useful than a routine check-in."
+          },
+          {
+            "id": "tue-0707-cal-6",
+            "time": "2:30 PM",
+            "label": "bi-weekly sync (J & J)",
+            "detail": "This overlaps the EPMO TL Weekly Catch Up. Decide whether to stay in the TL meeting, join Janet's sync late, or send a quick update."
+          },
+          {
+            "id": "tue-0707-cal-7",
+            "time": "3:30 PM",
+            "label": "PM Team Touchpoint",
+            "detail": "Use this to align Asana updates, Planner, and the weekly deck while the PM team index work is still open."
+          },
+          {
+            "id": "tue-0707-cal-8",
+            "time": "4:00 PM",
+            "label": "CSC Portfolio initial review",
+            "detail": "This follows directly after the PM Team Touchpoint and starts a back-to-back portfolio block. Keep the intended decisions narrow."
+          },
+          {
+            "id": "tue-0707-cal-9",
+            "time": "4:30 PM",
+            "label": "1:1 Nicolas & Jean",
+            "detail": "The invite notes this is a one-off time before the recurring series starts next week. Use it to close the BD project reminder if it is still open."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0707-action-1",
+            "taskId": "task-20260707-review-ba-request-workflow-notes",
+            "label": "Review Janet's BA request workflow notes",
+            "detail": "Janet sent the 7/2 EPMO and IT workflow notes this morning. The important open points are the revised tiered intake flow, BA availability review with Anu, UAT notification gaps, and the agreed biweekly EPMO/IT working session."
+          },
+          {
+            "id": "tue-0707-action-2",
+            "taskId": "task-20260707-prepare-levelpath-adoption-assessment",
+            "label": "Prepare the Levelpath adoption-assessment answer",
+            "detail": "Laura's 1:30 PM consultation asks whether there is an adoption assessment before software go-live. Bring the current answer or define who owns the assessment path."
+          },
+          {
+            "id": "tue-0707-action-3",
+            "taskId": "task-20260707-manage-epmo-tl-jj-overlap",
+            "label": "Manage the 2:30 PM meeting overlap",
+            "detail": "The EPMO TL Weekly Catch Up and J&J sync overlap from 2:30 to 3:00 PM. Decide the handoff before the afternoon stack starts so neither meeting loses the needed update."
+          },
+          {
+            "id": "tue-0707-action-4",
+            "taskId": "task-20260707-use-jhara-portfolio-roadblocks",
+            "label": "Use the Jhara 1:1 to name next owners",
+            "detail": "The Jhara agenda mirrors Monday's portfolio-review pattern. Capture only the roadblocks that need a named owner or a date, then use the noon block to send quick follow-ups."
+          },
+          {
+            "id": "tue-0707-action-5",
+            "taskId": "task-20260707-align-pm-team-planner-deck",
+            "label": "Align PM team updates, Planner, and the weekly deck",
+            "detail": "The PM Team Touchpoint is explicitly for Asana updates, Planner, and the weekly deck. Tie this to the open PM team index work so the meeting produces usable operating structure."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0707-email-1",
+            "taskId": "task-20260707-reschedule-marketing-portfolio-review",
+            "label": "Reschedule Paige for the Marketing portfolio review",
+            "detail": "Paige declined the Marketing Initial Project Portfolio Review because of a conflict. If Marketing portfolio ownership still needs coverage, send a new time rather than treating yesterday's scheduling push as fully closed."
+          },
+          {
+            "id": "tue-0707-email-2",
+            "taskId": "task-20260707-loop-bd-court-intake-followup",
+            "label": "Check the Loop BD/Court intake task",
+            "detail": "Microsoft Loop surfaced a task assigned by Jean to follow up with PMs on the Court Intake Event in Calendly with Jessie, plus owner and timestamp questions on Universal Intake with Nicolas. This matches today's BD project reminder, so close it in the same pass."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0707-wed-1",
+            "time": "9:30 AM",
+            "label": "Bonus Restructure Project - Jean's Support",
+            "detail": "Thiago scheduled a short support block with Jean."
+          },
+          {
+            "id": "tue-0707-wed-2",
+            "time": "10:30 AM",
+            "label": "1:1 Thiago & Jean",
+            "detail": "This overlaps the 10:00 AM focus block, so protect what needs prep before the meeting starts."
+          },
+          {
+            "id": "tue-0707-wed-3",
+            "time": "11:30 AM",
+            "label": "Jean/Sara 1:1",
+            "detail": "The renewed weekly 1:1 series starts tomorrow."
+          },
+          {
+            "id": "tue-0707-wed-4",
+            "time": "1:30 PM",
+            "label": "Quality Planning Process",
+            "detail": "Licelot's meeting will cover when Quality needs to be engaged in new products or processes."
+          },
+          {
+            "id": "tue-0707-wed-5",
+            "time": "3:30 PM",
+            "label": "Legal Initial Project Portfolio Review",
+            "detail": "Portfolio review with Chelsea lands during a crowded late-afternoon block that also includes the Colombia LOA session and CoE touchpoint."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-07-06",
     "type": "eod",
     "date": "Monday, July 6 - End of Day",

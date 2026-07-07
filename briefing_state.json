@@ -231,13 +231,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1783422216245",
-      "text": "Escribirle a Jessie y Nicolas sobre los proyectos de BD",
-      "addedAt": "2026-07-07T11:03:36.245Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -373,9 +367,16 @@
       "addedAt": "2026-07-03T21:20:22.099Z",
       "shownInDigestId": "daily-2026-07-06-morning",
       "archivedAt": "2026-07-06T13:23:00.000Z"
+    },
+    {
+      "id": "rem-1783422216245",
+      "text": "Escribirle a Jessie y Nicolas sobre los proyectos de BD",
+      "addedAt": "2026-07-07T11:03:36.245Z",
+      "shownInDigestId": "daily-2026-07-07-morning",
+      "archivedAt": "2026-07-07T12:02:48.000Z"
     }
   ],
-  "lastModified": 1783422218338,
+  "lastModified": 1783425768000,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
