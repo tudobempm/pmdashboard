@@ -2158,6 +2158,22 @@ const GITHUB_BRANCH = "main";
 const GITHUB_STATE_PATH = "briefing_state.json";
 const GITHUB_API_BASE = "https://api.github.com";
 
+// Read-side data fetch: try raw.githubusercontent.com first, fall back to the
+// Pages-relative path. The Pages copy of the data files (digests.json,
+// planner_tasks.json, briefing_state.json) only refreshes when the site
+// redeploys — on a 2h schedule that GitHub cron often delays by another 1-2h —
+// so a digest published at 8:05 AM wasn't visible until mid-morning. Raw
+// serves the latest commit within seconds of the push.
+async function fetchFreshJson(file) {
+  try {
+    const res = await fetch(`https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${file}?t=${Date.now()}`, { cache: "no-store" });
+    if (res.ok) return await res.json();
+  } catch {}
+  const res = await fetch(`${file}?${Date.now()}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to load");
+  return res.json();
+}
+
 // Deployed write-proxy endpoint. When set, the dashboard POSTs state here and
 // never needs a token in the browser. Leave "" to use the localStorage-token
 // fallback below. Can also be overridden per-browser via localStorage "llf-sync-url".
@@ -3507,12 +3523,7 @@ function App() {
   // Fetch digests — extracted so Sync button can call it too
   const loadDigests = useCallback((isManual = false) => {
     if (isManual) setSyncing(true);
-    // On manual sync, bypass GitHub Pages CDN by fetching directly from raw.githubusercontent.com
-    const url = isManual
-      ? `https://raw.githubusercontent.com/tudobempm/pmdashboard/main/digests.json?t=${Date.now()}`
-      : `digests.json?${Date.now()}`;
-    fetch(url, { cache: "no-store" })
-      .then(r => { if (!r.ok) throw new Error("Failed to load"); return r.json(); })
+    fetchFreshJson("digests.json")
       .then(data => {
         const sorted = [...data].sort((a, b) => (b.isoDate || "").localeCompare(a.isoDate || ""));
         setDigests(sorted);
@@ -3527,15 +3538,10 @@ function App() {
       .catch(e => { setError(e.message); setLoading(false); setSyncing(false); });
   }, []);
 
-  // Re-fetch the Planner snapshot. On manual refresh, bypass the CDN by reading
-  // the file straight from raw.githubusercontent so a fresh backend sync shows up.
+  // Re-fetch the Planner snapshot.
   const loadPlannerTasks = useCallback((isManual = false) => {
     if (isManual) setPlannerRefreshing(true); else setPlannerTasksLoading(true);
-    const url = isManual
-      ? `https://raw.githubusercontent.com/tudobempm/pmdashboard/main/planner_tasks.json?t=${Date.now()}`
-      : `planner_tasks.json?${Date.now()}`;
-    fetch(url, { cache: "no-store" })
-      .then(r => { if (!r.ok) throw new Error("Failed to load tasks"); return r.json(); })
+    fetchFreshJson("planner_tasks.json")
       .then(data => {
         setPlannerTasks(data.tasks || []);
         setPlannerGeneratedAt(data.generated_at || null);
@@ -3570,8 +3576,7 @@ function App() {
 
     // Read authoritative state from briefing_state.json (GitHub) — single source of truth for all state.
     // Supabase is no longer read on load; briefing_state.json is what the digest agent reads and writes.
-    fetch(`briefing_state.json?${Date.now()}`, { cache: "no-store" })
-      .then(r => r.ok ? r.json() : null)
+    fetchFreshJson("briefing_state.json")
       .catch(() => null)
       .then(async state => {
       // Compare timestamps: if localStorage is newer than remote, keep local user data.

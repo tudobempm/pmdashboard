@@ -116,10 +116,17 @@ entry in place.
 
 ## After publishing
 
-GitHub Pages deploys on a 2-hour schedule (12,14,16,18,20,22 UTC, Mon–Fri) —
-NOT on push. A digest published just after a deploy window will not be visible
-for up to 2h. If it needs to be live now, trigger the `deploy-pages.yml`
-workflow via `workflow_dispatch` on `main`.
+Nothing to do — visibility is automatic on two independent paths:
+
+1. The dashboard reads `digests.json` / `briefing_state.json` /
+   `planner_tasks.json` from raw.githubusercontent.com first (the
+   Pages-relative path is only a fallback), so published data is live within
+   seconds of the commit.
+2. `publish-pending-digest.yml` also dispatches `deploy-pages.yml` after each
+   publish, keeping the Pages-served copies fresh as backup.
+
+If a digest STILL doesn't show, check that the publish workflow run actually
+succeeded before suspecting anything else.
 
 ## Never do
 

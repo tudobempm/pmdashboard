@@ -17,7 +17,11 @@ name: Deploy dashboard to GitHub Pages
 #     deploys immediately, which is what we want.
 #   * the every-2h schedule stays as a safety net so data-file changes still
 #     reach the published site during business hours.
-#   * workflow_dispatch for on-demand runs.
+#   * workflow_dispatch for on-demand runs — publish-pending-digest.yml
+#     dispatches this workflow after each digest publish so the Pages copy of
+#     digests.json doesn't wait for the next scheduled window. (The dashboard
+#     itself reads data files from raw.githubusercontent.com first, so this is
+#     belt-and-suspenders.)
 #   * the retry steps below absorb the occasional transient Pages backend error
 #     if a push- and schedule-triggered run happen to overlap.
 #

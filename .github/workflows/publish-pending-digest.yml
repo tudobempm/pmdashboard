@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  # Needed to dispatch deploy-pages.yml after publishing (see last step).
+  actions: write
 
 jobs:
   publish:
@@ -149,3 +151,15 @@ jobs:
               # Non-fatal: the scheduled sync workflow converges the stores.
               print(f'Supabase write-back failed (sync workflow will converge): {e}')
           PY
+
+      # Deploy the site now. deploy-pages.yml deliberately ignores pushes that
+      # only touch the data files (to avoid deploy bursts from the ~15-min sync
+      # automation), so without this dispatch a freshly published digest would
+      # wait for the next 2h scheduled deploy — which GitHub cron often delays
+      # by another 1-2h. Digests publish ~2x/day, so this adds no burst risk;
+      # the `pages` concurrency group serializes it against any scheduled run.
+      - name: Deploy dashboard to Pages
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --ref main --repo "$GITHUB_REPOSITORY"
