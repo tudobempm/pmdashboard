@@ -75,6 +75,7 @@
     "task-20260626-review-sprint-13-project-load": true,
     "task-20260630-adjust-epmo-liderazgo-cadence": true,
     "task-20260702-prepare-sms-automation-status": true,
+    "task-20260707-loop-bd-court-intake-followup": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
     "task-20260616-confirm-joe-azul-waiting-items": true,
@@ -109,6 +110,7 @@
     "task-20260623-prepare-intake-workflow-alignment": true,
     "task-20260703-schedule-portfolio-owner-meetings": true,
     "task-20260703-schedule-sms-marketing-phone-call": true,
+    "task-20260706-incident-response-incident-guides": true,
     "task-20260609-decide-expired-staff-aug-recording": true,
     "task-20260609-monitor-daca-i90-remaining-it-work": true,
     "task-20260610-decide-discovery-recording-restore": true,
@@ -154,11 +156,7 @@
     "task-20260622-clarify-incident-response-bucket-six-owner": true,
     "task-20260701-review-product-salesforce-roadmap-materials": true,
     "task-20260630-follow-up-incident-response-irg-implementation": true,
-    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true,
-    "task-20260706-prepare-coe-newsletter-development": true,
-    "task-20260706-prepare-bd-portfolio-review": true,
-    "task-20260706-align-maria-portfolio-roadblocks": true,
-    "task-20260706-review-court-litify-dev-coe-path": true
+    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -378,7 +376,7 @@
       "archivedAt": "2026-07-06T13:23:00.000Z"
     }
   ],
-  "lastModified": 1783426132655,
+  "lastModified": 1783430891358,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
