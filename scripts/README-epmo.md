@@ -42,15 +42,19 @@ one:
 collect  ->  python3 scripts/generate_epmo_digest.py collect --out /tmp/epmo.json
              (fetches Asana, computes signals; does NOT touch Supabase)
  (AI)    ->  Claude reads /tmp/epmo.json and fills each project's `aiSummary`
-             and the top-level `aiOverview`, then saves the file back
+             and `aiDetail` (2-4 bullets for the expanded "Where it stands"
+             section) and the top-level `aiOverview`, then saves the file back
 publish  ->  python3 scripts/generate_epmo_digest.py publish --in /tmp/epmo.json
              (updates history and upserts Supabase rows 6 & 7)
 ```
 
 `python3 scripts/generate_epmo_digest.py all` runs collect+publish
 deterministically with **no AI** (fallback); the dashboard then shows the
-rule-based `fallbackSummary` for each project. The routine prompt (see the
-Claude Code Remote trigger) drives collect → AI → publish.
+rule-based `fallbackSummary` for each project and the raw Asana status
+("From Asana" badge) in the expanded card. The routine prompt (see the
+Claude Code Remote trigger) drives collect → AI → publish and requires all
+three AI fields (`aiSummary`, `aiDetail`, `aiOverview`) before publishing —
+when `aiDetail` is missing the dashboard falls back to the raw Asana status.
 
 ## What the brief contains
 
@@ -66,8 +70,8 @@ Claude Code Remote trigger) drives collect → AI → publish.
 ## Run it manually
 
 Needs env vars `ASANA_PAT`, `SUPABASE_URL`, `SUPABASE_KEY`. To reproduce the
-AI-enriched brief, run `collect`, fill `aiSummary`/`aiOverview` in the JSON, then
-`publish`. For a quick deterministic refresh:
+AI-enriched brief, run `collect`, fill `aiSummary`/`aiDetail`/`aiOverview` in the
+JSON, then `publish`. For a quick deterministic refresh:
 
 ```bash
 python3 scripts/generate_epmo_digest.py all
