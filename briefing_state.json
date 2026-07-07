@@ -231,7 +231,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1783422216245",
+      "text": "Escribirle a Jessie y Nicolas sobre los proyectos de BD",
+      "addedAt": "2026-07-07T11:03:36.245Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -369,7 +375,7 @@
       "archivedAt": "2026-07-06T13:23:00.000Z"
     }
   ],
-  "lastModified": 1783422185553,
+  "lastModified": 1783422218338,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
