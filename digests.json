@@ -1,5 +1,149 @@
 [
   {
+    "id": "eod-2026-07-07",
+    "type": "eod",
+    "date": "Tuesday, July 7 - End of Day",
+    "isoDate": "2026-07-07",
+    "greeting": "Jean, today moved the BD/Court follow-up into clearer action, with Nicolas Loop tasks now created from the late-day portfolio work. The remaining open items are mostly owner-setting threads: BD follow-ups, Incident Response, BA workflow, Levelpath, PM operating structure, and tomorrow's portfolio stack.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0707-done-1",
+            "label": "Turned the BD/Court intake follow-up into Nicolas Loop tasks",
+            "detail": "The dashboard marks the Loop BD/Court intake follow-up complete, and Outlook shows Jean assigned Nicolas follow-up tasks for the Docusign project, project closure, and Nicolas's automation list."
+          },
+          {
+            "id": "eod-0707-done-2",
+            "label": "Created the CSC portfolio review invite",
+            "detail": "Outlook shows Jean sent the CSC Portfolio initial review invite to Hassan today."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0707-open-1",
+            "taskId": "task-20260706-incident-response-incident-guides",
+            "label": "Push Incident Response incident guides to completion",
+            "detail": "Follow up with the stakeholders and get the incident guides to a clear owner, deadline, or finished state."
+          },
+          {
+            "id": "eod-0707-open-2",
+            "taskId": "task-20260707-jessie-nicolas-bd-projects",
+            "label": "Finish the Jessie and Nicolas BD project follow-up loop",
+            "detail": "Outlook shows a BD touchpoint with Jessie happened today and Nicolas received new Loop tasks. Close the remaining BD project follow-up so the work is not split between meeting notes, Loop, and the dashboard."
+          },
+          {
+            "id": "eod-0707-open-3",
+            "taskId": "task-20260706-prepare-bd-portfolio-review",
+            "label": "Convert remaining BD Portfolio Review follow-ups into owners",
+            "detail": "Carry forward only the BD review decisions, blockers, or intake choices that still need a named owner after today's follow-up activity."
+          },
+          {
+            "id": "eod-0707-open-4",
+            "taskId": "task-20260706-align-maria-portfolio-roadblocks",
+            "label": "Close the Maria 1:1 roadblock follow-ups",
+            "detail": "Confirm which portfolio roadblocks from Monday's Maria 1:1 still need action, and keep only the items that need a named owner or date."
+          },
+          {
+            "id": "eod-0707-open-5",
+            "taskId": "task-20260707-review-ba-request-workflow-notes",
+            "label": "Review Janet's BA request workflow notes",
+            "detail": "Keep the revised tiered intake flow, BA availability review with Anu, UAT notification gaps, and the biweekly EPMO/IT working session visible until the next step is clear."
+          },
+          {
+            "id": "eod-0707-open-6",
+            "taskId": "task-20260707-prepare-levelpath-adoption-assessment",
+            "label": "Close the Levelpath adoption-assessment answer",
+            "detail": "Laura's consultation asked whether there is an adoption assessment before software go-live. Capture the answer or the owner for that assessment path."
+          },
+          {
+            "id": "eod-0707-open-7",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, and weekly deck work into one usable operating structure",
+            "detail": "Use the PM Team Touchpoint outcomes to keep the Loop index, Planner updates, and weekly deck aligned instead of maintaining them as separate threads."
+          },
+          {
+            "id": "eod-0707-open-8",
+            "taskId": "task-20260707-reschedule-marketing-portfolio-review",
+            "label": "Reschedule Paige for the Marketing portfolio review",
+            "detail": "Paige declined the Marketing Initial Project Portfolio Review because of a conflict. Send a new time if Marketing portfolio ownership still needs coverage."
+          },
+          {
+            "id": "eod-0707-open-9",
+            "taskId": "task-20260707-use-jhara-portfolio-roadblocks",
+            "label": "Capture any Jhara 1:1 roadblocks that still need owners",
+            "detail": "The Jhara 1:1 agenda was portfolio review, roadblocks, and next steps. Keep only the roadblocks that still need a named owner or date after today's conversation."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0707-cancel-1",
+            "label": "Litify development for Court was cancelled",
+            "detail": "The morning Outlook-backed brief noted Jorge's cancellation and the direction that Litify 4.0 will cover the system improvements after alignment with operations leadership."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0707-wed-1",
+            "time": "9:30 AM",
+            "label": "Bonus Restructure Project - Jean's Support",
+            "detail": "Thiago scheduled a short support block with Jean."
+          },
+          {
+            "id": "eod-0707-wed-2",
+            "time": "10:30 AM",
+            "label": "1:1 Thiago & Jean",
+            "detail": "Protect the needed prep before this overlaps the morning focus block."
+          },
+          {
+            "id": "eod-0707-wed-3",
+            "time": "11:30 AM",
+            "label": "Jean/Sara 1:1",
+            "detail": "The renewed weekly 1:1 series starts tomorrow."
+          },
+          {
+            "id": "eod-0707-wed-4",
+            "time": "1:30 PM",
+            "label": "Quality Planning Process",
+            "detail": "Licelot's meeting will cover when Quality needs to be engaged in new products or processes."
+          },
+          {
+            "id": "eod-0707-wed-5",
+            "time": "3:00 PM",
+            "label": "Colombia Team Member Leave of Absence Information Session",
+            "detail": "HR's Rippling-led LOA information session is scheduled for the Colombia EOR team."
+          },
+          {
+            "id": "eod-0707-wed-6",
+            "time": "3:30 PM",
+            "label": "Legal Initial Project Portfolio Review",
+            "detail": "Portfolio review with Chelsea lands during the late-afternoon stack, with Colombia LOA and CoE touchpoint nearby."
+          },
+          {
+            "id": "eod-0707-wed-7",
+            "time": "4:00 PM",
+            "label": "CoE Biweekly Touchpoint",
+            "detail": "Use this as the regular CoE progress and direction check-in with David, Frank, and Mar."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-07-morning",
     "type": "daily",
     "date": "Morning - Tuesday, July 7",
