@@ -33,6 +33,8 @@
     "task-20260612-revisar-epmo-portal": true,
     "task-20260622-route-billing-intake": true,
     "task-20260626-use-eow-without-sara": true,
+    "task-20260708-ask-janet-ba-process": true,
+    "task-20260708-send-pm-meeting-notes": true,
     "task-20260616-coe-playbook-follow-up": true,
     "task-20260616-staff-aug-it-alignment": true,
     "task-20260625-track-baesman-slq-path": true,
@@ -50,6 +52,7 @@
     "task-20260610-land-coe-owners-next-steps": true,
     "task-20260610-review-i693-access-request": true,
     "task-20260623-update-jorge-project-sheet": true,
+    "task-20260708-run-legal-portfolio-review": true,
     "task-20260611-submit-mid-year-touchpoints": true,
     "task-20260612-follow-up-hr-survey-results": true,
     "task-20260615-collect-venn-ticket-numbers": true,
@@ -57,6 +60,9 @@
     "task-20260619-confirm-toggl-reminder-path": true,
     "task-20260623-clarify-vendors-trace-owner": true,
     "task-20260629-triage-phase-1-intake-alert": true,
+    "task-20260706-prepare-bd-portfolio-review": true,
+    "task-20260708-clear-rippling-overdue-task": true,
+    "task-20260708-review-laura-chatgpt-access": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -82,6 +88,7 @@
     "task-20260623-check-toggl-access-restriction": true,
     "task-20260629-capture-pm-feedback-next-steps": true,
     "task-20260629-review-cio-transition-workbook": true,
+    "task-20260708-align-thiago-bonus-restructure": true,
     "task-20260609-check-supabase-security-warning": true,
     "task-20260612-prepare-epmo-eow-executive-deck": true,
     "task-20260612-reply-eugenia-danny-venn-issues": true,
@@ -99,6 +106,8 @@
     "task-20260622-prepare-mental-health-touchpoint": true,
     "task-20260624-camilo-structure-mhe-rfe-support": true,
     "task-20260624-confirm-trace-followon-placement": true,
+    "task-20260706-align-maria-portfolio-roadblocks": true,
+    "task-20260708-prepare-quality-planning-process": true,
     "task-20260610-monitor-docusign-taskset-guidance": true,
     "task-20260611-decide-deleted-recording-restores": true,
     "task-20260611-prepare-bcp-ir-and-portfolio-1-1s": true,
@@ -142,6 +151,8 @@
     "task-20260626-review-slq-baesman-amendment-language": true,
     "task-20260702-prepare-epmo-eow-programmatic-updates": true,
     "task-20260703-check-dashboard-pages-deploy-failures": true,
+    "task-20260707-prepare-levelpath-adoption-assessment": true,
+    "task-20260707-reschedule-marketing-portfolio-review": true,
     "task-20260609-complete-nadias-affected-areas-request": true,
     "task-20260609-review-staff-aug-prd-and-queue-impacts": true,
     "task-20260622-use-staff-aug-touchpoint-for-open-asks": true,
@@ -189,6 +200,10 @@
     "task-20260623-update-jorge-project-sheet": {
       "ts": 1782255724792,
       "emoji": "⭐"
+    },
+    "task-20260708-nicolas-owner-timestamp-ba": {
+      "ts": 1783513880877,
+      "emoji": "❗"
     },
     "task-20260612-follow-up-hr-survey-results": {
       "ts": 1781301182670,
@@ -391,7 +406,7 @@
       "archivedAt": "2026-07-06T13:23:00.000Z"
     }
   ],
-  "lastModified": 1783458977069,
+  "lastModified": 1783519242129,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
