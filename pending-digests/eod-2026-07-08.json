@@ -1,0 +1,131 @@
+{
+  "digest": {
+    "id": "eod-2026-07-08",
+    "type": "eod",
+    "date": "Wednesday, July 8 - End of Day",
+    "isoDate": "2026-07-08",
+    "greeting": "Jean, today moved several dashboard items out of the open lane, especially portfolio follow-ups, PM notes, quality prep, access review, and Rippling cleanup. The remaining carry-forward work is tighter now: the BA/Nicolas path, PM operating structure, LA AI testing, Eugenia's PE/SOP send, and the Mental Health charter check.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0708-done-1",
+            "label": "Advanced the portfolio follow-up stack",
+            "detail": "The BD owner follow-ups, Maria/Jhara roadblock loop, Legal portfolio review, Levelpath answer, and Marketing portfolio-review conflict are all checked off for today."
+          },
+          {
+            "id": "eod-0708-done-2",
+            "label": "Sent the PM meeting notes",
+            "detail": "The reminder to send yesterday's PM meeting notes to the PM group is checked off."
+          },
+          {
+            "id": "eod-0708-done-3",
+            "label": "Asked Janet about the BA process",
+            "detail": "The specific reminder to ask Janet how to request a BA for a project already assigned to a PM is complete; the broader Nicolas BA request still needs a final answer below."
+          },
+          {
+            "id": "eod-0708-done-4",
+            "label": "Completed the Quality engagement prep",
+            "detail": "The Quality Planning Process prep item is checked off after today's planning block."
+          },
+          {
+            "id": "eod-0708-done-5",
+            "label": "Reviewed Laura Urena's ChatGPT access request",
+            "detail": "The Halo approval gate for Laura Urena's LLF workspace access is checked off."
+          },
+          {
+            "id": "eod-0708-done-6",
+            "label": "Cleared the Rippling overdue-task follow-up",
+            "detail": "The overdue Rippling task follow-up is checked off for today."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0708-open-1",
+            "taskId": "task-20260708-nicolas-owner-timestamp-ba",
+            "label": "Resolve the BA ask for Nicolas's Owner and Timestamp project",
+            "detail": "Use Janet's BA-process answer to decide how a BA should be requested for Nicolas's project, then turn that into reusable guidance for similar assigned-PM projects.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0708-open-2",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, and weekly deck into one operating structure",
+            "detail": "Keep shaping the Loop index, Planner updates, and weekly deck into one usable operating rhythm instead of three disconnected work surfaces."
+          },
+          {
+            "id": "eod-0708-open-3",
+            "taskId": "task-20260708-test-la-ai-change-management",
+            "label": "Start LA AI change-management testing",
+            "detail": "The reminder to begin testing LA AI for change management is still open."
+          },
+          {
+            "id": "eod-0708-open-4",
+            "taskId": "task-20260708-send-eugenia-pe-projects-sop",
+            "label": "Send Eugenia the PE project list and SOP template",
+            "detail": "Send Eugenia the PE project list plus the agreed SOP template so the expected level of detail is clear."
+          },
+          {
+            "id": "eod-0708-open-5",
+            "taskId": "task-20260708-check-mental-health-charter",
+            "label": "Check the Mental Health Expansion charter deliverable",
+            "detail": "Confirm whether Maria's draft project charter is ready for stakeholder review or needs an owner/date adjustment."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0708-cancel-1",
+            "label": "Bonus Restructure support block was canceled",
+            "detail": "Thiago said the project go/no-go decision moved to next week and that he will reschedule once the new date is decided."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0708-thu-1",
+            "time": "10:30 AM",
+            "label": "1:1 Laura & Jean",
+            "detail": "One-off timing before the recurring series starts next week. Good place to close any remaining Levelpath or access context."
+          },
+          {
+            "id": "eod-0708-thu-2",
+            "time": "12:00 PM",
+            "label": "Amazon Connect Weekly Project Sync",
+            "detail": "Agenda includes open items, blockers, prior-week action items, and decisions needed."
+          },
+          {
+            "id": "eod-0708-thu-3",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Regular BCP/IR touchpoint. Tessa is declined, so confirm whether any incident-guide or survey decisions need async follow-up."
+          },
+          {
+            "id": "eod-0708-thu-4",
+            "time": "2:00 PM",
+            "label": "Marketing Initial Project Portfolio Review",
+            "detail": "Paige is declined while Lucia and Amy are accepted/tentative. Decide whether to proceed or reschedule for Paige coverage."
+          },
+          {
+            "id": "eod-0708-thu-5",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team forum for project progress, roadblocks, and strategic coordination."
+          }
+        ]
+      }
+    ]
+  }
+}
