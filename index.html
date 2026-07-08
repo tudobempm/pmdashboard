@@ -487,6 +487,14 @@ function cleanAsanaText(text) {
     .trim();
 }
 
+// "2026-07-07" → "July 7, 2026" (parsed as local date parts to avoid UTC off-by-one)
+function epmoFullDate(s) {
+  if (!s) return "";
+  const [y, m, d] = String(s).slice(0, 10).split("-").map(Number);
+  if (!y || !m || !d) return s;
+  return new Date(y, m - 1, d).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+}
+
 function epmoWhen(iso) {
   if (!iso) return "";
   const d = new Date(iso);
@@ -522,7 +530,7 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle }) {
     if (!focused || !cardRef.current) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const t = setTimeout(() => {
-      if (cardRef.current) cardRef.current.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "nearest" });
+      if (cardRef.current) cardRef.current.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
     }, 480);
     return () => clearTimeout(t);
   }, [focused]);
@@ -646,25 +654,67 @@ function EpmoMemberSection({ name, stats, projects, focusedGid, onToggle }) {
   );
 }
 
-function EpmoCompletedList({ title, items }) {
+function EpmoCompletedList({ title, items, onOpen }) {
   if (!items) return null;
+  const has = items.length > 0;
   return (
-    <div className="bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3">
-      <div className="flex items-center justify-between">
+    <button
+      onClick={() => has && onOpen({ title, items })}
+      disabled={!has}
+      className={`bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3 text-left w-full transition-colors ${has ? "hover:border-emerald-300/70 dark:hover:border-emerald-500/40 cursor-pointer" : "cursor-default"}`}
+      title={has ? "View completed projects" : undefined}
+    >
+      <div className="flex items-center justify-between gap-2">
         <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">{title}</div>
-        <div className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{items.length}</div>
+        {has && <svg className="w-3.5 h-3.5 flex-shrink-0 text-zinc-300 dark:text-zinc-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>}
       </div>
-      {items.length > 0 ? (
-        <ul className="mt-2 space-y-1.5">
+      <div className={`text-2xl font-bold mt-0.5 ${has ? "text-emerald-600 dark:text-emerald-400" : "text-zinc-300 dark:text-zinc-600"}`}>{items.length}</div>
+    </button>
+  );
+}
+
+function EpmoCompletedModal({ title, items, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
+  }, [onClose]);
+  // Portal to <body>: the content wrapper keeps a transform from .fade-in,
+  // which would otherwise re-anchor position:fixed to it instead of the viewport.
+  return ReactDOM.createPortal(
+    <div
+      className="fixed inset-0 z-[100] bg-zinc-950/40 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+      onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div className="email-panel-in w-full max-w-md max-h-[80vh] overflow-y-auto bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 shadow-2xl">
+        <div className="sticky top-0 bg-white dark:bg-zinc-800 px-5 pt-4 pb-3 border-b border-zinc-100 dark:border-zinc-700/50 flex items-center justify-between gap-3">
+          <div>
+            <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">{title}</div>
+            <div className="text-lg font-bold text-emerald-600 dark:text-emerald-400">{items.length} completed</div>
+          </div>
+          <button onClick={onClose} aria-label="Close" className="w-7 h-7 rounded-full flex items-center justify-center text-zinc-400 dark:text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-700/60 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <ul className="px-5 py-2 divide-y divide-zinc-100 dark:divide-zinc-700/40">
           {items.map((c, i) => (
-            <li key={i} className="text-[13px] flex items-baseline justify-between gap-2">
-              <a href={c.url} target="_blank" rel="noreferrer" className="text-zinc-600 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 truncate">{c.name}</a>
-              <span className="text-zinc-400 dark:text-zinc-500 flex-shrink-0">{c.member.split(" ")[0]} · {c.completedDate.slice(5)}</span>
+            <li key={i} className="py-3 flex items-start justify-between gap-3">
+              <div className="min-w-0 flex items-start gap-2.5">
+                <span className="text-emerald-500 flex-shrink-0 mt-0.5 font-bold">✓</span>
+                <div className="min-w-0">
+                  <a href={c.url} target="_blank" rel="noreferrer" className="text-sm font-semibold text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 leading-snug break-words">{c.name}</a>
+                  <div className="text-[12px] text-zinc-400 dark:text-zinc-500 mt-0.5">{c.member}</div>
+                </div>
+              </div>
+              <span className="flex-shrink-0 text-[12px] font-medium text-zinc-400 dark:text-zinc-500 whitespace-nowrap mt-0.5">{epmoFullDate(c.completedDate)}</span>
             </li>
           ))}
         </ul>
-      ) : <div className="text-[13px] text-zinc-400 dark:text-zinc-500 mt-2">None yet.</div>}
-    </div>
+      </div>
+    </div>,
+    document.body
   );
 }
 
@@ -675,6 +725,7 @@ function EpmoDashboardTab() {
   const [error, setError] = useState(null);
   const [memberFilter, setMemberFilter] = useState("all");
   const [focusedGid, setFocusedGid] = useState(null);
+  const [completedModal, setCompletedModal] = useState(null);
   const healthRef = useRef(null); const healthChart = useRef(null);
   const histRef = useRef(null); const histChart = useRef(null);
 
@@ -835,10 +886,12 @@ function EpmoDashboardTab() {
       )}
 
       <div className={`epmo-dimmable ${dim} mt-4 grid grid-cols-1 md:grid-cols-3 gap-3`}>
-        <EpmoCompletedList title="Completed this week" items={live.completed?.thisWeek} />
-        <EpmoCompletedList title="Completed this month" items={live.completed?.thisMonth} />
-        <EpmoCompletedList title="Completed last month" items={live.completed?.lastMonth} />
+        <EpmoCompletedList title="Completed this week" items={live.completed?.thisWeek} onOpen={setCompletedModal} />
+        <EpmoCompletedList title="Completed this month" items={live.completed?.thisMonth} onOpen={setCompletedModal} />
+        <EpmoCompletedList title="Completed last month" items={live.completed?.lastMonth} onOpen={setCompletedModal} />
       </div>
+
+      {completedModal && <EpmoCompletedModal title={completedModal.title} items={completedModal.items} onClose={() => setCompletedModal(null)} />}
 
       <div className="mt-6">
         <div className={`epmo-dimmable ${dim} flex items-center justify-between gap-3 flex-wrap mb-1`}>
