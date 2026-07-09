@@ -52,6 +52,7 @@
     "task-20260610-land-coe-owners-next-steps": true,
     "task-20260610-review-i693-access-request": true,
     "task-20260623-update-jorge-project-sheet": true,
+    "task-20260708-nicolas-owner-timestamp-ba": true,
     "task-20260708-run-legal-portfolio-review": true,
     "task-20260611-submit-mid-year-touchpoints": true,
     "task-20260612-follow-up-hr-survey-results": true,
@@ -69,6 +70,7 @@
     "task-20260702-align-epmo-intake-ba-process": true,
     "task-20260702-review-dashboard-pr7-preview": true,
     "task-20260703-review-tomas-sop-edit-access": true,
+    "task-20260709-schedule-janet-bd-transition": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260617-check-litify-field-audit-path": true,
@@ -167,8 +169,7 @@
     "task-20260622-clarify-incident-response-bucket-six-owner": true,
     "task-20260701-review-product-salesforce-roadmap-materials": true,
     "task-20260630-follow-up-incident-response-irg-implementation": true,
-    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true,
-    "task-20260708-nicolas-owner-timestamp-ba": true
+    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -435,7 +436,7 @@
       "archivedAt": "2026-07-09T12:23:44Z"
     }
   ],
-  "lastModified": 1783599824259,
+  "lastModified": 1783609914637,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
