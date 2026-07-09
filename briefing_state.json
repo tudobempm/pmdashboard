@@ -252,6 +252,11 @@
       "id": "rem-1783566730001",
       "text": "Enviar información por correo de Incident Response a Lucia Caamano",
       "addedAt": "2026-07-09T03:12:10.001Z"
+    },
+    {
+      "id": "rem-1783566743228",
+      "text": "Agendar meeting con Janet para BD transition",
+      "addedAt": "2026-07-09T03:12:23.228Z"
     }
   ],
   "reminderHistory": [
@@ -419,7 +424,7 @@
       "archivedAt": "2026-07-08T17:41:19Z"
     }
   ],
-  "lastModified": 1783566733090,
+  "lastModified": 1783566745451,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
