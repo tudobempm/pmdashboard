@@ -1,5 +1,175 @@
 [
   {
+    "id": "daily-2026-07-09-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, July 9",
+    "isoDate": "2026-07-09",
+    "greeting": "Thursday, July 9, Jean. Today has 8 active calendar blocks, anchored by the Laura and Jhara touchpoints, Amazon Connect, BCP/Incident Response, the Dominican Republic LOA session, and Tudo Bem. There are 4 carried-over items and 3 reminders to clear. The practical priorities are to keep the PM operating structure moving, use BCP/IR and Amazon Connect for decisions and blockers, reschedule the Marketing portfolio review for next week, and verify whether the Salesforce password-reset emails were expected. Teams stayed rate-limited this morning, so Teams context is intentionally omitted unless already corroborated by Outlook or dashboard history.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0709-co-1",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, and weekly deck into one operating structure",
+            "detail": "Keep shaping the Loop index, Planner updates, and weekly deck into one usable operating rhythm instead of three disconnected work surfaces.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0709-co-2",
+            "taskId": "task-20260708-test-la-ai-change-management",
+            "label": "Start LA AI change-management testing",
+            "detail": "The testing reminder is still open. Use one of the protected blocks before the afternoon meeting stack if this needs a clean first pass.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0709-co-3",
+            "taskId": "task-20260708-send-eugenia-pe-projects-sop",
+            "label": "Send Eugenia the PE project list and SOP template",
+            "detail": "Send Eugenia the PE project list plus the agreed SOP template so the expected level of detail is clear before more portfolio reviews land.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0709-co-4",
+            "taskId": "task-20260708-check-mental-health-charter",
+            "label": "Check the Mental Health Expansion charter deliverable",
+            "detail": "Planner still shows Maria's draft charter as not started after yesterday's due date. Confirm whether it is ready for stakeholder review or needs an owner/date adjustment.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0709-rem-1",
+            "taskId": "task-20260709-send-ir-info-lucia-caamano",
+            "label": "Enviar información por correo de Incident Response a Lucia Caamano",
+            "detail": "Tie this to the 1:30 PM BCP/Incident Response block so Lucia gets the right context before follow-ups spread across the team."
+          },
+          {
+            "id": "thu-0709-rem-2",
+            "taskId": "task-20260709-schedule-janet-bd-transition",
+            "label": "Agendar meeting con Janet para BD transition",
+            "detail": "Schedule the Janet BD transition conversation after the morning touchpoints so the transition ask has a clear purpose and owner."
+          },
+          {
+            "id": "thu-0709-rem-3",
+            "taskId": "task-20260709-review-notebook-next-steps",
+            "label": "Revisar notas de next steps en cuaderno",
+            "detail": "Use the notes review to refresh the action list before Amazon Connect, BCP/IR, and Tudo Bem compress the afternoon."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times are shown in Jean's local Outlook context. The day is relatively open early, then runs tightly from Amazon Connect through BCP/IR, the LOA session, and Tudo Bem. The Marketing portfolio review was canceled this morning so a better next-week slot can be found.",
+        "items": [
+          {
+            "id": "thu-0709-cal-1",
+            "time": "10:30 AM",
+            "label": "1:1 Laura & Jean",
+            "detail": "One-off timing before the recurring series starts next week. Use it for any remaining Levelpath, access, or portfolio context."
+          },
+          {
+            "id": "thu-0709-cal-2",
+            "time": "11:00 AM",
+            "label": "Pilot project touchpoint",
+            "detail": "Jhara accepted. Good place to clarify what needs to move from discussion into tracked next steps."
+          },
+          {
+            "id": "thu-0709-cal-3",
+            "time": "11:30 AM",
+            "label": "Focus time",
+            "detail": "Calendar note says to review Licelot's document. This is the cleanest pre-noon slot for document review and reminders."
+          },
+          {
+            "id": "thu-0709-cal-4",
+            "time": "12:00 PM",
+            "label": "Amazon Connect Weekly Project Sync",
+            "detail": "Agenda is open items, blockers, prior-week action items, and decisions needed. Bring the decision list rather than only status updates."
+          },
+          {
+            "id": "thu-0709-cal-5",
+            "time": "12:30 PM",
+            "label": "Blocked Space",
+            "detail": "Protected hour after Amazon Connect; best recovery window for follow-ups before BCP/IR."
+          },
+          {
+            "id": "thu-0709-cal-6",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Tessa is declined. Use the block to send Lucia the needed Incident Response context and decide what must be handled async."
+          },
+          {
+            "id": "thu-0709-cal-7",
+            "time": "2:00 PM",
+            "label": "Canceled: Marketing Initial Project Portfolio Review",
+            "detail": "Lucia said Paige cannot make it and she is triple-booked; Jean canceled and said she will find a better spot next week."
+          },
+          {
+            "id": "thu-0709-cal-8",
+            "time": "3:00 PM",
+            "label": "Dominican Republic Team Member LOA Information Session with Rippling",
+            "detail": "HR/Rippling session in Spanish for Dominican Republic EOR leave management. Attend live only if Jean needs the policy context directly."
+          },
+          {
+            "id": "thu-0709-cal-9",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team forum for project progress, roadblocks, coordination, and learning. Bring only the few decisions that need the group."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0709-action-1",
+            "taskId": "task-20260709-prepare-amazon-connect-sync",
+            "label": "Bring decisions and blockers to Amazon Connect",
+            "detail": "The meeting agenda is explicitly built around open items, blockers, prior-week action items, and decisions needed. Use it to settle what needs a decision versus what can stay in status."
+          },
+          {
+            "id": "thu-0709-action-2",
+            "taskId": "task-20260709-bcp-ir-followups",
+            "label": "Use BCP/IR to close the Incident Response follow-up path",
+            "detail": "Tessa is declined and Lucia is on the meeting. Send Lucia the needed context and decide what must be handled asynchronously after the 1:30 PM touchpoint."
+          },
+          {
+            "id": "thu-0709-action-3",
+            "taskId": "task-20260709-reschedule-marketing-portfolio-next-week",
+            "label": "Find a new Marketing portfolio-review slot for next week",
+            "detail": "Lucia asked to move the session because Paige cannot attend and Lucia is triple-booked. Jean already canceled today's invite, so the next step is a cleaner next-week time with Paige, Lucia, and Amy."
+          },
+          {
+            "id": "thu-0709-action-4",
+            "taskId": "task-20260709-track-legal-change-management-requirements",
+            "label": "Track the Legal Change Management requirement change",
+            "detail": "Jhara looped Jean into the latest Legal Change Management thread. The new CLO approval path and status approach should stay visible before the next implementation discussion."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0709-email-1",
+            "taskId": "task-20260709-check-salesforce-password-reset",
+            "label": "Verify the Salesforce password-reset emails",
+            "detail": "Several Salesforce reset emails arrived this morning. If Jean initiated the reset, finish it within the 24-hour window; if not, treat it as an account-security follow-up."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-07-08",
     "type": "eod",
     "date": "Wednesday, July 8 - End of Day",

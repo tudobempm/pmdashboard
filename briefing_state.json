@@ -248,23 +248,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1783566730001",
-      "text": "Enviar información por correo de Incident Response a Lucia Caamano",
-      "addedAt": "2026-07-09T03:12:10.001Z"
-    },
-    {
-      "id": "rem-1783566743228",
-      "text": "Agendar meeting con Janet para BD transition",
-      "addedAt": "2026-07-09T03:12:23.228Z"
-    },
-    {
-      "id": "rem-1783566755120",
-      "text": "Revisar notas de next steps en cuaderno",
-      "addedAt": "2026-07-09T03:12:35.120Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -428,9 +412,30 @@
       "addedAt": "2026-07-07T21:16:17.061Z",
       "shownInDigestId": "daily-2026-07-08-morning",
       "archivedAt": "2026-07-08T17:41:19Z"
+    },
+    {
+      "id": "rem-1783566730001",
+      "text": "Enviar información por correo de Incident Response a Lucia Caamano",
+      "addedAt": "2026-07-09T03:12:10.001Z",
+      "shownInDigestId": "daily-2026-07-09-morning",
+      "archivedAt": "2026-07-09T12:23:44Z"
+    },
+    {
+      "id": "rem-1783566743228",
+      "text": "Agendar meeting con Janet para BD transition",
+      "addedAt": "2026-07-09T03:12:23.228Z",
+      "shownInDigestId": "daily-2026-07-09-morning",
+      "archivedAt": "2026-07-09T12:23:44Z"
+    },
+    {
+      "id": "rem-1783566755120",
+      "text": "Revisar notas de next steps en cuaderno",
+      "addedAt": "2026-07-09T03:12:35.120Z",
+      "shownInDigestId": "daily-2026-07-09-morning",
+      "archivedAt": "2026-07-09T12:23:44Z"
     }
   ],
-  "lastModified": 1783566767837,
+  "lastModified": 1783599824259,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
