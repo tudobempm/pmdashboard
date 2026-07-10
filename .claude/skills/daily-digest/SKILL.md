@@ -24,8 +24,7 @@ sync-supabase-state workflow (every 30 min, 06:00–18:30 AST, Mon–Fri)
   pulls Supabase ──► reconciles ──► commits briefing_state.json
   so briefing_state.json is ALWAYS fresh when you read it.
 
-YOU read:  briefing_state.json (state), digests.json (history),
-           planner_tasks.json (Planner snapshot)
+YOU read:  briefing_state.json (state), digests.json (history)
 YOU write: ONE file — pending-digests/<digest-id>.json
            The publish-pending-digest workflow does everything else.
 ```
@@ -42,7 +41,7 @@ workflows keep it in sync in both directions. Do not edit `digests.json` or
 | `hidden` | digest ids archived by the user |
 | `reminders` | ACTIVE reminders queued for the next briefing |
 | `reminderHistory` | reminders already shown in a digest (consumed) |
-| `edits`, `reactions`, `assigneeOverrides` | user UI state — pass through untouched |
+| `edits`, `reactions` | user UI state — pass through untouched |
 | `lastModified` | epoch ms of last state change |
 
 Sanity check before generating: on a weekday, `lastModified` should be less
@@ -95,7 +94,7 @@ Write `pending-digests/<digest-id>.json`:
               "greeting": "...", "sections": [ ... ] },
   "state":  { "completed": {...}, "hidden": [...], "reactions": {...},
               "edits": {...}, "reminders": [...], "reminderHistory": [...],
-              "assigneeOverrides": {...}, "lastModified": <now epoch ms> }
+              "lastModified": <now epoch ms> }
 }
 ```
 
@@ -118,10 +117,9 @@ entry in place.
 
 Nothing to do — visibility is automatic on two independent paths:
 
-1. The dashboard reads `digests.json` / `briefing_state.json` /
-   `planner_tasks.json` from raw.githubusercontent.com first (the
-   Pages-relative path is only a fallback), so published data is live within
-   seconds of the commit.
+1. The dashboard reads `digests.json` / `briefing_state.json` from
+   raw.githubusercontent.com first (the Pages-relative path is only a
+   fallback), so published data is live within seconds of the commit.
 2. `publish-pending-digest.yml` also dispatches `deploy-pages.yml` after each
    publish, keeping the Pages-served copies fresh as backup.
 

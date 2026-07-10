@@ -221,8 +221,5 @@
     {"id": "rem-1783680236046", "text": "Verificar Toggl y notificar a Sara", "addedAt": "2026-07-10T10:43:56.046Z", "shownInDigestId": "daily-2026-07-10-morning", "archivedAt": "2026-07-10T12:02:37Z"},
     {"id": "rem-1783680249080", "text": "Enviar notas de reunión a Tudo Bem", "addedAt": "2026-07-10T10:44:09.080Z", "shownInDigestId": "daily-2026-07-10-morning", "archivedAt": "2026-07-10T12:02:37Z"}
   ],
-  "lastModified": 1783684958137,
-  "assigneeOverrides": {
-    "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
-  }
+  "lastModified": 1783684958137
 }
