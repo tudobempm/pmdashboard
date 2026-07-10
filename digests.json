@@ -1,5 +1,164 @@
 [
   {
+    "id": "eod-2026-07-10",
+    "type": "eod",
+    "date": "Friday, July 10 - End of Day",
+    "isoDate": "2026-07-10",
+    "greeting": "Jean, today had a lot of operating-review traffic, but there was real movement: Incident Response got a written update, and several follow-up meetings were placed on the calendar. The remaining work is mostly about keeping the PM structure, portfolio intake, and change-management threads from splitting across too many places.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0710-done-1",
+            "label": "Sent the Incident Response project update",
+            "detail": "Jean replied on the Incident Response Project update thread, explained the bucket-owner communication path, and Danny Miller acknowledged the update."
+          },
+          {
+            "id": "eod-0710-done-2",
+            "label": "Created the PM open-discussion meeting",
+            "detail": "Jean sent the PM Open Discussion invite to Thiago, Laura, Mar, Jhara, and Nicolas; Mar and Laura accepted shortly after."
+          },
+          {
+            "id": "eod-0710-done-3",
+            "label": "Created the Marketing portfolio-review meeting",
+            "detail": "Jean sent the Marketing Projects Portfolio Review invite to Paige, Lucia, and Amy to review active work, risks, blockers, and new intake."
+          },
+          {
+            "id": "eod-0710-done-4",
+            "label": "Created the SharePoint touchpoint",
+            "detail": "Jean sent Jhara a SharePoint touchpoint invite to review how project files are saved in SharePoint or OneDrive."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0710-open-1",
+            "taskId": "task-20260710-decide-dnc-enhancements-path",
+            "label": "Decide the DNC enhancements path",
+            "detail": "The DNC thread still needs a clear route: lightweight COE/backlog handling or a larger project path for reporting, UX, and HTC automation."
+          },
+          {
+            "id": "eod-0710-open-2",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, and weekly deck into one operating structure",
+            "detail": "Keep shaping the Loop index, Planner updates, and weekly executive deck into one operating rhythm instead of separate status surfaces."
+          },
+          {
+            "id": "eod-0710-open-3",
+            "taskId": "task-20260710-track-ice-preparedness-launch-risks",
+            "label": "Reset the ICE Preparedness launch-risk view",
+            "detail": "Keep the name-lock delay, legal-doc timing risk, and task-set/object scope concerns visible before the launch window drifts further."
+          },
+          {
+            "id": "eod-0710-open-4",
+            "taskId": "task-20260709-bcp-ir-followups",
+            "label": "Close the BCP/Incident Response follow-up path",
+            "detail": "The Danny update moved part of the thread forward, but the remaining path still needs a clean decision on what goes to Bill, what belongs in a PR-ready brief, and what stays async."
+          },
+          {
+            "id": "eod-0710-open-5",
+            "taskId": "task-20260709-track-legal-change-management-requirements",
+            "label": "Track the Legal Change Management requirement change",
+            "detail": "Jean pushed the timeline question forward by email today; keep the CLO approval path and status approach visible until the next implementation direction is clear."
+          },
+          {
+            "id": "eod-0710-open-6",
+            "taskId": "task-20260709-prepare-amazon-connect-sync",
+            "label": "Capture the Amazon Connect decisions and blockers",
+            "detail": "Capture what changed from the Amazon Connect discussion and what still needs a decision before it gets lost after the week closes."
+          },
+          {
+            "id": "eod-0710-open-7",
+            "taskId": "task-20260708-test-la-ai-change-management",
+            "label": "Start LA AI change-management testing",
+            "detail": "The LA AI testing item remains open and still needs a clean first pass."
+          },
+          {
+            "id": "eod-0710-open-8",
+            "taskId": "task-20260708-send-eugenia-pe-projects-sop",
+            "label": "Send Eugenia the PE project list and SOP template",
+            "detail": "Send Eugenia the PE project list plus the agreed SOP template so the expected level of detail is clear."
+          },
+          {
+            "id": "eod-0710-open-9",
+            "taskId": "task-20260708-check-mental-health-charter",
+            "label": "Check the Mental Health Expansion charter deliverable",
+            "detail": "Confirm whether Maria's draft charter is ready for stakeholder review or needs an owner/date reset."
+          },
+          {
+            "id": "eod-0710-open-10",
+            "taskId": "task-20260709-review-phase-2-intake-alert",
+            "label": "Review the new intake alerts before Monday's portfolio work",
+            "detail": "Janet's Phase 2 alert and today's Marketing intake alert both need routing, ownership, or portfolio follow-up before next week's reviews."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0710-cancel-1",
+            "label": "I-90 EC Overview was canceled",
+            "detail": "The calendar shows the 1:00 PM I-90 EC Overview as canceled."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0710-mon-1",
+            "label": "Shelley is OOO next week",
+            "detail": "Shelley's calendar shows her out from Monday, July 13 through Friday, July 17. Route anything needing Shelley early or around her absence."
+          },
+          {
+            "id": "eod-0710-mon-2",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Start-of-week admin block before the portfolio and project-review work begins."
+          },
+          {
+            "id": "eod-0710-mon-3",
+            "time": "10:00 AM",
+            "label": "Scoping Call: Travel Permit - Guidance Update for Clients Project",
+            "detail": "Scoping call with Paige, Stephanie, and Cristina for the Travel Permit guidance update."
+          },
+          {
+            "id": "eod-0710-mon-4",
+            "time": "11:30 AM",
+            "label": "Toggl touchpoint",
+            "detail": "Calendar hold with Laura; useful follow-up if the Toggl status is not fully closed by Monday."
+          },
+          {
+            "id": "eod-0710-mon-5",
+            "time": "2:00 PM",
+            "label": "BD Portfolio Review",
+            "detail": "Review active BD portfolio status, risks, blockers, and new intake with Matthew and Anthony."
+          },
+          {
+            "id": "eod-0710-mon-6",
+            "time": "3:00 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda is portfolio review, roadblocks, and next steps; good place to revisit the Mental Health charter if it remains open."
+          },
+          {
+            "id": "eod-0710-mon-7",
+            "time": "3:30 PM",
+            "label": "BD Portfolio Touchpoint & Transition",
+            "detail": "Touchpoint with Janet to keep the BD transition path connected to Monday's portfolio review."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-10-morning",
     "type": "daily",
     "date": "Morning - Friday, July 10",
