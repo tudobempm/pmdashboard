@@ -254,6 +254,11 @@
       "id": "rem-1783680204373",
       "text": "Enviar correo a Bill sobre Incident Response",
       "addedAt": "2026-07-10T10:43:24.373Z"
+    },
+    {
+      "id": "rem-1783680236046",
+      "text": "Verificar Toggl y notificar a Sara",
+      "addedAt": "2026-07-10T10:43:56.046Z"
     }
   ],
   "reminderHistory": [
@@ -442,7 +447,7 @@
       "archivedAt": "2026-07-09T12:23:44Z"
     }
   ],
-  "lastModified": 1783680207741,
+  "lastModified": 1783680238660,
   "assigneeOverrides": {
     "c6e0632e-5a8b-4aa9-8cfa-f3e23cdde3d9": "Thiago"
   }
