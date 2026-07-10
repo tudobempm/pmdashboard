@@ -1,0 +1,311 @@
+{
+  "digest": {
+    "id": "daily-2026-07-10-morning",
+    "type": "daily",
+    "date": "Morning - Friday, July 10",
+    "isoDate": "2026-07-10",
+    "greeting": "Friday, July 10, Jean. Today has 9 visible calendar blocks, anchored by the CoE sync, Toggl touchpoint, EPMO EOW check-in, Project pipeline, Executive Project Status deck, Sprint 13 review, and the BD Portfolio Touchpoint with Janet. There are 10 carried-over items and 3 reminders to clear. The main priorities are to keep the PM operating structure from splintering, use the afternoon EPMO/pipeline/deck sequence to settle ownership and status, make a decision path for DNC enhancements, and protect the ICE Preparedness risks before they push launch timing further. Teams is rate-limited this morning, so Teams context is limited to Outlook-surfaced Teams notifications and corroborated dashboard history.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0710-co-1",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, and weekly deck into one operating structure",
+            "detail": "Keep shaping the Loop index, Planner updates, and weekly executive deck into one operating rhythm before today's EOW, pipeline, and deck meetings create more parallel status surfaces.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-2",
+            "taskId": "task-20260708-test-la-ai-change-management",
+            "label": "Start LA AI change-management testing",
+            "detail": "This is still open from the LA AI reminder. Use the 9:00 AM AI tool test block for a clean first pass if it still needs hands-on validation.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-3",
+            "taskId": "task-20260708-send-eugenia-pe-projects-sop",
+            "label": "Send Eugenia the PE project list and SOP template",
+            "detail": "Send Eugenia the PE project list plus the agreed SOP template so the expected level of detail is clear before more portfolio-review follow-ups land.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-4",
+            "taskId": "task-20260708-check-mental-health-charter",
+            "label": "Check the Mental Health Expansion charter deliverable",
+            "detail": "Planner still shows Maria's draft charter as not started after its due date. Confirm whether it is ready for stakeholder review or needs an owner/date reset.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-5",
+            "taskId": "task-20260709-prepare-amazon-connect-sync",
+            "label": "Capture the Amazon Connect decisions and blockers",
+            "detail": "Yesterday's Amazon Connect agenda centered on open items, blockers, prior-week actions, and decisions needed. Capture what changed and what still needs a decision before the week closes.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-6",
+            "taskId": "task-20260709-bcp-ir-followups",
+            "label": "Close the BCP/Incident Response follow-up path",
+            "detail": "Use the Incident Response reminders and Lucia context to decide what needs to be sent to Bill, what can be shared as a PR-ready brief, and what remains async after yesterday's BCP/IR touchpoint.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-7",
+            "taskId": "task-20260709-reschedule-marketing-portfolio-next-week",
+            "label": "Find a new Marketing portfolio-review slot for next week",
+            "detail": "Yesterday's Marketing portfolio review was canceled because Paige could not attend and Lucia was overbooked. Keep the next-week slot on the radar before Monday fills in.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-8",
+            "taskId": "task-20260709-track-legal-change-management-requirements",
+            "label": "Track the Legal Change Management requirement change",
+            "detail": "Keep the new CLO approval path and status approach visible before the next implementation discussion so the change does not disappear into thread history.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-9",
+            "taskId": "task-20260709-check-salesforce-password-reset",
+            "label": "Verify the Salesforce password-reset emails",
+            "detail": "If Jean initiated the reset, finish it within the 24-hour window; if not, treat it as an account-security follow-up.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0710-co-10",
+            "taskId": "task-20260709-review-phase-2-intake-alert",
+            "label": "Review the new Phase 2 intake alert",
+            "detail": "Janet sent a new Phase 2 intake alert late yesterday. Review the request and decide whether it needs routing, ownership, or a portfolio follow-up before the 2:30 PM pipeline sync.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0710-rem-1",
+            "taskId": "task-20260710-email-bill-incident-response",
+            "label": "Enviar correo a Bill sobre Incident Response",
+            "detail": "Send Bill the Incident Response context before the afternoon meeting stack makes the follow-up harder to close."
+          },
+          {
+            "id": "fri-0710-rem-2",
+            "taskId": "task-20260710-verify-toggl-notify-sara",
+            "label": "Verificar Toggl y notificar a Sara",
+            "detail": "Use the 11:00 AM Toggl touchpoint to verify the issue, then send Sara the clean status or blocker."
+          },
+          {
+            "id": "fri-0710-rem-3",
+            "taskId": "task-20260710-send-tudo-bem-meeting-notes",
+            "label": "Enviar notas de reunión a Tudo Bem",
+            "detail": "Send the notes before today's EOW and project-pipeline blocks create new follow-ups for the team."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times are shown in Jean's Outlook working-day context. The strongest focus window is 9:00 AM; after 1:00 PM the day runs as a tight operating-review stack.",
+        "items": [
+          {
+            "id": "fri-0710-cal-1",
+            "time": "9:00 AM",
+            "label": "Focus time: AI tool test",
+            "detail": "Best protected slot for LA AI testing and any reminder cleanup that needs concentration."
+          },
+          {
+            "id": "fri-0710-cal-2",
+            "time": "10:00 AM",
+            "label": "CoE Sync Jean",
+            "detail": "Mar organizes this with David accepted. Use it to keep CoE follow-ups connected to the PM operating structure."
+          },
+          {
+            "id": "fri-0710-cal-3",
+            "time": "11:00 AM",
+            "label": "Toggl touchpoint",
+            "detail": "Directly tied to today's reminder to verify Toggl and notify Sara."
+          },
+          {
+            "id": "fri-0710-cal-4",
+            "time": "11:30 AM",
+            "label": "Blocked Space",
+            "detail": "Ninety-minute buffer before the afternoon stack; use it for reminder sends, DNC review, or EOW prep."
+          },
+          {
+            "id": "fri-0710-cal-5",
+            "time": "1:00 PM",
+            "label": "EPMO EOW Check In",
+            "detail": "Sara moved this earlier and added Nadia so programmatic updates can be included. Bring the few decisions and blockers that need executive alignment."
+          },
+          {
+            "id": "fri-0710-cal-6",
+            "time": "1:00 PM",
+            "label": "Canceled: I-90 EC Overview",
+            "detail": "Cancellation is visible on the calendar; no action unless the cancellation creates a downstream dependency."
+          },
+          {
+            "id": "fri-0710-cal-7",
+            "time": "2:30 PM",
+            "label": "Project pipeline (EPMO/IT weekly sync)",
+            "detail": "Agenda includes new intake prioritization, BA assignment, active-project priority changes, UAT status, and workflow items."
+          },
+          {
+            "id": "fri-0710-cal-8",
+            "time": "3:00 PM",
+            "label": "Executive Project Status Slide Update",
+            "detail": "Review and update the weekly Executive Projects deck with Jhara, Mar, Nicolas, Thiago, and Laura."
+          },
+          {
+            "id": "fri-0710-cal-9",
+            "time": "3:30 PM",
+            "label": "IT Lifity Sprint #13 Review",
+            "detail": "Sprint review with IT, PMs, and stakeholders for user stories in the deployment plan."
+          },
+          {
+            "id": "fri-0710-cal-10",
+            "time": "4:00 PM",
+            "label": "BD Portfolio Touchpoint & Transition",
+            "detail": "New Janet meeting created from yesterday's transition follow-up; use it to clarify ownership and next steps before Monday's BD portfolio review."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0710-action-1",
+            "taskId": "task-20260710-align-eow-pipeline-deck",
+            "label": "Use the EOW, pipeline, and deck meetings as one operating review",
+            "detail": "Today's 1:00 PM to 3:30 PM stack can either clarify ownership or create duplicate tracking. Bring the same priority list through EOW, intake/BA assignment, executive deck updates, and Sprint 13."
+          },
+          {
+            "id": "fri-0710-action-2",
+            "taskId": "task-20260710-decide-dnc-enhancements-path",
+            "label": "Decide the DNC enhancements path",
+            "detail": "Sergio's thread now frames two paths for DNC reporting and broader enhancement scope. Decide whether this stays as a lightweight COE/backlog route or needs a larger project path before the disagreement over effort/timing grows."
+          },
+          {
+            "id": "fri-0710-action-3",
+            "taskId": "task-20260710-track-ice-preparedness-launch-risks",
+            "label": "Reset the ICE Preparedness launch-risk view",
+            "detail": "Jhara's Asana status shows name-lock delay, legal-doc timing risk, and task-set/object scope concerns. Bring those risks into the executive view before the likely launch window drifts further."
+          },
+          {
+            "id": "fri-0710-action-4",
+            "taskId": "task-20260710-prepare-bd-transition-janet",
+            "label": "Prepare the BD transition ask for Janet",
+            "detail": "The 4:00 PM Janet touchpoint is new and should convert yesterday's scheduling follow-up into an owner, transition path, and next Monday portfolio-review setup."
+          },
+          {
+            "id": "fri-0710-action-5",
+            "taskId": "task-20260710-review-nta-package-tracker",
+            "label": "Review the new NTA Package Tracker share",
+            "detail": "Asana shared the NTA Package Tracker with Jean. Decide whether it is simply FYI or whether it needs to be connected to the PM operating rhythm."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0710-email-1",
+            "taskId": "task-20260710-decide-dnc-enhancements-path",
+            "label": "Reply or align on the DNC enhancements thread",
+            "detail": "Sergio, Ben, Anu, Mauricio, Sara, Mar, David, and Javier are on the thread. The useful next step is not status; it is deciding the route and priority for DNC reporting, UX, and HTC automation."
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0710-teams-1",
+            "taskId": "task-20260710-follow-lucia-pr-brief",
+            "label": "Follow Lucia's PR-brief signal on Incident Response",
+            "detail": "A Teams notification from Lucia says the Incident Response context may be useful as a PR-firm brief. Fold that into the Bill follow-up if the message needs to serve both internal and external-readiness purposes."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0710-ooo-1",
+            "label": "Shelley is OOO next week",
+            "detail": "Monday's calendar shows Shelley OOO from July 13 through July 17. Anything needing Shelley should be routed or time-boxed before it blocks the week."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0710-mon-1",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Start-of-week admin block before the portfolio work begins."
+          },
+          {
+            "id": "fri-0710-mon-2",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Useful window for carrying over anything not closed in today's meeting stack."
+          },
+          {
+            "id": "fri-0710-mon-3",
+            "time": "2:00 PM",
+            "label": "BD Portfolio Review",
+            "detail": "Review active BD portfolio status, risks, blockers, and new intake with Matthew and Anthony. Today's Janet transition touchpoint should feed this."
+          },
+          {
+            "id": "fri-0710-mon-4",
+            "time": "3:00 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda is portfolio review, roadblocks, and next steps; good place to revisit the Mental Health charter if it remains open."
+          }
+        ]
+      }
+    ]
+  },
+  "state": {
+    "completed": {},
+    "hidden": [],
+    "reactions": {},
+    "edits": {},
+    "reminders": [],
+    "reminderHistory": [
+      {
+        "id": "rem-1783680204373",
+        "text": "Enviar correo a Bill sobre Incident Response",
+        "addedAt": "2026-07-10T10:43:24.373Z",
+        "shownInDigestId": "daily-2026-07-10-morning",
+        "archivedAt": "2026-07-10T12:02:37Z"
+      },
+      {
+        "id": "rem-1783680236046",
+        "text": "Verificar Toggl y notificar a Sara",
+        "addedAt": "2026-07-10T10:43:56.046Z",
+        "shownInDigestId": "daily-2026-07-10-morning",
+        "archivedAt": "2026-07-10T12:02:37Z"
+      },
+      {
+        "id": "rem-1783680249080",
+        "text": "Enviar notas de reunión a Tudo Bem",
+        "addedAt": "2026-07-10T10:44:09.080Z",
+        "shownInDigestId": "daily-2026-07-10-morning",
+        "archivedAt": "2026-07-10T12:02:37Z"
+      }
+    ],
+    "assigneeOverrides": {},
+    "lastModified": 1783684958137
+  }
+}
