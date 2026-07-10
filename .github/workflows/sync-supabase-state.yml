@@ -18,7 +18,7 @@ name: Sync dashboard state from Supabase
 #   first, and must never be lost even if Supabase lags.
 # - reminders: taken from Supabase, EXCLUDING any id already in the history
 #   union, so reminders consumed by a published digest are never resurrected.
-# - everything else (completed, hidden, edits, reactions, assigneeOverrides):
+# - everything else (completed, hidden, edits, reactions):
 #   newest-wins from Supabase.
 # After committing, the reconciled state is written back to Supabase so both
 # stores converge.
@@ -88,7 +88,7 @@ jobs:
           history_list = sorted(history.values(), key=lambda r: r.get('archivedAt') or r.get('addedAt') or '')
 
           merged = dict(local)
-          for k in ('completed', 'hidden', 'reactions', 'edits', 'assigneeOverrides'):
+          for k in ('completed', 'hidden', 'reactions', 'edits'):
               if k in supa:
                   merged[k] = supa[k]
           merged['reminderHistory'] = history_list
