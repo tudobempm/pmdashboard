@@ -1,5 +1,210 @@
 [
   {
+    "id": "daily-2026-07-13-morning",
+    "type": "daily",
+    "date": "Morning - Monday, July 13",
+    "isoDate": "2026-07-13",
+    "greeting": "Monday, July 13, Jean. Today has 7 timed calendar blocks, anchored by the Travel Permit scoping call, Toggl touchpoint, BD Portfolio Review, Maria 1:1, and the Janet BD transition touchpoint. There are 10 carried-over items and 1 reminder; the highest-leverage work is to prepare the Travel Permit urgency discussion, keep the BD transition tied to today’s portfolio review, and close the still-open operating threads around DNC, ICE Preparedness, Legal Change Management, and the PM team structure. Teams is rate-limited this morning, so Teams-specific context is degraded and the brief leans on Outlook and dashboard history.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0713-co-1",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, and weekly deck into one operating structure",
+            "detail": "Keep shaping the Loop index, Planner updates, and weekly executive deck into one operating rhythm before today’s portfolio meetings create more parallel status surfaces.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-2",
+            "taskId": "task-20260710-decide-dnc-enhancements-path",
+            "label": "Decide the DNC enhancements path",
+            "detail": "The DNC thread still needs a clear route: lightweight COE/backlog handling or a larger project path for reporting, UX, and HTC automation.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-3",
+            "taskId": "task-20260710-track-ice-preparedness-launch-risks",
+            "label": "Reset the ICE Preparedness launch-risk view",
+            "detail": "Keep the name-lock delay, legal-doc timing risk, and task-set/object scope concerns visible before the launch window drifts further.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-4",
+            "taskId": "task-20260709-bcp-ir-followups",
+            "label": "Close the BCP/Incident Response follow-up path",
+            "detail": "The prior update moved part of the thread forward, but the remaining path still needs a clean decision on what goes to Bill, what belongs in a PR-ready brief, and what stays async.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-5",
+            "taskId": "task-20260709-track-legal-change-management-requirements",
+            "label": "Track the Legal Change Management requirement change",
+            "detail": "Keep the CLO approval path and status approach visible until the next implementation direction is clear.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-6",
+            "taskId": "task-20260709-prepare-amazon-connect-sync",
+            "label": "Capture the Amazon Connect decisions and blockers",
+            "detail": "Capture what changed from the Amazon Connect discussion and what still needs a decision before the week’s new portfolio work takes over.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-7",
+            "taskId": "task-20260708-check-mental-health-charter",
+            "label": "Check the Mental Health Expansion charter deliverable",
+            "detail": "Use the Maria 1:1 if needed to confirm whether the draft charter is ready for stakeholder review or needs an owner/date reset.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-8",
+            "taskId": "task-20260709-review-phase-2-intake-alert",
+            "label": "Review the new intake alerts before portfolio work",
+            "detail": "Janet’s Phase 2 alert and Marketing intake context still need routing, ownership, or portfolio follow-up before they become fragmented.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-9",
+            "taskId": "task-20260708-send-eugenia-pe-projects-sop",
+            "label": "Send Eugenia the PE project list and SOP template",
+            "detail": "Send Eugenia the PE project list plus the agreed SOP template so the expected level of detail is clear.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0713-co-10",
+            "taskId": "task-20260708-test-la-ai-change-management",
+            "label": "Start LA AI change-management testing",
+            "detail": "Give the LA AI testing item a clean first pass before the portfolio and BD meetings absorb the afternoon.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0713-rem-1",
+            "taskId": "task-20260713-email-bill-b",
+            "label": "Enviar correo a Bill B.",
+            "detail": "Send the Bill B. email early so it does not get crowded out by the BD and portfolio meeting stack."
+          }
+        ]
+      },
+      {
+        "title": "Today’s Schedule",
+        "info": true,
+        "note": "Times are shown in Jean’s Outlook working-day context. The best focus window is the 12:00 PM blocked space; after 2:00 PM the day runs as a compact portfolio and transition sequence.",
+        "items": [
+          {
+            "id": "mon-0713-cal-1",
+            "label": "OOO-Shelley",
+            "detail": "Shelley is out July 13 through July 17; route anything needing her around that absence."
+          },
+          {
+            "id": "mon-0713-cal-2",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Start-of-week admin block before the project and portfolio work begins."
+          },
+          {
+            "id": "mon-0713-cal-3",
+            "time": "10:00 AM",
+            "label": "Scoping Call: Travel Permit - Guidance Update for Clients Project",
+            "detail": "Paige, Stephanie, and Cristina accepted. The source email flags urgency because the update is needed next week, so this should produce scope, owner, and timeline clarity."
+          },
+          {
+            "id": "mon-0713-cal-4",
+            "time": "11:30 AM",
+            "label": "Toggl touchpoint",
+            "detail": "Useful checkpoint with Laura if Toggl status or Sara follow-up remains open from last week."
+          },
+          {
+            "id": "mon-0713-cal-5",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Ninety-minute protected window for Bill B., Travel Permit prep, or carry-over cleanup before the afternoon stack."
+          },
+          {
+            "id": "mon-0713-cal-6",
+            "time": "2:00 PM",
+            "label": "BD Portfolio Review",
+            "detail": "Review active BD portfolio status, risks, blockers, and new intake with Matthew and Anthony."
+          },
+          {
+            "id": "mon-0713-cal-7",
+            "time": "3:00 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda is portfolio review, roadblocks, and next steps; good place to revisit Mental Health Expansion and new PMO/CoE status signals."
+          },
+          {
+            "id": "mon-0713-cal-8",
+            "time": "3:30 PM",
+            "label": "BD Portfolio Touchpoint & Transition",
+            "detail": "Janet accepted. Use this to connect the transition path to the earlier BD Portfolio Review instead of creating a separate follow-up lane."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0713-action-1",
+            "taskId": "task-20260713-prepare-travel-permit-scope",
+            "label": "Prepare the Travel Permit scoping decisions",
+            "detail": "Jean’s Friday email called out urgency for next week and asked clarifying questions. Use the 10:00 AM call to lock scope, owner, deadline, and what must be updated for clients.",
+            "urgent": true
+          },
+          {
+            "id": "mon-0713-action-2",
+            "taskId": "task-20260713-align-bd-portfolio-transition",
+            "label": "Align BD portfolio review with Janet’s transition touchpoint",
+            "detail": "Treat the 2:00 PM BD review and 3:30 PM Janet meeting as one operating sequence: active work, risks, new intake, owner decisions, and transition next steps."
+          },
+          {
+            "id": "mon-0713-action-3",
+            "taskId": "task-20260713-review-universal-intake-changes",
+            "label": "Get oriented on Universal Intake changes",
+            "detail": "Matthew added Jean to the Universal Intake thread as the BD PM and asked to plan a meeting before UI changes are made. Review the context so the next conversation has the right stakeholders and change path."
+          },
+          {
+            "id": "mon-0713-action-4",
+            "taskId": "task-20260713-triage-denied-reentry-banner",
+            "label": "Triage the new Denied Reentry Banner project",
+            "detail": "Asana shared a new Denied Reentry Banner project and attachment through PMO intake. Decide whether it needs portfolio routing, owner confirmation, or simply monitoring."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0713-email-1",
+            "taskId": "task-20260713-review-universal-intake-changes",
+            "label": "Reply or prepare next step on Universal Intake",
+            "detail": "Matthew’s thread says Jean is being added as the Project Manager assisting BD and asks the group to plan a meeting before UI changes are made. If no one else schedules it, Jean may need to prompt the next step."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0713-ooo-1",
+            "label": "Shelley is OOO this week",
+            "detail": "The calendar shows Shelley out from Monday, July 13 through Friday, July 17. Route approvals or dependencies around her absence."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-07-10",
     "type": "eod",
     "date": "Friday, July 10 - End of Day",
