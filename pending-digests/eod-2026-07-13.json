@@ -1,0 +1,157 @@
+{
+  "digest": {
+    "id": "eod-2026-07-13",
+    "type": "eod",
+    "date": "Monday, July 13 - End of Day",
+    "isoDate": "2026-07-13",
+    "greeting": "Jean, today moved several operating threads forward across Travel Permit, Incident Response, DNC, ICE Preparedness, Legal Change Management, Amazon Connect, and the BD intake lane. The remaining work is tighter now: keep the PM operating structure, Universal Intake, BD transition, Mental Health charter, LA AI testing, and new intake routing from splitting into separate follow-up tracks.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0713-done-1",
+            "label": "Sent the Bill B. email",
+            "detail": "The Bill B. reminder is closed for today."
+          },
+          {
+            "id": "eod-0713-done-2",
+            "label": "Prepared the Travel Permit scoping path",
+            "detail": "The Travel Permit scoping item is closed after the morning scoping call and same-day follow-up on the updated travel guidance."
+          },
+          {
+            "id": "eod-0713-done-3",
+            "label": "Closed the BCP and Incident Response follow-up path",
+            "detail": "The BCP and Incident Response follow-up item is closed for today."
+          },
+          {
+            "id": "eod-0713-done-4",
+            "label": "Moved the DNC and ICE Preparedness paths forward",
+            "detail": "The DNC enhancement path and ICE Preparedness launch-risk review are both closed for today."
+          },
+          {
+            "id": "eod-0713-done-5",
+            "label": "Advanced Legal Change Management and Amazon Connect follow-ups",
+            "detail": "The Legal Change Management requirement thread and Amazon Connect decisions and blockers item are both closed for today."
+          },
+          {
+            "id": "eod-0713-done-6",
+            "label": "Closed the PE projects and Denied Reentry Banner follow-ups",
+            "detail": "The Eugenia PE project list/SOP item and the Denied Reentry Banner triage item are closed for today."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0713-open-1",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, and weekly deck into one operating structure",
+            "detail": "Keep shaping the Loop index, Planner updates, and weekly executive deck into one operating rhythm before more portfolio updates create parallel status surfaces."
+          },
+          {
+            "id": "eod-0713-open-2",
+            "taskId": "task-20260713-align-bd-portfolio-transition",
+            "label": "Align BD portfolio review with Janet's transition touchpoint",
+            "detail": "Keep today's BD review and Janet transition path connected: active work, risks, new intake, owner decisions, and transition next steps."
+          },
+          {
+            "id": "eod-0713-open-3",
+            "taskId": "task-20260713-review-universal-intake-changes",
+            "label": "Prepare the next step on Universal Intake",
+            "detail": "Matthew's thread added Jean as the BD project manager and called for a meeting before UI changes are made. If no one else schedules it, Jean may need to prompt the next step."
+          },
+          {
+            "id": "eod-0713-open-4",
+            "taskId": "task-20260709-review-phase-2-intake-alert",
+            "label": "Review the new intake alerts before portfolio work",
+            "detail": "Janet sent another Business Development intake alert today. Keep the Phase 2 and BD intake items routed to ownership or portfolio follow-up before they fragment."
+          },
+          {
+            "id": "eod-0713-open-5",
+            "taskId": "task-20260708-check-mental-health-charter",
+            "label": "Check the Mental Health Expansion charter deliverable",
+            "detail": "Confirm whether the draft charter is ready for stakeholder review or needs an owner/date reset."
+          },
+          {
+            "id": "eod-0713-open-6",
+            "taskId": "task-20260708-test-la-ai-change-management",
+            "label": "Start LA AI change-management testing",
+            "detail": "Give the LA AI testing item a clean first pass now that several of today's heavier follow-ups are closed."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0713-decision-1",
+            "label": "Legal SSOT pilot rollout moved to August 14",
+            "detail": "Jhara's Legal Change Management update says the system is about 85% complete and the pilot rollout is now August 14 after IT confirmed 10 working days for requested fine-tuning changes."
+          },
+          {
+            "id": "eod-0713-decision-2",
+            "label": "Upsell Conversion Tracking is expected to be handled through Rev Cloud",
+            "detail": "Janet shared that Matt and Anthony believe the intake will be solved with Rev Cloud because it will track individual products sold with SKUs, and copied Jean because he is now supporting the BD portfolio."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0713-tue-1",
+            "label": "Shelley remains OOO",
+            "detail": "Shelley's calendar shows her out through Friday, July 17. Route anything needing her around that absence."
+          },
+          {
+            "id": "eod-0713-tue-2",
+            "label": "Sara in Dublin Office",
+            "detail": "Sara's calendar shows her in the Dublin office Tuesday through Thursday."
+          },
+          {
+            "id": "eod-0713-tue-3",
+            "time": "1:00 PM",
+            "label": "CSO GLs Huddle",
+            "detail": "Calendar hold with Hassan as organizer."
+          },
+          {
+            "id": "eod-0713-tue-4",
+            "time": "1:30 PM",
+            "label": "Latent Variables / Jean Garcia - Check In",
+            "detail": "External Zoom check-in with Yashraj Patel."
+          },
+          {
+            "id": "eod-0713-tue-5",
+            "time": "2:00 PM",
+            "label": "EPMO TL Weekly Catch Up",
+            "detail": "Weekly touchpoint with Janet, Eugenia, and Jorge."
+          },
+          {
+            "id": "eod-0713-tue-6",
+            "time": "3:00 PM",
+            "label": "Focus time",
+            "detail": "Protected hour after the EPMO TL catch-up."
+          },
+          {
+            "id": "eod-0713-tue-7",
+            "time": "4:00 PM",
+            "label": "1:1 Nicolas & Jean",
+            "detail": "Regular 1:1 with Nicolas."
+          },
+          {
+            "id": "eod-0713-tue-8",
+            "time": "4:30 PM",
+            "label": "SharePoint touchpoint",
+            "detail": "Review how Jhara saves project files in SharePoint or OneDrive."
+          }
+        ]
+      }
+    ]
+  }
+}
