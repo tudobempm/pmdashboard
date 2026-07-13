@@ -29,6 +29,7 @@
     "wed-0603-co-18": true,
     "wed-0603-co-19": true,
     "eod-0608-open-3": true,
+    "task-20260713-email-bill-b": true,
     "task-20260709-bcp-ir-followups": true,
     "task-20260624-assign-mhe-rfe-pe": true,
     "task-20260612-revisar-epmo-portal": true,
@@ -66,6 +67,7 @@
     "task-20260708-clear-rippling-overdue-task": true,
     "task-20260708-review-laura-chatgpt-access": true,
     "task-20260709-prepare-amazon-connect-sync": true,
+    "task-20260713-prepare-travel-permit-scope": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -476,5 +478,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1783945217478
+  "lastModified": 1783956302478
 }
