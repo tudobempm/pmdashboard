@@ -29,6 +29,7 @@
     "wed-0603-co-18": true,
     "wed-0603-co-19": true,
     "eod-0608-open-3": true,
+    "task-20260709-bcp-ir-followups": true,
     "task-20260624-assign-mhe-rfe-pe": true,
     "task-20260612-revisar-epmo-portal": true,
     "task-20260622-route-billing-intake": true,
@@ -64,13 +65,17 @@
     "task-20260706-prepare-bd-portfolio-review": true,
     "task-20260708-clear-rippling-overdue-task": true,
     "task-20260708-review-laura-chatgpt-access": true,
+    "task-20260709-prepare-amazon-connect-sync": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
     "task-20260702-align-epmo-intake-ba-process": true,
     "task-20260702-review-dashboard-pr7-preview": true,
     "task-20260703-review-tomas-sop-edit-access": true,
+    "task-20260708-send-eugenia-pe-projects-sop": true,
     "task-20260709-schedule-janet-bd-transition": true,
+    "task-20260710-decide-dnc-enhancements-path": true,
+    "task-20260713-triage-denied-reentry-banner": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260617-check-litify-field-audit-path": true,
@@ -142,6 +147,7 @@
     "task-20260701-triage-mental-health-eval-expansion": true,
     "task-20260702-review-amazon-connect-delay-summary": true,
     "task-20260706-agendar-reunion-marketing-portfolio": true,
+    "task-20260710-track-ice-preparedness-launch-risks": true,
     "task-20260610-follow-up-epmo-liderazgo-commitments": true,
     "task-20260610-verify-github-token-dashboard-access": true,
     "task-20260618-review-billing-intake-shannon-cooper": true,
@@ -167,6 +173,7 @@
     "task-20260618-unblock-staff-augmentation-it-ownership": true,
     "task-20260610-review-detention-prevention-pilot-package": true,
     "task-20260622-clarify-incident-response-bucket-six-owner": true,
+    "task-20260709-track-legal-change-management-requirements": true,
     "task-20260701-review-product-salesforce-roadmap-materials": true,
     "task-20260630-follow-up-incident-response-irg-implementation": true,
     "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true
@@ -222,6 +229,10 @@
     "task-20260625-complete-leadup-module-2a-check": {
       "ts": 1782421879308,
       "emoji": "❗"
+    },
+    "task-20260713-review-universal-intake-changes": {
+      "ts": 1783945206169,
+      "emoji": "⭐"
     },
     "task-20260624-camilo-structure-mhe-rfe-support": {
       "ts": 1782758333391,
@@ -465,5 +476,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1783944777066
+  "lastModified": 1783945217478
 }
