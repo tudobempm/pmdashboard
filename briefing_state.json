@@ -36,6 +36,7 @@
     "task-20260622-route-billing-intake": true,
     "task-20260626-use-eow-without-sara": true,
     "task-20260708-ask-janet-ba-process": true,
+    "task-20260619-work-smart-goals-kpis": true,
     "task-20260708-send-pm-meeting-notes": true,
     "task-20260616-coe-playbook-follow-up": true,
     "task-20260616-staff-aug-it-alignment": true,
@@ -64,9 +65,11 @@
     "task-20260623-clarify-vendors-trace-owner": true,
     "task-20260629-triage-phase-1-intake-alert": true,
     "task-20260706-prepare-bd-portfolio-review": true,
+    "task-20260708-check-mental-health-charter": true,
     "task-20260708-clear-rippling-overdue-task": true,
     "task-20260708-review-laura-chatgpt-access": true,
     "task-20260709-prepare-amazon-connect-sync": true,
+    "task-20260709-review-phase-2-intake-alert": true,
     "task-20260713-prepare-travel-permit-scope": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
@@ -75,6 +78,7 @@
     "task-20260702-review-dashboard-pr7-preview": true,
     "task-20260703-review-tomas-sop-edit-access": true,
     "task-20260708-send-eugenia-pe-projects-sop": true,
+    "task-20260708-test-la-ai-change-management": true,
     "task-20260709-schedule-janet-bd-transition": true,
     "task-20260710-decide-dnc-enhancements-path": true,
     "task-20260713-triage-denied-reentry-banner": true,
@@ -91,6 +95,7 @@
     "task-20260630-adjust-epmo-liderazgo-cadence": true,
     "task-20260702-prepare-sms-automation-status": true,
     "task-20260707-loop-bd-court-intake-followup": true,
+    "task-20260713-align-bd-portfolio-transition": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
     "task-20260616-confirm-joe-azul-waiting-items": true,
@@ -479,5 +484,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784037383362
+  "lastModified": 1784151241307
 }
