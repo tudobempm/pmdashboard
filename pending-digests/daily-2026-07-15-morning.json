@@ -1,0 +1,235 @@
+{
+  "digest": {
+    "id": "daily-2026-07-15-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, July 15",
+    "isoDate": "2026-07-15",
+    "greeting": "Wednesday, July 15, Jean. Today has 9 active timed calendar blocks, no active reminders, and 7 carried-over items. The day is anchored by the Legal Change Management sync into Thiago's 1:1, the 11:00 AM Marketing Portfolio Review and Claude overlap, and the afternoon portfolio/PM operating discussions. The highest-leverage moves are to resolve the 11:00 AM priority choice, keep the open PM operating work from splitting across tools, and answer the new access, BA support, and COE clarification asks that surfaced since yesterday. Teams and Outlook were briefly rate-limited during collection, but live calendar, recent email, and recent Teams thread previews were available before publication.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0715-co-1",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, weekly deck, and open-thread follow-ups into one operating structure",
+            "detail": "Use today's portfolio and PM discussion blocks to keep the Loop index, Planner updates, weekly executive deck, and open-thread follow-ups moving through one operating rhythm with clear owners and dates.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0715-co-2",
+            "taskId": "task-20260713-align-bd-portfolio-transition",
+            "label": "Align BD portfolio review with Janet's transition touchpoint",
+            "detail": "Keep the BD review, transition path, active work, risks, new intake, owner decisions, and transition next steps connected as one operating lane.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0715-co-3",
+            "taskId": "task-20260709-review-phase-2-intake-alert",
+            "label": "Review the new intake alerts before portfolio work",
+            "detail": "A new Phase 1 intake alert arrived yesterday, adding to the intake-routing pressure. Keep the Phase 2, BD, and Phase 1 intake items routed to ownership or portfolio follow-up before they fragment.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0715-co-4",
+            "taskId": "task-20260708-check-mental-health-charter",
+            "label": "Check the Mental Health Expansion charter deliverable",
+            "detail": "Confirm whether the draft charter is ready for stakeholder review or needs an owner/date reset.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0715-co-5",
+            "taskId": "task-20260708-test-la-ai-change-management",
+            "label": "Start LA AI change-management testing",
+            "detail": "Give the LA AI testing item a clean first pass and decide what evidence or feedback is needed before it becomes another open change-management thread.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0715-co-6",
+            "taskId": "task-20260714-resolve-legal-change-sync-conflict",
+            "label": "Confirm the Legal Change Management follow-up path",
+            "detail": "Today's 10:00 AM IT/EPMO sync is the next chance to confirm decisions, delegated follow-up, and whether another sync is needed after yesterday's conflict.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0715-co-7",
+            "taskId": "task-20260714-amazonconnect-venn-ocm-deep-dive",
+            "label": "Prepare the AmazonConnect/Venn OCM risk view",
+            "detail": "The high-priority deep dive is now on tomorrow's calendar. Keep timeline, stakeholder alignment, blockers, OCM risks, and mitigation asks together before the noon discussion.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "note": "Times are shown in Jean's Outlook working-day context. The tightest stretch is 10:00 AM to noon: Legal Change Management, Thiago 1:1, Marketing Portfolio Review, Claude, and a canceled Sara 1:1 sit back-to-back or overlap.",
+        "items": [
+          {
+            "id": "wed-0715-cal-1",
+            "label": "OOO-Shelley",
+            "detail": "Shelley remains out through Friday, July 17; route approvals or dependencies around that absence."
+          },
+          {
+            "id": "wed-0715-cal-2",
+            "label": "Sara in Dublin Office",
+            "detail": "Sara remains marked in the Dublin office through Thursday, and today's Sara 1:1 entries are canceled."
+          },
+          {
+            "id": "wed-0715-cal-3",
+            "time": "10:00 AM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Jhara's recurring sync is for EPMO and IT SharePoint alignment, doubts, action items, and clarifications. Use it to lock the next Legal Change Management path."
+          },
+          {
+            "id": "wed-0715-cal-4",
+            "time": "10:30 AM",
+            "label": "1:1 Thiago & Jean",
+            "detail": "Back-to-back after the Legal Change Management sync; good place to connect PM operating structure, LA AI testing, and owner/date cleanup."
+          },
+          {
+            "id": "wed-0715-cal-5",
+            "time": "11:00 AM",
+            "label": "Marketing Projects Portfolio Review conflicts with Claude",
+            "detail": "The portfolio review is explicitly for status, risks, blockers, new intake, and priority alignment; Claude overlaps the full hour, so choose the live priority or arrange coverage."
+          },
+          {
+            "id": "wed-0715-cal-6",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected hour after the 11:00 AM conflict, useful for capturing decisions and quick replies before the afternoon stack."
+          },
+          {
+            "id": "wed-0715-cal-7",
+            "time": "1:00 PM",
+            "label": "Focus time",
+            "detail": "Second protected block, well placed for intake routing, folder-access cleanup, or PM structure notes."
+          },
+          {
+            "id": "wed-0715-cal-8",
+            "time": "2:00 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda is portfolio review, roadblocks, and next steps. Use it to keep active project risks attached to owners and dates."
+          },
+          {
+            "id": "wed-0715-cal-9",
+            "time": "3:30 PM",
+            "label": "1:1 Laura & Jean",
+            "detail": "Laura forwarded the SMS Automation BA/SME thread yesterday, so this is a timely place to confirm support expectations and next steps."
+          },
+          {
+            "id": "wed-0715-cal-10",
+            "time": "4:00 PM",
+            "label": "PM Open Discussion: How to avoid going sideways on projects?",
+            "detail": "Use the discussion to turn recurring PM operating pain points into a practical structure, not a new parallel status conversation."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0715-action-1",
+            "taskId": "task-20260715-resolve-marketing-claude-overlap",
+            "label": "Resolve the 11:00 AM Marketing Portfolio and Claude overlap",
+            "detail": "The Marketing review is the stronger operating meeting because it covers active project status, blockers, intake, and priorities. Decide whether to attend it live, split coverage, or capture Claude asynchronously.",
+            "urgent": true
+          },
+          {
+            "id": "wed-0715-action-2",
+            "taskId": "task-20260715-organize-coe-escalations-call",
+            "label": "Organize the COE Escalations clarification call",
+            "detail": "Mauricio asked Jean to set up a call with the COE group because he sees only three pending user stories, including two in UAT and one complicated item needing solution review. Pull the right people together so the status gap closes cleanly."
+          },
+          {
+            "id": "wed-0715-action-3",
+            "taskId": "task-20260715-fix-incident-response-folder-access",
+            "label": "Give the Incident Response team edit access for runbooks",
+            "detail": "Dan Mackey replied that the shared Incident Response folder only gives view access, blocking runbook uploads. Since the guide work is tied to the July 15 due date, confirm or adjust permissions early.",
+            "urgent": true
+          },
+          {
+            "id": "wed-0715-action-4",
+            "taskId": "task-20260715-confirm-sms-ba-support",
+            "label": "Confirm SMS Automation BA support and engagement level",
+            "detail": "Laura and Eugenia forwarded the BA/SME assignment thread after Anu said Ernestina would support the project. Use today's Laura 1:1 or a quick reply to confirm the expected engagement level and timing before tomorrow's SMS status meeting."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0715-email-1",
+            "taskId": "task-20260715-route-phase-1-intake-alert",
+            "label": "Route Janet's new Phase 1 intake alert",
+            "detail": "Janet sent a new intake alert from Andrew Counts for Phase 1. Triage whether it belongs in the same portfolio-routing lane as the existing Phase 2 and BD intake follow-ups or needs a separate owner.",
+            "urgent": true
+          },
+          {
+            "id": "wed-0715-email-2",
+            "taskId": "task-20260715-check-court-call-intake-sheet",
+            "label": "Check the newly assigned Court Call Intake Sheet task",
+            "detail": "Asana's daily update shows one newly assigned task: Court Call Intake Sheet, with no due date set. Decide whether it needs a deadline or can wait behind today's higher-priority meeting and access items."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0715-ooo-1",
+            "label": "Shelley is OOO this week",
+            "detail": "The calendar shows Shelley out from Monday, July 13 through Friday, July 17. Route approvals or dependencies around her absence."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0715-thu-1",
+            "label": "Sara remains in the Dublin office",
+            "detail": "Sara's office hold continues through Thursday, July 16."
+          },
+          {
+            "id": "wed-0715-thu-2",
+            "time": "12:00 PM",
+            "label": "AmazonConnect + Venn Tunneling - Timeline & OCM",
+            "detail": "High-priority deep dive with Sara and Danny's framing around status, stakeholders, risks, blockers, and mitigation."
+          },
+          {
+            "id": "wed-0715-thu-3",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Use today's folder-permission fix to make sure runbooks and guidebook work are not blocked before the weekly touchpoint."
+          },
+          {
+            "id": "wed-0715-thu-4",
+            "time": "2:00 PM",
+            "label": "June & July Firmwide Meeting",
+            "detail": "Firmwide meeting sits in the middle of the afternoon; protect prep and follow-through time around it."
+          },
+          {
+            "id": "wed-0715-thu-5",
+            "time": "2:30 PM",
+            "label": "SMS Automation Optimization Weekly Project Status",
+            "detail": "Tomorrow's status meeting is the natural deadline for clarifying BA/SME support and expected engagement."
+          },
+          {
+            "id": "wed-0715-thu-6",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team coordination forum for progress, roadblocks, and strategic project momentum."
+          }
+        ]
+      }
+    ]
+  }
+}
