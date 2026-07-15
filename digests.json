@@ -1,5 +1,140 @@
 [
   {
+    "id": "eod-2026-07-15",
+    "type": "eod",
+    "date": "Wednesday, July 15 - End of Day",
+    "isoDate": "2026-07-15",
+    "greeting": "Jean, today produced concrete movement on the client travel-warning SMS path, while the remaining work is mostly about keeping portfolio, intake, PM structure, and Amazon Connect follow-ups tied to owners and dates. Tomorrow has several useful checkpoints, so the carry-forward list is best kept tight and action-oriented.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0715-done-1",
+            "label": "Submitted the Bulk SMS campaign request",
+            "detail": "Jean sent the update that the SMS campaign ticket was submitted through Halo and aligned with Deepak as a high-priority request; the help desk confirmation logged ticket 0031317."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0715-open-1",
+            "taskId": "task-20260715-fix-incident-response-folder-access",
+            "label": "Give the Incident Response team edit access for runbooks",
+            "detail": "Dan Mackey's access issue still needs a clean permission fix or confirmation before tomorrow's BCP/Incident Response touchpoint.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0715-open-2",
+            "taskId": "task-20260709-review-phase-2-intake-alert",
+            "label": "Route the active intake alerts into one ownership lane",
+            "detail": "Keep the Phase 2, BD, Phase 1, and Court Call Intake Sheet items from splitting across separate paths; assign the right owner or portfolio follow-up before they drift.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0715-open-3",
+            "taskId": "task-20260714-resolve-legal-change-sync-conflict",
+            "label": "Confirm the Legal Change Management follow-up path",
+            "detail": "Capture the decision points, delegated follow-up, or next meeting need from today's IT/EPMO sync so the Legal Change Management path stays clear.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0715-open-4",
+            "taskId": "task-20260706-index-pm-team-loop",
+            "label": "Turn the PM team index, Planner, weekly deck, and open-thread follow-ups into one operating structure",
+            "detail": "Keep the Loop index, Planner updates, weekly executive deck, and PM discussion outputs moving through one rhythm with named owners and dates."
+          },
+          {
+            "id": "eod-0715-open-5",
+            "taskId": "task-20260713-align-bd-portfolio-transition",
+            "label": "Align BD portfolio review with Janet's transition touchpoint",
+            "detail": "Keep the BD review, active work, risks, new intake, owner decisions, and transition next steps connected as one operating lane."
+          },
+          {
+            "id": "eod-0715-open-6",
+            "taskId": "task-20260714-amazonconnect-venn-ocm-deep-dive",
+            "label": "Prepare the AmazonConnect/Venn OCM risk view",
+            "detail": "Before tomorrow's noon discussion, keep timeline, stakeholder alignment, blockers, OCM risks, mitigation asks, usage costs, quota monitoring, and dashboard questions together."
+          },
+          {
+            "id": "eod-0715-open-7",
+            "taskId": "task-20260715-confirm-sms-ba-support",
+            "label": "Confirm SMS Automation BA support and engagement level",
+            "detail": "Use tomorrow's SMS status meeting to clarify Ernestina's expected BA/SME support, timing, and engagement level."
+          },
+          {
+            "id": "eod-0715-open-8",
+            "taskId": "task-20260708-check-mental-health-charter",
+            "label": "Check the Mental Health Expansion charter deliverable",
+            "detail": "Confirm whether the draft charter is ready for stakeholder review or needs an owner/date reset."
+          },
+          {
+            "id": "eod-0715-open-9",
+            "taskId": "task-20260708-test-la-ai-change-management",
+            "label": "Start LA AI change-management testing",
+            "detail": "Give the LA AI testing item a clean first pass and decide what evidence or feedback is needed before it becomes another open change-management thread."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0715-decision-1",
+            "label": "Amazon Connect weekly updates will lead with on-track and at-risk status",
+            "detail": "Thiago confirmed he will add a clear status section at the top of weekly updates showing whether committed dates and major milestones are on track or at risk."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0715-thu-1",
+            "label": "Sara remains in the Dublin office",
+            "detail": "Sara's office hold continues through Thursday, July 16."
+          },
+          {
+            "id": "eod-0715-thu-2",
+            "time": "12:00 PM",
+            "label": "AmazonConnect + Venn Tunneling - Timeline & OCM",
+            "detail": "High-priority deep dive with Sara and Danny's framing around status, stakeholders, risks, blockers, and mitigation."
+          },
+          {
+            "id": "eod-0715-thu-3",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Use today's folder-permission issue to make sure runbooks and guidebook work are not blocked before the weekly touchpoint."
+          },
+          {
+            "id": "eod-0715-thu-4",
+            "time": "2:00 PM",
+            "label": "June & July Firmwide Meeting",
+            "detail": "Firmwide meeting sits in the middle of the afternoon; protect prep and follow-through time around it."
+          },
+          {
+            "id": "eod-0715-thu-5",
+            "time": "2:30 PM",
+            "label": "SMS Automation Optimization Weekly Project Status",
+            "detail": "Tomorrow's status meeting is the natural deadline for clarifying BA/SME support and expected engagement."
+          },
+          {
+            "id": "eod-0715-thu-6",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team coordination forum for progress, roadblocks, and strategic project momentum."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-15-morning",
     "type": "daily",
     "date": "Morning - Wednesday, July 15",
