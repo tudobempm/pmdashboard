@@ -13,8 +13,10 @@ and tasks, and writes two Supabase rows the dashboard reads live:
 Because the per-project "how it's going" summary must be written by AI (Claude)
 rather than copied from the raw status update, generation is split into stages:
 
-    collect  -> fetch Asana, compute signals, write a raw payload to a file
-    (Claude) -> read that file, write `aiSummary` + `aiDetail` per project + `aiOverview`
+    collect  -> fetch Asana + the team's dashboard notes (app_state id=8,
+                read-only), compute signals, write a raw payload to a file
+    (Claude) -> read that file, write `aiSummary` + `aiDetail` per project +
+                `aiOverview`, weighing each project's `userNotes`
     publish  -> read the enriched file, update history, upsert Supabase 6 & 7
 
 The orchestrator (the Claude Code routine session, or a human running it) does
@@ -44,6 +46,8 @@ from datetime import datetime, timedelta, timezone
 PORTFOLIO_GID = "1210500083704814"          # PMO Projects Portfolio
 LIVE_ROW_ID = 6
 HISTORY_ROW_ID = 7
+NOTES_ROW_ID = 8                             # user notes, written by the dashboard (read-only here)
+NOTES_PER_PROJECT = 5                        # most recent notes handed to the AI stage
 HISTORY_RETENTION_DAYS = 120
 RECENT_MOVEMENT_DAYS = 3
 STALE_STATUS_DAYS = 14
@@ -150,6 +154,27 @@ def first_sentences(text, limit=280):
     return (cut[:dot + 1] if dot > 80 else cut).rstrip() + " …"
 
 
+def fetch_user_notes():
+    """Notes the team wrote in the dashboard (app_state id=8). Pinned first,
+    then newest, capped per project — they ride along in each project's
+    `userNotes` so the AI stage can weigh them. Never fatal."""
+    try:
+        data = supabase_get_data(NOTES_ROW_ID) or {}
+        raw = data.get("notes") or {}
+    except Exception as exc:                           # noqa: BLE001
+        print(f"  ! user-notes fetch failed (continuing without): {exc}", file=sys.stderr)
+        return {}
+    out = {}
+    for gid, entries in raw.items():
+        if not isinstance(entries, list):
+            continue
+        entries = sorted(entries, key=lambda n: n.get("at") or "", reverse=True)
+        entries = sorted(entries, key=lambda n: 0 if n.get("pinned") else 1)
+        out[gid] = [{"text": n.get("text") or "", "at": n.get("at"),
+                     "pinned": bool(n.get("pinned"))} for n in entries[:NOTES_PER_PROJECT]]
+    return out
+
+
 # ---------------------------------------------------------------- build -------
 def build():
     now = datetime.now(RD_TZ)
@@ -165,6 +190,7 @@ def build():
         "current_status_update.title", "current_status_update.text",
         "current_status_update.status_type", "current_status_update.created_at",
     ])
+    user_notes = fetch_user_notes()
     items = asana_get_all(f"portfolios/{PORTFOLIO_GID}/items", {"opt_fields": fields})
     projects = [p for p in items if p.get("resource_type") == "project"
                 and (p.get("owner") or {}).get("gid") in TEAM]
@@ -173,7 +199,7 @@ def build():
 
     def comp_entry(p):
         return {
-            "name": p["name"], "url": p.get("permalink_url"),
+            "gid": p["gid"], "name": p["name"], "url": p.get("permalink_url"),
             "member": TEAM[p["owner"]["gid"]], "memberGid": p["owner"]["gid"],
             "completedDate": str(to_rd_date(p["completed_at"])),
         }
@@ -279,6 +305,10 @@ def build():
             "aiDetail": None,           # <- 2-4 plain-English bullets, written by the AI stage
             "roadblocks": roadblocks,
             "recentMovements": proj_movements,
+            # Notes the team wrote in the dashboard. The AI stage should treat
+            # these as first-hand context (often fresher than the Asana status)
+            # when writing aiSummary/aiDetail/aiOverview.
+            "userNotes": user_notes.get(gid) or [],
         })
 
     recent_movements.sort(key=lambda m: m["when"], reverse=True)

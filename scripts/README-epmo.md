@@ -14,7 +14,7 @@ run time).
 | Dashboard tab | `EpmoDashboardTab` in `index.html` (nav id `epmo`) |
 | Live data | Supabase `app_state` row **id = 6** |
 | History (charts) | Supabase `app_state` row **id = 7**, rolling 120 days |
-| Project notes | Supabase `app_state` row **id = 8** — written by the dashboard, keyed by project gid; the digest never touches it |
+| Project notes | Supabase `app_state` row **id = 8** — written by the dashboard, keyed by project gid; `collect` reads it (never writes) to hand the AI stage each project's `userNotes` |
 | Schedule | Claude Code Remote trigger `EPMO Daily Brief`, cron `5 12 * * 1-5` |
 
 `5 12 * * 1-5` = **08:05 America/Santo_Domingo (UTC-4), Monday–Friday** = 12:05 UTC.
@@ -41,10 +41,14 @@ one:
 
 ```
 collect  ->  python3 scripts/generate_epmo_digest.py collect --out /tmp/epmo.json
-             (fetches Asana, computes signals; does NOT touch Supabase)
+             (fetches Asana + the team's dashboard notes from row 8 — read-only,
+             never writes Supabase; each project gets a `userNotes` list,
+             pinned note first, capped at 5)
  (AI)    ->  Claude reads /tmp/epmo.json and fills each project's `aiSummary`
              and `aiDetail` (2-4 bullets for the expanded "Where it stands"
-             section) and the top-level `aiOverview`, then saves the file back
+             section) and the top-level `aiOverview`, then saves the file back.
+             `userNotes` are first-hand context from the team — often fresher
+             than the Asana status — and should be weighed into all three fields
 publish  ->  python3 scripts/generate_epmo_digest.py publish --in /tmp/epmo.json
              (updates history and upserts Supabase rows 6 & 7)
 ```

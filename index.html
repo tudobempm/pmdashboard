@@ -532,8 +532,91 @@ function epmoMonthDay(s) {
 
 /* ─── EPMO project notes — persisted in Supabase app_state id=8 (own row so the
    daily digest, which rewrites rows 6/7, never wipes them). Shape:
-   { notes: { [projectGid]: [{ text, at }, ... newest first] }, updatedAt } ─── */
+   { notes: { [projectGid]: [{ text, at, project?, pinned?, editedAt? }, ... newest first] }, updatedAt }
+   `at` (creation timestamp) doubles as the note's identity for edit/delete/pin.
+   At most one note per project is pinned; it always sorts first. ─── */
 const EPMO_NOTES_ROW_ID = 8;
+
+// Pinned first, then newest first
+function epmoSortNotes(list) {
+  return [...(list || [])].sort((a, b) => ((b.pinned ? 1 : 0) - (a.pinned ? 1 : 0)) || (a.at < b.at ? 1 : a.at > b.at ? -1 : 0));
+}
+
+// Render note text with bare URLs as clickable links
+function epmoLinkify(text) {
+  return String(text || "").split(/(https?:\/\/[^\s<>"')\]]+)/g).map((part, i) =>
+    /^https?:\/\//.test(part)
+      ? <a key={i} href={part} target="_blank" rel="noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline break-all">{part}</a>
+      : part
+  );
+}
+
+const EpmoPinIcon = ({ filled, className = "w-3.5 h-3.5" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1z"/></svg>
+);
+
+function EpmoNoteItem({ note, featured, onPin, onEdit, onDelete }) {
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState(note.text);
+  const [busy, setBusy] = useState(false);
+  const [confirmDel, setConfirmDel] = useState(false);
+
+  const saveEdit = async () => {
+    const t = draft.trim();
+    if (!t || busy) return;
+    setBusy(true);
+    const ok = await onEdit(note.at, t);
+    if (ok) setEditing(false);
+    setBusy(false);
+  };
+  const del = async () => {
+    if (!confirmDel) { setConfirmDel(true); setTimeout(() => setConfirmDel(false), 3500); return; }
+    setBusy(true);
+    await onDelete(note.at);
+    setBusy(false);
+  };
+
+  const iconBtn = "w-6 h-6 rounded-md flex items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-200 hover:bg-zinc-200/60 dark:hover:bg-zinc-700/60 transition-colors";
+  return (
+    <div className={featured
+      ? "rounded-xl bg-amber-50/70 dark:bg-amber-500/10 border border-amber-200/60 dark:border-amber-500/20 px-3.5 py-3"
+      : "rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-700/50 px-3.5 py-2.5"}>
+      {editing ? (
+        <div>
+          <textarea value={draft} onChange={(e) => setDraft(e.target.value)}
+            onKeyDown={(e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); saveEdit(); } if (e.key === "Escape") { e.stopPropagation(); setEditing(false); setDraft(note.text); } }}
+            rows={3} autoFocus
+            className="w-full resize-y rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 px-2.5 py-2 text-[13px] sm:text-sm text-zinc-700 dark:text-zinc-200 focus:outline-none focus:border-blue-400 dark:focus:border-blue-500" />
+          <div className="flex items-center gap-2 mt-1.5">
+            <button onClick={saveEdit} disabled={!draft.trim() || busy} className={`text-[11px] font-bold px-2.5 py-1 rounded-lg ${!draft.trim() || busy ? "bg-zinc-100 dark:bg-zinc-700/60 text-zinc-400 dark:text-zinc-500" : "bg-blue-600 hover:bg-blue-500 text-white"}`}>{busy ? "Saving…" : "Save"}</button>
+            <button onClick={() => { setEditing(false); setDraft(note.text); }} className="text-[11px] font-bold px-2.5 py-1 rounded-lg text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200/60 dark:hover:bg-zinc-700/60">Cancel</button>
+          </div>
+        </div>
+      ) : (
+        <div>
+          <div className={`text-[13px] sm:text-sm whitespace-pre-wrap leading-relaxed ${featured ? "text-zinc-700 dark:text-zinc-200" : "text-zinc-600 dark:text-zinc-300"}`}>{epmoLinkify(note.text)}</div>
+          <div className="flex items-center justify-between gap-2 mt-1.5">
+            <div className="flex items-center gap-1.5 text-[11px] text-zinc-400 dark:text-zinc-500 min-w-0">
+              {note.pinned && <span className="inline-flex items-center gap-0.5 text-amber-600 dark:text-amber-400 font-bold flex-shrink-0"><EpmoPinIcon filled className="w-3 h-3" />Pinned</span>}
+              <span className="truncate">{epmoDateTime(note.at)}{note.editedAt ? " · edited" : ""}</span>
+            </div>
+            <div className="flex items-center gap-0.5 flex-shrink-0">
+              <button onClick={() => onPin(note.at)} title={note.pinned ? "Unpin" : "Pin to top"} className={`${iconBtn} ${note.pinned ? "text-amber-500 dark:text-amber-400" : ""}`}><EpmoPinIcon filled={note.pinned} /></button>
+              <button onClick={() => { setDraft(note.text); setEditing(true); }} title="Edit note" className={iconBtn}>
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5z"/></svg>
+              </button>
+              <button onClick={del} title={confirmDel ? "Click again to delete" : "Delete note"} className={`${iconBtn} ${confirmDel ? "!text-red-500 !bg-red-50 dark:!bg-red-500/15" : ""}`}>
+                {confirmDel
+                  ? <span className="text-[10px] font-bold px-0.5">Sure?</span>
+                  : <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 async function epmoReadNotes() {
   try {
@@ -546,35 +629,35 @@ async function epmoReadNotes() {
   }
 }
 
-function EpmoNotesSection({ gid, notes, onAdd }) {
+function EpmoNotesSection({ gid, projectName, notes, actions }) {
   const [draft, setDraft] = useState("");
   const [saving, setSaving] = useState(false);
   const [failed, setFailed] = useState(false);
   const [showPrev, setShowPrev] = useState(false);
-  const list = notes || [];
-  const latest = list[0];
-  const previous = list.slice(1);
+  const sorted = epmoSortNotes(notes);
+  const latest = sorted[0];
+  const previous = sorted.slice(1);
 
   const save = async () => {
     const text = draft.trim();
     if (!text || saving) return;
     setSaving(true); setFailed(false);
-    const ok = await onAdd(gid, text);
+    const ok = await actions.add(gid, projectName, text);
     if (ok) setDraft(""); else setFailed(true);
     setSaving(false);
+  };
+  const itemHandlers = {
+    onPin: (at) => actions.pin(gid, at),
+    onEdit: (at, text) => actions.edit(gid, at, text),
+    onDelete: (at) => actions.remove(gid, at),
   };
 
   return (
     <div>
       <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1.5">Notes</div>
-      {latest ? (
-        <div className="rounded-xl bg-amber-50/70 dark:bg-amber-500/10 border border-amber-200/60 dark:border-amber-500/20 px-3.5 py-3">
-          <div className="text-[13px] sm:text-sm text-zinc-700 dark:text-zinc-200 whitespace-pre-wrap leading-relaxed">{latest.text}</div>
-          <div className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1.5">{epmoDateTime(latest.at)}</div>
-        </div>
-      ) : (
-        <div className="text-[13px] text-zinc-400 dark:text-zinc-500 italic">No notes yet.</div>
-      )}
+      {latest
+        ? <EpmoNoteItem note={latest} featured {...itemHandlers} />
+        : <div className="text-[13px] text-zinc-400 dark:text-zinc-500 italic">No notes yet.</div>}
       {previous.length > 0 && (
         <div className="mt-2">
           <button onClick={() => setShowPrev(v => !v)} aria-expanded={showPrev} className="inline-flex items-center gap-1 text-[12px] font-bold text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors">
@@ -583,11 +666,8 @@ function EpmoNotesSection({ gid, notes, onAdd }) {
           </button>
           {showPrev && (
             <ul className="mt-2 space-y-2">
-              {previous.map((n, i) => (
-                <li key={i} className="rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-700/50 px-3.5 py-2.5">
-                  <div className="text-[13px] text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap leading-relaxed">{n.text}</div>
-                  <div className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1">{epmoDateTime(n.at)}</div>
-                </li>
+              {previous.map((n) => (
+                <li key={n.at}><EpmoNoteItem note={n} {...itemHandlers} /></li>
               ))}
             </ul>
           )}
@@ -613,6 +693,84 @@ function EpmoNotesSection({ gid, notes, onAdd }) {
   );
 }
 
+/* All saved notes across every project — including "orphans" whose project has
+   left the daily brief (completed/archived). Grouped by project, newest first. */
+function EpmoAllNotesModal({ notes, live, actions, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.target instanceof Element && (e.target.tagName === "TEXTAREA" || e.target.tagName === "INPUT")) return;
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
+  }, [onClose]);
+
+  const openByGid = {};
+  (live?.projects || []).forEach(p => { openByGid[p.gid] = p; });
+  const groups = Object.entries(notes)
+    .filter(([, list]) => list && list.length > 0)
+    .map(([gid, list]) => {
+      const sorted = epmoSortNotes(list);
+      const proj = openByGid[gid];
+      return {
+        gid,
+        name: proj ? proj.name : (list.find(n => n.project)?.project || "Unknown project"),
+        member: proj ? proj.member : null,
+        orphan: !proj,
+        list: sorted,
+        newest: sorted.reduce((m, n) => (n.at > m ? n.at : m), ""),
+      };
+    })
+    .sort((a, b) => (a.orphan !== b.orphan ? (a.orphan ? 1 : -1) : (a.newest < b.newest ? 1 : -1)));
+  const total = groups.reduce((s, g) => s + g.list.length, 0);
+
+  return ReactDOM.createPortal(
+    <div
+      className="fixed inset-0 z-[100] bg-zinc-950/40 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+      onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div className="email-panel-in w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 shadow-2xl">
+        <div className="sticky top-0 z-10 bg-white dark:bg-zinc-800 px-5 pt-4 pb-3 border-b border-zinc-100 dark:border-zinc-700/50 flex items-center justify-between gap-3">
+          <div>
+            <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Project notes</div>
+            <div className="text-lg font-bold text-zinc-900 dark:text-zinc-50">{total} note{total === 1 ? "" : "s"} · {groups.length} project{groups.length === 1 ? "" : "s"}</div>
+          </div>
+          <button onClick={onClose} aria-label="Close" className="w-7 h-7 rounded-full flex items-center justify-center text-zinc-400 dark:text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-700/60 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div className="px-5 py-4 space-y-5">
+          {groups.length === 0 && <div className="text-sm text-zinc-400 dark:text-zinc-500 italic py-6 text-center">No notes saved yet.</div>}
+          {groups.map(g => (
+            <div key={g.gid}>
+              <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                <span className="text-sm font-bold text-zinc-800 dark:text-zinc-100">{g.name}</span>
+                {g.member && <span className="text-[12px] text-zinc-400 dark:text-zinc-500">· {g.member}</span>}
+                {g.orphan && <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 bg-zinc-100 dark:bg-zinc-700/40 px-1.5 py-0.5 rounded-full">No longer in brief</span>}
+              </div>
+              <ul className="space-y-2">
+                {g.list.map(n => (
+                  <li key={n.at}>
+                    <EpmoNoteItem
+                      note={n}
+                      onPin={(at) => actions.pin(g.gid, at)}
+                      onEdit={(at, text) => actions.edit(g.gid, at, text)}
+                      onDelete={(at) => actions.remove(g.gid, at)}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+}
+
 function EpmoStat({ label, value, accent }) {
   return (
     <div className="bg-white dark:bg-zinc-800 rounded-2xl border border-zinc-200/60 dark:border-zinc-700/60 px-4 py-3">
@@ -622,7 +780,7 @@ function EpmoStat({ label, value, accent }) {
   );
 }
 
-function EpmoProjectCard({ p, focused, dimmed, onToggle, notes, onAddNote }) {
+function EpmoProjectCard({ p, focused, dimmed, onToggle, notes, noteActions }) {
   const open = focused;
   const cardRef = useRef(null);
   const h = EPMO_HEALTH[p.health] || EPMO_HEALTH.none;
@@ -660,6 +818,11 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle, notes, onAddNote }) {
             <span className="font-semibold whitespace-nowrap" style={{ color: h.color }}>{h.label}</span>
             <span className="text-zinc-300 dark:text-zinc-600">·</span><span className="whitespace-nowrap">{p.openTasks} open</span>
             {p.dueOn && <><span className="text-zinc-300 dark:text-zinc-600">·</span><span className={`whitespace-nowrap ${p.overdue ? "text-amber-600 dark:text-amber-400 font-semibold" : ""}`}>due {epmoFullDate(p.dueOn)}</span></>}
+            {notes && notes.length > 0 && <><span className="text-zinc-300 dark:text-zinc-600">·</span><span className="inline-flex items-center gap-1 whitespace-nowrap font-semibold text-amber-600/90 dark:text-amber-400/90">
+              {notes.some(n => n.pinned)
+                ? <EpmoPinIcon filled className="w-3 h-3" />
+                : <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>}
+              {notes.length} note{notes.length > 1 ? "s" : ""}</span></>}
           </div>
         </div>
         <svg className={`w-4 h-4 flex-shrink-0 mt-1.5 text-zinc-300 dark:text-zinc-600 transition-transform ${open ? "rotate-180" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -708,7 +871,7 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle, notes, onAddNote }) {
               </div>
             ) : <div className="text-[13px] text-zinc-400 dark:text-zinc-500 italic">No status update in Asana yet.</div>}
           </div>
-          <EpmoNotesSection gid={p.gid} notes={notes} onAdd={onAddNote} />
+          <EpmoNotesSection gid={p.gid} projectName={p.name} notes={notes} actions={noteActions} />
           <div className="flex items-center justify-between gap-3 flex-wrap">
             <a href={p.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[13px] font-bold text-blue-600 dark:text-blue-400 hover:underline">Open in Asana
               <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
@@ -726,7 +889,7 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle, notes, onAddNote }) {
   );
 }
 
-function EpmoMemberSection({ name, stats, projects, focusedGid, onToggle, notes, onAddNote }) {
+function EpmoMemberSection({ name, stats, projects, focusedGid, onToggle, notes, noteActions }) {
   const dim = focusedGid ? "epmo-dimmed epmo-dimmed-block" : "";
   return (
     <div className="mt-5">
@@ -755,7 +918,7 @@ function EpmoMemberSection({ name, stats, projects, focusedGid, onToggle, notes,
             dimmed={!!focusedGid && focusedGid !== p.gid}
             onToggle={onToggle}
             notes={notes[p.gid]}
-            onAddNote={onAddNote}
+            noteActions={noteActions}
           />
         ))}
       </div>
@@ -836,22 +999,42 @@ function EpmoDashboardTab() {
   const [focusedGid, setFocusedGid] = useState(null);
   const [completedModal, setCompletedModal] = useState(null);
   const [notes, setNotes] = useState({});
+  const [allNotesOpen, setAllNotesOpen] = useState(false);
   const healthRef = useRef(null); const healthChart = useRef(null);
   const histRef = useRef(null); const histChart = useRef(null);
 
   const toggleFocus = useCallback((gid) => setFocusedGid(g => (g === gid ? null : gid)), []);
 
   // Re-read the row before writing so two open tabs don't clobber each other's notes
-  const addNote = useCallback(async (gid, text) => {
-    const note = { text, at: new Date().toISOString() };
+  const mutateNotes = useCallback(async (fn) => {
     const fresh = await epmoReadNotes();
     if (fresh === null) return false;
-    const merged = { ...fresh, [gid]: [note, ...(fresh[gid] || [])] };
-    const { error } = await supabase.from("app_state").upsert({ id: EPMO_NOTES_ROW_ID, data: { notes: merged, updatedAt: note.at } });
+    const merged = fn(fresh);
+    const { error } = await supabase.from("app_state").upsert({ id: EPMO_NOTES_ROW_ID, data: { notes: merged, updatedAt: new Date().toISOString() } });
     if (error) { console.warn("[epmo notes] write failed:", error); return false; }
     setNotes(merged);
     return true;
   }, []);
+
+  // Notes carry the project name so they stay identifiable after the project
+  // leaves the brief. `at` is the note's identity; pinning one unpins the rest.
+  const noteActions = useMemo(() => ({
+    add: (gid, projectName, text) => mutateNotes(fresh => ({
+      ...fresh, [gid]: [{ text, at: new Date().toISOString(), project: projectName }, ...(fresh[gid] || [])],
+    })),
+    edit: (gid, at, text) => mutateNotes(fresh => ({
+      ...fresh, [gid]: (fresh[gid] || []).map(n => n.at === at ? { ...n, text, editedAt: new Date().toISOString() } : n),
+    })),
+    remove: (gid, at) => mutateNotes(fresh => {
+      const rest = (fresh[gid] || []).filter(n => n.at !== at);
+      const next = { ...fresh };
+      if (rest.length) next[gid] = rest; else delete next[gid];
+      return next;
+    }),
+    pin: (gid, at) => mutateNotes(fresh => ({
+      ...fresh, [gid]: (fresh[gid] || []).map(n => n.at === at ? { ...n, pinned: !n.pinned } : (n.pinned ? { ...n, pinned: false } : n)),
+    })),
+  }), [mutateNotes]);
 
   // Focus mode keyboard: Esc exits, ↑/↓ (or j/k) jump to the previous/next visible project
   useEffect(() => {
@@ -949,6 +1132,7 @@ function EpmoDashboardTab() {
   const overview = live.aiOverview || (live.writtenSummary || "").split("\n").map(l => l.replace(/^-\s*/, "").trim()).filter(Boolean).join(" ");
   const shownTeam = memberFilter === "all" ? team : team.filter(t => t.gid === memberFilter);
   const dim = focusedGid ? "epmo-dimmed epmo-dimmed-block" : "";
+  const totalNotes = Object.values(notes).reduce((s, l) => s + (l ? l.length : 0), 0);
 
   return (
     <div className="w-full">
@@ -1018,11 +1202,18 @@ function EpmoDashboardTab() {
       </div>
 
       {completedModal && <EpmoCompletedModal title={completedModal.title} items={completedModal.items} onClose={() => setCompletedModal(null)} />}
+      {allNotesOpen && <EpmoAllNotesModal notes={notes} live={live} actions={noteActions} onClose={() => setAllNotesOpen(false)} />}
 
       <div className="mt-6">
         <div className={`epmo-dimmable ${dim} flex items-center justify-between gap-3 flex-wrap mb-1`}>
           <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">Projects by member</h2>
           <div className="flex items-center gap-1.5 flex-wrap">
+            {totalNotes > 0 && (
+              <button onClick={() => setAllNotesOpen(true)} className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-amber-100/80 dark:bg-amber-500/15 text-amber-700 dark:text-amber-400 hover:bg-amber-200/80 dark:hover:bg-amber-500/25 transition-colors mr-1">
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                All notes ({totalNotes})
+              </button>
+            )}
             <button onClick={() => setMemberFilter("all")} className={`text-xs font-bold px-3 py-1.5 rounded-full ${memberFilter === "all" ? "bg-blue-600 text-white" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"}`}>All</button>
             {team.map(t => (<button key={t.gid} onClick={() => setMemberFilter(t.gid)} className={`text-xs font-bold px-3 py-1.5 rounded-full ${memberFilter === t.gid ? "bg-blue-600 text-white" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400"}`}>{t.name.split(" ")[0]}</button>))}
           </div>
@@ -1030,7 +1221,7 @@ function EpmoDashboardTab() {
         {shownTeam.map(t => {
           const mine = live.projects.filter(p => p.memberGid === t.gid);
           if (mine.length === 0) return null;
-          return <EpmoMemberSection key={t.gid} name={t.name} stats={bm[t.gid] || { open: mine.length, attention: 0, completedThisMonth: 0 }} projects={mine} focusedGid={focusedGid} onToggle={toggleFocus} notes={notes} onAddNote={addNote} />;
+          return <EpmoMemberSection key={t.gid} name={t.name} stats={bm[t.gid] || { open: mine.length, attention: 0, completedThisMonth: 0 }} projects={mine} focusedGid={focusedGid} onToggle={toggleFocus} notes={notes} noteActions={noteActions} />;
         })}
       </div>
     </div>
