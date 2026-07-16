@@ -274,7 +274,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1784236506152",
+      "text": "Trabajar con Bill para terminar Incident Response",
+      "addedAt": "2026-07-16T21:15:06.152Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -490,5 +496,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784225087154
+  "lastModified": 1784236506158
 }
