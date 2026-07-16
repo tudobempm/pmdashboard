@@ -1,5 +1,119 @@
 [
   {
+    "id": "eod-2026-07-16",
+    "type": "eod",
+    "date": "Thursday, July 16 - End of Day",
+    "isoDate": "2026-07-16",
+    "greeting": "Jean, today closed the main dashboard workstream cleanly: the client communications launch path, CoE backlog recovery, AmazonConnect/Venn alignment, SMS support, Phase 1 intake, and the Supabase review were all moved forward. A couple of late-day email follow-ups now need tracking, but the core Thursday checklist is cleared. Tomorrow is EPMO and IT-heavy, with a tight 3:00 PM overlap to plan around.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0716-done-1",
+            "label": "Moved the no-travel client communications launch forward",
+            "detail": "The SMS blast and landing-page path were cleared enough to close today's launch follow-up."
+          },
+          {
+            "id": "eod-0716-done-2",
+            "label": "Advanced the CoE backlog recovery work",
+            "detail": "Today's CoE backlog item was completed after the recovery-focused touchpoint."
+          },
+          {
+            "id": "eod-0716-done-3",
+            "label": "Aligned the AmazonConnect/Venn timeline and OCM discussion",
+            "detail": "The timeline, blocker, and change-management discussion moved through today's high-priority project block."
+          },
+          {
+            "id": "eod-0716-done-4",
+            "label": "Reviewed the Supabase security alert",
+            "detail": "The security alert follow-up was completed today."
+          },
+          {
+            "id": "eod-0716-done-5",
+            "label": "Confirmed SMS Automation BA support next steps",
+            "detail": "The BA-support follow-up tied to SMS Automation was completed for today's status path."
+          },
+          {
+            "id": "eod-0716-done-6",
+            "label": "Triaged Janet's Phase 1 intake alert",
+            "detail": "The new Phase 1 intake alert was handled today."
+          },
+          {
+            "id": "eod-0716-done-7",
+            "label": "Asked Legal to confirm the I-90 taskset direction",
+            "detail": "Jean sent Raquel, Jill, and Jessica a clarification email asking whether I-90 renewals for existing clients should be re-enabled while I-90 new-client tasksets stay hidden."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0716-open-1",
+            "taskId": "task-20260716-confirm-i90-taskset-direction",
+            "label": "Wait for Legal's confirmation on the I-90 taskset direction",
+            "detail": "Jean asked Raquel, Jill, and Jessica to confirm whether IT should re-enable I-90 renewal tasksets for existing clients while keeping I-90 new-client tasksets hidden. Track the reply before coordinating changes with IT."
+          },
+          {
+            "id": "eod-0716-open-2",
+            "taskId": "task-20260716-track-epmo-automation-halo-ticket",
+            "label": "Track Nicolas's Halo ticket for EPMO automation handoff",
+            "detail": "Dan asked for the EPMO automation transfer details to be submitted through Halo, Jean forwarded the ask to Nicolas, and Nicolas replied that he would do it. Confirm the ticket is submitted and routed."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0716-decision-1",
+            "label": "EPMO automation transfer will go through Halo",
+            "detail": "Dan asked for the automation transfer information to be submitted as a Halo ticket, and Nicolas agreed to submit it after Jean forwarded the request."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0716-fri-1",
+            "label": "Shelley and Eugenia are out of office",
+            "detail": "Shelley's OOO continues through Friday, and Eugenia is also marked OOO tomorrow. Route approvals or SMS Automation follow-ups around those absences."
+          },
+          {
+            "id": "eod-0716-fri-2",
+            "time": "10:00 AM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Jhara's sync is set for EPMO and IT SharePoint alignment, doubts, action items, and clarifications."
+          },
+          {
+            "id": "eod-0716-fri-3",
+            "time": "2:30 PM",
+            "label": "Project pipeline EPMO/IT weekly sync",
+            "detail": "Janet's recurring project pipeline sync covers new intake, prioritization, BA assignment, active-project priority changes, and UAT status."
+          },
+          {
+            "id": "eod-0716-fri-4",
+            "time": "3:00 PM",
+            "label": "IT Litify Sprint #14 Planning overlaps Executive Project Status",
+            "detail": "Sprint Planning and the Executive Project Status Slide Update both start at 3:00 PM. Decide which needs live attention or coverage."
+          },
+          {
+            "id": "eod-0716-fri-5",
+            "time": "4:00 PM",
+            "label": "EPMO EOW Check In",
+            "detail": "Sara moved the check-in one hour earlier and added Nadia so programmatic updates can be included."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-16-morning",
     "type": "daily",
     "date": "Morning - Thursday, July 16",
