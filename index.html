@@ -203,6 +203,13 @@ tailwind.config = {
   }
   .epmo-collapsible > div {
     overflow: hidden;
+    /* keep collapsed content (note textarea, links) out of tab order; delay matches the collapse animation */
+    visibility: hidden;
+    transition: visibility 0s 0.45s;
+  }
+  .epmo-collapsible.open > div {
+    visibility: visible;
+    transition-delay: 0s;
   }
   .epmo-detail {
     opacity: 0;
@@ -504,7 +511,106 @@ function epmoWhen(iso) {
   const y = new Date(now); y.setDate(now.getDate() - 1);
   if (d.toDateString() === now.toDateString()) return `today ${t}`;
   if (d.toDateString() === y.toDateString()) return `yesterday ${t}`;
-  return `${d.toLocaleDateString([], { month: "short", day: "numeric" })}, ${t}`;
+  return `${d.toLocaleDateString("en-US", { month: "long", day: "numeric" })}, ${t}`;
+}
+
+// ISO datetime → "July 16, 2026, 8:05 AM"
+function epmoDateTime(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d)) return "";
+  return `${d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}, ${d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}`;
+}
+
+// "2026-07-07" → "July 7" (short, for chart axes and inline chips)
+function epmoMonthDay(s) {
+  if (!s) return "";
+  const [y, m, d] = String(s).slice(0, 10).split("-").map(Number);
+  if (!y || !m || !d) return s;
+  return new Date(y, m - 1, d).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+/* ─── EPMO project notes — persisted in Supabase app_state id=8 (own row so the
+   daily digest, which rewrites rows 6/7, never wipes them). Shape:
+   { notes: { [projectGid]: [{ text, at }, ... newest first] }, updatedAt } ─── */
+const EPMO_NOTES_ROW_ID = 8;
+
+async function epmoReadNotes() {
+  try {
+    const { data: item, error } = await supabase.from("app_state").select("data").eq("id", EPMO_NOTES_ROW_ID).single();
+    if (error && error.code !== "PGRST116") throw error;
+    return (item && item.data && item.data.notes) || {};
+  } catch (e) {
+    console.warn("[epmo notes] read failed:", e);
+    return null;
+  }
+}
+
+function EpmoNotesSection({ gid, notes, onAdd }) {
+  const [draft, setDraft] = useState("");
+  const [saving, setSaving] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [showPrev, setShowPrev] = useState(false);
+  const list = notes || [];
+  const latest = list[0];
+  const previous = list.slice(1);
+
+  const save = async () => {
+    const text = draft.trim();
+    if (!text || saving) return;
+    setSaving(true); setFailed(false);
+    const ok = await onAdd(gid, text);
+    if (ok) setDraft(""); else setFailed(true);
+    setSaving(false);
+  };
+
+  return (
+    <div>
+      <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1.5">Notes</div>
+      {latest ? (
+        <div className="rounded-xl bg-amber-50/70 dark:bg-amber-500/10 border border-amber-200/60 dark:border-amber-500/20 px-3.5 py-3">
+          <div className="text-[13px] sm:text-sm text-zinc-700 dark:text-zinc-200 whitespace-pre-wrap leading-relaxed">{latest.text}</div>
+          <div className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1.5">{epmoDateTime(latest.at)}</div>
+        </div>
+      ) : (
+        <div className="text-[13px] text-zinc-400 dark:text-zinc-500 italic">No notes yet.</div>
+      )}
+      {previous.length > 0 && (
+        <div className="mt-2">
+          <button onClick={() => setShowPrev(v => !v)} aria-expanded={showPrev} className="inline-flex items-center gap-1 text-[12px] font-bold text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors">
+            <svg className={`w-3 h-3 transition-transform ${showPrev ? "rotate-90" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            Previous notes ({previous.length})
+          </button>
+          {showPrev && (
+            <ul className="mt-2 space-y-2">
+              {previous.map((n, i) => (
+                <li key={i} className="rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-700/50 px-3.5 py-2.5">
+                  <div className="text-[13px] text-zinc-600 dark:text-zinc-300 whitespace-pre-wrap leading-relaxed">{n.text}</div>
+                  <div className="text-[11px] text-zinc-400 dark:text-zinc-500 mt-1">{epmoDateTime(n.at)}</div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+      <div className="mt-2.5 flex items-end gap-2">
+        <textarea
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); save(); } }}
+          placeholder="Add a note…"
+          rows={2}
+          className="flex-1 min-w-0 resize-y rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-700 px-3 py-2 text-[13px] sm:text-sm text-zinc-700 dark:text-zinc-200 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:border-blue-400 dark:focus:border-blue-500"
+        />
+        <button
+          onClick={save}
+          disabled={!draft.trim() || saving}
+          className={`flex-shrink-0 text-xs font-bold px-3.5 py-2 rounded-xl transition-colors ${!draft.trim() || saving ? "bg-zinc-100 dark:bg-zinc-700/60 text-zinc-400 dark:text-zinc-500 cursor-default" : "bg-blue-600 hover:bg-blue-500 text-white"}`}
+        >{saving ? "Saving…" : "Save note"}</button>
+      </div>
+      {failed && <div className="text-[12px] text-red-500 dark:text-red-400 mt-1.5">Could not save the note — check your connection and try again.</div>}
+    </div>
+  );
 }
 
 function EpmoStat({ label, value, accent }) {
@@ -516,7 +622,7 @@ function EpmoStat({ label, value, accent }) {
   );
 }
 
-function EpmoProjectCard({ p, focused, dimmed, onToggle }) {
+function EpmoProjectCard({ p, focused, dimmed, onToggle, notes, onAddNote }) {
   const open = focused;
   const cardRef = useRef(null);
   const h = EPMO_HEALTH[p.health] || EPMO_HEALTH.none;
@@ -553,7 +659,7 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle }) {
           <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mt-2 text-[12px] text-zinc-400 dark:text-zinc-500">
             <span className="font-semibold whitespace-nowrap" style={{ color: h.color }}>{h.label}</span>
             <span className="text-zinc-300 dark:text-zinc-600">·</span><span className="whitespace-nowrap">{p.openTasks} open</span>
-            {p.dueOn && <><span className="text-zinc-300 dark:text-zinc-600">·</span><span className={`whitespace-nowrap ${p.overdue ? "text-amber-600 dark:text-amber-400 font-semibold" : ""}`}>due {p.dueOn}</span></>}
+            {p.dueOn && <><span className="text-zinc-300 dark:text-zinc-600">·</span><span className={`whitespace-nowrap ${p.overdue ? "text-amber-600 dark:text-amber-400 font-semibold" : ""}`}>due {epmoFullDate(p.dueOn)}</span></>}
           </div>
         </div>
         <svg className={`w-4 h-4 flex-shrink-0 mt-1.5 text-zinc-300 dark:text-zinc-600 transition-transform ${open ? "rotate-180" : ""}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -602,6 +708,7 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle }) {
               </div>
             ) : <div className="text-[13px] text-zinc-400 dark:text-zinc-500 italic">No status update in Asana yet.</div>}
           </div>
+          <EpmoNotesSection gid={p.gid} notes={notes} onAdd={onAddNote} />
           <div className="flex items-center justify-between gap-3 flex-wrap">
             <a href={p.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[13px] font-bold text-blue-600 dark:text-blue-400 hover:underline">Open in Asana
               <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
@@ -619,7 +726,7 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle }) {
   );
 }
 
-function EpmoMemberSection({ name, stats, projects, focusedGid, onToggle }) {
+function EpmoMemberSection({ name, stats, projects, focusedGid, onToggle, notes, onAddNote }) {
   const dim = focusedGid ? "epmo-dimmed epmo-dimmed-block" : "";
   return (
     <div className="mt-5">
@@ -647,6 +754,8 @@ function EpmoMemberSection({ name, stats, projects, focusedGid, onToggle }) {
             focused={focusedGid === p.gid}
             dimmed={!!focusedGid && focusedGid !== p.gid}
             onToggle={onToggle}
+            notes={notes[p.gid]}
+            onAddNote={onAddNote}
           />
         ))}
       </div>
@@ -726,15 +835,30 @@ function EpmoDashboardTab() {
   const [memberFilter, setMemberFilter] = useState("all");
   const [focusedGid, setFocusedGid] = useState(null);
   const [completedModal, setCompletedModal] = useState(null);
+  const [notes, setNotes] = useState({});
   const healthRef = useRef(null); const healthChart = useRef(null);
   const histRef = useRef(null); const histChart = useRef(null);
 
   const toggleFocus = useCallback((gid) => setFocusedGid(g => (g === gid ? null : gid)), []);
 
+  // Re-read the row before writing so two open tabs don't clobber each other's notes
+  const addNote = useCallback(async (gid, text) => {
+    const note = { text, at: new Date().toISOString() };
+    const fresh = await epmoReadNotes();
+    if (fresh === null) return false;
+    const merged = { ...fresh, [gid]: [note, ...(fresh[gid] || [])] };
+    const { error } = await supabase.from("app_state").upsert({ id: EPMO_NOTES_ROW_ID, data: { notes: merged, updatedAt: note.at } });
+    if (error) { console.warn("[epmo notes] write failed:", error); return false; }
+    setNotes(merged);
+    return true;
+  }, []);
+
   // Focus mode keyboard: Esc exits, ↑/↓ (or j/k) jump to the previous/next visible project
   useEffect(() => {
     if (!focusedGid) return;
     const onKey = (e) => {
+      // Don't hijack keys while typing in the note box (or any other field)
+      if (e.target instanceof Element && (e.target.tagName === "TEXTAREA" || e.target.tagName === "INPUT" || e.target.isContentEditable)) return;
       if (e.key === "Escape") { setFocusedGid(null); return; }
       const down = e.key === "ArrowDown" || e.key === "j";
       const up = e.key === "ArrowUp" || e.key === "k";
@@ -767,11 +891,13 @@ function EpmoDashboardTab() {
   useEffect(() => {
     Promise.all([
       supabase.from("app_state").select("data").eq("id", 6).single(),
-      supabase.from("app_state").select("data").eq("id", 7).single()
-    ]).then(([liveRes, histRes]) => {
+      supabase.from("app_state").select("data").eq("id", 7).single(),
+      epmoReadNotes()
+    ]).then(([liveRes, histRes, notesRes]) => {
       if (liveRes.error || !liveRes.data?.data) { setError("No EPMO data yet — the daily routine has not published a digest."); setLoading(false); return; }
       setLive(liveRes.data.data);
       if (histRes.data?.data?.snapshots) setHistory(histRes.data.data.snapshots);
+      if (notesRes) setNotes(notesRes);
       setLoading(false);
     });
   }, []);
@@ -799,7 +925,7 @@ function EpmoDashboardTab() {
     const grid = isDk ? "#27272a" : "#f4f4f5"; const tick = isDk ? "#a1a1aa" : "#71717a";
     histChart.current = new Chart(histRef.current, {
       type: "line",
-      data: { labels: snaps.map(s => s.date.slice(5)), datasets: [
+      data: { labels: snaps.map(s => epmoMonthDay(s.date)), datasets: [
         { label: "Open", data: snaps.map(s => s.totalOpen), borderColor: "#3b82f6", backgroundColor: "#3b82f622", fill: true, tension: 0.3, pointRadius: 2 },
         { label: "Needs attention", data: snaps.map(s => s.needsAttention), borderColor: "#f59e0b", backgroundColor: "transparent", tension: 0.3, pointRadius: 2 },
         { label: "Completed (wk)", data: snaps.map(s => s.completedThisWeek || 0), borderColor: "#22c55e", backgroundColor: "transparent", tension: 0.3, pointRadius: 2 } ] },
@@ -832,8 +958,8 @@ function EpmoDashboardTab() {
           <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-1">Daily brief · PMO Projects Portfolio · Jhara, Maria, Laura, Thiago &amp; Nicolas</p>
         </div>
         <div className="text-right">
-          <div className="text-xs font-bold text-zinc-500 dark:text-zinc-400">Brief for {live.generatedFor}</div>
-          {live.updatedAt && <div className="text-[11px] text-zinc-400 dark:text-zinc-500">Updated {live.updatedAt.slice(0, 16).replace("T", " ")}</div>}
+          <div className="text-xs font-bold text-zinc-500 dark:text-zinc-400">Brief for {epmoFullDate(live.generatedFor)}</div>
+          {live.updatedAt && <div className="text-[11px] text-zinc-400 dark:text-zinc-500">Updated {epmoDateTime(live.updatedAt)}</div>}
         </div>
       </div>
 
@@ -904,7 +1030,7 @@ function EpmoDashboardTab() {
         {shownTeam.map(t => {
           const mine = live.projects.filter(p => p.memberGid === t.gid);
           if (mine.length === 0) return null;
-          return <EpmoMemberSection key={t.gid} name={t.name} stats={bm[t.gid] || { open: mine.length, attention: 0, completedThisMonth: 0 }} projects={mine} focusedGid={focusedGid} onToggle={toggleFocus} />;
+          return <EpmoMemberSection key={t.gid} name={t.name} stats={bm[t.gid] || { open: mine.length, attention: 0, completedThisMonth: 0 }} projects={mine} focusedGid={focusedGid} onToggle={toggleFocus} notes={notes} onAddNote={addNote} />;
         })}
       </div>
     </div>
