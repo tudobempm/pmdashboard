@@ -14,6 +14,7 @@ run time).
 | Dashboard tab | `EpmoDashboardTab` in `index.html` (nav id `epmo`) |
 | Live data | Supabase `app_state` row **id = 6** |
 | History (charts) | Supabase `app_state` row **id = 7**, rolling 120 days |
+| Project notes | Supabase `app_state` row **id = 8** — written by the dashboard, keyed by project gid; the digest never touches it |
 | Schedule | Claude Code Remote trigger `EPMO Daily Brief`, cron `5 12 * * 1-5` |
 
 `5 12 * * 1-5` = **08:05 America/Santo_Domingo (UTC-4), Monday–Friday** = 12:05 UTC.
