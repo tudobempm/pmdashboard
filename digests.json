@@ -1,5 +1,129 @@
 [
   {
+    "id": "daily-2026-07-16-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, July 16",
+    "isoDate": "2026-07-16",
+    "greeting": "Good morning, Jean. Today is Thursday, July 16, and the operating focus is the packed late-morning-to-afternoon project block: CoE backlog recovery, AmazonConnect/Venn timeline and OCM, SMS Automation support, and the no-travel client communication path. You have 7 timed meetings plus focus blocks, 4 urgent/high-priority items, no active reminders, and no safely generated carry-over because the current digest history was not returned by the GitHub file reader. Teams and transcript lookup were rate-limited, so this brief is grounded in calendar, Outlook email, and repository state.",
+    "sections": [
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0716-sch-01",
+            "label": "Morning focus before the project block",
+            "detail": "9:00-10:30 AM is protected for AI testing, followed immediately by the 10:30 AM Laura 1:1. This is the cleanest prep window before the day compresses."
+          },
+          {
+            "id": "thu-0716-sch-02",
+            "label": "CoE Projects Touchpoint at 11:30 AM",
+            "detail": "The meeting is framed around CoE backlog recovery: scope-expansion pressure, completed work dropping from a median of 8 to 5 projects per sprint, and pending stories in solutioning and UAT."
+          },
+          {
+            "id": "thu-0716-sch-03",
+            "label": "AmazonConnect/Venn deep dive at noon",
+            "detail": "This is a high-priority timeline and OCM discussion with Sara, Danny, PM, product, and stakeholder coverage. Expect risks, blockers, and mitigation planning to be the useful center of gravity."
+          },
+          {
+            "id": "thu-0716-sch-04",
+            "label": "Afternoon overlap risk",
+            "detail": "The firmwide meeting runs 2:00-3:00 PM and overlaps the SMS Automation Optimization weekly status from 2:30-3:00 PM. Decide which meeting needs live attention or send coverage/context in advance."
+          },
+          {
+            "id": "thu-0716-sch-05",
+            "label": "Late-day team coordination",
+            "detail": "Tudo Bem!'s Weekly Meeting closes the day at 4:00 PM after a short 3:30 PM focus block. Use that small window to capture decisions from the project meetings before the team forum."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0716-ai-01",
+            "taskId": "task-20260716-deploy-no-travel-client-comms",
+            "label": "Unblock the no-travel client communications launch",
+            "detail": "Paige shared that Legal approved the SMS blast copy and landing page, and that Jean is coordinating with IT once the updated URL is ready this morning. Align the URL, approved-travel-permit audience, and launch timing so the client warning does not stall.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0716-ai-02",
+            "taskId": "task-20260716-prepare-coe-backlog-recovery",
+            "label": "Drive CoE backlog recovery decisions",
+            "detail": "Use the 11:30 AM touchpoint to settle next steps for scope-expansion pressure, the project-completion drop, and the pending solutioning/UAT stories. The meeting goal is explicitly to unblock the backlog and restore delivery pace.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0716-ai-03",
+            "taskId": "task-20260716-align-amazonconnect-venn-ocm",
+            "label": "Clarify AmazonConnect/Venn timeline and OCM risks",
+            "detail": "Sara and Danny's noon deep dive is intended to get PMs, product, sponsors, and leads aligned on high-priority project status. Bring the open risks, blocker list, and mitigation owners into the meeting rather than leaving them as follow-up drift.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0716-ai-04",
+            "taskId": "task-20260716-review-supabase-vulnerabilities",
+            "label": "Review the Supabase security alert",
+            "detail": "An unread Supabase message from July 14 says action is required for security vulnerabilities in your projects. Confirm whether the dashboard or any active project is affected and queue remediation if needed.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0716-em-01",
+            "taskId": "task-20260716-confirm-sms-ba-support",
+            "label": "Confirm SMS Automation BA support before status",
+            "detail": "Unread forwards from Eugenia and Laura point back to Anu's note that Ernestina will support the SMS Automation Optimization work. Use today's 2:30 PM status meeting to confirm engagement level, timing, and whether the BA support removes the discovery risk."
+          },
+          {
+            "id": "thu-0716-em-02",
+            "taskId": "task-20260716-triage-phase1-intake-alert",
+            "label": "Triage Janet's Phase 1 intake alert",
+            "detail": "Janet sent a new intake alert for Andrew Counts in Phase 1 through Asana. Check whether this needs PM routing, prioritization, or a response before it gets buried under the afternoon meeting block."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0716-ooo-01",
+            "label": "Shelley is OOO through Friday",
+            "detail": "Shelley's all-day OOO event runs through July 17, which may affect follow-ups that need her input."
+          },
+          {
+            "id": "thu-0716-ooo-02",
+            "label": "Sara is in the Dublin office",
+            "detail": "Sara's Dublin office marker is active today, relevant because she anchors the AmazonConnect/Venn discussion and EPMO context."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0716-prev-01",
+            "label": "Friday has an EPMO and IT-heavy afternoon",
+            "detail": "Tomorrow includes Legal Change Management - IT & EPMO Sync, Project Pipeline, IT Litify Sprint #14 Planning, Executive Project Status Slide Update, and EPMO EOW Check In. The 3:00 PM hour appears double-booked between Sprint Planning and Executive Project Status."
+          },
+          {
+            "id": "thu-0716-prev-02",
+            "label": "Eugenia is OOO tomorrow",
+            "detail": "Eugenia's OOO starts Friday, so any SMS Automation or EPMO follow-up needing her input is better closed or delegated today."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-07-15",
     "type": "eod",
     "date": "Wednesday, July 15 - End of Day",
