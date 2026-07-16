@@ -15,8 +15,9 @@ rather than copied from the raw status update, generation is split into stages:
 
     collect  -> fetch Asana + the team's dashboard notes (app_state id=8,
                 read-only), compute signals, write a raw payload to a file
-    (Claude) -> read that file, write `aiSummary` + `aiDetail` per project +
-                `aiOverview`, weighing each project's `userNotes`
+    (Claude) -> read that file, write `aiScope` + `aiSummary` + `aiDetail` per
+                project + `aiOverview`, weighing each project's `userNotes`
+                (see AI_GUIDANCE, embedded in the payload as `_aiGuidance`)
     publish  -> read the enriched file, update history, upsert Supabase 6 & 7
 
 The orchestrator (the Claude Code routine session, or a human running it) does
@@ -186,7 +187,7 @@ def build():
 
     fields = ",".join([
         "name", "resource_type", "owner.name", "owner.gid", "completed",
-        "completed_at", "archived", "due_on", "modified_at", "permalink_url",
+        "completed_at", "archived", "due_on", "modified_at", "permalink_url", "notes",
         "current_status_update.title", "current_status_update.text",
         "current_status_update.status_type", "current_status_update.created_at",
     ])
@@ -228,6 +229,9 @@ def build():
         su_days = (today - to_rd_date(su_created)).days if su_created else None
         due = p.get("due_on")
         overdue = bool(due and due < str(today))
+        # Project description (Asana "Overview" notes) — the source for the
+        # card's fixed "what this project is" scope line.
+        desc = " ".join((p.get("notes") or "").split())
 
         try:
             tasks = asana_get_all("tasks", {
@@ -260,6 +264,8 @@ def build():
             proj_movements.append({"task": tname, "change": verb, "actor": entry["actor"], "when": entry["when"]})
             recent_movements.append(entry)
 
+        # State-focused signals first; overdue-task counts last — they are a
+        # supporting signal, not the story (per team feedback).
         roadblocks = []
         if health in ATTENTION_HEALTH:
             roadblocks.append(f"Owner flagged health as {HEALTH_LABEL[health]}")
@@ -267,26 +273,27 @@ def build():
             roadblocks.append("Project is on hold")
         if overdue:
             roadblocks.append(f"Project is past its due date ({due})")
-        if overdue_tasks:
-            sample = ", ".join(t["name"] for t in overdue_tasks[:3])
-            more = f" (+{len(overdue_tasks) - 3} more)" if len(overdue_tasks) > 3 else ""
-            roadblocks.append(f"{len(overdue_tasks)} overdue task(s): {sample}{more}")
         if not su:
             roadblocks.append("No status update posted yet")
         elif su_days is not None and su_days > STALE_STATUS_DAYS:
             roadblocks.append(f"Status update is stale ({su_days} days old)")
+        if overdue_tasks:
+            sample = ", ".join(t["name"] for t in overdue_tasks[:2])
+            more = f" (+{len(overdue_tasks) - 2} more)" if len(overdue_tasks) > 2 else ""
+            roadblocks.append(f"{len(overdue_tasks)} overdue task(s): {sample}{more}")
 
         needs_attention = bool(roadblocks) and not (
             len(roadblocks) == 1 and roadblocks[0].startswith("Project is on hold")
         )
 
         # Deterministic fallback summary (used only if aiSummary is not written).
+        # Focused on current state, not overdue counts.
         bits = [f"{HEALTH_LABEL[health]}.", f"{len(incomplete)} open task(s)"]
         done_recent = sum(1 for _, _, v, _ in moved if v == "completed")
         if done_recent:
             bits.append(f"{done_recent} completed in the last {RECENT_MOVEMENT_DAYS} days")
-        if overdue_tasks:
-            bits.append(f"{len(overdue_tasks)} overdue")
+        if due:
+            bits.append(f"due {due}")
         fallback = bits[0] + " " + ", ".join(bits[1:]) + "."
 
         project_cards.append({
@@ -300,8 +307,11 @@ def build():
                 "title": su.get("title"), "text": su.get("text"),
                 "createdAt": su_created, "daysOld": su_days,
             } if su else None,
+            "description": first_sentences(desc, 700) or None,   # raw Asana overview, source for aiScope
+            "scopeFallback": first_sentences(desc, 200) or None, # shown if aiScope is missing
             "fallbackSummary": fallback,
-            "aiSummary": None,          # <- one-line brief, written by the AI stage
+            "aiScope": None,            # <- ONE sentence: what the project is / delivers, written by the AI stage
+            "aiSummary": None,          # <- one-line brief on the CURRENT STATE, written by the AI stage
             "aiDetail": None,           # <- 2-4 plain-English bullets, written by the AI stage
             "roadblocks": roadblocks,
             "recentMovements": proj_movements,
@@ -370,6 +380,23 @@ def update_history(summary, date_str, now):
     return history
 
 
+# Embedded in the collect payload so the routine's AI stage always sees the
+# current expectations, whatever its trigger prompt says. Stripped at publish.
+AI_GUIDANCE = (
+    "Fill for EVERY project: "
+    "aiScope = ONE plain-language sentence saying what the project IS and what it delivers "
+    "(source: `description`; if empty, infer from the status text and project name). Keep it "
+    "stable day to day — no status or progress words. "
+    "aiSummary = 1-2 sentences on the CURRENT STATE: where the project stands right now, its "
+    "momentum, the next gate/decision/date, and what blocks it. "
+    "aiDetail = 2-4 bullets with the same current-state focus. "
+    "Do NOT lead with or emphasize overdue-task counts anywhere — mention a slipped date only "
+    "when it is itself the story. Weigh each project's `userNotes` as first-hand team context, "
+    "often fresher than the Asana status. Also fill the top-level aiOverview (a few sentences "
+    "interpreting the whole team's state)."
+)
+
+
 # ------------------------------------------------------------- stages ---------
 def _require_env():
     for var in ("ASANA_PAT", "SUPABASE_URL", "SUPABASE_KEY"):
@@ -382,6 +409,7 @@ def stage_collect(out_path):
     _require_env()
     print("Collecting EPMO data from Asana …")
     live = build()
+    live["_aiGuidance"] = AI_GUIDANCE
     s = live["summary"]
     print(f"  open: {s['totalOpen']} | attention: {s['needsAttention']} | "
           f"movements: {s['recentMovementCount']} | "
@@ -396,12 +424,16 @@ def stage_publish(in_path):
     _require_env()
     with open(in_path, "r", encoding="utf-8") as fh:
         live = json.load(fh)
+    live.pop("_aiGuidance", None)
     missing = [p["name"] for p in live.get("projects", []) if not p.get("aiSummary")]
     if missing:
         print(f"  note: {len(missing)} project(s) have no aiSummary; dashboard will use the fallback for those.")
     missing_detail = [p["name"] for p in live.get("projects", []) if not p.get("aiDetail")]
     if missing_detail:
         print(f"  note: {len(missing_detail)} project(s) have no aiDetail; dashboard will show the raw Asana status ('From Asana') for those.")
+    missing_scope = [p["name"] for p in live.get("projects", []) if not p.get("aiScope")]
+    if missing_scope:
+        print(f"  note: {len(missing_scope)} project(s) have no aiScope; dashboard will show the raw project description (or nothing) for those.")
     now = datetime.now(RD_TZ)
     live["updatedAt"] = now.isoformat()
     supabase_upsert(LIVE_ROW_ID, live)
