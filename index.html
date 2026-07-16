@@ -785,7 +785,8 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle, notes, noteActions }) {
   const cardRef = useRef(null);
   const h = EPMO_HEALTH[p.health] || EPMO_HEALTH.none;
   const su = p.statusUpdate;
-  const brief = p.aiSummary || p.fallbackSummary;
+  const scope = p.aiScope || p.scopeFallback;   // what the project IS — stable, shown first
+  const brief = p.aiSummary || p.fallbackSummary; // current state
   const hasAiDetail = p.aiDetail && p.aiDetail.length > 0;
   const statusText = su && su.text ? cleanAsanaText(su.text) : "";
 
@@ -813,6 +814,7 @@ function EpmoProjectCard({ p, focused, dimmed, onToggle, notes, noteActions }) {
             <span className="text-[15px] sm:text-base font-bold text-zinc-900 dark:text-zinc-50 truncate">{p.name}</span>
             {p.needsAttention && <span className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0" title="Needs attention"></span>}
           </div>
+          {scope && <p className={`text-[13px] sm:text-sm font-medium text-zinc-700 dark:text-zinc-200 mt-1 leading-snug ${open ? "" : "line-clamp-1"}`}>{scope}</p>}
           <p className={`text-sm sm:text-[15px] text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed ${open ? "" : "line-clamp-2"}`}>{brief}</p>
           <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mt-2 text-[12px] text-zinc-400 dark:text-zinc-500">
             <span className="font-semibold whitespace-nowrap" style={{ color: h.color }}>{h.label}</span>

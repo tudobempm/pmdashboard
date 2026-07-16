@@ -44,11 +44,14 @@ collect  ->  python3 scripts/generate_epmo_digest.py collect --out /tmp/epmo.jso
              (fetches Asana + the team's dashboard notes from row 8 — read-only,
              never writes Supabase; each project gets a `userNotes` list,
              pinned note first, capped at 5)
- (AI)    ->  Claude reads /tmp/epmo.json and fills each project's `aiSummary`
-             and `aiDetail` (2-4 bullets for the expanded "Where it stands"
-             section) and the top-level `aiOverview`, then saves the file back.
-             `userNotes` are first-hand context from the team — often fresher
-             than the Asana status — and should be weighed into all three fields
+ (AI)    ->  Claude reads /tmp/epmo.json and fills, per project: `aiScope` (ONE
+             stable sentence on what the project is/delivers, from `description`),
+             `aiSummary` (current state: momentum, next gate, blockers — never
+             leading with overdue-task counts), `aiDetail` (2-4 bullets for the
+             expanded "Where it stands" section), plus the top-level `aiOverview`;
+             then saves the file back. The payload embeds these expectations as
+             `_aiGuidance` (stripped at publish). `userNotes` are first-hand
+             context from the team — often fresher than the Asana status
 publish  ->  python3 scripts/generate_epmo_digest.py publish --in /tmp/epmo.json
              (updates history and upserts Supabase rows 6 & 7)
 ```
@@ -57,9 +60,10 @@ publish  ->  python3 scripts/generate_epmo_digest.py publish --in /tmp/epmo.json
 deterministically with **no AI** (fallback); the dashboard then shows the
 rule-based `fallbackSummary` for each project and the raw Asana status
 ("From Asana" badge) in the expanded card. The routine prompt (see the
-Claude Code Remote trigger) drives collect → AI → publish and requires all
-three AI fields (`aiSummary`, `aiDetail`, `aiOverview`) before publishing —
-when `aiDetail` is missing the dashboard falls back to the raw Asana status.
+Claude Code Remote trigger) drives collect → AI → publish and requires the AI
+fields (`aiScope`, `aiSummary`, `aiDetail`, `aiOverview`) before publishing —
+when `aiDetail` is missing the dashboard falls back to the raw Asana status,
+and when `aiScope` is missing it shows the raw project description (or nothing).
 
 ## What the brief contains
 
@@ -68,9 +72,10 @@ when `aiDetail` is missing the dashboard falls back to the raw Asana status.
 - Charts: open-by-health doughnut + a history line (open, needs-attention, weekly completions).
 - Recent activity feed (task movements in the last 3 days, with actor and time).
 - Projects completed this week / this month / last month.
-- **Projects grouped by member**, each an expandable card: a brief AI summary
-  when collapsed, and — when expanded — roadblocks, recent movement, and the
-  full Asana status update.
+- **Projects grouped by member**, each an expandable card: a fixed scope line
+  (what the project is, `aiScope`) followed by a current-state AI summary when
+  collapsed, and — when expanded — roadblocks, recent movement, the full Asana
+  status update, and the team's notes.
 
 ## Run it manually
 
