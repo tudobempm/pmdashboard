@@ -1,5 +1,106 @@
 [
   {
+    "id": "eod-2026-07-17",
+    "type": "eod",
+    "date": "Friday, July 17 - End of Day",
+    "isoDate": "2026-07-17",
+    "greeting": "Jean, Friday closed several operational loops before the weekend, including the EPMO automation handoff ticket, the I-90 taskset follow-up, the 3:00 PM coverage conflict, and the EOW decision capture. A few reminders remain open, but the carry-forward list is tight and ready for Monday.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0717-done-1",
+            "label": "Closed the I-90 taskset follow-up for today",
+            "detail": "The Legal confirmation item from today's checklist was marked complete, so the I-90 taskset path can move forward from the latest direction captured today."
+          },
+          {
+            "id": "eod-0717-done-2",
+            "label": "Confirmed the EPMO automation Halo ticket was created",
+            "detail": "Nicolas confirmed by email that Halo ticket 0031421 was created for the Toggl Admin and Connection Training workflow handoff review with IT."
+          },
+          {
+            "id": "eod-0717-done-3",
+            "label": "Resolved coverage for the 3:00 PM planning overlap",
+            "detail": "The overlap between IT Litify Sprint #14 Planning and the Executive Project Status slide update was marked complete for today's coverage decision."
+          },
+          {
+            "id": "eod-0717-done-4",
+            "label": "Captured EOW project decisions before Monday",
+            "detail": "Today's end-of-week project decision item was completed after the Friday EPMO and IT-heavy meeting block."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0717-open-1",
+            "taskId": "task-20260717-incident-response-bill",
+            "label": "Finish the remaining Incident Response work with Bill",
+            "detail": "Carry this into Monday if it did not close during Friday focus time or the EPMO blocks. Decide what still needs to be finished and who owns the next step.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0717-open-2",
+            "taskId": "task-20260717-coe-newsletter",
+            "label": "Confirm the CoE newsletter owner and status",
+            "detail": "The earlier CoE newsletter thread points to a Monday recap cadence. Confirm who owns the next send and whether anything is needed before Monday."
+          },
+          {
+            "id": "eod-0717-open-3",
+            "taskId": "task-20260717-follow-up-katie-file-release",
+            "label": "Follow up with Katie about the missing File Release project",
+            "detail": "A new reminder was added today to follow up with Katie because the File Release project was not being found."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0717-decision-1",
+            "label": "EPMO automation handoff now has an IT review ticket",
+            "detail": "Nicolas created Halo ticket 0031421 so IT can review and support planning for the Toggl Admin and Connection Training workflows."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0717-mon-1",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Monday starts with the recurring timecard and week-prep block."
+          },
+          {
+            "id": "eod-0717-mon-2",
+            "time": "10:00 AM",
+            "label": "Court EAD Final Updates scoping call overlaps Legal Change Management",
+            "detail": "Court EAD Final Updates and Legal Change Management both run 10:00-10:30 AM. The Court EAD call has a concrete scoping agenda around eligibility review, scope, risks, resources, and requested timing."
+          },
+          {
+            "id": "eod-0717-mon-3",
+            "time": "11:00 AM",
+            "label": "One Pager - Amazon Connect Draft",
+            "detail": "Thiago's meeting follows the thread where Jean suggested shaping Amazon Connect status into a clearer one-pager with on-track and at-risk visibility."
+          },
+          {
+            "id": "eod-0717-mon-4",
+            "time": "2:00 PM",
+            "label": "BD Portfolio Review, then 1:1 Maria & Jean",
+            "detail": "Monday afternoon returns to portfolio review, roadblocks, and next steps. Keep any Friday intake or ownership decisions ready to carry into that block."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-17-morning",
     "type": "daily",
     "date": "Morning - Friday, July 17",
