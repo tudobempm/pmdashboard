@@ -59,6 +59,7 @@
     "task-20260708-nicolas-owner-timestamp-ba": true,
     "task-20260708-run-legal-portfolio-review": true,
     "task-20260716-triage-phase1-intake-alert": true,
+    "task-20260717-lock-eow-project-decisions": true,
     "task-20260611-submit-mid-year-touchpoints": true,
     "task-20260612-follow-up-hr-survey-results": true,
     "task-20260615-collect-venn-ticket-numbers": true,
@@ -86,6 +87,7 @@
     "task-20260713-triage-denied-reentry-banner": true,
     "task-20260716-align-amazonconnect-venn-ocm": true,
     "task-20260716-prepare-coe-backlog-recovery": true,
+    "task-20260717-resolve-3pm-planning-overlap": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260617-check-litify-field-audit-path": true,
@@ -100,6 +102,7 @@
     "task-20260702-prepare-sms-automation-status": true,
     "task-20260707-loop-bd-court-intake-followup": true,
     "task-20260713-align-bd-portfolio-transition": true,
+    "task-20260716-confirm-i90-taskset-direction": true,
     "task-20260716-deploy-no-travel-client-comms": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
@@ -141,6 +144,7 @@
     "task-20260703-schedule-portfolio-owner-meetings": true,
     "task-20260703-schedule-sms-marketing-phone-call": true,
     "task-20260706-incident-response-incident-guides": true,
+    "task-20260716-track-epmo-automation-halo-ticket": true,
     "task-20260609-decide-expired-staff-aug-recording": true,
     "task-20260609-monitor-daca-i90-remaining-it-work": true,
     "task-20260610-decide-discovery-recording-restore": true,
@@ -274,7 +278,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1784297551175",
+      "text": "Follow up w/Katie in regards to File Release project not being found",
+      "addedAt": "2026-07-17T14:12:31.175Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -504,5 +514,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784289900000
+  "lastModified": 1784297551183
 }
