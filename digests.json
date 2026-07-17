@@ -1,5 +1,151 @@
 [
   {
+    "id": "daily-2026-07-17-morning",
+    "type": "daily",
+    "date": "Morning - Friday, July 17",
+    "isoDate": "2026-07-17",
+    "greeting": "Good morning, Jean. Today is Friday, July 17, and the day is anchored by Legal Change Management at 10:00 AM, a project-pipeline sync at 2:30 PM, and a 3:00 PM conflict between IT Litify Sprint #14 Planning and the Executive Project Status slide update. There are 2 reminders, 0 daily carry-over items, and 4 high-priority operating moves: close the I-90 taskset direction, confirm the EPMO automation Halo ticket, decide 3:00 PM coverage, and use the EOW check-in to capture project decisions before Monday. Teams was rate-limited during collection, so this brief is grounded in Outlook Calendar, Outlook Email, reminder state, and GitHub dashboard history.",
+    "sections": [
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0717-rem-01",
+            "taskId": "task-20260717-incident-response-bill",
+            "label": "Trabajar con Bill para terminar Incident Response",
+            "detail": "Use today's focus time or EPMO blocks to coordinate the remaining Incident Response work with Bill and decide what must be finished before the weekend.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0717-rem-02",
+            "taskId": "task-20260717-coe-newsletter",
+            "label": "Preguntar por newsletter del CoE",
+            "detail": "The earlier CoE newsletter thread shows a weekly Monday recap cadence; confirm owner, status, and whether anything is needed before the next Monday send."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0717-sch-01",
+            "label": "Shelley and Eugenia are out of office",
+            "detail": "Shelley's OOO continues through today, and Eugenia is also marked OOO. Route approvals, Legal/portfolio input, or SMS Automation follow-ups around those absences."
+          },
+          {
+            "id": "fri-0717-sch-02",
+            "time": "10:00 AM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Jhara's sync is framed around EPMO and IT SharePoint alignment, doubts, action items, and clarifications. Use it to keep the Legal Change Management path from drifting after this week's IT/EPMO work."
+          },
+          {
+            "id": "fri-0717-sch-03",
+            "label": "Late morning focus window",
+            "detail": "The calendar has protected time from 11:00 AM to 1:00 PM after the Legal Change sync. This is the best window for Bill/Incident Response, I-90 follow-up, and Halo-ticket confirmation before the afternoon compresses."
+          },
+          {
+            "id": "fri-0717-sch-04",
+            "time": "2:30 PM",
+            "label": "Project pipeline EPMO/IT weekly sync",
+            "detail": "Janet's sync covers new intake, prioritization, BA assignment, active-project priority changes, and UAT status. Bring any owner or priority decisions that should not wait until Monday."
+          },
+          {
+            "id": "fri-0717-sch-05",
+            "time": "3:00 PM",
+            "label": "Sprint Planning conflicts with Executive Project Status",
+            "detail": "IT Litify Sprint #14 Planning and the Executive Project Status Slide Update both start at 3:00 PM. Decide which needs Jean live and which can be delegated or handled asynchronously."
+          },
+          {
+            "id": "fri-0717-sch-06",
+            "time": "4:00 PM",
+            "label": "EPMO EOW Check In",
+            "detail": "Sara moved the check-in earlier and added Nadia so programmatic updates can be included. Use it to lock decisions, owners, and Monday follow-ups from the week."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0717-ai-01",
+            "taskId": "task-20260716-confirm-i90-taskset-direction",
+            "label": "Wait for Legal's confirmation on the I-90 taskset direction",
+            "detail": "Jean asked Raquel, Jill, and Jessica to confirm whether IT should re-enable I-90 renewal tasksets for existing clients while keeping I-90 new-client tasksets hidden. Track the reply before coordinating changes with IT.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0717-ai-02",
+            "taskId": "task-20260716-track-epmo-automation-halo-ticket",
+            "label": "Confirm Nicolas submitted the EPMO automation Halo ticket",
+            "detail": "Dan asked for the EPMO automation transfer details to be submitted through Halo; Jean forwarded the ask to Nicolas, and Nicolas said he would do it. Confirm the ticket exists and is routed before the request goes quiet."
+          },
+          {
+            "id": "fri-0717-ai-03",
+            "taskId": "task-20260717-resolve-3pm-planning-overlap",
+            "label": "Decide coverage for the 3:00 PM planning conflict",
+            "detail": "IT Litify Sprint #14 Planning and the Executive Project Status slide update overlap exactly. Pick the live meeting Jean should attend and send context or coverage for the other one before 3:00 PM.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0717-ai-04",
+            "taskId": "task-20260717-lock-eow-project-decisions",
+            "label": "Use EOW check-in to lock decisions before Monday",
+            "detail": "Today's project pipeline, Sprint Planning, Executive Status, and EPMO EOW blocks can create scattered follow-ups. Capture owners and dates before the weekend, especially for intake, UAT, executive-status, and programmatic updates."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0717-ooo-01",
+            "label": "Shelley is OOO through today",
+            "detail": "Shelley's all-day OOO event remains active through Friday, July 17."
+          },
+          {
+            "id": "fri-0717-ooo-02",
+            "label": "Eugenia is OOO today",
+            "detail": "Eugenia's Friday OOO is active, relevant for EPMO and SMS Automation follow-ups that might otherwise need her input."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0717-mon-01",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Monday starts with the recurring timecard and week-prep block."
+          },
+          {
+            "id": "fri-0717-mon-02",
+            "time": "10:00 AM",
+            "label": "Court EAD Final Updates scoping call overlaps Legal Change Management",
+            "detail": "Court EAD Final Updates and the Legal Change Management sync both run 10:00-10:30 AM. The Court EAD call has a concrete scoping agenda around eligibility review, scope, risks, resources, and requested timing."
+          },
+          {
+            "id": "fri-0717-mon-03",
+            "time": "11:00 AM",
+            "label": "One Pager - Amazon Connect Draft",
+            "detail": "Thiago's meeting follows the thread where Jean suggested shaping Amazon Connect status into a clearer one-pager with on-track/at-risk visibility."
+          },
+          {
+            "id": "fri-0717-mon-04",
+            "time": "2:00 PM",
+            "label": "BD Portfolio Review, then 1:1 Maria & Jean",
+            "detail": "Monday afternoon returns to portfolio review, roadblocks, and next steps. Keep any Friday intake or ownership decisions ready to carry into that block."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-07-16",
     "type": "eod",
     "date": "Thursday, July 16 - End of Day",
