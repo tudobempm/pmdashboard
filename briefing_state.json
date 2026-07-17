@@ -279,6 +279,11 @@
       "id": "rem-1784236506152",
       "text": "Trabajar con Bill para terminar Incident Response",
       "addedAt": "2026-07-16T21:15:06.152Z"
+    },
+    {
+      "id": "rem-1784260797119",
+      "text": "Preguntar por newsletter del CoE",
+      "addedAt": "2026-07-17T03:59:57.119Z"
     }
   ],
   "reminderHistory": [
@@ -496,5 +501,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784236506158
+  "lastModified": 1784260800283
 }
