@@ -75,6 +75,7 @@
     "task-20260709-prepare-amazon-connect-sync": true,
     "task-20260709-review-phase-2-intake-alert": true,
     "task-20260713-prepare-travel-permit-scope": true,
+    "task-20260720-review-claude-passkey-alert": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -516,5 +517,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784557384091
+  "lastModified": 1784568038292
 }
