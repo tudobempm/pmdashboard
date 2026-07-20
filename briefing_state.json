@@ -278,13 +278,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1784297551175",
-      "text": "Follow up w/Katie in regards to File Release project not being found",
-      "addedAt": "2026-07-17T14:12:31.175Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -511,8 +505,15 @@
       "addedAt": "2026-07-17T03:59:57.119Z",
       "shownInDigestId": "daily-2026-07-17-morning",
       "archivedAt": "2026-07-17T12:05:00.000Z"
+    },
+    {
+      "id": "rem-1784297551175",
+      "text": "Follow up w/Katie in regards to File Release project not being found",
+      "addedAt": "2026-07-17T14:12:31.175Z",
+      "shownInDigestId": "daily-2026-07-20-morning",
+      "archivedAt": "2026-07-20T12:05:00.000Z"
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784297551183
+  "lastModified": 1784549100000
 }

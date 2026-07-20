@@ -1,5 +1,163 @@
 [
   {
+    "id": "daily-2026-07-20-morning",
+    "type": "daily",
+    "date": "Morning - Monday, July 20",
+    "isoDate": "2026-07-20",
+    "greeting": "Good morning, Jean. Today is Monday, July 20, and the day is anchored by the Court EAD scoping call, BD Portfolio Review, and Thiago's Amazon Connect one-pager discussion. There are 7 calendar blocks, 2 carried-over items, 1 reminder, and 4 high-priority moves: clear the lingering Incident Response and CoE newsletter follow-ups, prepare Court EAD scope decisions, sharpen the Amazon Connect one-pager, and watch the ICE Preparedness critical path around service naming and Legal templates. Teams collection was rate-limited, so this brief relies on Outlook Calendar, Outlook Email, reminders, and GitHub dashboard history.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0720-co-01",
+            "taskId": "task-20260717-incident-response-bill",
+            "label": "Finish the remaining Incident Response work with Bill",
+            "detail": "Still open from Friday's daily brief. Decide what still needs to be finished, confirm Bill's next step, and close the loop before the project drifts into another week.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0720-co-02",
+            "taskId": "task-20260717-coe-newsletter",
+            "label": "Confirm the CoE newsletter owner and status",
+            "detail": "The CoE newsletter follow-up remains unresolved. Confirm who owns the next send and whether anything is needed before the Monday recap cadence continues.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0720-rem-01",
+            "taskId": "task-20260717-follow-up-katie-file-release",
+            "label": "Follow up w/Katie in regards to File Release project not being found",
+            "detail": "Use today's lighter morning start or the afternoon portfolio blocks to clarify why the File Release project is not showing and what Katie needs next."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0720-sch-01",
+            "time": "8:00 AM",
+            "label": "Approve Timecards & Prepare for the Week",
+            "detail": "Start the week by clearing timecards and setting the operating plan before the project calls begin."
+          },
+          {
+            "id": "mon-0720-sch-02",
+            "time": "10:00 AM",
+            "label": "Court EAD Final Updates - EPMO Scoping Call",
+            "detail": "Prep around scope, out-of-scope boundaries, risks, resources, priority, and timing. The intake centers on EAD renewal eligibility review for clients with existing EADs."
+          },
+          {
+            "id": "mon-0720-sch-03",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "Protected midday space gives a 90-minute buffer after Court EAD and before the afternoon portfolio run."
+          },
+          {
+            "id": "mon-0720-sch-04",
+            "time": "2:00 PM",
+            "label": "BD Portfolio Review",
+            "detail": "Use this to surface active-project blockers, priority shifts, and any new intake that should not wait."
+          },
+          {
+            "id": "mon-0720-sch-05",
+            "time": "2:30 PM",
+            "label": "One Pager - Amazon Connect Draft",
+            "detail": "Thiago's meeting follows the thread where Jean suggested turning Amazon Connect updates into a clearer one-pager with on-track and at-risk visibility."
+          },
+          {
+            "id": "mon-0720-sch-06",
+            "time": "3:00 PM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Back-to-back after the Amazon Connect one-pager discussion. Keep portfolio roadblocks and next-step decisions ready."
+          },
+          {
+            "id": "mon-0720-sch-07",
+            "time": "4:00 PM",
+            "label": "Focus time: AI tool testing",
+            "detail": "Use the end-of-day focus block for lower-interruption testing or for cleanup from the project decisions earlier in the afternoon."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0720-ai-01",
+            "taskId": "task-20260720-prepare-court-ead-scoping",
+            "label": "Prepare the Court EAD scoping decisions",
+            "detail": "Review the intake before 10:00 AM and be ready to clarify eligibility-review scope, resource needs, risks, and the requested due-date constraints for Shelley and Jorge's project path.",
+            "urgent": true
+          },
+          {
+            "id": "mon-0720-ai-02",
+            "taskId": "task-20260720-shape-amazon-connect-one-pager",
+            "label": "Shape the Amazon Connect one-pager around risk visibility",
+            "detail": "Thiago's meeting should turn the weekly update into a concise view of committed dates, on-track or at-risk status, Venn dependency decisions, and leadership-ready next steps."
+          },
+          {
+            "id": "mon-0720-ai-03",
+            "taskId": "task-20260720-watch-ice-preparedness-critical-path",
+            "label": "Watch the ICE Preparedness service-name and Legal gates",
+            "detail": "Jhara's Asana status says the Aug 18 Service Cloud readiness and Aug 21 pilot rollout remain on track, but the service-name lock around Aug 4 and Legal templates due July 22 are the critical gates to protect.",
+            "urgent": true
+          },
+          {
+            "id": "mon-0720-ai-04",
+            "taskId": "task-20260720-use-bd-portfolio-review-for-blockers",
+            "label": "Use BD Portfolio Review to lock blockers and intake decisions",
+            "detail": "Bring any active project risks, new intake, or ownership questions into the 2:00 PM review so the afternoon sequence produces decisions instead of loose follow-ups."
+          },
+          {
+            "id": "mon-0720-ai-05",
+            "taskId": "task-20260720-review-claude-passkey-alert",
+            "label": "Review the Claude passkey security alert",
+            "detail": "An unread security email reports a new Claude passkey added from Moca, Dominican Republic on July 17. If that was not expected, review devices and secure the account."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0720-tue-01",
+            "time": "10:00 AM",
+            "label": "Skills & Amazon Connect Training Planning Session",
+            "detail": "Tomorrow starts with cross-program training, communications, milestones, and change-management planning for Skills and Amazon Connect."
+          },
+          {
+            "id": "mon-0720-tue-02",
+            "time": "11:00 AM",
+            "label": "1:1 Jhara, then Mental Health project meeting",
+            "detail": "The late morning moves from Jhara portfolio roadblocks into the Mental Health project discussion."
+          },
+          {
+            "id": "mon-0720-tue-03",
+            "time": "2:00 PM",
+            "label": "EPMO TL Weekly Catch Up, with 2:30 PM overlap risk",
+            "detail": "The 2:00 PM EPMO TL block overlaps at 2:30 PM with both the bi-weekly J&J sync and Legal Change Management - IT & EPMO Sync. Decide coverage before tomorrow afternoon."
+          },
+          {
+            "id": "mon-0720-tue-04",
+            "time": "3:30 PM",
+            "label": "Nicolas 1:1 and CSC Portfolio initial review",
+            "detail": "The late afternoon returns to portfolio ownership: Nicolas at 3:30 PM and CSC portfolio review at 4:00 PM."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-07-17",
     "type": "eod",
     "date": "Friday, July 17 - End of Day",
