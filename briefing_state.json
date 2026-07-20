@@ -51,6 +51,7 @@
     "task-20260617-schedule-next-pm-workshop": true,
     "task-20260617-staff-aug-touchpoint-prep": true,
     "task-20260622-approve-pending-timecards": true,
+    "task-20260720-prepare-court-ead-scoping": true,
     "task-20260609-close-coe-guide-follow-ups": true,
     "task-20260609-confirm-kpi-final-approval": true,
     "task-20260610-land-coe-owners-next-steps": true,
@@ -515,5 +516,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784549100000
+  "lastModified": 1784557384091
 }
