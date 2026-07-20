@@ -113,6 +113,7 @@
     "task-20260629-capture-pm-feedback-next-steps": true,
     "task-20260629-review-cio-transition-workbook": true,
     "task-20260708-align-thiago-bonus-restructure": true,
+    "task-20260720-shape-amazon-connect-one-pager": true,
     "task-20260609-check-supabase-security-warning": true,
     "task-20260612-prepare-epmo-eow-executive-deck": true,
     "task-20260612-reply-eugenia-danny-venn-issues": true,
@@ -174,6 +175,8 @@
     "task-20260619-triage-calendar-based-sms-automation": true,
     "task-20260701-coordinate-trace-portfolio-followups": true,
     "task-20260703-update-executive-project-status-deck": true,
+    "task-20260720-use-bd-portfolio-review-for-blockers": true,
+    "task-20260720-watch-ice-preparedness-critical-path": true,
     "task-20260612-check-weekly-executive-project-thread": true,
     "task-20260623-review-aos-rejection-downstream-tasks": true,
     "task-20260626-review-slq-baesman-amendment-language": true,
@@ -241,6 +244,10 @@
     "task-20260615-collect-venn-ticket-numbers": {
       "ts": 1781558448583,
       "emoji": "❗"
+    },
+    "task-20260717-follow-up-katie-file-release": {
+      "ts": 1784579373025,
+      "emoji": "📌"
     },
     "task-20260624-follow-up-reorg-conversations": {
       "ts": 1782344501021,
@@ -517,5 +524,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784568038292
+  "lastModified": 1784579379937
 }
