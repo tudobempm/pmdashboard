@@ -42,6 +42,7 @@
     "task-20260616-staff-aug-it-alignment": true,
     "task-20260625-track-baesman-slq-path": true,
     "task-20260716-confirm-sms-ba-support": true,
+    "task-20260717-incident-response-bill": true,
     "task-20260611-align-sara-timeline-kpi": true,
     "task-20260616-case-change-overlap-path": true,
     "task-20260617-reply-craftio-beta-scope": true,
@@ -76,6 +77,7 @@
     "task-20260709-review-phase-2-intake-alert": true,
     "task-20260713-prepare-travel-permit-scope": true,
     "task-20260720-review-claude-passkey-alert": true,
+    "task-20260721-align-skills-amazon-connect": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -90,6 +92,7 @@
     "task-20260716-align-amazonconnect-venn-ocm": true,
     "task-20260716-prepare-coe-backlog-recovery": true,
     "task-20260717-resolve-3pm-planning-overlap": true,
+    "task-20260721-resolve-230-calendar-overlap": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260617-check-litify-field-audit-path": true,
@@ -221,10 +224,6 @@
     "tue-0602-co-23"
   ],
   "reactions": {
-    "task-20260706-index-pm-team-loop": {
-      "ts": 1783372088844,
-      "emoji": "📌"
-    },
     "task-20260619-work-smart-goals-kpis": {
       "ts": 1782125244266,
       "emoji": "❗"
@@ -524,5 +523,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784579379937
+  "lastModified": 1784659768547
 }
