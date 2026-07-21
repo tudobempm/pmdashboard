@@ -1,0 +1,126 @@
+{
+  "digest": {
+    "id": "eod-2026-07-21",
+    "type": "eod",
+    "date": "Tuesday, July 21 - End of Day",
+    "isoDate": "2026-07-21",
+    "greeting": "Jean, today moved several planning threads into clearer next steps: Skills and Amazon Connect, the 2:30 PM coverage decision, Incident Response, and Court EAD routing all advanced. A few portfolio and readiness follow-ups are still worth carrying into tomorrow, especially LevelPath, CoE newsletter ownership, and the File Release check-in.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0721-done-1",
+            "label": "Finished the remaining Incident Response work with Bill",
+            "detail": "The carry-forward item to close the remaining Incident Response work with Bill was completed today."
+          },
+          {
+            "id": "eod-0721-done-2",
+            "label": "Turned Skills and Amazon Connect planning into a roadmap path",
+            "detail": "The Skills and Amazon Connect planning item was completed after the training session focused on training approach, timeline, communications, change management, and leadership-ready recommendations."
+          },
+          {
+            "id": "eod-0721-done-3",
+            "label": "Resolved the 2:30 PM meeting coverage overlap",
+            "detail": "The afternoon coverage decision was completed for the overlap between EPMO TL, the J&J sync, and Legal Change Management."
+          },
+          {
+            "id": "eod-0721-done-4",
+            "label": "Routed Court EAD Final Updates into the CM-CoE intake path",
+            "detail": "Jean sent the request-received note to Jessica Richburg, with Mar Garcia and David Molano copied, confirming the Court EAD Final Updates request was added to the CM-CoE active evaluation queue."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0721-open-1",
+            "taskId": "task-20260721-track-levelpath-uat-sso",
+            "label": "Track LevelPath UAT and SSO readiness before go-live",
+            "detail": "LevelPath remains the highest-risk carry-forward item: UAT has moved forward, go-live is still targeted for July 24, and production SSO still needs confirmation before the path is fully clear.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0721-open-2",
+            "taskId": "task-20260717-coe-newsletter",
+            "label": "Confirm the CoE newsletter owner and status",
+            "detail": "The CoE newsletter follow-up remains unresolved. Confirm who owns the next send and whether anything is needed before the weekly recap cadence continues."
+          },
+          {
+            "id": "eod-0721-open-3",
+            "taskId": "task-20260717-follow-up-katie-file-release",
+            "label": "Follow up with Katie about the missing File Release project",
+            "detail": "The File Release project follow-up remains open. Clarify why the project is not showing and what Katie needs next."
+          },
+          {
+            "id": "eod-0721-open-4",
+            "taskId": "task-20260721-prepare-jhara-mental-health-next-steps",
+            "label": "Lock next steps from the Jhara and Mental Health meetings",
+            "detail": "Carry forward any owners, milestones, or blockers that still need to be captured from Jhara's portfolio roadblocks discussion and the Mental Health project meeting."
+          },
+          {
+            "id": "eod-0721-open-5",
+            "taskId": "task-20260721-prepare-csc-portfolio-review",
+            "label": "Prepare the CSC Portfolio follow-up path",
+            "detail": "Keep the CSC portfolio scope, expected decisions, and first follow-up owner moving after the initial review with Hassan."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0721-decision-1",
+            "label": "USCIS Expedite Request backend changes can move forward separately",
+            "detail": "Frank Von Hassell shared that the business stakeholders, David and Yuri, and solution architects approved moving the backend enhancements forward independently from the original held project."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0721-wed-1",
+            "time": "10:00 AM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Use this to carry forward any clarification still open from today's EPMO and IT SharePoint alignment thread."
+          },
+          {
+            "id": "eod-0721-wed-2",
+            "time": "10:30 AM",
+            "label": "1:1 Thiago & Jean",
+            "detail": "Good follow-up window for Amazon Connect after today's training and communications planning session."
+          },
+          {
+            "id": "eod-0721-wed-3",
+            "time": "11:00 AM",
+            "label": "1:1 Maria & Jean, followed by a midday capture window",
+            "detail": "The Maria 1:1 is followed by a canceled Jean/Sara 1:1 and a 12:00 PM blocked space, creating room to capture morning follow-ups."
+          },
+          {
+            "id": "eod-0721-wed-4",
+            "time": "2:00 PM",
+            "label": "EPMO Team Meeting: Attorney Client Privilege training",
+            "detail": "Chelsea Schinnour is listed as the special guest for attorney-client privilege training, with updates and reminders also on the agenda."
+          },
+          {
+            "id": "eod-0721-wed-5",
+            "time": "4:00 PM",
+            "label": "CoE Biweekly Touchpoint overlaps focus time",
+            "detail": "CoE Biweekly Touchpoint and preparation focus time both run at 4:00 PM, followed by Jean/Sara 1:1 at 4:30 PM."
+          },
+          {
+            "id": "eod-0721-wed-6",
+            "label": "Jhara is scheduled to be out after tomorrow",
+            "detail": "Calendar shows Jhara out of office starting Thursday, July 23, so tomorrow is the cleanest window to close any Jhara-owned follow-ups."
+          }
+        ]
+      }
+    ]
+  }
+}
