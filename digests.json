@@ -1,5 +1,183 @@
 [
   {
+    "id": "daily-2026-07-21-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, July 21",
+    "isoDate": "2026-07-21",
+    "greeting": "Good morning, Jean. Today is Tuesday, July 21, and the day is anchored by Skills & Amazon Connect training planning, Jhara and Mental Health project follow-ups, and a compressed 2:00-3:00 PM block where EPMO TL, the J&J sync, and Legal Change Management overlap. There are 10 calendar blocks, 3 carried-over items, 0 active reminders, and 4 high-priority moves: close the lingering Incident Response and CoE newsletter loops, turn the Skills/Amazon Connect session into a clear training and communications roadmap, resolve the afternoon coverage conflict, and watch LevelPath readiness before the July 24 go-live. Teams collection was rate-limited, so this brief relies on Outlook Calendar, Outlook Email, and GitHub dashboard history.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0721-co-01",
+            "taskId": "task-20260717-incident-response-bill",
+            "label": "Finish the remaining Incident Response work with Bill",
+            "detail": "This is still open across recent dashboard history. Confirm what remains, decide Bill's next step, and close the loop before it drifts further past Monday's portfolio reset.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0721-co-02",
+            "taskId": "task-20260717-coe-newsletter",
+            "label": "Confirm the CoE newsletter owner and status",
+            "detail": "The CoE newsletter follow-up remains unresolved. Confirm who owns the next send and whether anything is needed before the weekly recap cadence continues.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0721-co-03",
+            "taskId": "task-20260717-follow-up-katie-file-release",
+            "label": "Follow up with Katie about the missing File Release project",
+            "detail": "The File Release project follow-up was shown Monday and remains unchecked. Use the morning focus block or the portfolio review window to clarify why the project is not showing and what Katie needs next.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0721-sch-01",
+            "time": "9:00 AM",
+            "label": "Focus time",
+            "detail": "Best early window to clear the carried-over Incident Response, CoE newsletter, and File Release follow-ups before the meeting stack starts."
+          },
+          {
+            "id": "tue-0721-sch-02",
+            "time": "10:00 AM",
+            "label": "Skills & Amazon Connect Training Planning Session",
+            "detail": "The agenda targets training approach, timeline, communications, change management, and a program-level roadmap. This is today's main planning anchor."
+          },
+          {
+            "id": "tue-0721-sch-03",
+            "time": "11:00 AM",
+            "label": "1:1 Jhara & Jean",
+            "detail": "Use the portfolio review agenda to surface roadblocks and next steps before Jhara's Legal Change Management sync later in the day."
+          },
+          {
+            "id": "tue-0721-sch-04",
+            "time": "11:30 AM",
+            "label": "Mental Health project exciting meeting",
+            "detail": "Mar's meeting is framed around the impostor-syndrome workstream. Keep the practical next milestone and owner clear."
+          },
+          {
+            "id": "tue-0721-sch-05",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "A 90-minute protected buffer before the afternoon compression. Good window for the training-roadmap follow-up and LevelPath readiness review."
+          },
+          {
+            "id": "tue-0721-sch-06",
+            "time": "2:00 PM",
+            "label": "EPMO TL Weekly Catch Up",
+            "detail": "This starts the afternoon leadership block and overlaps with two meetings at 2:30 PM. Decide whether this or one of the 2:30 PM meetings needs Jean live."
+          },
+          {
+            "id": "tue-0721-sch-07",
+            "time": "2:30 PM",
+            "label": "bi-weekly sync (J & J)",
+            "detail": "This overlaps with both EPMO TL and Legal Change Management. Janet's agenda covers workload, challenges, wins, and goals."
+          },
+          {
+            "id": "tue-0721-sch-08",
+            "time": "2:30 PM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Jhara's sync is meant to align EPMO and IT SharePoint around doubts, action items, and clarifications. It conflicts with the J&J sync and the tail of EPMO TL."
+          },
+          {
+            "id": "tue-0721-sch-09",
+            "time": "3:30 PM",
+            "label": "1:1 Nicolas & Jean",
+            "detail": "Use this to check any automation, owner, or portfolio handoff items that need a single next owner after the afternoon conflicts."
+          },
+          {
+            "id": "tue-0721-sch-10",
+            "time": "4:00 PM",
+            "label": "CSC Portfolio initial review",
+            "detail": "Hassan is the required attendee. Prepare the initial scope, active risks, and next decision needed for the CSC portfolio path."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0721-ai-01",
+            "taskId": "task-20260721-align-skills-amazon-connect",
+            "label": "Turn Skills and Amazon Connect planning into a clear roadmap",
+            "detail": "Use the 10:00 AM session to leave with draft training milestones, communications sequencing, change-management language, and leadership-ready recommendations for the broader program plan.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0721-ai-02",
+            "taskId": "task-20260721-resolve-230-calendar-overlap",
+            "label": "Decide coverage for the 2:30 PM overlap",
+            "detail": "EPMO TL runs into both the J&J sync and Legal Change Management. Decide before the afternoon which conversation needs Jean live and where context or delegation is enough.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0721-ai-03",
+            "taskId": "task-20260721-track-levelpath-uat-sso",
+            "label": "Track LevelPath UAT and SSO readiness before go-live",
+            "detail": "Laura's Asana status says UAT moved to July 20, go-live remains targeted for July 24, and production SSO is still unresolved while LevelPath checks configuration. Confirm whether the SSO issue and training-material review are closing on time.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0721-ai-04",
+            "taskId": "task-20260721-prepare-jhara-mental-health-next-steps",
+            "label": "Use the Jhara and Mental Health meetings to lock next steps",
+            "detail": "The late-morning sequence moves from Jhara's portfolio roadblocks into Mar's Mental Health project meeting. Keep each conversation tied to a next owner, milestone, or blocker rather than leaving them as open discussion."
+          },
+          {
+            "id": "tue-0721-ai-05",
+            "taskId": "task-20260721-prepare-csc-portfolio-review",
+            "label": "Prepare the CSC Portfolio initial review",
+            "detail": "Before the 4:00 PM meeting with Hassan, define the initial portfolio scope, expected decisions, and the first follow-up owner so the review creates a usable path forward."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0721-wed-01",
+            "time": "10:00 AM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Tomorrow starts with the same EPMO and IT SharePoint alignment thread; carry forward any unresolved clarification from today's overlap."
+          },
+          {
+            "id": "tue-0721-wed-02",
+            "time": "10:30 AM",
+            "label": "1:1 Thiago & Jean",
+            "detail": "Good follow-up window for Amazon Connect, especially after today's training and communications planning session."
+          },
+          {
+            "id": "tue-0721-wed-03",
+            "time": "11:00 AM",
+            "label": "1:1 Maria & Jean, with canceled Jean/Sara 1:1 after it",
+            "detail": "The Maria 1:1 is followed by a canceled Sara 1:1 and a 12:00 PM blocked space, creating room to capture morning follow-ups."
+          },
+          {
+            "id": "tue-0721-wed-04",
+            "time": "2:00 PM",
+            "label": "EPMO Team Meeting: Attorney Client Privilege training",
+            "detail": "Chelsea Schinnour is listed as the special guest for attorney-client privilege training, with updates and reminders also on the agenda."
+          },
+          {
+            "id": "tue-0721-wed-05",
+            "time": "4:00 PM",
+            "label": "CoE Biweekly Touchpoint overlaps focus time",
+            "detail": "CoE Biweekly Touchpoint and preparation focus time both run at 4:00 PM, followed by Jean/Sara 1:1 at 4:30 PM."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-20-morning",
     "type": "daily",
     "date": "Morning - Monday, July 20",
