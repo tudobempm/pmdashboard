@@ -30,6 +30,7 @@
     "wed-0603-co-19": true,
     "eod-0608-open-3": true,
     "task-20260713-email-bill-b": true,
+    "task-20260717-coe-newsletter": true,
     "task-20260709-bcp-ir-followups": true,
     "task-20260624-assign-mhe-rfe-pe": true,
     "task-20260612-revisar-epmo-portal": true,
@@ -43,6 +44,7 @@
     "task-20260625-track-baesman-slq-path": true,
     "task-20260716-confirm-sms-ba-support": true,
     "task-20260717-incident-response-bill": true,
+    "task-20260722-project-folders-friday": true,
     "task-20260611-align-sara-timeline-kpi": true,
     "task-20260616-case-change-overlap-path": true,
     "task-20260617-reply-craftio-beta-scope": true,
@@ -92,6 +94,7 @@
     "task-20260716-align-amazonconnect-venn-ocm": true,
     "task-20260716-prepare-coe-backlog-recovery": true,
     "task-20260717-resolve-3pm-planning-overlap": true,
+    "task-20260721-prepare-csc-portfolio-review": true,
     "task-20260721-resolve-230-calendar-overlap": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
@@ -139,6 +142,7 @@
     "task-20260624-confirm-trace-followon-placement": true,
     "task-20260706-align-maria-portfolio-roadblocks": true,
     "task-20260708-prepare-quality-planning-process": true,
+    "task-20260722-janet-nicolas-salesforce-support": true,
     "task-20260610-monitor-docusign-taskset-guidance": true,
     "task-20260611-decide-deleted-recording-restores": true,
     "task-20260611-prepare-bcp-ir-and-portfolio-1-1s": true,
@@ -535,5 +539,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784723276859
+  "lastModified": 1784728793910
 }
