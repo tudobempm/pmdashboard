@@ -1,5 +1,145 @@
 [
   {
+    "id": "eod-2026-07-22",
+    "type": "eod",
+    "date": "Wednesday, July 22 - End of Day",
+    "isoDate": "2026-07-22",
+    "greeting": "Good evening, Jean. The dashboard shows several carry-forward items closed today, including the CoE newsletter follow-up, the CSC portfolio path, the Friday project-folder reminder, the Salesforce support loop with Janet, and the CM-CoE intake triage. A few project-risk and capture items still need attention, and Teams enrichment was rate-limited, so this EOD stays grounded in the dashboard plus Outlook Calendar and Email.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0722-done-1",
+            "label": "Confirmed the CoE newsletter owner and status",
+            "detail": "This follow-up is now marked complete in the dashboard after carrying forward from the morning digest."
+          },
+          {
+            "id": "eod-0722-done-2",
+            "label": "Prepared the CSC portfolio follow-up path",
+            "detail": "The CSC portfolio follow-up item is now marked complete in the dashboard."
+          },
+          {
+            "id": "eod-0722-done-3",
+            "label": "Followed up on project folders for Friday readiness",
+            "detail": "The reminder to follow up with the team about project folders being ready by Friday is now marked complete."
+          },
+          {
+            "id": "eod-0722-done-4",
+            "label": "Closed the loop with Janet on Salesforce support",
+            "detail": "The reminder to tell Janet that Nicolas had been contacted about Salesforce project support is now marked complete."
+          },
+          {
+            "id": "eod-0722-done-5",
+            "label": "Triage moved forward on the CM-CoE intake",
+            "detail": "The dashboard marks the CM-CoE follow-up intake item complete, and Outlook shows Jean routed the Attorney Recommendation intake to Mar this afternoon."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0722-open-1",
+            "taskId": "task-20260721-track-levelpath-uat-sso",
+            "label": "Track LevelPath UAT and SSO readiness before go-live",
+            "detail": "LevelPath remains the highest-risk open item. UAT has moved forward, go-live is still targeted for July 24, and production SSO still needs confirmation before the path is fully clear.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0722-open-2",
+            "taskId": "task-20260717-follow-up-katie-file-release",
+            "label": "Follow up with Katie about the missing File Release project",
+            "detail": "Clarify why the File Release project is not showing and what Katie needs next."
+          },
+          {
+            "id": "eod-0722-open-3",
+            "taskId": "task-20260721-prepare-jhara-mental-health-next-steps",
+            "label": "Lock next steps from the Jhara and Mental Health meetings",
+            "detail": "Carry forward any owners, milestones, or blockers that still need to be captured from Jhara's portfolio roadblocks discussion and the Mental Health project meeting."
+          },
+          {
+            "id": "eod-0722-open-4",
+            "taskId": "task-20260722-capture-privilege-training-implications",
+            "label": "Capture project implications from attorney-client privilege training",
+            "detail": "Today's EPMO Team Meeting focused on attorney-client privilege with Chelsea Schinnour. Capture any process, documentation, or communication changes that affect Legal Change Management, CoE, or portfolio work."
+          },
+          {
+            "id": "eod-0722-open-5",
+            "taskId": "task-20260722-review-lucia-client-notifications-sop",
+            "label": "Review Lucia's urgent client notifications SOP",
+            "detail": "Lucia sent a work-in-progress urgent client notifications SOP and asked for Jean's thoughts on how to proceed."
+          },
+          {
+            "id": "eod-0722-open-6",
+            "taskId": "task-20260722-discuss-pc-handoff-plan",
+            "label": "Discuss the Project Coordinator handoff plan",
+            "detail": "Sara shared that Project Coordinators will report to Jean in the interim and asked to discuss the handoff, including Janet's original plan."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0722-cancel-1",
+            "label": "CoE Biweekly Touchpoint was cancelled",
+            "detail": "Outlook Email shows Jean sent a cancellation for the CoE Biweekly Touchpoint to Mar Garcia, David Molano, and Frank Von Hassell this afternoon."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0722-decision-1",
+            "label": "Project Coordinators will report to Jean on an interim basis",
+            "detail": "Sara wrote that the PCs will report to Jean in the interim and asked to discuss the handoff and Janet's original plan."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0722-thu-1",
+            "label": "Jhara out of office starts",
+            "detail": "Plan around Jhara being out Thursday and Friday."
+          },
+          {
+            "id": "eod-0722-thu-2",
+            "time": "11:00 AM",
+            "label": "Amazon Connect Weekly Project Sync",
+            "detail": "Agenda includes open items, blockers, prior action items, and decisions needed. Use the sync to clarify what must be ready."
+          },
+          {
+            "id": "eod-0722-thu-3",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Regular BCP/Incident Response touchpoint. Bring open risks or owner decisions from today's capture."
+          },
+          {
+            "id": "eod-0722-thu-4",
+            "time": "2:30 PM",
+            "label": "SMS Automation Optimization Weekly Project Status",
+            "detail": "Agenda includes progress, priorities, resources, risks, blockers, and next steps."
+          },
+          {
+            "id": "eod-0722-thu-5",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team coordination forum for progress, roadblocks, and shared learning."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-22-morning",
     "type": "daily",
     "date": "Morning - Wednesday, July 22",
