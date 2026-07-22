@@ -1,5 +1,217 @@
 [
   {
+    "id": "daily-2026-07-22-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, July 22",
+    "isoDate": "2026-07-22",
+    "greeting": "Good morning, Jean. Today is Wednesday, July 22, and the day is anchored by Legal Change Management at 10:00 AM, three portfolio/team 1:1s, EPMO Team Meeting attorney-client privilege training, CoE, and Jean/Sara. There are 9 calendar blocks, 5 carried-over items, 2 active reminders, and 3 urgent priorities: keep LevelPath UAT/SSO readiness moving before the July 24 go-live, close the project-folder and Salesforce support follow-ups, and protect decision capture during a compressed afternoon. Teams and SharePoint transcript collection were rate-limited, so this brief relies on Outlook Calendar, recent Outlook Email, reminders, and GitHub dashboard history.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0722-co-01",
+            "taskId": "task-20260721-track-levelpath-uat-sso",
+            "label": "Track LevelPath UAT and SSO readiness before go-live",
+            "detail": "LevelPath remains the highest-risk carry-forward item. UAT has moved forward, go-live is still targeted for July 24, and production SSO still needs confirmation before the path is fully clear.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0722-co-02",
+            "taskId": "task-20260717-coe-newsletter",
+            "label": "Confirm the CoE newsletter owner and status",
+            "detail": "The CoE newsletter follow-up remains unresolved. Confirm who owns the next send and whether anything is needed before the weekly recap cadence continues.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0722-co-03",
+            "taskId": "task-20260717-follow-up-katie-file-release",
+            "label": "Follow up with Katie about the missing File Release project",
+            "detail": "Clarify why the File Release project is not showing and what Katie needs next. This remains open from the prior dashboard history.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0722-co-04",
+            "taskId": "task-20260721-prepare-jhara-mental-health-next-steps",
+            "label": "Lock next steps from the Jhara and Mental Health meetings",
+            "detail": "Carry forward any owners, milestones, or blockers that still need to be captured from Jhara's portfolio roadblocks discussion and the Mental Health project meeting.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0722-co-05",
+            "taskId": "task-20260721-prepare-csc-portfolio-review",
+            "label": "Prepare the CSC Portfolio follow-up path",
+            "detail": "Keep the CSC portfolio scope, expected decisions, and first follow-up owner moving after the initial review with Hassan.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0722-rem-01",
+            "taskId": "task-20260722-project-folders-friday",
+            "label": "Hacer follow up al equipo sobre los folders de los proyectos listos para este viernes",
+            "detail": "Use today's 11:30 AM blocked space or the late-afternoon capture window to confirm who owns each project folder and what must be ready by Friday."
+          },
+          {
+            "id": "wed-0722-rem-02",
+            "taskId": "task-20260722-janet-nicolas-salesforce-support",
+            "label": "Comentarle a Janet  que ya hable con Nicolas sobre apoyo en proyecto de Salesforce",
+            "detail": "Close the loop with Janet after the morning 1:1s so the Salesforce support path is clear before the afternoon meeting stack."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0722-sch-01",
+            "time": "10:00 AM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Recurring EPMO and IT SharePoint alignment with Jhara, Carlos, Madhu, Santiago, and Jean listed. Best first anchor for open action items, doubts, and clarification needs."
+          },
+          {
+            "id": "wed-0722-sch-02",
+            "time": "10:30 AM",
+            "label": "1:1 Thiago & Jean",
+            "detail": "Use this as the cleanest Amazon Connect and Skills follow-up window after yesterday's planning was marked complete."
+          },
+          {
+            "id": "wed-0722-sch-03",
+            "time": "11:00 AM",
+            "label": "1:1 Maria & Jean",
+            "detail": "Agenda is portfolio review, roadblocks, and next steps. Tie it to CoE newsletter ownership, project-folder readiness, and any follow-up from prior Mental Health work."
+          },
+          {
+            "id": "wed-0722-sch-04",
+            "time": "12:00 PM",
+            "label": "Blocked Space",
+            "detail": "A 90-minute protected window before the afternoon stack. Use it for project-folder follow-up, LevelPath checks, and Salesforce support alignment."
+          },
+          {
+            "id": "wed-0722-sch-05",
+            "time": "2:00 PM",
+            "label": "EPMO Team Meeting",
+            "detail": "Special topic is Maintaining Attorney Client Privilege with Chelsea Schinnour, plus recognition, updates, and reminders. Capture any legal/process implications that affect project work."
+          },
+          {
+            "id": "wed-0722-sch-06",
+            "time": "3:00 PM",
+            "label": "Focus time",
+            "detail": "Only 30 minutes between EPMO Team Meeting and Laura. Use it for quick capture, not deep work."
+          },
+          {
+            "id": "wed-0722-sch-07",
+            "time": "3:30 PM",
+            "label": "1:1 Laura & Jean",
+            "detail": "Good window to check LevelPath readiness, SMS Automation status, or any portfolio follow-up that needs Laura's context."
+          },
+          {
+            "id": "wed-0722-sch-08",
+            "time": "4:00 PM",
+            "label": "CoE Biweekly Touchpoint overlaps preparation focus time",
+            "detail": "CoE Biweekly Touchpoint and focus time both run at 4:00 PM. Decide whether the CoE conversation needs Jean live or whether the focus block should be protected."
+          },
+          {
+            "id": "wed-0722-sch-09",
+            "time": "4:30 PM",
+            "label": "Jean/Sara 1:1",
+            "detail": "End-of-day leadership capture point after EPMO, CoE, and 1:1s. Bring decisions, unresolved owners, and Friday readiness risks."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0722-ai-01",
+            "taskId": "task-20260722-use-blocked-space-for-friday-readiness",
+            "label": "Use the midday block for Friday-readiness follow-ups",
+            "detail": "The 12:00 PM protected space is the best window to confirm project-folder readiness, LevelPath SSO/UAT status, and any Salesforce support handoff before meetings resume.",
+            "urgent": true
+          },
+          {
+            "id": "wed-0722-ai-02",
+            "taskId": "task-20260722-capture-privilege-training-implications",
+            "label": "Capture project implications from attorney-client privilege training",
+            "detail": "Chelsea Schinnour is the EPMO Team Meeting special guest. Note any process, documentation, or communication changes that should affect Legal Change Management, CoE, or portfolio work."
+          },
+          {
+            "id": "wed-0722-ai-03",
+            "taskId": "task-20260722-triage-cmcoe-follow-up-intake",
+            "label": "Triage the new CM-CoE follow-up/no-help intake",
+            "detail": "Recent Asana email shows a new intake for Follow Up & No Help Pick List reasons and a project invite around that work. Decide whether this is a real intake needing prioritization or a test artifact that should be cleaned up."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0722-em-01",
+            "taskId": "task-20260722-triage-cmcoe-follow-up-intake",
+            "label": "Confirm whether the CM-CoE intake alert is actionable",
+            "detail": "Janet sent a New Intake Alert for Other and Asana shared the related project. The visible content looks test-like, so confirm whether it needs action before it clutters the active evaluation queue."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0722-ooo-01",
+            "label": "Jhara is out Thursday and Friday",
+            "detail": "Calendar shows Jhara out of office from Thursday, July 23 through Friday, July 24. Close Legal Change Management or portfolio follow-ups with her today where possible."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0722-thu-01",
+            "label": "Jhara out of office starts",
+            "detail": "Plan around Jhara being OOO Thursday and Friday."
+          },
+          {
+            "id": "wed-0722-thu-02",
+            "time": "11:00 AM",
+            "label": "Amazon Connect Weekly Project Sync",
+            "detail": "Agenda includes open items, blockers, prior action items, and decisions needed. Use today to clarify what must be ready for that sync."
+          },
+          {
+            "id": "wed-0722-thu-03",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Regular BCP/Incident Response touchpoint. Prepare any open risks or owner decisions after today's capture."
+          },
+          {
+            "id": "wed-0722-thu-04",
+            "time": "2:30 PM",
+            "label": "SMS Automation Optimization Weekly Project Status",
+            "detail": "Agenda includes progress, priorities, resources, risks, blockers, and next steps."
+          },
+          {
+            "id": "wed-0722-thu-05",
+            "time": "4:00 PM",
+            "label": "Tudo Bem!'s Weekly Meeting",
+            "detail": "Main team coordination forum for progress, roadblocks, and shared learning."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-07-21",
     "type": "eod",
     "date": "Tuesday, July 21 - End of Day",
