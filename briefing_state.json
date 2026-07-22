@@ -109,6 +109,7 @@
     "task-20260713-align-bd-portfolio-transition": true,
     "task-20260716-confirm-i90-taskset-direction": true,
     "task-20260716-deploy-no-travel-client-comms": true,
+    "task-20260722-triage-cmcoe-follow-up-intake": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
     "task-20260616-confirm-joe-azul-waiting-items": true,
@@ -534,5 +535,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784688858813
+  "lastModified": 1784723276859
 }
