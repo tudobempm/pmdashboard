@@ -291,7 +291,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1784761576432",
+      "text": "Enviarle correo a la gente de JuniperLab (la Ia que estamos probando)",
+      "addedAt": "2026-07-22T23:06:16.432Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -528,5 +534,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784761557580
+  "lastModified": 1784761578820
 }
