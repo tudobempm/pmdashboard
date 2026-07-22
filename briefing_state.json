@@ -286,7 +286,13 @@
     }
   },
   "edits": {},
-  "reminders": [],
+  "reminders": [
+    {
+      "id": "rem-1784688835014",
+      "text": "Hacer follow up al equipo sobre los folders de los proyectos listos para este viernes",
+      "addedAt": "2026-07-22T02:53:55.014Z"
+    }
+  ],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -523,5 +529,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784659768547
+  "lastModified": 1784688838017
 }
