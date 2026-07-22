@@ -291,18 +291,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1784688835014",
-      "text": "Hacer follow up al equipo sobre los folders de los proyectos listos para este viernes",
-      "addedAt": "2026-07-22T02:53:55.014Z"
-    },
-    {
-      "id": "rem-1784688856544",
-      "text": "Comentarle a Janet  que ya hable con Nicolas sobre apoyo en proyecto de Salesforce",
-      "addedAt": "2026-07-22T02:54:16.544Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -539,5 +528,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784728793910
+  "lastModified": 1784761557580
 }
