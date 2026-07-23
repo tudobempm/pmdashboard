@@ -1,5 +1,143 @@
 [
   {
+    "id": "eod-2026-07-23",
+    "type": "eod",
+    "date": "Thursday, July 23 - End of Day",
+    "isoDate": "2026-07-23",
+    "greeting": "Good evening, Jean. Today closed several dashboard items across JuniperLab, Amazon Connect, Project Coordinator handoff, Legal Change Management, and intake triage. A few risk and follow-up threads still need tomorrow's attention, especially LevelPath readiness and the urgent detention-tracker question.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0723-done-1",
+            "label": "Sent the JuniperLab follow-up",
+            "detail": "The JuniperLab email reminder is marked complete in the dashboard."
+          },
+          {
+            "id": "eod-0723-done-2",
+            "label": "Resolved the Amazon Connect noon overlap",
+            "detail": "The Amazon Connect overlap item is marked complete after carrying as one of the day's urgent schedule decisions."
+          },
+          {
+            "id": "eod-0723-done-3",
+            "label": "Moved the Project Coordinator handoff discussion forward",
+            "detail": "The Project Coordinator handoff item with Sara and Janet is marked complete in the dashboard."
+          },
+          {
+            "id": "eod-0723-done-4",
+            "label": "Handled the Legal Change Management walkthrough follow-up",
+            "detail": "The walkthrough-forwarding item is marked complete after appearing in both the action list and email follow-up list."
+          },
+          {
+            "id": "eod-0723-done-5",
+            "label": "Triaged the new Court and Legal Clerks intake alerts",
+            "detail": "The intake-alert triage item is marked complete in the dashboard."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0723-open-1",
+            "taskId": "task-20260721-track-levelpath-uat-sso",
+            "label": "Track LevelPath UAT and SSO readiness before go-live",
+            "detail": "LevelPath remains the highest-risk open item. UAT has moved forward, go-live is still targeted for July 24, and production SSO still needs confirmation before the path is fully clear.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0723-open-2",
+            "taskId": "task-20260723-answer-detention-tracker-question",
+            "label": "Answer Hassan's urgent detention-tracker question",
+            "detail": "Hassan asked in Teams whether there are any other detention trackers in Excel or Forms beyond the known detained-at-BIOs and denied-entry trackers. This came through as an unread urgent Teams notification email late today.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0723-open-3",
+            "taskId": "task-20260717-follow-up-katie-file-release",
+            "label": "Follow up with Katie about the missing File Release project",
+            "detail": "Clarify why the File Release project is not showing and what Katie needs next."
+          },
+          {
+            "id": "eod-0723-open-4",
+            "taskId": "task-20260721-prepare-jhara-mental-health-next-steps",
+            "label": "Lock next steps from the Jhara and Mental Health meetings",
+            "detail": "Carry forward any owners, milestones, or blockers that still need to be captured from Jhara's portfolio roadblocks discussion and the Mental Health project meeting."
+          },
+          {
+            "id": "eod-0723-open-5",
+            "taskId": "task-20260722-capture-privilege-training-implications",
+            "label": "Capture project implications from attorney-client privilege training",
+            "detail": "Capture any process, documentation, or communication changes from yesterday's attorney-client privilege training that affect Legal Change Management, CoE, or portfolio work."
+          },
+          {
+            "id": "eod-0723-open-6",
+            "taskId": "task-20260722-review-lucia-client-notifications-sop",
+            "label": "Review Lucia's urgent client notifications SOP",
+            "detail": "Lucia sent a work-in-progress urgent client notifications SOP and asked for Jean's thoughts on how to proceed."
+          },
+          {
+            "id": "eod-0723-open-7",
+            "taskId": "task-20260723-review-saltclick-forecast-risk",
+            "label": "Review the SaltClick 2026 forecast risk",
+            "detail": "Nadia flagged that the forecast is largely hours-based and may not reflect actual effort. Watch for Ashley's revised version and be ready to review assumptions, scope, funding implications, and 2027 support versus internal ownership."
+          },
+          {
+            "id": "eod-0723-open-8",
+            "taskId": "task-20260723-clarify-uscis-backend-scope",
+            "label": "Clarify USCIS backend scope versus operational launch",
+            "detail": "Yuri clarified that backend changes may benefit USCIS Expedite later, but full operational initiation has not been authorized. Keep BCP/Incident Response and Salesforce stakeholders aligned so this does not get read as a broader project restart."
+          },
+          {
+            "id": "eod-0723-open-9",
+            "taskId": "task-20260723-review-candidate-for-jean",
+            "label": "Review the external Financial Controller candidate email",
+            "detail": "Boutique Recruiting followed up directly with Jean about a Financial Controller candidate. Reply only if the hiring need is still active; otherwise park it below the project-critical items."
+          },
+          {
+            "id": "eod-0723-open-10",
+            "taskId": "task-20260723-complete-laura-90-day-touchpoint",
+            "label": "Complete Laura Urena's 90-day touchpoint",
+            "detail": "Rippling assigned Jean a 90-day touchpoint review for Laura Urena today."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0723-fri-1",
+            "time": "10:00 AM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Recurring alignment for EPMO and IT SharePoint questions. Good place to confirm repository, intake form, and walkthrough readiness."
+          },
+          {
+            "id": "eod-0723-fri-2",
+            "time": "1:00 PM",
+            "label": "EPMO EOW Check In",
+            "detail": "Moved earlier and includes Nadia for programmatic updates. Bring LevelPath, SaltClick forecast, PC handoff, and intake-prioritization status."
+          },
+          {
+            "id": "eod-0723-fri-3",
+            "time": "2:00 PM",
+            "label": "Salesforce Program Standup",
+            "detail": "Nadia's standup focuses on milestones, project health, risks, dependencies, and decisions blocking delivery."
+          },
+          {
+            "id": "eod-0723-fri-4",
+            "time": "2:30 PM",
+            "label": "Project pipeline and Executive Project Status Slide Update",
+            "detail": "Pipeline sync, executive slide update, and 7/29 EPMO planning create a compressed afternoon; prepare the leadership-ready updates before lunch."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-07-23-morning",
     "type": "daily",
     "date": "Morning - Thursday, July 23",
