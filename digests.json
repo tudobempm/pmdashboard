@@ -1,5 +1,238 @@
 [
   {
+    "id": "daily-2026-07-23-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, July 23",
+    "isoDate": "2026-07-23",
+    "greeting": "Good morning, Jean. Today is Thursday, July 23, and the day is anchored by Amazon Connect, BCP/Incident Response, Project Coordinator handoff, SMS Automation, TPA feedback, and the Tudo Bem weekly meeting. There are 10 calendar blocks, 6 carried-over items, 1 active reminder, and 3 urgent priorities: keep LevelPath ready for the July 24 go-live, prepare the PC handoff decision with Sara and Janet, and use the midday stack to surface blockers across Amazon Connect, BCP/Incident Response, and SMS Automation. Teams was rate-limited and the narrowed retry returned no useful hits, so this brief relies on Outlook Calendar, Outlook Email, reminders, and GitHub dashboard history.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0723-co-01",
+            "taskId": "task-20260721-track-levelpath-uat-sso",
+            "label": "Track LevelPath UAT and SSO readiness before go-live",
+            "detail": "LevelPath remains the highest-risk open item. UAT has moved forward, go-live is still targeted for July 24, and production SSO still needs confirmation before the path is fully clear.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-0723-co-02",
+            "taskId": "task-20260717-follow-up-katie-file-release",
+            "label": "Follow up with Katie about the missing File Release project",
+            "detail": "Clarify why the File Release project is not showing and what Katie needs next.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0723-co-03",
+            "taskId": "task-20260721-prepare-jhara-mental-health-next-steps",
+            "label": "Lock next steps from the Jhara and Mental Health meetings",
+            "detail": "Carry forward any owners, milestones, or blockers that still need to be captured from Jhara's portfolio roadblocks discussion and the Mental Health project meeting.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0723-co-04",
+            "taskId": "task-20260722-capture-privilege-training-implications",
+            "label": "Capture project implications from attorney-client privilege training",
+            "detail": "Capture any process, documentation, or communication changes from yesterday's attorney-client privilege training that affect Legal Change Management, CoE, or portfolio work.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0723-co-05",
+            "taskId": "task-20260722-review-lucia-client-notifications-sop",
+            "label": "Review Lucia's urgent client notifications SOP",
+            "detail": "Lucia sent a work-in-progress urgent client notifications SOP and asked for Jean's thoughts on how to proceed.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0723-co-06",
+            "taskId": "task-20260722-discuss-pc-handoff-plan",
+            "label": "Discuss the Project Coordinator handoff plan",
+            "detail": "Sara shared that Project Coordinators will report to Jean in the interim and asked to discuss the handoff, including Janet's original plan. Today's 2:00 PM meeting is the decision window.",
+            "flag": "carried",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Reminders",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0723-rem-01",
+            "taskId": "task-20260723-email-juniperlab",
+            "label": "Enviarle correo a la gente de JuniperLab (la Ia que estamos probando)",
+            "detail": "Use the 11:00 AM focus block or the 1:00 PM prep window to send the note before the afternoon meeting run begins."
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0723-sch-01",
+            "label": "Jhara is out of office",
+            "detail": "Jhara's OOO spans today and Friday, so close any Jhara-dependent follow-up in a channel that does not require same-day response."
+          },
+          {
+            "id": "thu-0723-sch-02",
+            "time": "10:30 AM",
+            "label": "TPAs",
+            "detail": "Leo scheduled a short TPA touchpoint with Jhara, Santiago, Evan, Shelley, and Jean optional. Treat this as a quick context check before the project stack starts."
+          },
+          {
+            "id": "thu-0723-sch-03",
+            "time": "11:00 AM",
+            "label": "Focus time",
+            "detail": "Best clean morning window for the JuniperLab reminder, LevelPath check, and any prep needed before noon."
+          },
+          {
+            "id": "thu-0723-sch-04",
+            "time": "12:00 PM",
+            "label": "Amazon Connect overlaps a blocked-space hold",
+            "detail": "Amazon Connect Weekly Project Sync and Blocked Space both sit at noon. Amazon's agenda calls for open items, blockers, prior actions, and decisions needed, so decide whether the hold can give way."
+          },
+          {
+            "id": "thu-0723-sch-05",
+            "time": "1:00 PM",
+            "label": "Prep for meeting",
+            "detail": "A 30-minute bridge before BCP/Incident Response. Use it to collect decisions and risks from Amazon Connect."
+          },
+          {
+            "id": "thu-0723-sch-06",
+            "time": "1:30 PM",
+            "label": "Weekly Meeting: BCP/Incident Response",
+            "detail": "Regular BCP/Incident Response touchpoint. Bring unresolved owner decisions and any open risk from the USCIS/backend clarification thread."
+          },
+          {
+            "id": "thu-0723-sch-07",
+            "time": "2:00 PM",
+            "label": "Project Coordinator Handoff",
+            "detail": "Sara's invite says PCs will report to Jean in the interim and the meeting should cover the handoff plus Janet's original plan. This is the clearest pending decision of the day."
+          },
+          {
+            "id": "thu-0723-sch-08",
+            "time": "2:30 PM",
+            "label": "SMS Automation Optimization Weekly Project Status",
+            "detail": "Agenda includes weekly progress, priorities, resource check, risks, blockers, escalations, and next steps. Tie it to any portfolio or LevelPath capacity concerns."
+          },
+          {
+            "id": "thu-0723-sch-09",
+            "time": "4:00 PM",
+            "label": "IPP - IT TPA Touchpoint overlaps Tudo Bem weekly meeting",
+            "detail": "IPP feedback on the TPA process and Tudo Bem team coordination both start at 4:00 PM. Decide which meeting needs Jean live and which can be delegated or skimmed afterward."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0723-ai-01",
+            "taskId": "task-20260723-resolve-noon-amazon-overlap",
+            "label": "Resolve the noon Amazon Connect overlap",
+            "detail": "Amazon Connect is the stronger noon signal because the agenda explicitly covers blockers, prior actions, and decisions. Confirm whether the blocked-space hold can move or whether someone else should cover the sync.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0723-ai-02",
+            "taskId": "task-20260722-discuss-pc-handoff-plan",
+            "label": "Prepare the PC handoff decision with Sara and Janet",
+            "detail": "Before the 2:00 PM handoff meeting, clarify what interim reporting to Jean changes operationally, what Janet originally planned, and what communication the PCs need after the decision.",
+            "urgent": true
+          },
+          {
+            "id": "thu-0723-ai-03",
+            "taskId": "task-20260723-forward-legal-change-management-walkthrough",
+            "label": "Forward the Legal Change Management walkthrough to Legal users",
+            "detail": "Jhara's unread email says the repository and intake form are finalized and asks that the walkthrough be forwarded to Legal Team members who will use it. Jean is copied and should make sure the right audience gets it."
+          },
+          {
+            "id": "thu-0723-ai-04",
+            "taskId": "task-20260723-review-saltclick-forecast-risk",
+            "label": "Review the SaltClick 2026 forecast risk",
+            "detail": "Nadia flagged that the forecast is largely hours-based and may not reflect actual effort. Watch for Ashley's revised version and be ready to review assumptions, scope, funding implications, and 2027 support versus internal ownership."
+          },
+          {
+            "id": "thu-0723-ai-05",
+            "taskId": "task-20260723-triage-new-intake-alerts",
+            "label": "Triage the new Court and Legal Clerks intake alerts",
+            "detail": "Janet sent unread Asana intake alerts for Court and Legal Clerks. Decide whether either one needs prioritization before tomorrow's EPMO/IT pipeline and standup meetings."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0723-em-01",
+            "taskId": "task-20260723-forward-legal-change-management-walkthrough",
+            "label": "Legal Change Management walkthrough",
+            "detail": "Jhara sent the walkthrough for the new legal guidance repository and intake form. The concrete ask is to forward it to the Legal Team members who will be using it."
+          },
+          {
+            "id": "thu-0723-em-02",
+            "taskId": "task-20260723-clarify-uscis-backend-scope",
+            "label": "Clarify USCIS backend scope versus operational launch",
+            "detail": "Yuri clarified that the backend changes may benefit USCIS Expedite later, but full operational initiation has not been authorized. Keep BCP/Incident Response and Salesforce stakeholders aligned so this does not get read as a broader project restart."
+          },
+          {
+            "id": "thu-0723-em-03",
+            "taskId": "task-20260723-review-candidate-for-jean",
+            "label": "Review the external candidate email",
+            "detail": "Boutique Recruiting sent a candidate follow-up directly to Jean with near-term availability. Reply only if the hiring need is still active; otherwise park it below the project-critical items."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0723-ooo-01",
+            "label": "Jhara is out today and Friday",
+            "detail": "Outlook shows Jhara out of office through Friday, July 24. Legal Change Management, TPA, and portfolio follow-ups may need asynchronous handling."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0723-fri-01",
+            "time": "10:00 AM",
+            "label": "Legal Change Management - IT & EPMO Sync",
+            "detail": "Recurring alignment for EPMO and IT SharePoint questions. Good place to confirm repository, intake form, and walkthrough readiness."
+          },
+          {
+            "id": "thu-0723-fri-02",
+            "time": "1:00 PM",
+            "label": "EPMO EOW Check In",
+            "detail": "Moved earlier and includes Nadia for programmatic updates. Bring LevelPath, SaltClick forecast, PC handoff, and intake-prioritization status."
+          },
+          {
+            "id": "thu-0723-fri-03",
+            "time": "2:00 PM",
+            "label": "Salesforce Program Standup",
+            "detail": "Nadia's standup focuses on milestones, project health, risks, dependencies, and decisions blocking delivery."
+          },
+          {
+            "id": "thu-0723-fri-04",
+            "time": "2:30 PM",
+            "label": "Project pipeline and Executive Project Status Slide Update",
+            "detail": "Pipeline sync, executive slide update, and 7/29 EPMO planning create a compressed afternoon; prepare the leadership-ready updates before lunch."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-07-22",
     "type": "eod",
     "date": "Wednesday, July 22 - End of Day",

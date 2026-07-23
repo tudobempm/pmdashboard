@@ -291,13 +291,7 @@
     }
   },
   "edits": {},
-  "reminders": [
-    {
-      "id": "rem-1784761576432",
-      "text": "Enviarle correo a la gente de JuniperLab (la Ia que estamos probando)",
-      "addedAt": "2026-07-22T23:06:16.432Z"
-    }
-  ],
+  "reminders": [],
   "reminderHistory": [
     {
       "id": "rem-1748998800000",
@@ -531,8 +525,15 @@
       "addedAt": "2026-07-17T14:12:31.175Z",
       "shownInDigestId": "daily-2026-07-20-morning",
       "archivedAt": "2026-07-20T12:05:00.000Z"
+    },
+    {
+      "id": "rem-1784761576432",
+      "text": "Enviarle correo a la gente de JuniperLab (la Ia que estamos probando)",
+      "addedAt": "2026-07-22T23:06:16.432Z",
+      "shownInDigestId": "daily-2026-07-23-morning",
+      "archivedAt": "2026-07-23T12:05:42Z"
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784761578820
+  "lastModified": 1784808342348
 }
