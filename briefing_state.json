@@ -32,6 +32,7 @@
     "task-20260713-email-bill-b": true,
     "task-20260717-coe-newsletter": true,
     "task-20260709-bcp-ir-followups": true,
+    "task-20260723-email-juniperlab": true,
     "task-20260624-assign-mhe-rfe-pe": true,
     "task-20260612-revisar-epmo-portal": true,
     "task-20260622-route-billing-intake": true,
@@ -46,10 +47,12 @@
     "task-20260717-incident-response-bill": true,
     "task-20260722-project-folders-friday": true,
     "task-20260611-align-sara-timeline-kpi": true,
+    "task-20260722-discuss-pc-handoff-plan": true,
     "task-20260616-case-change-overlap-path": true,
     "task-20260617-reply-craftio-beta-scope": true,
     "task-20260622-confirm-slq-baesman-path": true,
     "task-20260623-review-mar-june-26-leave": true,
+    "task-20260723-triage-new-intake-alerts": true,
     "task-20260616-overdue-rippling-training": true,
     "task-20260617-schedule-next-pm-workshop": true,
     "task-20260617-staff-aug-touchpoint-prep": true,
@@ -80,6 +83,7 @@
     "task-20260713-prepare-travel-permit-scope": true,
     "task-20260720-review-claude-passkey-alert": true,
     "task-20260721-align-skills-amazon-connect": true,
+    "task-20260723-resolve-noon-amazon-overlap": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -197,15 +201,18 @@
     "task-20260622-use-staff-aug-touchpoint-for-open-asks": true,
     "task-20260623-confirm-trace-taskset-issues-in-devops": true,
     "task-20260625-watch-santiago-sharepoint-export-issue": true,
+    "task-20260721-prepare-jhara-mental-health-next-steps": true,
     "task-20260609-clarify-incident-response-priority-path": true,
     "task-20260609-close-project-coordinator-decision-loop": true,
     "task-20260609-review-rippling-and-asana-overdue-tasks": true,
     "task-20260616-review-incident-response-survey-results": true,
     "task-20260618-unblock-staff-augmentation-it-ownership": true,
+    "task-20260722-capture-privilege-training-implications": true,
     "task-20260610-review-detention-prevention-pilot-package": true,
     "task-20260622-clarify-incident-response-bucket-six-owner": true,
     "task-20260709-track-legal-change-management-requirements": true,
     "task-20260701-review-product-salesforce-roadmap-materials": true,
+    "task-20260723-forward-legal-change-management-walkthrough": true,
     "task-20260630-follow-up-incident-response-irg-implementation": true,
     "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true
   },
@@ -231,6 +238,10 @@
   "reactions": {
     "task-20260619-work-smart-goals-kpis": {
       "ts": 1782125244266,
+      "emoji": "❗"
+    },
+    "task-20260721-track-levelpath-uat-sso": {
+      "ts": 1784811820336,
       "emoji": "❗"
     },
     "task-20260623-update-jorge-project-sheet": {
@@ -535,5 +546,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784808342348
+  "lastModified": 1784813240880
 }
