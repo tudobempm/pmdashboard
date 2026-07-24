@@ -141,6 +141,7 @@
     "task-20260701-write-anu-ba-staff-augmentation": true,
     "task-20260713-review-universal-intake-changes": true,
     "task-20260716-review-supabase-vulnerabilities": true,
+    "task-20260724-triage-coe-portal-asana-refresh": true,
     "task-20260617-prepare-friday-epmo-presentation": true,
     "task-20260622-prepare-mental-health-touchpoint": true,
     "task-20260624-camilo-structure-mhe-rfe-support": true,
@@ -148,6 +149,7 @@
     "task-20260706-align-maria-portfolio-roadblocks": true,
     "task-20260708-prepare-quality-planning-process": true,
     "task-20260722-janet-nicolas-salesforce-support": true,
+    "task-20260724-prepare-epmo-eow-program-updates": true,
     "task-20260610-monitor-docusign-taskset-guidance": true,
     "task-20260611-decide-deleted-recording-restores": true,
     "task-20260611-prepare-bcp-ir-and-portfolio-1-1s": true,
@@ -300,6 +302,10 @@
     "task-20260618-prepare-send-letters-queue-timeline": {
       "ts": 1781786202372,
       "emoji": "📌"
+    },
+    "task-20260724-reply-latent-variables-platform-questions": {
+      "ts": 1784896540913,
+      "emoji": "❗"
     }
   },
   "edits": {},
@@ -547,5 +553,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1784835983196
+  "lastModified": 1784896540916
 }
