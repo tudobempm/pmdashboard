@@ -1,1 +1,135 @@
-[]
+[
+  {
+    "id": "daily-2026-07-24-morning",
+    "type": "daily",
+    "date": "Morning - Friday, July 24",
+    "isoDate": "2026-07-24",
+    "greeting": "Good morning, Jean. Today is Friday, July 24, and the operating shape is a tightly stacked meeting day: seven meetings plus one protected block, with Legal Change Management, EPMO EOW, Salesforce/program pipeline, and executive status updates as the main anchors. There are three high-priority threads to keep in front: prep the EOW/program updates, protect the afternoon handoffs across Salesforce and pipeline decisions, and triage the failed CoE Portal refresh. I could not safely read prior digest history from the current dashboard file, so no carry-over was generated; Teams and SharePoint context were rate-limited, so this brief relies on calendar, email, and current GitHub state.",
+    "sections": [
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0724-sch-01",
+            "label": "10:00 AM - Legal Change Management - IT & EPMO Sync",
+            "detail": "Use this 30-minute sync to clear IT/EPMO doubts, action items, and clarifications before the later portfolio and status meetings."
+          },
+          {
+            "id": "fri-0724-sch-02",
+            "label": "10:30 AM - IPP Q&A",
+            "detail": "Back-to-back after Legal Change Management, so prep any questions or decisions before the 10:00 AM meeting starts."
+          },
+          {
+            "id": "fri-0724-sch-03",
+            "label": "12:00 PM - Blocked Space",
+            "detail": "This is the clearest protected block before the afternoon stack; use it for meeting prep or urgent follow-through."
+          },
+          {
+            "id": "fri-0724-sch-04",
+            "label": "1:00 PM - EPMO EOW Check In",
+            "detail": "The invite was moved one hour earlier and adds Nadia so programmatic updates can be included."
+          },
+          {
+            "id": "fri-0724-sch-05",
+            "label": "2:00 PM - Salesforce Program Standup",
+            "detail": "Review EPMO status, enterprise timeline, and RAID with focus on milestones, health, risks, dependencies, and decisions."
+          },
+          {
+            "id": "fri-0724-sch-06",
+            "label": "2:30 PM - Project pipeline (EPMO/IT weekly sync)",
+            "detail": "Prioritization, BA assignment, active-project shifts, and UAT status are the named decision areas."
+          },
+          {
+            "id": "fri-0724-sch-07",
+            "label": "3:00 PM - Executive Project Status Slide Update",
+            "detail": "Update the executive project deck after the Salesforce and pipeline discussions so the slide work reflects the latest risks and decisions."
+          },
+          {
+            "id": "fri-0724-sch-08",
+            "label": "3:30 PM - 7/29 EPMO Meeting planning",
+            "detail": "Lightweight planning block for the July 29 EPMO meeting; keep it bounded after a dense operational afternoon."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0724-ai-01",
+            "taskId": "task-20260724-prepare-epmo-eow-program-updates",
+            "label": "Prepare the EPMO EOW program readout",
+            "detail": "The EOW check-in was moved earlier and expanded to include programmatic updates, so have the top updates, risks, and asks ready before 1:00 PM.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0724-ai-02",
+            "taskId": "task-20260724-align-salesforce-pipeline-decisions",
+            "label": "Use the afternoon stack to lock Salesforce and pipeline decisions",
+            "detail": "Salesforce standup, project pipeline, and executive slide update run consecutively from 2:00 to 3:30 PM. Capture prioritization changes, BA assignment needs, UAT status, and anything that belongs in the executive deck.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0724-ai-03",
+            "taskId": "task-20260724-clear-legal-change-management-sync",
+            "label": "Clear Legal Change Management IT/EPMO questions",
+            "detail": "The morning sync is explicitly for doubts, action items, and clarifications. Bring the open questions into the 10:00 AM discussion so they do not spill into next week."
+          },
+          {
+            "id": "fri-0724-ai-04",
+            "taskId": "task-20260724-triage-coe-portal-asana-refresh",
+            "label": "Triage the failed CoE Portal refresh",
+            "detail": "GitHub reported that the EPMO Portal Asana refresh workflow failed this morning. Check the failed run before the portal data becomes stale for stakeholders.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0724-em-01",
+            "taskId": "task-20260724-reply-latent-variables-platform-questions",
+            "label": "Reply to Yash on the Latent Variables platform questions",
+            "detail": "Yash offered to answer questions by email or set a 20-minute call, with availability today and tomorrow in Pacific time. Decide whether this should be handled asynchronously or scheduled with the Juniper/Latent Variables thread.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0724-ooo-01",
+            "label": "Jhara Ochoa is out of office",
+            "detail": "The calendar shows Jhara OOO through today, which may affect Legal Change Management follow-through or any Jhara-owned next steps."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0724-mon-01",
+            "label": "Monday starts with timecards and Legal Change Management",
+            "detail": "Approve Timecards & Prepare for the Week is at 8:00 AM, followed by Legal Change Management at 10:00 AM."
+          },
+          {
+            "id": "fri-0724-mon-02",
+            "label": "Amazon Connect Venn UAT Phase II is the main readiness anchor",
+            "detail": "The 11:30 AM session is scoped to environment readiness, Phase II test scenarios, tester access, phone numbers, configuration, schedule, and support process."
+          },
+          {
+            "id": "fri-0724-mon-03",
+            "label": "Afternoon portfolio reviews continue",
+            "detail": "BD Portfolio Review and the Maria 1:1 both name roadblocks, portfolio status, and next steps as useful prep areas."
+          }
+        ]
+      }
+    ]
+  }
+]
