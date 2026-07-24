@@ -91,6 +91,17 @@ python3 scripts/generate_epmo_digest.py all
 
 - The routine prompt runs the **repo copy** of this script (with a curl fallback
   to `main`). Keep the script on `main` in sync with what the routine expects.
+- **Known failure mode (Jul 2026):** between Jul 15 and Jul 24 the scheduled
+  trigger produced no publishes (row 7 history gap). Root cause: the trigger's
+  session started **without the repo checked out**, so the routine fell back to
+  curl-ing the script from `main` and running it from `/tmp` — and Claude Code's
+  auto-mode security classifier hard-denies executing a just-downloaded script
+  with live credentials (twice, including unsandboxed; see the Jul 24 routine
+  summary). The in-repo path runs fine (verified manually Jul 24). Fix: in the
+  Claude Code Remote trigger **EPMO Daily Brief**, ensure the environment has
+  `tudobempm/pmdashboard` attached as a source so `scripts/` exists in the
+  checkout. Treat the curl fallback as unusable — if the checkout is missing,
+  the routine should stop and flag it rather than download-and-execute.
 - To change the team, edit the `TEAM` map in `scripts/generate_epmo_digest.py`.
 - The Supabase anon key used by the browser already lives in `index.html`
   (shared with the CoE tab); no dashboard change is needed for data refresh.
