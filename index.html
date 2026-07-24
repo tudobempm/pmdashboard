@@ -530,6 +530,21 @@ function epmoMonthDay(s) {
   return new Date(y, m - 1, d).toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
+/* One slow or hung Supabase read must never strand a tab on its loading
+   spinner (happened live Jul 2026: the EPMO history row stalled server-side
+   and the whole tab froze). Timebox each row read and treat a timeout like a
+   missed, non-fatal fetch — callers get the row's data object or null. */
+async function fetchAppStateRow(rowId, ms = 15000) {
+  try {
+    const res = await Promise.race([
+      supabase.from("app_state").select("data").eq("id", rowId).single(),
+      new Promise(resolve => setTimeout(() => resolve({ __timedOut: true }), ms)),
+    ]);
+    if (!res || res.__timedOut || res.error) return null;
+    return res.data?.data || null;
+  } catch { return null; }
+}
+
 /* ─── EPMO project notes — persisted in Supabase app_state id=8 (own row so the
    daily digest, which rewrites rows 6/7, never wipes them). Shape:
    { notes: { [projectGid]: [{ text, at, project?, pinned?, editedAt? }, ... newest first] }, updatedAt }
@@ -1074,15 +1089,16 @@ function EpmoDashboardTab() {
   }, [focusedGid]);
 
   useEffect(() => {
-    Promise.all([
-      supabase.from("app_state").select("data").eq("id", 6).single(),
-      supabase.from("app_state").select("data").eq("id", 7).single(),
-      epmoReadNotes()
-    ]).then(([liveRes, histRes, notesRes]) => {
-      if (liveRes.error || !liveRes.data?.data) { setError("No EPMO data yet — the daily routine has not published a digest."); setLoading(false); return; }
-      setLive(liveRes.data.data);
-      if (histRes.data?.data?.snapshots) setHistory(histRes.data.data.snapshots);
-      if (notesRes) setNotes(notesRes);
+    // All three reads fire in parallel, but the tab is gated only on the live
+    // brief (row 6). History (7) and notes (8) fill in whenever they land —
+    // a hung or slow read of a secondary row must not freeze the whole tab.
+    fetchAppStateRow(7).then(d => { if (d?.snapshots) setHistory(d.snapshots); });
+    Promise.race([epmoReadNotes(), new Promise(res => setTimeout(() => res(null), 15000))])
+      .then(n => { if (n) setNotes(n); })
+      .catch(() => {});
+    fetchAppStateRow(6).then(d => {
+      if (d) setLive(d);
+      else setError("No EPMO data loaded — either the daily routine has not published a digest yet, or the read timed out (refresh to retry).");
       setLoading(false);
     });
   }, []);
@@ -1250,18 +1266,18 @@ function CoEDashboardTab({ onBack }) {
   const historyCache = useRef({});
 
   useEffect(() => {
-    Promise.all([
-      supabase.from("app_state").select("data").eq("id", 4).single(),
-      supabase.from("app_state").select("data").eq("id", 5).single()
-    ]).then(([liveRes, histRes]) => {
-      if (liveRes.error || !liveRes.data?.data) { setError("No CoE data yet — run the automation first"); setLoading(false); return; }
-      setData(liveRes.data.data);
-      setLiveData(liveRes.data.data);
-      if (histRes.data?.data?.snapshots) {
-        const dates = histRes.data.data.snapshots.map(s => s.date).sort().reverse();
+    // Same hardening as the EPMO tab: gate only on the live row (4); the
+    // history row (5) fills in whenever it lands and can't freeze the tab.
+    fetchAppStateRow(5).then(d => {
+      if (d?.snapshots) {
+        const dates = d.snapshots.map(s => s.date).sort().reverse();
         setHistoryDates(dates);
-        histRes.data.data.snapshots.forEach(s => { historyCache.current[s.date] = s; });
+        d.snapshots.forEach(s => { historyCache.current[s.date] = s; });
       }
+    });
+    fetchAppStateRow(4).then(d => {
+      if (d) { setData(d); setLiveData(d); }
+      else setError("No CoE data loaded — either the automation has not run yet, or the read timed out (refresh to retry).");
       setLoading(false);
     });
   }, []);
