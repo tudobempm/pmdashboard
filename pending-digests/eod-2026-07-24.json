@@ -1,0 +1,74 @@
+{
+  "digest": {
+    "id": "eod-2026-07-24",
+    "type": "eod",
+    "date": "Friday, July 24 - End of Day",
+    "isoDate": "2026-07-24",
+    "greeting": "Good evening, Jean. Friday closed with the EPMO EOW readout and the CoE Portal refresh triage marked complete, while the remaining carry-forward items stay focused on Salesforce and pipeline decisions, Legal Change Management follow-through, and the Latent Variables reply. Microsoft 365 enrichment was rate-limited during this run, so this digest stays grounded in the dashboard and morning brief.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0724-done-1",
+            "label": "Prepared the EPMO EOW program readout",
+            "detail": "The EOW check-in prep item was marked complete for today."
+          },
+          {
+            "id": "eod-0724-done-2",
+            "label": "Triaged the CoE Portal refresh issue",
+            "detail": "The failed CoE Portal refresh follow-up was marked complete for today."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0724-open-1",
+            "taskId": "task-20260724-align-salesforce-pipeline-decisions",
+            "label": "Lock Salesforce and pipeline decisions from the afternoon stack",
+            "detail": "Carry forward prioritization changes, BA assignment needs, UAT status, and anything that still belongs in the executive deck after the Salesforce standup, project pipeline sync, and slide update.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0724-open-2",
+            "taskId": "task-20260724-reply-latent-variables-platform-questions",
+            "label": "Reply to Yash on the Latent Variables platform questions",
+            "detail": "Yash offered to answer questions by email or set a 20-minute call, with availability today and tomorrow in Pacific time. Decide whether to handle this asynchronously or schedule a call.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0724-open-3",
+            "taskId": "task-20260724-clear-legal-change-management-sync",
+            "label": "Clear Legal Change Management IT/EPMO questions",
+            "detail": "Carry forward any remaining doubts, action items, or clarifications from the morning IT/EPMO sync so they do not spill too far into next week."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0724-mon-1",
+            "label": "Monday starts with timecards and Legal Change Management",
+            "detail": "Approve Timecards & Prepare for the Week is at 8:00 AM, followed by Legal Change Management at 10:00 AM."
+          },
+          {
+            "id": "eod-0724-mon-2",
+            "label": "Amazon Connect Venn UAT Phase II is the main readiness anchor",
+            "detail": "The 11:30 AM session is scoped to environment readiness, Phase II test scenarios, tester access, phone numbers, configuration, schedule, and support process."
+          },
+          {
+            "id": "eod-0724-mon-3",
+            "label": "Afternoon portfolio reviews continue",
+            "detail": "BD Portfolio Review and the Maria 1:1 both name roadblocks, portfolio status, and next steps as useful prep areas."
+          }
+        ]
+      }
+    ]
+  }
+}
