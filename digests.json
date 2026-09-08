@@ -1,5 +1,129 @@
 [
   {
+    "id": "eod-2026-09-08",
+    "type": "eod",
+    "date": "Tuesday, September 8 - End of Day",
+    "isoDate": "2026-09-08",
+    "greeting": "Good evening, Jean. Today's dashboard closes with all ten checklist items still open, while Microsoft 365 shows active progress but no additional confirmed dashboard completions. Wednesday is meeting-heavy, with two overlaps to settle.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0908-open-1",
+            "taskId": "task-20260907-complete-amazon-uat-access-check",
+            "label": "Finish clearing Amazon Connect UAT access and channel blockers",
+            "detail": "Permissions were configured for several testers and David Lopez confirmed access, but Omni-Channel visibility, test-script access, and shared-channel requests still need follow-through.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0908-open-2",
+            "taskId": "task-20260904-confirm-salesforce-integration-account",
+            "label": "Secure the dedicated Salesforce integration account",
+            "detail": "Confirm whether the non-human production account will be created directly or routed through Halo, including the required permissions and monitoring, before UAT advances.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0908-open-3",
+            "taskId": "task-20260908-approve-amazon-training-audience",
+            "label": "Finalize the Amazon Connect training audience",
+            "detail": "Staff Augmentation externals were confirmed out of scope for the MVP. Confirm the remaining audience and complete the load plan.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0908-open-4",
+            "taskId": "task-20260907-review-executive-updates-deck",
+            "label": "Finish the executive updates deck",
+            "detail": "Complete the requested review and add the slide covering EPMO projects completed in August before the weekly leadership discussion."
+          },
+          {
+            "id": "eod-0908-open-5",
+            "taskId": "task-20260904-lock-legal-guidance-sop-path",
+            "label": "Lock the Legal Guidance SOP and training path",
+            "detail": "Confirm that training can proceed, secure the remaining approvals, and protect the September 15 Contigo launch."
+          },
+          {
+            "id": "eod-0908-open-6",
+            "taskId": "task-20260828-clean-asana-armando-sheet",
+            "label": "Reconcile Asana with Armando's spreadsheet",
+            "detail": "Close stale entries and leave one current operating view before this week's portfolio reviews."
+          },
+          {
+            "id": "eod-0908-open-7",
+            "taskId": "task-20260903-clarify-toggl-capacity-model",
+            "label": "Clarify the Toggl capacity model and escalation path",
+            "detail": "Document how capacity will be measured, who owns missing project IDs, and how the data will inform staffing."
+          },
+          {
+            "id": "eod-0908-open-8",
+            "taskId": "task-20260907-confirm-ekm-project-record",
+            "label": "Confirm the Enterprise Knowledge Management project record",
+            "detail": "Confirm with Eugenia whether the recently deleted project record was intentional and which record should remain authoritative."
+          },
+          {
+            "id": "eod-0908-open-9",
+            "taskId": "task-20260908-decide-sara-training-agenda-access",
+            "label": "Decide Sara Rodriguez's Training Agenda access",
+            "detail": "Approve or decline Sara's SharePoint request after confirming that the Client Services training material is appropriate for her role."
+          },
+          {
+            "id": "eod-0908-open-10",
+            "taskId": "task-20260908-reply-thiago-sep17-reschedule",
+            "label": "Reply to Thiago's September 17 reschedule request",
+            "detail": "Confirm whether the Thiago 1:1 can move to Thursday, September 17 while next week's Amazon Connect UAT and go-live work are arranged."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0908-decision-1",
+            "label": "Keep SMS templates in the SMS scope",
+            "detail": "Laura clarified that templates belong in the SMS work, while the broader client communications deliverable is a general guidelines document."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0908-wed-1",
+            "label": "10:30-11:00 AM - Thiago 1:1 conflicts with SVC standup",
+            "detail": "Choose the priority or delegate coverage before Wednesday begins.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-0908-wed-2",
+            "label": "11:30 AM-1:30 PM - KM and Legal Compliance, then protected work",
+            "detail": "The KM and Legal Compliance discussion is followed by a 90-minute blocked work period.",
+            "time": "11:30 AM"
+          },
+          {
+            "id": "eod-0908-wed-3",
+            "label": "2:00-3:00 PM - EPMO team meeting overlaps the Astrid 1:1",
+            "detail": "The Astrid 1:1 begins at 2:30 PM, halfway through the EPMO team meeting.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "eod-0908-wed-4",
+            "label": "3:30-5:00 PM - Laura, weekly prep, and Sara",
+            "detail": "The Laura 1:1 is followed immediately by weekly meeting preparation and the Jean/Sara 1:1.",
+            "time": "3:30 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-09-08-morning",
     "type": "daily",
     "date": "Morning - Tuesday, September 8",
