@@ -1,5 +1,170 @@
 [
   {
+    "id": "daily-2026-09-10-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, September 10",
+    "isoDate": "2026-09-10",
+    "greeting": "Good morning, Jean. Thursday, September 10 has 10 timed calendar entries, 10 carried-over items, and four urgent priorities. Protect the open morning runway for Amazon Connect escalation and executive follow-up; the day then turns on the noon project-sync and Group 2 UAT collision, the 12% testing completion against today's 45% target, and the 4:00 PM weekly-meeting and Group 3 conflict. The voicemail-routing defect and bilingual-prompt failures are the clearest blockers. Repository state was last modified Monday, so completion status may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0910-co-01",
+            "taskId": "task-20260907-complete-amazon-uat-access-check",
+            "label": "Close the remaining Amazon Connect UAT blockers",
+            "detail": "Scenario 1 calls are still routing to voicemail, and testing found English and Spanish prompts that do not match the caller's selection. Confirm owners and retest criteria before the noon sync and Group 2 session.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-0910-co-02",
+            "taskId": "task-20260908-approve-amazon-training-audience",
+            "label": "Drive Amazon Connect UAT to today's checkpoint",
+            "detail": "Testing was 12% complete last night against a 45% end-of-day goal and Friday's 80% target. Use today's working sessions to track completion by group, recover no-shows, and escalate any blocker that threatens the checkpoint.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-0910-co-03",
+            "taskId": "task-20260904-confirm-salesforce-integration-account",
+            "label": "Secure the dedicated Salesforce integration account",
+            "detail": "Confirm whether the non-human production account will be created directly or routed through Halo, including permissions and monitoring, before UAT advances.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-0910-co-04",
+            "taskId": "task-20260909-review-supabase-security-alert",
+            "label": "Review the Supabase security alert",
+            "detail": "Confirm the affected project and severity, then assign remediation or document why no immediate action is needed.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-0910-co-05",
+            "taskId": "task-20260907-review-executive-updates-deck",
+            "label": "Finish the executive updates deck",
+            "detail": "The working copy was updated yesterday. Complete the requested review and August-completions slide before Friday's executive status update block.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0910-co-06",
+            "taskId": "task-20260904-lock-legal-guidance-sop-path",
+            "label": "Lock the Legal Guidance SOP, training path, and knowledge record",
+            "detail": "The Contigo master SOP was updated yesterday. Confirm the authoritative version, remaining approvals, and training path so the September 15 launch stays protected.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0910-co-07",
+            "taskId": "task-20260828-clean-asana-armando-sheet",
+            "label": "Reconcile Asana with Armando's spreadsheet",
+            "detail": "This has remained open across multiple briefings. Use today's 11:30 AM Armando 1:1 to close stale entries and leave one current operating view.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0910-co-08",
+            "taskId": "task-20260903-clarify-toggl-capacity-model",
+            "label": "Clarify the Toggl capacity model and escalation path",
+            "detail": "Document how capacity will be measured, who owns missing project IDs, and how the data will inform staffing.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0910-co-09",
+            "taskId": "task-20260908-decide-sara-training-agenda-access",
+            "label": "Decide Sara Rodriguez's Training Agenda access",
+            "detail": "Approve or decline the SharePoint request after confirming that the Client Services training material is appropriate for her role.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-0910-co-10",
+            "taskId": "task-20260908-reply-thiago-sep17-reschedule",
+            "label": "Reply to Thiago's September 17 reschedule request",
+            "detail": "Confirm whether the Thiago 1:1 can move to Thursday, September 17 while next week's Amazon Connect UAT and go-live work are arranged.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0910-sch-01",
+            "label": "Before 10:30 AM - Open focus runway",
+            "detail": "Use the morning window for the UAT escalation path, executive deck review, and decisions that will be harder to reach once the meeting sequence begins."
+          },
+          {
+            "id": "thu-0910-sch-02",
+            "label": "10:30 AM-noon - Standup and Armando 1:1",
+            "detail": "SVC standup runs 10:30-11:00 AM, followed by the Armando 1:1 at 11:30 AM. Close the Asana reconciliation and arrive at noon with a crisp UAT issue list."
+          },
+          {
+            "id": "thu-0910-sch-03",
+            "label": "Noon-3:15 PM - Amazon Connect collision and testing block",
+            "detail": "The weekly project sync and required Group 2 UAT both start at noon; blocked space overlaps Group 2 from 12:30-1:00 PM. CM CoE follows at 1:30 PM and Group 4 UAT at 2:15 PM. Choose coverage before noon."
+          },
+          {
+            "id": "thu-0910-sch-04",
+            "label": "4:00-6:00 PM - Weekly meeting conflicts with UAT",
+            "detail": "Tudo Bem!'s weekly meeting and Group 3 UAT run concurrently at 4:00 PM, followed by Group 1 at 5:00 PM. Delegate one stream and require a consolidated blocker readout."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-0910-ai-01",
+            "taskId": "task-20260910-approve-armando-app-ticket",
+            "label": "Review Armando's application request",
+            "detail": "Help desk ticket 0033237 is waiting for approval. Confirm the requested application is appropriate, then approve or decline it."
+          },
+          {
+            "id": "thu-0910-ai-02",
+            "taskId": "task-20260910-approve-nicolas-time-adjustment",
+            "label": "Clear Nicolas's time adjustment when it arrives",
+            "detail": "Nicolas said he missed clocking back in after lunch and will submit an adjustment for Jean's approval. Review it early so payroll follow-up does not linger."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0910-ooo-01",
+            "label": "Mauricio Concha is out through Friday",
+            "detail": "Plan decisions and follow-ups that normally depend on Mauricio around his absence."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-0910-tom-01",
+            "label": "9:30-11:30 AM - Four back-to-back team meetings",
+            "detail": "Laura and Astrid 1:1s lead into SVC standup and the Thiago 1:1. Prepare the people and UAT decisions today so the sequence can stay focused."
+          },
+          {
+            "id": "thu-0910-tom-02",
+            "label": "Noon-2:00 PM - Training review conflicts with protected work",
+            "detail": "Amazon Connect go-live training and communications review overlaps the noon blocked space, followed immediately by the EPMO end-of-week check-in."
+          },
+          {
+            "id": "thu-0910-tom-03",
+            "label": "2:15-6:00 PM - Dense UAT and portfolio overlap",
+            "detail": "Group 4 UAT overlaps the project pipeline sync; at 3:00 PM, Group 2 UAT overlaps both the sprint review and executive slide update. Groups 3 and 1 then run at 4:00 PM and 5:00 PM."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-09-09",
     "type": "eod",
     "date": "Wednesday, September 9 - End of Day",
