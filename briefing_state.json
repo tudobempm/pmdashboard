@@ -101,6 +101,7 @@
     "task-20260821-lock-amazon-uat-readiness": true,
     "task-20260825-resolve-tuesday-conflicts": true,
     "task-20260825-set-contigo-permanent-ivr": true,
+    "task-20260828-clean-asana-armando-sheet": true,
     "task-20260828-follow-up-nadia-yesterday": true,
     "task-20260828-review-eduanny-sop-access": true,
     "task-20260609-close-coe-guide-follow-ups": true,
@@ -737,5 +738,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1788796065272
+  "lastModified": 1789133439910
 }
