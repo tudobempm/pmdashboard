@@ -1,0 +1,143 @@
+{
+  "digest": {
+    "id": "eod-2026-09-14",
+    "type": "eod",
+    "date": "Monday, September 14 - End of Day",
+    "isoDate": "2026-09-14",
+    "greeting": "Good evening, Jean. Today ended with no dashboard-tracked completions and several Amazon Connect and operational follow-ups still active. The strongest same-day updates were decisions to pause the Contigo pilot and defer an Amazon Connect go/no-go call.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0914-open-1",
+            "taskId": "task-20260907-complete-amazon-uat-access-check",
+            "label": "Close the remaining Amazon Connect UAT blockers and recover testing pace",
+            "detail": "Testing remained active today, with the Spanish prompts updated for retest and the “We Can’t Unmute Your Call” issue still needing exact call details if it recurs. Keep the tracker current, finish the remaining scenarios, and consolidate confirmed blockers and completion by group.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0914-open-2",
+            "taskId": "task-20260904-confirm-salesforce-integration-account",
+            "label": "Lock the Amazon Connect production account and Wave 1 scope",
+            "detail": "Confirm the dedicated Salesforce integration account, permissions, and monitoring, then settle direct-calling use, G-28 phone details, and which attorney roles belong in Wave 1.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0914-open-3",
+            "taskId": "task-20260909-review-supabase-security-alert",
+            "label": "Review the Supabase security alert",
+            "detail": "Confirm the affected project and severity, then assign remediation or document why no immediate action is needed.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0914-open-4",
+            "taskId": "task-20260907-review-executive-updates-deck",
+            "label": "Finish the executive updates deck",
+            "detail": "Complete the requested review and the August-completions slide before the next leadership readout."
+          },
+          {
+            "id": "eod-0914-open-5",
+            "taskId": "task-20260908-decide-sara-training-agenda-access",
+            "label": "Clear the pending access approvals",
+            "detail": "Decide Sara Rodriguez's Training Agenda access and review Armando's request in help desk ticket 0033237."
+          },
+          {
+            "id": "eod-0914-open-6",
+            "taskId": "task-20260908-reply-thiago-sep17-reschedule",
+            "label": "Reply to Thiago's September 17 reschedule request",
+            "detail": "Confirm whether the 1:1 can move to Thursday, September 17 while this week's UAT work is rearranged."
+          },
+          {
+            "id": "eod-0914-open-7",
+            "taskId": "task-20260910-approve-nicolas-time-adjustment",
+            "label": "Clear Nicolas's time adjustment when it arrives",
+            "detail": "Review the missed clock-in adjustment so the payroll follow-up does not linger."
+          },
+          {
+            "id": "eod-0914-open-8",
+            "taskId": "task-20260914-clear-overdue-rippling-task",
+            "label": "Clear the overdue Rippling task",
+            "detail": "Today's alert still shows one overdue company task. Open the assignment, confirm what remains, and complete or escalate it.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0914-open-9",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Confirm the impact of paused intakes and compliance changes",
+            "detail": "Get a verified status, decision owners, and communication plan for the paused intakes and revised case-type processes."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0914-cancel-1",
+            "label": "Amazon Connect training and communications review was cancelled",
+            "detail": "Nadia cancelled the planned review; the meeting note said the agenda would be updated tomorrow morning."
+          },
+          {
+            "id": "eod-0914-cancel-2",
+            "label": "Quarter Goals Review was cancelled",
+            "detail": "Outlook recorded the cancellation today."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0914-decision-1",
+            "label": "The Contigo Plan pilot is on hold",
+            "detail": "Per ELT guidance, the team must pause further Contigo communications, training, and client-facing activity until new direction is issued."
+          },
+          {
+            "id": "eod-0914-decision-2",
+            "label": "Amazon Connect is not ready for a go/no-go decision",
+            "detail": "Nadia identified the transfer issue as a critical blocker and deferred the decision while testing continues."
+          },
+          {
+            "id": "eod-0914-decision-3",
+            "label": "CoE stories were deprioritized for Sprint 18",
+            "detail": "EPMO development demand reached the sprint capacity threshold, so the CoE stories were removed from the current sprint plan."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0914-tue-1",
+            "label": "10:30 AM - Jhara 1:1 conflicts with SVC standup",
+            "detail": "Choose the priority or delegate standup coverage before Tuesday begins."
+          },
+          {
+            "id": "eod-0914-tue-2",
+            "label": "11:00 AM-noon - Slide focus and protected work",
+            "detail": "A 30-minute EPMO slide block is followed by an open half hour and noon blocked space."
+          },
+          {
+            "id": "eod-0914-tue-3",
+            "label": "2:00-4:30 PM - Leadership and portfolio sequence",
+            "detail": "The EPMO team-lead catch-up leads into the Nicolas 1:1 and CSC Portfolio initial review; bring the latest launch, compliance, and portfolio decisions."
+          },
+          {
+            "id": "eod-0914-tue-4",
+            "label": "Eugenia remains out Tuesday",
+            "detail": "Her calendar shows out-of-office coverage through the day, so route urgent needs to available coverage."
+          }
+        ]
+      }
+    ]
+  }
+}
