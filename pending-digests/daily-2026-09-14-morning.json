@@ -1,0 +1,187 @@
+{
+  "digest": {
+    "id": "daily-2026-09-14-morning",
+    "type": "daily",
+    "date": "Morning - Monday, September 14",
+    "isoDate": "2026-09-14",
+    "greeting": "Good morning, Jean. Monday, September 14 has eight timed calendar entries, 11 carried-over items, and six urgent actions. The day turns on recovering Amazon Connect UAT from Friday's 44% close, getting a morning go or no-go on the Spanish consent, auto-answer, and skill-setup issues, and protecting tomorrow's Contigo launch readiness. Use the BD Portfolio Review and Maria 1:1 to surface portfolio and compliance impacts, but resolve coverage first: the 11:30 AM training review overlaps blocked space, and Group 4 UAT collides with both the 2:00 PM portfolio review and 3:00 PM Maria 1:1. Dashboard state was last modified Friday morning, so completion status may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0914-co-01",
+            "taskId": "task-20260907-complete-amazon-uat-access-check",
+            "label": "Close the remaining Amazon Connect UAT blockers",
+            "detail": "Get a Monday-morning decision on whether the unclear Spanish consent prompt and the inconsistent auto-answer and second-voice behavior require any scenarios to be held. Confirm David Lopez's skill setup and assign retest owners before the 2:00 PM Group 4 session.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0914-co-02",
+            "taskId": "task-20260908-approve-amazon-training-audience",
+            "label": "Recover Amazon Connect UAT from the 44% checkpoint",
+            "detail": "Groups 1 through 4 closed Friday at 44%, and Thiago expects at least one additional Monday session with Tuesday as a possible fallback. Protect tester attendance, keep the tracker current, and require a completion and blocker readout today.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0914-co-03",
+            "taskId": "task-20260904-confirm-salesforce-integration-account",
+            "label": "Secure the dedicated Salesforce integration account",
+            "detail": "Confirm whether the non-human production account will be created directly or through Halo, including permissions and monitoring, before UAT advances.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0914-co-04",
+            "taskId": "task-20260909-review-supabase-security-alert",
+            "label": "Review the Supabase security alert",
+            "detail": "This has remained open since last week. Confirm the affected project and severity, then assign remediation or document why no immediate action is needed.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0914-co-05",
+            "taskId": "task-20260907-review-executive-updates-deck",
+            "label": "Finish the executive updates deck",
+            "detail": "Complete the requested review and August-completions slide before the next leadership readout; use the open morning window after timecards if UAT decisions are already covered.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0914-co-06",
+            "taskId": "task-20260904-lock-legal-guidance-sop-path",
+            "label": "Close the remaining Contigo launch approvals",
+            "detail": "Tomorrow is the planned September 15 launch. Confirm the authoritative SOP and training path, remaining document approvals, internal communication sign-off, and the knowledge record today.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0914-co-07",
+            "taskId": "task-20260908-decide-sara-training-agenda-access",
+            "label": "Clear the pending access approvals",
+            "detail": "Decide Sara Rodriguez's Training Agenda access and review Armando's request in help desk ticket 0033237.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0914-co-08",
+            "taskId": "task-20260908-reply-thiago-sep17-reschedule",
+            "label": "Reply to Thiago's September 17 reschedule request",
+            "detail": "Confirm whether the 1:1 can move to Thursday, September 17 while this week's UAT and launch work are arranged.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0914-co-09",
+            "taskId": "task-20260910-approve-nicolas-time-adjustment",
+            "label": "Clear Nicolas's time adjustment when it arrives",
+            "detail": "Review the missed clock-in adjustment so payroll follow-up does not linger into the new week.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0914-co-10",
+            "taskId": "task-20260910-finalize-amazon-direct-calling",
+            "label": "Finalize Amazon Connect direct-calling and Wave 1 scope",
+            "detail": "Confirm client-facing use, G-28 phone details, and any additional attorney roles, then separate go-live requirements from later enhancements before rollout decisions are locked.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0914-co-11",
+            "taskId": "task-20260911-confirm-contigo-ivr-configuration",
+            "label": "Confirm the Contigo Plan IVR configuration",
+            "detail": "Check the pilot requirements with Hilary and Jhara, then confirm whether the work belongs in the current Amazon Connect scope or needs a separate owner and timeline.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0914-sch-01",
+            "label": "8:00-9:00 AM - Timecards and weekly setup",
+            "detail": "Clear payroll approvals, then use the open runway before 10:30 AM for the UAT go or no-go and the most time-sensitive Contigo decisions."
+          },
+          {
+            "id": "mon-0914-sch-02",
+            "label": "10:30 AM-12:30 PM - Standup and go-live review",
+            "detail": "SVC standup leads into the Amazon Connect training and communications review at 11:30 AM. The review overlaps the noon blocked-space window by 30 minutes, so preserve the remaining focus time for immediate decisions."
+          },
+          {
+            "id": "mon-0914-sch-03",
+            "label": "2:00-3:30 PM - Three-way UAT and portfolio collision",
+            "detail": "Group 4 UAT runs through both the 2:00 PM BD Portfolio Review and the 3:00 PM Maria 1:1. Choose coverage in advance and require one consolidated UAT blocker and completion readout."
+          },
+          {
+            "id": "mon-0914-sch-04",
+            "label": "4:30-5:00 PM - Product team introduction",
+            "detail": "The introduction with Cory, Jorge, Jean, and Eugenia closes the visible schedule. Eugenia is out and has declined, so align on any follow-up she should receive later."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0914-ai-01",
+            "taskId": "task-20260914-clear-overdue-rippling-task",
+            "label": "Clear the overdue Rippling task",
+            "detail": "An unread Friday alert shows one overdue company task. Open the assignment, confirm what is still required, and complete or escalate it early today.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0914-tm-01",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Confirm the operating impact of paused intakes and compliance changes",
+            "detail": "PM leads reported that intakes remain paused while revised case-type processes await an approved, sustainable path. Get a verified status, decision owners, and communication plan before the uncertainty spreads further."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0914-ooo-01",
+            "label": "Santiago is on vacation",
+            "detail": "Santiago remains out through Friday, so route any project coordination that depends on him to available coverage."
+          },
+          {
+            "id": "mon-0914-ooo-02",
+            "label": "Eugenia is out today and tomorrow",
+            "detail": "Eugenia is scheduled out through Tuesday and has declined today's product-team introduction, although she told the PM leads she would monitor urgent needs during vacation."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0914-tom-01",
+            "label": "10:30 AM - Jhara 1:1 conflicts with SVC standup",
+            "detail": "Choose the priority or delegate standup coverage before Tuesday begins."
+          },
+          {
+            "id": "mon-0914-tom-02",
+            "label": "11:00 AM-noon - Slide focus and protected work",
+            "detail": "A 30-minute EPMO slide block is followed by an open half hour and noon blocked space, creating the best visible preparation window."
+          },
+          {
+            "id": "mon-0914-tom-03",
+            "label": "2:00-4:30 PM - Leadership and portfolio sequence",
+            "detail": "The EPMO team-lead catch-up leads into the Nicolas 1:1 and CSC Portfolio initial review; bring launch, compliance, and portfolio decisions forward."
+          }
+        ]
+      }
+    ]
+  }
+}
