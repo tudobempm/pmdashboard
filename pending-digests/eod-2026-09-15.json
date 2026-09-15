@@ -1,0 +1,138 @@
+{
+  "digest": {
+    "id": "eod-2026-09-15",
+    "type": "eod",
+    "date": "Tuesday, September 15 - End of Day",
+    "isoDate": "2026-09-15",
+    "greeting": "Good evening, Jean. Today’s evidence shows concrete movement on the Mental Health communication gap, while Amazon Connect and Salesforce issues remain the main follow-through areas. Wednesday is meeting-heavy, with two calendar overlaps to resolve.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0915-done-1",
+            "label": "Closed the immediate Mental Health communication gap",
+            "detail": "Jean scheduled an alignment with Shelley and Mar, and told Mar to include Shelley in future MHE RFE/Expansion meetings."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0915-open-1",
+            "taskId": "task-20260915-resolve-amazon-connect-open-items",
+            "label": "Resolve the remaining Amazon Connect questions and go/no-go path",
+            "detail": "Duvan’s updates include new open questions, and Nadia said the recommendation deck should support a strategic leadership decision. Confirm owners, alignment needs, and the next decision point.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0915-open-2",
+            "taskId": "task-20260915-prepare-elt-critical-project-updates",
+            "label": "Prepare the critical-project updates for Thursday’s ELT discussion",
+            "detail": "Sara asked the team to provide deeper updates on selected critical projects for the Thursday 9:00 AM meeting. Confirm the project status, risks, and decision asks that Jean will bring forward.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0915-open-3",
+            "taskId": "task-20260915-align-pre-intake-sales-cloud-timeline",
+            "label": "Align on the compressed Pre-Intake Sales Cloud timeline",
+            "detail": "The proposed plan preserves the go-live window but compresses development, QA, focused UAT, training, and cutover work. Confirm the additional testers, training approach, and acceptance of the delivery risk.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0915-open-4",
+            "taskId": "task-20260915-track-revenue-cloud-licensing",
+            "label": "Track the Revenue Cloud licensing blocker",
+            "detail": "Salesforce is reviewing missing Revenue Cloud User licensing under case 474580932. The gap may delay Pay Now functionality and its demo, with no confirmed correction date yet.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0915-open-5",
+            "taskId": "task-20260915-review-kci-window-concerns",
+            "label": "Review the KCI window concerns from testing",
+            "detail": "Testing identified workflow, accuracy, and rework risks with the smaller KCI window. Decide whether to retain the full-size view or pursue an alternative that preserves usable workspace."
+          },
+          {
+            "id": "eod-0915-open-6",
+            "taskId": "task-20260915-confirm-bd-bonus-project-closure",
+            "label": "Confirm whether the BD Bonus Comp Compliance project can close",
+            "detail": "Jean asked Sara whether the project is still needed after Matthew said the new bonus structure had already rolled out. The closure decision is still awaiting confirmation."
+          },
+          {
+            "id": "eod-0915-open-7",
+            "taskId": "task-20260915-complete-overdue-rippling-task",
+            "label": "Clear the overdue Rippling task",
+            "detail": "Rippling reported one overdue task for Jean today. Review the outstanding item and complete or reassign it as appropriate."
+          },
+          {
+            "id": "eod-0915-open-8",
+            "taskId": "task-20260915-reschedule-hassan-portfolio-review",
+            "label": "Confirm a new time for the portfolio review with Hassan",
+            "detail": "Jean asked to reschedule because another meeting conflicted with the portfolio review. No confirmed replacement time appeared in the available Teams results."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0915-cancel-1",
+            "label": "Mental Health RFE/Expansion Touchpoint was cancelled",
+            "detail": "Outlook shows the Mental Health RFE/Expansion touchpoint was cancelled late this afternoon."
+          },
+          {
+            "id": "eod-0915-cancel-2",
+            "label": "Nadia’s Dreamforce placeholder was cancelled",
+            "detail": "The all-day Dreamforce placeholder covering September 14 through September 17 is marked cancelled in Outlook."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0915-decision-1",
+            "label": "Office Branch Call Workflow and IOC routing are in Amazon Connect wave 1",
+            "detail": "Duvan’s open-items update confirms this workflow for wave 1."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0915-wed-1",
+            "label": "10:30 AM - SVC Daily Standup; 11:00 AM - Mental Health Touchpoint",
+            "detail": "The morning moves from the tentative SVC standup into the Mental Health follow-up."
+          },
+          {
+            "id": "eod-0915-wed-2",
+            "label": "12:00 PM - Operations Portfolio Review overlaps Blocked Space",
+            "detail": "Both are scheduled from noon to 1:00 PM, so decide which commitment gets the hour."
+          },
+          {
+            "id": "eod-0915-wed-3",
+            "label": "1:00 PM - Sprint 18 Prioritization and Capacity Alignment",
+            "detail": "The EPMO/CoE session is set to align sprint priorities with available IT capacity."
+          },
+          {
+            "id": "eod-0915-wed-4",
+            "label": "2:30 PM - Astrid 1:1; 3:30 PM - Laura 1:1",
+            "detail": "Two afternoon one-on-ones anchor the middle of the schedule."
+          },
+          {
+            "id": "eod-0915-wed-5",
+            "label": "4:00 PM - CoE touchpoint overlaps weekly-meeting focus time",
+            "detail": "Both are scheduled from 4:00 to 4:30 PM, followed by the Jean/Sara 1:1 at 4:30 PM."
+          }
+        ]
+      }
+    ]
+  }
+}
