@@ -1,5 +1,141 @@
 [
   {
+    "id": "eod-2026-09-17",
+    "type": "eod",
+    "date": "Thursday, September 17 - End of Day",
+    "isoDate": "2026-09-17",
+    "greeting": "Good evening, Jean. Amazon Connect Wave 1 received GO approval today, while eight tracked actions still need follow-through. Tomorrow is anchored by the EOW update, pipeline decisions, executive status slides, and a new-project scoping call.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0917-open-1",
+            "taskId": "task-20260907-complete-amazon-uat-access-check",
+            "label": "Carry the approved Amazon Connect Wave 1 launch into execution",
+            "detail": "Today's go/no-go meeting approved GO for Wave 1. Record the decision, close the remaining launch mitigations, and protect the September 22 Columbus pilot; caller-ID selection remains a two-to-three-week constraint.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "eod-0917-open-2",
+            "taskId": "task-20260904-confirm-salesforce-integration-account",
+            "label": "Lock Amazon Connect production ownership and support",
+            "detail": "Confirm the dedicated Salesforce integration account and the internal support model before production. SaltClick remains the de facto support owner, leaving a single-point-of-support and added-spend risk.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "eod-0917-open-3",
+            "taskId": "task-20260909-review-supabase-security-alert",
+            "label": "Review the Supabase security alert",
+            "detail": "Confirm the affected project and severity, then assign remediation or document why no immediate action is required.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "eod-0917-open-4",
+            "taskId": "task-20260914-clear-overdue-rippling-task",
+            "label": "Clear the overdue Rippling task",
+            "detail": "A fresh alert today still showed one overdue company task. Confirm what remains, then complete or reassign it.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "eod-0917-open-5",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CoE backlog and intake path for Sprint 19",
+            "detail": "Coordinate the backlog review with Jill, notify submitters that Sprint 18 is full, and verify whether new requests belong with EPMO or CoE before scoping.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0917-open-6",
+            "taskId": "task-20260908-decide-sara-training-agenda-access",
+            "label": "Clear the pending access approvals",
+            "detail": "Decide Sara Rodriguez's Training Agenda access and review Armando's request in help desk ticket 0033237.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-0917-open-7",
+            "taskId": "task-20260917-attorney-review-intake-launch",
+            "label": "Launch the Attorney Review at Intake plan with Jhara",
+            "detail": "Jhara is assigned as PM and the project has an October 15 deadline. Confirm scope, milestones, stakeholders, and the first dependency that needs escalation."
+          },
+          {
+            "id": "eod-0917-open-8",
+            "taskId": "task-20260917-amazon-training-mitigation",
+            "label": "Set the Amazon Connect training mitigation",
+            "detail": "Confirm ownership for hands-on sessions, site champions, morning test calls, and the Monday/Wednesday/Friday completion cadence before Wave 1 begins."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0917-cancel-1",
+            "label": "RFE MHE Touchpoint was cancelled",
+            "detail": "Mar will reschedule after an architect is assigned to walk the team through the available options."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0917-decision-1",
+            "label": "Amazon Connect Wave 1 received GO approval",
+            "detail": "The September 17 decision meeting approved moving forward with Wave 1, with known launch risks and mitigations still requiring follow-through."
+          },
+          {
+            "id": "eod-0917-decision-2",
+            "label": "A newly reviewed request will be handled as EPMO work",
+            "detail": "Jean confirmed it belongs with EPMO rather than CoE. Autocomplete will be the initial phase, with removal handled as a later EPMO phase."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0917-fri-1",
+            "label": "10:30 AM - SVC standup; 11:00 AM - Laura 1:1",
+            "detail": "Use the Laura conversation to revisit the paused SMS automation work after today's technical and legal inputs."
+          },
+          {
+            "id": "eod-0917-fri-2",
+            "label": "12:00 PM - Blocked Space; 1:00 PM - EPMO EOW Check In",
+            "detail": "The EOW meeting moved earlier and Nadia was added for programmatic updates, so finish the executive readout before lunch."
+          },
+          {
+            "id": "eod-0917-fri-3",
+            "label": "2:30 PM - Project pipeline; 3:00 PM - Executive status slides",
+            "detail": "Capture prioritization and IT-capacity decisions in the executive deck while the pipeline discussion is fresh."
+          },
+          {
+            "id": "eod-0917-fri-4",
+            "label": "4:00 PM - New Clients Continuing the Process scoping call",
+            "detail": "Clarify the new intake's scope and requirements with Matthew Wentzel so EPMO can determine the path forward."
+          },
+          {
+            "id": "eod-0917-fri-5",
+            "label": "Jhara is out of office",
+            "detail": "Plan coverage for any time-sensitive Attorney Review at Intake follow-up."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-09-17-morning",
     "type": "daily",
     "date": "Morning - Thursday, September 17",
