@@ -1,5 +1,172 @@
 [
   {
+    "id": "daily-2026-09-18-morning",
+    "type": "daily",
+    "date": "Morning - Friday, September 18",
+    "isoDate": "2026-09-18",
+    "greeting": "Good morning, Jean. Friday, September 18 has six live meetings and one protected focus block, with eight carried-over actions and four marked urgent. Today’s priorities are moving the approved Amazon Connect Wave 1 rollout into execution, sharpening the EOW and executive status readout, and using the 4:00 PM scoping call to set the path for the new intake. The main risk is still Amazon Connect: the Denver pilot sequence and deployment dates need confirmation, while SaltClick has no estimate or agreed support scope for Phase II follow-up. Dashboard completion state was last modified Friday, September 11, so carry-over status may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0918-co-01",
+            "taskId": "task-20260907-complete-amazon-uat-access-check",
+            "label": "Move the approved Amazon Connect Wave 1 launch into execution",
+            "detail": "Use the 10:30 AM standup to review the Project Plan-Prod deployment dates, confirm Denver’s initial users and office sequence, and close the remaining mitigations before the September 22 pilot. Current information points to Patty Marquez and Juan Gonzalez as the two Denver users, while Matt is validating the remaining Wave 1 sequence.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0918-co-02",
+            "taskId": "task-20260904-confirm-salesforce-integration-account",
+            "label": "Lock Amazon Connect production ownership and support",
+            "detail": "Confirm the dedicated Salesforce integration account and the internal support model. SaltClick has not committed timing or scope for Phase II follow-up, leaving production support and added-spend exposure unresolved.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0918-co-03",
+            "taskId": "task-20260917-amazon-training-mitigation",
+            "label": "Set the Amazon Connect training mitigation",
+            "detail": "Confirm ownership for hands-on sessions, site champions, morning test calls, and the Monday/Wednesday/Friday completion cadence before Wave 1 begins.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0918-co-04",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CoE backlog and intake path for Sprint 19",
+            "detail": "Use today’s pipeline discussion to confirm the backlog with Jill and settle the remaining classification question for Timetrack of Stage Completion, which is still pending an IT effort review.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0918-co-05",
+            "taskId": "task-20260917-attorney-review-intake-launch",
+            "label": "Protect the Attorney Review at Intake plan while Jhara is out",
+            "detail": "Jhara is out today and the project has an October 15 deadline. Confirm coverage for any immediate dependency, then use Monday’s Legal Request Tool feedback session to reconnect scope, milestones, and ownership.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0918-co-06",
+            "taskId": "task-20260909-review-supabase-security-alert",
+            "label": "Review the Supabase security alert",
+            "detail": "Confirm the affected project and severity, then assign remediation or document why no immediate action is required.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0918-co-07",
+            "taskId": "task-20260914-clear-overdue-rippling-task",
+            "label": "Clear the overdue Rippling task",
+            "detail": "A fresh alert yesterday still showed one overdue company task. Confirm what remains, then complete or reassign it before the week closes.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0918-co-08",
+            "taskId": "task-20260908-decide-sara-training-agenda-access",
+            "label": "Clear the pending access approvals",
+            "detail": "Decide Sara Rodriguez’s Training Agenda access and review Armando’s request in help desk ticket 0033237.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0918-sch-01",
+            "label": "10:30 AM - SVC Daily Standup",
+            "detail": "The separate Salesforce program standup is cancelled. Use the live SVC session to align Wave 1 deployment dates, Denver users, and the remaining rollout sequence."
+          },
+          {
+            "id": "fri-0918-sch-02",
+            "label": "11:00 AM - Laura 1:1",
+            "detail": "Revisit the SMS project’s overlap with Sales Cloud; Jayakumar Balraj is the assigned BA and Nadia still needs alignment with Dolapo."
+          },
+          {
+            "id": "fri-0918-sch-03",
+            "label": "12:00 PM - Blocked Space",
+            "detail": "Protect this hour to prepare the EOW update and consolidate the Amazon Connect, CoE, and intake decisions before the afternoon block."
+          },
+          {
+            "id": "fri-0918-sch-04",
+            "label": "1:00 PM - EPMO EOW Check In",
+            "detail": "Lead with what changed: Wave 1 received GO approval, rollout execution is now the priority, and the CoE intake classification has narrowed the open decisions."
+          },
+          {
+            "id": "fri-0918-sch-05",
+            "label": "2:30 PM - Project pipeline; 3:00 PM - Executive status slides",
+            "detail": "Carry prioritization and IT-capacity decisions directly into the executive deck while the pipeline discussion is fresh."
+          },
+          {
+            "id": "fri-0918-sch-06",
+            "label": "4:00 PM - New Clients Continuing the Process scoping call",
+            "detail": "Clarify the intake’s scope and requirements with Matthew Wentzel so EPMO can choose the right delivery path and next owner."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0918-ai-01",
+            "taskId": "task-20260918-prepare-eow-executive-readout",
+            "label": "Prepare the EOW and executive status narrative",
+            "detail": "Use the noon focus block to distill the Amazon Connect GO decision, remaining rollout risks, CoE intake decisions, and any IT-capacity tradeoffs into a concise readout for the 1:00 PM, 2:30 PM, and 3:00 PM meetings.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0918-ai-02",
+            "taskId": "task-20260918-scope-new-clients-process-intake",
+            "label": "Set the path for the new-client process intake",
+            "detail": "At 4:00 PM, confirm the problem, boundaries, stakeholders, and success criteria with Matthew Wentzel, then decide whether the request is ready for planning or needs another discovery step."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0918-ooo-01",
+            "label": "Jhara Ochoa is out today",
+            "detail": "Arrange coverage for any time-sensitive Attorney Review at Intake follow-up and reconnect with her on Monday."
+          },
+          {
+            "id": "fri-0918-ooo-02",
+            "label": "Santiago Arango remains on vacation",
+            "detail": "His absence continues through today, which may affect CoE or Legal Request Tool follow-through."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0918-mon-01",
+            "label": "8:00 AM - Approve timecards and prepare for the week",
+            "detail": "Monday opens with a protected administrative hour and a clear runway until the noon focus block."
+          },
+          {
+            "id": "fri-0918-mon-02",
+            "label": "1:30-3:30 PM - Four-meeting delivery block",
+            "detail": "Internal Comms Framework, BD Portfolio Review, Legal Request Tool pilot feedback, and the Maria 1:1 run back to back; prepare decisions and handoffs before lunch."
+          },
+          {
+            "id": "fri-0918-mon-03",
+            "label": "Eugenia Barragán begins planned time off",
+            "detail": "Her out-of-office period runs through October 1, so confirm coverage for intake and CoE decisions that cannot wait."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-09-17",
     "type": "eod",
     "date": "Thursday, September 17 - End of Day",
