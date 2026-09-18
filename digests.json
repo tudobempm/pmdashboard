@@ -1,5 +1,153 @@
 [
   {
+    "id": "eod-2026-09-18",
+    "type": "eod",
+    "date": "Friday, September 18 - End of Day",
+    "isoDate": "2026-09-18",
+    "greeting": "Good evening, Jean. Friday closed with concrete progress on Amazon Connect rollout readiness and a clear technical direction for SMS consent, while several operational follow-ups remain for next week. Monday starts with timecards and a CM-CoE review before a dense afternoon delivery block.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0918-done-1",
+            "label": "Finalized the Amazon Connect attorney training audience",
+            "detail": "The final decision covered all 20 attorneys: five approved attorneys were enrolled, 14 remain excluded for the MVP, and one could not be enrolled because the person was already offboarded."
+          },
+          {
+            "id": "eod-0918-done-2",
+            "label": "Cleared the SMS automation technical-impact question",
+            "detail": "The technical review confirmed that the legacy opt-out checkbox does not affect the current project and that the Consent object remains the correct path for consent management."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0918-open-1",
+            "taskId": "task-20260907-complete-amazon-uat-access-check",
+            "label": "Move the Amazon Connect rollout into execution",
+            "detail": "The team is targeting an office-by-office start during the week of October 5. Confirm the remaining production-readiness work, office sequence, site support, and hands-on rollout cadence.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0918-open-2",
+            "taskId": "task-20260904-confirm-salesforce-integration-account",
+            "label": "Lock Amazon Connect production ownership and support",
+            "detail": "Confirm the dedicated Salesforce integration account and the internal support model, including the unresolved SaltClick scope and timing for Phase II follow-up.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0918-open-3",
+            "taskId": "task-20260909-review-supabase-security-alert",
+            "label": "Review the Supabase security alert",
+            "detail": "Confirm the affected project and severity, then assign remediation or document why no immediate action is required.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0918-open-4",
+            "taskId": "task-20260914-clear-overdue-rippling-task",
+            "label": "Clear the overdue Rippling task",
+            "detail": "A fresh alert still showed one overdue company task today. Complete it or reassign it before the new week begins.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0918-open-5",
+            "taskId": "task-20260918-prepare-eow-executive-readout",
+            "label": "Close the EOW and executive status narrative",
+            "detail": "Capture the final Amazon Connect, CoE, intake, and IT-capacity updates so Monday's leadership work starts from the latest decisions.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0918-open-6",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CoE backlog and intake path for Sprint 19",
+            "detail": "Use Monday's CM-CoE project review to confirm the backlog, ownership handoffs, and the remaining classification question for Timetrack of Stage Completion."
+          },
+          {
+            "id": "eod-0918-open-7",
+            "taskId": "task-20260917-attorney-review-intake-launch",
+            "label": "Confirm the Attorney Review at Intake operating owner",
+            "detail": "The operating owner has been narrowed to Christopher Vitagliano or Katie T. Confirm the choice so Jhara can schedule the kickoff against the October 15 deadline."
+          },
+          {
+            "id": "eod-0918-open-8",
+            "taskId": "task-20260908-decide-sara-training-agenda-access",
+            "label": "Clear the pending access approvals",
+            "detail": "Decide Sara Rodriguez's Training Agenda access and review Armando's help desk request."
+          },
+          {
+            "id": "eod-0918-open-9",
+            "taskId": "task-20260918-scope-new-clients-process-intake",
+            "label": "Set the delivery path for the new-client process intake",
+            "detail": "Capture the confirmed scope, requirements, stakeholders, and next owner from today's scoping discussion, then decide whether the request is ready for planning or needs more discovery."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0918-cancel-1",
+            "label": "Salesforce Program Standup was cancelled",
+            "detail": "The recurring standup was cancelled, with the Executive Status Report and SaltClick reports designated as inputs to Monday's program brief instead."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0918-decision-1",
+            "label": "Amazon Connect rollout is targeting the week of October 5",
+            "detail": "The rollout will begin one office at a time after the remaining production-readiness work, office sequencing, training, communications, and technical setup are completed."
+          },
+          {
+            "id": "eod-0918-decision-2",
+            "label": "The Consent object remains the SMS consent path",
+            "detail": "The technical review found no conflict with the current SMS automation work, so the Consent object remains the approved enforcement approach."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0918-mon-1",
+            "label": "8:00 AM - Approve timecards and prepare for the week",
+            "detail": "Monday opens with a protected administrative hour."
+          },
+          {
+            "id": "eod-0918-mon-2",
+            "label": "10:00 AM - Phase 1 & 2 CM-CoE Projects Overview",
+            "detail": "Review the current status of the Phase 1 and Phase 2 projects handled by CM-CoE."
+          },
+          {
+            "id": "eod-0918-mon-3",
+            "label": "1:30-3:30 PM - Four-meeting delivery block",
+            "detail": "Internal Comms Framework, BD Portfolio Review, Legal Request Tool pilot feedback, and the Maria 1:1 run back to back; prepare decisions and handoffs before lunch."
+          },
+          {
+            "id": "eod-0918-mon-4",
+            "label": "4:00 PM - Amazon Connect implementation standup",
+            "detail": "Close the day with the latest production-readiness, sequencing, and rollout follow-through."
+          },
+          {
+            "id": "eod-0918-mon-5",
+            "label": "Eugenia Barragán begins planned time off",
+            "detail": "Her out-of-office period runs through October 1, so confirm coverage for intake and CoE decisions that cannot wait."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-09-18-morning",
     "type": "daily",
     "date": "Morning - Friday, September 18",
