@@ -121,6 +121,7 @@
     "task-20260827-resolve-thursday-conflicts": true,
     "task-20260828-align-quality-intake-scope": true,
     "task-20260831-clarify-staff-aug-document": true,
+    "task-20260917-amazon-training-mitigation": true,
     "task-20260611-submit-mid-year-touchpoints": true,
     "task-20260612-follow-up-hr-survey-results": true,
     "task-20260615-collect-venn-ticket-numbers": true,
@@ -143,6 +144,7 @@
     "task-20260814-route-csc-lc-green-approval": true,
     "task-20260820-decide-gary-sop-edit-access": true,
     "task-20260827-monitor-legal-request-pilot": true,
+    "task-20260914-clear-overdue-rippling-task": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -167,6 +169,7 @@
     "task-20260807-reset-amazon-connect-go-live": true,
     "task-20260820-resolve-noon-triple-conflict": true,
     "task-20260824-assign-sara-project-coverage": true,
+    "task-20260921-confirm-self-review-deadline": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260617-check-litify-field-audit-path": true,
@@ -188,6 +191,7 @@
     "task-20260804-amazon-connect-delay-recovery": true,
     "task-20260805-resolve-supabase-rls-exposure": true,
     "task-20260810-verify-executive-report-aug10": true,
+    "task-20260917-attorney-review-intake-launch": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
     "task-20260616-confirm-joe-azul-waiting-items": true,
@@ -202,6 +206,7 @@
     "task-20260807-prioritize-critical-court-work": true,
     "task-20260812-review-supabase-security-alert": true,
     "task-20260828-complete-amazon-migration-list": true,
+    "task-20260909-review-supabase-security-alert": true,
     "task-20260609-check-supabase-security-warning": true,
     "task-20260612-prepare-epmo-eow-executive-deck": true,
     "task-20260612-reply-eugenia-danny-venn-issues": true,
@@ -238,6 +243,7 @@
     "task-20260826-amazon-connect-business-controls": true,
     "task-20260831-clear-sales-revenue-cloud-owners": true,
     "task-20260904-decide-attorney-calling-platform": true,
+    "task-20260907-complete-amazon-uat-access-check": true,
     "task-20260610-monitor-docusign-taskset-guidance": true,
     "task-20260611-decide-deleted-recording-restores": true,
     "task-20260611-prepare-bcp-ir-and-portfolio-1-1s": true,
@@ -268,6 +274,7 @@
     "task-20260729-answer-amazon-connect-quota-inputs": true,
     "task-20260807-unblock-preparer-change-production": true,
     "task-20260903-set-amazon-new-office-calling-path": true,
+    "task-20260908-decide-sara-training-agenda-access": true,
     "task-20260610-resolve-dp-trace-staff-aug-coverage": true,
     "task-20260611-confirm-epmo-offers-and-recognition": true,
     "task-20260611-review-phase-2-projects-nadia-reply": true,
@@ -299,12 +306,14 @@
     "task-20260707-prepare-levelpath-adoption-assessment": true,
     "task-20260707-reschedule-marketing-portfolio-review": true,
     "task-20260803-prepare-salesforce-red-project-review": true,
+    "task-20260921-prepare-afternoon-portfolio-decisions": true,
     "task-20260609-complete-nadias-affected-areas-request": true,
     "task-20260609-review-staff-aug-prd-and-queue-impacts": true,
     "task-20260622-use-staff-aug-touchpoint-for-open-asks": true,
     "task-20260623-confirm-trace-taskset-issues-in-devops": true,
     "task-20260625-watch-santiago-sharepoint-export-issue": true,
     "task-20260721-prepare-jhara-mental-health-next-steps": true,
+    "task-20260904-confirm-salesforce-integration-account": true,
     "task-20260609-clarify-incident-response-priority-path": true,
     "task-20260609-close-project-coordinator-decision-loop": true,
     "task-20260609-review-rippling-and-asana-overdue-tasks": true,
@@ -388,6 +397,10 @@
       "ts": 1782344501021,
       "emoji": "❗"
     },
+    "task-20260917-attorney-review-intake-launch": {
+      "ts": 1789733009128,
+      "emoji": "❗"
+    },
     "task-20260625-complete-leadup-module-2a-check": {
       "ts": 1782421879308,
       "emoji": "❗"
@@ -395,6 +408,10 @@
     "task-20260713-review-universal-intake-changes": {
       "ts": 1783945206169,
       "emoji": "⭐"
+    },
+    "task-20260914-confirm-compliance-pause-impact": {
+      "ts": 1789732993143,
+      "emoji": "❗"
     },
     "task-20260624-camilo-structure-mhe-rfe-support": {
       "ts": 1782758333391,
@@ -738,5 +755,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1789133439910
+  "lastModified": 1790017906138
 }
