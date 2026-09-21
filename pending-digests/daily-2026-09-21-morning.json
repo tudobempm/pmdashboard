@@ -1,0 +1,154 @@
+{
+  "digest": {
+    "id": "daily-2026-09-21-morning",
+    "type": "daily",
+    "date": "Morning - Monday, September 21",
+    "isoDate": "2026-09-21",
+    "greeting": "Good morning, Jean. Monday, September 21 has seven live meetings, two protected work blocks, six carried-over actions, and four urgent items. Today’s priorities are aligning the Amazon Connect rollout date and legal readiness, using the 10:00 AM CM-CoE review to settle the next backlog and intake decisions, and turning the afternoon portfolio sequence into clear owners and follow-ups. The main risk is Amazon Connect: this morning’s thread shows a timing mismatch around the week-of-October-5 office rollout, while the call-recording disclosure and client opt-out behavior still need Legal approval. Dashboard completion state was last modified Friday, September 11, so carry-over status may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0921-co-01",
+            "taskId": "task-20260907-complete-amazon-uat-access-check",
+            "label": "Align Amazon Connect rollout timing and legal readiness",
+            "detail": "Use the 10:30 AM standup to distinguish production-preparation work from office rollout, which Nadia says was socialized for the week of October 5. Close the Legal review of the recording disclosure and client opt-out behavior, and assign the voicemail naming convention before rollout communications harden.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0921-co-02",
+            "taskId": "task-20260904-confirm-salesforce-integration-account",
+            "label": "Lock Amazon Connect production ownership and support",
+            "detail": "Confirm the dedicated Salesforce integration account, the internal support model, and SaltClick’s Phase II responsibilities so the rollout does not enter production with unclear ownership or added-spend exposure.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0921-co-03",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CM-CoE backlog and intake path",
+            "detail": "Use the 10:00 AM Phase 1 and 2 overview with Jill, Mar, and Jorge to confirm priorities and owners. The Timetrack of Stage Completion intake is still waiting on IT feedback, so leave the meeting with the next decision and follow-up date.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0921-co-04",
+            "taskId": "task-20260917-attorney-review-intake-launch",
+            "label": "Confirm Attorney Review at Intake ownership and next step",
+            "detail": "The owner decision is still between Chris Vitagliano and Katie, and Jhara cannot start the kickoff until that is settled. Use the 2:30 PM Legal Request Tool feedback session to capture any adjacent intake lessons and close the ownership follow-up.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-0921-co-05",
+            "taskId": "task-20260909-review-supabase-security-alert",
+            "label": "Review the Supabase security alert",
+            "detail": "This remains unresolved in the available dashboard state. Confirm the affected project and severity, then assign remediation or document why no immediate action is required.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-0921-co-06",
+            "taskId": "task-20260914-clear-overdue-rippling-task",
+            "label": "Clear the overdue Rippling task",
+            "detail": "Friday’s notification still showed one overdue company task. Confirm what remains, then complete or reassign it before the meeting sequence begins.",
+            "flag": "carried",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0921-sch-01",
+            "label": "8:00 AM - Approve timecards and prepare for the week",
+            "detail": "Use the protected hour to clear timecards, scan the Amazon Connect decision thread, and set the questions needed for the 10:30 AM standup."
+          },
+          {
+            "id": "mon-0921-sch-02",
+            "label": "10:00 AM - CM-CoE overview; 10:30 AM - Amazon Connect standup",
+            "detail": "The two morning anchors run back to back. Leave the first with Phase 1 and 2 priorities, then use the standup to settle rollout timing, Legal readiness, and production ownership."
+          },
+          {
+            "id": "mon-0921-sch-03",
+            "label": "12:00 PM - Blocked Space",
+            "detail": "Protect this hour to consolidate decisions and prepare the Internal Comms, BD, Legal Request Tool, and Maria follow-ups before the afternoon sequence."
+          },
+          {
+            "id": "mon-0921-sch-04",
+            "label": "1:30 PM - Internal Comms Framework touchpoint",
+            "detail": "Align the final project steps with Jeannette and Laura and confirm the remaining owner, deliverable, and closeout date."
+          },
+          {
+            "id": "mon-0921-sch-05",
+            "label": "2:00 PM - BD Portfolio Review",
+            "detail": "Focus the portfolio review on active-project risks, new intake, and the decisions that need executive visibility or a named owner."
+          },
+          {
+            "id": "mon-0921-sch-06",
+            "label": "2:30 PM - Legal Request Tool pilot feedback",
+            "detail": "Bring concrete examples of where triage, assignment, or visibility worked or broke down before the tool expands to the rest of the firm."
+          },
+          {
+            "id": "mon-0921-sch-07",
+            "label": "3:00 PM - Maria 1:1",
+            "detail": "Close the afternoon chain by reviewing portfolio roadblocks and assigning the next steps that surfaced in the earlier meetings."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-0921-ai-01",
+            "taskId": "task-20260921-prepare-afternoon-portfolio-decisions",
+            "label": "Prepare the afternoon portfolio decision sheet",
+            "detail": "Use the noon block to list the decision, owner, and next date for Internal Comms, BD, the Legal Request Tool pilot, and Maria’s portfolio roadblocks so the four meetings produce one coherent operating view."
+          },
+          {
+            "id": "mon-0921-ai-02",
+            "taskId": "task-20260921-confirm-self-review-deadline",
+            "label": "Confirm the self-review deadline and prompt the team",
+            "detail": "HR’s email subject says September 24 while the message body says Friday, September 25. Confirm the actual deadline today, then ask the team to complete their reviews before the final-day rush."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0921-ooo-01",
+            "label": "Eugenia Barragán is out through October 1",
+            "detail": "Route time-sensitive intake or CoE decisions around her absence and make ownership explicit where she would normally be involved."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-0921-tom-01",
+            "label": "10:30 AM - Jhara 1:1 conflicts with Amazon Connect standup",
+            "detail": "Choose coverage today so the Attorney Review ownership follow-up and Amazon rollout decisions both keep moving."
+          },
+          {
+            "id": "mon-0921-tom-02",
+            "label": "11:00 AM-noon - Slide work followed by protected focus time",
+            "detail": "Use the 11:00 AM slide block and noon focus hour to prepare the EPMO weekly update before the afternoon meetings."
+          },
+          {
+            "id": "mon-0921-tom-03",
+            "label": "2:00 PM - EPMO TL weekly; 3:30 PM - Nicolas 1:1",
+            "detail": "Sara is in the Dublin office starting tomorrow. Bring the portfolio risks and team coordination decisions into the weekly session, then close Nicolas’s delivery follow-ups."
+          }
+        ]
+      }
+    ]
+  }
+}
