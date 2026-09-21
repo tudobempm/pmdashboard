@@ -1,5 +1,119 @@
 [
   {
+    "id": "eod-2026-09-21",
+    "type": "eod",
+    "date": "Monday, September 21 - End of Day",
+    "isoDate": "2026-09-21",
+    "greeting": "Good evening, Jean. You closed most of today's dashboard actions and turned the CM-CoE review into concrete governance decisions. One urgent CM-CoE follow-through remains for tomorrow.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0921-done-1",
+            "label": "Amazon Connect rollout readiness and production ownership were aligned",
+            "detail": "The rollout timing, Legal readiness, Salesforce integration account, internal support model, and SaltClick Phase II responsibilities were worked through today."
+          },
+          {
+            "id": "eod-0921-done-2",
+            "label": "Attorney Review at Intake ownership and the next step were confirmed",
+            "detail": "The follow-up moved forward to a kickoff scheduled for Tuesday morning."
+          },
+          {
+            "id": "eod-0921-done-3",
+            "label": "The Supabase security alert was reviewed",
+            "detail": "The dashboard follow-up was completed today."
+          },
+          {
+            "id": "eod-0921-done-4",
+            "label": "The overdue Rippling task was cleared",
+            "detail": "The outstanding company-task follow-up was completed today."
+          },
+          {
+            "id": "eod-0921-done-5",
+            "label": "The afternoon portfolio decision sheet was prepared",
+            "detail": "The Internal Comms, BD, Legal Request Tool, and portfolio discussions had a consolidated decision and follow-up view."
+          },
+          {
+            "id": "eod-0921-done-6",
+            "label": "The self-review deadline follow-up was completed",
+            "detail": "The deadline was checked and the team prompt was handled today."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0921-open-1",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Close the CM-CoE follow-through",
+            "detail": "Schedule the monthly 30-minute priority review with Jill, arrange the court-intake audit with Frank, JP, and Andrea Marin, add Jill to the weekly status mailing list, and share today's notes in the team chat.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0921-cancel-1",
+            "label": "An earlier September Firmwide Meeting invitation was canceled and replaced",
+            "detail": "A fresh invitation followed for Thursday, September 24 at 2:00 PM."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0921-decision-1",
+            "label": "CM-CoE intake will be limited to approved director-level requestors",
+            "detail": "The team will also hold a monthly 30-minute priority review with Jill and schedule a joint working session to audit pending court requests."
+          },
+          {
+            "id": "eod-0921-decision-2",
+            "label": "Amazon Connect will stay focused on the MVP rollout",
+            "detail": "The team was asked to pause post-MVP reviews while the approved Denver and additional-office rollout moves forward."
+          },
+          {
+            "id": "eod-0921-decision-3",
+            "label": "The Docusign dependency will move forward through a sprint tradeoff",
+            "detail": "The agreed path is to move Send Letters Queue stories to the next sprint so the Sales Cloud work can proceed."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0921-tue-1",
+            "label": "10:30 AM - Three-way meeting conflict",
+            "detail": "Attorney Review at Intake kickoff, the Jhara 1:1, and the Amazon Connect standup are scheduled at the same time. Choose coverage before the morning starts.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-0921-tue-2",
+            "label": "11:00 AM - Slide work; noon - Legal Request Tool feedback",
+            "detail": "The noon pilot feedback session overlaps the protected focus block, so preserve enough time to prepare the EPMO weekly update and capture the Legal feedback.",
+            "time": "11:00 AM"
+          },
+          {
+            "id": "eod-0921-tue-3",
+            "label": "2:00 PM - EPMO TL weekly; 3:30 PM - Nicolas 1:1",
+            "detail": "Sara will be in the Dublin office. Bring the portfolio risks and team coordination decisions into the weekly session, then close Nicolas's delivery follow-ups.",
+            "time": "2:00 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-09-21-morning",
     "type": "daily",
     "date": "Morning - Monday, September 21",
