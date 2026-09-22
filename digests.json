@@ -1,5 +1,138 @@
 [
   {
+    "id": "daily-2026-09-22-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, September 22",
+    "isoDate": "2026-09-22",
+    "greeting": "Good morning, Jean. Tuesday, September 22 has five live meetings, two protected work blocks, one carried-over action, and two urgent priorities. The day turns on resolving the 10:30 AM three-way collision, locking Wednesday's Denver Amazon Connect deployment and the remaining rollout sequence, and framing the RFE MHE leadership decision due September 24. The clearest delivery risk is Amazon Connect: Denver is scheduled for tomorrow, but production-IDP testing and the RingCentral-to-SCV transition still have open operational issues.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0922-co-01",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CM-CoE backlog and intake path",
+            "detail": "The Phase 1 and 2 requests are intaked and prioritized but are not yet assigned to Sprint 19, while Timetrack of Stage Completion is still waiting on IT feedback. Confirm the next decision, owner, and follow-up date so the queue does not remain open-ended.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0922-sch-01",
+            "label": "10:30 AM - Three-way kickoff and standup collision",
+            "detail": "Attorney Review at Intake, the Amazon Connect standup, and the Jhara 1:1 occupy the same half hour. Jhara declined the 1:1 and proposed a new time; choose kickoff coverage, delegate the standup with a required deployment readout, and confirm the reschedule before the hour."
+          },
+          {
+            "id": "tue-0922-sch-02",
+            "label": "11:00 AM - EPMO weekly slide focus",
+            "detail": "Use the protected 30 minutes to turn today's deployment, intake, and portfolio decisions into the weekly meeting narrative."
+          },
+          {
+            "id": "tue-0922-sch-03",
+            "label": "12:00 PM - Legal Request Tool feedback overlaps blocked space",
+            "detail": "Bring specific pilot examples on triage, assignment, and visibility. Preserve the remaining 12:30-1:00 PM window to capture owners and follow-ups."
+          },
+          {
+            "id": "tue-0922-sch-04",
+            "label": "2:00 PM - EPMO team-lead weekly",
+            "detail": "Lead with the Amazon rollout risk, the RFE MHE decision, and the CoE queue so cross-team dependencies leave with named owners."
+          },
+          {
+            "id": "tue-0922-sch-05",
+            "label": "3:30 PM - Nicolas 1:1",
+            "detail": "Close delivery follow-ups, including the Knowledge Management pilot sponsor and scope confirmation assigned to Nicolas."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0922-ai-01",
+            "taskId": "task-20260922-amazon-denver-deployment-plan",
+            "label": "Lock the Denver deployment and remaining rollout sequence",
+            "detail": "Use the 10:30 AM standup to confirm Wednesday's Denver deployment, user counts and timing for the 11 approved offices, virtual phone users, and later IVR groups. Assign the production-IDP retest and the RingCentral transition communication; Hilary's capacity is the pacing constraint.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0922-ai-02",
+            "taskId": "task-20260922-decide-rfe-mhe-path",
+            "label": "Frame the RFE MHE decision due September 24",
+            "detail": "The project is 42% complete and the September 30 target is no longer achievable. Put the four paths in decision-ready form, including the option to refocus on 95 addressable VAWA RFEs without official USCIS due dates and the Legal, IT, capacity, and task-set implications of any scope change.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0922-ai-03",
+            "taskId": "task-20260922-launch-attorney-review-intake",
+            "label": "Set the Attorney Review implementation path at kickoff",
+            "detail": "Use the 10:30 AM kickoff to choose between the two proposed solutions, confirm the problem statement and scope, and leave with owners, milestones, and risks for the October 15 target."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0922-em-01",
+            "taskId": "task-20260922-resolve-quality-routing-deadline",
+            "label": "Clarify the held Quality-routing deadline",
+            "detail": "Mar asked how the original September 30 deadline should be handled while the project is on hold pending the new Phase 1 matter-plan structure. Reply with the interim status, revised decision point, and who will communicate the change."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0922-ooo-01",
+            "label": "Eugenia Barragan is out through October 1",
+            "detail": "Route time-sensitive CoE and portfolio decisions around her absence and make substitute ownership explicit."
+          },
+          {
+            "id": "tue-0922-ooo-02",
+            "label": "Sara is working from the Dublin office through Thursday",
+            "detail": "Use her local presence for coordination, but keep ownership and meeting follow-ups explicit across the distributed team."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0922-tom-01",
+            "label": "10:30 AM - Thiago 1:1 conflicts with Amazon Connect standup",
+            "detail": "Choose coverage today so the rollout checkpoint and Thiago's delivery discussion both keep moving."
+          },
+          {
+            "id": "tue-0922-tom-02",
+            "label": "Noon-1:00 PM - Protected work block",
+            "detail": "Reserve the hour for the EPMO weekly update and any deployment follow-up from Denver's Wednesday launch."
+          },
+          {
+            "id": "tue-0922-tom-03",
+            "label": "1:30-3:00 PM - Sara 1:1, EPMO team meeting, and Astrid overlap",
+            "detail": "The EPMO meeting overlaps the 2:30 PM Astrid 1:1 by 30 minutes. Decide whether to move the 1:1 or leave the team meeting with delegated coverage and a clear readout."
+          },
+          {
+            "id": "tue-0922-tom-04",
+            "label": "3:30 PM - Laura 1:1",
+            "detail": "Bring any communication and portfolio follow-ups that emerge from today's Legal Request Tool and team-lead discussions."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-09-21",
     "type": "eod",
     "date": "Monday, September 21 - End of Day",
