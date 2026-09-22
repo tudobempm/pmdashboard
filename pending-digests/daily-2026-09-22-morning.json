@@ -1,0 +1,894 @@
+{
+  "digest": {
+    "id": "daily-2026-09-22-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, September 22",
+    "isoDate": "2026-09-22",
+    "greeting": "Good morning, Jean. Tuesday, September 22 has five live meetings, two protected work blocks, one carried-over action, and two urgent priorities. The day turns on resolving the 10:30 AM three-way collision, locking Wednesday's Denver Amazon Connect deployment and the remaining rollout sequence, and framing the RFE MHE leadership decision due September 24. The clearest delivery risk is Amazon Connect: Denver is scheduled for tomorrow, but production-IDP testing and the RingCentral-to-SCV transition still have open operational issues.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0922-co-01",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CM-CoE backlog and intake path",
+            "detail": "The Phase 1 and 2 requests are intaked and prioritized but are not yet assigned to Sprint 19, while Timetrack of Stage Completion is still waiting on IT feedback. Confirm the next decision, owner, and follow-up date so the queue does not remain open-ended.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0922-sch-01",
+            "label": "10:30 AM - Three-way kickoff and standup collision",
+            "detail": "Attorney Review at Intake, the Amazon Connect standup, and the Jhara 1:1 occupy the same half hour. Jhara declined the 1:1 and proposed a new time; choose kickoff coverage, delegate the standup with a required deployment readout, and confirm the reschedule before the hour."
+          },
+          {
+            "id": "tue-0922-sch-02",
+            "label": "11:00 AM - EPMO weekly slide focus",
+            "detail": "Use the protected 30 minutes to turn today's deployment, intake, and portfolio decisions into the weekly meeting narrative."
+          },
+          {
+            "id": "tue-0922-sch-03",
+            "label": "12:00 PM - Legal Request Tool feedback overlaps blocked space",
+            "detail": "Bring specific pilot examples on triage, assignment, and visibility. Preserve the remaining 12:30-1:00 PM window to capture owners and follow-ups."
+          },
+          {
+            "id": "tue-0922-sch-04",
+            "label": "2:00 PM - EPMO team-lead weekly",
+            "detail": "Lead with the Amazon rollout risk, the RFE MHE decision, and the CoE queue so cross-team dependencies leave with named owners."
+          },
+          {
+            "id": "tue-0922-sch-05",
+            "label": "3:30 PM - Nicolas 1:1",
+            "detail": "Close delivery follow-ups, including the Knowledge Management pilot sponsor and scope confirmation assigned to Nicolas."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0922-ai-01",
+            "taskId": "task-20260922-amazon-denver-deployment-plan",
+            "label": "Lock the Denver deployment and remaining rollout sequence",
+            "detail": "Use the 10:30 AM standup to confirm Wednesday's Denver deployment, user counts and timing for the 11 approved offices, virtual phone users, and later IVR groups. Assign the production-IDP retest and the RingCentral transition communication; Hilary's capacity is the pacing constraint.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0922-ai-02",
+            "taskId": "task-20260922-decide-rfe-mhe-path",
+            "label": "Frame the RFE MHE decision due September 24",
+            "detail": "The project is 42% complete and the September 30 target is no longer achievable. Put the four paths in decision-ready form, including the option to refocus on 95 addressable VAWA RFEs without official USCIS due dates and the Legal, IT, capacity, and task-set implications of any scope change.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0922-ai-03",
+            "taskId": "task-20260922-launch-attorney-review-intake",
+            "label": "Set the Attorney Review implementation path at kickoff",
+            "detail": "Use the 10:30 AM kickoff to choose between the two proposed solutions, confirm the problem statement and scope, and leave with owners, milestones, and risks for the October 15 target."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0922-em-01",
+            "taskId": "task-20260922-resolve-quality-routing-deadline",
+            "label": "Clarify the held Quality-routing deadline",
+            "detail": "Mar asked how the original September 30 deadline should be handled while the project is on hold pending the new Phase 1 matter-plan structure. Reply with the interim status, revised decision point, and who will communicate the change."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0922-ooo-01",
+            "label": "Eugenia Barragan is out through October 1",
+            "detail": "Route time-sensitive CoE and portfolio decisions around her absence and make substitute ownership explicit."
+          },
+          {
+            "id": "tue-0922-ooo-02",
+            "label": "Sara is working from the Dublin office through Thursday",
+            "detail": "Use her local presence for coordination, but keep ownership and meeting follow-ups explicit across the distributed team."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0922-tom-01",
+            "label": "10:30 AM - Thiago 1:1 conflicts with Amazon Connect standup",
+            "detail": "Choose coverage today so the rollout checkpoint and Thiago's delivery discussion both keep moving."
+          },
+          {
+            "id": "tue-0922-tom-02",
+            "label": "Noon-1:00 PM - Protected work block",
+            "detail": "Reserve the hour for the EPMO weekly update and any deployment follow-up from Denver's Wednesday launch."
+          },
+          {
+            "id": "tue-0922-tom-03",
+            "label": "1:30-3:00 PM - Sara 1:1, EPMO team meeting, and Astrid overlap",
+            "detail": "The EPMO meeting overlaps the 2:30 PM Astrid 1:1 by 30 minutes. Decide whether to move the 1:1 or leave the team meeting with delegated coverage and a clear readout."
+          },
+          {
+            "id": "tue-0922-tom-04",
+            "label": "3:30 PM - Laura 1:1",
+            "detail": "Bring any communication and portfolio follow-ups that emerge from today's Legal Request Tool and team-lead discussions."
+          }
+        ]
+      }
+    ]
+  },
+  "state": {
+    "completed": {
+      "tue-0602-co-1": true,
+      "tue-0602-co-2": true,
+      "tue-0602-co-3": true,
+      "tue-0602-co-8": true,
+      "wed-0603-co-3": true,
+      "wed-0603-co-4": true,
+      "wed-0603-co-6": true,
+      "wed-0603-co-7": true,
+      "wed-0603-co-8": true,
+      "wed-0603-co-9": true,
+      "tue-0602-co-11": true,
+      "tue-0602-co-13": true,
+      "tue-0602-co-14": true,
+      "tue-0602-co-15": true,
+      "tue-0602-co-17": true,
+      "tue-0602-co-18": true,
+      "tue-0602-co-19": true,
+      "tue-0602-co-20": true,
+      "wed-0603-co-10": true,
+      "wed-0603-co-11": true,
+      "wed-0603-co-12": true,
+      "wed-0603-co-13": true,
+      "wed-0603-co-14": true,
+      "wed-0603-co-15": true,
+      "wed-0603-co-16": true,
+      "wed-0603-co-17": true,
+      "wed-0603-co-18": true,
+      "wed-0603-co-19": true,
+      "eod-0608-open-3": true,
+      "task-20260713-email-bill-b": true,
+      "task-20260717-coe-newsletter": true,
+      "task-20260812-prepare-uat-rca": true,
+      "task-20260813-set-pm-capacity": true,
+      "task-20260709-bcp-ir-followups": true,
+      "task-20260723-email-juniperlab": true,
+      "task-20260624-assign-mhe-rfe-pe": true,
+      "task-20260810-finish-jorge-sheet": true,
+      "task-20260819-complete-leadup-3a": true,
+      "task-20260820-install-docrio-290": true,
+      "task-20260612-revisar-epmo-portal": true,
+      "task-20260727-bd-maria-roadblocks": true,
+      "task-20260729-read-nadia-pto-note": true,
+      "task-20260811-check-colombia-team": true,
+      "task-20260622-route-billing-intake": true,
+      "task-20260626-use-eow-without-sara": true,
+      "task-20260708-ask-janet-ba-process": true,
+      "task-20260727-leadup-module-survey": true,
+      "task-20260727-travel-docs-sms-halo": true,
+      "task-20260806-replan-vawa-pa21-uat": true,
+      "task-20260825-follow-up-hassan-nta": true,
+      "task-20260619-work-smart-goals-kpis": true,
+      "task-20260708-send-pm-meeting-notes": true,
+      "task-20260728-resolve-1030-conflict": true,
+      "task-20260803-review-scv-uat-update": true,
+      "task-20260807-lead-bd-bonus-kickoff": true,
+      "task-20260810-resubmit-laura-review": true,
+      "task-20260820-reply-admin-candidate": true,
+      "task-20260825-review-eugenia-intake": true,
+      "task-20260902-send-august-hours-pto": true,
+      "task-20260616-coe-playbook-follow-up": true,
+      "task-20260616-staff-aug-it-alignment": true,
+      "task-20260625-track-baesman-slq-path": true,
+      "task-20260716-confirm-sms-ba-support": true,
+      "task-20260717-incident-response-bill": true,
+      "task-20260722-project-folders-friday": true,
+      "task-20260820-decide-slq-it-approach": true,
+      "task-20260825-run-amazon-connect-uat": true,
+      "task-20260827-resolve-laura-schedule": true,
+      "task-20260611-align-sara-timeline-kpi": true,
+      "task-20260722-discuss-pc-handoff-plan": true,
+      "task-20260727-amazon-connect-venn-uat": true,
+      "task-20260727-court-ct-intake-routing": true,
+      "task-20260728-danny-birthday-artifact": true,
+      "task-20260811-submit-spencer-feedback": true,
+      "task-20260818-date-vawa-post21-launch": true,
+      "task-20260824-set-contigo-pilot-model": true,
+      "task-20260831-set-sprint17-priorities": true,
+      "task-20260616-case-change-overlap-path": true,
+      "task-20260617-reply-craftio-beta-scope": true,
+      "task-20260622-confirm-slq-baesman-path": true,
+      "task-20260623-review-mar-june-26-leave": true,
+      "task-20260723-triage-new-intake-alerts": true,
+      "task-20260729-ashley-saltclick-context": true,
+      "task-20260729-review-new-intake-alerts": true,
+      "task-20260806-review-yash-latent-reply": true,
+      "task-20260812-lock-amazon-connect-plan": true,
+      "task-20260813-decide-reopen-cases-path": true,
+      "task-20260821-resolve-friday-conflicts": true,
+      "task-20260826-track-amazon-connect-uat": true,
+      "task-20260616-overdue-rippling-training": true,
+      "task-20260617-schedule-next-pm-workshop": true,
+      "task-20260617-staff-aug-touchpoint-prep": true,
+      "task-20260622-approve-pending-timecards": true,
+      "task-20260720-prepare-court-ead-scoping": true,
+      "task-20260805-confirm-thiago-reschedule": true,
+      "task-20260805-resolve-meeting-conflicts": true,
+      "task-20260807-prepare-sms-legal-handoff": true,
+      "task-20260810-clear-harassment-training": true,
+      "task-20260821-lock-amazon-uat-readiness": true,
+      "task-20260825-resolve-tuesday-conflicts": true,
+      "task-20260825-set-contigo-permanent-ivr": true,
+      "task-20260828-clean-asana-armando-sheet": true,
+      "task-20260828-follow-up-nadia-yesterday": true,
+      "task-20260828-review-eduanny-sop-access": true,
+      "task-20260609-close-coe-guide-follow-ups": true,
+      "task-20260609-confirm-kpi-final-approval": true,
+      "task-20260610-land-coe-owners-next-steps": true,
+      "task-20260610-review-i693-access-request": true,
+      "task-20260623-update-jorge-project-sheet": true,
+      "task-20260708-nicolas-owner-timestamp-ba": true,
+      "task-20260708-run-legal-portfolio-review": true,
+      "task-20260716-triage-phase1-intake-alert": true,
+      "task-20260717-lock-eow-project-decisions": true,
+      "task-20260804-secure-vawa-post21-handoff": true,
+      "task-20260806-align-oaa-brain-governance": true,
+      "task-20260806-resolve-thursday-conflicts": true,
+      "task-20260817-launch-security-technology": true,
+      "task-20260818-firstfire-aws-funding-risk": true,
+      "task-20260827-resolve-thursday-conflicts": true,
+      "task-20260828-align-quality-intake-scope": true,
+      "task-20260831-clarify-staff-aug-document": true,
+      "task-20260917-amazon-training-mitigation": true,
+      "task-20260611-submit-mid-year-touchpoints": true,
+      "task-20260612-follow-up-hr-survey-results": true,
+      "task-20260615-collect-venn-ticket-numbers": true,
+      "task-20260615-prepare-support-touchpoints": true,
+      "task-20260619-confirm-toggl-reminder-path": true,
+      "task-20260623-clarify-vendors-trace-owner": true,
+      "task-20260629-triage-phase-1-intake-alert": true,
+      "task-20260706-prepare-bd-portfolio-review": true,
+      "task-20260708-check-mental-health-charter": true,
+      "task-20260708-clear-rippling-overdue-task": true,
+      "task-20260708-review-laura-chatgpt-access": true,
+      "task-20260709-prepare-amazon-connect-sync": true,
+      "task-20260709-review-phase-2-intake-alert": true,
+      "task-20260713-prepare-travel-permit-scope": true,
+      "task-20260720-review-claude-passkey-alert": true,
+      "task-20260721-align-skills-amazon-connect": true,
+      "task-20260723-resolve-noon-amazon-overlap": true,
+      "task-20260729-check-roles-queues-analysis": true,
+      "task-20260729-triage-court-phase2-intakes": true,
+      "task-20260814-route-csc-lc-green-approval": true,
+      "task-20260820-decide-gary-sop-edit-access": true,
+      "task-20260827-monitor-legal-request-pilot": true,
+      "task-20260914-clear-overdue-rippling-task": true,
+      "task-20260624-track-mar-mhe-angel-response": true,
+      "task-20260625-align-court-pm-pe-transition": true,
+      "task-20260625-prepare-chicago-debrief-epmo": true,
+      "task-20260702-align-epmo-intake-ba-process": true,
+      "task-20260702-review-dashboard-pr7-preview": true,
+      "task-20260703-review-tomas-sop-edit-access": true,
+      "task-20260708-send-eugenia-pe-projects-sop": true,
+      "task-20260708-test-la-ai-change-management": true,
+      "task-20260709-schedule-janet-bd-transition": true,
+      "task-20260710-decide-dnc-enhancements-path": true,
+      "task-20260713-triage-denied-reentry-banner": true,
+      "task-20260716-align-amazonconnect-venn-ocm": true,
+      "task-20260716-prepare-coe-backlog-recovery": true,
+      "task-20260717-follow-up-katie-file-release": true,
+      "task-20260717-resolve-3pm-planning-overlap": true,
+      "task-20260721-prepare-csc-portfolio-review": true,
+      "task-20260721-resolve-230-calendar-overlap": true,
+      "task-20260729-review-ice-preparedness-miro": true,
+      "task-20260731-review-sms-consent-framework": true,
+      "task-20260804-clear-laura-sprint15-details": true,
+      "task-20260805-set-agentforce-capacity-plan": true,
+      "task-20260807-reset-amazon-connect-go-live": true,
+      "task-20260820-resolve-noon-triple-conflict": true,
+      "task-20260824-assign-sara-project-coverage": true,
+      "task-20260921-confirm-self-review-deadline": true,
+      "task-20260610-review-court-ead-deliverables": true,
+      "task-20260615-prepare-epmo-portfolio-review": true,
+      "task-20260617-check-litify-field-audit-path": true,
+      "task-20260619-resolve-mar-doc-access-ticket": true,
+      "task-20260624-follow-up-reorg-conversations": true,
+      "task-20260625-follow-coi-slq-legal-guidance": true,
+      "task-20260625-review-ice-preparedness-risks": true,
+      "task-20260626-confirm-staff-aug-raci-source": true,
+      "task-20260626-review-ic-communication-guide": true,
+      "task-20260626-review-sprint-13-project-load": true,
+      "task-20260630-adjust-epmo-liderazgo-cadence": true,
+      "task-20260702-prepare-sms-automation-status": true,
+      "task-20260707-loop-bd-court-intake-followup": true,
+      "task-20260713-align-bd-portfolio-transition": true,
+      "task-20260716-confirm-i90-taskset-direction": true,
+      "task-20260716-deploy-no-travel-client-comms": true,
+      "task-20260722-triage-cmcoe-follow-up-intake": true,
+      "task-20260728-monitor-client-comms-feedback": true,
+      "task-20260804-amazon-connect-delay-recovery": true,
+      "task-20260805-resolve-supabase-rls-exposure": true,
+      "task-20260810-verify-executive-report-aug10": true,
+      "task-20260917-attorney-review-intake-launch": true,
+      "task-20260612-approve-camilo-corrected-leave": true,
+      "task-20260615-confirm-staff-aug-at-risk-path": true,
+      "task-20260616-confirm-joe-azul-waiting-items": true,
+      "task-20260623-check-toggl-access-restriction": true,
+      "task-20260629-capture-pm-feedback-next-steps": true,
+      "task-20260629-review-cio-transition-workbook": true,
+      "task-20260708-align-thiago-bonus-restructure": true,
+      "task-20260720-shape-amazon-connect-one-pager": true,
+      "task-20260803-address-firstfire-aws-concerns": true,
+      "task-20260803-lock-bd-maria-roadblock-owners": true,
+      "task-20260804-launch-preparers-certification": true,
+      "task-20260807-prioritize-critical-court-work": true,
+      "task-20260812-review-supabase-security-alert": true,
+      "task-20260828-complete-amazon-migration-list": true,
+      "task-20260909-review-supabase-security-alert": true,
+      "task-20260609-check-supabase-security-warning": true,
+      "task-20260612-prepare-epmo-eow-executive-deck": true,
+      "task-20260612-reply-eugenia-danny-venn-issues": true,
+      "task-20260616-check-frank-report-requirements": true,
+      "task-20260619-review-mar-garcia-leave-request": true,
+      "task-20260624-prepare-jorge-transition-inputs": true,
+      "task-20260624-use-coe-touchpoint-for-capacity": true,
+      "task-20260625-complete-leadup-module-2a-check": true,
+      "task-20260626-confirm-dnc-enhancements-tester": true,
+      "task-20260626-finish-weekly-executive-updates": true,
+      "task-20260626-prepare-coi-slq-tuesday-support": true,
+      "task-20260629-review-it-spreadsheets-with-mar": true,
+      "task-20260701-write-anu-ba-staff-augmentation": true,
+      "task-20260713-review-universal-intake-changes": true,
+      "task-20260716-review-supabase-vulnerabilities": true,
+      "task-20260724-triage-coe-portal-asana-refresh": true,
+      "task-20260728-ashley-saltclick-amazon-connect": true,
+      "task-20260729-confirm-amazon-connect-coverage": true,
+      "task-20260806-route-court-a-number-escalation": true,
+      "task-20260807-resolve-service-cloud-collision": true,
+      "task-20260824-complete-leadup-module-2-survey": true,
+      "task-20260827-resolve-amazon-uat-call-routing": true,
+      "task-20260903-expand-client-notifications-sop": true,
+      "task-20260617-prepare-friday-epmo-presentation": true,
+      "task-20260622-prepare-mental-health-touchpoint": true,
+      "task-20260624-camilo-structure-mhe-rfe-support": true,
+      "task-20260624-confirm-trace-followon-placement": true,
+      "task-20260706-align-maria-portfolio-roadblocks": true,
+      "task-20260708-prepare-quality-planning-process": true,
+      "task-20260722-janet-nicolas-salesforce-support": true,
+      "task-20260724-prepare-epmo-eow-program-updates": true,
+      "task-20260811-decide-incidents-template-access": true,
+      "task-20260824-report-suspicious-security-email": true,
+      "task-20260826-amazon-connect-business-controls": true,
+      "task-20260831-clear-sales-revenue-cloud-owners": true,
+      "task-20260904-decide-attorney-calling-platform": true,
+      "task-20260907-complete-amazon-uat-access-check": true,
+      "task-20260610-monitor-docusign-taskset-guidance": true,
+      "task-20260611-decide-deleted-recording-restores": true,
+      "task-20260611-prepare-bcp-ir-and-portfolio-1-1s": true,
+      "task-20260612-advance-phase-2-sms-approvals-uat": true,
+      "task-20260612-complete-lead-up-module-2-prework": true,
+      "task-20260617-detention-pilot-approval-followup": true,
+      "task-20260618-confirm-phase-2-sms-handoff-to-it": true,
+      "task-20260618-follow-up-yuri-trace-tasksets-uat": true,
+      "task-20260623-prepare-intake-workflow-alignment": true,
+      "task-20260703-schedule-portfolio-owner-meetings": true,
+      "task-20260703-schedule-sms-marketing-phone-call": true,
+      "task-20260706-incident-response-incident-guides": true,
+      "task-20260716-track-epmo-automation-halo-ticket": true,
+      "task-20260728-prepare-amazon-connect-escalation": true,
+      "task-20260825-decide-change-management-staffing": true,
+      "task-20260609-decide-expired-staff-aug-recording": true,
+      "task-20260609-monitor-daca-i90-remaining-it-work": true,
+      "task-20260610-decide-discovery-recording-restore": true,
+      "task-20260616-prepare-pm-workshop-and-roadblocks": true,
+      "task-20260616-send-leadership-project-highlights": true,
+      "task-20260616-triage-business-development-intake": true,
+      "task-20260625-capture-sara-epmo-liderazgo-update": true,
+      "task-20260629-prepare-portfolio-review-decisions": true,
+      "task-20260629-schedule-nicolas-thiago-laura-1-1s": true,
+      "task-20260706-validar-ownership-portafolio-legal": true,
+      "task-20260724-clear-legal-change-management-sync": true,
+      "task-20260728-track-ipp-sales-plan-confirmations": true,
+      "task-20260729-answer-amazon-connect-quota-inputs": true,
+      "task-20260807-unblock-preparer-change-production": true,
+      "task-20260903-set-amazon-new-office-calling-path": true,
+      "task-20260908-decide-sara-training-agenda-access": true,
+      "task-20260610-resolve-dp-trace-staff-aug-coverage": true,
+      "task-20260611-confirm-epmo-offers-and-recognition": true,
+      "task-20260611-review-phase-2-projects-nadia-reply": true,
+      "task-20260616-review-weekly-epmo-portfolio-update": true,
+      "task-20260618-prepare-send-letters-queue-timeline": true,
+      "task-20260619-review-case-change-scoping-followup": true,
+      "task-20260626-note-overtime-interest-not-approved": true,
+      "task-20260701-triage-mental-health-eval-expansion": true,
+      "task-20260702-review-amazon-connect-delay-summary": true,
+      "task-20260706-agendar-reunion-marketing-portfolio": true,
+      "task-20260710-track-ice-preparedness-launch-risks": true,
+      "task-20260724-align-salesforce-pipeline-decisions": true,
+      "task-20260610-follow-up-epmo-liderazgo-commitments": true,
+      "task-20260610-verify-github-token-dashboard-access": true,
+      "task-20260618-review-billing-intake-shannon-cooper": true,
+      "task-20260619-triage-calendar-based-sms-automation": true,
+      "task-20260701-coordinate-trace-portfolio-followups": true,
+      "task-20260703-update-executive-project-status-deck": true,
+      "task-20260720-use-bd-portfolio-review-for-blockers": true,
+      "task-20260720-watch-ice-preparedness-critical-path": true,
+      "task-20260728-clear-legal-change-management-owners": true,
+      "task-20260806-confirm-amazon-connect-uat-readiness": true,
+      "task-20260825-email-incident-response-stakeholders": true,
+      "task-20260612-check-weekly-executive-project-thread": true,
+      "task-20260623-review-aos-rejection-downstream-tasks": true,
+      "task-20260626-review-slq-baesman-amendment-language": true,
+      "task-20260702-prepare-epmo-eow-programmatic-updates": true,
+      "task-20260703-check-dashboard-pages-deploy-failures": true,
+      "task-20260707-prepare-levelpath-adoption-assessment": true,
+      "task-20260707-reschedule-marketing-portfolio-review": true,
+      "task-20260803-prepare-salesforce-red-project-review": true,
+      "task-20260921-prepare-afternoon-portfolio-decisions": true,
+      "task-20260609-complete-nadias-affected-areas-request": true,
+      "task-20260609-review-staff-aug-prd-and-queue-impacts": true,
+      "task-20260622-use-staff-aug-touchpoint-for-open-asks": true,
+      "task-20260623-confirm-trace-taskset-issues-in-devops": true,
+      "task-20260625-watch-santiago-sharepoint-export-issue": true,
+      "task-20260721-prepare-jhara-mental-health-next-steps": true,
+      "task-20260904-confirm-salesforce-integration-account": true,
+      "task-20260609-clarify-incident-response-priority-path": true,
+      "task-20260609-close-project-coordinator-decision-loop": true,
+      "task-20260609-review-rippling-and-asana-overdue-tasks": true,
+      "task-20260616-review-incident-response-survey-results": true,
+      "task-20260618-unblock-staff-augmentation-it-ownership": true,
+      "task-20260722-capture-privilege-training-implications": true,
+      "task-20260610-review-detention-prevention-pilot-package": true,
+      "task-20260724-reply-latent-variables-platform-questions": true,
+      "task-20260622-clarify-incident-response-bucket-six-owner": true,
+      "task-20260709-track-legal-change-management-requirements": true,
+      "task-20260701-review-product-salesforce-roadmap-materials": true,
+      "task-20260723-forward-legal-change-management-walkthrough": true,
+      "task-20260630-follow-up-incident-response-irg-implementation": true,
+      "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true
+    },
+    "hidden": [
+      "tue-0602-co-1",
+      "tue-0602-co-2",
+      "tue-0602-co-3",
+      "tue-0602-co-6",
+      "tue-0602-co-8",
+      "tue-0602-co-11",
+      "tue-0602-co-13",
+      "tue-0602-co-14",
+      "tue-0602-co-15",
+      "tue-0602-co-16",
+      "tue-0602-co-17",
+      "tue-0602-co-18",
+      "tue-0602-co-19",
+      "tue-0602-co-20",
+      "tue-0602-co-21",
+      "tue-0602-co-22",
+      "tue-0602-co-23"
+    ],
+    "reactions": {
+      "task-20260619-work-smart-goals-kpis": {
+        "ts": 1782125244266,
+        "emoji": "❗"
+      },
+      "task-20260817-map-incident-triggers": {
+        "ts": 1786970410308,
+        "emoji": "🧠"
+      },
+      "task-20260721-track-levelpath-uat-sso": {
+        "ts": 1784811820336,
+        "emoji": "❗"
+      },
+      "task-20260828-clean-asana-armando-sheet": {
+        "ts": 1788447646046,
+        "emoji": "🧠"
+      },
+      "task-20260623-update-jorge-project-sheet": {
+        "ts": 1782255724792,
+        "emoji": "⭐"
+      },
+      "task-20260708-nicolas-owner-timestamp-ba": {
+        "ts": 1783513880877,
+        "emoji": "❗"
+      },
+      "task-20260804-secure-vawa-post21-handoff": {
+        "ts": 1785846876245,
+        "emoji": "⭐"
+      },
+      "task-20260612-follow-up-hr-survey-results": {
+        "ts": 1781301182670,
+        "emoji": "📌"
+      },
+      "task-20260615-collect-venn-ticket-numbers": {
+        "ts": 1781558448583,
+        "emoji": "❗"
+      },
+      "task-20260717-follow-up-katie-file-release": {
+        "ts": 1784579373025,
+        "emoji": "📌"
+      },
+      "task-20260824-assign-sara-project-coverage": {
+        "ts": 1787578018233,
+        "emoji": "❗"
+      },
+      "task-20260624-follow-up-reorg-conversations": {
+        "ts": 1782344501021,
+        "emoji": "❗"
+      },
+      "task-20260917-attorney-review-intake-launch": {
+        "ts": 1789733009128,
+        "emoji": "❗"
+      },
+      "task-20260625-complete-leadup-module-2a-check": {
+        "ts": 1782421879308,
+        "emoji": "❗"
+      },
+      "task-20260713-review-universal-intake-changes": {
+        "ts": 1783945206169,
+        "emoji": "⭐"
+      },
+      "task-20260914-confirm-compliance-pause-impact": {
+        "ts": 1789732993143,
+        "emoji": "❗"
+      },
+      "task-20260624-camilo-structure-mhe-rfe-support": {
+        "ts": 1782758333391,
+        "emoji": "📌"
+      },
+      "task-20260612-complete-lead-up-module-2-prework": {
+        "ts": 1781554727172,
+        "emoji": "⭐"
+      },
+      "task-20260703-schedule-portfolio-owner-meetings": {
+        "ts": 1783372070667,
+        "emoji": "📌"
+      },
+      "task-20260706-incident-response-incident-guides": {
+        "ts": 1783372091013,
+        "emoji": "📌"
+      },
+      "task-20260616-prepare-pm-workshop-and-roadblocks": {
+        "ts": 1781645955961,
+        "emoji": "⭐"
+      },
+      "task-20260618-prepare-send-letters-queue-timeline": {
+        "ts": 1781786202372,
+        "emoji": "📌"
+      }
+    },
+    "edits": {},
+    "reminders": [],
+    "reminderHistory": [
+      {
+        "id": "rem-1748998800000",
+        "text": "Seguimiento a stakeholders de Co-counsel network project. Go/no-go?",
+        "addedAt": "2026-06-04T00:00:00.000Z",
+        "archivedAt": "2026-06-05T12:00:05.000Z",
+        "shownInDigestId": "daily-2026-06-05-morning"
+      },
+      {
+        "id": "rem-1781260370260",
+        "text": "Revisar EPMO portal",
+        "addedAt": "2026-06-12T10:32:50.263Z",
+        "archivedAt": "2026-06-12T12:08:00.000Z",
+        "shownInDigestId": "daily-2026-06-12-morning"
+      },
+      {
+        "id": "rem-1781286691105",
+        "text": "Hacer follow up con HR para resultados de la survey",
+        "addedAt": "2026-06-12T17:51:31.105Z",
+        "archivedAt": "2026-06-15T12:05:00.000Z",
+        "shownInDigestId": "daily-2026-06-15-morning"
+      },
+      {
+        "id": "rem-1781295993671",
+        "text": "Responder al correo de Eugenia para Danny sobre problemas con Venn",
+        "addedAt": "2026-06-12T20:26:33.671Z",
+        "archivedAt": "2026-06-15T12:05:00.000Z",
+        "shownInDigestId": "daily-2026-06-15-morning"
+      },
+      {
+        "id": "rem-1781490578541",
+        "text": "Seguimiento a David para la creación del COE playbook",
+        "addedAt": "2026-06-15T02:29:38.541Z",
+        "archivedAt": "2026-06-16T12:10:00.000Z",
+        "scheduledFor": "2026-06-16",
+        "shownInDigestId": "daily-2026-06-16-morning"
+      },
+      {
+        "id": "rem-1781556116962",
+        "text": "solicitar a TMs los numeros de sus tickets de IT relacionados a Venn",
+        "addedAt": "2026-06-15T20:41:56.962Z",
+        "archivedAt": "2026-06-16T12:10:00.000Z",
+        "shownInDigestId": "daily-2026-06-16-morning"
+      },
+      {
+        "id": "rem-1781666120964",
+        "text": "Responder mensaje de Sara - importante",
+        "addedAt": "2026-06-17T03:15:20.964Z",
+        "archivedAt": "2026-06-17T12:10:00.000Z",
+        "shownInDigestId": "daily-2026-06-17-morning"
+      },
+      {
+        "id": "rem-1781666142436",
+        "text": "Preparar presentación para Reunión del Viernes sobre presentar EPMO",
+        "addedAt": "2026-06-17T03:15:42.436Z",
+        "archivedAt": "2026-06-17T12:10:00.000Z",
+        "shownInDigestId": "daily-2026-06-17-morning"
+      },
+      {
+        "id": "rem-1781743388436",
+        "text": "Seguimiento a Yuri - TRACE tasksets listos para UAT",
+        "addedAt": "2026-06-18T00:43:08.436Z",
+        "archivedAt": "2026-06-18T12:10:00.000Z",
+        "shownInDigestId": "daily-2026-06-18-morning"
+      },
+      {
+        "id": "rem-1781834123555",
+        "text": "Trabajar SMART goals de KPIs",
+        "addedAt": "2026-06-19T01:55:23.555Z",
+        "archivedAt": "2026-06-19T12:05:00.000Z",
+        "shownInDigestId": "daily-2026-06-19-morning"
+      },
+      {
+        "id": "rem-1782162620093",
+        "text": "Actualizar hoja de proyectos para Jorge (portafolio de Jill)",
+        "addedAt": "2026-06-22T21:10:20.093Z",
+        "archivedAt": "2026-06-23T12:04:22.000Z",
+        "shownInDigestId": "daily-2026-06-23-morning"
+      },
+      {
+        "id": "rem-1782344470983",
+        "text": "Hablar con Camilo: cambio de estructura y soporte para MHe RFE",
+        "addedAt": "2026-06-24T23:41:10.983Z",
+        "archivedAt": "2026-06-29T12:04:30.000Z",
+        "scheduledFor": "2026-06-29",
+        "shownInDigestId": "daily-2026-06-29-morning"
+      },
+      {
+        "id": "rem-1782727043746",
+        "text": "Agendar 1:1 con Nicolás, Thiago y Laura",
+        "addedAt": "2026-06-29T09:57:23.746Z",
+        "archivedAt": "2026-06-29T12:04:30.000Z",
+        "shownInDigestId": "daily-2026-06-29-morning"
+      },
+      {
+        "id": "rem-1782744730172",
+        "text": "Think goals for me - Sara",
+        "addedAt": "2026-06-29T14:52:10.172Z",
+        "archivedAt": "2026-06-30T12:05:00.000Z",
+        "shownInDigestId": "daily-2026-06-30-morning"
+      },
+      {
+        "id": "rem-1782904184106",
+        "text": "Escribirle a Anu sobre el porqué de un BA en Staff Augmentation",
+        "addedAt": "2026-07-01T11:09:44.106Z",
+        "archivedAt": "2026-07-01T12:06:00.000Z",
+        "shownInDigestId": "daily-2026-07-01-morning"
+      },
+      {
+        "id": "rem-1783113409687",
+        "text": "escribirle a Chelsea de legal para validar ownership del portafolio de legal",
+        "addedAt": "2026-07-03T21:16:49.687Z",
+        "shownInDigestId": "daily-2026-07-06-morning",
+        "archivedAt": "2026-07-06T13:23:00.000Z"
+      },
+      {
+        "id": "rem-1783113433300",
+        "text": "escribirle a los stakeholders de Incident Response para que terminen los incident guides",
+        "addedAt": "2026-07-03T21:17:13.300Z",
+        "shownInDigestId": "daily-2026-07-06-morning",
+        "archivedAt": "2026-07-06T13:23:00.000Z"
+      },
+      {
+        "id": "rem-1783113608770",
+        "text": "seguir trabajando en index de pm team en loop",
+        "addedAt": "2026-07-03T21:20:08.770Z",
+        "shownInDigestId": "daily-2026-07-06-morning",
+        "archivedAt": "2026-07-06T13:23:00.000Z"
+      },
+      {
+        "id": "rem-1783113622099",
+        "text": "agendar reunion con paige, lucia y amy de Marketing - portfolio",
+        "addedAt": "2026-07-03T21:20:22.099Z",
+        "shownInDigestId": "daily-2026-07-06-morning",
+        "archivedAt": "2026-07-06T13:23:00.000Z"
+      },
+      {
+        "id": "rem-1783458328492",
+        "text": "enviar al grupo de PMs las notas de la reunion de ayer",
+        "addedAt": "2026-07-07T21:05:28.492Z",
+        "shownInDigestId": "daily-2026-07-08-morning",
+        "archivedAt": "2026-07-08T17:41:19Z"
+      },
+      {
+        "id": "rem-1783458903069",
+        "text": "comenzar testeos de LA AI para change management",
+        "addedAt": "2026-07-07T21:15:03.069Z",
+        "shownInDigestId": "daily-2026-07-08-morning",
+        "archivedAt": "2026-07-08T17:41:19Z"
+      },
+      {
+        "id": "rem-1783458958449",
+        "text": "enviar a Eugenia lista de proyectos de los PEs y tambien el SOP template que acordamos como equipo para el nivel de detalle estandard",
+        "addedAt": "2026-07-07T21:15:58.449Z",
+        "shownInDigestId": "daily-2026-07-08-morning",
+        "archivedAt": "2026-07-08T17:41:19Z"
+      },
+      {
+        "id": "rem-1783458977061",
+        "text": "Preguntar a Janet proceso para conseguir BA a un proyecto ya. asignado a un PM",
+        "addedAt": "2026-07-07T21:16:17.061Z",
+        "shownInDigestId": "daily-2026-07-08-morning",
+        "archivedAt": "2026-07-08T17:41:19Z"
+      },
+      {
+        "id": "rem-1783566730001",
+        "text": "Enviar información por correo de Incident Response a Lucia Caamano",
+        "addedAt": "2026-07-09T03:12:10.001Z",
+        "shownInDigestId": "daily-2026-07-09-morning",
+        "archivedAt": "2026-07-09T12:23:44Z"
+      },
+      {
+        "id": "rem-1783566743228",
+        "text": "Agendar meeting con Janet para BD transition",
+        "addedAt": "2026-07-09T03:12:23.228Z",
+        "shownInDigestId": "daily-2026-07-09-morning",
+        "archivedAt": "2026-07-09T12:23:44Z"
+      },
+      {
+        "id": "rem-1783566755120",
+        "text": "Revisar notas de next steps en cuaderno",
+        "addedAt": "2026-07-09T03:12:35.120Z",
+        "shownInDigestId": "daily-2026-07-09-morning",
+        "archivedAt": "2026-07-09T12:23:44Z"
+      },
+      {
+        "id": "rem-1783680204373",
+        "text": "Enviar correo a Bill sobre Incident Response",
+        "addedAt": "2026-07-10T10:43:24.373Z",
+        "shownInDigestId": "daily-2026-07-10-morning",
+        "archivedAt": "2026-07-10T12:02:37Z"
+      },
+      {
+        "id": "rem-1783680236046",
+        "text": "Verificar Toggl y notificar a Sara",
+        "addedAt": "2026-07-10T10:43:56.046Z",
+        "shownInDigestId": "daily-2026-07-10-morning",
+        "archivedAt": "2026-07-10T12:02:37Z"
+      },
+      {
+        "id": "rem-1783680249080",
+        "text": "Enviar notas de reunión a Tudo Bem",
+        "addedAt": "2026-07-10T10:44:09.080Z",
+        "shownInDigestId": "daily-2026-07-10-morning",
+        "archivedAt": "2026-07-10T12:02:37Z"
+      },
+      {
+        "id": "rem-1783943794455",
+        "text": "Enviar correo a Bill B.",
+        "addedAt": "2026-07-13T11:56:34.455Z",
+        "shownInDigestId": "daily-2026-07-13-morning",
+        "archivedAt": "2026-07-13T12:12:57Z"
+      },
+      {
+        "id": "rem-1784236506152",
+        "text": "Trabajar con Bill para terminar Incident Response",
+        "addedAt": "2026-07-16T21:15:06.152Z",
+        "shownInDigestId": "daily-2026-07-17-morning",
+        "archivedAt": "2026-07-17T12:05:00.000Z"
+      },
+      {
+        "id": "rem-1784260797119",
+        "text": "Preguntar por newsletter del CoE",
+        "addedAt": "2026-07-17T03:59:57.119Z",
+        "shownInDigestId": "daily-2026-07-17-morning",
+        "archivedAt": "2026-07-17T12:05:00.000Z"
+      },
+      {
+        "id": "rem-1784297551175",
+        "text": "Follow up w/Katie in regards to File Release project not being found",
+        "addedAt": "2026-07-17T14:12:31.175Z",
+        "shownInDigestId": "daily-2026-07-20-morning",
+        "archivedAt": "2026-07-20T12:05:00.000Z"
+      },
+      {
+        "id": "rem-1784761576432",
+        "text": "Enviarle correo a la gente de JuniperLab (la Ia que estamos probando)",
+        "addedAt": "2026-07-22T23:06:16.432Z",
+        "shownInDigestId": "daily-2026-07-23-morning",
+        "archivedAt": "2026-07-23T12:05:42Z"
+      },
+      {
+        "id": "rem-1785187322347",
+        "text": "Continuar testeo de Latent Variables AI",
+        "addedAt": "2026-07-27T21:22:02.347Z",
+        "shownInDigestId": "daily-2026-07-30-morning",
+        "archivedAt": "2026-07-30T12:38:26Z"
+      },
+      {
+        "id": "rem-1785187335705",
+        "text": "Crear artifact sobre cumpleaños de DAnny",
+        "addedAt": "2026-07-27T21:22:15.705Z",
+        "shownInDigestId": "daily-2026-07-30-morning",
+        "archivedAt": "2026-07-30T12:38:26Z"
+      },
+      {
+        "id": "rem-1785187535023",
+        "text": "crear algo visual usando el transcript de la reunion de CoE con los PCs",
+        "addedAt": "2026-07-27T21:25:35.023Z",
+        "shownInDigestId": "daily-2026-07-30-morning",
+        "archivedAt": "2026-07-30T12:38:26Z"
+      },
+      {
+        "id": "rem-1785187911973",
+        "text": "Escribirle a Ashley de Saltclick - Due date Amazon connect es 17 abril and we're flying blind",
+        "addedAt": "2026-07-27T21:31:51.973Z",
+        "shownInDigestId": "daily-2026-07-30-morning",
+        "archivedAt": "2026-07-30T12:38:26Z"
+      },
+      {
+        "id": "rem-1786137661331",
+        "text": "Terminar Hoja de Jorge",
+        "addedAt": "2026-08-07T21:21:01.331Z",
+        "shownInDigestId": "daily-2026-08-10-morning",
+        "archivedAt": "2026-08-10T12:07:24.208Z"
+      },
+      {
+        "id": "rem-1787607430811",
+        "text": "Revisar intake en el que Eugenia dejo comentario",
+        "addedAt": "2026-08-24T21:37:10.811Z",
+        "shownInDigestId": "daily-2026-08-25-morning",
+        "archivedAt": "2026-08-25T12:05:55.468Z"
+      },
+      {
+        "id": "rem-1787607439606",
+        "text": "Enviar correo a stakeholders de Incident Response",
+        "addedAt": "2026-08-24T21:37:19.606Z",
+        "shownInDigestId": "daily-2026-08-25-morning",
+        "archivedAt": "2026-08-25T12:05:55.468Z"
+      },
+      {
+        "id": "rem-1787610206364",
+        "text": "Hacer seguimiento a proyecto de Hassan de NTA",
+        "addedAt": "2026-08-24T22:23:26.364Z",
+        "shownInDigestId": "daily-2026-08-25-morning",
+        "archivedAt": "2026-08-25T12:05:55.468Z"
+      },
+      {
+        "id": "rem-1787864806253",
+        "text": "limpiar asana con spreadsheet de Armando",
+        "addedAt": "2026-08-27T21:06:46.253Z",
+        "shownInDigestId": "daily-2026-08-28-morning",
+        "archivedAt": "2026-08-28T12:04:44.674Z",
+        "lastModified": 1787918684674
+      },
+      {
+        "id": "rem-1787867738477",
+        "text": "Escribirle a Nadia para saber que paso ayer",
+        "addedAt": "2026-08-27T21:55:38.477Z",
+        "shownInDigestId": "daily-2026-08-28-morning",
+        "archivedAt": "2026-08-28T12:04:44.674Z",
+        "lastModified": 1787918684674
+      }
+    ],
+    "assigneeOverrides": {},
+    "lastModified": 1790017906138
+  }
+}
