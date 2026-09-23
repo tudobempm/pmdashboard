@@ -1,0 +1,133 @@
+{
+  "digest": {
+    "id": "daily-2026-09-23-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, September 23",
+    "isoDate": "2026-09-23",
+    "greeting": "Good morning, Jean. Wednesday, September 23 has seven meetings, two protected work blocks, five carried-over actions, and three urgent priorities. The day turns on re-evaluating Denver's Amazon Connect go-live after 11:00 AM testing, using the 10:30 AM privileged Attorney Review session to lock the October 15 operating design, and preparing the RFE MHE leadership decision due tomorrow. The clearest immediate risk is Amazon Connect: transfers are not connecting and direct-to-agent calls are not notifying the assigned agent. The dashboard state snapshot has not changed since Monday afternoon, so carry-over is also grounded in Tuesday's end-of-day record and may lag newer dashboard check-offs.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0923-co-01",
+            "taskId": "task-20260922-amazon-denver-deployment-plan",
+            "label": "Reassess Denver go-live after 11:00 AM testing",
+            "detail": "Denver will not launch first thing today. Testing resumes at 11:00 AM ET on two functional blockers: transfers ring but do not connect, and direct-to-agent routing assigns the call without notifying the agent. Make the later-today go/no-go call, then set the rollout decision for the remaining offices this afternoon.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0923-co-02",
+            "taskId": "task-20260922-launch-attorney-review-intake",
+            "label": "Finalize the Attorney Review operating design",
+            "detail": "Use the 10:30 AM privileged session to test Service Cloud feasibility across BD and attorney teams, confirm scripts, queues, routing, training, and legal constraints, and leave with owners for the October 15 deadline. Do not record or use AI transcription.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0923-co-03",
+            "taskId": "task-20260922-decide-rfe-mhe-path",
+            "label": "Put the RFE MHE choice in decision-ready form",
+            "detail": "Leadership's decision is due September 24. Frame the four paths with their Legal, IT, capacity, and task-set implications; the project is 42% complete and the September 30 target is no longer achievable.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0923-co-04",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CM-CoE backlog and intake path",
+            "detail": "This has remained unresolved since September 14. Confirm the owner and decision needed before tomorrow's Sprint 19 prioritization call; Phase 1 and 2 requests are prioritized but still not assigned, and Timetrack of Stage Completion is awaiting IT feedback.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0923-co-05",
+            "taskId": "task-20260922-resolve-quality-routing-deadline",
+            "label": "Clarify the held Quality-routing deadline",
+            "detail": "Reply with the interim status, revised decision point, and communication owner while the work waits for the new Phase 1 matter-plan structure.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0923-sch-01",
+            "label": "10:30 AM - Attorney Review and Amazon Connect collide",
+            "detail": "Prioritize the privileged Attorney Review design session and delegate the Amazon Connect standup with a required readout before testing begins at 11:00 AM ET."
+          },
+          {
+            "id": "wed-0923-sch-02",
+            "label": "11:30 AM - Thiago 1:1",
+            "detail": "Use the immediate follow-on to confirm Denver test ownership, the go/no-go communication, and who will set the remaining office milestones."
+          },
+          {
+            "id": "wed-0923-sch-03",
+            "label": "Noon - Protected work block",
+            "detail": "Use the hour to close the RFE MHE decision frame and capture any Attorney Review follow-ups before the afternoon meeting run."
+          },
+          {
+            "id": "wed-0923-sch-04",
+            "label": "1:30 PM - Sara 1:1 into the 2:00 PM EPMO team meeting",
+            "detail": "Align privately on the Attorney Review scope, Amazon rollout posture, and decision asks, then carry the agreed owners into the team forum."
+          },
+          {
+            "id": "wed-0923-sch-05",
+            "label": "3:30 PM - Laura 1:1",
+            "detail": "Bring the communication follow-ups from the rollout and the held Quality-routing deadline."
+          },
+          {
+            "id": "wed-0923-sch-06",
+            "label": "4:00 PM - Weekly preparation into the 4:30 PM Astrid 1:1",
+            "detail": "Turn today's decisions into a concise weekly narrative, then use the Astrid discussion to close the final dependency or owner gaps."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0923-ooo-01",
+            "label": "Eugenia Barragan is out through October 1",
+            "detail": "Route time-sensitive CoE and portfolio decisions around her absence and make substitute ownership explicit."
+          },
+          {
+            "id": "wed-0923-ooo-02",
+            "label": "Sara is working from the Dublin office through Thursday",
+            "detail": "Keep cross-time-zone ownership and same-day follow-ups explicit."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0923-tom-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Bring today's Denver go/no-go result and the decision for subsequent offices."
+          },
+          {
+            "id": "wed-0923-tom-02",
+            "label": "1:00 PM - Sprint 19 prioritization overlaps Incident Response",
+            "detail": "The prioritization call runs until 1:45 PM while the BCP/Incident Response meeting starts at 1:30 PM. Choose coverage and make the CM-CoE backlog decision available before the call."
+          },
+          {
+            "id": "wed-0923-tom-03",
+            "label": "2:00 PM - Firmwide Meeting invite needs confirmation",
+            "detail": "The calendar contains both a canceled invite and an active replacement for the same hour; confirm which one is current before planning around it."
+          },
+          {
+            "id": "wed-0923-tom-04",
+            "label": "4:00 PM - Tudo Bem weekly meeting",
+            "detail": "Use the main coordination forum to report the Amazon rollout outcome, RFE MHE decision, and any remaining cross-team roadblocks."
+          }
+        ]
+      }
+    ]
+  }
+}
