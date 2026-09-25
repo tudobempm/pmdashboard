@@ -1,5 +1,124 @@
 [
   {
+    "id": "eod-2026-09-25",
+    "type": "eod",
+    "date": "Friday, September 25 - End of Day",
+    "isoDate": "2026-09-25",
+    "greeting": "Good evening, Jean. Today stayed focused on delegated coverage while you were out, and Monday’s calendar is set. Eight follow-ups remain open, led by the Amazon Connect, Attorney Review, and self-review items that need early confirmation.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0925-open-1",
+            "taskId": "task-20260924-remind-team-self-reviews",
+            "label": "Confirm all five team self-reviews with HR",
+            "detail": "Jean told HR that the team had completed the self-reviews and asked for confirmation, but a later HR message still listed Laura and Mar. Confirm all five submissions are recorded as complete.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0925-open-2",
+            "taskId": "task-20260922-amazon-denver-deployment-plan",
+            "label": "Set Amazon Connect coverage and the revised Denver path",
+            "detail": "Salesforce still had no resolution by late afternoon, although Ashley escalated with the Salesforce account executive. Confirm Monday’s coverage, close the user and queue checks, and set the go/no-go posture for the proposed Tuesday, September 29 Denver deployment.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0925-open-3",
+            "taskId": "task-20260922-launch-attorney-review-intake",
+            "label": "Choose the Attorney Review launch and coverage plan",
+            "detail": "More than 23 appointments are booked for the October 17 Salt Lake City opening, and the email thread still did not show a full attorney-coverage solution. Confirm coverage and whether the rollout remains October 17 or moves to October 19.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0925-open-4",
+            "taskId": "task-20260922-decide-rfe-mhe-path",
+            "label": "Record and communicate the RFE MHE hold",
+            "detail": "The project remains paused while Legal guidance and historical data are reviewed. Document the review owners, the trigger for resuming planning, and the effect on scope and timing.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0925-open-5",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CM-CoE backlog and Sprint 19 path",
+            "detail": "Confirm owners and Sprint placement for the Phase 1 and Phase 2 requests, and set a follow-up date for the Timetrack feedback so the queue does not remain open-ended.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0925-open-6",
+            "taskId": "task-20260925-follow-up-amy-incident-comms",
+            "label": "Connect with Amy on Incident Response communications",
+            "detail": "Confirm the Bucket 6 notification trigger, communication owner, and remaining Incident Response Guide inputs with Amy, who is leading internal communications and PR."
+          },
+          {
+            "id": "eod-0925-open-7",
+            "taskId": "task-20260924-share-compliance-guidance",
+            "label": "Share the new legal-guidance protocol with the remaining PMs",
+            "detail": "Explain when to include Leo, Raquel, or Cristian and ask teams to distinguish mandatory legal requirements from recommendations."
+          },
+          {
+            "id": "eod-0925-open-8",
+            "taskId": "task-20260922-resolve-quality-routing-deadline",
+            "label": "Clarify the held Quality-routing deadline",
+            "detail": "Send the interim status, revised decision point, and communication owner while the work waits for the new Phase 1 matter-plan structure."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0925-cancel-1",
+            "label": "The 10:30 AM Salesforce Program Standup was canceled",
+            "detail": "The separate Amazon Connect daily standup remained active."
+          },
+          {
+            "id": "eod-0925-cancel-2",
+            "label": "The 2:30 PM project pipeline weekly sync was canceled",
+            "detail": "The cancellation was confirmed in Teams and on the calendar."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0925-mon-1",
+            "label": "8:00 AM - Approve timecards and prepare the week",
+            "detail": "Clear approvals and turn Friday’s delegated readouts into Monday priorities.",
+            "time": "8:00 AM"
+          },
+          {
+            "id": "eod-0925-mon-2",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Bring the Salesforce escalation status, completed testing prerequisites, and a firm go/no-go posture for Tuesday’s proposed Denver deployment.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-0925-mon-3",
+            "label": "Noon-1:30 PM - Protected work block",
+            "detail": "Reserve the time for Amazon Connect and Attorney Review follow-through before the afternoon meetings.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "eod-0925-mon-4",
+            "label": "2:00-4:00 PM - BD review and back-to-back 1:1s",
+            "detail": "The BD Portfolio Review is followed by 1:1s with Maria and Rahul. Use the sequence to settle the new-client scoping path, portfolio ownership, and next-week commitments.",
+            "time": "2:00 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-09-25-morning",
     "type": "daily",
     "date": "Morning - Friday, September 25",
