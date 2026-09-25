@@ -1,5 +1,162 @@
 [
   {
+    "id": "daily-2026-09-25-morning",
+    "type": "daily",
+    "date": "Morning - Friday, September 25",
+    "isoDate": "2026-09-25",
+    "greeting": "Good morning, Jean. Friday, September 25 is marked out of office, but four live calendar commitments remain, with five carried-over actions and four urgent items. The day’s priorities are ensuring Amazon Connect coverage while Jean and Nadia are away, resolving the Attorney Review launch-date conflict, and getting five team self-reviews submitted by end of day. The clearest delivery risk remains Amazon Connect: the Salesforce blocker is unresolved, Denver has moved toward a September 29 target, and the production skill-assignment file is incomplete. Dashboard completion state has not changed since Monday afternoon, so carry-over may lag newer check-offs.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0925-co-01",
+            "taskId": "task-20260922-amazon-denver-deployment-plan",
+            "label": "Set Amazon Connect coverage and the revised Denver path",
+            "detail": "Salesforce support is still investigating the blocker, and SaltClick recommends moving Denver to Tuesday, September 29 because testing is incomplete and the office closes early today. With Jean and Nadia out and Jenn missing the standup, confirm Ashley, Jacob, and Nicole have decision coverage; also close the missing-user audit, virtual-queue list, and self-service testing instructions.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0925-co-02",
+            "taskId": "task-20260922-launch-attorney-review-intake",
+            "label": "Choose the Attorney Review launch and coverage plan",
+            "detail": "The Service Cloud package is ready for configuration and must be testable before October 15. Decide whether attorneys will cover the Salt Lake City opening on Saturday, October 17, when 26 appointments are already booked, or whether rollout moves to October 19.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0925-co-03",
+            "taskId": "task-20260922-decide-rfe-mhe-path",
+            "label": "Record and communicate the RFE MHE hold",
+            "detail": "Shelley and Jill confirmed the project will pause while Legal guidance and historical data are reviewed; the September 30 target no longer applies. Ensure the status, review owners, and trigger for resuming scope and timeline planning are explicit.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-0925-co-04",
+            "taskId": "task-20260914-confirm-compliance-pause-impact",
+            "label": "Set the CM-CoE backlog and Sprint 19 path",
+            "detail": "This has remained unresolved since September 14. Confirm owners and Sprint placement for the Phase 1 and Phase 2 requests, and set a follow-up date for the Timetrack feedback so the queue does not stay open-ended.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-0925-co-05",
+            "taskId": "task-20260922-resolve-quality-routing-deadline",
+            "label": "Clarify the held Quality-routing deadline",
+            "detail": "Send the interim status, revised decision point, and communication owner while the work waits for the new Phase 1 matter-plan structure.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0925-sch-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "The separate Salesforce Program Standup is canceled, but this deployment checkpoint remains active. Use delegated coverage to confirm the Salesforce escalation, September 29 target, and owners for the open data and testing tasks."
+          },
+          {
+            "id": "fri-0925-sch-02",
+            "label": "Noon - Protected work block",
+            "detail": "Keep this hour protected while out of office; route only genuinely time-sensitive decisions through the named coverage owners."
+          },
+          {
+            "id": "fri-0925-sch-03",
+            "label": "2:30 PM - Project pipeline weekly sync",
+            "detail": "The agenda covers intake prioritization, BA assignment, active-project changes, and UAT readiness. Ask for a concise readout rather than joining unless a decision cannot wait."
+          },
+          {
+            "id": "fri-0925-sch-04",
+            "label": "3:00 PM - Sprint review and executive update collide",
+            "detail": "The IT Litify Sprint 18 stakeholder review overlaps the Executive Project Status Slide Update. Confirm separate coverage and collect both readouts after the meetings."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0925-ai-01",
+            "taskId": "task-20260924-remind-team-self-reviews",
+            "label": "Close five team self-reviews by end of day",
+            "detail": "Jhara, Laura, and Mar are in progress; Armando and Thiago had not started when HR sent the update. Send the reminders early and confirm all five submissions before today’s deadline.",
+            "urgent": true
+          },
+          {
+            "id": "fri-0925-ai-02",
+            "taskId": "task-20260925-follow-up-amy-incident-comms",
+            "label": "Connect with Amy on Incident Response communications",
+            "detail": "Lucia said Amy is leading internal communications and PR. Follow up to close the Bucket 6 notification trigger, owner, and Incident Response Guide inputs without reopening questions already settled with Lucia."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-0925-em-01",
+            "taskId": "task-20260924-share-compliance-guidance",
+            "label": "Share the new legal-guidance protocol with the remaining PMs",
+            "detail": "Sara asked Jean and Jorge to extend the guidance beyond compliance PMs. Explain when to include Leo, Raquel, or Cristian, and require teams to distinguish mandatory legal requirements from recommendations."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0925-ooo-01",
+            "label": "Jean is out of office today",
+            "detail": "Keep attendance delegated and reserve direct escalation for decisions that cannot wait until Monday."
+          },
+          {
+            "id": "fri-0925-ooo-02",
+            "label": "Nadia is on PTO today",
+            "detail": "Amazon Connect and Salesforce-program decisions need explicit alternate ownership."
+          },
+          {
+            "id": "fri-0925-ooo-03",
+            "label": "Eugenia Barragan is out through October 1",
+            "detail": "Continue routing time-sensitive CoE and portfolio decisions around her absence."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-0925-mon-01",
+            "label": "8:00 AM - Approve timecards and prepare the week",
+            "detail": "Use the opening hour to clear approvals and turn today’s delegated readouts into Monday priorities."
+          },
+          {
+            "id": "fri-0925-mon-02",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Bring the Salesforce escalation status, completed testing prerequisites, and a firm go/no-go posture for Tuesday’s proposed Denver deployment."
+          },
+          {
+            "id": "fri-0925-mon-03",
+            "label": "Noon-1:30 PM - Protected work block",
+            "detail": "Reserve the 90 minutes for Amazon Connect and Attorney Review follow-through before the afternoon meeting sequence."
+          },
+          {
+            "id": "fri-0925-mon-04",
+            "label": "2:00-4:00 PM - BD review and back-to-back 1:1s",
+            "detail": "The BD Portfolio Review leads into Maria and Rahul 1:1s. Use the sequence to settle the new-client scoping path, portfolio ownership, and next-week commitments."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-09-24",
     "type": "eod",
     "date": "Thursday, September 24 - End of Day",
