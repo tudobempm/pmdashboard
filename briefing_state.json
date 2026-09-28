@@ -230,6 +230,7 @@
     "task-20260824-complete-leadup-module-2-survey": true,
     "task-20260827-resolve-amazon-uat-call-routing": true,
     "task-20260903-expand-client-notifications-sop": true,
+    "task-20260914-confirm-compliance-pause-impact": true,
     "task-20260617-prepare-friday-epmo-presentation": true,
     "task-20260622-prepare-mental-health-touchpoint": true,
     "task-20260624-camilo-structure-mhe-rfe-support": true,
@@ -755,5 +756,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1790017906138
+  "lastModified": 1790602007184
 }
