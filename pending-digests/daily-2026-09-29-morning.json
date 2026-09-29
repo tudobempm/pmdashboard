@@ -1,0 +1,181 @@
+{
+  "digest": {
+    "id": "daily-2026-09-29-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, September 29",
+    "isoDate": "2026-09-29",
+    "greeting": "Good morning, Jean. Tuesday, September 29 has nine meetings, two protected work blocks, nine carried-over actions, and five urgent items. The day’s priorities are setting the Amazon Connect recovery and Denver go/no-go posture at 10:30 AM, using the Attorney Review sessions to lock the October launch and SLC coverage plan, and assigning coverage for the 2:00 PM three-way conflict and 4:00 PM overlap. Amazon Connect remains the clearest delivery risk: Denver is still on hold while Salesforce investigates an account-wide production issue, although the test user is working and Denver training is complete.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0929-co-01",
+            "taskId": "task-20260922-amazon-denver-deployment-plan",
+            "label": "Set Amazon Connect recovery and the revised Denver path",
+            "detail": "Salesforce is handling the case at its highest support tier, with configuration, queue assignment, permissions, and agent-state synchronization still the leading suspects. A dedicated test user can log in and Denver training is complete; use the 10:30 AM standup to confirm the isolation owner, next test, and Denver go/no-go posture.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0929-co-02",
+            "taskId": "task-20260922-launch-attorney-review-intake",
+            "label": "Choose the Attorney Review launch and SLC coverage plan",
+            "detail": "The process is expected to go live October 15, ahead of the October 17 SLC opening with 25+ appointments. Use today’s 2:00 PM BD and 4:00 PM workflow sessions to confirm attorney coverage, rollout timing, and the owner for any remaining testable Service Cloud work.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0929-co-03",
+            "taskId": "task-20260922-decide-rfe-mhe-path",
+            "label": "Set the revised Mental Health RFE scope",
+            "detail": "The work remains paused after the USCIS policy change reduced the eligible hard-deadline population. Confirm the sponsor decision among the roughly 95 VAWA cases, first-submission, or refile scope, then record the review owners and new planning trigger.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0929-co-04",
+            "taskId": "task-20260924-remind-team-self-reviews",
+            "label": "Confirm all five team self-reviews with HR",
+            "detail": "Jean reported the team’s self-reviews complete, but a later HR message still listed Laura and Mar. Confirm all five submissions are recorded before closing the item.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0929-co-05",
+            "taskId": "task-20260925-triage-proactive-payday",
+            "label": "Prioritize the Proactive Payday Notification intake",
+            "detail": "The CFO-backed request is now in the CM-CoE queue. Confirm its priority, scope, and next owner so the intake moves without delay.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-0929-co-06",
+            "taskId": "task-20260925-follow-up-amy-incident-comms",
+            "label": "Connect with Amy on Incident Response communications",
+            "detail": "Confirm the Bucket 6 notification trigger, communication owner, and remaining Incident Response Guide inputs with Amy.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0929-co-07",
+            "taskId": "task-20260922-resolve-quality-routing-deadline",
+            "label": "Clarify the held Quality-routing deadline",
+            "detail": "Send the interim status, revised decision point, and communication owner while the work waits for the new Phase 1 matter-plan structure.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0929-co-08",
+            "taskId": "task-20260924-share-compliance-guidance",
+            "label": "Share the new legal-guidance protocol with the remaining PMs",
+            "detail": "The Legal Request Tool is live. Brief the remaining PMs on when to include Leo, Raquel, or Cristian and how to separate mandatory legal guidance from recommendations.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-0929-co-09",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the newly launched downward reviews",
+            "detail": "The review cycle is open through October 15. Confirm the assigned reviews and reserve writing time before the meeting-heavy week compresses the available window.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0929-sch-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Set the owner and next diagnostic for the Salesforce production issue, then leave with a Denver go/no-go posture and a plan for the remaining office-readiness gaps.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "tue-0929-sch-02",
+            "label": "11:00 AM-1:30 PM - Slides, scoping, and 1:1 sequence",
+            "detail": "Protect the 11:00 AM slides block. At 11:30 AM, the Close Case scoping call conflicts with Jhara’s 1:1; choose coverage before using the 12:30 PM block for follow-through.",
+            "time": "11:00 AM"
+          },
+          {
+            "id": "tue-0929-sch-03",
+            "label": "2:00 PM - Three-way decision conflict",
+            "detail": "CM-CoE Court Projects Review, the Attorney Review BD working session, and the EPMO leadership catch-up begin together. Assign coverage and define the decisions each readout must return.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "tue-0929-sch-04",
+            "label": "3:30 PM - Nicolas 1:1",
+            "detail": "Use the clean half hour to settle portfolio ownership and any items that need escalation into the 4:00 PM sessions.",
+            "time": "3:30 PM"
+          },
+          {
+            "id": "tue-0929-sch-05",
+            "label": "4:00 PM - SLC workflow and CSC portfolio overlap",
+            "detail": "Choose coverage so the Attorney Review opening plan and the initial CSC portfolio review both end with named owners and next steps.",
+            "time": "4:00 PM"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-0929-ai-01",
+            "taskId": "task-20260929-resolve-tuesday-conflicts",
+            "label": "Assign coverage for today’s meeting conflicts",
+            "detail": "Resolve the 11:30 AM, 2:00 PM, and 4:00 PM overlaps early. Name the attendee for each session and the decision or readout Jean needs back.",
+            "urgent": true
+          },
+          {
+            "id": "tue-0929-ai-02",
+            "taskId": "task-20260929-scope-close-case-taskset",
+            "label": "Lock the Close Case Taskset scope",
+            "detail": "Use the 11:30 AM scoping call to define the process for voluntary termination of non-submitted cases, clarify affected phases, and leave with an owner and next deliverable."
+          },
+          {
+            "id": "tue-0929-ai-03",
+            "taskId": "task-20260929-close-sales-cloud-decisions",
+            "label": "Close the overdue Sales Cloud decisions",
+            "detail": "The party-record migration decision and Lead Source/Source Type cleanup are both overdue, blocking UAT and training. Confirm the decision owners and dates with the sponsors."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0929-ooo-01",
+            "label": "Eugenia Barragán is out through October 1",
+            "detail": "Route time-sensitive CoE and portfolio decisions around her absence."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-0929-tom-01",
+            "label": "10:30 AM - Thiago 1:1 overlaps the Amazon Connect standup",
+            "detail": "Choose coverage so the deployment checkpoint and Thiago’s portfolio discussion both retain a clear decision path.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "tue-0929-tom-02",
+            "label": "2:00-3:00 PM - EPMO meeting overlaps Astrid’s 1:1",
+            "detail": "Astrid’s 2:30 PM 1:1 sits inside the team meeting; move it or assign coverage before Wednesday.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "tue-0929-tom-03",
+            "label": "3:30 PM - Legal portfolio review conflicts with Laura’s 1:1",
+            "detail": "Laura expects to be driving around this time and already suggested a new slot. Reschedule the 1:1 so the Legal portfolio review remains covered.",
+            "time": "3:30 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
