@@ -1,5 +1,148 @@
 [
   {
+    "id": "eod-2026-09-29",
+    "type": "eod",
+    "date": "Tuesday, September 29 - End of Day",
+    "isoDate": "2026-09-29",
+    "greeting": "Good evening, Jean. One major delivery-risk item moved forward, while the remaining follow-ups are concentrated across attorney review, performance reviews, and intake decisions. Wednesday is meeting-heavy again, with the tightest overlap at 4:00 PM.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0929-done-1",
+            "label": "Set the Amazon Connect recovery and Denver rollout path",
+            "detail": "Salesforce identified likely Unified Routing configuration changes for SaltClick to apply and retest, and Denver training was complete."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0929-open-1",
+            "taskId": "task-20260922-launch-attorney-review-intake",
+            "label": "Finalize the Attorney Review launch and SLC coverage plan",
+            "detail": "Confirm attorney coverage, the October rollout sequence, and the owner for any remaining Service Cloud work. Today’s session also surfaced the need to account for the attorney-review wait and late virtual appointments.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0929-open-2",
+            "taskId": "task-20260922-decide-rfe-mhe-path",
+            "label": "Set the revised Mental Health RFE scope",
+            "detail": "Choose the eligible case population, review owners, and the new planning trigger after the USCIS policy change reduced the hard-deadline population.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0929-open-3",
+            "taskId": "task-20260924-remind-team-self-reviews",
+            "label": "Close the remaining performance-review follow-ups",
+            "detail": "Confirm all five team self-reviews are recorded, schedule the remaining downward reviews before October 15, and coordinate with Eugenia so Laura receives feedback from both managers.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0929-open-4",
+            "taskId": "task-20260925-triage-proactive-payday",
+            "label": "Prioritize the Proactive Payday Notification intake",
+            "detail": "Confirm the request’s priority, scope, and next owner so the CFO-backed intake can move forward.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0929-open-5",
+            "taskId": "task-20260929-resolve-tuesday-conflicts",
+            "label": "Close the loop on today’s overlapping meetings",
+            "detail": "Collect the decisions and named next steps from the 2:00 PM and 4:00 PM sessions that Jean could not cover directly.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0929-open-6",
+            "taskId": "task-20260929-scope-close-case-taskset",
+            "label": "Lock the Close Case Taskset scope",
+            "detail": "Define the process for voluntary termination of non-submitted cases, clarify the affected phases, and assign the next deliverable. The working session indicated that a brief manual review may be workable in the interim."
+          },
+          {
+            "id": "eod-0929-open-7",
+            "taskId": "task-20260929-close-sales-cloud-decisions",
+            "label": "Close the overdue Sales Cloud decisions",
+            "detail": "Confirm the owners and decision dates for the party-record migration and the Lead Source/Source Type cleanup so UAT and training can proceed."
+          },
+          {
+            "id": "eod-0929-open-8",
+            "taskId": "task-20260925-follow-up-amy-incident-comms",
+            "label": "Connect with Amy on Incident Response communications",
+            "detail": "Confirm the Bucket 6 notification trigger, communication owner, and remaining Incident Response Guide inputs."
+          },
+          {
+            "id": "eod-0929-open-9",
+            "taskId": "task-20260922-resolve-quality-routing-deadline",
+            "label": "Clarify the held Quality-routing deadline",
+            "detail": "Send the interim status, revised decision point, and communication owner while the work waits for the new Phase 1 matter-plan structure."
+          },
+          {
+            "id": "eod-0929-open-10",
+            "taskId": "task-20260924-share-compliance-guidance",
+            "label": "Share the new legal-guidance protocol with the remaining PMs",
+            "detail": "Brief the remaining PMs on when to include Leo, Raquel, or Cristian and how to separate mandatory legal guidance from recommendations."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0929-cancel-1",
+            "label": "Two year-end feedback reviews were removed",
+            "detail": "Nichole Reese removed Jean’s reviews of David Molano and Andrea Rodriguez from the current review cycle."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0929-decision-1",
+            "label": "All No Help outcomes will receive attorney verification",
+            "detail": "Leo’s direction in the Attorney Review working session was that an attorney should verify every No Help outcome."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0929-wed-1",
+            "label": "10:30 AM - Amazon Connect standup",
+            "detail": "Use the deployment checkpoint to review the routing retest and remaining office-readiness gaps.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-0929-wed-2",
+            "label": "11:30 AM - Astrid 1:1, followed by blocked work time",
+            "detail": "Astrid’s 1:1 runs until noon, with a protected work block from noon to 1:00 PM.",
+            "time": "11:30 AM"
+          },
+          {
+            "id": "eod-0929-wed-3",
+            "label": "2:00-4:00 PM - EPMO and portfolio sequence",
+            "detail": "The EPMO team meeting is followed by Jhara’s 1:1 at 3:00 PM and the Legal portfolio review at 3:30 PM.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "eod-0929-wed-4",
+            "label": "4:00 PM - Three-way overlap before Jean and Sara’s 1:1",
+            "detail": "The Attorney Review working session, CoE touchpoint, and weekly-meeting prep block start together. Jean and Sara’s 1:1 begins at 4:30 PM.",
+            "time": "4:00 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-09-29-morning",
     "type": "daily",
     "date": "Morning - Tuesday, September 29",
