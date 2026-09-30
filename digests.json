@@ -1,5 +1,201 @@
 [
   {
+    "id": "daily-2026-09-30-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, September 30",
+    "isoDate": "2026-09-30",
+    "greeting": "Good morning, Jean. Wednesday, September 30 has eight live meetings, one protected work block, eight carried-over actions, and six urgent items. The day’s priorities are setting the Amazon Connect fix and reporting plan at 10:30 AM, using the 4:00 PM Attorney Review session to close the SLC workflow and coverage gaps, and assigning coverage for the three-way 4:00 PM collision. Amazon Connect remains the clearest delivery risk: Denver is still pending, two production blockers remain open, and the proposed routing change needs validation before a go-live decision.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0930-co-01",
+            "taskId": "task-20260922-launch-attorney-review-intake",
+            "label": "Close the Attorney Review workflow and SLC coverage gaps",
+            "detail": "Yesterday’s session aligned the October 17 SLC workflow, but 29 appointments and an estimated 25% rework rate make capacity the key risk. Use today’s 4:00 PM session to confirm the attorney roster, step-by-step ownership, fallback coverage, and any remaining Service Cloud gaps before the October 15 launch.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0930-co-02",
+            "taskId": "task-20260922-decide-rfe-mhe-path",
+            "label": "Set the revised Mental Health RFE scope",
+            "detail": "The work remains paused after the USCIS policy change reduced the eligible hard-deadline population. Confirm the sponsor decision among the roughly 95 VAWA cases, first-submission, or refile scope, then record the review owners and new planning trigger.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0930-co-03",
+            "taskId": "task-20260924-remind-team-self-reviews",
+            "label": "Confirm all five team self-reviews with HR",
+            "detail": "Jean reported the team’s self-reviews complete, but HR later listed Laura and Mar. Confirm all five submissions are recorded before closing the item.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0930-co-04",
+            "taskId": "task-20260925-triage-proactive-payday",
+            "label": "Prioritize the Proactive Payday Notification intake",
+            "detail": "The CFO-backed request is in the CM-CoE queue. Confirm its priority, scope, and next owner so the intake moves without delay.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-0930-co-05",
+            "taskId": "task-20260925-follow-up-amy-incident-comms",
+            "label": "Close Incident Response communications ownership",
+            "detail": "Confirm the Bucket 6 notification trigger, communication owner, and remaining guide inputs with Amy before tomorrow morning’s project handoff.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0930-co-06",
+            "taskId": "task-20260924-share-compliance-guidance",
+            "label": "Brief the team on the compliance change protocol",
+            "detail": "Use today’s EPMO meeting to reinforce when Legal must be included and ask teams to pause or coordinate matter-plan changes with the compliance PM until the new standard process is implemented.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0930-co-07",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the downward reviews",
+            "detail": "The review cycle runs through October 15. Confirm the assigned reviews, reserve writing time, and coordinate with Eugenia so both managers’ feedback is reflected in Laura’s review.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-0930-co-08",
+            "taskId": "task-20260929-scope-close-case-taskset",
+            "label": "Close the Close Case Taskset decisions",
+            "detail": "Yesterday’s discussion indicated a short-term manual review may be workable because closure notes are generally clear. Confirm the affected phases, temporary process, automation boundary, and owner for the next deliverable.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0930-sch-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Validate the proposed external-routing change, identify the owner and test for both open production blockers, and leave with a Denver go/no-go posture and one reporting format.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "wed-0930-sch-02",
+            "label": "11:30 AM - Astrid 1:1",
+            "detail": "Use the portfolio discussion to settle priority and ownership questions before the protected noon work block.",
+            "time": "11:30 AM"
+          },
+          {
+            "id": "wed-0930-sch-03",
+            "label": "Noon - Protected work block",
+            "detail": "Use the hour for Amazon Connect and Attorney Review follow-through before the uninterrupted afternoon meeting sequence.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "wed-0930-sch-04",
+            "label": "2:00 PM - EPMO team meeting",
+            "detail": "Reinforce the compliance change protocol, surface the day’s cross-team blockers, and leave with named owners before the 1:1 and portfolio sequence.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "wed-0930-sch-05",
+            "label": "3:00-4:00 PM - Jhara 1:1 and Legal portfolio review",
+            "detail": "Use Jhara’s 1:1 to prepare the Attorney Review decisions, then carry the priority and blocker readout directly into the Legal portfolio review.",
+            "time": "3:00 PM"
+          },
+          {
+            "id": "wed-0930-sch-06",
+            "label": "4:00 PM - Three-way workflow and leadership collision",
+            "detail": "Attorney Review, the CoE biweekly touchpoint, and weekly-meeting preparation start together; Attorney Review also overlaps the 4:30 PM Sara 1:1. Assign coverage and define the decision or readout required from each session.",
+            "time": "4:00 PM"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0930-ai-01",
+            "taskId": "task-20260930-align-amazon-connect-blockers",
+            "label": "Set the Amazon Connect fix and reporting plan",
+            "detail": "Two Denver blockers remain open after Salesforce proposed changing the Unified Routing method and routing configuration. At 10:30 AM, confirm who will implement and validate the change, the next test window, and a consistent status report for stakeholders.",
+            "urgent": true
+          },
+          {
+            "id": "wed-0930-ai-02",
+            "taskId": "task-20260930-resolve-four-pm-collision",
+            "label": "Assign coverage for the 4:00 PM collision",
+            "detail": "Choose who will cover Attorney Review, the CoE touchpoint, and weekly-meeting preparation, then protect the decisions Jean needs before joining Sara at 4:30 PM.",
+            "urgent": true
+          },
+          {
+            "id": "wed-0930-ai-03",
+            "taskId": "task-20260930-review-project-security-alert",
+            "label": "Review the new project security alert",
+            "detail": "Identify the affected project and vulnerability, confirm whether exposure is active, and assign the remediation owner and due date."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-0930-em-01",
+            "taskId": "task-20260930-decide-idalia-access",
+            "label": "Decide Idalia’s Client Services access request",
+            "detail": "Review the SharePoint access request, confirm the business need and appropriate permission level, then approve or decline it."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0930-ooo-01",
+            "label": "Eugenia Barragán is out through October 1",
+            "detail": "Route time-sensitive CoE and portfolio decisions around her absence, including Laura’s review coordination."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-0930-tom-01",
+            "label": "10:00 AM - Incident Response Guide handoff",
+            "detail": "Bring the confirmed communications owner, Bucket 6 trigger, and remaining guide inputs so the handoff closes open ownership questions.",
+            "time": "10:00 AM"
+          },
+          {
+            "id": "wed-0930-tom-02",
+            "label": "10:30 AM - Attorney Review BD session conflicts with Amazon Connect",
+            "detail": "Choose coverage today so the October 15 BD readiness work and the deployment checkpoint both return clear decisions.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "wed-0930-tom-03",
+            "label": "1:00 PM - Leads Project legal guidance",
+            "detail": "Use the session to resolve the required legal direction and translate it into an executable project decision.",
+            "time": "1:00 PM"
+          },
+          {
+            "id": "wed-0930-tom-04",
+            "label": "3:00 PM - Attorney Review overlaps Thiago and Laura 1:1s",
+            "detail": "The Attorney Review placeholder runs through 4:00 PM, spanning both 1:1s. Confirm whether the placeholder is active and move or delegate the overlapping conversations.",
+            "time": "3:00 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-09-29",
     "type": "eod",
     "date": "Tuesday, September 29 - End of Day",
