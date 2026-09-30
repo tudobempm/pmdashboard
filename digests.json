@@ -1,5 +1,164 @@
 [
   {
+    "id": "eod-2026-09-30",
+    "type": "eod",
+    "date": "Wednesday, September 30 - End of Day",
+    "isoDate": "2026-09-30",
+    "greeting": "Good evening, Jean. Six carried priorities closed today, while Amazon Connect and a small set of follow-ups remain active. Tomorrow is meeting-heavy, with a 3:00 PM Attorney Review conflict that needs early coverage.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0930-done-1",
+            "label": "Closed the Attorney Review workflow and SLC coverage gaps",
+            "detail": "The workflow and coverage alignment was completed for the October launch work."
+          },
+          {
+            "id": "eod-0930-done-2",
+            "label": "Set the revised Mental Health RFE scope",
+            "detail": "The revised scope and planning direction were confirmed."
+          },
+          {
+            "id": "eod-0930-done-3",
+            "label": "Confirmed all five team self-reviews with HR",
+            "detail": "The remaining submission check with HR was closed."
+          },
+          {
+            "id": "eod-0930-done-4",
+            "label": "Prioritized the Proactive Payday Notification intake",
+            "detail": "The intake priority and path forward were settled."
+          },
+          {
+            "id": "eod-0930-done-5",
+            "label": "Briefed the team on the compliance change protocol",
+            "detail": "The team received the guidance for involving Legal and coordinating matter-plan changes."
+          },
+          {
+            "id": "eod-0930-done-6",
+            "label": "Closed the Close Case Taskset decisions",
+            "detail": "The temporary process and next-step decisions were completed."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-0930-open-1",
+            "taskId": "task-20260930-align-amazon-connect-blockers",
+            "label": "Set the Amazon Connect fix and reporting plan",
+            "detail": "Denver remains pending and two production blockers were still open. Confirm the Salesforce fix owner, validation window, and a consistent stakeholder status report.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0930-open-2",
+            "taskId": "task-20260930-resolve-four-pm-collision",
+            "label": "Close out the 4:00 PM coverage follow-through",
+            "detail": "The CoE touchpoint was canceled, but capture any remaining Attorney Review and weekly-meeting decisions or follow-ups.",
+            "urgent": true
+          },
+          {
+            "id": "eod-0930-open-3",
+            "taskId": "task-20260925-follow-up-amy-incident-comms",
+            "label": "Close Incident Response communications ownership",
+            "detail": "Confirm the Bucket 6 notification trigger, communication owner, and remaining guide inputs before tomorrow's 10:00 AM handoff."
+          },
+          {
+            "id": "eod-0930-open-4",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "Complete the five assigned reviews by October 15 and gather input from previous managers where needed, including Eugenia's input for Laura."
+          },
+          {
+            "id": "eod-0930-open-5",
+            "taskId": "task-20260930-review-project-security-alert",
+            "label": "Review the new project security alert",
+            "detail": "Identify the affected project and vulnerability, confirm whether exposure is active, and assign the remediation owner and due date."
+          },
+          {
+            "id": "eod-0930-open-6",
+            "taskId": "task-20260930-decide-idalia-access",
+            "label": "Decide Idalia's Client Services access request",
+            "detail": "Confirm the business need and appropriate SharePoint permission level, then approve or decline the request."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0930-cancel-1",
+            "label": "CoE Biweekly Touchpoint was canceled",
+            "detail": "The organizer returned the time because there were no topics or escalations to discuss."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0930-decision-1",
+            "label": "Nicolas will lead the Termination Review Tasks request",
+            "detail": "EPMO accepted the initiative, assigned Nicolas as project manager, and set the next step as a kickoff to confirm scope."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-0930-thu-1",
+            "label": "10:00 AM - Incident Response Guide handoff",
+            "detail": "Bring the confirmed communications owner, Bucket 6 trigger, and remaining guide inputs.",
+            "time": "10:00 AM"
+          },
+          {
+            "id": "eod-0930-thu-2",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Use the deployment checkpoint to confirm blocker status, testing, and the Denver go/no-go posture.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-0930-thu-3",
+            "label": "11:30 AM - Armando 1:1",
+            "detail": "Use the scheduled one-on-one to settle priorities and next steps before the noon work block.",
+            "time": "11:30 AM"
+          },
+          {
+            "id": "eod-0930-thu-4",
+            "label": "Noon - Protected work block",
+            "detail": "Reserve the hour for follow-through before the afternoon meeting sequence.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "eod-0930-thu-5",
+            "label": "1:00 PM - Leads Project legal guidance",
+            "detail": "Translate the legal guidance into an executable project decision.",
+            "time": "1:00 PM"
+          },
+          {
+            "id": "eod-0930-thu-6",
+            "label": "3:00 PM - Attorney Review overlaps Thiago and Laura 1:1s",
+            "detail": "The Attorney Review placeholder spans both one-on-ones. Confirm whether it is active and move or delegate the overlapping conversations.",
+            "time": "3:00 PM"
+          },
+          {
+            "id": "eod-0930-thu-7",
+            "label": "4:00 PM - Tudo Bem weekly meeting",
+            "detail": "Bring the decisions and status updates that need team visibility.",
+            "time": "4:00 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-09-30-morning",
     "type": "daily",
     "date": "Morning - Wednesday, September 30",
