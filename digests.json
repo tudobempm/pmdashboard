@@ -1,5 +1,123 @@
 [
   {
+    "id": "eod-2026-10-01",
+    "type": "eod",
+    "date": "Thursday, October 1 - End of Day",
+    "isoDate": "2026-10-01",
+    "greeting": "Good evening, Jean. Today’s dashboard still shows the day’s work in motion, with Amazon Connect and Attorney Review carrying the most immediate risk into Friday.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1001-open-1",
+            "taskId": "task-20260930-align-amazon-connect-blockers",
+            "label": "Set the Amazon Connect recovery and rollout-readiness plan",
+            "detail": "Two blockers remain open and Denver is still pending. Confirm the next Salesforce diagnostic and owner, the user-and-skills audit ETA, capacity for later rollout waves, and a clear stakeholder reporting cadence.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1001-open-2",
+            "taskId": "task-20260925-follow-up-amy-incident-comms",
+            "label": "Close Incident Response communications ownership",
+            "detail": "Confirm the Bucket 6 notification trigger, the communications owner, and any remaining guide inputs so the handoff has clear ownership.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1001-open-3",
+            "taskId": "task-20261001-resolve-three-pm-conflict",
+            "label": "Close the Attorney Review coverage, training, and routing decisions",
+            "detail": "Confirm coverage for the overlapping working session and one-on-ones, name the training-roster owner and October 12 or 13 deadline, and settle the open questions about ticket field automation and reassignment back to the original attorney.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1001-open-4",
+            "taskId": "task-20261001-verify-legal-request-launch",
+            "label": "Verify the Legal Request Tool launch and support path",
+            "detail": "A test request was created successfully today. Confirm the launch message was sent and that process questions route to Raquel while bugs route through Halo to Madhu."
+          },
+          {
+            "id": "eod-1001-open-5",
+            "taskId": "task-20260930-review-project-security-alert",
+            "label": "Review the open project security alert",
+            "detail": "Identify the affected project and vulnerability, confirm whether exposure is active, and assign a remediation owner and due date."
+          },
+          {
+            "id": "eod-1001-open-6",
+            "taskId": "task-20260930-decide-idalia-access",
+            "label": "Decide Idalia’s Client Services access request",
+            "detail": "Confirm the business need and appropriate SharePoint permission level, then approve or decline the request."
+          },
+          {
+            "id": "eod-1001-open-7",
+            "taskId": "task-20261001-review-claude-permissions",
+            "label": "Review Claude’s updated GitHub permissions request",
+            "detail": "Confirm the additional permissions are expected and appropriately scoped before approving the GitHub App request."
+          },
+          {
+            "id": "eod-1001-open-8",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Complete the overdue harassment-prevention training",
+            "detail": "Rippling still lists the Dominican Republic EOR course as overdue. Complete it or confirm with HR why it remains assigned."
+          },
+          {
+            "id": "eod-1001-open-9",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "The reviews are due October 15. Reserve writing time and gather input from previous managers where required."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1001-decision-1",
+            "label": "SMS automation is moving into rebaselining",
+            "detail": "Laura confirmed the short pause is ending: the team is rebaselining the project and aligning stakeholders and the vendor so the first item can move again."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1001-fri-1",
+            "label": "9:00 AM - Jean and Sara 1:1, followed by Jhara at 9:30 AM",
+            "detail": "Use the two conversations to clear escalation, process-map, roster, and training decisions before the Attorney Review working session.",
+            "time": "9:00 AM"
+          },
+          {
+            "id": "eod-1001-fri-2",
+            "label": "10:00 AM - Attorney Review overlaps the 10:30 AM Amazon Connect standup",
+            "detail": "Choose coverage so both the October 15 launch work and the deployment checkpoint return clear decisions. The Salesforce Program Standup scheduled for 10:30 AM is canceled.",
+            "time": "10:00 AM"
+          },
+          {
+            "id": "eod-1001-fri-3",
+            "label": "12:00 PM - Protected work time before the EPMO management meeting",
+            "detail": "Use the noon block for follow-through, then bring unresolved priorities and risks into the 1:00 PM management meeting.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "eod-1001-fri-4",
+            "label": "2:30 PM - Project pipeline into the executive status update",
+            "detail": "Prepare priority changes, UAT decisions, and executive-slide updates before the 2:30 PM and 3:00 PM sequence.",
+            "time": "2:30 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-10-01-morning",
     "type": "daily",
     "date": "Morning - Thursday, October 1",
