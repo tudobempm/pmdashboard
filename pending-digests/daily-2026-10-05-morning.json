@@ -1,0 +1,161 @@
+{
+  "digest": {
+    "id": "daily-2026-10-05-morning",
+    "type": "daily",
+    "date": "Morning - Monday, October 5",
+    "isoDate": "2026-10-05",
+    "greeting": "Good morning, Jean. Monday, October 5 has four live meetings, two protected or administrative blocks, four carried-over actions, and four urgent items. The day’s priorities are reconciling the Amazon Connect user and Quick Connect source lists before the 2:30 PM resourcing session, locking the Attorney Review UAT and training path for the October 15 launch, clearing timecards and the Q3 Legacy Award nomination deadline, and resolving tomorrow morning’s three-way conflict. The clearest delivery risk is Amazon Connect: offboarded users appear to have been re-added from an older list, and a key First Fire contact is out today. The GitHub completion snapshot was last updated September 30, so carry-over has been kept conservative.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-1005-co-01",
+            "taskId": "task-20260930-align-amazon-connect-blockers",
+            "label": "Set the Amazon Connect recovery and build-ownership plan",
+            "detail": "The latest Teams thread shows conflicting user lists and offboarded employees re-added as Quick Connects. Use the 10:30 AM standup to establish the authoritative roster and cleanup owner, then use the 2:30 PM resourcing session to assign the remaining queue, flow, skills, automation, and documentation work. Josh is out today, so confirm substitute First Fire coverage.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1005-co-02",
+            "taskId": "task-20261001-lock-attorney-review-training",
+            "label": "Lock the Attorney Review UAT and training path",
+            "detail": "Friday’s clarification unblocked development: the ticket should link to the intake record, attorneys resolve it, and intake closes it after communicating the decision. Confirm the build and QA dates needed for October 9 UAT, plus the roster owner and training deadline for the October 15 launch.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1005-co-03",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "The five reviews are due October 15. Reserve writing time this week and collect prior-manager input where required so the final reviews reflect both managers’ feedback.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-1005-co-04",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Complete the overdue harassment-prevention training",
+            "detail": "The Dominican Republic EOR course remains an aging open item. Complete it or confirm with HR why it is still assigned before another cycle passes.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1005-sch-01",
+            "label": "8:00 AM - Approve timecards and prepare the week",
+            "detail": "Clear payroll approvals and use the block to set the week’s review, Amazon Connect, and Attorney Review priorities before meetings begin.",
+            "time": "8:00 AM"
+          },
+          {
+            "id": "mon-1005-sch-02",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Set the authoritative user list, cleanup owner, and substitute coverage for the open Quick Connect and build work.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "mon-1005-sch-03",
+            "label": "Noon - Protected work block",
+            "detail": "Use the uninterrupted hour for timecards, the Legacy Award deadline, and preparation for the afternoon decision sequence.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "mon-1005-sch-04",
+            "label": "2:00-3:30 PM - BD portfolio, Amazon Connect resourcing, and Maria 1:1",
+            "detail": "Three back-to-back meetings leave no transition time. Bring the portfolio blockers into the resourcing decision, then use Maria’s one-on-one to settle roadblocks and owners.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "mon-1005-sch-05",
+            "label": "4:00 PM - Post-go-live review canceled",
+            "detail": "The cancellation opens a useful focus window for documenting Amazon Connect owners and resolving tomorrow morning’s coverage conflict.",
+            "time": "4:00 PM"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-1005-ai-01",
+            "taskId": "task-20261005-approve-timecards",
+            "label": "Approve timecards and set the week’s operating priorities",
+            "detail": "Use the 8:00 AM block to clear approvals and identify the decisions Jean needs from today’s Amazon Connect and portfolio meetings."
+          },
+          {
+            "id": "mon-1005-ai-02",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Submit the Q3 Legacy Award nomination by EOD",
+            "detail": "Leadership’s nomination window closes today. Gather any final team input and submit the nomination before the end-of-day deadline.",
+            "urgent": true
+          },
+          {
+            "id": "mon-1005-ai-03",
+            "taskId": "task-20261005-resolve-tuesday-ten-am-conflict",
+            "label": "Resolve tomorrow morning’s three-way conflict",
+            "detail": "The 10:00 AM Attorney Review working session overlaps both the 10:30 AM Jhara one-on-one and the 10:30 AM Amazon Connect standup. Choose coverage today so the October 15 launch and deployment work both return clear decisions.",
+            "urgent": true
+          },
+          {
+            "id": "mon-1005-ai-04",
+            "taskId": "task-20261005-review-skye-edit-requests",
+            "label": "Decide Skye Austin’s document edit requests",
+            "detail": "Review the four access requests for the VAWA AOS, Asylum, Naturalization, and I-751 case decks, confirm the appropriate permission level, and approve or decline them together."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1005-ooo-01",
+            "label": "Sara is out this morning",
+            "detail": "She expects to be online around 11:00 AM Pacific; route anything time-sensitive before then through available leadership coverage."
+          },
+          {
+            "id": "mon-1005-ooo-02",
+            "label": "Josh Ellis is out today",
+            "detail": "Confirm alternate First Fire coverage for the Amazon Connect list cleanup and build assignments before the 2:30 PM resourcing session."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1005-tom-01",
+            "label": "10:00 AM - Attorney Review working session starts a three-way conflict",
+            "detail": "The session runs through 11:00 AM while the Jhara one-on-one and Amazon Connect standup both begin at 10:30 AM. Assign coverage today.",
+            "time": "10:00 AM"
+          },
+          {
+            "id": "mon-1005-tom-02",
+            "label": "11:00 AM - Executive-slide focus block",
+            "detail": "Protect the 30 minutes for the EPMO weekly-meeting slides before the noon work block.",
+            "time": "11:00 AM"
+          },
+          {
+            "id": "mon-1005-tom-03",
+            "label": "2:00 PM - EPMO team-lead weekly catch-up",
+            "detail": "Bring portfolio changes, risks, milestones, and any unresolved Amazon Connect or Attorney Review ownership decisions.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "mon-1005-tom-04",
+            "label": "3:30 PM - Nicolas 1:1",
+            "detail": "Use the one-on-one to close any ownership or portfolio roadblocks coming out of the team-lead discussion.",
+            "time": "3:30 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
