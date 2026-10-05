@@ -1,0 +1,134 @@
+{
+  "digest": {
+    "id": "eod-2026-10-05",
+    "type": "eod",
+    "date": "Monday, October 5 - End of Day",
+    "isoDate": "2026-10-05",
+    "greeting": "Good evening, Jean. Today closed with the Legal Request Tool live and the two main carry-over workstreams marked complete. The remaining focus is the new Attorney Review scope impact, today’s deadline items, and a clean Tuesday handoff.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1005-done-1",
+            "label": "Launched the Legal Request Tool",
+            "detail": "The tool went live today as the firm’s single starting point for legal requests."
+          },
+          {
+            "id": "eod-1005-done-2",
+            "label": "Set the Amazon Connect recovery and build-ownership plan",
+            "detail": "The Amazon Connect recovery and ownership plan was marked complete today."
+          },
+          {
+            "id": "eod-1005-done-3",
+            "label": "Locked the Attorney Review UAT and training path",
+            "detail": "The Attorney Review UAT and training planning item was marked complete today."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1005-open-1",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Submit the Q3 Legacy Award nomination",
+            "detail": "The nomination window closes today. Submit the nomination before the end-of-day deadline.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1005-open-2",
+            "taskId": "task-20261005-resolve-tuesday-ten-am-conflict",
+            "label": "Confirm Tuesday morning coverage after the schedule changes",
+            "detail": "The Attorney Review BD session was canceled, and the live calendar now places the Amazon Connect standup at 10:30 AM and the Jhara one-on-one at 11:30 AM. Confirm the revised coverage plan so both workstreams return clear decisions.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1005-open-3",
+            "taskId": "task-20261005-address-attorney-review-scope-change",
+            "label": "Address the new Attorney Review scope change",
+            "detail": "A Teams update says the Intake Attorney Review stories now depend on an added story, which is affecting the timeline. Confirm the revised build, QA, and October 15 launch path at Tuesday’s progress check-in.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1005-open-4",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "The five reviews are due October 15. Reserve writing time this week and collect prior-manager input where required so the final reviews reflect both managers’ feedback."
+          },
+          {
+            "id": "eod-1005-open-5",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Complete the overdue harassment-prevention training",
+            "detail": "The Dominican Republic EOR course remains overdue. Complete it or confirm with HR why it is still assigned."
+          },
+          {
+            "id": "eod-1005-open-6",
+            "taskId": "task-20261005-approve-timecards",
+            "label": "Approve timecards and set the week’s operating priorities",
+            "detail": "Clear the payroll approvals and identify the decisions needed from the Amazon Connect and portfolio meetings."
+          },
+          {
+            "id": "eod-1005-open-7",
+            "taskId": "task-20261005-review-skye-edit-requests",
+            "label": "Decide Skye Austin’s document edit requests",
+            "detail": "Review the four access requests for the VAWA AOS, Asylum, Naturalization, and I-751 case decks, then approve or decline them together."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1005-cancel-1",
+            "label": "Amazon Connect post-go-live support review was canceled",
+            "detail": "The 4:00 PM review was explicitly canceled today."
+          },
+          {
+            "id": "eod-1005-cancel-2",
+            "label": "Tuesday’s Attorney Review BD working session was canceled",
+            "detail": "Jhara sent the cancellation today; the live calendar still shows an Attorney Review progress check-in at 1:30 PM Tuesday."
+          },
+          {
+            "id": "eod-1005-cancel-3",
+            "label": "The EPMO Team Meeting was canceled",
+            "detail": "Sara sent the cancellation today, and no replacement time was confirmed in the available evidence."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1005-tue-1",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Use the standup to carry forward any remaining build ownership, user-list cleanup, and deployment questions.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-1005-tue-2",
+            "label": "11:00 AM - Slide focus block, then Jhara one-on-one",
+            "detail": "Protect the slide block before the 11:30 AM portfolio and roadblock discussion.",
+            "time": "11:00 AM"
+          },
+          {
+            "id": "eod-1005-tue-3",
+            "label": "1:30 PM - Attorney Review progress check-in",
+            "detail": "The agenda covers open actions, blockers, decisions, and next steps for the October 15 go-live; the EPMO team-lead catch-up follows at 2:00 PM.",
+            "time": "1:30 PM"
+          },
+          {
+            "id": "eod-1005-tue-4",
+            "label": "3:30 PM - Nicolas one-on-one",
+            "detail": "Close any ownership or portfolio roadblocks coming out of the team-lead discussion.",
+            "time": "3:30 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
