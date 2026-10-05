@@ -201,6 +201,8 @@
     "task-20260917-attorney-review-intake-launch": true,
     "task-20260922-amazon-denver-deployment-plan": true,
     "task-20260922-launch-attorney-review-intake": true,
+    "task-20260930-align-amazon-connect-blockers": true,
+    "task-20261001-lock-attorney-review-training": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
     "task-20260616-confirm-joe-azul-waiting-items": true,
@@ -770,5 +772,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1790779553216
+  "lastModified": 1791205468675
 }
