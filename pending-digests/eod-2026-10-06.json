@@ -1,0 +1,142 @@
+{
+  "digest": {
+    "id": "eod-2026-10-06",
+    "type": "eod",
+    "date": "Tuesday, October 6 - End of Day",
+    "isoDate": "2026-10-06",
+    "greeting": "Good evening, Jean. Legal Change Management reached a clear milestone today: the tool is complete and live, while Attorney Review remains on track for October 15 with a few follow-ups still open. The rest of the carry-forward list stays focused on Amazon Connect ownership, today’s SMS result, and several overdue approvals.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1006-done-1",
+            "label": "Completed and launched the Legal Request Tool",
+            "detail": "Jean confirmed in Teams that the Legal Change Management project was successfully completed, and the launch message says the new Legal Request Tool went live today for managers and above."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1006-open-1",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Confirm the Q3 Legacy Award nomination was submitted",
+            "detail": "The deadline passed Monday. Verify the submission; if it was missed, contact the program owner immediately to ask whether a late entry is possible.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1006-open-2",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Confirm the SMS production result and release ready work",
+            "detail": "Confirm whether the business-hours SMS fired successfully, move the NTA communication deployment forward if it passed, and keep the production-ready CoE request moving independently.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1006-open-3",
+            "taskId": "task-20261006-lock-amazon-connect-user-delta",
+            "label": "Lock the Amazon Connect build inputs and owners",
+            "detail": "The true new-user and skills delta, queue inputs, and handoff ownership still need firm answers. Today’s email thread also shows that the timing and scope of pre-launch technical documentation are still being worked through.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1006-open-4",
+            "taskId": "task-20261006-close-attorney-review-scope",
+            "label": "Close the remaining Attorney Review follow-ups",
+            "detail": "The October 15 launch remains on track, but the team still needs the participating-attorney list and answers on whether returning clients require another attorney review or a full new intake.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1006-open-5",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "All five reviews are due October 15. Reserve writing time this week and collect prior-manager input where required."
+          },
+          {
+            "id": "eod-1006-open-6",
+            "taskId": "task-20261005-approve-timecards",
+            "label": "Confirm Monday’s timecards and approvals are clear",
+            "detail": "Verify payroll approvals are complete and resolve any exceptions before the week moves further."
+          },
+          {
+            "id": "eod-1006-open-7",
+            "taskId": "task-20261005-review-skye-edit-requests",
+            "label": "Decide Skye Austin’s document edit requests",
+            "detail": "Review the four requests for the VAWA AOS, Asylum, Naturalization, and I-751 case decks, then approve or decline them together at the appropriate permission level."
+          },
+          {
+            "id": "eod-1006-open-8",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Complete the overdue harassment-prevention training",
+            "detail": "Complete the Dominican Republic EOR course or confirm with HR why it remains assigned."
+          },
+          {
+            "id": "eod-1006-open-9",
+            "taskId": "task-20261006-escalate-stalled-project-decisions",
+            "label": "Turn stalled portfolio approvals into explicit decisions",
+            "detail": "Name the decision owner and date for each material stall, or recommend an official hold so unresolved work does not repeat week over week."
+          },
+          {
+            "id": "eod-1006-open-10",
+            "taskId": "task-20261006-fix-legal-request-notification",
+            "label": "Check the Legal Request Tool notification gap",
+            "detail": "The tool is now live, but Cristina’s report that an email update may be missing information still needs confirmation and, if needed, a Halo support ticket."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1006-cancel-1",
+            "label": "Attorney Review at Intake BD working session was canceled",
+            "detail": "The 10:00 AM working session was explicitly canceled on the calendar."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1006-decision-1",
+            "label": "Attorney Review remains set for an October 15 launch",
+            "detail": "Today’s progress recap confirms that the go-live date holds, scheduling is finalized, and training preparation is moving forward."
+          },
+          {
+            "id": "eod-1006-decision-2",
+            "label": "Handle the Universal Intake revamp as a separate project",
+            "detail": "The same-day Teams discussion separated the Universal Intake revamp from the Attorney Review overhaul rather than folding it into the existing project."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1006-wed-1",
+            "label": "Sara is out beginning Wednesday",
+            "detail": "Her calendar shows her out through October 12, so route leadership approvals and escalations through available coverage."
+          },
+          {
+            "id": "eod-1006-wed-2",
+            "label": "10:30 AM - Amazon Connect standup into Thiago 1:1",
+            "detail": "Use the back-to-back meetings to carry unresolved build ownership and documentation questions directly into a decision with Thiago.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-1006-wed-3",
+            "label": "2:00 PM EPMO team meeting is canceled",
+            "detail": "The cancellation opens space before the 2:30 PM Astrid and 3:30 PM Laura one-on-ones; protect part of it for follow-through on today’s decisions.",
+            "time": "2:00 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
