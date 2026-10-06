@@ -1,0 +1,163 @@
+{
+  "digest": {
+    "id": "daily-2026-10-06-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, October 6",
+    "isoDate": "2026-10-06",
+    "greeting": "Good morning, Jean. Tuesday, October 6 has five live meetings, two protected work blocks, five carried-over actions, and four urgent items. Start with the 9:00 AM SMS production check, then use the 10:30 AM Amazon Connect standup to lock the actual user and skills delta and the 1:30 PM Attorney Review check-in to close the remaining scope question. The 2:00 PM EPMO lead session should turn stalled approval dependencies into explicit go, escalate, or hold decisions. Amazon Connect remains the clearest delivery risk: the target population is 705, but the true setup delta and queue inputs are still unresolved. The canceled 10:00 AM Attorney Review session removes yesterday’s three-way conflict.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1006-co-01",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Confirm the Q3 Legacy Award nomination was submitted",
+            "detail": "The nomination deadline passed yesterday and the task is still open in dashboard state. Verify submission now; if it was missed, contact the program owner immediately to confirm whether a late entry is possible.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1006-co-02",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "All five reviews are due October 15. Reserve writing time this week and collect prior-manager input where required so the final reviews reflect both managers’ feedback.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1006-co-03",
+            "taskId": "task-20261005-approve-timecards",
+            "label": "Confirm Monday’s timecards and approvals are clear",
+            "detail": "The approval task remains unchecked. Verify payroll approvals are complete and resolve any exceptions before the week moves further.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1006-co-04",
+            "taskId": "task-20261005-review-skye-edit-requests",
+            "label": "Decide Skye Austin’s document edit requests",
+            "detail": "Review the four requests for the VAWA AOS, Asylum, Naturalization, and I-751 case decks, confirm the appropriate permission level, and approve or decline them together.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1006-co-05",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Complete the overdue harassment-prevention training",
+            "detail": "Rippling again flagged the Dominican Republic EOR course, overdue since December 9, 2025. Complete it or confirm with HR why it remains assigned.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1006-sch-01",
+            "label": "9:00 AM - SMS production verification",
+            "detail": "Yuri will check the test user’s history. A successful send clears the NTA communication work for deployment and should not hold the already-ready CoE request.",
+            "time": "9:00 AM"
+          },
+          {
+            "id": "tue-1006-sch-02",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Set the authoritative user and skills delta, unblock queue inputs for Eduardo, and confirm documentation or knowledge-transfer ownership.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "tue-1006-sch-03",
+            "label": "11:00 AM-noon - Slides and Jhara 1:1",
+            "detail": "Protect the first 30 minutes for the EPMO slides, then use the one-on-one to prepare the Attorney Review scope and launch decisions.",
+            "time": "11:00 AM"
+          },
+          {
+            "id": "tue-1006-sch-04",
+            "label": "Noon - Protected work block",
+            "detail": "Use the hour for the overdue nomination and approval checks, the SMS deployment decision, and preparation for the afternoon sequence.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "tue-1006-sch-05",
+            "label": "1:30-3:00 PM - Attorney Review and EPMO lead sequence",
+            "detail": "Move directly from the launch-risk check-in into portfolio escalations; carry forward only decisions with named owners and dates.",
+            "time": "1:30 PM"
+          },
+          {
+            "id": "tue-1006-sch-06",
+            "label": "3:30 PM - Nicolas 1:1",
+            "detail": "Close ownership, architecture, or portfolio roadblocks that remain after the team-lead discussion.",
+            "time": "3:30 PM"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1006-ai-01",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Confirm the 9:00 AM SMS result and release ready work",
+            "detail": "Get Yuri’s verification that the business-hours SMS fired successfully, have Isa prioritize the NTA communication deployment if it passed, and keep the production-ready CoE request moving independently if the test needs more time.",
+            "urgent": true
+          },
+          {
+            "id": "tue-1006-ai-02",
+            "taskId": "task-20261006-lock-amazon-connect-user-delta",
+            "label": "Lock the Amazon Connect build inputs and owners",
+            "detail": "The contact-center list identifies 705 target agents, but the actual new-user and skills delta is still being reconciled, and queue information for Eduardo is on hold. Use the standup to name the authoritative files, owners, and delivery times for users, skills, queues, flows, and build documentation.",
+            "urgent": true
+          },
+          {
+            "id": "tue-1006-ai-03",
+            "taskId": "task-20261006-close-attorney-review-scope",
+            "label": "Close the remaining Attorney Review scope decision",
+            "detail": "Confirm whether Attorney Eligibility Determination applies only to Intake-to-USCIS Matter or also to Court Intake-to-Court Matter, then verify that ADO 5378 and end-to-end routing validation still support UAT this week and the October 15 launch.",
+            "urgent": true
+          },
+          {
+            "id": "tue-1006-ai-04",
+            "taskId": "task-20261006-escalate-stalled-project-decisions",
+            "label": "Convert stalled portfolio approvals into explicit decisions",
+            "detail": "The weekly portfolio update shows several projects blocked above the delivery teams by ELT, Legal, or IT Security decisions. At the 2:00 PM lead session, identify the decision owner and date for each material stall, or recommend an official hold instead of allowing unresolved work to repeat week over week."
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1006-tm-01",
+            "taskId": "task-20261006-fix-legal-request-notification",
+            "label": "Check the Legal Request Tool notification gap",
+            "detail": "Cristina reported that a live-tool email update appears to be missing information. Confirm whether the notification is behaving as designed and route a defect through the stated Halo support path if required."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1006-tom-01",
+            "label": "Sara is out beginning Wednesday",
+            "detail": "Her calendar shows OOO through October 12. Route leadership approvals and escalations through available coverage."
+          },
+          {
+            "id": "tue-1006-tom-02",
+            "label": "10:30-11:00 AM - Amazon Connect standup into Thiago 1:1",
+            "detail": "Use the back-to-back meetings to carry unresolved build ownership directly into a decision with Thiago.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "tue-1006-tom-03",
+            "label": "2:00 PM EPMO team meeting is canceled",
+            "detail": "The cancellation opens space before the 2:30 PM Astrid and 3:30 PM Laura one-on-ones; protect part of it for follow-through on today’s portfolio decisions.",
+            "time": "2:00 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
