@@ -1,0 +1,204 @@
+{
+  "digest": {
+    "id": "daily-2026-10-08-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, October 8",
+    "isoDate": "2026-10-08",
+    "greeting": "Good morning, Jean. Thursday, October 8 has four live meetings, one protected work block, ten carried-over actions, and five urgent items. Start with the 10:30 AM Amazon Connect standup: Denver is targeting an October 13 go-live after Monday testing, but the full skills, skill-level, and user inputs are still incomplete. The 2:30 PM Attorney Review check-in is the day's main decision point; ELT still needs to choose the review path and confirm whether the launch remains October 15 or moves to October 19. Also address the emerging Legal-capacity risk for EKM scripts before it begins delaying Agentforce readiness. Dashboard completion state last updated Monday morning, so the carry-over list may include work completed since then.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1008-co-01",
+            "taskId": "task-20261006-lock-amazon-connect-user-delta",
+            "label": "Lock the Amazon Connect inputs and Denver launch controls",
+            "detail": "Denver testing is planned for October 12 with go-live on October 13, but the complete users, skills, skill levels, language values, and deployment ownership remain unresolved. Use the 10:30 AM standup to name authoritative files, owners, deadlines, and coverage for Jacob's PTO next week.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1008-co-02",
+            "taskId": "task-20261006-close-attorney-review-scope",
+            "label": "Force the Attorney Review path and launch-date decision",
+            "detail": "The group leans toward reviewing only after a client commits, which cuts expected attorney reviews from about 170 to 35 per day, but ELT has not signed off. At 2:30 PM, close Path A versus Path B, October 15 versus October 19, no-help handling, approval validity, and script timing language.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1008-co-03",
+            "taskId": "task-20261006-escalate-stalled-project-decisions",
+            "label": "Convert stalled portfolio dependencies into decisions",
+            "detail": "Use today's leadership touchpoints and weekly team meeting to give each material Legal, IT Security, or ELT dependency a decision owner and date, or recommend an explicit hold instead of allowing the same blockage to repeat.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1008-co-04",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Confirm the NTA SMS production result and release ready work",
+            "detail": "Verify whether the business-hours production test succeeded and whether the NTA communication deployment moved forward. Keep the production-ready CoE request independent if any SMS follow-up remains.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1008-co-05",
+            "taskId": "task-20261006-fix-legal-request-notification",
+            "label": "Close the Legal Request Tool notification gap",
+            "detail": "Confirm whether the incomplete live-tool email was a configuration issue or expected behavior, and route a defect through the Halo support path if the notification is still missing required information.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1008-co-06",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "All five reviews are due October 15. Reserve writing time this week and collect prior-manager input where required so the final reviews reflect both managers' feedback.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1008-co-07",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Resolve the overdue Q3 Legacy Award nomination",
+            "detail": "The nomination deadline passed Monday and the task remains open in dashboard state. Verify submission now; if it was missed, contact the program owner immediately to confirm whether a late entry is possible.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1008-co-08",
+            "taskId": "task-20261005-approve-timecards",
+            "label": "Confirm Monday's timecards and approvals are clear",
+            "detail": "The approval task remains unchecked. Verify payroll approvals are complete and resolve any exceptions before the week closes.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1008-co-09",
+            "taskId": "task-20261005-review-skye-edit-requests",
+            "label": "Decide Skye Austin's document edit requests",
+            "detail": "Review the four requests for the VAWA AOS, Asylum, Naturalization, and I-751 case decks, confirm the appropriate permission level, and approve or decline them together.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1008-co-10",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Complete the overdue harassment-prevention training",
+            "detail": "Rippling continues to flag the Dominican Republic EOR course, overdue since December 9, 2025. Complete it or confirm with HR why it remains assigned.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1008-sch-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Confirm the Denver test and October 13 go-live controls, close the incomplete users and skills data, and assign PTO coverage for next week's deployment work.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "thu-1008-sch-02",
+            "label": "11:30 AM - Armando 1:1",
+            "detail": "Use the one-on-one to clear delivery ownership or capacity questions that need resolution before the afternoon meetings.",
+            "time": "11:30 AM"
+          },
+          {
+            "id": "thu-1008-sch-03",
+            "label": "Noon - Protected work block",
+            "detail": "Use the hour for the overdue approvals, Legal-capacity alignment, and preparation for the Attorney Review decision.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "thu-1008-sch-04",
+            "label": "2:30 PM - Attorney Review progress check-in",
+            "detail": "Secure the ELT path decision, launch date, script direction, and remaining owner commitments before the October 15 target gets any closer.",
+            "time": "2:30 PM"
+          },
+          {
+            "id": "thu-1008-sch-05",
+            "label": "4:00 PM - Tudo Bem weekly meeting",
+            "detail": "Carry forward only the highest-impact roadblocks, including Product prioritization, Amazon Connect readiness, and any unresolved portfolio decisions.",
+            "time": "4:00 PM"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1008-ai-01",
+            "taskId": "task-20261008-secure-ekm-legal-capacity",
+            "label": "Secure Legal review capacity for EKM scripts",
+            "detail": "Nicolas flagged that a growing batch of scripts needs Legal review and could block both the EKM migration and Agentforce configuration, testing, and use-case validation. Align with Sara and Legal on the review owner, capacity, and prioritization before the queue expands.",
+            "urgent": true
+          },
+          {
+            "id": "thu-1008-ai-02",
+            "taskId": "task-20261008-schedule-coe-product-touchpoint",
+            "label": "Set the weekly CoE and Product touchpoint",
+            "detail": "The October 6 alignment assigned Jean the recurring Tuesday touchpoint before 5:00 PM ET. Put the cadence on the calendar so the 31-request backlog, including 11 already awaiting a sprint, has a consistent prioritization forum."
+          },
+          {
+            "id": "thu-1008-ai-03",
+            "taskId": "task-20261008-triage-new-asana-intakes",
+            "label": "Triage the newly assigned intake work",
+            "detail": "Review the Universal Intake Questions revamp and Do Not Contact Banners requests assigned by Jorge, along with today's Asana summary, and decide the next owner, priority, and first follow-up for each."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1008-em-01",
+            "taskId": "task-20261008-decide-tomas-sop-access",
+            "label": "Decide Tomas Aparicio's SOP access request",
+            "detail": "Tomas requested access to the SOP FP Received document. Confirm the appropriate permission level, then approve or decline the SharePoint request."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1008-ooo-01",
+            "label": "Sara is out through October 12",
+            "detail": "Route time-sensitive leadership approvals and escalations through available coverage today and Friday."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1008-tom-01",
+            "label": "Laura begins PTO Friday",
+            "detail": "Her calendar shows PTO through October 16. Close or reassign any dependency that cannot wait until she returns."
+          },
+          {
+            "id": "thu-1008-tom-02",
+            "label": "9:30 AM - Amazon Connect standup",
+            "detail": "Use the checkpoint to confirm readiness for Monday's Denver testing and the October 13 go-live.",
+            "time": "9:30 AM"
+          },
+          {
+            "id": "thu-1008-tom-03",
+            "label": "1:00-3:30 PM - EPMO, pipeline, and executive-slide sequence",
+            "detail": "The afternoon is compressed: management at 1:00 PM, pipeline at 2:30 PM, then the executive slide update at 3:00 PM. Enter with decisions and status changes already distilled.",
+            "time": "1:00 PM"
+          },
+          {
+            "id": "thu-1008-tom-04",
+            "label": "4:30 PM - USCIS Form Changes scoping call",
+            "detail": "Prepare to decide whether Phase I, Business Development, or a split model owns the future process, and identify the Legal, communication, DocuSign, training, and downstream dependencies.",
+            "time": "4:30 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
