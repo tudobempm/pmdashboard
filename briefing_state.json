@@ -110,6 +110,7 @@
     "task-20260828-review-eduanny-sop-access": true,
     "task-20260924-share-compliance-guidance": true,
     "task-20260929-resolve-tuesday-conflicts": true,
+    "task-20261005-review-skye-edit-requests": true,
     "task-20260609-close-coe-guide-follow-ups": true,
     "task-20260609-confirm-kpi-final-approval": true,
     "task-20260610-land-coe-owners-next-steps": true,
@@ -152,6 +153,7 @@
     "task-20260827-monitor-legal-request-pilot": true,
     "task-20260914-clear-overdue-rippling-task": true,
     "task-20260929-close-sales-cloud-decisions": true,
+    "task-20261006-close-attorney-review-scope": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -218,6 +220,7 @@
     "task-20260812-review-supabase-security-alert": true,
     "task-20260828-complete-amazon-migration-list": true,
     "task-20260909-review-supabase-security-alert": true,
+    "task-20261006-lock-amazon-connect-user-delta": true,
     "task-20260609-check-supabase-security-warning": true,
     "task-20260612-prepare-epmo-eow-executive-deck": true,
     "task-20260612-reply-eugenia-danny-venn-issues": true,
@@ -288,6 +291,7 @@
     "task-20260807-unblock-preparer-change-production": true,
     "task-20260903-set-amazon-new-office-calling-path": true,
     "task-20260908-decide-sara-training-agenda-access": true,
+    "task-20261006-escalate-stalled-project-decisions": true,
     "task-20260610-resolve-dp-trace-staff-aug-coverage": true,
     "task-20260611-confirm-epmo-offers-and-recognition": true,
     "task-20260611-review-phase-2-projects-nadia-reply": true,
@@ -772,5 +776,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1791205468675
+  "lastModified": 1791473572211
 }
