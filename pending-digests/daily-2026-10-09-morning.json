@@ -1,0 +1,200 @@
+{
+  "digest": {
+    "id": "daily-2026-10-09-morning",
+    "type": "daily",
+    "date": "Morning - Friday, October 9",
+    "isoDate": "2026-10-09",
+    "greeting": "Good morning, Jean. Friday, October 9 has seven live meetings, one protected work block, ten carried-over actions, and seven urgent items. Start with the 10:30 AM Amazon Connect checkpoint, then use the noon focus hour to answer the lawsuit-readiness document request due today and prepare for the compressed 2:30-4:30 PM sequence. The main risks are Monday's Denver retest depending on Saturday's bug fix, the Attorney Review routing delay against a 15-minute SLA, and reduced leadership coverage while Sara and Laura are out.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1009-co-01",
+            "taskId": "task-20261008-secure-ekm-legal-capacity",
+            "label": "Secure Legal review capacity for EKM scripts",
+            "detail": "The growing script-review queue can still delay both the EKM migration and Agentforce configuration, testing, and use-case validation. Confirm the Legal owner, capacity, and prioritization before next week's work begins.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-1009-co-02",
+            "taskId": "task-20261008-triage-new-asana-intakes",
+            "label": "Triage the newly assigned intake work",
+            "detail": "Today's Asana summary still flags the Universal Intake Questions revamp and Do Not Contact Banners work. Use the 4:00 PM DNC scoping call to set priority, ownership, and the first deliverable.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1009-co-03",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "All five reviews are due October 15. Reserve writing time and collect prior-manager input today so next week's compressed calendar does not put the deadline at risk.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-1009-co-04",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Resolve the overdue Q3 Legacy Award nomination",
+            "detail": "The nomination remains open after Monday's deadline. Verify whether it was submitted; if not, ask the program owner today whether a late entry can still be accepted.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-1009-co-05",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Confirm the NTA SMS production result and next handoff",
+            "detail": "Verify the production test and deployment outcome, then capture any remaining appointment-reminder review or release work before Laura's PTO shifts coverage.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1009-co-06",
+            "taskId": "task-20261006-fix-legal-request-notification",
+            "label": "Close the Legal Request Tool notification gap",
+            "detail": "Confirm whether the incomplete live-tool email was expected behavior or a configuration issue, and route a Halo defect if required information is still missing.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1009-co-07",
+            "taskId": "task-20261008-schedule-coe-product-touchpoint",
+            "label": "Set the weekly CoE and Product touchpoint",
+            "detail": "The recurring Tuesday prioritization forum is still unchecked. Put the cadence on the calendar so the request backlog has a consistent decision path.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1009-co-08",
+            "taskId": "task-20261008-decide-tomas-sop-access",
+            "label": "Decide Tomas Aparicio's SOP access request",
+            "detail": "Confirm the correct permission level for the SOP FP Received document, then approve or decline the request.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1009-co-09",
+            "taskId": "task-20261005-approve-timecards",
+            "label": "Confirm timecards and payroll approvals are clear",
+            "detail": "The approval task remains unchecked. Verify that this week's approvals have no open exceptions; Monday already has another scheduled approval block.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1009-co-10",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Complete the overdue harassment-prevention training",
+            "detail": "Rippling still flags the Dominican Republic EOR course as overdue. Complete it or confirm with HR why the assignment remains open.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1009-sch-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Use the checkpoint as the working session to confirm Saturday's bug-fix dependency, Monday's Denver retest coverage, and the owners needed for the afternoon readiness review.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "fri-1009-sch-02",
+            "label": "12:00 PM - Protected work block",
+            "detail": "Use the hour for the EOD lawsuit-readiness document request, access approvals, and preparation for the afternoon decision sequence.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "fri-1009-sch-03",
+            "label": "1:00 PM - EPMO management meeting may be released",
+            "detail": "The calendar still holds the meeting, but the Teams thread suggests skipping it while Sara is out if no new topics remain. Confirm quickly and reclaim the hour if canceled.",
+            "time": "1:00 PM"
+          },
+          {
+            "id": "fri-1009-sch-04",
+            "label": "2:30-4:30 PM - Five-meeting delivery run",
+            "detail": "Pipeline prioritization, the rescheduled team meeting, executive slide updates, DNC scoping, and USCIS Form Changes scoping run back-to-back. Enter with status changes and decisions already distilled.",
+            "time": "2:30 PM"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1009-ai-01",
+            "taskId": "task-20261009-submit-lawsuit-readiness-docs",
+            "label": "Send lawsuit-readiness documents by EOD",
+            "detail": "Kris requested relevant process maps, SOPs, policies, training materials, and other supporting files. Search OneDrive and shared folders, then provide the useful locations before today's deadline.",
+            "urgent": true
+          },
+          {
+            "id": "fri-1009-ai-02",
+            "taskId": "task-20261009-ready-amazon-connect-retest",
+            "label": "Lock Monday's Amazon Connect retest readiness",
+            "detail": "The SCV update depends on a Saturday bug fix, with Denver testing Monday from 12:30-2:30 PM and a 3:00 PM readiness sync. Confirm the fix-validation owner, participant coverage, and go/no-go evidence in today's standup.",
+            "urgent": true
+          },
+          {
+            "id": "fri-1009-ai-03",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Resolve the Attorney Review routing-delay risk",
+            "detail": "UAT took about eight minutes to route a test ticket against a 15-minute service target. Confirm whether the delay is sandbox-only, validate production routing logic, and keep Jill aligned on any timeline impact before Monday's check-in.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1009-em-01",
+            "taskId": "task-20261009-approve-laura-pto",
+            "label": "Approve Laura Urena's time-off request",
+            "detail": "Rippling is still requesting approval for leave beginning today through October 16. Review and approve the request or resolve any discrepancy with the calendar entry.",
+            "urgent": true
+          },
+          {
+            "id": "fri-1009-em-02",
+            "taskId": "task-20261009-decide-vanessa-edit-requests",
+            "label": "Decide Vanessa Silva's document edit requests",
+            "detail": "Vanessa requested edit access to the T Visa, U-Visa, and DACA case decks. Confirm the appropriate permission level and process the three requests together."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1009-ooo-01",
+            "label": "Sara is out through October 12",
+            "detail": "Route time-sensitive leadership decisions through available coverage and do not rely on her for today's EPMO management meeting."
+          },
+          {
+            "id": "fri-1009-ooo-02",
+            "label": "Laura is out October 9-16",
+            "detail": "Close or reassign SMS, client-communications, Levelpath, and other dependencies that cannot wait until she returns."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1009-mon-01",
+            "label": "12:30-2:30 PM - Denver Amazon Connect retest",
+            "detail": "The two-hour test depends on Saturday's bug fix and overlaps the 1:30 PM Attorney Review check-in and 2:00 PM BD Portfolio Review. Assign coverage before the weekend.",
+            "time": "12:30 PM"
+          },
+          {
+            "id": "fri-1009-mon-02",
+            "label": "3:00 PM - Amazon readiness sync conflicts with Maria 1:1",
+            "detail": "Decide which meeting Jean will attend and name coverage for the other; this follows a 2:30 PM Cross-firm Lead Intake alignment with no buffer.",
+            "time": "3:00 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
