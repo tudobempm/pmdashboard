@@ -1,0 +1,134 @@
+{
+  "digest": {
+    "id": "eod-2026-10-09",
+    "type": "eod",
+    "date": "Friday, October 9 - End of Day",
+    "isoDate": "2026-10-09",
+    "greeting": "Good evening, Jean. Today's dashboard shows no newly completed checklist items, while Monday opens with overlapping Amazon Connect, Attorney Review, and portfolio commitments. The carry-forward remains focused on deadline-sensitive reviews and launch readiness.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1009-open-1",
+            "taskId": "task-20261009-submit-lawsuit-readiness-docs",
+            "label": "Send the lawsuit-readiness documents",
+            "detail": "Kris requested relevant process maps, SOPs, policies, training materials, and supporting files. The request was due today, so confirm that the useful OneDrive and shared-folder locations were sent.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1009-open-2",
+            "taskId": "task-20261009-ready-amazon-connect-retest",
+            "label": "Lock Monday's Amazon Connect retest readiness",
+            "detail": "Confirm the Saturday fix-validation owner, participant coverage, and go/no-go evidence before Denver testing begins Monday at 12:30 PM.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1009-open-3",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Resolve the Attorney Review routing and readiness risk",
+            "detail": "Validate the routing behavior, keep Jill aligned on any October 15 timeline impact, and close the outstanding Loom-video dependency before Monday's check-in.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1009-open-4",
+            "taskId": "task-20261008-secure-ekm-legal-capacity",
+            "label": "Secure Legal review capacity for EKM scripts",
+            "detail": "Confirm the Legal owner, capacity, and prioritization so the growing review queue does not delay the EKM migration or Agentforce work next week.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1009-open-5",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Plan the five downward reviews",
+            "detail": "All five reviews are due October 15. Reserve writing time and collect prior-manager input before next week's compressed calendar puts the deadline at risk.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1009-open-6",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Resolve the overdue Q3 Legacy Award nomination",
+            "detail": "Verify whether the nomination was submitted; if not, ask the program owner whether a late entry can still be accepted.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1009-open-7",
+            "taskId": "task-20261008-triage-new-asana-intakes",
+            "label": "Set the next steps for the new intake work",
+            "detail": "Confirm priority, ownership, and the first deliverable for the Universal Intake Questions revamp and Do Not Contact Banners work after today's scoping discussion."
+          },
+          {
+            "id": "eod-1009-open-8",
+            "taskId": "task-20261009-decide-vanessa-edit-requests",
+            "label": "Close the outstanding document-access decisions",
+            "detail": "Process Vanessa Silva's T Visa, U-Visa, and DACA deck requests together, and confirm the correct permission level for Tomas Aparicio's SOP request."
+          },
+          {
+            "id": "eod-1009-open-9",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Confirm the NTA SMS production result and next handoff",
+            "detail": "Verify the production test and deployment outcome, then assign any remaining appointment-reminder review or release work during Laura's leave."
+          },
+          {
+            "id": "eod-1009-open-10",
+            "taskId": "task-20261006-fix-legal-request-notification",
+            "label": "Close the Legal Request Tool notification gap",
+            "detail": "Confirm whether the incomplete live-tool email is expected behavior or a configuration issue, and route a defect if required information is still missing."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1009-cancel-1",
+            "label": "Salesforce Program Standup series was canceled",
+            "detail": "Nadia canceled the series and will use the Executive Status Report and SaltClick reports to update Monday's steering-committee brief."
+          },
+          {
+            "id": "eod-1009-cancel-2",
+            "label": "EPMO management meeting was skipped",
+            "detail": "Jean agreed in the meeting chat that today's session could be skipped."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1009-mon-1",
+            "label": "8:00 AM - Timecards and weekly preparation",
+            "detail": "Clear payroll exceptions and use the opening block to prepare for the day's delivery meetings.",
+            "time": "8:00 AM"
+          },
+          {
+            "id": "eod-1009-mon-2",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Use the checkpoint to confirm the weekend fix and readiness for the Denver retest.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-1009-mon-3",
+            "label": "12:30-2:30 PM - Denver retest overlaps two reviews",
+            "detail": "The Amazon Connect retest overlaps the 1:30 PM Attorney Review check-in and the 2:00 PM BD Portfolio Review, so assign coverage before the day starts.",
+            "time": "12:30 PM"
+          },
+          {
+            "id": "eod-1009-mon-4",
+            "label": "2:30-3:30 PM - Lead-intake alignment and a 3:00 PM conflict",
+            "detail": "Cross-firm Lead Intake runs at 2:30 PM, followed by simultaneous Amazon readiness and Maria 1:1 meetings at 3:00 PM. Decide attendance and coverage in advance.",
+            "time": "2:30 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
