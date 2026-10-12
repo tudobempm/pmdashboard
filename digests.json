@@ -1,5 +1,145 @@
 [
   {
+    "id": "eod-2026-10-12",
+    "type": "eod",
+    "date": "Monday, October 12 - End of Day",
+    "isoDate": "2026-10-12",
+    "greeting": "Good evening, Jean. Today closed with the overdue lawsuit-readiness materials sent and a clear Attorney Review operating model, while Amazon Connect readiness, Thursday's reviews, and the October 19 Attorney Review launch remain the main pressure points.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1012-done-1",
+            "label": "Sent the lawsuit-readiness documentation",
+            "detail": "Jean sent Danny the requested SOP, workflow, and process-map inventory with links to the supporting files and folders."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1012-open-1",
+            "taskId": "task-20261009-ready-amazon-connect-retest",
+            "label": "Close the Amazon Connect Denver launch readiness",
+            "detail": "Confirm the Winter Release prerequisite and Denver retest result, record the go/no-go outcome, and account for Dolapo replacing Duvan on the workstream.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1012-open-2",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Resolve the Attorney Review routing lag before October 19",
+            "detail": "Banjaxxed still needs to implement and test the shortened routing rules. Wednesday's meeting must decide whether to escalate or use direct assignment as the workaround.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1012-open-3",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Complete the four remaining manager reviews",
+            "detail": "HR confirmed that reviews for Armando, Astrid, Nicolas, and Thiago remain incomplete and are due Thursday, October 15.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1012-open-4",
+            "taskId": "task-20261008-secure-ekm-legal-capacity",
+            "label": "Secure Legal review capacity for the EKM scripts",
+            "detail": "Confirm the Legal owner, available capacity, and priority so script review does not delay the EKM migration or Agentforce readiness.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1012-open-5",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Resolve the overdue Q3 Legacy Award nomination",
+            "detail": "Verify whether the nomination was submitted and, if it was not, confirm whether the program owner will accept a late entry.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1012-open-6",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Confirm the NTA communication deployment",
+            "detail": "Verify whether the production release expected today completed and whether any appointment-reminder handoff remains.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1012-open-7",
+            "taskId": "task-20261008-triage-new-asana-intakes",
+            "label": "Set ownership for the remaining intake work",
+            "detail": "Confirm priority, owner, and first deliverable for Universal Intake Questions and Do Not Contact Banners. USCIS Form Changes was moved to not viable today, so keep it out of the active queue."
+          },
+          {
+            "id": "eod-1012-open-8",
+            "taskId": "task-20261006-fix-legal-request-notification",
+            "label": "Verify the Legal Request notification fix",
+            "detail": "A test submission generated a successful-creation email today. Confirm whether that resolves the incomplete-notification issue or whether a configuration defect still needs to be routed."
+          },
+          {
+            "id": "eod-1012-open-9",
+            "taskId": "task-20261008-decide-tomas-sop-access",
+            "label": "Clear the outstanding document access requests",
+            "detail": "Decide the appropriate permission levels for Tomas Aparicio's SOP request, Vanessa Silva's three case-deck edit requests, and Leonardo Gonzalez's QA Evaluation Management SOP request."
+          },
+          {
+            "id": "eod-1012-open-10",
+            "taskId": "task-20261005-approve-timecards",
+            "label": "Finish the remaining payroll and compliance administration",
+            "detail": "Clear any open timecard or payroll exceptions and complete or resolve the overdue Dominican Republic harassment-prevention training."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1012-cancel-1",
+            "label": "1:1 Laura & Jean was cancelled",
+            "detail": "Outlook recorded an explicit cancellation today while Laura remains out through October 16."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1012-decision-1",
+            "label": "Attorney Review service and escalation rules were set",
+            "detail": "The team set a 15-minute attorney-review SLA. Unassigned tickets will escalate to the Katie, Megan, and Alexis group chat; assigned tickets go directly to the assigned attorney, and follow-up questions return to the same attorney."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1012-tue-1",
+            "label": "10:30 AM - Choose between Amazon Connect and Product support",
+            "detail": "The Amazon Connect standup overlaps the Product support assessment for nationwide expansion of the Mental Health Evaluation vendor model."
+          },
+          {
+            "id": "eod-1012-tue-2",
+            "label": "11:00 AM - Jhara 1:1 overlaps slide preparation",
+            "detail": "The Jhara portfolio and roadblocks discussion conflicts with the focus block for EPMO weekly-meeting slides, followed by the CM CoE/Product touchpoint at 11:30 AM."
+          },
+          {
+            "id": "eod-1012-tue-3",
+            "label": "2:00 PM - EPMO TL Weekly Catch Up",
+            "detail": "Use the hour for portfolio updates, risks, milestones, dependencies, and escalations."
+          },
+          {
+            "id": "eod-1012-tue-4",
+            "label": "3:30 PM onward - Nicolas 1:1 and CSC portfolio review",
+            "detail": "The Nicolas touchpoint begins at 3:30 PM, followed by the CSC Portfolio initial review at 4:00 PM."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-10-12-morning",
     "type": "daily",
     "date": "Morning - Monday, October 12",
