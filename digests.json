@@ -1,5 +1,139 @@
 [
   {
+    "id": "eod-2026-10-13",
+    "type": "eod",
+    "date": "Tuesday, October 13 - End of Day",
+    "isoDate": "2026-10-13",
+    "greeting": "Good evening, Jean. Today closed with the open work concentrated around launch readiness, legal and routing dependencies, and several overdue administrative items. Amazon Connect is now one Denver retest away from a go-live decision, while the dashboard still shows no checklist items completed today.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1013-open-1",
+            "taskId": "task-20261009-ready-amazon-connect-retest",
+            "label": "Complete the Denver retest and reset the Amazon Connect go-live date",
+            "detail": "The Winter '27 upgrade is complete and Direct to Agent needs one more Denver test Wednesday morning. Confirm the result, close the remaining Salesforce escalation if the call connects correctly, and set the new go-live date.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1013-open-2",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Close the Attorney Review routing decision",
+            "detail": "Development and UAT are complete for the October 19 launch, but tickets still take five to eight minutes to reach an attorney. Use Wednesday's 1:30 PM check-in to confirm the routing fix or move to the direct-assignment workaround.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1013-open-3",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Complete the five downward reviews",
+            "detail": "All five reviews are due Thursday, October 15. Finish the drafts and collect any remaining prior-manager input before the deadline.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1013-open-4",
+            "taskId": "task-20261008-secure-ekm-legal-capacity",
+            "label": "Close the remaining Legal follow-through",
+            "detail": "Secure a Legal owner and review capacity for the EKM scripts, then confirm that Monday's process-map reply fully satisfies the overdue lawsuit-readiness document request.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1013-open-5",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Clear the overdue administrative items",
+            "detail": "Verify whether the Q3 Legacy Award nomination can still be accepted, clear any open timecard or payroll exceptions, and complete or resolve the overdue harassment-prevention training.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1013-open-6",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Verify the NTA release and Legal Request notification behavior",
+            "detail": "Confirm whether the NTA communication is in production; the latest message only shows it as ready for production. Also determine whether the incomplete Legal Request Tool email is expected or needs a Halo defect.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1013-open-7",
+            "taskId": "task-20261008-triage-new-asana-intakes",
+            "label": "Set ownership for the new intake work",
+            "detail": "Confirm the priority, owner, and first deliverable for Universal Intake Questions and Do Not Contact Banners using the latest scoping outcomes."
+          },
+          {
+            "id": "eod-1013-open-8",
+            "taskId": "task-20261008-decide-tomas-sop-access",
+            "label": "Resolve the pending document access requests",
+            "detail": "Decide the appropriate permission levels for Tomas Aparicio, Vanessa Silva, and Leonardo Gonzalez, then process the related SOP and case-deck requests together."
+          },
+          {
+            "id": "eod-1013-open-9",
+            "taskId": "task-20261012-update-executive-slides",
+            "label": "Finish the executive portfolio update",
+            "detail": "The weekly update was distributed this afternoon with information current through Monday morning. Confirm the portfolio slides and dates reflect the latest decisions and risks.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1013-open-10",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Close today's two scope decisions",
+            "detail": "Document the Product requirements for nationwide Mental Health Evaluation vendor expansion and decide whether the Detention Prevention edge cases require a formal project with build, training, SOP, and Legal work.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1013-decision-1",
+            "label": "Use the existing intake and secure Jill's approval for the Salesforce banner work",
+            "detail": "The team agreed that no new intake is needed. The banner scope covers all users, especially OAA attorneys, and Jill should review the request before the project proceeds."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1013-wed-1",
+            "label": "10:30 AM - Amazon Connect Denver retest",
+            "detail": "Use the daily standup and the planned Denver test to decide whether the remaining call-routing issue is cleared for go-live.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-1013-wed-2",
+            "label": "1:30 PM - Attorney Review routing decision",
+            "detail": "Confirm whether the routing-rule fix is ready or the direct-assignment workaround is required before the October 19 launch.",
+            "time": "1:30 PM"
+          },
+          {
+            "id": "eod-1013-wed-3",
+            "label": "2:00 PM - EPMO Team Meeting is canceled",
+            "detail": "The cancellation opens space before the 2:30 PM Astrid 1:1 and 3:00 PM firmwide meeting; protect it for Attorney Review follow-through.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "eod-1013-wed-4",
+            "label": "4:00 PM - CoE touchpoint conflicts with weekly-meeting prep",
+            "detail": "Choose the live CoE discussion or delegate it, then carry the decisions into the 4:30 PM Jean/Sara 1:1.",
+            "time": "4:00 PM"
+          },
+          {
+            "id": "eod-1013-wed-5",
+            "label": "Jhara is out Wednesday",
+            "detail": "Reassign any Jhara-dependent follow-through that cannot wait, especially the Detention Prevention scope and Attorney Review preparation."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-10-13-morning",
     "type": "daily",
     "date": "Morning - Tuesday, October 13",
