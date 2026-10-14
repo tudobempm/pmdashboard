@@ -1,0 +1,144 @@
+{
+  "digest": {
+    "id": "eod-2026-10-14",
+    "type": "eod",
+    "date": "Wednesday, October 14 - End of Day",
+    "isoDate": "2026-10-14",
+    "greeting": "Good evening, Jean. The day produced clearer ownership for Amazon Connect, but the dashboard's checklist status has not refreshed since October 8. Tomorrow is meeting-heavy, with manager reviews due and launch readiness still needing attention.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1014-open-1",
+            "taskId": "task-20261009-ready-amazon-connect-retest",
+            "label": "Confirm Denver go-live and close the Amazon Connect operating gaps",
+            "detail": "Confirm Denver's release result and Thursday readiness for Houston and Austin. Duvan stepped back as the primary Product contact, with Dolapo, Sinery, and Sebastian supporting the work; the call-and-ticket availability question, voicemail access, offboarding coverage, and PTO redirection still need clear owners.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-2",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Close the Attorney Review routing decision",
+            "detail": "Confirm whether the five-to-eight-minute routing delay will be fixed for the October 19 launch. If not, approve the direct-assignment workaround, name the designated attorneys, and close the remaining script work.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-3",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Complete the three remaining manager reviews",
+            "detail": "HR identified Nicolas, Astrid, and Armando as still incomplete. Submit all three by Thursday, October 15.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-4",
+            "taskId": "task-20261014-resolve-supabase-rls",
+            "label": "Resolve the critical Supabase row-level-security finding",
+            "detail": "Validate the affected project and restore the intended access policy for the public table.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-5",
+            "taskId": "task-20261008-secure-ekm-legal-capacity",
+            "label": "Secure Legal review capacity for EKM scripts",
+            "detail": "Confirm the Legal owner, available capacity, and review priority so the script queue does not delay the EKM migration or Agentforce readiness.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-6",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Resolve the overdue Q3 Legacy Award nomination",
+            "detail": "Confirm whether the nomination was submitted; if not, get a firm answer on whether a late entry can still be accepted.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-7",
+            "taskId": "task-20261009-submit-lawsuit-readiness-docs",
+            "label": "Confirm the lawsuit-readiness document request is closed",
+            "detail": "Verify that the process map and supporting links satisfy Kris's request, then send any missing SOPs, policies, training materials, or folder locations.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-8",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Close the NTA deployment follow-up",
+            "detail": "Today's email confirms UAT was approved and the request is in production and closed. Confirm there is no remaining appointment-reminder handoff, then close the dashboard follow-up.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-9",
+            "taskId": "task-20261012-update-executive-slides",
+            "label": "Close the executive portfolio slide update",
+            "detail": "Verify that the source deck matches the October 12 version circulated Tuesday, then close the task or correct any stale status and date.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1014-open-10",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Set the Product path for the Mental Health Evaluation and Detention Prevention work",
+            "detail": "Define the process, system, ownership, and intake requirements for nationwide MHE vendor expansion and for Detention Prevention edge cases that may require Litify changes, training, SOPs, or Legal alignment.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1014-decision-1",
+            "label": "Amazon Connect Product support changed hands",
+            "detail": "Duvan stepped back as the primary Product contact. Dolapo, Sinery, and Sebastian will support Amazon Connect moving forward."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1014-thu-1",
+            "label": "10:00 AM - Astrid 1:1",
+            "detail": "Use the opening conversation to clear any review input and portfolio follow-ups before the Amazon Connect standup."
+          },
+          {
+            "id": "eod-1014-thu-2",
+            "label": "10:30 AM - Amazon Connect standup",
+            "detail": "Review Denver's first-day outcome and confirm Houston and Austin readiness, including user skills, deployment ownership, and the Product handoff."
+          },
+          {
+            "id": "eod-1014-thu-3",
+            "label": "11:30 AM - Armando 1:1",
+            "detail": "Close any remaining review input before the noon work block."
+          },
+          {
+            "id": "eod-1014-thu-4",
+            "label": "Noon - Final manager-review work window",
+            "detail": "Use the protected hour to finish and submit the three remaining reviews due Thursday."
+          },
+          {
+            "id": "eod-1014-thu-5",
+            "label": "1:30 PM - Operations Portfolio Review",
+            "detail": "Bring Phase I, Phase II, and Court decisions, stalled owners, and newly visible launch risks. The session overlaps the 2:00 PM Knowledge Management assignments review."
+          },
+          {
+            "id": "eod-1014-thu-6",
+            "label": "2:30 PM - Attorney Review conflicts with Maria 1:1",
+            "detail": "Choose coverage in advance so the launch decisions and Maria's portfolio roadblocks both receive a clear follow-up."
+          },
+          {
+            "id": "eod-1014-thu-7",
+            "label": "3:30 PM and 4:00 PM - Thiago 1:1, then Tudo Bem weekly meeting",
+            "detail": "Use the back-to-back sessions to lock Amazon Connect owners and remove the roadblocks surfaced in the day's launch and portfolio checkpoints."
+          }
+        ]
+      }
+    ]
+  }
+}
