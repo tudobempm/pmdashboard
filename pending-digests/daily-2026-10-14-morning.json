@@ -1,0 +1,259 @@
+{
+  "digest": {
+    "id": "daily-2026-10-14-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, October 14",
+    "isoDate": "2026-10-14",
+    "greeting": "Good morning, Jean. Wednesday, October 14 has seven live meetings, one protected work block, 17 carried-over actions, and 11 urgent items. The day turns on confirming Denver's Amazon Connect go-live after a successful Direct to Agent test, while closing the voicemail, PTO, and offboarding operating rules before Thursday's Houston and Austin wave. At 1:30 PM, lead the Attorney Review routing decision in Jhara's absence, then protect time for five downward reviews due tomorrow and a critical Supabase row-level-security finding. Dashboard completion state has not refreshed since October 8, so some carry-over work may already be complete.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-1014-co-01",
+            "taskId": "task-20261009-ready-amazon-connect-retest",
+            "label": "Confirm Denver go-live and close the Amazon Connect operating gaps",
+            "detail": "Direct to Agent, transfers, direct dialing, and consent messaging passed Tuesday. Confirm the brief Denver retest and go-live this morning, then assign decisions for personal voicemail access, manager coverage after offboarding, and PTO call redirection before Houston and Austin launch Thursday.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-02",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Close the Attorney Review routing decision",
+            "detail": "At 1:30 PM, determine whether the five-to-eight-minute routing delay will be fixed for the October 19 launch. If not, approve the direct-assignment workaround, confirm designated attorneys, and settle the remaining script work while covering for Jhara.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-03",
+            "taskId": "task-20260926-plan-downward-reviews",
+            "label": "Complete the five downward reviews",
+            "detail": "All five reviews are due Thursday, October 15. Use the noon protected block to finish drafts and collect any remaining prior-manager input before the afternoon meeting run.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-04",
+            "taskId": "task-20261008-secure-ekm-legal-capacity",
+            "label": "Secure Legal review capacity for EKM scripts",
+            "detail": "The script-review queue can delay both the EKM migration and Agentforce readiness. Confirm the Legal owner, capacity, and prioritization in today's leadership touchpoints.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-05",
+            "taskId": "task-20261005-submit-q3-legacy-nomination",
+            "label": "Resolve the overdue Q3 Legacy Award nomination",
+            "detail": "Verify whether the nomination was submitted after last week's deadline; if not, get a firm answer on whether a late entry can still be accepted.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-06",
+            "taskId": "task-20261009-submit-lawsuit-readiness-docs",
+            "label": "Confirm the lawsuit-readiness document request is closed",
+            "detail": "A response with process-map and supporting links was sent Monday. Confirm that it satisfies Kris's request and send any missing SOPs, policies, training materials, or folder locations.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-07",
+            "taskId": "task-20261006-confirm-nta-sms-production",
+            "label": "Confirm the NTA communication deployment result",
+            "detail": "The NTA story and related item 4580 were expected in production Monday, and a follow-up still asks for production verification. Confirm the release outcome and assign any remaining appointment-reminder handoff.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-08",
+            "taskId": "task-20261008-triage-new-asana-intakes",
+            "label": "Set ownership for the new intake work",
+            "detail": "Universal Intake Questions and Do Not Contact Banners remain open. Confirm priority, owner, and first deliverable using the latest scoping outcomes.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1014-co-09",
+            "taskId": "task-20261006-fix-legal-request-notification",
+            "label": "Close the Legal Request Tool notification gap",
+            "detail": "The launch is now being treated as complete and an NPS survey is planned. Verify that the incomplete notification issue was resolved before the project is formally closed.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1014-co-10",
+            "taskId": "task-20261008-decide-tomas-sop-access",
+            "label": "Decide Tomas Aparicio's SOP access request",
+            "detail": "Confirm the correct permission level for the SOP FP Received document, then approve or decline the request.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1014-co-11",
+            "taskId": "task-20261005-approve-timecards",
+            "label": "Clear timecards and payroll approvals",
+            "detail": "Verify this week's approvals and resolve any open exceptions; the task remains unchecked in dashboard state.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1014-co-12",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Complete the overdue harassment-prevention training",
+            "detail": "Rippling again flags one overdue task. Complete the Dominican Republic EOR course or confirm with HR why the assignment remains open.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1014-co-13",
+            "taskId": "task-20261009-decide-vanessa-edit-requests",
+            "label": "Decide Vanessa Silva's document edit requests",
+            "detail": "Confirm the appropriate permission level for the T Visa, U-Visa, and DACA case decks, then process the three requests together.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1014-co-14",
+            "taskId": "task-20261012-update-executive-slides",
+            "label": "Close the executive portfolio slide update",
+            "detail": "The weekly portfolio update circulated Tuesday. Verify the source deck matches the published October 12 version, then close the task or correct any stale status and date.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-15",
+            "taskId": "task-20261012-decide-leonardo-sop-access",
+            "label": "Decide Leonardo Gonzalez's SOP access request",
+            "detail": "Confirm the appropriate permission level for the QA Evaluation Management SOP, then approve or decline the request.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1014-co-16",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Set the Product path for Mental Health Evaluation expansion",
+            "detail": "Confirm the process, system, and ownership work Product requires before additional vendors are cleared for nationwide expansion.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-co-17",
+            "taskId": "task-20261013-decide-detention-edge-case-scope",
+            "label": "Decide whether the Detention Prevention edge cases need a new project",
+            "detail": "Separate operational guidance from changes that require Litify flows, training, SOPs, Legal alignment, and formal project intake, then name the next owner.",
+            "flag": "carried",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1014-sch-01",
+            "label": "10:30 AM - Amazon Connect standup",
+            "detail": "Confirm the Denver retest and go-live call, then set owners for voicemail handling and Thursday's Houston and Austin testing."
+          },
+          {
+            "id": "wed-1014-sch-02",
+            "label": "11:30 AM - Thiago 1:1",
+            "detail": "Use the session to lock Amazon Connect owners, Wave 1 readiness, and the unresolved operational questions before the noon focus block."
+          },
+          {
+            "id": "wed-1014-sch-03",
+            "label": "Noon - Protected work block",
+            "detail": "Reserve the hour for downward reviews, the Supabase security finding, and preparation for the Attorney Review decision."
+          },
+          {
+            "id": "wed-1014-sch-04",
+            "label": "1:30 PM - Attorney Review progress check",
+            "detail": "Lead in Jhara's absence. Decide routing fix versus direct assignment, confirm scripts, and leave with owners for the October 19 launch."
+          },
+          {
+            "id": "wed-1014-sch-05",
+            "label": "2:00 PM - EPMO Team Meeting is canceled",
+            "detail": "Use the opening to capture Attorney Review decisions before the 2:30 PM Astrid 1:1 and 3:00 PM firmwide meeting."
+          },
+          {
+            "id": "wed-1014-sch-06",
+            "label": "4:00 PM - CoE touchpoint conflicts with prep time",
+            "detail": "Choose the live CoE discussion or delegate it, then carry the key risks and decisions into the 4:30 PM Jean/Sara 1:1."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-1014-ai-01",
+            "taskId": "task-20261014-resolve-supabase-rls",
+            "label": "Resolve the critical Supabase row-level-security finding",
+            "detail": "Supabase reports a public table with row-level security disabled, which could allow unauthenticated read, edit, and delete access. Validate the affected project and restore the intended policy immediately.",
+            "urgent": true
+          },
+          {
+            "id": "wed-1014-ai-02",
+            "taskId": "task-20261014-confirm-venn-rollout-sequence",
+            "label": "Confirm the Venn rollout sequence for Danny",
+            "detail": "Jean committed to find out which teams, if any, should be saved for last now that the rollout has resumed. Get the recommendation from Nicolas and return the sequencing answer today."
+          },
+          {
+            "id": "wed-1014-ai-03",
+            "taskId": "task-20261014-set-salesforce-banner-review",
+            "label": "Set the business review path for 56 Salesforce banners",
+            "detail": "The inventory has 17 documented banners, 25 with partial support, and 14 with no documentation. Confirm the business owners, firmwide scope, and review order using the existing intake so the team can retire, update, or document each banner."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1014-ooo-01",
+            "label": "Jhara is out today",
+            "detail": "Jean is covering the 1:30 PM Attorney Review checkpoint; route any urgent follow-up for Jhara to Thursday morning."
+          },
+          {
+            "id": "wed-1014-ooo-02",
+            "label": "Laura is out through October 16",
+            "detail": "Keep SMS, client-communications, Levelpath, and related dependencies with the coverage owners already in place."
+          },
+          {
+            "id": "wed-1014-ooo-03",
+            "label": "Jacob is on PTO this week",
+            "detail": "Lucas is covering as much as possible for Amazon Connect, so resolve vendor-dependent questions early and document any decisions made without Jacob."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1014-tom-01",
+            "label": "10:30 AM - Amazon Connect standup",
+            "detail": "Review Denver's first-day outcome and confirm Houston and Austin go-live readiness, including user skills and deployment ownership."
+          },
+          {
+            "id": "wed-1014-tom-02",
+            "label": "Noon - Final downward-review work window",
+            "detail": "Use the protected hour to finish and submit the five reviews due Thursday before the afternoon portfolio block."
+          },
+          {
+            "id": "wed-1014-tom-03",
+            "label": "1:30 PM - Operations Portfolio Review",
+            "detail": "Bring Phase I, Phase II, and Court decisions, stalled owners, and any newly visible launch risks into the portfolio review."
+          },
+          {
+            "id": "wed-1014-tom-04",
+            "label": "2:30 PM - Attorney Review conflicts with Maria 1:1",
+            "detail": "Choose coverage in advance so the routing and launch decisions are not lost while Maria's portfolio roadblocks still receive a clear follow-up."
+          },
+          {
+            "id": "wed-1014-tom-05",
+            "label": "4:00 PM - Tudo Bem weekly meeting",
+            "detail": "Use the team forum to remove the roadblocks and ownership gaps surfaced during today's and tomorrow's launch checkpoints."
+          }
+        ]
+      }
+    ]
+  }
+}
