@@ -51,6 +51,7 @@
     "task-20260727-travel-docs-sms-halo": true,
     "task-20260806-replan-vawa-pa21-uat": true,
     "task-20260825-follow-up-hassan-nta": true,
+    "task-20261014-resolve-supabase-rls": true,
     "task-20260619-work-smart-goals-kpis": true,
     "task-20260708-send-pm-meeting-notes": true,
     "task-20260728-resolve-1030-conflict": true,
@@ -60,6 +61,7 @@
     "task-20260820-reply-admin-candidate": true,
     "task-20260825-review-eugenia-intake": true,
     "task-20260902-send-august-hours-pto": true,
+    "task-20260926-plan-downward-reviews": true,
     "task-20260616-coe-playbook-follow-up": true,
     "task-20260616-staff-aug-it-alignment": true,
     "task-20260625-track-baesman-slq-path": true,
@@ -111,6 +113,7 @@
     "task-20260924-share-compliance-guidance": true,
     "task-20260929-resolve-tuesday-conflicts": true,
     "task-20261005-review-skye-edit-requests": true,
+    "task-20261008-secure-ekm-legal-capacity": true,
     "task-20260609-close-coe-guide-follow-ups": true,
     "task-20260609-confirm-kpi-final-approval": true,
     "task-20260610-land-coe-owners-next-steps": true,
@@ -154,6 +157,7 @@
     "task-20260914-clear-overdue-rippling-task": true,
     "task-20260929-close-sales-cloud-decisions": true,
     "task-20261006-close-attorney-review-scope": true,
+    "task-20261009-ready-amazon-connect-retest": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -205,6 +209,7 @@
     "task-20260922-launch-attorney-review-intake": true,
     "task-20260930-align-amazon-connect-blockers": true,
     "task-20261001-lock-attorney-review-training": true,
+    "task-20261009-submit-lawsuit-readiness-docs": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
     "task-20260616-confirm-joe-azul-waiting-items": true,
@@ -776,5 +781,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1791473572211
+  "lastModified": 1792070183836
 }
