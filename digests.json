@@ -1,5 +1,142 @@
 [
   {
+    "id": "eod-2026-10-15",
+    "type": "eod",
+    "date": "Thursday, October 15 - End of Day",
+    "isoDate": "2026-10-15",
+    "greeting": "You closed five carried-over items today and narrowed the remaining work to five focused follow-ups. The clearest next-day pressure is confirming Attorney Review readiness ahead of the October 19 go-live while protecting Friday's compressed meeting schedule.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1015-done-1",
+            "label": "The Amazon Connect voicemail-routing recovery task was completed",
+            "detail": "The carried-over retest-readiness and rollout-reset work is now closed."
+          },
+          {
+            "id": "eod-1015-done-2",
+            "label": "All five downward reviews were submitted",
+            "detail": "The reviews due today were completed."
+          },
+          {
+            "id": "eod-1015-done-3",
+            "label": "The critical Supabase security finding was resolved",
+            "detail": "The carried-over row-level-security issue is now closed."
+          },
+          {
+            "id": "eod-1015-done-4",
+            "label": "Legal review capacity for the EKM scripts was secured",
+            "detail": "The ownership and capacity follow-up is complete."
+          },
+          {
+            "id": "eod-1015-done-5",
+            "label": "The lawsuit-readiness document request was closed",
+            "detail": "The requested process map and supporting materials follow-up is complete."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1015-open-1",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Confirm Attorney Review routing and ownership before the October 19 go-live",
+            "detail": "Today's check-in showed that the follow-up owner could be changed, but the ticket assignment and routing behavior still needed another test. Confirm the queue, scripts, escalation coverage, and final owner.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1015-open-2",
+            "taskId": "task-20261014-set-salesforce-banner-review",
+            "label": "Set the Salesforce banner path and fix the Grievances display issue",
+            "detail": "Use the Do Not Call guidance already in progress to avoid duplicate work, confirm the short-term fix and Product ownership, and restore the Matter Plan and Documents tabs hidden by the Grievances banner.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1015-open-3",
+            "taskId": "task-20261015-resolve-afternoon-conflicts",
+            "label": "Close any follow-ups missed during today's overlapping meetings",
+            "detail": "Capture owners and next steps from the Operations Portfolio, Knowledge Management, Attorney Review, and Maria 1:1 sessions where coverage overlapped.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1015-open-4",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Set the Product path for Mental Health Evaluation expansion",
+            "detail": "Confirm the process, system, and ownership work required before additional vendors can be cleared nationwide."
+          },
+          {
+            "id": "eod-1015-open-5",
+            "taskId": "task-20261013-decide-detention-edge-case-scope",
+            "label": "Decide the project path for Detention Prevention edge cases",
+            "detail": "Separate operating guidance from changes that require Litify flows, training, SOPs, Legal alignment, and formal intake, then assign the next owner."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1015-decision-1",
+            "label": "The I-824 taskset implementation intake will move to Deferred",
+            "detail": "The intake will remain deferred while Product assesses the request and confirms the service requirements."
+          },
+          {
+            "id": "eod-1015-decision-2",
+            "label": "Product Manager assignments were shared for three workstreams",
+            "detail": "Dolapo will cover SMS, Gustavo will cover Serve Cloud with Cory supporting, and Agentforce will route to Cory or Dolapo based on the use case."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1015-fri-1",
+            "label": "10:30 AM - Amazon Connect standup",
+            "detail": "Review the voicemail escalation and reset Wave 1 testing and go-live dates if the blocker clears.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-1015-fri-2",
+            "label": "11:00 AM - Cross-firm Lead Intake Product alignment",
+            "detail": "Clarify Jean's role in the new service line and align it with the continuing-process intake scope.",
+            "time": "11:00 AM"
+          },
+          {
+            "id": "eod-1015-fri-3",
+            "label": "Noon work block overlaps the 12:30 PM Attorney Review check-in",
+            "detail": "Protect the most important focus work while confirming coverage for the Attorney Review readiness discussion.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "eod-1015-fri-4",
+            "label": "1:00 PM - EPMO Management conflicts with the 1:30 PM CLIP touchpoint",
+            "detail": "Choose coverage in advance; Jorge is out and Nadia is on PTO, so owners and written handoffs need to be explicit.",
+            "time": "1:00 PM"
+          },
+          {
+            "id": "eod-1015-fri-5",
+            "label": "2:30 PM - EPMO/IT project pipeline",
+            "detail": "Bring prioritization changes, BA assignments, UAT status, and the Salesforce banner intake path.",
+            "time": "2:30 PM"
+          },
+          {
+            "id": "eod-1015-fri-6",
+            "label": "3:00 PM - Executive Project Status update",
+            "detail": "Close the week by updating the executive deck with resolved blockers, changed launch dates, and named owners.",
+            "time": "3:00 PM"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-10-15-morning",
     "type": "daily",
     "date": "Morning - Thursday, October 15",
