@@ -1,0 +1,148 @@
+{
+  "digest": {
+    "id": "daily-2026-10-19-morning",
+    "type": "daily",
+    "date": "Morning - Monday, October 19",
+    "isoDate": "2026-10-19",
+    "greeting": "Good morning, Jean. Monday, October 19 has seven scheduled work and meeting blocks, six urgent items, and five selected carry-overs. The day turns on resolving the Denver voicemail blocker, protecting Attorney Review's go-live and 15-minute response path, and making firm prioritization decisions in the CM CoE review. Keep the Salesforce banner and integration-security paths moving, and decide tomorrow's CLIP coverage before the calendar compresses. Dashboard state was last modified Thursday, so completion and carry-over status may not reflect weekend changes.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-1019-co-01",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Protect Attorney Review's go-live and escalation path",
+            "detail": "Attorney Review at Intake launches today. The approved SOP sets a 15-minute response SLA, direct Teams escalation to the assigned attorney, and manager escalation when no attorney is assigned; use the 3:00 PM check-in to confirm routing, day-one defects, owners, and fixes while arranging coverage for the overlapping Maria 1:1.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1019-co-02",
+            "taskId": "task-20261016-confirm-ac-recovery-skills",
+            "label": "Resolve the Denver voicemail blocker and reset go-live criteria",
+            "detail": "Friday testing showed voicemail transcripts and duration in Salesforce but no audio playback in AWS. The latest project thread reported no resolution and pointed to the SCV Lambda or its deployment as the likely area; use the 10:30 AM standup and 1:00 PM technical session to assign the root-cause owner, validate the fix, and reset Denver acceptance criteria.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1019-co-03",
+            "taskId": "task-20261014-set-salesforce-banner-review",
+            "label": "Set the Salesforce banner path and repair the Grievances display issue",
+            "detail": "Confirm the short-term Do Not Call guidance, Product ownership for the broader banner inventory, and a repair timeline for the Grievances banner that hides the Matter Plan and Documents tabs.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1019-co-04",
+            "taskId": "task-20261016-assess-salesforce-security-enforcement",
+            "label": "Confirm ownership of the Salesforce integration security review",
+            "detail": "Production enforcement began Friday. Verify that a named owner is checking Litify, Amazon Connect, Revenue Cloud, and other integrations for supported authentication and documenting the response path for frozen or reauthentication-required accounts.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1019-co-05",
+            "taskId": "task-20261016-clarify-clip-role-coverage",
+            "label": "Clarify CLIP ownership and decide Tuesday coverage",
+            "detail": "Jean's role in the new service line still needs a clear boundary. Tuesday's 10:30 AM CLIP touchpoint now conflicts with the Jhara 1:1 and Amazon Connect standup, so choose coverage today and request a written decision handoff.",
+            "flag": "carried",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1019-sched-01",
+            "label": "8:00 AM - Approve timecards and prepare for the week",
+            "detail": "Clear approvals and set the operating plan before the meeting sequence starts.",
+            "time": "8:00 AM"
+          },
+          {
+            "id": "mon-1019-sched-02",
+            "label": "10:00 AM - CM CoE Phase 1 and 2 alignment",
+            "detail": "Review active and next-sprint requests through a firm-wide lens and decide what to confirm, re-sequence, or drop before IT resourcing is committed.",
+            "time": "10:00 AM"
+          },
+          {
+            "id": "mon-1019-sched-03",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Back-to-back with CM CoE; focus on the Denver voicemail root cause, technical owner, and evidence needed for the 1:00 PM resolution session.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "mon-1019-sched-04",
+            "label": "Noon - Protected focus block",
+            "detail": "Use the hour to close the most consequential prep or follow-through before the launch and portfolio meetings.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "mon-1019-sched-05",
+            "label": "1:00 PM - Denver voicemail technical resolution",
+            "detail": "The objective is to resolve the remaining playback issue blocking Denver's go-live; leave with a tested fix or an explicit owner, next test, and revised acceptance date.",
+            "time": "1:00 PM"
+          },
+          {
+            "id": "mon-1019-sched-06",
+            "label": "2:00 PM - Business Development Portfolio Review",
+            "detail": "Bring current project status, risks, blockers, and new intake decisions that need sponsor action.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "mon-1019-sched-07",
+            "label": "3:00 PM - Attorney Review go-live check-in conflicts with Maria 1:1",
+            "detail": "Choose coverage before the hour. The launch check-in should capture what worked, day-one issues, immediate fixes, and named owners; secure a written handoff for the meeting not attended.",
+            "time": "3:00 PM"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-1019-ai-01",
+            "taskId": "task-20261019-lock-cm-coe-priorities",
+            "label": "Lock the CM CoE priority decisions",
+            "detail": "The triage workbook was updated Friday and Product now participates in backlog prioritization. Use the 10:00 AM alignment to confirm which Phase 1 and 2 requests advance, which are re-sequenced or dropped, and who owns each next step before IT allocation.",
+            "urgent": true
+          },
+          {
+            "id": "mon-1019-ai-02",
+            "taskId": "task-20261019-triage-power-automate-flow",
+            "label": "Triage the Power Automate flow alert",
+            "detail": "An unread Microsoft alert says one of Jean's flows needs attention. Identify the affected flow, determine whether a business process is stalled, and route the fix to the right owner."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1019-tue-01",
+            "label": "10:30 AM - Three-way conflict across CLIP, Jhara 1:1, and Amazon Connect",
+            "detail": "Decide attendance and written handoffs today so no launch or portfolio decision is lost.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "mon-1019-tue-02",
+            "label": "11:00 AM - EPMO slides followed by CM CoE/Product",
+            "detail": "The 30-minute slide block runs directly into the 11:30 AM product touchpoint, so bring today's prioritization decisions forward.",
+            "time": "11:00 AM"
+          },
+          {
+            "id": "mon-1019-tue-03",
+            "label": "Noon focus block before afternoon leadership reviews",
+            "detail": "EPMO TL Weekly Catch Up is at 2:00 PM, followed by the Nicolas 1:1 at 3:30 PM.",
+            "time": "12:00 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
