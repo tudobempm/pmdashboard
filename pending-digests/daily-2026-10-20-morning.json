@@ -1,0 +1,156 @@
+{
+  "digest": {
+    "id": "daily-2026-10-20-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, October 20",
+    "isoDate": "2026-10-20",
+    "greeting": "Good morning, Jean. Tuesday, October 20 has six live meetings, two protected work blocks, six urgent items, and seven carry-overs. The day turns on resolving the 10:30 AM three-way coverage conflict, converting the newly isolated Denver voicemail failure into a tested fix, and keeping Attorney Review within its 15-minute path while defining escalation for legal-strategy questions. Close the CM CoE follow-through with its named owners before the afternoon leadership review. Dashboard state was last modified Thursday, October 15, so completion and carry-over status may not reflect newer dashboard actions.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1020-co-01",
+            "taskId": "task-20261016-confirm-ac-recovery-skills",
+            "label": "Stop the Denver voicemail overwrite and reset go-live criteria",
+            "detail": "The investigation found that a valid recording reaches S3, then two empty versions are written about five minutes later and overwrite it. Assign the Service Cloud Voice/AWS owner, add a safeguard against saving empty audio, run an end-to-end retest, and keep Denver without a committed date until the evidence passes.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1020-co-02",
+            "taskId": "task-20261009-validate-attorney-review-routing-sla",
+            "label": "Stabilize Attorney Review and define the legal-strategy escalation",
+            "detail": "Reviews averaged about 14 minutes on launch day, close to the 15-minute response target. Confirm that the attorney and manager routing still works, then define how Intake questions requiring legal strategy move to associate attorneys before tomorrow's check-ins.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1020-co-03",
+            "taskId": "task-20261019-lock-cm-coe-priorities",
+            "label": "Close the CM CoE prioritization follow-through",
+            "detail": "The stabilization lens is set: compliance, outside-counsel, and business-blocking work comes first. Use the 11:30 AM Product touchpoint to get Jessica's operational-blocker input, confirm Mar's portfolio and metrics update, and make sure Jill has the decisions needed for the director briefing.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1020-co-04",
+            "taskId": "task-20261016-clarify-clip-role-coverage",
+            "label": "Clarify CLIP ownership and resolve the 10:30 AM coverage conflict",
+            "detail": "CLIP, the Jhara 1:1, and Amazon Connect all begin at 10:30 AM. Choose the live priority, delegate the other two, and require concise written handoffs so neither the new service-line boundary nor a launch decision is lost.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1020-co-05",
+            "taskId": "task-20261014-set-salesforce-banner-review",
+            "label": "Set the Salesforce banner path and repair the Grievances display issue",
+            "detail": "Confirm the short-term Do Not Call guidance, Product ownership for the broader banner inventory, and a repair timeline for the Grievances banner that hides the Matter Plan and Documents tabs.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1020-co-06",
+            "taskId": "task-20261016-assess-salesforce-security-enforcement",
+            "label": "Confirm ownership of the Salesforce integration security review",
+            "detail": "Verify that a named owner is checking Litify, Amazon Connect, Revenue Cloud, and other integrations for supported authentication and documenting the response path for frozen or reauthentication-required accounts.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1020-co-07",
+            "taskId": "task-20261019-triage-power-automate-flow",
+            "label": "Restore or retire the disabled Power Automate flow",
+            "detail": "Microsoft reported that repeated trigger problems kept the flow from running for 14 days and caused it to be disabled. Identify the affected business process, decide whether the flow is still needed, and route the repair or retirement.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1020-sched-01",
+            "label": "10:30 AM - CLIP, Jhara 1:1, and Amazon Connect collide",
+            "detail": "Resolve attendance before the hour. Amazon Connect needs a technical owner and retest path, the Jhara session is for portfolio roadblocks, and CLIP needs the service-line role boundary and next decisions.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "tue-1020-sched-02",
+            "label": "11:00 AM - EPMO slide focus block",
+            "detail": "Use the 30 minutes to validate the deck after yesterday's cleanup and carry only the unresolved risks into the leadership review.",
+            "time": "11:00 AM"
+          },
+          {
+            "id": "tue-1020-sched-03",
+            "label": "11:30 AM - CM CoE/Product touchpoint",
+            "detail": "Translate Monday's stabilization decisions into a ranked backlog, named owners, and the inputs required for the director briefing.",
+            "time": "11:30 AM"
+          },
+          {
+            "id": "tue-1020-sched-04",
+            "label": "Noon - Protected focus block",
+            "detail": "The 90-minute opening is the best window to close the voicemail escalation, Attorney Review follow-through, or another decision that cannot wait for the afternoon.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "tue-1020-sched-05",
+            "label": "2:00 PM - EPMO TL Weekly Catch Up",
+            "detail": "Bring the updated portfolio, launch risks, escalation owners, milestone changes, and any dependency that still needs leadership action.",
+            "time": "2:00 PM"
+          },
+          {
+            "id": "tue-1020-sched-06",
+            "label": "3:30 PM - Nicolas 1:1",
+            "detail": "Use the final meeting to settle remaining ownership or architecture questions and leave with explicit next steps.",
+            "time": "3:30 PM"
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1020-ai-01",
+            "taskId": "task-20261020-review-jarid-coverage",
+            "label": "Review the Jarid coverage plan",
+            "detail": "Mar asked Jean to review the proposed handoff after confirming that Stephanie Baily will cover Jarid's advisory and review work while Shane leads the negotiation. Confirm the coverage, the delivery timing, and any gap that remains before Jarid's vacation."
+          },
+          {
+            "id": "tue-1020-ai-02",
+            "taskId": "task-20261020-verify-supabase-grants-notice",
+            "label": "Verify the October 30 Supabase grants notice safely",
+            "detail": "An unread message marked as spam claims that new public-schema tables will require explicit grants beginning October 30. Do not use the email links; verify the claim through the trusted Supabase admin console or official documentation and dismiss it if it is fraudulent."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1020-tom-01",
+            "label": "10:30 AM - Thiago 1:1 conflicts with Amazon Connect",
+            "detail": "Choose coverage based on today's voicemail progress and require a written technical update if the standup is delegated.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "tue-1020-tom-02",
+            "label": "1:00 PM - SMS Optimization leads into Attorney Review",
+            "detail": "The SMS staffing review ends at 1:30 PM as the Attorney Review check-in begins; keep both meetings focused on remaining work, owners, and capacity.",
+            "time": "1:00 PM"
+          },
+          {
+            "id": "tue-1020-tom-03",
+            "label": "3:30 PM - Attorney Review conflicts with Laura 1:1",
+            "detail": "Decide coverage in advance and secure the launch-health recap from the session not attended.",
+            "time": "3:30 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
