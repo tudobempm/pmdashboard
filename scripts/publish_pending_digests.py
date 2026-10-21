@@ -7,14 +7,16 @@ pending-digests/*.json payload it:
 
 1. Validates the taskId contract (docs/digest-taskid-contract.md) — hard fail.
 2. Prepends the digest to digests.json unless its id already exists.
-3. Overwrites briefing_state.json with the payload's `state`, when present.
-4. Auto-consumes reminders (safety net): any ACTIVE reminder whose text
+3. Reconciles the payload's `state` with the latest repository state so a
+   stale pending payload cannot erase newer completions or hidden items.
+4. Removes completed or hidden items from Carried Over before publication.
+5. Auto-consumes reminders (safety net): any ACTIVE reminder whose text
    matches an item label in the digest's "Reminders" section is moved to
    reminderHistory, whether or not the payload included a `state`. Without
    this, a state-less payload leaves consumption unrecorded, so the same
    reminders stay in the dashboard queue and re-appear in every subsequent
    briefing (this is exactly what happened 2026-07-28..30).
-5. Deletes the pending file.
+6. Deletes the pending file.
 
 Auto-consumption mirrors the lifecycle rules in the daily-digest skill:
 - persistent reminders (`expiresAt` after the digest date) stay active —
@@ -115,6 +117,94 @@ def auto_consume_reminders(state, digest, now_iso):
     return consumed
 
 
+def merge_states(current, incoming):
+    """Reconcile a pending payload with repository-backed UI state.
+
+    Briefing publication must never roll back cumulative completion or hidden
+    markers. Map-like UI fields are merged with repository state winning on
+    conflicts, and reminder consumption wins over preservation.
+    """
+    current = current if isinstance(current, dict) else {}
+    incoming = incoming if isinstance(incoming, dict) else {}
+    merged = dict(incoming)
+
+    for key in ('completed', 'reactions', 'edits', 'assigneeOverrides'):
+        values = dict(incoming.get(key) or {})
+        values.update(current.get(key) or {})
+        if key == 'completed':
+            for source in (current.get(key) or {}, incoming.get(key) or {}):
+                for task_id, value in source.items():
+                    if value is True:
+                        values[task_id] = True
+        merged[key] = values
+
+    merged['hidden'] = list(dict.fromkeys(
+        list(current.get('hidden') or []) + list(incoming.get('hidden') or [])
+    ))
+
+    history_by_id = {}
+    history_without_id = []
+    for source in (current.get('reminderHistory') or [], incoming.get('reminderHistory') or []):
+        for reminder in source:
+            if not isinstance(reminder, dict):
+                history_without_id.append(reminder)
+            elif reminder.get('id'):
+                history_by_id[reminder['id']] = reminder
+            else:
+                history_without_id.append(reminder)
+    merged['reminderHistory'] = history_without_id + list(history_by_id.values())
+
+    active_by_id = {}
+    active_without_id = []
+    for source in (current.get('reminders') or [], incoming.get('reminders') or []):
+        for reminder in source:
+            if not isinstance(reminder, dict):
+                active_without_id.append(reminder)
+            elif reminder.get('id'):
+                active_by_id[reminder['id']] = reminder
+            else:
+                active_without_id.append(reminder)
+    consumed_ids = set(history_by_id)
+    merged['reminders'] = active_without_id + [
+        reminder for reminder_id, reminder in active_by_id.items()
+        if reminder_id not in consumed_ids
+    ]
+
+    merged['lastModified'] = max(
+        current.get('lastModified') or 0,
+        incoming.get('lastModified') or 0,
+    )
+    return merged
+
+
+def prune_completed_carryovers(digest, state):
+    """Remove completed/hidden carry-overs and return the removed taskIds."""
+    completed = state.get('completed') or {}
+    hidden = set(state.get('hidden') or [])
+    removed = []
+    kept_sections = []
+    for section in digest.get('sections', []):
+        if not isinstance(section, dict) or section.get('info'):
+            kept_sections.append(section)
+            continue
+        if (section.get('title') or '').strip().lower() != 'carried over':
+            kept_sections.append(section)
+            continue
+        kept_items = []
+        for item in section.get('items', []):
+            task_id = item.get('taskId') if isinstance(item, dict) else None
+            display_id = item.get('id') if isinstance(item, dict) else None
+            if completed.get(task_id) is True or task_id in hidden or display_id in hidden:
+                removed.append(task_id or display_id)
+            else:
+                kept_items.append(item)
+        if kept_items:
+            section['items'] = kept_items
+            kept_sections.append(section)
+    digest['sections'] = kept_sections
+    return removed
+
+
 def write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n',
                     encoding='utf-8')
@@ -134,6 +224,7 @@ def main(root):
     if not isinstance(digests, list):
         raise SystemExit('digests.json must contain a JSON array')
 
+    current_state = json.loads(state_path.read_text(encoding='utf-8'))
     existing_ids = {item.get('id') for item in digests if isinstance(item, dict)}
     new_digests = []
     parsed_digests = []
@@ -168,6 +259,13 @@ def main(root):
                   f'reminder auto-consumption. The generator should include '
                   f'the full state (see the daily-digest skill).')
 
+    effective_state = merge_states(current_state, state_update or current_state)
+    for digest in parsed_digests:
+        removed = prune_completed_carryovers(digest, effective_state)
+        if removed:
+            print(f"Removed {len(removed)} completed/hidden carry-over(s) from "
+                  f"{digest.get('id')}: {', '.join(map(str, removed))}")
+
     if new_digests:
         digests = new_digests + digests
         write_json(digests_path, digests)
@@ -175,12 +273,8 @@ def main(root):
     else:
         print('No new digests to prepend.')
 
-    # Safety net: consume shown reminders against the effective state — the
-    # payload's state when provided (a no-op if the generator already consumed
-    # them there), the current briefing_state.json otherwise.
-    effective_state = state_update
-    if effective_state is None:
-        effective_state = json.loads(state_path.read_text(encoding='utf-8'))
+    # Safety net: consume shown reminders against the reconciled state (a no-op
+    # when the generator already consumed them in its payload).
 
     now = datetime.now(timezone.utc)
     now_iso = now.strftime('%Y-%m-%dT%H:%M:%SZ')
