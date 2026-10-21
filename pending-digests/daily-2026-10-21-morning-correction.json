@@ -1,0 +1,140 @@
+{
+  "replaceExisting": true,
+  "digest": {
+    "id": "daily-2026-10-21-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, October 21",
+    "isoDate": "2026-10-21",
+    "greeting": "Good morning, Jean. Wednesday, October 21 has seven meetings, two protected work blocks, three urgent open carry-overs, and five carry-overs overall. Four completed carry-overs were removed after reconciling dashboard state. The live priorities are the CoE backlog plan, the Salesforce banner path, and verification of the Supabase security warnings, with the 3:30 PM Attorney Review and Laura 1:1 conflict still requiring a coverage decision.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-1021-co-04",
+            "taskId": "task-20261019-lock-cm-coe-priorities",
+            "label": "Turn the CoE backlog movement into a defensible priority plan",
+            "detail": "The backlog fell from 34 to 24 and triage from 25 to 13, but four departures came from paused Retention requests. Separate true delivery progress from holds, then carry the ranked work, owners, and remaining blockers into Thursday's portfolio review.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1021-co-05",
+            "taskId": "task-20261014-set-salesforce-banner-review",
+            "label": "Set the Salesforce banner path and repair the Grievances display issue",
+            "detail": "Confirm the short-term Do Not Call guidance, Product ownership for the broader banner inventory, and the repair timeline for the banner that hides the Matter Plan and Documents tabs.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1021-co-07",
+            "taskId": "task-20261020-verify-supabase-grants-notice",
+            "label": "Verify the Supabase security warnings through the trusted console",
+            "detail": "A fresh alert reports a critical table with Row-Level Security disabled, while the separate October 30 grants notice was marked as spam. Verify both claims through the trusted admin console or official documentation, avoid the email links, and route any confirmed exposure.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1021-co-08",
+            "taskId": "task-20261019-triage-power-automate-flow",
+            "label": "Restore or retire the disabled Power Automate flow",
+            "detail": "Identify the business process affected by the flow that Microsoft disabled after 14 days of trigger failures, then route either the repair or retirement.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1021-co-09",
+            "taskId": "task-20261020-review-jarid-coverage",
+            "label": "Review the Jarid coverage plan",
+            "detail": "Confirm Stephanie Baily's advisory and review coverage, Shane's negotiation lead, delivery timing, and any remaining gap before Jarid's vacation.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1021-sched-01",
+            "label": "9:00 AM - CLIP touchpoint",
+            "detail": "Jean is marked as following rather than attending. Require a concise written handoff on legal guidance, Product input, role boundaries, and next decisions.",
+            "time": "9:00 AM"
+          },
+          {
+            "id": "wed-1021-sched-02",
+            "label": "10:30 AM - Amazon Connect standup",
+            "detail": "Use the new Salesforce case, the next-week Lambda resource constraint, and the scope dispute to set an interim test plan and a clear Denver decision gate.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "wed-1021-sched-03",
+            "label": "11:30 AM - Thiago 1:1",
+            "detail": "Close any ownership questions left by the standup, especially the workaround, vendor escalation, skills roster, and deployment responsibilities.",
+            "time": "11:30 AM"
+          },
+          {
+            "id": "wed-1021-sched-04",
+            "label": "Noon - Protected work block",
+            "detail": "Use the one-hour opening to document the voicemail decision, prepare the Attorney Review escalation, or close another aging owner decision before the afternoon sequence.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "wed-1021-sched-05",
+            "label": "1:00 PM - SMS Optimization staffing review",
+            "detail": "Confirm the remaining PE work, assignments, milestones, and David's weekly capacity before the project carries more ambiguity forward.",
+            "time": "1:00 PM"
+          },
+          {
+            "id": "wed-1021-sched-06",
+            "label": "2:30 PM - Astrid 1:1",
+            "detail": "Use the 30-minute slot for the highest-value open decision or blocker and leave with a named next step.",
+            "time": "2:30 PM"
+          },
+          {
+            "id": "wed-1021-sched-07",
+            "label": "3:30 PM - Attorney Review conflicts with Laura 1:1",
+            "detail": "Choose live coverage in advance and require a written recap from the session not attended; Attorney Review needs launch-health evidence and a clear legal-strategy escalation.",
+            "time": "3:30 PM"
+          },
+          {
+            "id": "wed-1021-sched-08",
+            "label": "4:00 PM - Weekly-meeting preparation block",
+            "detail": "Use the final hour to convert today's decisions into concise portfolio risks, owners, and asks for Thursday.",
+            "time": "4:00 PM"
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1021-tom-01",
+            "label": "10:30 AM - Amazon Connect standup; 11:30 AM - Armando 1:1",
+            "detail": "Carry forward only the unresolved voicemail, testing, or ownership decisions, then use the 1:1 for a focused follow-up.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "wed-1021-tom-02",
+            "label": "Noon - Operations Portfolio Review",
+            "detail": "Bring the defensible CoE backlog view, named owners, launch risks, and decisions that need portfolio-level intervention.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "wed-1021-tom-03",
+            "label": "1:30 PM - Sprint 21 prioritization",
+            "detail": "The meeting follows a short blocked interval after the portfolio review; enter with the ranked work and capacity tradeoffs already clear.",
+            "time": "1:30 PM"
+          },
+          {
+            "id": "wed-1021-tom-04",
+            "label": "4:00 PM - Tudo Bem! weekly meeting",
+            "detail": "Use the protected 3:00 PM block to prepare a concise update on outcomes, risks, and next owners.",
+            "time": "4:00 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
