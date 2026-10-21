@@ -62,6 +62,7 @@
     "task-20260825-review-eugenia-intake": true,
     "task-20260902-send-august-hours-pto": true,
     "task-20260926-plan-downward-reviews": true,
+    "task-20261020-review-jarid-coverage": true,
     "task-20260616-coe-playbook-follow-up": true,
     "task-20260616-staff-aug-it-alignment": true,
     "task-20260625-track-baesman-slq-path": true,
@@ -71,6 +72,7 @@
     "task-20260820-decide-slq-it-approach": true,
     "task-20260825-run-amazon-connect-uat": true,
     "task-20260827-resolve-laura-schedule": true,
+    "task-20261019-lock-cm-coe-priorities": true,
     "task-20260611-align-sara-timeline-kpi": true,
     "task-20260722-discuss-pc-handoff-plan": true,
     "task-20260727-amazon-connect-venn-uat": true,
@@ -132,6 +134,9 @@
     "task-20260828-align-quality-intake-scope": true,
     "task-20260831-clarify-staff-aug-document": true,
     "task-20260917-amazon-training-mitigation": true,
+    "task-20261016-clarify-clip-role-coverage": true,
+    "task-20261016-confirm-ac-recovery-skills": true,
+    "task-20261019-triage-power-automate-flow": true,
     "task-20260611-submit-mid-year-touchpoints": true,
     "task-20260612-follow-up-hr-survey-results": true,
     "task-20260615-collect-venn-ticket-numbers": true,
@@ -183,6 +188,7 @@
     "task-20260820-resolve-noon-triple-conflict": true,
     "task-20260824-assign-sara-project-coverage": true,
     "task-20260921-confirm-self-review-deadline": true,
+    "task-20261014-set-salesforce-banner-review": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260617-check-litify-field-audit-path": true,
@@ -210,6 +216,7 @@
     "task-20260930-align-amazon-connect-blockers": true,
     "task-20261001-lock-attorney-review-training": true,
     "task-20261009-submit-lawsuit-readiness-docs": true,
+    "task-20261020-verify-supabase-grants-notice": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
     "task-20260616-confirm-joe-azul-waiting-items": true,
@@ -320,6 +327,7 @@
     "task-20260728-clear-legal-change-management-owners": true,
     "task-20260806-confirm-amazon-connect-uat-readiness": true,
     "task-20260825-email-incident-response-stakeholders": true,
+    "task-20261009-validate-attorney-review-routing-sla": true,
     "task-20260612-check-weekly-executive-project-thread": true,
     "task-20260623-review-aos-rejection-downstream-tasks": true,
     "task-20260626-review-slq-baesman-amendment-language": true,
@@ -336,6 +344,7 @@
     "task-20260625-watch-santiago-sharepoint-export-issue": true,
     "task-20260721-prepare-jhara-mental-health-next-steps": true,
     "task-20260904-confirm-salesforce-integration-account": true,
+    "task-20261016-assess-salesforce-security-enforcement": true,
     "task-20260609-clarify-incident-response-priority-path": true,
     "task-20260609-close-project-coordinator-decision-loop": true,
     "task-20260609-review-rippling-and-asana-overdue-tasks": true,
@@ -349,11 +358,7 @@
     "task-20260701-review-product-salesforce-roadmap-materials": true,
     "task-20260723-forward-legal-change-management-walkthrough": true,
     "task-20260630-follow-up-incident-response-irg-implementation": true,
-    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true,
-    "task-20261016-confirm-ac-recovery-skills": true,
-    "task-20261009-validate-attorney-review-routing-sla": true,
-    "task-20261016-clarify-clip-role-coverage": true,
-    "task-20261016-assess-salesforce-security-enforcement": true
+    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -785,5 +790,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1792585659476
+  "lastModified": 1792585836906
 }
