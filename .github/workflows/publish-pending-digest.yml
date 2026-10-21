@@ -22,6 +22,60 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      # Pull the latest dashboard actions immediately before publication. This
+      # closes the race where a pending digest was generated from an older
+      # briefing_state.json snapshot and would otherwise restore completed
+      # tasks as carry-overs.
+      - name: Refresh dashboard state from Supabase
+        env:
+          SUPABASE_URL: https://niqzkombzncxxihhulqq.supabase.co
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5pcXprb21iem5jeHhpaGh1bHFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2OTI5NTgsImV4cCI6MjA4OTI2ODk1OH0.9DMbwxPi4yBkXG034sakwh6tnxt-AUcKkt_MER71qcg
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, urllib.request
+
+          url = os.environ['SUPABASE_URL'] + '/rest/v1/app_state?id=eq.1&select=data'
+          key = os.environ['SUPABASE_ANON_KEY']
+          req = urllib.request.Request(
+              url,
+              headers={'apikey': key, 'Authorization': f'Bearer {key}'},
+          )
+          rows = json.load(urllib.request.urlopen(req, timeout=30))
+          if not rows or not isinstance(rows[0].get('data'), dict):
+              raise SystemExit('Supabase app_state id=1 is missing or invalid')
+
+          remote = rows[0]['data']
+          path = pathlib.Path('briefing_state.json')
+          local = json.loads(path.read_text(encoding='utf-8'))
+          if (remote.get('lastModified') or 0) <= (local.get('lastModified') or 0):
+              print('Repository state is already current.')
+              raise SystemExit(0)
+
+          history = {
+              r['id']: r for r in local.get('reminderHistory', [])
+              if isinstance(r, dict) and r.get('id')
+          }
+          for reminder in remote.get('reminderHistory', []):
+              if isinstance(reminder, dict) and reminder.get('id'):
+                  history[reminder['id']] = reminder
+
+          merged = dict(local)
+          for field in ('completed', 'hidden', 'reactions', 'edits', 'assigneeOverrides'):
+              if field in remote:
+                  merged[field] = remote[field]
+          merged['reminderHistory'] = list(history.values())
+          merged['reminders'] = [
+              r for r in remote.get('reminders', [])
+              if isinstance(r, dict) and r.get('id') and r['id'] not in history
+          ]
+          merged['lastModified'] = remote.get('lastModified') or 0
+          path.write_text(
+              json.dumps(merged, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
+          print(f'Refreshed state at {merged["lastModified"]}.')
+          PY
+
       # Validates the taskId contract, prepends new digests, applies the
       # payload state, and auto-consumes reminders shown in each digest's
       # Reminders section (so a payload missing `state` can no longer leave
