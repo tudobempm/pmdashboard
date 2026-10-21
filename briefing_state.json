@@ -349,7 +349,11 @@
     "task-20260701-review-product-salesforce-roadmap-materials": true,
     "task-20260723-forward-legal-change-management-walkthrough": true,
     "task-20260630-follow-up-incident-response-irg-implementation": true,
-    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true
+    "task-20260609-resolve-phase-2-ownership-and-tool-support-follow-ups": true,
+    "task-20261016-confirm-ac-recovery-skills": true,
+    "task-20261009-validate-attorney-review-routing-sla": true,
+    "task-20261016-clarify-clip-role-coverage": true,
+    "task-20261016-assess-salesforce-security-enforcement": true
   },
   "hidden": [
     "tue-0602-co-1",
@@ -781,5 +785,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1792070183836
+  "lastModified": 1792585659476
 }
