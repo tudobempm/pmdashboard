@@ -239,11 +239,19 @@ def main(root):
         if not digest_id:
             raise SystemExit(f'{pending_file} digest is missing id')
         validate_task_ids(pending_file, digest)
-        # A duplicate id is skipped for digests.json, but its reminders are
-        # still auto-consumed below — re-queueing an already-published digest
-        # is the sanctioned way to record consumption it missed.
+        replace_existing = payload.get('replaceExisting') is True
+        # Duplicate ids are normally skipped, but an explicit correction may
+        # replace the existing entry through this same validated write path.
         if digest_id in existing_ids:
-            print(f'Skipping duplicate digest {digest_id}')
+            if replace_existing:
+                digests = [
+                    item for item in digests
+                    if not isinstance(item, dict) or item.get('id') != digest_id
+                ]
+                new_digests.append(digest)
+                print(f'Replacing existing digest {digest_id}')
+            else:
+                print(f'Skipping duplicate digest {digest_id}')
         else:
             new_digests.append(digest)
             existing_ids.add(digest_id)
