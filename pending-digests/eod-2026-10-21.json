@@ -1,0 +1,124 @@
+{
+  "digest": {
+    "id": "eod-2026-10-21",
+    "type": "eod",
+    "date": "Wednesday, October 21 - End of Day",
+    "isoDate": "2026-10-21",
+    "greeting": "Good evening, Jean. The morning carry-over list is fully closed, and the remaining work is concentrated in a small set of late-day follow-ups ahead of Thursday's portfolio review.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1021-done-1",
+            "label": "Completed the CoE backlog priority plan",
+            "detail": "The backlog follow-through is now closed and ready to support Thursday's portfolio discussion."
+          },
+          {
+            "id": "eod-1021-done-2",
+            "label": "Set the Salesforce banner path and addressed the Grievances display issue",
+            "detail": "The banner ownership and display-repair follow-up is now closed."
+          },
+          {
+            "id": "eod-1021-done-3",
+            "label": "Verified the Supabase security warnings through trusted sources",
+            "detail": "The security-warning review is now complete."
+          },
+          {
+            "id": "eod-1021-done-4",
+            "label": "Resolved the disabled Power Automate flow follow-up",
+            "detail": "The affected-flow review and disposition are now complete."
+          },
+          {
+            "id": "eod-1021-done-5",
+            "label": "Reviewed the Jarid coverage plan",
+            "detail": "The coverage review is now complete."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1021-open-1",
+            "taskId": "task-20261021-refresh-project-portfolio-review",
+            "label": "Finish the active-project accuracy review for Thursday's portfolio meeting",
+            "detail": "Confirm that each active project's status, percentage, target date, and support needs reflect the latest PM updates before the Operations Portfolio Review."
+          },
+          {
+            "id": "eod-1021-open-2",
+            "taskId": "task-20261021-rehide-daca-renewal-tasksets",
+            "label": "Re-hide the DACA renewal tasksets in Litify",
+            "detail": "The paused tasksets were confirmed live in production. Submit the Halo ticket, reference the prior agreement, and verify that both processes are hidden again."
+          },
+          {
+            "id": "eod-1021-open-3",
+            "taskId": "task-20261021-close-amazon-routing-questions",
+            "label": "Close the remaining Amazon Connect routing questions",
+            "detail": "Confirm whether the queue should use the alias or contact-flow version and determine whether Phase 1 and Phase 2 Operations belong in Wave 4."
+          },
+          {
+            "id": "eod-1021-open-4",
+            "taskId": "task-20261021-review-astrid-access-requests",
+            "label": "Review Astrid's batch of project access requests",
+            "detail": "A large set of access requests arrived late in the day across Litify taskset, matter-plan, automation, and related project work. Review and approve or route them together where possible."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1021-cancel-1",
+            "label": "The MHE Expansion touchpoint moved to an async update",
+            "detail": "Today's meeting was replaced by a written status update. The update confirmed the project is moving forward, with the pilot planned for November 20 and go-live planned for January 5, 2027."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1021-decision-1",
+            "label": "Personal work folders will not remain in the official EPMO portfolio",
+            "detail": "The team aligned that personal PM and project-coordinator workspaces should be unlinked from the portfolio while remaining available to their owners if needed."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1021-thu-1",
+            "label": "10:30 AM - Amazon Connect standup; 11:30 AM - Armando 1:1",
+            "detail": "Carry forward only the unresolved routing, testing, or ownership decisions, then use the 1:1 for a focused follow-up.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-1021-thu-2",
+            "label": "Noon - Operations Portfolio Review",
+            "detail": "Bring the current CoE backlog view, verified project updates, named owners, launch risks, and decisions that need portfolio-level support.",
+            "time": "12:00 PM"
+          },
+          {
+            "id": "eod-1021-thu-3",
+            "label": "1:30 PM - Sprint 21 prioritization",
+            "detail": "Enter with the ranked work and capacity tradeoffs clear after the portfolio review.",
+            "time": "1:30 PM"
+          },
+          {
+            "id": "eod-1021-thu-4",
+            "label": "4:00 PM - Tudo Bem! weekly meeting",
+            "detail": "Use the protected 3:00 PM block to prepare a concise update on outcomes, risks, and next owners.",
+            "time": "4:00 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
