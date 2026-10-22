@@ -1,0 +1,123 @@
+{
+  "digest": {
+    "id": "daily-2026-10-22-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, October 22",
+    "isoDate": "2026-10-22",
+    "greeting": "Good morning, Jean. Thursday, October 22 has five live meetings, two protected work blocks, no carry-over items, and two urgent actions. The day turns on using the noon portfolio review and 1:30 PM sprint session to lock the new compliance-remediation priority, while the 10:30 AM Amazon Connect standup needs a defensible interim test and go-live gate. Keep the MHE expansion's client-capture, Legal, and IT-resource decisions visible rather than letting them disappear into the compressed schedule.",
+    "sections": [
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1022-sched-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Set the interim test plan around the known voicemail versioning defect, confirm the Salesforce support call timing, and define what evidence is required before Denver testing and the go-live decision resume."
+          },
+          {
+            "id": "thu-1022-sched-02",
+            "label": "11:30 AM - Armando 1:1",
+            "detail": "Use the short transition before portfolio review for the highest-value ownership or delivery question and leave with one clear next step."
+          },
+          {
+            "id": "thu-1022-sched-03",
+            "label": "Noon - Operations Portfolio Review",
+            "detail": "Bring the updated portfolio, the MHE expansion gaps, and the compliance-remediation shift; isolate decisions and owners before the 1:00 PM work block."
+          },
+          {
+            "id": "thu-1022-sched-04",
+            "label": "1:00 PM - Protected work block",
+            "detail": "Use the 30 minutes to convert portfolio decisions into a ranked sprint position before the planning session."
+          },
+          {
+            "id": "thu-1022-sched-05",
+            "label": "1:30 PM - Sprint 21 prioritization",
+            "detail": "The ELT wants as much ready remediation work as possible for Preparer's Certification, Declarations, and G-28 Attorney of Record Changes in the sprint starting Monday. Confirm story readiness, capacity tradeoffs, and the contingency for late requirements or outside-counsel changes."
+          },
+          {
+            "id": "thu-1022-sched-06",
+            "label": "3:00 PM - Protected work block",
+            "detail": "Close the most consequential follow-up from the portfolio and sprint sessions, then prepare the concise decisions, risks, and owner asks for the team meeting."
+          },
+          {
+            "id": "thu-1022-sched-07",
+            "label": "4:00 PM - Tudo Bem! weekly meeting",
+            "detail": "Use the coordination forum to remove the roadblocks surfaced today and make each next owner and due point explicit."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1022-ai-01",
+            "taskId": "task-20261022-lock-compliance-remediation-sprint",
+            "label": "Lock the compliance-remediation scope for Sprint 21",
+            "detail": "Translate the ELT direction into a ranked, capacity-aware story list for Preparer's Certification, Declarations, and G-28 changes. Confirm which requirements will be ready for Monday, whether a short sprint-start delay is needed, and how mid-sprint outside-counsel changes will be handled.",
+            "urgent": true
+          },
+          {
+            "id": "thu-1022-ai-02",
+            "taskId": "task-20261022-set-scv-interim-go-live-gate",
+            "label": "Set the Amazon Connect interim test and go-live gate",
+            "detail": "Salesforce confirmed the voicemail versioning defect is known, First Fire plans to begin a Lambda rewrite Monday, and Denver remains paused. At the standup, document the workaround, testing that can safely continue, the support-call owner, and the evidence required to resume final testing.",
+            "urgent": true
+          },
+          {
+            "id": "thu-1022-ai-03",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Close the MHE expansion's client-capture and resource decisions",
+            "detail": "Confirm whether all Florida and Texas clients are being identified beyond the RFE-stage screen, secure the still-missing written Legal position on post-filing RFE evidence, and name an IT owner after Friday's scoping. The California provider review is also likely to move to the week of October 26."
+          },
+          {
+            "id": "thu-1022-ai-04",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Resolve the overdue harassment-prevention training",
+            "detail": "Rippling again lists the Dominican Republic EOR course as overdue, with a December 9, 2025 due date. Complete it or confirm with HR why the assignment remains open."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1022-em-01",
+            "taskId": "task-20261022-review-astrid-project-access",
+            "label": "Review Astrid Ortega's project-access requests",
+            "detail": "Thirty-one approval requests arrived together across Litify task sets, automations, templates, case types, and related project records. Validate the intended role and business need, then process the batch consistently rather than approving each request in isolation."
+          },
+          {
+            "id": "thu-1022-em-02",
+            "taskId": "task-20261022-decide-david-skill-file-access",
+            "label": "Decide David Molano's file-access request",
+            "detail": "Approve or decline access to 'SKILL (2) 2.md' after confirming the file's purpose and the permission level David needs."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1022-tom-01",
+            "label": "10:30 AM - Amazon Connect standup",
+            "detail": "The Salesforce program sync at the same time is canceled, so keep the slot focused on voicemail progress, safe testing, and the vendor-supported fix."
+          },
+          {
+            "id": "thu-1022-tom-02",
+            "label": "Noon - Protected work block",
+            "detail": "Use the hour to consolidate today's sprint, portfolio, and MHE decisions before the afternoon leadership sequence."
+          },
+          {
+            "id": "thu-1022-tom-03",
+            "label": "1:00-3:30 PM - Leadership and portfolio sequence",
+            "detail": "EPMO management flows directly into the Jean/Sara 1:1, the EPMO/IT pipeline sync, and the executive status-slide update. Enter with a single decision and risk narrative so the same issues do not get reopened in each meeting."
+          }
+        ]
+      }
+    ]
+  }
+}
