@@ -1,5 +1,118 @@
 [
   {
+    "id": "eod-2026-10-22",
+    "type": "eod",
+    "date": "Thursday, October 22 - End of Day",
+    "isoDate": "2026-10-22",
+    "greeting": "Good evening, Jean. Thursday closed with the Core Skills reconciliation documented and clear priority direction for Sprint 21, while the main carry-forward work remains concentrated on compliance remediation, Amazon Connect, and the MHE expansion.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1022-done-1",
+            "label": "Completed the Core Skills reconciliation against Salesforce assignments",
+            "detail": "Today's SCV update reports that the job-role-based reconciliation was completed and 56 missing assignments were identified and documented with their Skill IDs and required readiness level."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1022-open-1",
+            "taskId": "task-20261022-lock-compliance-remediation-sprint",
+            "label": "Lock the compliance-remediation scope for Sprint 21",
+            "detail": "Turn today's priority direction into a ranked, capacity-aware story list for Preparer's Certification, Declarations, and G-28 changes. Confirm what will be ready for Monday and resolve the remaining tradeoffs in Friday's follow-up.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1022-open-2",
+            "taskId": "task-20261022-set-scv-interim-go-live-gate",
+            "label": "Set the Amazon Connect test and Waves 2/3 deployment gate",
+            "detail": "Eduardo and Hilary were expected to update the team after today's Lambda adjustments and testing. Jean still needs to schedule the deployment-plan check-in and define the evidence required to resume final testing.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1022-open-3",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Close the MHE expansion's client-capture and resource decisions",
+            "detail": "Confirm whether all Florida and Texas clients are being identified beyond the RFE-stage screen, secure the written Legal position on post-filing RFE evidence, and name an IT owner after Friday's scoping."
+          },
+          {
+            "id": "eod-1022-open-4",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Resolve the overdue harassment-prevention training",
+            "detail": "Rippling again lists the Dominican Republic EOR course as overdue. Complete it or confirm with HR why the assignment remains open."
+          },
+          {
+            "id": "eod-1022-open-5",
+            "taskId": "task-20261022-review-astrid-project-access",
+            "label": "Review Astrid Ortega's project-access requests",
+            "detail": "Validate the intended role and business need for the 31 requests across task sets, automations, templates, case types, and related project records, then process the batch consistently."
+          },
+          {
+            "id": "eod-1022-open-6",
+            "taskId": "task-20261022-decide-david-skill-file-access",
+            "label": "Decide David Molano's file-access request",
+            "detail": "Approve or decline access to 'SKILL (2) 2.md' after confirming the file's purpose and the permission level David needs."
+          },
+          {
+            "id": "eod-1022-open-7",
+            "taskId": "task-20261022-complete-leadup-module-3-survey",
+            "label": "Complete the LeadUp Module 3 follow-up survey",
+            "detail": "A reminder arrived today for the Leading with a Growth Mindset follow-up survey so the training team can capture how the concepts are being applied."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1022-cancel-1",
+            "label": "Operations Portfolio Review was canceled",
+            "detail": "The noon review was canceled after alignment with Jill; pending initiatives will return in the next scheduled session, with time-sensitive decisions handled separately if needed."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1022-decision-1",
+            "label": "Compliance work takes priority in Sprint 21",
+            "detail": "Jean confirmed in Teams that the projects coming from the ELT and outside counsel have the highest priority, which means some other planned work will need to wait for later sprints."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1022-fri-1",
+            "label": "10:30 AM - Amazon Connect standup, followed by Waves 2 & 3 deployment alignment",
+            "detail": "The 11:00 AM alignment will cover queue scope, phone numbers, users, call volumes, sequencing, target dates, and deployment dependencies. The competing Salesforce program sync was canceled."
+          },
+          {
+            "id": "eod-1022-fri-2",
+            "label": "Noon work block leads into a 1:00 PM conflict",
+            "detail": "Use the protected hour before EPMO Management. At 1:00 PM, that meeting overlaps with the Attorney Review at Intake check-in, so decide where Jean's attendance is most useful."
+          },
+          {
+            "id": "eod-1022-fri-3",
+            "label": "2:00-3:30 PM - Leadership, pipeline, and sprint follow-through",
+            "detail": "Jean/Sara at 2:00 PM leads into the EPMO/IT pipeline sync at 2:30 PM. At 3:00 PM, the Sprint 21 follow-up overlaps with the executive status-slide update."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-10-22-morning",
     "type": "daily",
     "date": "Morning - Thursday, October 22",
