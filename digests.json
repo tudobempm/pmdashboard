@@ -1,5 +1,156 @@
 [
   {
+    "id": "daily-2026-10-23-morning",
+    "type": "daily",
+    "date": "Morning - Friday, October 23",
+    "isoDate": "2026-10-23",
+    "greeting": "Good morning, Jean. Friday, October 23 has eight live meetings, one protected work block, two hard calendar conflicts, six carried-over items, and three urgent priorities. First, turn yesterday's Amazon Connect voicemail progress into a clear test and Denver go-live gate; second, lock the remaining Sprint 21 compliance choices before Monday; third, decide coverage for the 1:00 PM and 3:00 PM overlaps so the leadership, intake, pipeline, and executive-report threads do not fragment. The MHE scoping and client-capture decisions also need a named path forward today. Dashboard completion state is about 48 hours old, so the carry-over list reflects the latest repository-backed state but may not include very recent dashboard actions.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1023-co-01",
+            "taskId": "task-20261022-set-scv-interim-go-live-gate",
+            "label": "Set the Amazon Connect test and Denver go-live gate",
+            "detail": "Voicemail is working again after the language-code configuration was corrected, but Call Insights and Conversation Analytics remain disabled while the Salesforce defect is addressed. Use the 10:30 AM standup to confirm the business impact, safe test scope, owner for the two support cases, and the evidence Denver needs before final testing resumes.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-1023-co-02",
+            "taskId": "task-20261022-lock-compliance-remediation-sprint",
+            "label": "Lock the compliance-remediation scope for Sprint 21",
+            "detail": "Stories 4589 and 5530 are confirmed Priority 1, while 4216 is blocked and 5230/5231 are still unestimated. Confirm the Monday-ready list, close the remaining sequencing and capacity tradeoffs, and keep Attorney Review items 5293, 5216, and 5378 aligned with their current delivery states.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-1023-co-03",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Close the MHE expansion's client-capture and resource decisions",
+            "detail": "Today's IT scoping still lacks a named build resource, leadership's question about capturing all Florida and Texas clients beyond the RFE screen remains open, and the California provider review is likely moving to next week. Leave the day with owners and decision dates for each gap.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1023-co-04",
+            "taskId": "task-20261022-review-astrid-project-access",
+            "label": "Review Astrid Ortega's project-access requests",
+            "detail": "The batch spans Litify task sets, automations, templates, case types, and related project records. Validate the intended role and business need, then process the requests consistently as one permission decision.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1023-co-05",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Resolve the overdue harassment-prevention training",
+            "detail": "Rippling again lists the Dominican Republic EOR course as overdue since December 9, 2025. Complete it or confirm with HR why the assignment remains open.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1023-co-06",
+            "taskId": "task-20261022-decide-david-skill-file-access",
+            "label": "Decide David Molano's file-access request",
+            "detail": "Approve or decline access to 'SKILL (2) 2.md' after confirming the file's purpose and the permission level David needs.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1023-sched-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "The parallel Salesforce program standup was canceled. Put the voicemail recovery first, then agree on the Insights/Analytics impact, remaining support path, testing that can resume, and the Denver decision gate."
+          },
+          {
+            "id": "fri-1023-sched-02",
+            "label": "11:00 AM - Amazon Connect Waves 2 and 3 alignment",
+            "detail": "Carry the standup decisions directly into queue scope, phone numbers, users, call volumes, sequencing, dates, and deployment dependencies; do not let Waves 2 and 3 outrun the Wave 1 readiness gate."
+          },
+          {
+            "id": "fri-1023-sched-03",
+            "label": "Noon - Protected work block",
+            "detail": "Use the hour to consolidate Amazon Connect decisions and prepare the shortest possible decision brief for the compressed afternoon sequence."
+          },
+          {
+            "id": "fri-1023-sched-04",
+            "label": "1:00 PM - Attorney Review at Intake check-in and EPMO management conflict",
+            "detail": "Choose coverage in advance. The intake session is meant to identify what is working, open issues, and next steps, while the management meeting is the leadership anchor; send a delegate or collect explicit decisions from the meeting you cannot attend."
+          },
+          {
+            "id": "fri-1023-sched-05",
+            "label": "2:00 PM - Jean/Sara 1:1",
+            "detail": "Bring the Amazon Connect gate, compliance sprint readiness, MHE ownership gap, and any decision lost in the 1:00 PM overlap."
+          },
+          {
+            "id": "fri-1023-sched-06",
+            "label": "2:30 PM - EPMO/IT project pipeline sync",
+            "detail": "Use the short handoff to confirm new-intake prioritization, BA assignment, Sprint 21 readiness, and the missing MHE IT resource."
+          },
+          {
+            "id": "fri-1023-sched-07",
+            "label": "3:00 PM - Sprint 21 follow-up and executive status-slide conflict",
+            "detail": "Decide whether the unresolved sprint choices or the executive deck require Jean live. Ensure the other session has an owner, current decisions, risks, and a same-day feedback loop."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1023-ai-01",
+            "taskId": "task-20261023-resolve-friday-calendar-conflicts",
+            "label": "Assign coverage for today's two calendar conflicts",
+            "detail": "Resolve the 1:00 PM Attorney Review/EPMO management overlap and the 3:00 PM Sprint 21/executive-slide overlap before the first meeting begins. Name a delegate or define the exact decisions and readout needed from each missed session.",
+            "urgent": true
+          },
+          {
+            "id": "fri-1023-ai-02",
+            "taskId": "task-20261023-answer-denial-rfe-intake-scope",
+            "label": "Clarify the Denial and RFE categorization intake",
+            "detail": "Jorge asked whether the intake is essentially a controlled list of reason options to help teams choose the correct category. Confirm the intended scope, whether project delivery is warranted, and the next owner so the intake does not remain ambiguous."
+          },
+          {
+            "id": "fri-1023-ai-03",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "Byron sent a direct reminder that the Module 3 follow-up is still awaiting Jean's response. Complete the short survey during a low-context window or assign a specific completion time."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1023-mon-01",
+            "label": "8:00 AM - Approve timecards and prepare the week",
+            "detail": "Use the opening hour to clear timecards and establish the week's decision list before meetings begin."
+          },
+          {
+            "id": "fri-1023-mon-02",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Arrive with Friday's test evidence, Salesforce support status, user-readiness gaps, and a go/no-go position for Denver."
+          },
+          {
+            "id": "fri-1023-mon-03",
+            "label": "11:30 AM - Contigo Plan touchpoint",
+            "detail": "The meeting is explicitly intended to assess project status, future direction, and known gaps. Prepare the few decisions Evan's input is needed to unlock."
+          },
+          {
+            "id": "fri-1023-mon-04",
+            "label": "2:00-3:30 PM - BD portfolio review and Maria 1:1",
+            "detail": "Use the portfolio review to isolate risks and new intake choices, then carry only unresolved owner or roadblock decisions into the 1:1."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-10-22",
     "type": "eod",
     "date": "Thursday, October 22 - End of Day",
