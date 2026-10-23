@@ -1,0 +1,132 @@
+{
+  "digest": {
+    "id": "eod-2026-10-23",
+    "type": "eod",
+    "date": "Friday, October 23 - End of Day",
+    "isoDate": "2026-10-23",
+    "greeting": "Good evening, Jean. Friday closed with the Amazon Connect voicemail fix confirmed, while the Denver readiness gate, Sprint 21 compliance choices, and several ownership decisions remain active. Monday starts with a clear sequence for timecards, Amazon Connect, Contigo Plan, and the BD portfolio.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1023-open-1",
+            "taskId": "task-20261022-set-scv-interim-go-live-gate",
+            "label": "Set the Amazon Connect test and Denver go-live gate",
+            "detail": "Voicemail is fixed, but the Salesforce follow-up and readiness work remain open. Confirm the safe test scope, owners for the remaining support path, the impact of 56 pending core-skill assignments and outstanding leadership confirmations, and the evidence Denver needs before final testing resumes.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1023-open-2",
+            "taskId": "task-20261022-lock-compliance-remediation-sprint",
+            "label": "Lock the compliance-remediation scope for Sprint 21",
+            "detail": "Confirm the Monday-ready list, sequencing, capacity tradeoffs, and the remaining delivery path for the blocked or unestimated compliance stories.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1023-open-3",
+            "taskId": "task-20261023-resolve-friday-calendar-conflicts",
+            "label": "Capture the decisions from today's overlapping meetings",
+            "detail": "Collect the decisions, owners, and follow-ups from the 1:00 PM Attorney Review and EPMO management overlap and the 3:00 PM Sprint 21 and executive-status overlap.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1023-open-4",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Close the MHE expansion's client-capture and resource decisions",
+            "detail": "Name the build resource and set decision dates for capturing Florida and Texas clients beyond the RFE screen and for the California provider review."
+          },
+          {
+            "id": "eod-1023-open-5",
+            "taskId": "task-20261022-review-astrid-project-access",
+            "label": "Review Astrid Ortega's project-access requests",
+            "detail": "Confirm the intended role and business need, then process the Litify, automation, template, case-type, and project-record requests as one consistent permission decision."
+          },
+          {
+            "id": "eod-1023-open-6",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Resolve the overdue harassment-prevention training",
+            "detail": "Complete the Dominican Republic EOR course or confirm with HR why the assignment remains open."
+          },
+          {
+            "id": "eod-1023-open-7",
+            "taskId": "task-20261022-decide-david-skill-file-access",
+            "label": "Decide David Molano's file-access request",
+            "detail": "Approve or decline access after confirming the file's purpose and the permission level David needs."
+          },
+          {
+            "id": "eod-1023-open-8",
+            "taskId": "task-20261023-answer-denial-rfe-intake-scope",
+            "label": "Clarify the Denial and RFE categorization intake",
+            "detail": "Confirm whether the request is a controlled reason list, whether project delivery is warranted, and who owns the next step."
+          },
+          {
+            "id": "eod-1023-open-9",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "Finish the Module 3 follow-up survey or reserve a specific completion window."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1023-cancel-1",
+            "label": "10:30 AM - Salesforce Program Standup",
+            "detail": "The Collaborative Project Manager Sync was explicitly canceled."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1023-decision-1",
+            "label": "Frank can support the Contigo Plan work",
+            "detail": "Anu confirmed that Frank can work on the project, resolving the immediate staffing question raised for the next phase."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1023-mon-1",
+            "label": "8:00 AM - Approve timecards and prepare the week",
+            "detail": "Clear timecards and establish the week's decision list before meetings begin."
+          },
+          {
+            "id": "eod-1023-mon-2",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Bring Friday's test evidence, Salesforce follow-up status, skill-readiness gaps, and a go/no-go position for Denver."
+          },
+          {
+            "id": "eod-1023-mon-3",
+            "label": "11:30 AM - Contigo Plan touchpoint",
+            "detail": "Review project status, future direction, known gaps, and the decisions needed from Evan."
+          },
+          {
+            "id": "eod-1023-mon-4",
+            "label": "Jhara Ochoa out of office",
+            "detail": "Plan Monday coverage with Jhara's out-of-office period beginning that day."
+          },
+          {
+            "id": "eod-1023-mon-5",
+            "label": "2:00-3:30 PM - BD portfolio review and Maria 1:1",
+            "detail": "Use the portfolio review to isolate risks and intake choices, then carry unresolved owner or roadblock decisions into the 1:1."
+          }
+        ]
+      }
+    ]
+  }
+}
