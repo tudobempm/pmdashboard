@@ -189,6 +189,7 @@
     "task-20260824-assign-sara-project-coverage": true,
     "task-20260921-confirm-self-review-deadline": true,
     "task-20261014-set-salesforce-banner-review": true,
+    "task-20261022-set-scv-interim-go-live-gate": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260617-check-litify-field-audit-path": true,
@@ -233,6 +234,8 @@
     "task-20260828-complete-amazon-migration-list": true,
     "task-20260909-review-supabase-security-alert": true,
     "task-20261006-lock-amazon-connect-user-delta": true,
+    "task-20261022-decide-david-skill-file-access": true,
+    "task-20261023-answer-denial-rfe-intake-scope": true,
     "task-20260609-check-supabase-security-warning": true,
     "task-20260612-prepare-epmo-eow-executive-deck": true,
     "task-20260612-reply-eugenia-danny-venn-issues": true,
@@ -304,6 +307,7 @@
     "task-20260903-set-amazon-new-office-calling-path": true,
     "task-20260908-decide-sara-training-agenda-access": true,
     "task-20261006-escalate-stalled-project-decisions": true,
+    "task-20261022-lock-compliance-remediation-sprint": true,
     "task-20260610-resolve-dp-trace-staff-aug-coverage": true,
     "task-20260611-confirm-epmo-offers-and-recognition": true,
     "task-20260611-review-phase-2-projects-nadia-reply": true,
@@ -587,208 +591,208 @@
       "id": "rem-1783113409687",
       "text": "escribirle a Chelsea de legal para validar ownership del portafolio de legal",
       "addedAt": "2026-07-03T21:16:49.687Z",
-      "shownInDigestId": "daily-2026-07-06-morning",
-      "archivedAt": "2026-07-06T13:23:00.000Z"
+      "archivedAt": "2026-07-06T13:23:00.000Z",
+      "shownInDigestId": "daily-2026-07-06-morning"
     },
     {
       "id": "rem-1783113433300",
       "text": "escribirle a los stakeholders de Incident Response para que terminen los incident guides",
       "addedAt": "2026-07-03T21:17:13.300Z",
-      "shownInDigestId": "daily-2026-07-06-morning",
-      "archivedAt": "2026-07-06T13:23:00.000Z"
+      "archivedAt": "2026-07-06T13:23:00.000Z",
+      "shownInDigestId": "daily-2026-07-06-morning"
     },
     {
       "id": "rem-1783113608770",
       "text": "seguir trabajando en index de pm team en loop",
       "addedAt": "2026-07-03T21:20:08.770Z",
-      "shownInDigestId": "daily-2026-07-06-morning",
-      "archivedAt": "2026-07-06T13:23:00.000Z"
+      "archivedAt": "2026-07-06T13:23:00.000Z",
+      "shownInDigestId": "daily-2026-07-06-morning"
     },
     {
       "id": "rem-1783113622099",
       "text": "agendar reunion con paige, lucia y amy de Marketing - portfolio",
       "addedAt": "2026-07-03T21:20:22.099Z",
-      "shownInDigestId": "daily-2026-07-06-morning",
-      "archivedAt": "2026-07-06T13:23:00.000Z"
+      "archivedAt": "2026-07-06T13:23:00.000Z",
+      "shownInDigestId": "daily-2026-07-06-morning"
     },
     {
       "id": "rem-1783458328492",
       "text": "enviar al grupo de PMs las notas de la reunion de ayer",
       "addedAt": "2026-07-07T21:05:28.492Z",
-      "shownInDigestId": "daily-2026-07-08-morning",
-      "archivedAt": "2026-07-08T17:41:19Z"
+      "archivedAt": "2026-07-08T17:41:19Z",
+      "shownInDigestId": "daily-2026-07-08-morning"
     },
     {
       "id": "rem-1783458903069",
       "text": "comenzar testeos de LA AI para change management",
       "addedAt": "2026-07-07T21:15:03.069Z",
-      "shownInDigestId": "daily-2026-07-08-morning",
-      "archivedAt": "2026-07-08T17:41:19Z"
+      "archivedAt": "2026-07-08T17:41:19Z",
+      "shownInDigestId": "daily-2026-07-08-morning"
     },
     {
       "id": "rem-1783458958449",
       "text": "enviar a Eugenia lista de proyectos de los PEs y tambien el SOP template que acordamos como equipo para el nivel de detalle estandard",
       "addedAt": "2026-07-07T21:15:58.449Z",
-      "shownInDigestId": "daily-2026-07-08-morning",
-      "archivedAt": "2026-07-08T17:41:19Z"
+      "archivedAt": "2026-07-08T17:41:19Z",
+      "shownInDigestId": "daily-2026-07-08-morning"
     },
     {
       "id": "rem-1783458977061",
       "text": "Preguntar a Janet proceso para conseguir BA a un proyecto ya. asignado a un PM",
       "addedAt": "2026-07-07T21:16:17.061Z",
-      "shownInDigestId": "daily-2026-07-08-morning",
-      "archivedAt": "2026-07-08T17:41:19Z"
+      "archivedAt": "2026-07-08T17:41:19Z",
+      "shownInDigestId": "daily-2026-07-08-morning"
     },
     {
       "id": "rem-1783566730001",
       "text": "Enviar información por correo de Incident Response a Lucia Caamano",
       "addedAt": "2026-07-09T03:12:10.001Z",
-      "shownInDigestId": "daily-2026-07-09-morning",
-      "archivedAt": "2026-07-09T12:23:44Z"
+      "archivedAt": "2026-07-09T12:23:44Z",
+      "shownInDigestId": "daily-2026-07-09-morning"
     },
     {
       "id": "rem-1783566743228",
       "text": "Agendar meeting con Janet para BD transition",
       "addedAt": "2026-07-09T03:12:23.228Z",
-      "shownInDigestId": "daily-2026-07-09-morning",
-      "archivedAt": "2026-07-09T12:23:44Z"
+      "archivedAt": "2026-07-09T12:23:44Z",
+      "shownInDigestId": "daily-2026-07-09-morning"
     },
     {
       "id": "rem-1783566755120",
       "text": "Revisar notas de next steps en cuaderno",
       "addedAt": "2026-07-09T03:12:35.120Z",
-      "shownInDigestId": "daily-2026-07-09-morning",
-      "archivedAt": "2026-07-09T12:23:44Z"
+      "archivedAt": "2026-07-09T12:23:44Z",
+      "shownInDigestId": "daily-2026-07-09-morning"
     },
     {
       "id": "rem-1783680204373",
       "text": "Enviar correo a Bill sobre Incident Response",
       "addedAt": "2026-07-10T10:43:24.373Z",
-      "shownInDigestId": "daily-2026-07-10-morning",
-      "archivedAt": "2026-07-10T12:02:37Z"
+      "archivedAt": "2026-07-10T12:02:37Z",
+      "shownInDigestId": "daily-2026-07-10-morning"
     },
     {
       "id": "rem-1783680236046",
       "text": "Verificar Toggl y notificar a Sara",
       "addedAt": "2026-07-10T10:43:56.046Z",
-      "shownInDigestId": "daily-2026-07-10-morning",
-      "archivedAt": "2026-07-10T12:02:37Z"
+      "archivedAt": "2026-07-10T12:02:37Z",
+      "shownInDigestId": "daily-2026-07-10-morning"
     },
     {
       "id": "rem-1783680249080",
       "text": "Enviar notas de reunión a Tudo Bem",
       "addedAt": "2026-07-10T10:44:09.080Z",
-      "shownInDigestId": "daily-2026-07-10-morning",
-      "archivedAt": "2026-07-10T12:02:37Z"
+      "archivedAt": "2026-07-10T12:02:37Z",
+      "shownInDigestId": "daily-2026-07-10-morning"
     },
     {
       "id": "rem-1783943794455",
       "text": "Enviar correo a Bill B.",
       "addedAt": "2026-07-13T11:56:34.455Z",
-      "shownInDigestId": "daily-2026-07-13-morning",
-      "archivedAt": "2026-07-13T12:12:57Z"
+      "archivedAt": "2026-07-13T12:12:57Z",
+      "shownInDigestId": "daily-2026-07-13-morning"
     },
     {
       "id": "rem-1784236506152",
       "text": "Trabajar con Bill para terminar Incident Response",
       "addedAt": "2026-07-16T21:15:06.152Z",
-      "shownInDigestId": "daily-2026-07-17-morning",
-      "archivedAt": "2026-07-17T12:05:00.000Z"
+      "archivedAt": "2026-07-17T12:05:00.000Z",
+      "shownInDigestId": "daily-2026-07-17-morning"
     },
     {
       "id": "rem-1784260797119",
       "text": "Preguntar por newsletter del CoE",
       "addedAt": "2026-07-17T03:59:57.119Z",
-      "shownInDigestId": "daily-2026-07-17-morning",
-      "archivedAt": "2026-07-17T12:05:00.000Z"
+      "archivedAt": "2026-07-17T12:05:00.000Z",
+      "shownInDigestId": "daily-2026-07-17-morning"
     },
     {
       "id": "rem-1784297551175",
       "text": "Follow up w/Katie in regards to File Release project not being found",
       "addedAt": "2026-07-17T14:12:31.175Z",
-      "shownInDigestId": "daily-2026-07-20-morning",
-      "archivedAt": "2026-07-20T12:05:00.000Z"
+      "archivedAt": "2026-07-20T12:05:00.000Z",
+      "shownInDigestId": "daily-2026-07-20-morning"
     },
     {
       "id": "rem-1784761576432",
       "text": "Enviarle correo a la gente de JuniperLab (la Ia que estamos probando)",
       "addedAt": "2026-07-22T23:06:16.432Z",
-      "shownInDigestId": "daily-2026-07-23-morning",
-      "archivedAt": "2026-07-23T12:05:42Z"
+      "archivedAt": "2026-07-23T12:05:42Z",
+      "shownInDigestId": "daily-2026-07-23-morning"
     },
     {
       "id": "rem-1785187322347",
       "text": "Continuar testeo de Latent Variables AI",
       "addedAt": "2026-07-27T21:22:02.347Z",
-      "shownInDigestId": "daily-2026-07-30-morning",
-      "archivedAt": "2026-07-30T12:38:26Z"
+      "archivedAt": "2026-07-30T12:38:26Z",
+      "shownInDigestId": "daily-2026-07-30-morning"
     },
     {
       "id": "rem-1785187335705",
       "text": "Crear artifact sobre cumpleaños de DAnny",
       "addedAt": "2026-07-27T21:22:15.705Z",
-      "shownInDigestId": "daily-2026-07-30-morning",
-      "archivedAt": "2026-07-30T12:38:26Z"
+      "archivedAt": "2026-07-30T12:38:26Z",
+      "shownInDigestId": "daily-2026-07-30-morning"
     },
     {
       "id": "rem-1785187535023",
       "text": "crear algo visual usando el transcript de la reunion de CoE con los PCs",
       "addedAt": "2026-07-27T21:25:35.023Z",
-      "shownInDigestId": "daily-2026-07-30-morning",
-      "archivedAt": "2026-07-30T12:38:26Z"
+      "archivedAt": "2026-07-30T12:38:26Z",
+      "shownInDigestId": "daily-2026-07-30-morning"
     },
     {
       "id": "rem-1785187911973",
       "text": "Escribirle a Ashley de Saltclick - Due date Amazon connect es 17 abril and we're flying blind",
       "addedAt": "2026-07-27T21:31:51.973Z",
-      "shownInDigestId": "daily-2026-07-30-morning",
-      "archivedAt": "2026-07-30T12:38:26Z"
+      "archivedAt": "2026-07-30T12:38:26Z",
+      "shownInDigestId": "daily-2026-07-30-morning"
     },
     {
       "id": "rem-1786137661331",
       "text": "Terminar Hoja de Jorge",
       "addedAt": "2026-08-07T21:21:01.331Z",
-      "shownInDigestId": "daily-2026-08-10-morning",
-      "archivedAt": "2026-08-10T12:07:24.208Z"
+      "archivedAt": "2026-08-10T12:07:24.208Z",
+      "shownInDigestId": "daily-2026-08-10-morning"
     },
     {
       "id": "rem-1787607430811",
       "text": "Revisar intake en el que Eugenia dejo comentario",
       "addedAt": "2026-08-24T21:37:10.811Z",
-      "shownInDigestId": "daily-2026-08-25-morning",
-      "archivedAt": "2026-08-25T12:05:55.468Z"
+      "archivedAt": "2026-08-25T12:05:55.468Z",
+      "shownInDigestId": "daily-2026-08-25-morning"
     },
     {
       "id": "rem-1787607439606",
       "text": "Enviar correo a stakeholders de Incident Response",
       "addedAt": "2026-08-24T21:37:19.606Z",
-      "shownInDigestId": "daily-2026-08-25-morning",
-      "archivedAt": "2026-08-25T12:05:55.468Z"
+      "archivedAt": "2026-08-25T12:05:55.468Z",
+      "shownInDigestId": "daily-2026-08-25-morning"
     },
     {
       "id": "rem-1787610206364",
       "text": "Hacer seguimiento a proyecto de Hassan de NTA",
       "addedAt": "2026-08-24T22:23:26.364Z",
-      "shownInDigestId": "daily-2026-08-25-morning",
-      "archivedAt": "2026-08-25T12:05:55.468Z"
+      "archivedAt": "2026-08-25T12:05:55.468Z",
+      "shownInDigestId": "daily-2026-08-25-morning"
     },
     {
       "id": "rem-1787864806253",
       "text": "limpiar asana con spreadsheet de Armando",
       "addedAt": "2026-08-27T21:06:46.253Z",
-      "shownInDigestId": "daily-2026-08-28-morning",
       "archivedAt": "2026-08-28T12:04:44.674Z",
-      "lastModified": 1787918684674
+      "lastModified": 1787918684674,
+      "shownInDigestId": "daily-2026-08-28-morning"
     },
     {
       "id": "rem-1787867738477",
       "text": "Escribirle a Nadia para saber que paso ayer",
       "addedAt": "2026-08-27T21:55:38.477Z",
-      "shownInDigestId": "daily-2026-08-28-morning",
       "archivedAt": "2026-08-28T12:04:44.674Z",
-      "lastModified": 1787918684674
+      "lastModified": 1787918684674,
+      "shownInDigestId": "daily-2026-08-28-morning"
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1792585836906
+  "lastModified": 1793041295360
 }
