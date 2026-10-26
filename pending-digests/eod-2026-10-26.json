@@ -1,0 +1,110 @@
+{
+  "digest": {
+    "id": "eod-2026-10-26",
+    "type": "eod",
+    "date": "Monday, October 26 - End of Day",
+    "isoDate": "2026-10-26",
+    "greeting": "Good evening, Jean. Today produced clearer next steps for the active portfolio work, while the dashboard still shows nine consolidated follow-ups open. Tuesday’s calendar is concentrated around two meeting sequences, so carrying one decision-and-owner narrative across them will keep the day moving.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1026-open-1",
+            "taskId": "task-20261022-set-scv-interim-go-live-gate",
+            "label": "Set the Amazon Connect recovery and Denver go-live gate",
+            "detail": "Voicemail is restored and direct-to-agent and transfer routing were validated, but the Lambda workaround, testing restart criteria, skills and user setup, and Denver go/no-go evidence remain open. Jean told the ELT group that Amazon Connect was the main blocker and that the team was working it.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1026-open-2",
+            "taskId": "task-20261022-lock-compliance-remediation-sprint",
+            "label": "Lock the Sprint 21 scope against the 95-point capacity",
+            "detail": "Confirm the final story list, compliance tradeoffs, and explicit owners for anything blocked or unestimated, keeping the roughly 40% capacity demand from Send Letters Queue 2.0 visible.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1026-open-3",
+            "taskId": "task-20261026-prepare-contigo-go-no-go",
+            "label": "Turn the Contigo discussion into a go/no-go decision plan",
+            "detail": "Evan agreed that Legal and Operations engagement is weak. Start with a clear conversation and written list of needs for Cristian, use Andrew only if necessary, and close the remaining cost, capacity, handoff, and ownership gaps ahead of the November 6 decision."
+          },
+          {
+            "id": "eod-1026-open-4",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Close the MHE expansion’s remaining ownership gaps",
+            "detail": "The direction is to screen Florida and Texas clients at the declaration stage and refer eligible cases to Roots; Illinois referrals may be ready in roughly two weeks. Confirm the provider-and-state document, the IT owner and dates, and whether existing inboxes and task flows can support the next rollout."
+          },
+          {
+            "id": "eod-1026-open-5",
+            "taskId": "task-20261022-review-astrid-project-access",
+            "label": "Resolve the outstanding project and file access requests",
+            "detail": "Review Astrid Ortega’s batch of Litify project-access requests and David Molano’s request for the skill file, confirm each business need and permission level, then approve or decline them consistently."
+          },
+          {
+            "id": "eod-1026-open-6",
+            "taskId": "task-20261023-answer-denial-rfe-intake-scope",
+            "label": "Clarify the Denial and RFE categorization intake",
+            "detail": "The request was routed to the Case Management Center of Excellence today. Confirm whether it needs project delivery, who owns the evaluation, and the next step after intake review."
+          },
+          {
+            "id": "eod-1026-open-7",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Clear the overdue training and LeadUp follow-up",
+            "detail": "Complete the Dominican Republic harassment-prevention course and the LeadUp Module 3 growth-mindset survey, or assign firm completion times for both."
+          },
+          {
+            "id": "eod-1026-open-8",
+            "taskId": "task-20261026-submit-team-work-schedules",
+            "label": "Submit the team’s work-schedule patterns to HR",
+            "detail": "Confirm each unique schedule in Eastern time and complete the survey by Friday, October 30."
+          },
+          {
+            "id": "eod-1026-open-9",
+            "taskId": "task-20261026-clarify-portfolio-cleanup-timing",
+            "label": "Clarify timing for the PMO portfolio cleanup",
+            "detail": "Confirm whether unlinking the three projects is required now or explicitly defer the cleanup so the team can plan it against higher-priority work."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1026-decision-1",
+            "label": "Frank Von Hassell was assigned as BA for the Close Case Taskset",
+            "detail": "The assignment notification names Frank as the Business Analyst and Jean as the project assignee."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1026-tue-1",
+            "label": "10:30 AM - Jhara 1:1 and Amazon Connect standup overlap",
+            "detail": "Jhara remains out of office through November 2, although the 1:1 is still on the calendar. Confirm whether it will proceed and keep the Amazon Connect recovery check covered."
+          },
+          {
+            "id": "eod-1026-tue-2",
+            "label": "11:00 AM to noon - Slides, CM CoE touchpoint, and protected work",
+            "detail": "Prepare the shortest decision narrative during the slide block, carry only unresolved CM CoE issues into the 11:30 touchpoint, and preserve the noon hour for follow-through."
+          },
+          {
+            "id": "eod-1026-tue-3",
+            "label": "2:00 PM to 4:30 PM - Leadership and portfolio sequence",
+            "detail": "EPMO leadership is followed by Nicolas’s 1:1 at 3:30 PM and the CSC portfolio review at 4:00 PM. Reuse one clear risk, owner, and next-step narrative across the sequence."
+          }
+        ]
+      }
+    ]
+  }
+}
