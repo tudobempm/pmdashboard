@@ -1860,8 +1860,17 @@ function CoEDashboardTab({ onBack }) {
 
       {/* Sprint Completion Tracker */}
       {(() => {
-        const sprintData = data.sprintSummary;
-        if (!sprintData || Object.keys(sprintData).length === 0) return null;
+        if (!data.sprintSummary || Object.keys(data.sprintSummary).length === 0) return null;
+        // Pushed to EPMO and Rejected close a project out of its sprint just like
+        // Completed, so they count toward completion and never as overflow. The
+        // automation only counts "Completed", so derive the counts from each stage.
+        const SPRINT_DONE = ["Completed","Pushed to EPMO","Rejected"];
+        const sprintData = Object.fromEntries(Object.entries(data.sprintSummary).map(([n, s]) => {
+          const projects = s.projects.map(p => SPRINT_DONE.includes(p.stage) ? {...p, isOverflow: false} : p);
+          return [n, {...s, projects,
+            completed: projects.filter(p => SPRINT_DONE.includes(p.stage)).length,
+            overflowed: projects.filter(p => p.isOverflow).length}];
+        }));
         const sprintNums = Object.keys(sprintData).map(Number).sort((a,b) => b - a);
         const currentSprint = sprintNums[0];
         const toggleSprint = (n) => setExpandedSprints(prev => ({...prev, [n]: !prev[n]}));
@@ -1904,11 +1913,7 @@ function CoEDashboardTab({ onBack }) {
                     </button>
                     {isExpanded && (
                       <div className="px-4 pb-3 space-y-2">
-                        {s.projects.sort((a,b) => {
-                          if (a.stage === "Completed" && b.stage !== "Completed") return 1;
-                          if (a.stage !== "Completed" && b.stage === "Completed") return -1;
-                          return 0;
-                        }).map((p, i) => (
+                        {s.projects.sort((a,b) => SPRINT_DONE.includes(a.stage) - SPRINT_DONE.includes(b.stage)).map((p, i) => (
                           <div key={i} className="flex items-start gap-2 py-1.5 border-t border-zinc-50 dark:border-zinc-800/50 first:border-t-0">
                             {p.isOverflow && <span className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0 mt-1.5" title="Overflow"/>}
                             <div className="flex-1 min-w-0">
