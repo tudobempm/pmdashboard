@@ -97,6 +97,7 @@
     "task-20260826-track-amazon-connect-uat": true,
     "task-20260924-remind-team-self-reviews": true,
     "task-20260929-scope-close-case-taskset": true,
+    "task-20261026-prepare-contigo-go-no-go": true,
     "task-20260616-overdue-rippling-training": true,
     "task-20260617-schedule-next-pm-workshop": true,
     "task-20260617-staff-aug-touchpoint-prep": true,
@@ -137,6 +138,7 @@
     "task-20261016-clarify-clip-role-coverage": true,
     "task-20261016-confirm-ac-recovery-skills": true,
     "task-20261019-triage-power-automate-flow": true,
+    "task-20261026-submit-team-work-schedules": true,
     "task-20260611-submit-mid-year-touchpoints": true,
     "task-20260612-follow-up-hr-survey-results": true,
     "task-20260615-collect-venn-ticket-numbers": true,
@@ -189,6 +191,7 @@
     "task-20260824-assign-sara-project-coverage": true,
     "task-20260921-confirm-self-review-deadline": true,
     "task-20261014-set-salesforce-banner-review": true,
+    "task-20261022-review-astrid-project-access": true,
     "task-20261022-set-scv-interim-go-live-gate": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
@@ -217,6 +220,7 @@
     "task-20260930-align-amazon-connect-blockers": true,
     "task-20261001-lock-attorney-review-training": true,
     "task-20261009-submit-lawsuit-readiness-docs": true,
+    "task-20261013-set-mhe-vendor-expansion-path": true,
     "task-20261020-verify-supabase-grants-notice": true,
     "task-20260612-approve-camilo-corrected-leave": true,
     "task-20260615-confirm-staff-aug-at-risk-path": true,
@@ -275,6 +279,7 @@
     "task-20260904-decide-attorney-calling-platform": true,
     "task-20260907-complete-amazon-uat-access-check": true,
     "task-20260922-resolve-quality-routing-deadline": true,
+    "task-20261026-clarify-portfolio-cleanup-timing": true,
     "task-20260610-monitor-docusign-taskset-guidance": true,
     "task-20260611-decide-deleted-recording-restores": true,
     "task-20260611-prepare-bcp-ir-and-portfolio-1-1s": true,
@@ -331,6 +336,7 @@
     "task-20260728-clear-legal-change-management-owners": true,
     "task-20260806-confirm-amazon-connect-uat-readiness": true,
     "task-20260825-email-incident-response-stakeholders": true,
+    "task-20261001-complete-overdue-harassment-training": true,
     "task-20261009-validate-attorney-review-routing-sla": true,
     "task-20260612-check-weekly-executive-project-thread": true,
     "task-20260623-review-aos-rejection-downstream-tasks": true,
@@ -794,5 +800,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1793041295360
+  "lastModified": 1793111942909
 }
