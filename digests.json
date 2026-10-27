@@ -1,5 +1,112 @@
 [
   {
+    "id": "eod-2026-10-27",
+    "type": "eod",
+    "date": "Tuesday, October 27 - End of Day",
+    "isoDate": "2026-10-27",
+    "greeting": "Good evening, Jean. The dashboard shows substantial closure across today's carry-over list, with three focused follow-ups remaining. Tomorrow's calendar is workable once the overlapping meetings are resolved.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1027-done-1",
+            "label": "Locked the expanded MHE referral workflow",
+            "detail": "The MHE referral-path work was completed today. Email follow-up confirmed Illinois will use Roots, the internal coordination email does not need to change, and Mar planned to include the newly confirmed states in the IT request after reviewing them with Luisa."
+          },
+          {
+            "id": "eod-1027-done-2",
+            "label": "Completed the Contigo go/no-go decision plan",
+            "detail": "The ownership, capacity, cost, and decision-date follow-through for Contigo was completed."
+          },
+          {
+            "id": "eod-1027-done-3",
+            "label": "Reviewed Astrid Ortega's project-access requests",
+            "detail": "The related access requests were reviewed as one coordinated permission decision."
+          },
+          {
+            "id": "eod-1027-done-4",
+            "label": "Submitted the team's work-schedule patterns",
+            "detail": "The HR schedule-pattern request was completed ahead of the Friday deadline."
+          },
+          {
+            "id": "eod-1027-done-5",
+            "label": "Resolved the portfolio-cleanup timing question",
+            "detail": "The deadline question for the three project-unlinking tasks was closed out."
+          },
+          {
+            "id": "eod-1027-done-6",
+            "label": "Resolved the overdue harassment-prevention training item",
+            "detail": "The long-overdue Dominican Republic EOR training follow-up was closed today."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1027-open-1",
+            "taskId": "task-20261027-confirm-amazon-fix-plan",
+            "label": "Set the Amazon Connect recovery decision",
+            "detail": "Confirm whether the Salesforce fix restores voicemail and Conversation Analytics, whether the Lambda workaround is still needed, and what evidence will govern Denver's go/no-go decision. Also close ownership for user setup, skills readiness, deployment sequencing, and deadlines.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1027-open-2",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "The Module 3 follow-up survey remains open. Assign a firm completion window."
+          },
+          {
+            "id": "eod-1027-open-3",
+            "taskId": "task-20261027-confirm-clip-project-name",
+            "label": "Confirm the Cross-Firm Lead Intake project name",
+            "detail": "Confirm whether Mar's new project is the item labeled Cross-Firm Lead Intake so the leadership deck and project records stay consistent."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1027-cancel-1",
+            "label": "Jhara and Jean 1:1 was canceled",
+            "detail": "The cancellation notice says Jhara is out this week."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1027-wed-1",
+            "label": "10:30 AM - Thiago 1:1 conflicts with the Amazon standup",
+            "detail": "Choose the primary meeting or move the 1:1 so Amazon recovery coverage is explicit."
+          },
+          {
+            "id": "eod-1027-wed-2",
+            "label": "Noon to 2:00 PM - Protect the work block before portfolio and team meetings",
+            "detail": "Blocked Space starts at noon, BD Portfolio Review follows at 1:30 PM, and the EPMO Team Meeting begins at 2:00 PM."
+          },
+          {
+            "id": "eod-1027-wed-3",
+            "label": "2:00 PM to 3:00 PM - EPMO team meeting overlaps Astrid's 1:1",
+            "detail": "Astrid's 2:30 PM 1:1 lands inside the team meeting. Resolve the overlap before the afternoon sequence begins."
+          },
+          {
+            "id": "eod-1027-wed-4",
+            "label": "3:30 PM onward - Resolve two more overlaps before the Jean and Sara 1:1",
+            "detail": "Legal Portfolio Review conflicts with Laura's 1:1 at 3:30 PM, and the CoE touchpoint conflicts with the weekly-meeting focus block at 4:00 PM. Jean and Sara's 1:1 follows at 4:30 PM."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-10-27-morning",
     "type": "daily",
     "date": "Morning - Tuesday, October 27",
