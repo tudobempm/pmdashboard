@@ -1,0 +1,166 @@
+{
+  "digest": {
+    "id": "daily-2026-10-27-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, October 27",
+    "isoDate": "2026-10-27",
+    "greeting": "Good morning, Jean. Tuesday, October 27 has five live meetings, two protected work blocks, seven relevant carry-overs, and two urgent priorities. Start with the 10:30 AM Amazon Connect standup: Salesforce says its fix should restore voicemail and Conversation Analytics, while the project update still carries a midweek fallback and broader deployment-capacity risk. Then lock the expanded MHE referral workflow, use the leadership and portfolio sequence to keep owners and dates aligned, and advance the Contigo decision plan. The completion state is current through Monday afternoon.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1027-co-01",
+            "taskId": "task-20261013-set-mhe-vendor-expansion-path",
+            "label": "Lock the expanded MHE referral workflow",
+            "detail": "Leadership asked the team to maximize referrals at both declaration and RFE stages. Confirm the screening controls with Jessica and Steven, start the durable automation path beyond the temporary task set, and prepare for Roots to accept Illinois referrals in roughly two weeks.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1027-co-02",
+            "taskId": "task-20261026-prepare-contigo-go-no-go",
+            "label": "Turn the Contigo plan into an owned decision path",
+            "detail": "Evan sees Legal and Operations engagement as the main gap and expects the cost analysis to sharpen the decision. Define Cristian's specific asks, confirm capacity and cost assumptions, and preserve the November 6 go/no-go date while Jhara is out.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1027-co-03",
+            "taskId": "task-20261022-review-astrid-project-access",
+            "label": "Review Astrid Ortega's project-access requests",
+            "detail": "Validate the intended role and business need across the related task sets, automations, templates, case types, and project records, then process the batch as one consistent permission decision.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1027-co-04",
+            "taskId": "task-20261026-submit-team-work-schedules",
+            "label": "Submit the team's work-schedule patterns to HR",
+            "detail": "HR needs each unique schedule pattern in Eastern time by Friday, October 30. Confirm the team's patterns and complete the survey before the deadline.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1027-co-05",
+            "taskId": "task-20261026-clarify-portfolio-cleanup-timing",
+            "label": "Set the PMO portfolio-cleanup deadline",
+            "detail": "A teammate flagged limited capacity while asking whether three project unlinking tasks were due immediately. Confirm the actual deadline or explicitly defer the cleanup.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1027-co-06",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "The Module 3 follow-up remains open. Use a low-context window today or assign a firm completion time.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1027-co-07",
+            "taskId": "task-20261001-complete-overdue-harassment-training",
+            "label": "Resolve the overdue harassment-prevention training",
+            "detail": "Rippling still lists the Dominican Republic EOR course as overdue since December 9, 2025. Complete it or confirm with HR why the assignment remains open.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1027-sched-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Reconcile Salesforce's claimed code fix with the Lambda workaround, confirm whether testing can resume, and set the midweek decision rule for Denver and any analytics-outside-the-system fallback."
+          },
+          {
+            "id": "tue-1027-sched-02",
+            "label": "11:00 AM - EPMO weekly slides focus block",
+            "detail": "Use the 30 minutes to verify the Cross-Firm Lead Intake naming and any remaining owner, status, or date corrections before the leadership meeting."
+          },
+          {
+            "id": "tue-1027-sched-03",
+            "label": "11:30 AM - CM CoE and Product touchpoint",
+            "detail": "Gustavo will miss the meeting for compliance work. Keep the discussion to decisions that need the available owners and record anything that must wait for his input."
+          },
+          {
+            "id": "tue-1027-sched-04",
+            "label": "Noon - Protected work block",
+            "detail": "Convert the morning decisions into named owners and dates, then clear the highest-value replies before the afternoon sequence."
+          },
+          {
+            "id": "tue-1027-sched-05",
+            "label": "2:00 PM - EPMO TL weekly catch-up",
+            "detail": "Use the corrected portfolio narrative to focus leadership on current risks, especially Amazon Connect, MHE expansion, and Contigo ownership."
+          },
+          {
+            "id": "tue-1027-sched-06",
+            "label": "3:30 PM - Nicolas and Jean 1:1",
+            "detail": "Carry forward only unresolved owner and capacity decisions from the leadership meeting."
+          },
+          {
+            "id": "tue-1027-sched-07",
+            "label": "4:00 PM - CSC portfolio initial review",
+            "detail": "Establish the few priority, risk, and ownership decisions that should shape the portfolio; keep routine inventory out of the executive queue."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1027-ai-01",
+            "taskId": "task-20261027-confirm-amazon-fix-plan",
+            "label": "Set today's Amazon Connect recovery decision",
+            "detail": "Confirm whether the Salesforce code fix restores voicemail and Conversation Analytics, whether the First Fire Lambda workaround is still needed, when testing resumes, and what evidence will trigger Denver's go-live decision. Keep the skills list, role split, and product-fit concerns in the same decision record.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Teams Highlights",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1027-tm-01",
+            "taskId": "task-20261027-confirm-clip-project-name",
+            "label": "Confirm the Cross-Firm Lead Intake project name",
+            "detail": "Sara asked whether Mar's new project is the item labeled Cross-Firm Lead Intake in the deck. Confirm the naming before the 11:00 AM slide block so the leadership materials stay consistent."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1027-ooo-01",
+            "label": "Jhara is out through November 2",
+            "detail": "Her calendar remains blocked through the start of November 3. Route time-sensitive Contigo and portfolio follow-ups to available owners."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1027-tom-01",
+            "label": "10:30 AM - Thiago 1:1 conflicts with the Amazon standup",
+            "detail": "Choose the primary meeting or move the 1:1 so Amazon recovery coverage is explicit."
+          },
+          {
+            "id": "tue-1027-tom-02",
+            "label": "2:00 PM to 3:00 PM - EPMO team meeting overlaps Astrid's 1:1",
+            "detail": "Astrid's 2:30 PM 1:1 lands inside the team meeting. Resolve the overlap before tomorrow's calendar compresses the decision time."
+          },
+          {
+            "id": "tue-1027-tom-03",
+            "label": "3:30 PM to 4:30 PM - Two double-booked decision blocks",
+            "detail": "Legal Portfolio Review conflicts with Laura's 1:1 at 3:30 PM, and the CoE touchpoint conflicts with the weekly-meeting focus block at 4:00 PM. Move or delegate both pairs today."
+          }
+        ]
+      }
+    ]
+  }
+}
