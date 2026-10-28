@@ -1,0 +1,107 @@
+{
+  "digest": {
+    "id": "eod-2026-10-28",
+    "type": "eod",
+    "date": "Wednesday, October 28 - End of Day",
+    "isoDate": "2026-10-28",
+    "greeting": "Good evening, Jean. The day's follow-through remains concentrated on the security, recovery, and rollout decisions already in motion. Two afternoon meetings were canceled, and no checklist items were marked complete today.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1028-open-1",
+            "taskId": "task-20261027-confirm-amazon-fix-plan",
+            "label": "Set the Amazon Connect recovery decision",
+            "detail": "Confirm the Lambda voicemail fix passed full regression testing, Conversation Analytics still works, the workaround is no longer needed, and the evidence for Denver's go/no-go decision is documented. Close the remaining user, skills, queue, deployment, and deadline owners in the same record.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1028-open-2",
+            "taskId": "task-20261028-remediate-supabase-rls-alert",
+            "label": "Remediate the critical Supabase RLS warning",
+            "detail": "Verify the affected public table, enable the intended protections, and confirm the Security Advisor alert clears.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1028-open-3",
+            "taskId": "task-20261028-implement-mhe-standard",
+            "label": "Turn the MHE requirement into an owned rollout",
+            "detail": "Leadership confirmed that mental health evaluations should be presented as a firm requirement at sign-up once the process is ready, with prior declines re-approached using clear legal guidance. Assign owners and dates for scripts, cost disclosure, re-offer criteria, provider-state coverage, task-set changes, and rollout.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1028-open-4",
+            "taskId": "task-20261028-reset-quality-intake-governance",
+            "label": "Reset the Quality intake path with Sara",
+            "detail": "Prepare Friday's follow-up with Sara and Licelot so Quality gaps are evaluated within the larger project context before a new intake is submitted."
+          },
+          {
+            "id": "eod-1028-open-5",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "A fresh reminder arrived today for the Module 3 survey. Use a short low-context window or set a firm completion time."
+          },
+          {
+            "id": "eod-1028-open-6",
+            "taskId": "task-20261027-confirm-clip-project-name",
+            "label": "Confirm the Cross-Firm Lead Intake project name",
+            "detail": "Confirm whether Mar's new project is the item labeled Cross-Firm Lead Intake so the leadership deck and project records stay consistent."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1028-cancel-1",
+            "label": "Legal Projects Portfolio Review was canceled",
+            "detail": "Jean canceled the afternoon review because there were no major updates and returned the time."
+          },
+          {
+            "id": "eod-1028-cancel-2",
+            "label": "CoE Biweekly Touchpoint was canceled",
+            "detail": "The cancellation notice was sent this afternoon."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1028-thu-1",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Bring forward the test evidence and unresolved Denver go/no-go criteria if today's validation did not fully close the recovery decision.",
+            "time": "10:30 AM"
+          },
+          {
+            "id": "eod-1028-thu-2",
+            "label": "11:30 AM to 1:00 PM - Armando 1:1 followed by protected work time",
+            "detail": "Use the open hour after the 1:1 to finish owners or documentation created by today's security, MHE, and portfolio work.",
+            "time": "11:30 AM"
+          },
+          {
+            "id": "eod-1028-thu-3",
+            "label": "1:30 PM to 3:00 PM - BCP and Incident Response followed by Astrid 1:1",
+            "detail": "The BCP and Incident Response touchpoint starts at 1:30 PM, followed by Astrid's 1:1 at 2:30 PM.",
+            "time": "1:30 PM"
+          },
+          {
+            "id": "eod-1028-thu-4",
+            "label": "4:00 PM - Tudo Bem weekly meeting",
+            "detail": "Carry in only the roadblocks and decisions that need the full team's coordination.",
+            "time": "4:00 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
