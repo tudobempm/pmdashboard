@@ -1,0 +1,130 @@
+{
+  "digest": {
+    "id": "daily-2026-10-29-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, October 29",
+    "isoDate": "2026-10-29",
+    "greeting": "Good morning, Jean. Thursday, October 29 has five live meetings, one protected work hour, six carried-over tasks, and three urgent priorities. Use the 10:30 AM Amazon Connect standup to reconcile conflicting analytics results, approve the full-regression gate for the November 2 Denver target, and lock the queue sequence, rollback plan, and release criteria. Then clear the critical Supabase RLS warning and assign the remaining MHE rollout owners and dates. Two decline notices create a coverage risk for the 1:30 PM BCP and Incident Response touchpoint. Repository completion state was last updated Tuesday morning, so very recent dashboard check-offs may not yet be reflected.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1029-co-01",
+            "taskId": "task-20261027-confirm-amazon-fix-plan",
+            "label": "Lock the Amazon Connect Denver decision",
+            "detail": "Internal testing reports that voicemail and Conversation Analytics worked through the Lambda path, while the external daily update still says analytics remains unresolved. Use the 10:30 AM standup to reconcile the evidence, complete the full regression checklist, and decide whether Denver can hold the November 2 target. Confirm the risk-based queue sequence, batch dates, release gates, rollback steps, and remaining user, skills, queue, and ownership gaps before requesting Danny's approval.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1029-co-02",
+            "taskId": "task-20261028-remediate-supabase-rls-alert",
+            "label": "Remediate the critical Supabase RLS warning",
+            "detail": "The security alert remains unread and open in repository state. Verify the affected public table, enable the intended protections, and confirm the Security Advisor alert clears.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1029-co-03",
+            "taskId": "task-20261028-implement-mhe-standard",
+            "label": "Turn the MHE requirement into an owned rollout",
+            "detail": "Assign owners and dates for intake scripts, cost disclosure, prior-client re-offers, provider-state coverage, task-set changes, and rollout. Keep the legal guidance and operational readiness explicit before mental health evaluations become a standard sign-up requirement.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1029-co-04",
+            "taskId": "task-20261028-reset-quality-intake-governance",
+            "label": "Reset the Quality intake path with Sara",
+            "detail": "Prepare Friday's follow-up with Sara and Licelot so Quality gaps are evaluated within the larger project context before a new intake is submitted. Incorporate the refreshed CM CoE governance guidance when it is available.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1029-co-05",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "The Module 3 follow-up survey remains open after yesterday's reminder. Use a short low-context window today or set a firm completion time.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1029-co-06",
+            "taskId": "task-20261027-confirm-clip-project-name",
+            "label": "Confirm the Cross-Firm Lead Intake project name",
+            "detail": "Confirm whether Mar's new project is the item labeled Cross-Firm Lead Intake so the leadership deck and project records remain consistent.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1029-sched-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Reconcile the conflicting voicemail-analytics evidence, review the new full-regression checklist, and set the Denver go/no-go decision path against the November 2 target."
+          },
+          {
+            "id": "thu-1029-sched-02",
+            "label": "11:30 AM to 1:00 PM - Armando 1:1 followed by protected work time",
+            "detail": "Use the noon hour to record the Amazon decision and close or assign the security and MHE actions before the afternoon sequence."
+          },
+          {
+            "id": "thu-1029-sched-03",
+            "label": "1:30 PM - BCP and Incident Response touchpoint",
+            "detail": "Two decline notices arrived for the meeting. Confirm quorum and essential coverage early; if the required owners cannot attend, convert the block into a focused decision and follow-up plan."
+          },
+          {
+            "id": "thu-1029-sched-04",
+            "label": "2:30 PM - Astrid and Jean 1:1",
+            "detail": "Use the conversation to clarify CM CoE governance and any portfolio ownership or access decisions, then protect the 3:00 PM hour for follow-through."
+          },
+          {
+            "id": "thu-1029-sched-05",
+            "label": "4:00 PM - Tudo Bem weekly meeting",
+            "detail": "Bring only the roadblocks and decisions that require full-team coordination, especially any Amazon deployment ownership that remains unresolved."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1029-ooo-01",
+            "label": "Jhara is out through November 2",
+            "detail": "Her calendar remains blocked through the start of November 3. Keep time-sensitive portfolio work with available owners."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1029-tom-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Bring the completed regression evidence and final Denver decision record forward if today's standup does not close the release gate."
+          },
+          {
+            "id": "thu-1029-tom-02",
+            "label": "Noon to 1:00 PM - Protected work block followed by EPMO management",
+            "detail": "Use the open hour to prepare the few decisions and risks that leadership needs, then keep the management meeting focused on owners, capacity, and dates."
+          },
+          {
+            "id": "thu-1029-tom-03",
+            "label": "2:30 PM to 3:30 PM - Pipeline sync followed by executive status update",
+            "detail": "Carry forward the latest intake, UAT, Amazon Connect, MHE, and governance decisions so the project pipeline and executive deck stay aligned."
+          },
+          {
+            "id": "thu-1029-tom-04",
+            "label": "Mar is out beginning Friday morning",
+            "detail": "Her calendar shows vacation through Monday evening. Route urgent portfolio and governance follow-ups before the weekend."
+          }
+        ]
+      }
+    ]
+  }
+}
