@@ -1,5 +1,118 @@
 [
   {
+    "id": "eod-2026-10-30",
+    "type": "eod",
+    "date": "Friday, October 30 - End of Day",
+    "isoDate": "2026-10-30",
+    "greeting": "Good evening, Jean. Friday closed with a clear path into Monday, while eight follow-ups remain active across launch readiness, security, governance, and team administration. The weekend handoff is focused and grounded in today's updates.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1030-open-1",
+            "taskId": "task-20261027-confirm-amazon-fix-plan",
+            "label": "Assign the remaining Amazon Connect launch controls",
+            "detail": "Name the rollback executor and close the outbound caller-ID and direct-agent routing gaps before Monday's Denver deployment. Capture the release criteria and monitoring owners for the 48-hour stabilization window.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1030-open-2",
+            "taskId": "task-20261028-remediate-supabase-rls-alert",
+            "label": "Remediate the critical Supabase RLS warning",
+            "detail": "Verify the affected public table, enable the intended protections, and confirm the Security Advisor alert clears.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1030-open-3",
+            "taskId": "task-20261028-implement-mhe-standard",
+            "label": "Set MHE rollout ownership and update the portfolio document",
+            "detail": "Confirm interim coverage while Mar is out, assign owners and dates for the remaining rollout work, and add the available MHE and related project information to Jorge's updated document.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1030-open-4",
+            "taskId": "task-20261028-reset-quality-intake-governance",
+            "label": "Reset the Quality intake path with Sara",
+            "detail": "Align Sara and Licelot on reviewing Quality gaps in the full project context before new intake, including the Denial and RFE categorization assessment and current CM CoE guidance."
+          },
+          {
+            "id": "eod-1030-open-5",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "Finish the outstanding follow-up before the new Module 4 work pushes it into another week."
+          },
+          {
+            "id": "eod-1030-open-6",
+            "taskId": "task-20261027-confirm-clip-project-name",
+            "label": "Confirm the Cross-Firm Lead Intake project name",
+            "detail": "Confirm that CLIP is the Cross-Firm Lead Intake project and carry the same name and February 1, 2027 discovery target into the executive update."
+          },
+          {
+            "id": "eod-1030-open-7",
+            "taskId": "task-20261030-close-toggl-eod",
+            "label": "Close the team's October Toggl updates",
+            "detail": "Jean reminded the PM team to update the full month and the deck before EOD. Confirm the entries are current and follow up on any gaps before Sara runs Monday's report."
+          },
+          {
+            "id": "eod-1030-open-8",
+            "taskId": "task-20261030-decide-eugenia-okr-access",
+            "label": "Decide Eugenia's CoE OKRs dashboard access",
+            "detail": "Approve the appropriate permission level or route the request to the dashboard owner."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1030-decision-1",
+            "label": "Denver is cleared for Monday's Amazon Connect launch",
+            "detail": "The team will give Denver a 48-hour stabilization window on Monday and Tuesday, then plans to move Austin to full speed on Thursday if monitoring remains stable."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1030-mon-1",
+            "label": "Colombia holiday may reduce Monday coverage",
+            "detail": "Confirm essential Colombia-based coverage for the Denver launch and portfolio follow-ups."
+          },
+          {
+            "id": "eod-1030-mon-2",
+            "label": "8:00 AM - Approve timecards and prepare for the week",
+            "detail": "Close timekeeping and review any overnight launch-readiness changes."
+          },
+          {
+            "id": "eod-1030-mon-3",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Use the deployment checkpoint to confirm the final regression evidence, rollback owner, and approved caller-ID and routing decisions."
+          },
+          {
+            "id": "eod-1030-mon-4",
+            "label": "Noon focus block followed by 2:00 PM BD portfolio review",
+            "detail": "Consolidate launch and portfolio risks before the review."
+          },
+          {
+            "id": "eod-1030-mon-5",
+            "label": "3:00 PM - Mar and Jean 1:1 conflicts with Mar's out-of-office block",
+            "detail": "Confirm whether the meeting should move or become an asynchronous update."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-10-30-morning",
     "type": "daily",
     "date": "Morning - Friday, October 30",
