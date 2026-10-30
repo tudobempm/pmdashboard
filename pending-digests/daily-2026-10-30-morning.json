@@ -1,0 +1,159 @@
+{
+  "digest": {
+    "id": "daily-2026-10-30-morning",
+    "type": "daily",
+    "date": "Morning - Friday, October 30",
+    "isoDate": "2026-10-30",
+    "greeting": "Good morning, Jean. Friday, October 30 has six live meetings, one protected work hour, six carried-over tasks, and three urgent priorities. Use the 10:30 AM Amazon Connect standup to turn Denver's successful end-to-end test into a documented Monday go/no-go decision, with analytics, outbound caller ID, direct-agent routing, and rollback ownership resolved. Then lock MHE coverage while Mar is out, clear the critical Supabase warning, and carry the resulting decisions through the EPMO, pipeline, and executive-status sequence. Repository completion state was last updated Tuesday morning, so very recent dashboard check-offs may not yet be reflected.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1030-co-01",
+            "taskId": "task-20261027-confirm-amazon-fix-plan",
+            "label": "Lock the Amazon Connect Denver launch decision",
+            "detail": "The SCV update says Denver end-to-end testing succeeded and Monday's launch is on track. Before closing the gate, reconcile the remaining Teams evidence: analytics data is staying in AWS while the Lambda-to-S3 step is bypassed, outbound caller ID still needs a leadership design decision, direct-agent routing surfaced a gap, and the rollback executor and dependencies need to be explicit. Use the 10:30 AM standup to record the go/no-go, release criteria, owner, and rollback plan.",
+            "urgent": true,
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1030-co-02",
+            "taskId": "task-20261028-remediate-supabase-rls-alert",
+            "label": "Remediate the critical Supabase RLS warning",
+            "detail": "The security alert remains open in repository state. Verify the affected public table, enable the intended protections, and confirm the Security Advisor alert clears before the weekend.",
+            "urgent": true,
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1030-co-03",
+            "taskId": "task-20261028-implement-mhe-standard",
+            "label": "Set MHE rollout ownership and weekend coverage",
+            "detail": "The latest update says IT discovery is underway and provider candidates are with Legal. Mar is out today through Monday and named Jean for urgent blockers, so confirm interim coverage and assign owners and dates for the remaining intake, disclosure, task-set, provider-state, and rollout work.",
+            "urgent": true,
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1030-co-04",
+            "taskId": "task-20261028-reset-quality-intake-governance",
+            "label": "Reset the Quality intake path with Sara",
+            "detail": "Use today's EPMO management block to align Sara and Licelot on evaluating Quality gaps within the full project context before new intake. Fold in the newly high-priority Denial and RFE categorization assessment and the refreshed CM CoE governance guidance.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1030-co-05",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "This is now the fifth consecutive daily digest where the follow-up remains open. Finish it in a short focus window today so the new Module 4 invitations do not push the older commitment into another week.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1030-co-06",
+            "taskId": "task-20261027-confirm-clip-project-name",
+            "label": "Confirm the Cross-Firm Lead Intake project name",
+            "detail": "The latest CLIP update says discovery remains on track for February 1, 2027. Confirm that CLIP is the Cross-Firm Lead Intake project and carry the same name and planning dates into today's executive status update.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1030-sched-01",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Convert the successful Denver test into a documented Monday launch decision. Close the analytics persistence, outbound caller-ID, routing, release-gate, and rollback questions."
+          },
+          {
+            "id": "fri-1030-sched-02",
+            "label": "11:30 AM to 1:00 PM - Armando 1:1 followed by protected work time",
+            "detail": "Use the noon hour to record the Amazon decision, clear the security action, and prepare the few ownership decisions needed for the afternoon leadership sequence."
+          },
+          {
+            "id": "fri-1030-sched-03",
+            "label": "1:00 PM - EPMO management meeting",
+            "detail": "Align Quality intake governance, MHE coverage, and priorities while Mar, Anu, and Jhara are unavailable or out."
+          },
+          {
+            "id": "fri-1030-sched-04",
+            "label": "2:30 PM to 3:30 PM - Pipeline sync followed by executive status update",
+            "detail": "Anu is out and Mauricio is covering the pipeline discussion. Carry forward the Denver, MHE, CLIP, Quality, intake, and UAT decisions without reopening settled detail."
+          },
+          {
+            "id": "fri-1030-sched-05",
+            "label": "4:00 PM - Knowledge Management project touchpoint",
+            "detail": "End the week with the current-state decision, named next owner, and the next concrete milestone for the KM work."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1030-act-01",
+            "taskId": "task-20261030-close-toggl-eod",
+            "label": "Close the team's Toggl updates by EOD",
+            "detail": "Jean asked the PM team to update Toggl before today's deadline so Sara can run the report Monday. Confirm the team's entries are current and follow up on any visible gaps."
+          }
+        ]
+      },
+      {
+        "title": "Emails Awaiting Reply",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1030-email-01",
+            "taskId": "task-20261030-decide-eugenia-okr-access",
+            "label": "Decide Eugenia's CoE OKRs dashboard access",
+            "detail": "Eugenia requested access to the CoE OKRs Q4 2026 dashboard. Approve the appropriate permission level or route the request to the dashboard owner before the weekend."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1030-ooo-01",
+            "label": "Mar, Anu, and Jhara are unavailable today",
+            "detail": "Mar is out through Monday, Anu is out today, and Jhara's calendar is blocked through the start of Tuesday. Route urgent MHE, pipeline, and portfolio questions to the available owners identified in today's meetings."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1030-mon-01",
+            "label": "Colombia holiday may reduce Monday coverage",
+            "detail": "All Saints' Day is marked on the calendar. Confirm essential Colombia-based coverage for the Denver launch and portfolio follow-ups before the weekend."
+          },
+          {
+            "id": "fri-1030-mon-02",
+            "label": "8:00 AM - Approve timecards and prepare for the week",
+            "detail": "Use the early block to close timekeeping and review any overnight launch readiness changes."
+          },
+          {
+            "id": "fri-1030-mon-03",
+            "label": "10:30 AM - Amazon Connect daily standup",
+            "detail": "Treat this as the Denver deployment checkpoint; bring the final regression evidence, named rollback owner, and approved caller-ID and routing decisions."
+          },
+          {
+            "id": "fri-1030-mon-04",
+            "label": "Noon focus block followed by 2:00 PM BD portfolio review",
+            "detail": "Use the protected hour to consolidate launch and portfolio risks before the BD review."
+          },
+          {
+            "id": "fri-1030-mon-05",
+            "label": "3:00 PM - Mar and Jean 1:1 overlaps Mar's OOO window",
+            "detail": "Mar's out-of-office block runs through Monday evening. Confirm whether the meeting should move or be converted into an asynchronous update."
+          }
+        ]
+      }
+    ]
+  }
+}
