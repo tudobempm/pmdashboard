@@ -1,5 +1,131 @@
 [
   {
+    "id": "eod-2026-11-02",
+    "type": "eod",
+    "date": "Monday, November 2 - End of Day",
+    "isoDate": "2026-11-02",
+    "greeting": "Good evening, Jean. Monday closed with the Denver technical check moving forward, but the final rollout decision and the rest of the dashboard work remain open. Tuesday needs clear meeting coverage and disciplined follow-through.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1102-open-1",
+            "taskId": "task-20261027-confirm-amazon-fix-plan",
+            "label": "Finalize the Amazon Connect Denver rollout decision",
+            "detail": "Technical validation passed, and voicemail and AI transcription are working. Before Tuesday's controlled rollout, confirm the remaining AI Insights risk, rollback procedure, support coverage, escalation contacts, and final go/no-go.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1102-open-2",
+            "taskId": "task-20261028-remediate-supabase-rls-alert",
+            "label": "Remediate the critical Supabase RLS warning",
+            "detail": "Verify the affected public table, enable the intended protections, and confirm the Security Advisor warning clears.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1102-open-3",
+            "taskId": "task-20261028-implement-mhe-standard",
+            "label": "Set MHE rollout ownership after the holiday",
+            "detail": "Confirm interim escalation coverage, then assign owners and dates for the remaining intake, disclosure, task-set, provider-state, and rollout work.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1102-open-4",
+            "taskId": "task-20261102-update-portfolio-project-document",
+            "label": "Complete Jorge's portfolio-document update",
+            "detail": "Add the available status, owner, and risk context for BCP, MHE, and the other listed projects, including that BCP and Incident Response are waiting for a new sponsor."
+          },
+          {
+            "id": "eod-1102-open-5",
+            "taskId": "task-20261102-review-product-epmo-handoff",
+            "label": "Give Sara feedback on the Product-to-EPMO handoff templates",
+            "detail": "Review the I-824 discovery report and solution brief, then flag any gaps in ownership, requirements, readiness, dependencies, or execution planning."
+          },
+          {
+            "id": "eod-1102-open-6",
+            "taskId": "task-20261028-reset-quality-intake-governance",
+            "label": "Close the Quality intake-governance loop",
+            "detail": "Record the agreed intake path, ownership, and treatment of the Denial/RFE categorization work now that the TRACE fields project is moving to CoE."
+          },
+          {
+            "id": "eod-1102-open-7",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "Finish the short follow-up before the next module activity displaces it again."
+          },
+          {
+            "id": "eod-1102-open-8",
+            "taskId": "task-20261027-confirm-clip-project-name",
+            "label": "Confirm the Cross-Firm Lead Intake project name",
+            "detail": "Confirm that CLIP is the Cross-Firm Lead Intake project and keep the February 1, 2027 discovery target consistent in the portfolio record."
+          },
+          {
+            "id": "eod-1102-open-9",
+            "taskId": "task-20261030-close-toggl-eod",
+            "label": "Verify the team's Toggl month-end close",
+            "detail": "Check the report for visible gaps and follow up only with teammates whose entries remain incomplete."
+          },
+          {
+            "id": "eod-1102-open-10",
+            "taskId": "task-20261030-decide-eugenia-okr-access",
+            "label": "Decide Eugenia's CoE OKRs dashboard access",
+            "detail": "Approve the appropriate permission level or route the request to the dashboard owner so Eugenia can access the Q4 CoE view."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1102-cancel-1",
+            "label": "Three 1:1s were cancelled",
+            "detail": "Jean cancelled today's 1:1s with Maria, Astrid, and Armando. Maria's cancellation noted that she was out of office."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1102-decision-1",
+            "label": "Frame the Contigo checkpoint as a project-team review",
+            "detail": "Jean revised the November 6 language in the Contigo overview and project slide so the team aligns on a recommendation and next steps before taking it to the ELT."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1102-tue-1",
+            "label": "10:30-11:30 AM - Jhara 1:1 and EPMO slide preparation",
+            "detail": "Use the 1:1 to close portfolio roadblocks and next owners, then move directly into the slide-preparation block."
+          },
+          {
+            "id": "eod-1102-tue-2",
+            "label": "11:30 AM - CM CoE and Amazon Connect standups conflict",
+            "detail": "Choose coverage in advance. The Amazon Connect readout should cover the controlled Denver rollout, remaining analytics limitations, monitoring ownership, and rollback readiness."
+          },
+          {
+            "id": "eod-1102-tue-3",
+            "label": "Noon-4:00 PM - Focus, leadership, and Nicolas 1:1",
+            "detail": "Protected work time at noon leads into the 2:00 PM EPMO TL catch-up and the 3:30 PM Nicolas 1:1."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-11-02-morning",
     "type": "daily",
     "date": "Morning - Monday, November 2",
