@@ -1,5 +1,100 @@
 [
   {
+    "id": "daily-2026-11-04-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, November 4",
+    "isoDate": "2026-11-04",
+    "greeting": "Good morning, Jean. Wednesday, November 4 has five meetings, one urgent item, and one aging carry-over. Use the Thiago 1:1 to lock Denver's day-two controls, close the Sara and Contigo clarification loop with Mar, and shape the Salesforce release priorities before Thursday's Sprint 22 call. The main schedule risk is the 4:00 PM overlap between the Firmwide Meeting, weekly-meeting preparation, and the Amazon Connect standup, so decide coverage and the required rollout readout before the afternoon sequence begins.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-1104-co-01",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "This remains the only unchecked task from Tuesday's morning brief and has been open since October 23. Finish the short survey during the morning focus window so it does not slip behind the afternoon meeting block again.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1104-sched-01",
+            "label": "8:00-10:30 AM - Main focus window",
+            "detail": "Use the largest uninterrupted block to finish the aging LeadUp follow-up and review the newly shared Salesforce release material before meetings begin."
+          },
+          {
+            "id": "wed-1104-sched-02",
+            "label": "10:30 AM-noon - Thiago 1:1 and protected work",
+            "detail": "Use the Thiago 1:1 for Denver's first-day evidence and unresolved controls, then protect the noon block for documenting owners and follow-ups."
+          },
+          {
+            "id": "wed-1104-sched-03",
+            "label": "1:30-3:30 PM - Mar 1:1 and EPMO Team Meeting",
+            "detail": "Close the Contigo clarification with Mar, then carry a concise rollout, portfolio, and ownership readout into the EPMO team session."
+          },
+          {
+            "id": "wed-1104-sched-04",
+            "label": "3:30-4:30 PM - Firmwide Meeting and 4:00 PM conflict",
+            "detail": "The Firmwide Meeting overlaps both weekly-meeting preparation and the Amazon Connect standup at 4:00 PM. Choose coverage in advance and secure the deployment readout from the session Jean does not attend."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-1104-act-01",
+            "taskId": "task-20261104-confirm-denver-day2-controls",
+            "label": "Lock Denver's day-two controls and next owners",
+            "detail": "Denver handled 15 inbound calls after cutover, but the analytics Lambda was still being adjusted and the outbound caller-ID design review needed RAID tracking. Use the Thiago 1:1 and the 4:00 PM standup to confirm call stability, analytics evidence, the interim RingCentral path, the design owner, and any escalation trigger.",
+            "urgent": true
+          },
+          {
+            "id": "wed-1104-act-02",
+            "taskId": "task-20261104-close-contigo-clarification",
+            "label": "Close the Sara and Contigo clarification loop",
+            "detail": "Mar sent Sara additional context yesterday and had not received a response by the last Teams update. Use the 1:30 PM 1:1 to confirm what is still unclear and make sure the project team can align on a recommendation before the November 6 checkpoint with stakeholders.",
+            "urgent": true
+          },
+          {
+            "id": "wed-1104-act-03",
+            "taskId": "task-20261104-shape-salesforce-release-priorities",
+            "label": "Shape the Salesforce release priorities for Sprint 22",
+            "detail": "The newly shared release review identifies Knowledge Blocks and Similarity, supervisor monitoring and backlog visibility, caller-ID options, recording controls, and voice analytics as relevant opportunities. Select the items that need Product roadmap decisions or IT follow-up before Thursday's Sprint 22 prioritization call."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1104-tom-01",
+            "label": "10:30 AM-noon - Laura 1:1 and protected work",
+            "detail": "Use the morning sequence to clear Laura's highest-value roadblocks and prepare the decisions needed for the afternoon prioritization block."
+          },
+          {
+            "id": "wed-1104-tom-02",
+            "label": "1:30-3:00 PM - Project Coords, Sprint 22, and Sara overlap",
+            "detail": "The Sprint 22 call starts at 2:00 PM and overlaps the 2:30 PM Sara 1:1. Decide whether to move the 1:1 or leave the prioritization call with a named decision owner."
+          },
+          {
+            "id": "wed-1104-tom-03",
+            "label": "3:30-5:00 PM - BD review and double-booked 4:00 PM block",
+            "detail": "The rescheduled BD Portfolio Review leads directly into a conflict between the Tudo Bem weekly meeting and Amazon Connect standup. Set coverage and required readouts before Thursday afternoon."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-11-03",
     "type": "eod",
     "date": "Tuesday, November 3 - End of Day",
