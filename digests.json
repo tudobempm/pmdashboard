@@ -1,5 +1,116 @@
 [
   {
+    "id": "daily-2026-11-05-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, November 5",
+    "isoDate": "2026-11-05",
+    "greeting": "Good morning, Jean. Thursday, November 5 has six meetings, one protected work block, three urgent items, and four unchecked carry-overs. First, lock the Austin and Houston rollout controls and analytics ownership; then shape the Sprint 22 decisions and close the Contigo clarification with Sara. The schedule has two collisions: Sprint 22 overlaps the Sara 1:1, and the Tudo Bem weekly meeting overlaps the Amazon Connect standup. Dashboard state was more than 24 hours old; the publication workflow will refresh it and remove any carry-over completed since the repository snapshot.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1105-co-01",
+            "taskId": "task-20261104-confirm-denver-day2-controls",
+            "label": "Lock rollout controls and analytics ownership",
+            "detail": "Denver was stable enough to support today's Austin and Houston rollout, but AI Insights is still blocked by a Sales Cloud permission conflict and voicemail analytics remains outside the system. Confirm the rollout owners, the interim reporting path, and the escalation triggers before the five-office deployment sequence continues.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1105-co-02",
+            "taskId": "task-20261104-shape-salesforce-release-priorities",
+            "label": "Shape the Salesforce release priorities for Sprint 22",
+            "detail": "Use the 2:00 PM prioritization call to select the release-review items that need a Product roadmap decision or IT follow-up, with caller ID, monitoring, recording controls, and analytics as the strongest near-term candidates.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1105-co-03",
+            "taskId": "task-20261104-close-contigo-clarification",
+            "label": "Close the Sara and Contigo clarification loop",
+            "detail": "Use the 2:30 PM Sara 1:1 to confirm what remains unclear and align the recommendation before the November 6 stakeholder checkpoint. The overlap with Sprint 22 needs a coverage decision in advance.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1105-co-04",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "This has remained open since October 23. Finish the short follow-up during the protected noon block before the new Module 4 pre-work competes for attention.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1105-sched-01",
+            "label": "8:00-10:30 AM - Focus window",
+            "detail": "Use the largest open block to prepare the Sprint 22 decisions, review the rollout readout, and finish the aging LeadUp follow-up."
+          },
+          {
+            "id": "thu-1105-sched-02",
+            "label": "10:30 AM-noon - Laura 1:1 and protected work",
+            "detail": "Laura flagged change management for the 1:1. Clear the next decision or owner, then protect the noon block for preparation and follow-through."
+          },
+          {
+            "id": "thu-1105-sched-03",
+            "label": "1:30-3:00 PM - Project Coords, Sprint 22, and Sara overlap",
+            "detail": "Project Coords leads directly into the 2:00 PM Sprint 22 call, which overlaps the Sara 1:1 from 2:30-2:45 PM. Decide whether to move the 1:1 or leave the prioritization call with a named decision owner."
+          },
+          {
+            "id": "thu-1105-sched-04",
+            "label": "4:00-5:00 PM - Weekly meeting and Amazon Connect conflict",
+            "detail": "The Tudo Bem weekly meeting and Amazon Connect standup start together. Set coverage and secure the Austin and Houston rollout readout from the session Jean does not attend."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1105-act-01",
+            "taskId": "task-20261105-resolve-thursday-coverage",
+            "label": "Set coverage for both afternoon conflicts",
+            "detail": "Protect decision continuity for Sprint 22 versus the Sara 1:1 and for the weekly meeting versus Amazon Connect. Name the owner and required readout for each session Jean does not attend.",
+            "urgent": true
+          },
+          {
+            "id": "thu-1105-act-02",
+            "taskId": "task-20261105-send-october-hours-pto",
+            "label": "Send October hours, holidays, and PTO totals",
+            "detail": "Sara asked EPMO leaders for last month's Rippling hours and holiday and PTO totals for their teams. Pull Jean's team figures and send the concise response before the afternoon meeting block."
+          }
+        ]
+      },
+      {
+        "title": "Friday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1105-fri-01",
+            "label": "11:30 AM-noon - BD Portfolio Review and rollout standup conflict",
+            "detail": "The rescheduled portfolio review overlaps the Amazon Connect standup. Decide which session needs Jean and require an owner, risk, and decision readout from the other."
+          },
+          {
+            "id": "thu-1105-fri-02",
+            "label": "Noon-1:00 PM - Protected focus block",
+            "detail": "Use the open hour to close any Sprint 22, Contigo, or rollout follow-ups before the management sequence begins."
+          },
+          {
+            "id": "thu-1105-fri-03",
+            "label": "2:00-3:30 PM - Management, IT pipeline, and executive update",
+            "detail": "The EPMO Management Meeting overlaps the 2:30 PM IT pipeline sync, followed immediately by the executive project-status update. Prepare one concise portfolio and risk readout that can carry across all three."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-11-04",
     "type": "eod",
     "date": "Wednesday, November 4 - End of Day",
