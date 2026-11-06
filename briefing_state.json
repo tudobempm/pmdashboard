@@ -75,6 +75,7 @@
     "task-20260827-resolve-laura-schedule": true,
     "task-20261019-lock-cm-coe-priorities": true,
     "task-20261028-implement-mhe-standard": true,
+    "task-20261105-send-october-hours-pto": true,
     "task-20260611-align-sara-timeline-kpi": true,
     "task-20260722-discuss-pc-handoff-plan": true,
     "task-20260727-amazon-connect-venn-uat": true,
@@ -122,6 +123,7 @@
     "task-20261008-secure-ekm-legal-capacity": true,
     "task-20261027-confirm-clip-project-name": true,
     "task-20261030-decide-eugenia-okr-access": true,
+    "task-20261106-review-claude-permissions": true,
     "task-20260609-close-coe-guide-follow-ups": true,
     "task-20260609-confirm-kpi-final-approval": true,
     "task-20260610-land-coe-owners-next-steps": true,
@@ -171,6 +173,8 @@
     "task-20261006-close-attorney-review-scope": true,
     "task-20261009-ready-amazon-connect-retest": true,
     "task-20261102-review-product-epmo-handoff": true,
+    "task-20261104-close-contigo-clarification": true,
+    "task-20261106-set-friday-meeting-coverage": true,
     "task-20260624-track-mar-mhe-angel-response": true,
     "task-20260625-align-court-pm-pe-transition": true,
     "task-20260625-prepare-chicago-debrief-epmo": true,
@@ -200,6 +204,7 @@
     "task-20261022-review-astrid-project-access": true,
     "task-20261022-set-scv-interim-go-live-gate": true,
     "task-20261028-remediate-supabase-rls-alert": true,
+    "task-20261104-confirm-denver-day2-controls": true,
     "task-20260610-review-court-ead-deliverables": true,
     "task-20260615-prepare-epmo-portfolio-review": true,
     "task-20260617-check-litify-field-audit-path": true,
@@ -810,5 +815,5 @@
     }
   ],
   "assigneeOverrides": {},
-  "lastModified": 1793727673924
+  "lastModified": 1793972120624
 }
