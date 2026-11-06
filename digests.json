@@ -1,5 +1,134 @@
 [
   {
+    "id": "daily-2026-11-06-morning",
+    "type": "daily",
+    "date": "Morning - Friday, November 6",
+    "isoDate": "2026-11-06",
+    "greeting": "Good morning, Jean. Friday, November 6 has eight meetings, one protected work block, three urgent items, and four carried-over priorities. First, clear the Houston routing blocker before the 11:30 AM rollout sequence; then set coverage for the three meeting collisions and use the 10:00 AM Laura catch-up to establish the Product context and escalation path. Voicemail analytics still depends on an external reporting path, so keep its owner and escalation trigger explicit during rollout follow-through. The repository state snapshot is more than 24 hours old; the publication workflow will refresh it before pruning any carry-over completed since that snapshot.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1106-co-01",
+            "taskId": "task-20261104-confirm-denver-day2-controls",
+            "label": "Clear the Houston routing blocker and protect today's rollouts",
+            "detail": "Thiago flagged Houston routing as unresolved, and Hilary cannot add call forwarding until it is fixed. Confirm the driver, validation result, and escalation trigger before the 11:30 AM rollout sequence; keep the external voicemail-analytics reporting owner explicit.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-1106-co-02",
+            "taskId": "task-20261104-close-contigo-clarification",
+            "label": "Close the Sara and Contigo clarification loop",
+            "detail": "The prior operating brief tied this clarification to today's stakeholder checkpoint. Confirm what remains open, align the recommendation, and close or reassign the next step before the afternoon meeting stack.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-1106-co-03",
+            "taskId": "task-20261105-send-october-hours-pto",
+            "label": "Send October hours, holidays, and PTO totals",
+            "detail": "Jhara said her Toggl entries were updated and Jean asked her to correct the first week of October. Verify the final team totals, then send Sara the requested hours, holiday, and PTO summary.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1106-co-04",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "This has remained open since October 23. Finish the short follow-up before Module 4 pre-work and next week's schedule add more training commitments.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1106-sched-01",
+            "label": "8:00-10:00 AM - Focus window",
+            "detail": "Use the largest open block to verify Houston routing ownership, prepare one portfolio-risk readout, and clear a short administrative carry-over."
+          },
+          {
+            "id": "fri-1106-sched-02",
+            "label": "10:00-10:25 AM - Laura catch-up",
+            "detail": "Use this meeting to reconstruct the Product discussion, clarify what was said in yesterday's meeting, and decide whether the next step with Laura and David needs escalation."
+          },
+          {
+            "id": "fri-1106-sched-03",
+            "label": "11:30 AM-1:00 PM - Two rollout conflicts",
+            "detail": "Charlotte and Dublin go-live overlaps BD Portfolio Review at 11:30 AM; Austin and Chicago go-live then overlaps the protected noon block. Name coverage and require a blocker, decision, and validation readout from each rollout."
+          },
+          {
+            "id": "fri-1106-sched-04",
+            "label": "2:00-3:00 PM - Management and pipeline overlap",
+            "detail": "EPMO Management runs through 3:00 PM while the IT pipeline sync starts at 2:30 PM. Decide who carries prioritization, BA assignment, and UAT decisions into the executive update."
+          },
+          {
+            "id": "fri-1106-sched-05",
+            "label": "3:00-4:00 PM - Executive update and rollout closeout",
+            "detail": "The executive project-status update leads directly into the Amazon Connect standup. Capture deployment stability, remaining routing or analytics risk, owners, and Monday follow-ups."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1106-act-01",
+            "taskId": "task-20261106-set-friday-meeting-coverage",
+            "label": "Set coverage for the three Friday collision points",
+            "detail": "Assign who attends the BD review versus Charlotte and Dublin rollout, protect the Austin and Chicago validation at noon, and name the decision owner for the 2:30 PM pipeline sync while EPMO Management is still running.",
+            "urgent": true
+          },
+          {
+            "id": "fri-1106-act-02",
+            "taskId": "task-20261106-align-product-escalation-context",
+            "label": "Align the Product context and escalation path with Laura",
+            "detail": "Laura said she and David need clarity on Product's new operating dynamic after concerns raised in yesterday's meeting. Use the 10:00 AM catch-up to collect the facts, confirm the Laura-David-Jean follow-up, and decide whether escalation is warranted.",
+            "urgent": true
+          },
+          {
+            "id": "fri-1106-act-03",
+            "taskId": "task-20261106-sign-ai-frap-docs",
+            "label": "Review and sign the two pending AI policy documents",
+            "detail": "Rippling requested Jean's signature on the AI Tool Development Policy and the AI Tools Quick Reference Guide, both FRAP No. 002. Review them together and complete the signatures."
+          },
+          {
+            "id": "fri-1106-act-04",
+            "taskId": "task-20261106-review-claude-permissions",
+            "label": "Review the Claude GitHub App permission request",
+            "detail": "GitHub reported that the Claude App is requesting additional account access. Check the requested scope before approving or denying the change."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1106-mon-01",
+            "label": "Dominican Republic Constitution Day is on the calendar",
+            "detail": "Confirm which Monday meetings and response expectations still apply around the local holiday before the weekend begins."
+          },
+          {
+            "id": "fri-1106-mon-02",
+            "label": "8:00 AM - Timecards and weekly preparation",
+            "detail": "Approve timecards and set the week's operating priorities before the later Amazon Connect and portfolio sessions."
+          },
+          {
+            "id": "fri-1106-mon-03",
+            "label": "11:30 AM-3:30 PM - Rollout, portfolio, and Maria follow-through",
+            "detail": "Amazon Connect standup is followed by a noon focus block, the 2:00 PM BD Portfolio Review, and the 3:00 PM Maria 1:1. Bring the rollout readout, portfolio blockers, and named next steps into the afternoon."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-11-05-morning",
     "type": "daily",
     "date": "Morning - Thursday, November 5",
