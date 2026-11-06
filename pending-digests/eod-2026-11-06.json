@@ -1,0 +1,101 @@
+{
+  "digest": {
+    "id": "eod-2026-11-06",
+    "type": "eod",
+    "date": "Friday, November 6 - End of Day",
+    "isoDate": "2026-11-06",
+    "greeting": "Good evening, Jean. Five priorities were closed today, while three items carry into the weekend. The Amazon Connect rollouts ended the week on a positive note, and Monday's calendar remains active around the Dominican Republic holiday.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1106-done-1",
+            "label": "Cleared the Houston routing blocker and protected the rollout sequence",
+            "detail": "The routing issue was closed, and Teams updates later confirmed the Amazon Connect rollouts had gone smoothly."
+          },
+          {
+            "id": "eod-1106-done-2",
+            "label": "Closed the Sara and Contigo clarification loop",
+            "detail": "The clarification and stakeholder follow-through were completed today."
+          },
+          {
+            "id": "eod-1106-done-3",
+            "label": "Sent the October hours, holidays, and PTO totals",
+            "detail": "The requested team totals were finalized and sent to Sara."
+          },
+          {
+            "id": "eod-1106-done-4",
+            "label": "Set coverage for Friday's meeting conflicts",
+            "detail": "Coverage was established for the rollout, portfolio, management, and pipeline overlaps."
+          },
+          {
+            "id": "eod-1106-done-5",
+            "label": "Reviewed the Claude GitHub App permission request",
+            "detail": "The additional access request was reviewed today."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1106-open-1",
+            "taskId": "task-20261106-align-product-escalation-context",
+            "label": "Align the Product context and escalation path with Laura",
+            "detail": "Confirm the facts from the Product discussion, align the Laura-David-Jean follow-up, and decide whether escalation is needed.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1106-open-2",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "Finish the short follow-up before Module 4 pre-work and next week's training commitments."
+          },
+          {
+            "id": "eod-1106-open-3",
+            "taskId": "task-20261106-sign-ai-frap-docs",
+            "label": "Review and sign the two pending AI policy documents",
+            "detail": "Review the AI Tool Development Policy and AI Tools Quick Reference Guide together, then complete both signatures."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1106-cancel-1",
+            "label": "Amazon Connect daily standup was cancelled",
+            "detail": "The 3:30 PM standup was cancelled so the team could stay focused on the remaining go-live activities."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1106-mon-1",
+            "label": "Dominican Republic Constitution Day is on the calendar",
+            "detail": "Confirm which meetings and response expectations still apply around the local holiday."
+          },
+          {
+            "id": "eod-1106-mon-2",
+            "label": "8:00 AM - Timecards and weekly preparation",
+            "detail": "Approve timecards and set the week's operating priorities before the later rollout and portfolio sessions.",
+            "time": "8:00 AM"
+          },
+          {
+            "id": "eod-1106-mon-3",
+            "label": "11:30 AM-3:30 PM - Rollout, portfolio, and Maria follow-through",
+            "detail": "Amazon Connect standup is followed by a noon focus block, the 2:00 PM BD Portfolio Review, and the 3:00 PM Maria 1:1. Bring the rollout readout, portfolio blockers, and named next steps into the afternoon.",
+            "time": "11:30 AM-3:30 PM"
+          }
+        ]
+      }
+    ]
+  }
+}
