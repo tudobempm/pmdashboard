@@ -1,0 +1,94 @@
+{
+  "digest": {
+    "id": "eod-2026-11-09",
+    "type": "eod",
+    "date": "Monday, November 9 - End of Day",
+    "isoDate": "2026-11-09",
+    "greeting": "Good evening, Jean. The Dominican Republic holiday kept today intentionally light, and no checklist items were marked complete. Amazon Connect preparation moved toward Tuesday rollouts in Nashville, Washington DC, and Tampa, while six items remain open for follow-through.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1109-open-1",
+            "taskId": "task-20261106-align-product-escalation-context",
+            "label": "Close the Product context and escalation loop with Laura",
+            "detail": "Confirm the outcome of Friday's Product catch-up, then close the item or assign the remaining escalation step with Laura and David.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1109-open-2",
+            "taskId": "task-20261109-confirm-ooo-coverage",
+            "label": "Confirm the outcome and ownership of Monday's holiday coverage",
+            "detail": "The calendar retained the timecard block, Amazon Connect standup, and a Conversation Analytics knowledge-transfer session during Jean's OOO day. Confirm what ran, who covered it, and any follow-up needed for Tuesday.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1109-open-3",
+            "taskId": "task-20261109-route-intake-access-request",
+            "label": "Route Maribel's intake-ownership access request correctly",
+            "detail": "The access request is still assigned to Jean in Asana. Confirm the IT/HALO owner and keep it from returning to the project-intake queue.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1109-open-4",
+            "taskId": "task-20261109-gate-amazon-connect-wave",
+            "label": "Set the Tuesday gate for the next Amazon Connect rollout wave",
+            "detail": "Tuesday now includes live transitions for Nashville, Washington DC, and Tampa. Carry forward the stability readout and confirm that routing, flows, permissions, and analytics are ready before the rollout sessions.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1109-open-5",
+            "taskId": "task-20261106-sign-ai-frap-docs",
+            "label": "Review and sign the two AI policy documents",
+            "detail": "Complete the AI Tool Development Policy and AI Tools Quick Reference Guide signatures after the holiday unless coverage has already closed them."
+          },
+          {
+            "id": "eod-1109-open-6",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "Finish the short follow-up before Tuesday's training and portfolio schedule adds more commitments."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1109-cancel-1",
+            "label": "An EPMO Team Meeting invitation was canceled and reissued",
+            "detail": "Sara Watson sent a cancellation notice late today, followed minutes later by a new EPMO Team Meeting invitation."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1109-tue-1",
+            "label": "10:30 AM-12:00 PM - Portfolio, slide prep, and Amazon Connect overlap",
+            "detail": "The Jhara 1:1 starts at 10:30 AM, followed by EPMO slide preparation at 11:00 AM. Nashville's rollout begins at 11:15 AM, while Washington DC and Tampa, CM CoE/Product, and the Amazon Connect standup all start at 11:30 AM, so coverage needs to be settled early."
+          },
+          {
+            "id": "eod-1109-tue-2",
+            "label": "12:00-3:00 PM - Protect the work block before the leadership catch-up",
+            "detail": "Blocked space runs from noon to 1:00 PM, and the EPMO TL Weekly Catch Up starts at 2:00 PM. Complete the EPMO team's Asana pain-points poll before the afternoon meeting stack."
+          },
+          {
+            "id": "eod-1109-tue-3",
+            "label": "3:30-4:30 PM - Resolve the late-afternoon conflict",
+            "detail": "Lisinski Celebrates and the Nicolas 1:1 both start at 3:30 PM, followed by the CSC portfolio review at 4:00 PM. Decide coverage before the sequence begins."
+          }
+        ]
+      }
+    ]
+  }
+}
