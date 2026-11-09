@@ -1,0 +1,119 @@
+{
+  "digest": {
+    "id": "daily-2026-11-09-morning",
+    "type": "daily",
+    "date": "Morning - Monday, November 9",
+    "isoDate": "2026-11-09",
+    "greeting": "Good morning, Jean. Today is Monday, November 9, and your calendar marks you out for the Dominican Republic Constitution Day holiday. Two timed commitments and one protected block remain on the calendar, alongside three carried-over priorities and four urgent items. Protect the OOO boundary by confirming coverage for the residual meetings, make sure the Amazon Connect stability review produces a clear Tuesday deployment gate, and route Maribel's access request to the correct IT/HALO path. The repository state snapshot is more than 24 hours old after the weekend; the publication workflow will refresh it before pruning anything completed since Friday.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-1109-co-01",
+            "taskId": "task-20261106-align-product-escalation-context",
+            "label": "Close the Product context and escalation loop with Laura",
+            "detail": "The Friday catch-up was intended to reconstruct the Product discussion and agree on the Laura-David-Jean follow-up. Confirm the outcome after the holiday, then close the item or assign the remaining escalation step.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1109-co-02",
+            "taskId": "task-20261106-sign-ai-frap-docs",
+            "label": "Review and sign the two AI policy documents",
+            "detail": "Rippling is still waiting on the AI Tool Development Policy and AI Tools Quick Reference Guide, both FRAP No. 002. Review and complete the signatures after the holiday unless coverage has already closed them.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-1109-co-03",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Complete the LeadUp growth-mindset follow-up survey",
+            "detail": "This item has remained open since October 23. Finish the short follow-up before Tuesday's training and portfolio stack adds more commitments.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1109-sched-01",
+            "label": "8:00-9:00 AM - Approve Timecards & Prepare for the Week",
+            "detail": "This recurring block remains on the calendar despite the all-day OOO marker. Confirm it is delegated, intentionally retained, or safe to skip."
+          },
+          {
+            "id": "mon-1109-sched-02",
+            "label": "11:30 AM-12:00 PM - AC Implementation Daily Standup",
+            "detail": "The standup is set for a Monday stability review of the six offices deployed last week. Jean is tentative and OOO, so the team needs a named owner for the monitoring readout."
+          },
+          {
+            "id": "mon-1109-sched-03",
+            "label": "12:00-1:00 PM - Blocked Space",
+            "detail": "Keep this protected after the standup; it is the only remaining calendar block and should not become an unplanned holiday meeting."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-1109-act-01",
+            "taskId": "task-20261109-confirm-ooo-coverage",
+            "label": "Confirm coverage for the residual Monday commitments",
+            "detail": "The all-day OOO marker conflicts with the 8:00 AM timecard block and the 11:30 AM Amazon Connect standup. Delegate, decline, or explicitly retain each commitment so the holiday boundary is clear.",
+            "urgent": true
+          },
+          {
+            "id": "mon-1109-act-02",
+            "taskId": "task-20261109-route-intake-access-request",
+            "label": "Route Maribel's intake-ownership access request correctly",
+            "detail": "Jean committed to check who directed Maribel to the project-intake form. The EPMO thread concluded that the request belongs with IT/HALO rather than project intake; confirm the correct owner and prevent the request from cycling back into the wrong queue.",
+            "urgent": true
+          },
+          {
+            "id": "mon-1109-act-03",
+            "taskId": "task-20261109-gate-amazon-connect-wave",
+            "label": "Set the Tuesday gate for the next Amazon Connect rollout wave",
+            "detail": "Six offices went live last week, and Monday is reserved for monitoring and stabilization before the remaining offices resume Tuesday. Require a concise readout on queue and skill routing, failed flows, permissions, transcription insights, and any unresolved analytics exceptions before the go/no-go decision.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1109-ooo-01",
+            "label": "Jean and the Dominican Republic team are out today",
+            "detail": "The calendar marks the Constitution Day holiday, and Sara told HR that Jean is expected back Tuesday. Treat noncritical follow-ups as Tuesday work unless an explicit coverage owner is already in place."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1109-tue-01",
+            "label": "10:30-11:30 AM - Jhara 1:1 and EPMO slide preparation",
+            "detail": "Use the Jhara touchpoint to review the portfolio, roadblocks, and next steps, then protect the following 30 minutes for the EPMO weekly slides."
+          },
+          {
+            "id": "mon-1109-tue-02",
+            "label": "11:30 AM - CM CoE/Product and Amazon Connect conflict",
+            "detail": "Both meetings occupy the same 30-minute slot. Decide coverage in advance and carry the Amazon stability readout into whichever forum needs the deployment decision."
+          },
+          {
+            "id": "mon-1109-tue-03",
+            "label": "12:00-4:30 PM - Dense afternoon stack",
+            "detail": "Blocked space is followed by Lisinski Celebrates, EPMO TL Weekly Catch Up, the Nicolas 1:1, and the CSC portfolio review. The EPMO team's Asana pain-points poll is also due Tuesday, so complete it before the afternoon sequence."
+          }
+        ]
+      }
+    ]
+  }
+}
