@@ -1,0 +1,108 @@
+{
+  "digest": {
+    "id": "eod-2026-11-11",
+    "type": "eod",
+    "date": "Wednesday, November 11 - End of Day",
+    "isoDate": "2026-11-11",
+    "greeting": "Good evening, Jean. Today closed with active rollout follow-through and no checklist items confirmed complete in the dashboard. Tomorrow is more sequential, but the 11:30 AM overlap still needs a coverage choice.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1111-open-1",
+            "taskId": "task-20261109-gate-amazon-connect-wave",
+            "label": "Close today’s Amazon Connect rollout follow-through",
+            "detail": "Confirm the Atlanta, Dallas, and Salt Lake City results and assign owners for any routing, voicemail, access, desk-phone, or Omni-Channel issues. Keep the AWS request for 400 additional users visible for later waves; today’s Teams updates also surfaced an access-catalog question and a multi-tab limitation that needs FAQ and refresher-training coverage.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1111-open-2",
+            "taskId": "task-20261106-align-product-escalation-context",
+            "label": "Close the Product handoff and leadership readout",
+            "detail": "Turn the Product-to-EPMO feedback and today’s portfolio material into clear owners and next steps for prioritization, intake, initiation, escalation, and the open Sales Cloud, Revenue Cloud, Knowledge Management, and Service Cloud items. Confirm how the Venn December 18 target should appear in reporting.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1111-open-3",
+            "taskId": "task-20261109-route-intake-access-request",
+            "label": "Route Maribel’s intake-ownership access request correctly",
+            "detail": "Today’s intake notices show the access request is still landing in the CoE portfolio. Confirm the IT or HALO owner and close the routing gap so it stops cycling through project intake.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1111-open-4",
+            "taskId": "task-20261111-resolve-wednesday-conflicts",
+            "label": "Close the remaining meeting and coverage follow-ups",
+            "detail": "Confirm that today’s rollout, Product, portfolio, and leadership overlaps did not leave an unowned action. Identify the IT biweekly occurrence Mar asked to move and confirm a replacement time with the affected attendees.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1111-open-5",
+            "taskId": "task-20261110-complete-asana-pain-points-poll",
+            "label": "Complete the overdue EPMO Asana pain-points poll",
+            "detail": "Submit the overdue poll so the team’s workflow friction is represented in the next EPMO discussion.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1111-open-6",
+            "taskId": "task-20261111-review-supabase-alert",
+            "label": "Review the new Supabase security vulnerability alert",
+            "detail": "Open the current project findings, confirm whether they are new or recurring, and assign remediation.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1111-open-7",
+            "taskId": "task-20261106-sign-ai-frap-docs",
+            "label": "Review and sign the two AI policy documents",
+            "detail": "Complete the AI Tool Development Policy and AI Tools Quick Reference Guide signatures in one pass."
+          },
+          {
+            "id": "eod-1111-open-8",
+            "taskId": "task-20261023-complete-leadup-growth-survey",
+            "label": "Clear the two LeadUp follow-ups",
+            "detail": "Complete the overdue growth-mindset survey and reserve time for the Module 4 Leading with Strategy pre-work due November 17."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1111-cancel-1",
+            "label": "CoE Biweekly Touchpoint was cancelled",
+            "detail": "Jean’s calendar update said there were no topics or major updates to discuss this week."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1111-thu-1",
+            "label": "10:30-11:30 AM - Portfolio review and Jean/Sara 1:1",
+            "detail": "BD Portfolio Review begins at 10:30 AM, followed by Jean/Sara at 11:00 AM. Gustavo is out tomorrow, so confirm whether his absence affects portfolio input."
+          },
+          {
+            "id": "eod-1111-thu-2",
+            "label": "11:30 AM-1:00 PM - Resolve the Armando and Amazon standup conflict",
+            "detail": "The Armando 1:1 and Amazon Connect standup share the 11:30 AM slot. Choose coverage today, then preserve the blocked noon hour unless rollout issues require escalation."
+          },
+          {
+            "id": "eod-1111-thu-3",
+            "label": "1:30-5:00 PM - Maria, focus time, and the weekly team meeting",
+            "detail": "The afternoon runs sequentially: Maria 1:1 at 1:30 PM, focus time at 3:00 PM, and the Tudo Bem weekly meeting at 4:00 PM."
+          }
+        ]
+      }
+    ]
+  }
+}
