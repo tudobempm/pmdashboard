@@ -1,5 +1,120 @@
 [
   {
+    "id": "eod-2026-11-12",
+    "type": "eod",
+    "date": "Thursday, November 12 - End of Day",
+    "isoDate": "2026-11-12",
+    "greeting": "Good evening, Jean. Five work items were completed today, with the remaining work concentrated around rollout follow-through, coverage, and readiness decisions. Friday's schedule is already structured around a morning handoff, protected work time, and the afternoon management and pipeline sequence.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1112-done-1",
+            "label": "Maribel's intake-ownership access request was routed",
+            "detail": "The access-routing follow-up is now closed."
+          },
+          {
+            "id": "eod-1112-done-2",
+            "label": "The critical Supabase RLS finding was remediated",
+            "detail": "The security remediation follow-up is now closed."
+          },
+          {
+            "id": "eod-1112-done-3",
+            "label": "The two AI policy documents were reviewed and signed",
+            "detail": "Both FRAP No. 002 acknowledgments are now complete."
+          },
+          {
+            "id": "eod-1112-done-4",
+            "label": "The LeadUp growth-mindset follow-up survey was completed",
+            "detail": "The overdue follow-up is now closed."
+          },
+          {
+            "id": "eod-1112-done-5",
+            "label": "The LeadUp Module 4 pre-work was scheduled",
+            "detail": "A completion window was reserved ahead of the November 17 due date."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1112-open-1",
+            "taskId": "task-20261109-gate-amazon-connect-wave",
+            "label": "Close the Amazon Connect rollout follow-through",
+            "detail": "All 12 branch offices are now live. Validate Angie’s Dallas call routing after the forward was removed, then assign owners for the Wave 2 virtual-queue Omni flows, the multi-tab fix and FAQ, the access-catalog decision, and classification of the 400 additional users across later waves.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1112-open-2",
+            "taskId": "task-20261106-align-product-escalation-context",
+            "label": "Close the Product handoff and communication gap",
+            "detail": "Leadership confirmed the Product communication plan needs work, including an unannounced Craft rollout and changed ownership for writing IT stories. Set the EPMO intake, initiation, prioritization, and escalation expectations before the new process is rolled out.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1112-open-3",
+            "taskId": "task-20261111-resolve-wednesday-conflicts",
+            "label": "Close the remaining meeting and coverage follow-ups",
+            "detail": "Confirm yesterday's rollout, Product, portfolio, and leadership overlaps did not leave an unowned action; identify the IT biweekly occurrence Mar asked to move; and close today's 11:30 AM Armando/Amazon Connect coverage choice while protecting the noon work block.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1112-open-4",
+            "taskId": "task-20261110-complete-asana-pain-points-poll",
+            "label": "Complete the overdue EPMO Asana pain-points poll",
+            "detail": "Submit the overdue poll so the team’s workflow friction is represented in the next EPMO discussion.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1112-open-5",
+            "taskId": "task-20261112-close-ops-readiness-decisions",
+            "label": "Close today’s Operations readiness decisions",
+            "detail": "Confirm whether the taskset blocker changes the RFE or Expansion path, capture the VAWA standalone readiness outcome, and decide whether the November 16 Production Compliance restart can proceed after leadership review.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1112-open-6",
+            "taskId": "task-20261112-sign-fake-helpdesk-alert",
+            "label": "Review and sign the fake help-desk security alert",
+            "detail": "Rippling is waiting for Jean’s signature on the urgent law-firm phishing and fake help-desk notice. Complete the acknowledgment so the security communication is closed.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1112-open-7",
+            "taskId": "task-20261112-confirm-sms-grooming-plan",
+            "label": "Confirm the SMS grooming and sprint plan",
+            "detail": "Dolapo asked Jean directly whether the communicated plan is clear. Reconcile the Sprint 23 versus Sprint 25 sequence, require a complete user-story inventory by use case, resolve English and Spanish template discrepancies, and confirm Product, IT, architecture, and Marketing roles before grooming begins."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1112-fri-1",
+            "label": "11:00 AM-noon - Laura 1:1 and Amazon Connect standup",
+            "detail": "Use Laura’s 1:1 to confirm the SMS story and template plan, then carry only unresolved rollout risks into the standup."
+          },
+          {
+            "id": "eod-1112-fri-2",
+            "label": "Noon-1:00 PM - Protected work block",
+            "detail": "Keep the hour available for decisions or deliverables that emerge from the morning conversations."
+          },
+          {
+            "id": "eod-1112-fri-3",
+            "label": "2:00-4:00 PM - Management, executive status, and IT pipeline stack",
+            "detail": "EPMO Management leads into the executive project slide update and the EPMO/IT pipeline sync. Prepare priority, UAT, and intake changes before the sequence starts."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-11-12-morning",
     "type": "daily",
     "date": "Morning - Thursday, November 12",
