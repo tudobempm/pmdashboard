@@ -1,0 +1,143 @@
+{
+  "digest": {
+    "id": "daily-2026-11-16-morning",
+    "type": "daily",
+    "date": "Morning - Monday, November 16",
+    "isoDate": "2026-11-16",
+    "greeting": "Good morning, Jean. Today is Monday, November 16. Seven meeting anchors and a protected noon block make the day busiest from 11:00 AM onward; six priority items carry forward, five urgent. First, use the 8:00 AM planning hour to approve timecards and lock the week, then close Amazon Connect Wave 2 readiness and the Product, Operations, and SMS decisions before the back-to-back pipeline and portfolio reviews. The clearest new risks are unresolved I-751 outreach scope and Amazon Connect call quality and monitoring ownership. Microsoft 365 access is healthy again. Dashboard state has not changed since Thursday, so completion signals may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-1116-co-01",
+            "taskId": "task-20261109-gate-amazon-connect-wave",
+            "label": "Close Amazon Connect Wave 2 readiness",
+            "detail": "All 12 offices are live and the nine transfer Omni flows are built, but activation, access validation, open RAID ownership, and the November 17 deployment sequence still need a clear go/no-go in today’s standup.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1116-co-02",
+            "taskId": "task-20261106-align-product-escalation-context",
+            "label": "Close the Product handoff and communication gap",
+            "detail": "Set the EPMO intake, initiation, prioritization, and escalation expectations, including ownership for IT stories and advance notice of workflow changes.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1116-co-03",
+            "taskId": "task-20261112-close-ops-readiness-decisions",
+            "label": "Close the Operations readiness decisions",
+            "detail": "Confirm the RFE or Expansion taskset path, record the VAWA standalone readiness outcome, and decide whether today’s Production Compliance restart can proceed.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1116-co-04",
+            "taskId": "task-20261112-confirm-sms-grooming-plan",
+            "label": "Confirm the SMS grooming and sprint plan",
+            "detail": "Reconcile the Sprint 23 versus Sprint 25 sequence, complete the use-case story inventory, resolve English and Spanish template differences, and confirm Product, IT, architecture, and Marketing roles.",
+            "flag": "carried"
+          },
+          {
+            "id": "mon-1116-co-05",
+            "taskId": "task-20261112-sign-fake-helpdesk-alert",
+            "label": "Review and sign the fake help-desk security alert",
+            "detail": "Rippling is still waiting for Jean’s acknowledgment of the urgent phishing and fake help-desk notice. Complete it so the security communication can close.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "mon-1116-co-06",
+            "taskId": "task-20261110-complete-asana-pain-points-poll",
+            "label": "Complete the EPMO Asana pain-points poll",
+            "detail": "Only two responses were recorded Friday, and Sara asked everyone to respond by EOD today. Submit the poll before the team decides its next move away from Asana.",
+            "flag": "carried",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1116-sched-01",
+            "label": "8:00-9:00 AM - Approve timecards and prepare the week",
+            "detail": "Use the early planning hour to clear timecards, set the week’s decision list, and prepare the highest-risk items before meetings begin."
+          },
+          {
+            "id": "mon-1116-sched-02",
+            "label": "11:00 AM-noon - CM CoE alignment and Amazon Connect standup",
+            "detail": "The meetings run back-to-back. Prioritize Phase 1 and 2 requests first, then use the standup for Wave 2 activation, access, call quality, and the remaining RAID owners."
+          },
+          {
+            "id": "mon-1116-sched-03",
+            "label": "Noon-1:00 PM - Protected focus block",
+            "detail": "Preserve this hour to close decisions or update materials before the afternoon portfolio sequence."
+          },
+          {
+            "id": "mon-1116-sched-04",
+            "label": "1:30-2:30 PM - IT pipeline and BD portfolio reviews",
+            "detail": "Bring current priority changes, UAT status, new intake, target-date corrections, and material blockers; the meetings are back-to-back."
+          },
+          {
+            "id": "mon-1116-sched-05",
+            "label": "3:00-5:00 PM - Maria 1:1 and LeadUp Module 4",
+            "detail": "Use the 1:1 for portfolio roadblocks and next owners, then finish the day with the final 2026 LeadUp module. Colombia’s holiday may reduce availability for affected colleagues."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "mon-1116-act-01",
+            "taskId": "task-20261116-approve-timecards-set-week",
+            "label": "Approve timecards and lock the week’s decision list",
+            "detail": "Use the 8:00 AM block to clear approvals, identify the decisions required from today’s meetings, and reserve the noon focus hour for the most consequential follow-through.",
+            "urgent": true
+          },
+          {
+            "id": "mon-1116-act-02",
+            "taskId": "task-20261116-clarify-i751-outreach-scope",
+            "label": "Clarify the I-751 outreach scope",
+            "detail": "The email thread distinguishes legacy I-751 client outreach questions from the broader Universal Intake update targeted for Q1 2027. Confirm whether the legacy questions proceed separately and who owns the boundary decision.",
+            "urgent": true
+          },
+          {
+            "id": "mon-1116-act-03",
+            "taskId": "task-20261116-own-ac-call-quality-monitoring",
+            "label": "Assign Amazon Connect call-quality and monitoring ownership",
+            "detail": "Dallas reported background-noise quality concerns after a client complaint, while the standup thread says automated error monitoring is not yet defined. Decide the immediate mitigation and assign the longer-term monitoring effort before Wave 2 expands usage.",
+            "urgent": true
+          }
+        ]
+      },
+      {
+        "title": "Tuesday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "mon-1116-prev-01",
+            "label": "9:30-11:00 AM - Jhara 1:1 and slide focus time",
+            "detail": "Use the 1:1 for portfolio roadblocks, then protect the 10:00 AM block to prepare the EPMO weekly slides."
+          },
+          {
+            "id": "mon-1116-prev-02",
+            "label": "11:30 AM-noon - CM CoE/Product and Amazon Connect conflict",
+            "detail": "Two meetings overlap exactly. Choose coverage today so Product alignment and deployment support both have a clear owner."
+          },
+          {
+            "id": "mon-1116-prev-03",
+            "label": "2:00-4:00 PM - EPMO leadership and Nicolas 1:1",
+            "detail": "Bring portfolio risks, dependencies, and escalation decisions into the team-lead meeting, then close remaining ownership questions with Nicolas."
+          }
+        ]
+      }
+    ]
+  }
+}
