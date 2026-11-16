@@ -1,0 +1,95 @@
+{
+  "digest": {
+    "id": "eod-2026-11-16",
+    "type": "eod",
+    "date": "Monday, November 16 - End of Day",
+    "isoDate": "2026-11-16",
+    "greeting": "Good evening, Jean. Today closed with progress across the portfolio and a clear direction for Incident Response. Here's a concise look ahead to Tuesday.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1116-done-1",
+            "label": "Amazon Connect Wave 2 readiness was addressed."
+          },
+          {
+            "id": "eod-1116-done-2",
+            "label": "The Product handoff and communication gap was addressed."
+          },
+          {
+            "id": "eod-1116-done-3",
+            "label": "The Operations readiness decisions were addressed."
+          },
+          {
+            "id": "eod-1116-done-4",
+            "label": "The SMS grooming and sprint plan was confirmed."
+          },
+          {
+            "id": "eod-1116-done-5",
+            "label": "The fake help-desk security alert was reviewed and signed."
+          },
+          {
+            "id": "eod-1116-done-6",
+            "label": "The EPMO Asana pain-points poll was completed."
+          },
+          {
+            "id": "eod-1116-done-7",
+            "label": "Timecards and the week's decision list were addressed."
+          },
+          {
+            "id": "eod-1116-done-8",
+            "label": "The I-751 outreach scope was clarified."
+          },
+          {
+            "id": "eod-1116-done-9",
+            "label": "Amazon Connect call-quality and monitoring ownership was addressed."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": []
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1116-decision-1",
+            "label": "Incident Response is on hold until further notice.",
+            "detail": "Leadership directed a pause on project activities, including the remaining guides and trigger definitions. Work will resume only if the executive leadership team decides to proceed."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1116-tue-1",
+            "label": "10:30-11:30 AM - Jhara 1:1 and EPMO slide preparation",
+            "detail": "The 1:1 is followed by a focus block for the weekly slides."
+          },
+          {
+            "id": "eod-1116-tue-2",
+            "label": "11:30 AM-noon - CM CoE/Product and Amazon Connect overlap",
+            "detail": "Both the Product touchpoint and the Amazon Connect standup are scheduled at the same time."
+          },
+          {
+            "id": "eod-1116-tue-3",
+            "label": "2:00-4:00 PM - EPMO team leads and Nicolas 1:1",
+            "detail": "The team-lead catch-up is followed by the Nicolas 1:1 at 3:30 PM."
+          },
+          {
+            "id": "eod-1116-tue-4",
+            "label": "4:00-5:00 PM - CM CoE alignment and Maria 1:1",
+            "detail": "Phase 1 and 2 alignment is followed by the Maria 1:1 at 4:30 PM."
+          }
+        ]
+      }
+    ]
+  }
+}
