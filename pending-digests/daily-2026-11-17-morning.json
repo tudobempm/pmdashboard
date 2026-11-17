@@ -1,0 +1,74 @@
+{
+  "digest": {
+    "id": "daily-2026-11-17-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, November 17",
+    "isoDate": "2026-11-17",
+    "greeting": "Good morning, Jean. Today is Tuesday, November 17. Amazon Connect's Wave 2 support bridge anchors a day of seven meetings, with no carried-over items or active reminders. First resolve coverage for its overlaps with the CM CoE/Product touchpoint and EPMO team leads, then check EKM's at-risk dependencies and review the MHE approval drafts. Incident Response is now on hold pending an ELT decision.",
+    "sections": [
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1117-sched-01",
+            "label": "10:30-11:30 AM - Jhara 1:1 and slide preparation",
+            "detail": "Review portfolio roadblocks and next steps with Jhara, then use the 11:00 AM focus block for EPMO weekly slides."
+          },
+          {
+            "id": "tue-1117-sched-02",
+            "label": "11:30 AM-3:15 PM - Amazon Connect Wave 2 support bridge",
+            "detail": "The bridge overlaps CM CoE/Product at 11:30 AM, blocked space at noon, and EPMO team leads at 2:00 PM. Agree on coverage; the daily standup was cancelled for the rollout."
+          },
+          {
+            "id": "tue-1117-sched-03",
+            "label": "3:30-5:00 PM - Nicolas, CM CoE alignment, and Maria",
+            "detail": "Use the Nicolas 1:1 for EKM risks; the Phase 1 and 2 alignment and Maria 1:1 follow back-to-back."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1117-act-01",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Set coverage for the Wave 2 rollout conflicts",
+            "detail": "Confirm who will cover the Product touchpoint and team-lead meeting while the support bridge runs. Thiago proposed sequential activation of Intake Support, Tier 2 CS, and Paralegal, with validation before each queue; technical and activation coverage still needed confirmation.",
+            "urgent": true
+          },
+          {
+            "id": "tue-1117-act-02",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Review EKM dependencies with Nicolas",
+            "detail": "The project is at risk but preparation continues. Clarify the IT perspective, approval workflow, governance ownership, Salesforce readiness, and Legal review capacity before the next status update."
+          },
+          {
+            "id": "tue-1117-act-03",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Review MHE expansion approval drafts",
+            "detail": "Review the drafts relevant to your area and send approval or comments by Thursday, November 19. The sender will treat silence as approval; provider responses and the candidate list also affect Friday's pilot decision."
+          },
+          {
+            "id": "tue-1117-act-04",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Clarify Universal Intake project leadership",
+            "detail": "The kickoff chat asks who will be the project lead and sponsor. Frank is listed as the business analyst in the assignment notice; confirm the remaining leadership roles."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1117-prev-01",
+            "label": "Wednesday - portfolio review and overlapping afternoon meetings",
+            "detail": "The BD portfolio review is at 1:30 PM. LeadUp Module 4 and the EPMO team meeting both start at 3:00 PM, while Laura's 1:1 begins at 3:30 PM; confirm coverage or reschedule. The LeadUp invitation says only one of the two offered sessions is required."
+          }
+        ]
+      }
+    ]
+  }
+}
