@@ -1,0 +1,88 @@
+{
+  "digest": {
+    "id": "eod-2026-11-18",
+    "type": "eod",
+    "date": "Wednesday, November 18 - End of Day",
+    "isoDate": "2026-11-18",
+    "greeting": "Good evening, Jean. Here's a clear view of what remains open and what's ahead tomorrow.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1118-open-1",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Follow up on Wave 2 routing and coverage",
+            "detail": "Tier 2 CS go-live was postponed after a recurring call-routing issue. Hilary and Jacob will continue troubleshooting; confirm validation, the revised rollout sequence, and coverage with Thiago.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1118-open-2",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Review MHE expansion approval drafts",
+            "detail": "Send approval or comments for your area by Thursday, November 19. Silence will be treated as approval; provider responses and the candidate list also affect Friday's pilot decision."
+          },
+          {
+            "id": "eod-1118-open-3",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Follow up on EKM dependencies",
+            "detail": "Confirm the IT perspective, approval workflow, governance ownership, Salesforce readiness, and Legal review capacity before the next status update."
+          },
+          {
+            "id": "eod-1118-open-4",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Clarify Universal Intake project leadership",
+            "detail": "Confirm the project lead and sponsor. Frank is listed as the business analyst."
+          },
+          {
+            "id": "eod-1118-open-5",
+            "taskId": "task-20261118-follow-up-powerbi-assignment",
+            "label": "Follow up on the Power BI assignment",
+            "detail": "Follow up on the request sent to Matthew; the unassigned reporting request is blocking the project for selling services to leads with ongoing cases."
+          },
+          {
+            "id": "eod-1118-open-6",
+            "taskId": "task-20261118-resolve-afternoon-conflicts",
+            "label": "Check follow-up from the afternoon meeting conflicts",
+            "detail": "Confirm any outstanding coverage or rescheduling from the LeadUp and EPMO meeting overlap. Laura's 1:1 now appears on Thursday's calendar."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1118-thu-1",
+            "label": "MHE expansion drafts",
+            "detail": "Approval or comments are due Thursday, November 19."
+          },
+          {
+            "id": "eod-1118-thu-2",
+            "label": "11:30 AM - Armando 1:1 and Amazon Connect standup",
+            "detail": "These meetings overlap on the calendar."
+          },
+          {
+            "id": "eod-1118-thu-3",
+            "label": "1:30 PM - Laura 1:1"
+          },
+          {
+            "id": "eod-1118-thu-4",
+            "label": "2:00 PM - Sprint 23 prioritization",
+            "detail": "The call overlaps Sara's 2:30 PM 1:1."
+          },
+          {
+            "id": "eod-1118-thu-5",
+            "label": "4:00 PM - Tudo Bem weekly meeting"
+          }
+        ]
+      }
+    ]
+  }
+}
