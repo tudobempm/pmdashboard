@@ -1,0 +1,96 @@
+{
+  "digest": {
+    "id": "daily-2026-11-18-morning",
+    "type": "daily",
+    "date": "Morning - Wednesday, November 18",
+    "isoDate": "2026-11-18",
+    "greeting": "Good morning, Jean. Today is Wednesday, November 18. Amazon Connect Wave 2 anchors a day with nine meetings and four carried-over actions, one urgent. First confirm rollout timing and coverage after yesterday's routing pause, then review the MHE drafts due tomorrow and follow up on EKM and Universal Intake leadership. Dashboard state was last updated Monday, so completion signals may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-1118-co-01",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Confirm Wave 2 timing and coverage",
+            "detail": "Yesterday's deployment paused for a routing issue; Jennifer reports the issue was corrected and the team plans to resume today. Confirm validation, the revised sequence, and coverage with Thiago. Teams lists Paralegal at 10:30 AM ET and Tier 2 CS at 3:30 PM ET, but the calendar shows each one hour later.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "wed-1118-co-02",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Review MHE expansion approval drafts",
+            "detail": "Send approval or comments on the drafts relevant to your area by Thursday, November 19. Silence will be treated as approval; provider responses and the candidate list also affect Friday's pilot decision.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1118-co-03",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Follow up on EKM dependencies",
+            "detail": "The project is at risk while preparation continues. Confirm the IT perspective, approval workflow, governance ownership, Salesforce readiness, and Legal review capacity before the next status update.",
+            "flag": "carried"
+          },
+          {
+            "id": "wed-1118-co-04",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Clarify Universal Intake project leadership",
+            "detail": "The kickoff chat asks who will be the project lead and sponsor. Frank is listed as the business analyst; confirm the remaining leadership roles.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1118-sched-01",
+            "label": "10:30-11:30 AM - Thiago and Wave 2 alignment",
+            "detail": "The 10:30 AM 1:1 is followed by the 11:15 AM Wave 2 standup. Review routing validation, the rollout sequence, and timing discrepancies. The former 11:30 AM standup is cancelled."
+          },
+          {
+            "id": "wed-1118-sched-02",
+            "label": "12:30-2:00 PM - Paralegal go-live and BD portfolio",
+            "detail": "The calendar places Paralegal at 12:30 PM, overlapping blocked time until 1:00 PM, then the BD portfolio review follows at 1:30 PM. Teams instead says Paralegal starts at 11:30 AM local; confirm the current invitation."
+          },
+          {
+            "id": "wed-1118-sched-03",
+            "label": "2:30-4:30 PM - Astrid, overlapping meetings and Tier 2 CS",
+            "detail": "Astrid's 1:1 is at 2:30 PM. LeadUp and the EPMO team meeting both start at 3:00 PM; Laura's 1:1 and Tier 2 CS begin at 3:30 PM on the calendar. Teams says Tier 2 CS is at 4:30 PM local. Confirm timing and coverage; only one LeadUp session is required."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "wed-1118-act-01",
+            "taskId": "task-20261118-resolve-afternoon-conflicts",
+            "label": "Resolve the afternoon meeting conflicts",
+            "detail": "Choose coverage or reschedule among LeadUp, the EPMO team meeting, Laura's 1:1, and the Tier 2 CS rollout after confirming the rollout time."
+          },
+          {
+            "id": "wed-1118-act-02",
+            "taskId": "task-20261118-follow-up-powerbi-assignment",
+            "label": "Follow up on the Power BI assignment",
+            "detail": "A November 5 dashboard and reporting request remains unassigned and is blocking the project for selling services to leads with ongoing cases. Follow up on the request already sent to Matthew; Leandro and Kevin cannot act until it is assigned."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "wed-1118-prev-01",
+            "label": "Thursday - MHE deadline and overlapping meetings",
+            "detail": "MHE draft feedback is due. Armando's 11:30 AM 1:1 overlaps the Amazon Connect standup; the 2:00 PM Sprint 23 prioritization call overlaps Sara's 2:30 PM 1:1. The firmwide meeting is cancelled."
+          }
+        ]
+      }
+    ]
+  }
+}
