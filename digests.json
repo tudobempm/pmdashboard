@@ -1,5 +1,100 @@
 [
   {
+    "id": "daily-2026-11-19-morning",
+    "type": "daily",
+    "date": "Morning - Thursday, November 19",
+    "isoDate": "2026-11-19",
+    "greeting": "Good morning, Jean. Today is Thursday, November 19. Amazon Connect Wave 2 and Sprint 23 anchor seven meetings, with five carried-over actions, one urgent. Confirm rollout readiness and coverage, send MHE draft feedback due today, and resolve the afternoon overlaps. Paralegal and Intake Support are working after fixes, but Wave 2 remains at risk. Dashboard state was last updated Monday, so completion and reminder signals may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1119-co-01",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Confirm Wave 2 timing and coverage",
+            "detail": "Paralegal and Intake Support were working after fixes yesterday, but Jenn reports the nine planned queues remain at risk and four are planned today after final testing. Confirm validation, the sequence, office checks and support coverage with Thiago; the latest Tier 2 invitation is at 3:00 PM AST.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "thu-1119-co-02",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Review MHE expansion approval drafts",
+            "detail": "Send approval or comments on the drafts relevant to your area today. Silence will be treated as approval; provider responses and the candidate list also affect Friday's pilot decision.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1119-co-03",
+            "taskId": "task-20261118-follow-up-powerbi-assignment",
+            "label": "Follow up on the Power BI assignment",
+            "detail": "The November 5 dashboard and reporting request was still unassigned and blocking the project for selling services to leads with ongoing cases. Follow up on the request sent to Matthew; Leandro and Kevin were waiting for an assignment.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1119-co-04",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Follow up on EKM dependencies",
+            "detail": "The project was at risk while preparation continued. Confirm the IT perspective, approval workflow, governance ownership, Salesforce readiness and Legal review capacity before the next status update.",
+            "flag": "carried"
+          },
+          {
+            "id": "thu-1119-co-05",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Clarify Universal Intake project leadership",
+            "detail": "The kickoff chat asks who will be the project lead and sponsor. Frank is listed as the business analyst; confirm the remaining leadership roles.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1119-sched-01",
+            "label": "11:00 AM-12:00 PM - Standup and Armando",
+            "detail": "The Amazon Connect standup is followed immediately by Armando's 11:30 AM 1:1. A blocked hour follows at noon. Calendar times are AST."
+          },
+          {
+            "id": "thu-1119-sched-02",
+            "label": "1:00-3:00 PM - Go-live, Laura and Sprint 23",
+            "detail": "Reschedule & Cancellation go-live runs 1:00-2:00 PM and overlaps Laura's 1:30 PM 1:1. Sprint prioritization starts at 2:00 PM and overlaps Sara's 2:30 PM 1:1 for 15 minutes."
+          },
+          {
+            "id": "thu-1119-sched-03",
+            "label": "3:00-5:00 PM - Tier 2 CS and team meeting",
+            "detail": "The rescheduled Tier 2 CS go-live is 3:00-4:00 PM, followed immediately by Tudo Bem!'s weekly meeting. The standup invitation describes 3:00 PM ET, but the calendar places it at 11:00 AM AST; confirm the intended time."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "thu-1119-act-01",
+            "taskId": "task-20261119-resolve-calendar-overlaps",
+            "label": "Resolve today's meeting overlaps",
+            "detail": "Arrange coverage or reschedule Laura's 1:1 against the 1:00 PM go-live and Sara's 1:1 against the end of Sprint 23 prioritization. Confirm the conflicting standup time with Thiago."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "thu-1119-prev-01",
+            "label": "Friday - management and reporting",
+            "detail": "EPMO management meets at 2:00 PM AST. The 3:00 PM Litify data-extract discovery overlaps the executive status slide update; the EPMO/IT pipeline sync follows at 3:30 PM."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-11-18",
     "type": "eod",
     "date": "Wednesday, November 18 - End of Day",
