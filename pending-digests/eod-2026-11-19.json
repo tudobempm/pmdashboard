@@ -1,0 +1,85 @@
+{
+  "digest": {
+    "id": "eod-2026-11-19",
+    "type": "eod",
+    "date": "Thursday, November 19 - End of Day",
+    "isoDate": "2026-11-19",
+    "greeting": "Good evening, Jean. Here is a measured close to the day; the dashboard was last updated Monday, so the open list may need a quick refresh.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1119-open-1",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Confirm Wave 2 validation and coverage",
+            "detail": "Check the rollout results, queue sequence, office checks and support coverage with Thiago. The Reschedule & Cancellation team was asked to confirm its active call roster ahead of go-live.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1119-open-2",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Review MHE expansion approval drafts",
+            "detail": "Send approval or comments on the drafts relevant to your area. Feedback was due today; provider responses and the candidate list affect Friday's pilot decision."
+          },
+          {
+            "id": "eod-1119-open-3",
+            "taskId": "task-20261118-follow-up-powerbi-assignment",
+            "label": "Follow up on the Power BI assignment",
+            "detail": "Check the request sent to Matthew for the dashboard and reporting work; Leandro and Kevin were waiting for an assignment."
+          },
+          {
+            "id": "eod-1119-open-4",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Follow up on EKM dependencies",
+            "detail": "Confirm the IT perspective, approval workflow, governance ownership, Salesforce readiness and Legal review capacity before the next status update."
+          },
+          {
+            "id": "eod-1119-open-5",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Clarify Universal Intake project leadership",
+            "detail": "Confirm the project lead and sponsor; Frank is listed as the business analyst."
+          },
+          {
+            "id": "eod-1119-open-6",
+            "taskId": "task-20261119-resolve-calendar-overlaps",
+            "label": "Check follow-ups from today's meeting overlaps",
+            "detail": "Confirm whether Laura's and Sara's overlapping meetings were covered or rescheduled, and clarify the standup time with Thiago."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1119-fri-1",
+            "label": "11:30 AM - Amazon Connect daily standup",
+            "detail": "The calendar lists the standup at 11:30 AM AST."
+          },
+          {
+            "id": "eod-1119-fri-2",
+            "label": "1:30 PM - Armando 1:1",
+            "detail": "The calendar lists the meeting at 1:30 PM AST."
+          },
+          {
+            "id": "eod-1119-fri-3",
+            "label": "2:00 PM - EPMO management",
+            "detail": "EPMO management meets at 2:00 PM AST."
+          },
+          {
+            "id": "eod-1119-fri-4",
+            "label": "3:00 PM - Discovery and executive update overlap",
+            "detail": "The Litify data-extract discovery overlaps the executive status slide update at 3:00 PM AST; the EPMO/IT pipeline sync follows at 3:30 PM."
+          }
+        ]
+      }
+    ]
+  }
+}
