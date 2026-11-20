@@ -1,0 +1,93 @@
+{
+  "digest": {
+    "id": "eod-2026-11-20",
+    "type": "eod",
+    "date": "Friday, November 20 - End of Day",
+    "isoDate": "2026-11-20",
+    "greeting": "Good evening, Jean. Here is a cautious close to the week; the dashboard's completion information was last updated earlier this week.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1120-open-1",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Confirm Wave 2 results and support coverage",
+            "detail": "Check deployment results, remaining issues and coverage with Thiago, including follow-up from today's readiness sessions. A Teams message raised a question about the PGL queue playing an IVR message.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1120-open-2",
+            "taskId": "task-20261120-resolve-friday-conflicts",
+            "label": "Follow up on coverage for Friday's overlaps",
+            "detail": "Confirm any outstanding follow-up from the overlapping go-live, EPMO and afternoon commitments.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1120-open-3",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Check MHE expansion drafts and pilot decision",
+            "detail": "Confirm the status of your feedback, provider responses and the candidate list; the approval or comment deadline was Thursday."
+          },
+          {
+            "id": "eod-1120-open-4",
+            "taskId": "task-20261118-follow-up-powerbi-assignment",
+            "label": "Follow up on the Power BI assignment",
+            "detail": "Check the request sent to Matthew; the reporting request was unassigned and blocking the project for selling services to leads with ongoing cases."
+          },
+          {
+            "id": "eod-1120-open-5",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Follow up on EKM dependencies and timing",
+            "detail": "Check story grooming and the possible Sprint 24 timing alongside governance, approvals, Salesforce readiness and Legal capacity."
+          },
+          {
+            "id": "eod-1120-open-6",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Clarify Universal Intake project leadership",
+            "detail": "Confirm the project lead and sponsor; Frank was identified as business analyst."
+          },
+          {
+            "id": "eod-1120-open-7",
+            "taskId": "task-20261120-review-rippling-overdue",
+            "label": "Check the overdue Rippling task",
+            "detail": "Open the overdue task to confirm the requirement and due date."
+          }
+        ]
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1120-cancel-1",
+            "label": "Amazon Connect implementation daily standup",
+            "detail": "Today's standup was canceled."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1120-mon-1",
+            "label": "Portfolio and team planning",
+            "detail": "Timecards and weekly preparation at 8:00 AM AST, BD portfolio review at 2:00 PM, and Maria's 1:1 at 3:00 PM. Sara is out of office."
+          },
+          {
+            "id": "eod-1120-mon-2",
+            "label": "Amazon Connect daily standup",
+            "detail": "11:30 AM AST."
+          }
+        ]
+      }
+    ]
+  }
+}
