@@ -1,5 +1,113 @@
 [
   {
+    "id": "daily-2026-11-20-morning",
+    "type": "daily",
+    "date": "Morning - Friday, November 20",
+    "isoDate": "2026-11-20",
+    "greeting": "Good morning, Jean. Today is Friday, November 20. Amazon Connect Wave 2 anchors a crowded afternoon with seven meetings and five carried-over actions, one urgent. Confirm rollout coverage, resolve the meeting conflicts, and check EKM's sprint and MHE pilot decisions. Transfer flows for all nine virtual queues were activated, but deployment status still needs confirmation. Dashboard state was last updated Monday, so completion and reminder signals may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1120-co-01",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Confirm Wave 2 validation and coverage",
+            "detail": "Jenn reported that transfer flows for all nine virtual queues were activated, but requested a deployment update. Confirm results, remaining issues and support coverage with Thiago ahead of today's readiness sessions.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "fri-1120-co-02",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Check MHE expansion drafts and pilot decision",
+            "detail": "The approval or comment deadline was Thursday; silence was to be treated as approval. Confirm the status of your feedback and the provider responses and candidate list for the pilot decision.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1120-co-03",
+            "taskId": "task-20261118-follow-up-powerbi-assignment",
+            "label": "Follow up on the Power BI assignment",
+            "detail": "The November 5 reporting request was still unassigned and blocking the project for selling services to leads with ongoing cases. Check the request sent to Matthew; Leandro and Kevin were waiting for an assignment.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1120-co-04",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Follow up on EKM dependencies and timing",
+            "detail": "Anu expects EKM stories to be groomed today. Jeff said the full scope may need Sprint 24 and will confirm with Cory and Duvan; check the timing alongside governance, approvals, Salesforce readiness and Legal capacity.",
+            "flag": "carried"
+          },
+          {
+            "id": "fri-1120-co-05",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Clarify Universal Intake project leadership",
+            "detail": "The kickoff discussion asked who will be project lead and sponsor; Frank was identified as business analyst. Confirm the remaining leadership roles.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1120-sched-01",
+            "label": "12:00-3:00 PM - Compressed afternoon",
+            "detail": "Blocked space is 12:00-1:00 PM AST. At 1:30, the Retentions and Court go-live overlaps Armando's 1:1 and the first half of EPMO management. The Amazon Connect daily standup is canceled."
+          },
+          {
+            "id": "fri-1120-sched-02",
+            "label": "3:00-4:00 PM - Four-way conflict",
+            "detail": "AOS, Virtual Contract and T-AOS readiness runs 3:00-4:00 PM, overlapping the Litify extract discovery and executive status slide update at 3:00, then the EPMO/IT pipeline sync at 3:30. Confirm attendance or coverage."
+          },
+          {
+            "id": "fri-1120-sched-03",
+            "label": "Morning - Focus window",
+            "detail": "No meetings appear before the noon blocked space. Use the open window for preparation and resolving coverage. Times are AST."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "fri-1120-act-01",
+            "taskId": "task-20261120-resolve-friday-conflicts",
+            "label": "Set coverage for today's overlaps",
+            "detail": "Resolve the 1:30 PM go-live, Armando and EPMO management conflicts, then choose coverage for the four overlapping 3:00-4:00 PM commitments.",
+            "urgent": true
+          },
+          {
+            "id": "fri-1120-act-02",
+            "taskId": "task-20261120-prepare-wave2-sessions",
+            "label": "Prepare for Wave 2 readiness sessions",
+            "detail": "Review the 10-Step Quick Start Guide and Amazon Connect Guidance Book requested in Thiago's invitations. Today's sessions cover Retentions and Court, then AOS, Virtual Contract and T-AOS Paralegals."
+          },
+          {
+            "id": "fri-1120-act-03",
+            "taskId": "task-20261120-review-rippling-overdue",
+            "label": "Check the overdue Rippling task",
+            "detail": "Rippling's Thursday notification reports one overdue task. Open it to confirm the requirement and due date."
+          }
+        ]
+      },
+      {
+        "title": "Monday Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "fri-1120-prev-01",
+            "label": "Monday - Portfolio and team planning",
+            "detail": "Timecards and weekly preparation are at 8:00 AM AST, BD portfolio review at 2:00 PM and Maria's 1:1 at 3:00 PM. Sara's out-of-office block also appears on the calendar."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "eod-2026-11-19",
     "type": "eod",
     "date": "Thursday, November 19 - End of Day",
