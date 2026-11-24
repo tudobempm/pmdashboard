@@ -1,5 +1,114 @@
 [
   {
+    "id": "eod-2026-11-24",
+    "type": "eod",
+    "date": "Tuesday, November 24 - End of Day",
+    "isoDate": "2026-11-24",
+    "greeting": "Good evening, Jean. The dashboard checklist was last updated November 16, so today's open items may need a status check. Wishing you a restful evening.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": []
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": [
+          {
+            "id": "eod-1124-open-1",
+            "taskId": "task-20261123-investigate-client-sms",
+            "label": "Check SMS outage and client impact",
+            "detail": "IT disabled all outbound SMS Magic messages after reports of unexpected client texts, including a concern about requests for payment-card details. Confirm investigation, safe client communication and restoration status with the responsible teams.",
+            "urgent": true
+          },
+          {
+            "id": "eod-1124-open-2",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Confirm Wave 2 recovery and coverage",
+            "detail": "Jenn reports Tier 2 is cleared for deployment today; six remaining queues are planned for December 1-2. Confirm recovery and coverage with Thiago, including the audit of about 164 users missing language skills.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "eod-1124-open-3",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Confirm Universal Intake project leadership",
+            "detail": "Leo and Matthew are now named sponsors; confirm the project lead. The charter is due November 25, and automatic eligibility remains an open decision for Legal, IT and Intake.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-1124-open-4",
+            "taskId": "task-20261123-check-rfe-mhe-decision",
+            "label": "Check the RFE MHE decision with Mar",
+            "detail": "Mar's latest update asks Angel for four decisions on mandatory evaluations, declined or late evaluations, remediation scope and the close date. The design cannot go to IT until the first answer; sprint and developer remain unconfirmed.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-1124-open-5",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Check MHE approvals and pilot readiness",
+            "detail": "Check today's requested approvals and provider onboarding with Mar. The pilot did not start November 20; its new date is to be set at Wednesday's touchpoint.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-1124-open-6",
+            "taskId": "task-20261118-follow-up-powerbi-assignment",
+            "label": "Follow up on the Power BI assignment",
+            "detail": "The November 5 reporting request was unassigned and blocking the project for selling services to leads with ongoing cases. Check the request sent to Matthew; Leandro and Kevin were waiting for an assignment.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-1124-open-7",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Follow up on EKM dependencies and timing",
+            "detail": "Pilot stories passed grooming, but Legal capacity, approval governance, Salesforce migration and delivery dates remain open. Confirm ownership and timing ahead of the pilot.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-1124-open-8",
+            "taskId": "task-20261120-review-rippling-overdue",
+            "label": "Check the overdue Rippling task",
+            "detail": "Saturday's notice identifies overdue Dominican Republic harassment prevention training and a new LeadUp Module 4A survey. Confirm their current status in Rippling; the dashboard state may not reflect recent completion.",
+            "flag": "carried"
+          },
+          {
+            "id": "eod-1124-open-9",
+            "taskId": "task-20261124-reopen-closure-alignment",
+            "label": "Follow up on Re-Open Cases closure",
+            "detail": "Confirm owners and a closure date for the outstanding contract, payment, attorney approval and Intake Support questions."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1124-wed-1",
+            "label": "10:30 AM - Thiago 1:1",
+            "detail": "The Amazon Connect daily standup follows at 11:30 AM AST and is tentative."
+          },
+          {
+            "id": "eod-1124-wed-2",
+            "label": "2:30 PM - Astrid 1:1",
+            "detail": "Scheduled on the calendar in AST."
+          },
+          {
+            "id": "eod-1124-wed-3",
+            "label": "3:30 PM - Legal portfolio review and Laura 1:1 overlap",
+            "detail": "Both are scheduled at the same time; confirm attendance or coverage."
+          },
+          {
+            "id": "eod-1124-wed-4",
+            "label": "4:00 PM - CoE touchpoint overlaps focus time",
+            "detail": "The calendar also shows the EPMO team meeting as cancelled."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "daily-2026-11-24-morning",
     "type": "daily",
     "date": "Morning - Tuesday, November 24",
