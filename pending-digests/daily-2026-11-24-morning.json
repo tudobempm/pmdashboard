@@ -1,0 +1,134 @@
+{
+  "digest": {
+    "id": "daily-2026-11-24-morning",
+    "type": "daily",
+    "date": "Morning - Tuesday, November 24",
+    "isoDate": "2026-11-24",
+    "greeting": "Good morning, Jean. Today is Tuesday, November 24. Danny's skip-level and the afternoon portfolio discussions anchor eight meetings, with seven carried-over items and one urgent carry-over. Prioritize the SMS outage, Wave 2 readiness and the RFE MHE decisions; resolve the 11:30 AM and 4:00 PM overlaps. Dashboard state was last updated November 16, so completion and reminder information may be stale.",
+    "sections": [
+      {
+        "title": "Carried Over",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1124-co-01",
+            "taskId": "task-20261117-wave2-coverage",
+            "label": "Confirm Wave 2 recovery and coverage",
+            "detail": "Jenn reports Tier 2 is cleared for deployment today; six remaining queues are planned for December 1-2. Confirm recovery and coverage with Thiago, including the audit of about 164 users missing language skills.",
+            "flag": "carried",
+            "urgent": true
+          },
+          {
+            "id": "tue-1124-co-02",
+            "taskId": "task-20261117-review-mhe-drafts",
+            "label": "Check MHE approvals and pilot readiness",
+            "detail": "Check today's requested approvals and provider onboarding with Mar. The pilot did not start November 20; its new date is to be set at Wednesday's touchpoint.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1124-co-03",
+            "taskId": "task-20261118-follow-up-powerbi-assignment",
+            "label": "Follow up on the Power BI assignment",
+            "detail": "The November 5 reporting request was unassigned and blocking the project for selling services to leads with ongoing cases. Check the request sent to Matthew; Leandro and Kevin were waiting for an assignment.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1124-co-04",
+            "taskId": "task-20261117-ekm-risk-followup",
+            "label": "Follow up on EKM dependencies and timing",
+            "detail": "Pilot stories passed grooming, but Legal capacity, approval governance, Salesforce migration and delivery dates remain open. Confirm ownership and timing ahead of the pilot.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1124-co-05",
+            "taskId": "task-20261117-confirm-intake-project-lead",
+            "label": "Confirm Universal Intake project leadership",
+            "detail": "Leo and Matthew are now named sponsors; confirm the project lead. The charter is due November 25, and automatic eligibility remains an open decision for Legal, IT and Intake.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1124-co-06",
+            "taskId": "task-20261120-review-rippling-overdue",
+            "label": "Check the overdue Rippling task",
+            "detail": "Saturday's notice identifies overdue Dominican Republic harassment prevention training and a new LeadUp Module 4A survey. Confirm their current status in Rippling; the dashboard state may not reflect recent completion.",
+            "flag": "carried"
+          },
+          {
+            "id": "tue-1124-co-07",
+            "taskId": "task-20261123-check-rfe-mhe-decision",
+            "label": "Check the RFE MHE decision with Mar",
+            "detail": "Mar's latest update asks Angel for four decisions on mandatory evaluations, declined or late evaluations, remediation scope and the close date. The design cannot go to IT until the first answer; sprint and developer remain unconfirmed.",
+            "flag": "carried"
+          }
+        ]
+      },
+      {
+        "title": "Today's Schedule",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1124-sched-01",
+            "label": "10:30 AM - Jhara 1:1",
+            "detail": "Review portfolio status, roadblocks and next steps. The 11:00-11:30 AM block is reserved for weekly meeting slides."
+          },
+          {
+            "id": "tue-1124-sched-02",
+            "label": "11:30 AM - Two tentative meetings overlap",
+            "detail": "CM CoE/Product and the Amazon Connect standup both appear at 11:30 AM AST. The standup invitation says 3:00 PM ET, which conflicts with the calendar time; confirm the actual time and coverage. Noon to 1:00 PM is blocked."
+          },
+          {
+            "id": "tue-1124-sched-03",
+            "label": "1:00 PM - Danny quarterly skip-level",
+            "detail": "Prepare key wins, open risks and leadership decisions. EPMO TL catch-up follows at 2:00 PM."
+          },
+          {
+            "id": "tue-1124-sched-04",
+            "label": "3:30 PM Nicolas; 4:00 PM portfolio conflict",
+            "detail": "The CSC portfolio review overlaps the tentative Re-Open Cases closure meeting at 4:00 PM. Decide attendance or coverage. All times AST."
+          }
+        ]
+      },
+      {
+        "title": "Action Items",
+        "info": false,
+        "items": [
+          {
+            "id": "tue-1124-act-01",
+            "taskId": "task-20261123-investigate-client-sms",
+            "label": "Check SMS outage and client impact",
+            "detail": "IT disabled all outbound SMS Magic messages after reports of unexpected client texts, including a concern about requests for payment-card details. Confirm investigation, safe client communication and restoration status with the responsible teams.",
+            "urgent": true
+          },
+          {
+            "id": "tue-1124-act-02",
+            "taskId": "task-20261124-reopen-closure-alignment",
+            "label": "Prepare Re-Open Cases closure decisions",
+            "detail": "Astrid flagged unresolved contract or engagement-letter availability, payment rules, attorney approval and Intake Support scripts. Use the 4:00 PM alignment or arrange coverage to confirm owners and a closure date."
+          }
+        ]
+      },
+      {
+        "title": "Out of Office",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1124-ooo-01",
+            "label": "Sara is out through December 4",
+            "detail": "Her coverage note routes time approvals and PTO to Danny and asks for legal delays or conflicting guidance to be escalated to him."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "tue-1124-prev-01",
+            "label": "Wednesday - portfolio and CoE overlaps",
+            "detail": "Thiago's 1:1 is at 10:30 AM. Legal portfolio review and Laura's 1:1 overlap at 3:30 PM; the CoE touchpoint overlaps focus time at 4:00 PM AST."
+          }
+        ]
+      }
+    ]
+  }
+}
