@@ -1,0 +1,65 @@
+{
+  "digest": {
+    "id": "eod-2026-11-25",
+    "type": "eod",
+    "date": "Wednesday, November 25 - End of Day",
+    "isoDate": "2026-11-25",
+    "greeting": "Good evening, Jean. Today's checklist was not available, so the open-task list may be incomplete. Wishing you a restful evening.",
+    "sections": [
+      {
+        "title": "Completed Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1125-done-1",
+            "label": "Amazon Connect voicemail routing was restored",
+            "detail": "Nadia reported that delayed voicemails were released and delivered, with none lost. Users were asked to check their voicemail inboxes."
+          }
+        ]
+      },
+      {
+        "title": "Still Open",
+        "info": false,
+        "items": []
+      },
+      {
+        "title": "Cancelled Today",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1125-cancel-1",
+            "label": "Thiago 1:1, Legal portfolio review and CoE touchpoint were cancelled",
+            "detail": "Cancellation notices arrived today for all three meetings."
+          }
+        ]
+      },
+      {
+        "title": "Key Decisions",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1125-decision-1",
+            "label": "Pilot screening can proceed with the identified case groups",
+            "detail": "Chidera confirmed the screening standards can be used for no-due-date RFEs, 90-day RFEs and refile cases. The separate question of whether MHE is mandatory for every RFE remained pending in the prior correspondence."
+          }
+        ]
+      },
+      {
+        "title": "Tomorrow Preview",
+        "info": true,
+        "items": [
+          {
+            "id": "eod-1125-thu-1",
+            "label": "11:30 AM - Armando 1:1 overlaps Amazon Connect standup",
+            "detail": "The standup is tentative; confirm attendance or coverage. Times are AST."
+          },
+          {
+            "id": "eod-1125-thu-2",
+            "label": "4:00 PM - Tudo Bem! weekly meeting",
+            "detail": "The calendar also marks Thursday as a US holiday. The Jean and Sara 1:1 is cancelled."
+          }
+        ]
+      }
+    ]
+  }
+}
